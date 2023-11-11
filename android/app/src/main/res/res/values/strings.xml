@@ -1,0 +1,4 @@
+<resources>
+    <string name="unique_key">hello_world</string>
+    <string name="purchase_key">masterkey</string>
+</resources>
