@@ -5,12 +5,12 @@ import 'package:get_storage/get_storage.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:vig/binding/initial_binding.dart';
 import 'package:vig/helpers/helpers.dart';
-import 'package:vig/screens/screens.dart';
+import 'package:vig/presentation/screens/screens.dart';
 
 void main() async {
   await GetStorage.init();
 
-  WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
+  WidgetsFlutterBinding.ensureInitialized();
 
   runApp(const MyApp());
 }
@@ -34,7 +34,17 @@ class _MyAppState extends State<MyApp> {
           initialRoute: '/',
           getPages: [
             GetPage(name: screenHome, page: () => const HomeScreen()),
-            GetPage(name: screenChooseType, page: () => const ChooseTypeScreen())
+            GetPage(name: screenChooseType, page: () => const ChooseTypeScreen()),
+
+            GetPage(name: screenStdLogin, page: () => const StdLoginScreen()),
+            GetPage(name: screenStdRegister, page: () => const StdRegisterScreeen()),
+
+            GetPage(name: screenParentLogin, page: () => const ParentLoginScreen()),
+            GetPage(name: screenParentRegister, page: () => const ParentRegisterScreen()),
+
+            GetPage(name: screenTeacherLogin, page: () => const TeacherLoginScreen()),
+
+            GetPage(name: screenStdHome, page: () => const StdHomeScreen()),
           ],
         );
       }
