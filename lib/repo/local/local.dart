@@ -14,6 +14,17 @@ class LocaleApi {
     }
   }
 
+  static Future<bool> removeLoginData() async {
+    try {
+      await locale.remove("login_data");
+      print("Success Removed Login Data");
+      return true;
+    } catch (e) {
+      print(e);
+      return false;
+    }
+  }
+
   static Future<Map?> getLoginData() async {
     try {
       final users = await locale.read("login_data");

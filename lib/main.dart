@@ -45,6 +45,11 @@ class _MyAppState extends State<MyApp> {
             GetPage(name: screenTeacherLogin, page: () => const TeacherLoginScreen()),
 
             GetPage(name: screenStdHome, page: () => const StdHomeScreen()),
+
+            GetPage(name: screenStdToDoHome, page: () => const StdToDoHomeScreen()),
+
+
+
           ],
         );
       }

@@ -108,10 +108,12 @@ class _HomeScreenState extends State<HomeScreen> {
               width: double.infinity,
               height: double.infinity,
               color: yellowBck,
-              padding: const EdgeInsets.only(left: 10, right: 10),
               child: Column(
                 children: [
-                  Image.asset("assets/images/landing_img.png"),
+                  SizedBox(
+                    height: 55.h,
+                    child: Image.asset("assets/images/landing_img.png")
+                  ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -126,7 +128,6 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ],
                   ),
-                  SizedBox(height: 3.h),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -202,7 +203,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ],
                   ),
-                  SizedBox(height: 4.h),
+                  SizedBox(height: 3.h),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [

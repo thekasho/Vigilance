@@ -23,3 +23,5 @@ part 'auth/parent/register.dart';
 
 part 'auth/teacher/login.dart';
 
+part 'todo/std/home.dart';
+

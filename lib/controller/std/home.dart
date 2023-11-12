@@ -12,6 +12,7 @@ import '../../repo/api.dart';
 abstract class StdHomeCont extends GetxController {
   checkNetwork();
   checkAuth();
+  logOut();
 }
 class StdHomeContImp extends StdHomeCont {
   Requests requests = Requests(Get.find());
@@ -58,6 +59,19 @@ class StdHomeContImp extends StdHomeCont {
         points = auth['result'].toString();
         update();
       }
+    }
+  }
+
+  @override
+  logOut() async {
+    try {
+      var loginData  = await LocaleApi.getLoginData();
+      if(loginData != null){
+        await LocaleApi.removeLoginData();
+        Get.offAllNamed(screenStdLogin);
+      }
+    } catch (e) {
+      print("Error: $e");
     }
   }
 
