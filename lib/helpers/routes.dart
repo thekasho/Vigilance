@@ -12,6 +12,8 @@ const String screenParentRegister = '/parent-register';
 
 const String screenTeacherLogin = '/teacher-login';
 
-const String screenStdToDoHome = '/std-todo-home';
+const String screenStudyHom = '/std-study-home';
+
+const String screenStdToDO = '/std-todo-home';
 
 

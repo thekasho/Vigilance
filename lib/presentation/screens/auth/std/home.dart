@@ -169,7 +169,7 @@ class _StdHomeScreenState extends State<StdHomeScreen> {
                           children: [
                             GestureDetector(
                               onTap: (){
-                                Get.toNamed(screenStdToDoHome);
+                                Get.toNamed(screenStudyHom);
                               },
                               child: Container(
                                 width: 42.w,

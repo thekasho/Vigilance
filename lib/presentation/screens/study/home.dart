@@ -1,13 +1,13 @@
-part of '../../screens.dart';
+part of '../screens.dart';
 
-class StdToDoHomeScreen extends StatefulWidget {
-  const StdToDoHomeScreen({super.key});
+class StdStudyHomeScreen extends StatefulWidget {
+  const StdStudyHomeScreen({super.key});
 
   @override
-  State<StdToDoHomeScreen> createState() => _StdToDoHomeScreenState();
+  State<StdStudyHomeScreen> createState() => _StdStudyHomeScreenState();
 }
 
-class _StdToDoHomeScreenState extends State<StdToDoHomeScreen> {
+class _StdStudyHomeScreenState extends State<StdStudyHomeScreen> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -72,7 +72,7 @@ class _StdToDoHomeScreenState extends State<StdToDoHomeScreen> {
                       ],
                     ),
                     onPressed: () {
-
+                      Get.toNamed(screenStdToDO);
                     },
                   ),
                 ],

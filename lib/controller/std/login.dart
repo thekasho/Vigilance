@@ -74,7 +74,6 @@ class StdLoginContImp extends StdLoginCont {
         };
 
         var auth = await requests.postData(loginData, ApiLinks.login);
-        print(auth);
 
         if(StatusRequest.serverFailure == auth){
           Get.defaultDialog(

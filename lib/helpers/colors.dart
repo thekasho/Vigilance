@@ -12,3 +12,8 @@ const yellowBck = Color(0xffFFDF8D);
 const orange = Color(0xffEF7939);
 const orangeBtn = Color(0xffFF9D53);
 const lightBtn = Color(0xffFDF2EC);
+const lightGrey = Color(0xffe0e3e7);
+const yellow = Color(0xffFFDD33);
+const lightBlue = Color(0xfff4f8fc);
+
+

@@ -7,12 +7,15 @@ import 'package:vig/controller/landing/landing.dart';
 
 import '../../controller/std/home.dart';
 import '../../controller/std/login.dart';
+import '../../controller/todo/std.dart';
 import '../../core/class/statusrequest.dart';
 import '../../helpers/helpers.dart';
 import '../widgets/widgets.dart';
 
 part 'home/home.dart';
 part 'home/choose_type.dart';
+
+part 'study/home.dart';
 
 part 'auth/std/login.dart';
 part 'auth/std/register.dart';
@@ -23,5 +26,6 @@ part 'auth/parent/register.dart';
 
 part 'auth/teacher/login.dart';
 
-part 'todo/std/home.dart';
+
+part 'todo/std/todo.dart';
 
