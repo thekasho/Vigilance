@@ -50,6 +50,9 @@ class _MyAppState extends State<MyApp> {
 
             GetPage(name: screenStdToDO, page: () => const StdToDoScreen()),
 
+            GetPage(name: screenGamesHome, page: () => const GamesHomeScreen()),
+            GetPage(name: screenSpotLevels, page: () => const SpotLevelsScreen()),
+
 
 
           ],

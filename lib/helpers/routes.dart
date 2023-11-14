@@ -16,4 +16,7 @@ const String screenStudyHom = '/std-study-home';
 
 const String screenStdToDO = '/std-todo-home';
 
+const String screenGamesHome = '/games-home';
+const String screenSpotLevels = '/sopt-levels';
+
 

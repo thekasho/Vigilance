@@ -15,5 +15,6 @@ const lightBtn = Color(0xffFDF2EC);
 const lightGrey = Color(0xffe0e3e7);
 const yellow = Color(0xffFFDD33);
 const lightBlue = Color(0xfff4f8fc);
+const lightOrange = Color(0xfffff0cb);
 
 

@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:vig/controller/landing/landing.dart';
 
+import '../../controller/games/spot.dart';
 import '../../controller/std/home.dart';
 import '../../controller/std/login.dart';
 import '../../controller/todo/std.dart';
@@ -26,6 +27,8 @@ part 'auth/parent/register.dart';
 
 part 'auth/teacher/login.dart';
 
-
 part 'todo/std/todo.dart';
+
+part 'games/home.dart';
+part 'games/spot/levels.dart';
 
