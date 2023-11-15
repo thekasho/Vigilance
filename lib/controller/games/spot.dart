@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 import 'package:internet_connection_checker/internet_connection_checker.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:timer_count_down/timer_controller.dart';
+import 'package:vig/presentation/screens/screens.dart';
 
 import '../../app_links.dart';
 import '../../core/class/statusrequest.dart';
@@ -17,6 +18,7 @@ abstract class SpotGameCont extends GetxController {
   getLevel();
   timesUp();
   submitAnswer(int no);
+  updateLevel();
 }
 class SpotGameContImp extends SpotGameCont {
   Requests requests = Requests(Get.find());
@@ -47,6 +49,7 @@ class SpotGameContImp extends SpotGameCont {
     try {
       statusRequest = StatusRequest.loading;
       update();
+
       if(!isConnected){
         Get.defaultDialog(
           backgroundColor: white,
@@ -103,7 +106,6 @@ class SpotGameContImp extends SpotGameCont {
         }
         statusRequest = StatusRequest.success;
         update();
-        print(level);
       }
 
     } catch (e) {
@@ -227,16 +229,147 @@ class SpotGameContImp extends SpotGameCont {
   }
 
   @override
+  updateLevel() async {
+    try {
+      Map levelRequest = {
+        'user_email': email,
+        'level': clevel.toString(),
+      };
+      await requests.postData(levelRequest, ApiLinks.updateSpotGameLevel);
+    } catch (e) {
+      print("Error: $e");
+    }
+  }
+
+  @override
   submitAnswer(no) async {
     try {
       if(clevel == 1 && no == lvlOne){
-        await audioPlayer.setSourceAsset("sounds/win.mp3");
+        countdownController1.pause();
+        await updateLevel();
+        Get.defaultDialog(
+          backgroundColor: white,
+          title: "Correct",
+          titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
+          titleStyle: TextStyle(
+              fontSize: 18.sp,
+              fontFamily: "Cairo",
+              color: green,
+              fontWeight: FontWeight.bold
+          ),
+          content: Container(
+            alignment: Alignment.center,
+            height: 7.h,
+            child: Text(
+              "Good Job,You earned 5 points..",
+              style: TextStyle(
+                fontSize: 18.sp,
+                fontFamily: "Cairo",
+              ),
+              textAlign: TextAlign.center,
+            ),
+          ),
+          onWillPop: () async {
+            Get.back();
+            Get.back();
+            Get.to(() => const SpotGameScreen(level: 2));
+            return false;
+          }
+        );
+        await audioPlayer.play(AssetSource("sounds/win.mp3"));
+        update();
       } else if(clevel == 2 && no == lvlTwo){
-
+        countdownController2.pause();
+        Get.defaultDialog(
+          backgroundColor: white,
+          title: "Correct",
+          titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
+          titleStyle: TextStyle(
+              fontSize: 18.sp,
+              fontFamily: "Cairo",
+              color: green,
+              fontWeight: FontWeight.bold
+          ),
+          content: Container(
+            alignment: Alignment.center,
+            height: 7.h,
+            child: Text(
+              "You`re doing great. You earned 7 points..",
+              style: TextStyle(
+                fontSize: 17.sp,
+                fontFamily: "Cairo",
+              ),
+              textAlign: TextAlign.center,
+            ),
+          ),
+          onWillPop: () async {
+            Get.back();
+            Get.back(canPop: true);
+            Get.to(() => const SpotGameScreen(level: 3));
+            return false;
+          }
+        );
       } else if(clevel == 3 && no == lvlThree){
-
+        countdownController2.pause();
+        Get.defaultDialog(
+          backgroundColor: white,
+          title: "Correct",
+          titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
+          titleStyle: TextStyle(
+              fontSize: 18.sp,
+              fontFamily: "Cairo",
+              color: green,
+              fontWeight: FontWeight.bold
+          ),
+          content: Container(
+            alignment: Alignment.center,
+            height: 7.h,
+            child: Text(
+              "Keep going. You earned 7 points..",
+              style: TextStyle(
+                fontSize: 17.sp,
+                fontFamily: "Cairo",
+              ),
+              textAlign: TextAlign.center,
+            ),
+          ),
+          onWillPop: () async {
+            Get.back();
+            Get.back();
+            Get.to(() => const SpotGameScreen(level: 4));
+            return false;
+          }
+        );
       } else if(clevel == 4 && no == lvlFour){
-
+        countdownController3.pause();
+        Get.defaultDialog(
+          backgroundColor: white,
+          title: "Correct",
+          titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
+          titleStyle: TextStyle(
+              fontSize: 18.sp,
+              fontFamily: "Cairo",
+              color: green,
+              fontWeight: FontWeight.bold
+          ),
+          content: Container(
+            alignment: Alignment.center,
+            height: 7.h,
+            child: Text(
+              "Excellent, You earned 10 points..",
+              style: TextStyle(
+                fontSize: 17.sp,
+                fontFamily: "Cairo",
+              ),
+              textAlign: TextAlign.center,
+            ),
+          ),
+          onWillPop: () async {
+            Get.back();
+            Get.back();
+            return false;
+          }
+        );
       }
     } catch (e) {
       print("Error: $e");
@@ -248,11 +381,6 @@ class SpotGameContImp extends SpotGameCont {
     super.onReady();
     await checkNetwork();
     getLevel();
-  }
-
-  @override
-  void dispose() {
-    super.dispose();
   }
 
 }

@@ -7,4 +7,5 @@ class ApiLinks {
   static const String addTask = 'https://microplazatesla.com/vl/save_task.php';
   static const String updateTaskStatue = 'https://microplazatesla.com/vl/mark_finished.php';
   static const String spotGameLevel = 'https://microplazatesla.com/vl/get_spot_level.php';
+  static const String updateSpotGameLevel = 'https://microplazatesla.com/vl/update_spot_level.php';
 }

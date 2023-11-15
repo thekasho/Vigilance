@@ -36,7 +36,8 @@ class StdHomeContImp extends StdHomeCont {
       };
 
       var auth = await requests.postData(req, ApiLinks.getPoints);
-      if(auth['message'] == "faild"){
+      print(auth);
+      if(auth['message'] == "failed"){
         Get.defaultDialog(
           backgroundColor: white,
           title: "Error",
@@ -79,6 +80,12 @@ class StdHomeContImp extends StdHomeCont {
   void onInit() {
     statusRequest = StatusRequest.none;
     checkNetwork();
+    checkAuth();
     super.onInit();
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
   }
 }

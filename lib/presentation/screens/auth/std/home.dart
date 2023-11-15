@@ -160,243 +160,251 @@ class _StdHomeScreenState extends State<StdHomeScreen> {
                 SizedBox(height: 2.h),
                 SizedBox(
                   height: 83.h,
-                  child: SingleChildScrollView(
-                    child: Column(
-                      children: [
-                        SizedBox(height: 2.h),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            GestureDetector(
-                              onTap: (){
-                                Get.toNamed(screenStudyHom);
-                              },
-                              child: Container(
-                                width: 42.w,
-                                height: 22.h,
-                                decoration: BoxDecoration(
-                                  color: white,
-                                  borderRadius: BorderRadius.circular(20),
-                                  boxShadow: const [
-                                    BoxShadow(
-                                      blurRadius: 4,
-                                      color: Color(0x33000000),
-                                      offset: Offset(0, 2),
-                                      spreadRadius: 2,
-                                    )
-                                  ],
-                                ),
-                                child: Column(
-                                  children: [
-                                    Container(
-                                      margin: const EdgeInsets.symmetric(
-                                        vertical: 10,
+                  child: RefreshIndicator(
+                    onRefresh: () async {
+                      await stdHomeContImp.checkAuth();
+                      stdHomeContImp.update();
+                    },
+                    backgroundColor: white,
+                    color: orange,
+                    child: SingleChildScrollView(
+                      child: Column(
+                        children: [
+                          SizedBox(height: 2.h),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              GestureDetector(
+                                onTap: (){
+                                  Get.toNamed(screenStudyHom);
+                                },
+                                child: Container(
+                                  width: 42.w,
+                                  height: 22.h,
+                                  decoration: BoxDecoration(
+                                    color: white,
+                                    borderRadius: BorderRadius.circular(20),
+                                    boxShadow: const [
+                                      BoxShadow(
+                                        blurRadius: 4,
+                                        color: Color(0x33000000),
+                                        offset: Offset(0, 2),
+                                        spreadRadius: 2,
+                                      )
+                                    ],
+                                  ),
+                                  child: Column(
+                                    children: [
+                                      Container(
+                                        margin: const EdgeInsets.symmetric(
+                                          vertical: 10,
+                                        ),
+                                        width: 22.w,
+                                        clipBehavior: Clip.antiAlias,
+                                        decoration: const BoxDecoration(
+                                            shape: BoxShape.circle
+                                        ),
+                                        child: CachedNetworkImage(
+                                          imageUrl: "https://th.bing.com/th/id/OIP.3t2E0odfjMxgT_RwPIf1mQAAAA?pid=ImgDet&w=149&h=151&c=7&dpr=1.3",
+                                          errorWidget: (_, i, e) {
+                                            return Icon(
+                                              FontAwesomeIcons.image,
+                                              size: 13.sp,
+                                              color: Colors.white,
+                                            );
+                                          },
+                                        ),
                                       ),
-                                      width: 22.w,
-                                      clipBehavior: Clip.antiAlias,
-                                      decoration: const BoxDecoration(
-                                          shape: BoxShape.circle
+                                      Text(
+                                        "Studying",
+                                        style: TextStyle(
+                                          fontFamily: 'Cairo',
+                                          fontSize: 20.sp,
+                                        ),
                                       ),
-                                      child: CachedNetworkImage(
-                                        imageUrl: "https://th.bing.com/th/id/OIP.3t2E0odfjMxgT_RwPIf1mQAAAA?pid=ImgDet&w=149&h=151&c=7&dpr=1.3",
-                                        errorWidget: (_, i, e) {
-                                          return Icon(
-                                            FontAwesomeIcons.image,
-                                            size: 13.sp,
-                                            color: Colors.white,
-                                          );
-                                        },
-                                      ),
-                                    ),
-                                    Text(
-                                      "Studying",
-                                      style: TextStyle(
-                                        fontFamily: 'Cairo',
-                                        fontSize: 20.sp,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                        SizedBox(height: 2.h),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            GestureDetector(
-                              onTap: (){
-                                Get.toNamed(screenGamesHome);
-                              },
-                              child: Container(
-                                width: 42.w,
-                                height: 22.h,
-                                decoration: BoxDecoration(
-                                  color: white,
-                                  borderRadius: BorderRadius.circular(20),
-                                  boxShadow: const [
-                                    BoxShadow(
-                                      blurRadius: 4,
-                                      color: Color(0x33000000),
-                                      offset: Offset(0, 2),
-                                      spreadRadius: 2,
-                                    )
-                                  ],
-                                ),
-                                child: Column(
-                                  children: [
-                                    Container(
-                                      margin: const EdgeInsets.symmetric(
-                                        vertical: 10,
-                                      ),
-                                      width: 22.w,
-                                      clipBehavior: Clip.antiAlias,
-                                      decoration: const BoxDecoration(
-                                          shape: BoxShape.circle
-                                      ),
-                                      child: CachedNetworkImage(
-                                        imageUrl: "https://th.bing.com/th/id/OIP.c9oh-nlPJ_h6lctTLVMcFwHaHM?pid=ImgDet&rs=1",
-                                        errorWidget: (_, i, e) {
-                                          return Icon(
-                                            FontAwesomeIcons.image,
-                                            size: 13.sp,
-                                            color: Colors.white,
-                                          );
-                                        },
-                                      ),
-                                    ),
-                                    Text(
-                                      "Games",
-                                      style: TextStyle(
-                                        fontFamily: 'Cairo',
-                                        fontSize: 20.sp,
-                                      ),
-                                    ),
-                                  ],
+                                    ],
+                                  ),
                                 ),
                               ),
-                            ),
-                          ],
-                        ),
-                        SizedBox(height: 2.h),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            GestureDetector(
-                              onTap: (){
-                                Get.toNamed(screenStdLogin);
-                              },
-                              child: Container(
-                                width: 42.w,
-                                height: 22.h,
-                                decoration: BoxDecoration(
-                                  color: white,
-                                  borderRadius: BorderRadius.circular(20),
-                                  boxShadow: const [
-                                    BoxShadow(
-                                      blurRadius: 4,
-                                      color: Color(0x33000000),
-                                      offset: Offset(0, 2),
-                                      spreadRadius: 2,
-                                    )
-                                  ],
-                                ),
-                                child: Column(
-                                  children: [
-                                    Container(
-                                      margin: const EdgeInsets.symmetric(
-                                        vertical: 10,
+                            ],
+                          ),
+                          SizedBox(height: 2.h),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              GestureDetector(
+                                onTap: (){
+                                  Get.toNamed(screenGamesHome);
+                                },
+                                child: Container(
+                                  width: 42.w,
+                                  height: 22.h,
+                                  decoration: BoxDecoration(
+                                    color: white,
+                                    borderRadius: BorderRadius.circular(20),
+                                    boxShadow: const [
+                                      BoxShadow(
+                                        blurRadius: 4,
+                                        color: Color(0x33000000),
+                                        offset: Offset(0, 2),
+                                        spreadRadius: 2,
+                                      )
+                                    ],
+                                  ),
+                                  child: Column(
+                                    children: [
+                                      Container(
+                                        margin: const EdgeInsets.symmetric(
+                                          vertical: 10,
+                                        ),
+                                        width: 22.w,
+                                        clipBehavior: Clip.antiAlias,
+                                        decoration: const BoxDecoration(
+                                            shape: BoxShape.circle
+                                        ),
+                                        child: CachedNetworkImage(
+                                          imageUrl: "https://th.bing.com/th/id/OIP.c9oh-nlPJ_h6lctTLVMcFwHaHM?pid=ImgDet&rs=1",
+                                          errorWidget: (_, i, e) {
+                                            return Icon(
+                                              FontAwesomeIcons.image,
+                                              size: 13.sp,
+                                              color: Colors.white,
+                                            );
+                                          },
+                                        ),
                                       ),
-                                      width: 22.w,
-                                      clipBehavior: Clip.antiAlias,
-                                      decoration: const BoxDecoration(
-                                          shape: BoxShape.circle
+                                      Text(
+                                        "Games",
+                                        style: TextStyle(
+                                          fontFamily: 'Cairo',
+                                          fontSize: 20.sp,
+                                        ),
                                       ),
-                                      child: CachedNetworkImage(
-                                        imageUrl: "https://th.bing.com/th/id/OIP.BDSsIfDjgj0s3QL3rWaVuAHaHa?w=174&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7",
-                                        errorWidget: (_, i, e) {
-                                          return Icon(
-                                            FontAwesomeIcons.image,
-                                            size: 13.sp,
-                                            color: Colors.white,
-                                          );
-                                        },
-                                      ),
-                                    ),
-                                    Text(
-                                      "Meditation",
-                                      style: TextStyle(
-                                        fontFamily: 'Cairo',
-                                        fontSize: 20.sp,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                        SizedBox(height: 2.h),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            GestureDetector(
-                              onTap: (){
-                                Get.toNamed(screenStdLogin);
-                              },
-                              child: Container(
-                                width: 42.w,
-                                height: 22.h,
-                                decoration: BoxDecoration(
-                                  color: white,
-                                  borderRadius: BorderRadius.circular(20),
-                                  boxShadow: const [
-                                    BoxShadow(
-                                      blurRadius: 4,
-                                      color: Color(0x33000000),
-                                      offset: Offset(0, 2),
-                                      spreadRadius: 2,
-                                    )
-                                  ],
-                                ),
-                                child: Column(
-                                  children: [
-                                    Container(
-                                      margin: const EdgeInsets.symmetric(
-                                        vertical: 10,
-                                      ),
-                                      width: 22.w,
-                                      clipBehavior: Clip.antiAlias,
-                                      decoration: const BoxDecoration(
-                                          shape: BoxShape.circle
-                                      ),
-                                      child: CachedNetworkImage(
-                                        imageUrl: "https://th.bing.com/th/id/OIP.NnSZ-PGdRmTcQ8x2uzNlAgAAAA?w=263&h=185&c=7&r=0&o=5&dpr=1.3&pid=1.7",
-                                        errorWidget: (_, i, e) {
-                                          return Icon(
-                                            FontAwesomeIcons.image,
-                                            size: 13.sp,
-                                            color: Colors.white,
-                                          );
-                                        },
-                                      ),
-                                    ),
-                                    Text(
-                                      "Support teacher",
-                                      style: TextStyle(
-                                        fontFamily: 'Cairo',
-                                        fontSize: 20.sp,
-                                      ),
-                                    ),
-                                  ],
+                                    ],
+                                  ),
                                 ),
                               ),
-                            ),
-                          ],
-                        ),
-                        SizedBox(height: 5.h),
-                      ],
+                            ],
+                          ),
+                          SizedBox(height: 2.h),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              GestureDetector(
+                                onTap: (){
+                                  Get.toNamed(screenStdLogin);
+                                },
+                                child: Container(
+                                  width: 42.w,
+                                  height: 22.h,
+                                  decoration: BoxDecoration(
+                                    color: white,
+                                    borderRadius: BorderRadius.circular(20),
+                                    boxShadow: const [
+                                      BoxShadow(
+                                        blurRadius: 4,
+                                        color: Color(0x33000000),
+                                        offset: Offset(0, 2),
+                                        spreadRadius: 2,
+                                      )
+                                    ],
+                                  ),
+                                  child: Column(
+                                    children: [
+                                      Container(
+                                        margin: const EdgeInsets.symmetric(
+                                          vertical: 10,
+                                        ),
+                                        width: 22.w,
+                                        clipBehavior: Clip.antiAlias,
+                                        decoration: const BoxDecoration(
+                                            shape: BoxShape.circle
+                                        ),
+                                        child: CachedNetworkImage(
+                                          imageUrl: "https://th.bing.com/th/id/OIP.BDSsIfDjgj0s3QL3rWaVuAHaHa?w=174&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7",
+                                          errorWidget: (_, i, e) {
+                                            return Icon(
+                                              FontAwesomeIcons.image,
+                                              size: 13.sp,
+                                              color: Colors.white,
+                                            );
+                                          },
+                                        ),
+                                      ),
+                                      Text(
+                                        "Meditation",
+                                        style: TextStyle(
+                                          fontFamily: 'Cairo',
+                                          fontSize: 20.sp,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                          SizedBox(height: 2.h),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              GestureDetector(
+                                onTap: (){
+                                  Get.toNamed(screenStdLogin);
+                                },
+                                child: Container(
+                                  width: 42.w,
+                                  height: 22.h,
+                                  decoration: BoxDecoration(
+                                    color: white,
+                                    borderRadius: BorderRadius.circular(20),
+                                    boxShadow: const [
+                                      BoxShadow(
+                                        blurRadius: 4,
+                                        color: Color(0x33000000),
+                                        offset: Offset(0, 2),
+                                        spreadRadius: 2,
+                                      )
+                                    ],
+                                  ),
+                                  child: Column(
+                                    children: [
+                                      Container(
+                                        margin: const EdgeInsets.symmetric(
+                                          vertical: 10,
+                                        ),
+                                        width: 22.w,
+                                        clipBehavior: Clip.antiAlias,
+                                        decoration: const BoxDecoration(
+                                            shape: BoxShape.circle
+                                        ),
+                                        child: CachedNetworkImage(
+                                          imageUrl: "https://th.bing.com/th/id/OIP.NnSZ-PGdRmTcQ8x2uzNlAgAAAA?w=263&h=185&c=7&r=0&o=5&dpr=1.3&pid=1.7",
+                                          errorWidget: (_, i, e) {
+                                            return Icon(
+                                              FontAwesomeIcons.image,
+                                              size: 13.sp,
+                                              color: Colors.white,
+                                            );
+                                          },
+                                        ),
+                                      ),
+                                      Text(
+                                        "Support teacher",
+                                        style: TextStyle(
+                                          fontFamily: 'Cairo',
+                                          fontSize: 20.sp,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                          SizedBox(height: 5.h),
+                        ],
+                      ),
                     ),
                   ),
                 )

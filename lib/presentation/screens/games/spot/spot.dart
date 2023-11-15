@@ -14,15 +14,19 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
   Future<void> openTimer() async {
     spotGameContImp.clevel = widget.level;
     if(widget.level == 1){
+      await Future.delayed(const Duration(seconds: 1));
       await spotGameContImp.countdownController1.start();
       spotGameContImp.update();
     } else if(widget.level == 2){
+      await Future.delayed(const Duration(seconds: 1));
       await spotGameContImp.countdownController2.start();
       spotGameContImp.update();
     } else if(widget.level == 3){
+      await Future.delayed(const Duration(seconds: 1));
       await spotGameContImp.countdownController3.start();
       spotGameContImp.update();
     } else if(widget.level == 4){
+      await Future.delayed(const Duration(seconds: 1));
       await spotGameContImp.countdownController4.start();
       spotGameContImp.update();
     }
@@ -56,7 +60,7 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
               ),
             );
           } else if(cont.statusRequest == StatusRequest.success){
-            if(widget.level == 1 && cont.level >= widget.level){
+            if(cont.clevel == 1 && cont.level >= widget.level){
               return Container(
                 width: double.infinity,
                 height: double.infinity,
@@ -456,7 +460,7 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                   ],
                 ),
               );
-            } else if(widget.level == 2 && cont.level >= widget.level){
+            } else if(cont.clevel == 2 && cont.level >= widget.level){
               return Container(
                 width: double.infinity,
                 height: double.infinity,
@@ -856,7 +860,7 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                   ],
                 ),
               );
-            } else if(widget.level == 3 && cont.level >= widget.level){
+            } else if(cont.clevel == 3 && cont.level >= widget.level){
               return Container(
                 width: double.infinity,
                 height: double.infinity,
@@ -1256,7 +1260,7 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                   ],
                 ),
               );
-            } else if(widget.level == 4 && cont.level >= widget.level){
+            } else if(cont.clevel == 4 && cont.level >= widget.level){
               return Container(
                 width: double.infinity,
                 height: double.infinity,
