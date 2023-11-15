@@ -2,7 +2,9 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
+import 'package:get_storage/get_storage.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
+import 'package:timer_count_down/timer_count_down.dart';
 import 'package:vig/controller/landing/landing.dart';
 
 import '../../controller/games/spot.dart';
@@ -31,4 +33,5 @@ part 'todo/std/todo.dart';
 
 part 'games/home.dart';
 part 'games/spot/levels.dart';
+part 'games/spot/spot.dart';
 

@@ -6,7 +6,7 @@ const black = Colors.black;
 const red = Color(0xffFF3A3A);
 const redLight = Color(0xffFFCECE);
 const green = Color(0xff199D6E);
-const greenSuccess = Color(0xff00FFA3);
+const greenSuccess = Color(0xff4cb050);
 const blue = Color(0xff103989);
 const yellowBck = Color(0xffFFDF8D);
 const orange = Color(0xffEF7939);
@@ -16,5 +16,10 @@ const lightGrey = Color(0xffe0e3e7);
 const yellow = Color(0xffFFDD33);
 const lightBlue = Color(0xfff4f8fc);
 const lightOrange = Color(0xfffff0cb);
+const lightGreen = Color(0xffB3DEAA);
+const lightPink = Color(0xffDEABB4);
+const lighterGreen = Color(0xffAADED5);
+const lightMove = Color(0xffD4AADE);
+
 
 
