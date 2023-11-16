@@ -65,6 +65,7 @@ flutter:
     - assets/images/
     - assets/file/
     - assets/images/spot_game_images/
+    - assets/images/shopping/
     - assets/sounds/
 
   fonts:

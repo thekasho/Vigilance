@@ -20,6 +20,8 @@ const lightGreen = Color(0xffB3DEAA);
 const lightPink = Color(0xffDEABB4);
 const lighterGreen = Color(0xffAADED5);
 const lightMove = Color(0xffD4AADE);
+const darkRed = Color(0xffb30101);
+const hardYellow = Color(0xffff9700);
 
 
 

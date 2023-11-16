@@ -112,7 +112,7 @@ class _GamesHomeScreenState extends State<GamesHomeScreen> {
                           ),
                         ),
                         onPressed: () {
-                          Get.toNamed(screenStdToDO);
+                          Get.toNamed(screenMemoryLevels);
                         },
                       ),
                     ),
@@ -149,7 +149,7 @@ class _GamesHomeScreenState extends State<GamesHomeScreen> {
                           ),
                         ),
                         onPressed: () {
-                          Get.toNamed(screenStdToDO);
+                          Get.toNamed(screenShopLevels);
                         },
                       ),
                     ),

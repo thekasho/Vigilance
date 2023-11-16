@@ -8,4 +8,6 @@ class ApiLinks {
   static const String updateTaskStatue = 'https://microplazatesla.com/vl/mark_finished.php';
   static const String spotGameLevel = 'https://microplazatesla.com/vl/get_spot_level.php';
   static const String updateSpotGameLevel = 'https://microplazatesla.com/vl/update_spot_level.php';
+  static const String memoryGameLevel = 'https://microplazatesla.com/vl/get_memory_level.php';
+  static const String updateMemoryGameLevel = 'https://microplazatesla.com/vl/update_memory_level.php';
 }

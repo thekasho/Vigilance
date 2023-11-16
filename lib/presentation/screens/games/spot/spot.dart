@@ -1707,6 +1707,8 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                   ],
                 ),
               );
+            } else {
+              Get.back();
             }
           }
           return Container(
