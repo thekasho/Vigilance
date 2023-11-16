@@ -10,6 +10,7 @@ class ShopLevelsScreen extends StatefulWidget {
 class _ShopLevelsScreenState extends State<ShopLevelsScreen> {
   @override
   Widget build(BuildContext context) {
+    Get.put(ShoppingGameContImp());
     return SafeArea(
       child: Scaffold(
         body: Container(
@@ -102,295 +103,300 @@ class _ShopLevelsScreenState extends State<ShopLevelsScreen> {
               SizedBox(height: 1.h),
               SizedBox(
                 height: 67.h,
-                child: SingleChildScrollView(
-                  child: Column(
-                    children: [
-                      SizedBox(height: 1.h),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
-                          GestureDetector(
-                            onTap: () => Get.to( () => const ShoppingGameScreen(level: 1)),
-                            child: Container(
+                child: GetBuilder<ShoppingGameContImp>(builder: (cont) {
+                  return SingleChildScrollView(
+                    child: Column(
+                      children: [
+                        SizedBox(height: 1.h),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            GestureDetector(
+                              onTap: () => Get.to(() => const ShoppingGameScreen(level: 1)),
+                              child: Container(
+                                width: 30.w,
+                                height: 16.h,
+                                alignment: Alignment.center,
+                                decoration: BoxDecoration(
+                                  color: cont.level >= 1 ? orangeBtn : lightOrange,
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
+                                child: Text(
+                                  "1",
+                                  style: TextStyle(
+                                    fontSize: 38.sp,
+                                    fontWeight: FontWeight.bold
+                                  ),
+                                ),
+                              ),
+                            ),
+                            GestureDetector(
+                              onTap: () => Get.to(() => const ShoppingGameScreen(level: 2)),
+                              child: Container(
+                                width: 30.w,
+                                height: 16.h,
+                                alignment: Alignment.center,
+                                decoration: BoxDecoration(
+                                  color: cont.level >= 2 ? orangeBtn : lightOrange,
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
+                                child: Text(
+                                  "2",
+                                  style: TextStyle(
+                                      fontSize: 38.sp,
+                                      fontWeight: FontWeight.bold
+                                  ),
+                                ),
+                              ),
+                            ),
+                            GestureDetector(
+                              onTap: () => Get.to(() => const ShoppingGameScreen(level: 3)),
+                              child: Container(
+                                width: 30.w,
+                                height: 16.h,
+                                alignment: Alignment.center,
+                                decoration: BoxDecoration(
+                                  color: cont.level >= 3 ? orangeBtn : lightOrange,
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
+                                child: Text(
+                                  "3",
+                                  style: TextStyle(
+                                    fontSize: 38.sp,
+                                    fontWeight: FontWeight.bold
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                        SizedBox(height: 1.h),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            GestureDetector(
+                              onTap: () => Get.to(() => const ShoppingGameScreen(level: 4)),
+                              child: Container(
+                                width: 30.w,
+                                height: 16.h,
+                                alignment: Alignment.center,
+                                decoration: BoxDecoration(
+                                  color: cont.level >= 4 ? orangeBtn : lightOrange,
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
+                                child: Text(
+                                  "4",
+                                  style: TextStyle(
+                                      fontSize: 38.sp,
+                                      fontWeight: FontWeight.bold
+                                  ),
+                                ),
+                              ),
+                            ),
+                            GestureDetector(
+                              onTap: () => Get.to(() => const ShoppingGameScreen(level: 5)),
+                              child: Container(
+                                width: 30.w,
+                                height: 16.h,
+                                alignment: Alignment.center,
+                                decoration: BoxDecoration(
+                                  color: cont.level >= 5 ? orangeBtn : lightOrange,
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
+                                child: Text(
+                                  "5",
+                                  style: TextStyle(
+                                      fontSize: 38.sp,
+                                      fontWeight: FontWeight.bold
+                                  ),
+                                ),
+                              ),
+                            ),
+                            Container(
                               width: 30.w,
                               height: 16.h,
                               alignment: Alignment.center,
                               decoration: BoxDecoration(
-                                color: orangeBtn,
+                                color: lightOrange,
                                 borderRadius: BorderRadius.circular(10),
                               ),
                               child: Text(
-                                "1",
+                                "6",
                                 style: TextStyle(
                                     fontSize: 38.sp,
                                     fontWeight: FontWeight.bold
                                 ),
                               ),
                             ),
-                          ),
-                          GestureDetector(
-                            onTap: () => Get.to( () => const ShoppingGameScreen(level: 2)),
-                            child: Container(
+                          ],
+                        ),
+                        SizedBox(height: 1.h),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            Container(
                               width: 30.w,
                               height: 16.h,
                               alignment: Alignment.center,
                               decoration: BoxDecoration(
-                                color: orangeBtn,
+                                color: lightOrange,
                                 borderRadius: BorderRadius.circular(10),
                               ),
                               child: Text(
-                                "2",
+                                "7",
                                 style: TextStyle(
                                     fontSize: 38.sp,
                                     fontWeight: FontWeight.bold
                                 ),
                               ),
                             ),
-                          ),
-                          GestureDetector(
-                            onTap: () => Get.to( () => const ShoppingGameScreen(level: 3)),
-                            child: Container(
+                            Container(
                               width: 30.w,
                               height: 16.h,
                               alignment: Alignment.center,
                               decoration: BoxDecoration(
-                                color: orangeBtn,
+                                color: lightOrange,
                                 borderRadius: BorderRadius.circular(10),
                               ),
                               child: Text(
-                                "3",
+                                "8",
                                 style: TextStyle(
                                     fontSize: 38.sp,
                                     fontWeight: FontWeight.bold
                                 ),
                               ),
                             ),
-                          ),
-                        ],
-                      ),
-                      SizedBox(height: 1.h),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
-                          GestureDetector(
-                            onTap: () => Get.to( () => const ShoppingGameScreen(level: 4)),
-                            child: Container(
+                            Container(
                               width: 30.w,
                               height: 16.h,
                               alignment: Alignment.center,
                               decoration: BoxDecoration(
-                                color: orangeBtn,
+                                color: lightOrange,
                                 borderRadius: BorderRadius.circular(10),
                               ),
                               child: Text(
-                                "4",
+                                "9",
                                 style: TextStyle(
                                     fontSize: 38.sp,
                                     fontWeight: FontWeight.bold
                                 ),
                               ),
                             ),
-                          ),
-                          Container(
-                            width: 30.w,
-                            height: 16.h,
-                            alignment: Alignment.center,
-                            decoration: BoxDecoration(
-                              color: lightOrange,
-                              borderRadius: BorderRadius.circular(10),
-                            ),
-                            child: Text(
-                              "5",
-                              style: TextStyle(
-                                  fontSize: 38.sp,
-                                  fontWeight: FontWeight.bold
+                          ],
+                        ),
+                        SizedBox(height: 1.h),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            Container(
+                              width: 30.w,
+                              height: 16.h,
+                              alignment: Alignment.center,
+                              decoration: BoxDecoration(
+                                color: lightOrange,
+                                borderRadius: BorderRadius.circular(10),
+                              ),
+                              child: Text(
+                                "10",
+                                style: TextStyle(
+                                    fontSize: 38.sp,
+                                    fontWeight: FontWeight.bold
+                                ),
                               ),
                             ),
-                          ),
-                          Container(
-                            width: 30.w,
-                            height: 16.h,
-                            alignment: Alignment.center,
-                            decoration: BoxDecoration(
-                              color: lightOrange,
-                              borderRadius: BorderRadius.circular(10),
-                            ),
-                            child: Text(
-                              "6",
-                              style: TextStyle(
-                                  fontSize: 38.sp,
-                                  fontWeight: FontWeight.bold
+                            Container(
+                              width: 30.w,
+                              height: 16.h,
+                              alignment: Alignment.center,
+                              decoration: BoxDecoration(
+                                color: lightOrange,
+                                borderRadius: BorderRadius.circular(10),
+                              ),
+                              child: Text(
+                                "11",
+                                style: TextStyle(
+                                    fontSize: 38.sp,
+                                    fontWeight: FontWeight.bold
+                                ),
                               ),
                             ),
-                          ),
-                        ],
-                      ),
-                      SizedBox(height: 1.h),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
-                          Container(
-                            width: 30.w,
-                            height: 16.h,
-                            alignment: Alignment.center,
-                            decoration: BoxDecoration(
-                              color: lightOrange,
-                              borderRadius: BorderRadius.circular(10),
-                            ),
-                            child: Text(
-                              "7",
-                              style: TextStyle(
-                                  fontSize: 38.sp,
-                                  fontWeight: FontWeight.bold
+                            Container(
+                              width: 30.w,
+                              height: 16.h,
+                              alignment: Alignment.center,
+                              decoration: BoxDecoration(
+                                color: lightOrange,
+                                borderRadius: BorderRadius.circular(10),
+                              ),
+                              child: Text(
+                                "12",
+                                style: TextStyle(
+                                    fontSize: 38.sp,
+                                    fontWeight: FontWeight.bold
+                                ),
                               ),
                             ),
-                          ),
-                          Container(
-                            width: 30.w,
-                            height: 16.h,
-                            alignment: Alignment.center,
-                            decoration: BoxDecoration(
-                              color: lightOrange,
-                              borderRadius: BorderRadius.circular(10),
-                            ),
-                            child: Text(
-                              "8",
-                              style: TextStyle(
-                                  fontSize: 38.sp,
-                                  fontWeight: FontWeight.bold
+                          ],
+                        ),
+                        SizedBox(height: 1.h),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            Container(
+                              width: 30.w,
+                              height: 16.h,
+                              alignment: Alignment.center,
+                              decoration: BoxDecoration(
+                                color: lightOrange,
+                                borderRadius: BorderRadius.circular(10),
+                              ),
+                              child: Text(
+                                "13",
+                                style: TextStyle(
+                                    fontSize: 38.sp,
+                                    fontWeight: FontWeight.bold
+                                ),
                               ),
                             ),
-                          ),
-                          Container(
-                            width: 30.w,
-                            height: 16.h,
-                            alignment: Alignment.center,
-                            decoration: BoxDecoration(
-                              color: lightOrange,
-                              borderRadius: BorderRadius.circular(10),
-                            ),
-                            child: Text(
-                              "9",
-                              style: TextStyle(
-                                  fontSize: 38.sp,
-                                  fontWeight: FontWeight.bold
+                            Container(
+                              width: 30.w,
+                              height: 16.h,
+                              alignment: Alignment.center,
+                              decoration: BoxDecoration(
+                                color: lightOrange,
+                                borderRadius: BorderRadius.circular(10),
+                              ),
+                              child: Text(
+                                "14",
+                                style: TextStyle(
+                                    fontSize: 38.sp,
+                                    fontWeight: FontWeight.bold
+                                ),
                               ),
                             ),
-                          ),
-                        ],
-                      ),
-                      SizedBox(height: 1.h),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
-                          Container(
-                            width: 30.w,
-                            height: 16.h,
-                            alignment: Alignment.center,
-                            decoration: BoxDecoration(
-                              color: lightOrange,
-                              borderRadius: BorderRadius.circular(10),
-                            ),
-                            child: Text(
-                              "10",
-                              style: TextStyle(
-                                  fontSize: 38.sp,
-                                  fontWeight: FontWeight.bold
+                            Container(
+                              width: 30.w,
+                              height: 16.h,
+                              alignment: Alignment.center,
+                              decoration: BoxDecoration(
+                                color: lightOrange,
+                                borderRadius: BorderRadius.circular(10),
+                              ),
+                              child: Text(
+                                "15",
+                                style: TextStyle(
+                                    fontSize: 38.sp,
+                                    fontWeight: FontWeight.bold
+                                ),
                               ),
                             ),
-                          ),
-                          Container(
-                            width: 30.w,
-                            height: 16.h,
-                            alignment: Alignment.center,
-                            decoration: BoxDecoration(
-                              color: lightOrange,
-                              borderRadius: BorderRadius.circular(10),
-                            ),
-                            child: Text(
-                              "11",
-                              style: TextStyle(
-                                  fontSize: 38.sp,
-                                  fontWeight: FontWeight.bold
-                              ),
-                            ),
-                          ),
-                          Container(
-                            width: 30.w,
-                            height: 16.h,
-                            alignment: Alignment.center,
-                            decoration: BoxDecoration(
-                              color: lightOrange,
-                              borderRadius: BorderRadius.circular(10),
-                            ),
-                            child: Text(
-                              "12",
-                              style: TextStyle(
-                                  fontSize: 38.sp,
-                                  fontWeight: FontWeight.bold
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                      SizedBox(height: 1.h),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
-                          Container(
-                            width: 30.w,
-                            height: 16.h,
-                            alignment: Alignment.center,
-                            decoration: BoxDecoration(
-                              color: lightOrange,
-                              borderRadius: BorderRadius.circular(10),
-                            ),
-                            child: Text(
-                              "13",
-                              style: TextStyle(
-                                  fontSize: 38.sp,
-                                  fontWeight: FontWeight.bold
-                              ),
-                            ),
-                          ),
-                          Container(
-                            width: 30.w,
-                            height: 16.h,
-                            alignment: Alignment.center,
-                            decoration: BoxDecoration(
-                              color: lightOrange,
-                              borderRadius: BorderRadius.circular(10),
-                            ),
-                            child: Text(
-                              "14",
-                              style: TextStyle(
-                                  fontSize: 38.sp,
-                                  fontWeight: FontWeight.bold
-                              ),
-                            ),
-                          ),
-                          Container(
-                            width: 30.w,
-                            height: 16.h,
-                            alignment: Alignment.center,
-                            decoration: BoxDecoration(
-                              color: lightOrange,
-                              borderRadius: BorderRadius.circular(10),
-                            ),
-                            child: Text(
-                              "15",
-                              style: TextStyle(
-                                  fontSize: 38.sp,
-                                  fontWeight: FontWeight.bold
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                      SizedBox(height: 1.h),
-                    ],
-                  ),
-                ),
+                          ],
+                        ),
+                        SizedBox(height: 1.h),
+                      ],
+                    ),
+                  );
+                }),
               ),
             ],
           ),

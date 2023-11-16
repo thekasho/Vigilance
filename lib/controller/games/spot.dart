@@ -369,6 +369,114 @@ class SpotGameContImp extends SpotGameCont {
             return false;
           }
         );
+      } else {
+        Get.defaultDialog(
+            backgroundColor: white,
+            title: "Wrong",
+            titlePadding: EdgeInsets.only(bottom: 2.h, top: 1.h),
+            titleStyle: TextStyle(
+                fontSize: 18.sp,
+                fontFamily: "Cairo",
+                color: red,
+                fontWeight: FontWeight.bold
+            ),
+            content: Text(
+              "Wrong Answer, Try again !!",
+              style: TextStyle(
+                fontSize: 18.sp,
+                fontFamily: "Cairo",
+              ),
+            ),
+            contentPadding: const EdgeInsets.only(
+                top: 0,
+                bottom: 10
+            ),
+            confirm: SizedBox(
+              width: 30.w,
+              child: ElevatedButton(
+                style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all<Color>(greenSuccess),
+                  shape: MaterialStateProperty.all<
+                      RoundedRectangleBorder>(
+                    RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                  ),
+                  padding: MaterialStateProperty.all<EdgeInsets>(
+                    EdgeInsets.symmetric(
+                        vertical: 1.h
+                    ),
+                  ),
+                ),
+                child: Text(
+                  "Try again",
+                  style: TextStyle(
+                      fontSize: 16.sp,
+                      color: black,
+                      fontWeight: FontWeight.bold,
+                      fontFamily: 'Cairo'
+                  ),
+                ),
+                onPressed: () {
+                  Get.back();
+                  if(clevel == 1) {
+                    countdownController1.restart();
+                  } else if(clevel == 2){
+                    countdownController2.restart();
+                  } else if(clevel == 3){
+                    countdownController3.restart();
+                  } else if(clevel == 4){
+                    countdownController4.restart();
+                  }
+                },
+              ),
+            ),
+            cancel: SizedBox(
+              width: 30.w,
+              child: ElevatedButton(
+                style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all<Color>(lightBtn),
+                  shape: MaterialStateProperty.all<
+                      RoundedRectangleBorder>(
+                    RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                  ),
+                  padding: MaterialStateProperty.all<EdgeInsets>(
+                    EdgeInsets.symmetric(
+                        vertical: 1.h
+                    ),
+                  ),
+                ),
+                child: Text(
+                  "Cancel",
+                  style: TextStyle(
+                      fontSize: 16.sp,
+                      color: black,
+                      fontWeight: FontWeight.bold,
+                      fontFamily: 'Cairo'
+                  ),
+                ),
+                onPressed: () {
+                  Get.back();
+                  Get.back();
+                },
+              ),
+            ),
+            onWillPop: () async {
+              Get.back();
+              if(clevel == 1) {
+                countdownController1.restart();
+              } else if(clevel == 2){
+                countdownController2.restart();
+              } else if(clevel == 3){
+                countdownController3.restart();
+              } else if(clevel == 4){
+                countdownController4.restart();
+              }
+              return false;
+            }
+        );
       }
     } catch (e) {
       print("Error: $e");

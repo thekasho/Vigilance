@@ -4,7 +4,6 @@ import 'package:get/get.dart';
 import 'package:internet_connection_checker/internet_connection_checker.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:collection/collection.dart';
-import 'package:vig/presentation/screens/screens.dart';
 
 import '../../app_links.dart';
 import '../../core/class/statusrequest.dart';

@@ -9,6 +9,7 @@ import 'package:timer_count_down/timer_count_down.dart';
 import 'package:vig/controller/landing/landing.dart';
 
 import '../../controller/games/memory.dart';
+import '../../controller/games/shopping.dart';
 import '../../controller/games/spot.dart';
 import '../../controller/std/home.dart';
 import '../../controller/std/login.dart';
