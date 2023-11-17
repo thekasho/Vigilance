@@ -44,6 +44,32 @@ class _ShopSelectScreenState extends State<ShopSelectScreen> {
         shoppingGameContImp.lvlThree4N = false;
         shoppingGameContImp.lvlThree5Y = false;
         shoppingGameContImp.lvlThree5N = false;
+
+        shoppingGameContImp.lvlFour1Y = false;
+        shoppingGameContImp.lvlFour1N = false;
+        shoppingGameContImp.lvlFour2Y = false;
+        shoppingGameContImp.lvlFour2N = false;
+        shoppingGameContImp.lvlFour3Y = false;
+        shoppingGameContImp.lvlFour3N = false;
+        shoppingGameContImp.lvlFour4Y = false;
+        shoppingGameContImp.lvlFour4N = false;
+        shoppingGameContImp.lvlFour5Y = false;
+        shoppingGameContImp.lvlFour5N = false;
+
+        shoppingGameContImp.lvlFive1Y = false;
+        shoppingGameContImp.lvlFive1N = false;
+        shoppingGameContImp.lvlFive2Y = false;
+        shoppingGameContImp.lvlFive2N = false;
+        shoppingGameContImp.lvlFive3Y = false;
+        shoppingGameContImp.lvlFive3N = false;
+        shoppingGameContImp.lvlFive4Y = false;
+        shoppingGameContImp.lvlFive4N = false;
+        shoppingGameContImp.lvlFive5Y = false;
+        shoppingGameContImp.lvlFive5N = false;
+        shoppingGameContImp.lvlFive6Y = false;
+        shoppingGameContImp.lvlFive6N = false;
+        shoppingGameContImp.lvlFive7Y = false;
+        shoppingGameContImp.lvlFive7N = false;
         Get.back();
         return false;
       },
@@ -453,11 +479,24 @@ class _ShopSelectScreenState extends State<ShopSelectScreen> {
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  GestureDetector(
-                                    onTap: () {
-                                      Get.back();
-                                    },
-                                    child: Image.asset("assets/images/shopping/8.png", width: 12.h),
+                                  Stack(
+                                    alignment: AlignmentDirectional.bottomStart,
+                                    children: [
+                                      GestureDetector(
+                                        onTap: () {
+                                          cont.saveClicks(8, 1);
+                                        },
+                                        child: Image.asset("assets/images/shopping/8.png", width: 12.h),
+                                      ),
+                                      Visibility(
+                                        visible: cont.lvlFour1Y,
+                                        child: Image.asset("assets/images/shopping/yes.png", width: 7.w),
+                                      ),
+                                      Visibility(
+                                        visible: cont.lvlFour1N,
+                                        child: Image.asset("assets/images/shopping/no.png", width: 7.w),
+                                      ),
+                                    ],
                                   ),
                                 ],
                               ),
@@ -466,18 +505,50 @@ class _ShopSelectScreenState extends State<ShopSelectScreen> {
                                 mainAxisAlignment: MainAxisAlignment.end,
                                 children: [
                                   SizedBox(width: 16.w),
-                                  GestureDetector(
-                                    child: Container(
-                                      padding: EdgeInsets.only(bottom: 3.h),
-                                      child: Image.asset("assets/images/shopping/7.png", width: 12.h),
-                                    ),
+                                  Stack(
+                                    alignment: AlignmentDirectional.bottomStart,
+                                    children: [
+                                      GestureDetector(
+                                        onTap: () {
+                                          cont.saveClicks(7, 2);
+                                        },
+                                        child: Container(
+                                          padding: EdgeInsets.only(bottom: 3.h),
+                                          child: Image.asset("assets/images/shopping/7.png", width: 12.h),
+                                        ),
+                                      ),
+                                      Visibility(
+                                        visible: cont.lvlFour2Y,
+                                        child: Image.asset("assets/images/shopping/yes.png", width: 7.w),
+                                      ),
+                                      Visibility(
+                                        visible: cont.lvlFour2N,
+                                        child: Image.asset("assets/images/shopping/no.png", width: 7.w),
+                                      ),
+                                    ],
                                   ),
                                   const Spacer(),
-                                  GestureDetector(
-                                    child: Container(
-                                      padding: EdgeInsets.only(top: 1.h),
-                                      child: Image.asset("assets/images/shopping/16.png", width: 14.h),
-                                    ),
+                                  Stack(
+                                    alignment: AlignmentDirectional.bottomStart,
+                                    children: [
+                                      GestureDetector(
+                                        onTap: () {
+                                          cont.saveClicks(16, 3);
+                                        },
+                                        child: Container(
+                                          padding: EdgeInsets.only(top: 1.h),
+                                          child: Image.asset("assets/images/shopping/16.png", width: 14.h),
+                                        ),
+                                      ),
+                                      Visibility(
+                                        visible: cont.lvlFour3Y,
+                                        child: Image.asset("assets/images/shopping/yes.png", width: 7.w),
+                                      ),
+                                      Visibility(
+                                        visible: cont.lvlFour3N,
+                                        child: Image.asset("assets/images/shopping/no.png", width: 7.w),
+                                      ),
+                                    ],
                                   ),
                                   SizedBox(width: 5.w),
                                 ],
@@ -487,12 +558,44 @@ class _ShopSelectScreenState extends State<ShopSelectScreen> {
                                 mainAxisAlignment: MainAxisAlignment.end,
                                 children: [
                                   SizedBox(width: 16.w),
-                                  GestureDetector(
-                                    child: Image.asset("assets/images/shopping/18.png", width: 12.h),
+                                  Stack(
+                                    alignment: AlignmentDirectional.bottomStart,
+                                    children: [
+                                      GestureDetector(
+                                        onTap: () {
+                                          cont.saveClicks(16, 4);
+                                        },
+                                        child: Image.asset("assets/images/shopping/18.png", width: 12.h),
+                                      ),
+                                      Visibility(
+                                        visible: cont.lvlFour4Y,
+                                        child: Image.asset("assets/images/shopping/yes.png", width: 7.w),
+                                      ),
+                                      Visibility(
+                                        visible: cont.lvlFour4N,
+                                        child: Image.asset("assets/images/shopping/no.png", width: 7.w),
+                                      ),
+                                    ],
                                   ),
                                   const Spacer(),
-                                  GestureDetector(
-                                    child: Image.asset("assets/images/shopping/2.png", width: 14.h),
+                                  Stack(
+                                    alignment: AlignmentDirectional.bottomStart,
+                                    children: [
+                                      GestureDetector(
+                                        onTap: () {
+                                          cont.saveClicks(2, 5);
+                                        },
+                                        child: Image.asset("assets/images/shopping/2.png", width: 14.h),
+                                      ),
+                                      Visibility(
+                                        visible: cont.lvlFour5Y,
+                                        child: Image.asset("assets/images/shopping/yes.png", width: 7.w),
+                                      ),
+                                      Visibility(
+                                        visible: cont.lvlFour5N,
+                                        child: Image.asset("assets/images/shopping/no.png", width: 7.w),
+                                      ),
+                                    ],
                                   ),
                                   SizedBox(width: 5.w),
                                 ],
@@ -510,16 +613,64 @@ class _ShopSelectScreenState extends State<ShopSelectScreen> {
                                 mainAxisAlignment: MainAxisAlignment.end,
                                 children: [
                                   SizedBox(width: 5.w),
-                                  GestureDetector(
-                                    child: Image.asset("assets/images/shopping/5.png", width: 12.h),
+                                  Stack(
+                                    alignment: AlignmentDirectional.bottomStart,
+                                    children: [
+                                      GestureDetector(
+                                        onTap: () {
+                                          cont.saveClicks(5, 1);
+                                        },
+                                        child: Image.asset("assets/images/shopping/5.png", width: 12.h),
+                                      ),
+                                      Visibility(
+                                        visible: cont.lvlFive1Y,
+                                        child: Image.asset("assets/images/shopping/yes.png", width: 7.w),
+                                      ),
+                                      Visibility(
+                                        visible: cont.lvlFive1N,
+                                        child: Image.asset("assets/images/shopping/no.png", width: 7.w),
+                                      ),
+                                    ],
                                   ),
                                   const Spacer(),
-                                  GestureDetector(
-                                    child: Image.asset("assets/images/shopping/29.png", width: 12.h),
+                                  Stack(
+                                    alignment: AlignmentDirectional.bottomStart,
+                                    children: [
+                                      GestureDetector(
+                                        onTap: () {
+                                          cont.saveClicks(29, 2);
+                                        },
+                                        child: Image.asset("assets/images/shopping/29.png", width: 12.h),
+                                      ),
+                                      Visibility(
+                                        visible: cont.lvlFive2Y,
+                                        child: Image.asset("assets/images/shopping/yes.png", width: 7.w),
+                                      ),
+                                      Visibility(
+                                        visible: cont.lvlFive2N,
+                                        child: Image.asset("assets/images/shopping/no.png", width: 7.w),
+                                      ),
+                                    ],
                                   ),
                                   const Spacer(),
-                                  GestureDetector(
-                                    child: Image.asset("assets/images/shopping/1.png", width: 12.h),
+                                  Stack(
+                                    alignment: AlignmentDirectional.bottomStart,
+                                    children: [
+                                      GestureDetector(
+                                        onTap: () {
+                                          cont.saveClicks(1, 3);
+                                        },
+                                        child: Image.asset("assets/images/shopping/1.png", width: 12.h),
+                                      ),
+                                      Visibility(
+                                        visible: cont.lvlFive3Y,
+                                        child: Image.asset("assets/images/shopping/yes.png", width: 7.w),
+                                      ),
+                                      Visibility(
+                                        visible: cont.lvlFive3N,
+                                        child: Image.asset("assets/images/shopping/no.png", width: 7.w),
+                                      ),
+                                    ],
                                   ),
                                   SizedBox(width: 5.w),
                                 ],
@@ -529,12 +680,44 @@ class _ShopSelectScreenState extends State<ShopSelectScreen> {
                                 mainAxisAlignment: MainAxisAlignment.end,
                                 children: [
                                   SizedBox(width: 16.w),
-                                  GestureDetector(
-                                    child: Image.asset("assets/images/shopping/6.png", width: 12.h),
+                                  Stack(
+                                    alignment: AlignmentDirectional.bottomStart,
+                                    children: [
+                                      GestureDetector(
+                                        onTap: () {
+                                          cont.saveClicks(6, 4);
+                                        },
+                                        child: Image.asset("assets/images/shopping/6.png", width: 12.h),
+                                      ),
+                                      Visibility(
+                                        visible: cont.lvlFive4Y,
+                                        child: Image.asset("assets/images/shopping/yes.png", width: 7.w),
+                                      ),
+                                      Visibility(
+                                        visible: cont.lvlFive4N,
+                                        child: Image.asset("assets/images/shopping/no.png", width: 7.w),
+                                      ),
+                                    ],
                                   ),
                                   const Spacer(),
-                                  GestureDetector(
-                                    child: Image.asset("assets/images/shopping/26.png", width: 14.h),
+                                  Stack(
+                                    alignment: AlignmentDirectional.bottomStart,
+                                    children: [
+                                      GestureDetector(
+                                        onTap: () {
+                                          cont.saveClicks(26, 5);
+                                        },
+                                        child: Image.asset("assets/images/shopping/26.png", width: 14.h),
+                                      ),
+                                      Visibility(
+                                        visible: cont.lvlFive5Y,
+                                        child: Image.asset("assets/images/shopping/yes.png", width: 7.w),
+                                      ),
+                                      Visibility(
+                                        visible: cont.lvlFive5N,
+                                        child: Image.asset("assets/images/shopping/no.png", width: 7.w),
+                                      ),
+                                    ],
                                   ),
                                   SizedBox(width: 8.w),
                                 ],
@@ -544,12 +727,44 @@ class _ShopSelectScreenState extends State<ShopSelectScreen> {
                                 mainAxisAlignment: MainAxisAlignment.end,
                                 children: [
                                   SizedBox(width: 16.w),
-                                  GestureDetector(
-                                    child: Image.asset("assets/images/shopping/4.png", width: 12.h),
+                                  Stack(
+                                    alignment: AlignmentDirectional.bottomStart,
+                                    children: [
+                                      GestureDetector(
+                                        onTap: () {
+                                          cont.saveClicks(4, 6);
+                                        },
+                                        child: Image.asset("assets/images/shopping/4.png", width: 12.h),
+                                      ),
+                                      Visibility(
+                                        visible: cont.lvlFive6Y,
+                                        child: Image.asset("assets/images/shopping/yes.png", width: 7.w),
+                                      ),
+                                      Visibility(
+                                        visible: cont.lvlFive6N,
+                                        child: Image.asset("assets/images/shopping/no.png", width: 7.w),
+                                      ),
+                                    ],
                                   ),
                                   const Spacer(),
-                                  GestureDetector(
-                                    child: Image.asset("assets/images/shopping/20.png", width: 11.h),
+                                  Stack(
+                                    alignment: AlignmentDirectional.bottomStart,
+                                    children: [
+                                      GestureDetector(
+                                        onTap: () {
+                                          cont.saveClicks(20, 7);
+                                        },
+                                        child: Image.asset("assets/images/shopping/20.png", width: 11.h),
+                                      ),
+                                      Visibility(
+                                        visible: cont.lvlFive7Y,
+                                        child: Image.asset("assets/images/shopping/yes.png", width: 7.w),
+                                      ),
+                                      Visibility(
+                                        visible: cont.lvlFive7N,
+                                        child: Image.asset("assets/images/shopping/no.png", width: 7.w),
+                                      ),
+                                    ],
                                   ),
                                   SizedBox(width: 8.w),
                                 ],

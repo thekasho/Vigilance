@@ -30,6 +30,7 @@ class _ShoppingGameScreenState extends State<ShoppingGameScreen> {
       await shoppingGameContImp.countdownController4.start();
       shoppingGameContImp.update();
     }
+    shoppingGameContImp.checkCanAccess();
   }
 
   @override

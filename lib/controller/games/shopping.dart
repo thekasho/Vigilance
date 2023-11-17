@@ -20,6 +20,7 @@ abstract class ShoppingGameCont extends GetxController {
   submitMathAns(int ans);
   saveClicks(int click, int img);
   updateLevel();
+  checkCanAccess();
 }
 class ShoppingGameContImp extends ShoppingGameCont {
   Requests requests = Requests(Get.find());
@@ -68,6 +69,34 @@ class ShoppingGameContImp extends ShoppingGameCont {
   bool lvlThree4N = false;
   bool lvlThree5Y = false;
   bool lvlThree5N = false;
+
+  List lvlFourList = [6, 2, 8, 7];
+  bool lvlFour1Y = false;
+  bool lvlFour1N = false;
+  bool lvlFour2Y = false;
+  bool lvlFour2N = false;
+  bool lvlFour3Y = false;
+  bool lvlFour3N = false;
+  bool lvlFour4Y = false;
+  bool lvlFour4N = false;
+  bool lvlFour5Y = false;
+  bool lvlFour5N = false;
+
+  List lvlFiveList = [1, 6, 5, 26, 4];
+  bool lvlFive1Y = false;
+  bool lvlFive1N = false;
+  bool lvlFive2Y = false;
+  bool lvlFive2N = false;
+  bool lvlFive3Y = false;
+  bool lvlFive3N = false;
+  bool lvlFive4Y = false;
+  bool lvlFive4N = false;
+  bool lvlFive5Y = false;
+  bool lvlFive5N = false;
+  bool lvlFive6Y = false;
+  bool lvlFive6N = false;
+  bool lvlFive7Y = false;
+  bool lvlFive7N = false;
 
   int lvlOneAns = 58;
   int lvlTwoAns = 80;
@@ -303,6 +332,13 @@ class ShoppingGameContImp extends ShoppingGameCont {
   }
 
   @override
+  checkCanAccess(){
+    if(clevel > level){
+      clevel = level;
+    }
+  }
+
+  @override
   saveClicks(click, img) async {
     try {
       if(clevel == 1){
@@ -488,16 +524,16 @@ class ShoppingGameContImp extends ShoppingGameCont {
               title: "Correct",
               titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
               titleStyle: TextStyle(
-                fontSize: 18.sp,
-                fontFamily: "Cairo",
-                color: green,
-                fontWeight: FontWeight.bold
+                  fontSize: 18.sp,
+                  fontFamily: "Cairo",
+                  color: green,
+                  fontWeight: FontWeight.bold
               ),
               content: Container(
                 alignment: Alignment.center,
                 height: 7.h,
                 child: Text(
-                  "You`re doing great. You earned 7 points..",
+                  "Keep going. You earned 7 points..",
                   style: TextStyle(
                     fontSize: 18.sp,
                     fontFamily: "Cairo",
@@ -530,6 +566,177 @@ class ShoppingGameContImp extends ShoppingGameCont {
           await audioPlayer.play(AssetSource("sounds/win.mp3"));
           lvlTrue = 0;
         } else if(lvlTrue > 3){
+          lvlTrue = 0;
+        }
+      }
+      else if(clevel == 4){
+        if(lvlFourList.contains(click)){
+          if(img == 1){
+            lvlFour1Y = true;
+          } else if(img == 2){
+            lvlFour2Y = true;
+          } else if(img == 3){
+            lvlFour3Y = true;
+          } else if(img == 4){
+            lvlFour4Y = true;
+          } else if(img == 5) {
+            lvlFour5Y = true;
+          }
+          lvlTrue += 1;
+          update();
+        } else {
+          if(img == 1){
+            lvlFour1N = true;
+          } else if(img == 2){
+            lvlFour2N = true;
+          } else if(img == 3){
+            lvlFour3N = true;
+          } else if(img == 4){
+            lvlFour4N = true;
+          } else if(img == 5){
+            lvlFour5N = true;
+          }
+          update();
+        }
+        if(lvlTrue == 3){
+          Get.defaultDialog(
+              backgroundColor: white,
+              title: "Correct",
+              titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
+              titleStyle: TextStyle(
+                  fontSize: 18.sp,
+                  fontFamily: "Cairo",
+                  color: green,
+                  fontWeight: FontWeight.bold
+              ),
+              content: Container(
+                alignment: Alignment.center,
+                height: 7.h,
+                child: Text(
+                  "Excellent, You earned 10 points..",
+                  style: TextStyle(
+                    fontSize: 18.sp,
+                    fontFamily: "Cairo",
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+              ),
+              onWillPop: () async {
+                clevel = 5;
+                await updateLevel();
+                lvlFour1Y = false;
+                lvlFour1N = false;
+                lvlFour2Y = false;
+                lvlFour2N = false;
+                lvlFour3Y = false;
+                lvlFour3N = false;
+                lvlFour4Y = false;
+                lvlFour4N = false;
+                lvlFour5Y = false;
+                lvlFour5N = false;
+                Get.back();
+                Get.back();
+                Get.back();
+                Get.to(() => const ShoppingGameScreen(level: 5));
+                countdownController5.restart();
+                update();
+                return false;
+              }
+          );
+          await audioPlayer.play(AssetSource("sounds/win.mp3"));
+          lvlTrue = 0;
+        } else if(lvlTrue > 3){
+          lvlTrue = 0;
+        }
+      }
+      else if(clevel == 5){
+        if(lvlFiveList.contains(click)){
+          if(img == 1){
+            lvlFive1Y = true;
+          } else if(img == 2){
+            lvlFive2Y = true;
+          } else if(img == 3){
+            lvlFive3Y = true;
+          } else if(img == 4){
+            lvlFive4Y = true;
+          } else if(img == 5) {
+            lvlFive5Y = true;
+          } else if(img == 6) {
+            lvlFive6Y = true;
+          } else if(img == 7) {
+            lvlFive7Y = true;
+          }
+          lvlTrue += 1;
+          update();
+        } else {
+          if(img == 1){
+            lvlFive1N = true;
+          } else if(img == 2){
+            lvlFive2N = true;
+          } else if(img == 3){
+            lvlFive3N = true;
+          } else if(img == 4){
+            lvlFive4N = true;
+          } else if(img == 5){
+            lvlFive5N = true;
+          } else if(img == 6){
+            lvlFive6N = true;
+          } else if(img == 7){
+            lvlFive7N = true;
+          }
+          update();
+        }
+        if(lvlTrue == 5){
+          Get.defaultDialog(
+            backgroundColor: white,
+            title: "Correct",
+            titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
+            titleStyle: TextStyle(
+                fontSize: 18.sp,
+                fontFamily: "Cairo",
+                color: green,
+                fontWeight: FontWeight.bold
+            ),
+            content: Container(
+              alignment: Alignment.center,
+              height: 7.h,
+              child: Text(
+                "Excellent, You earned 12 points..",
+                style: TextStyle(
+                  fontSize: 18.sp,
+                  fontFamily: "Cairo",
+                ),
+                textAlign: TextAlign.center,
+              ),
+            ),
+            onWillPop: () async {
+              clevel = 5;
+              await updateLevel();
+              lvlFive1Y = false;
+              lvlFive1N = false;
+              lvlFive2Y = false;
+              lvlFive2N = false;
+              lvlFive3Y = false;
+              lvlFive3N = false;
+              lvlFive4Y = false;
+              lvlFive4N = false;
+              lvlFive5Y = false;
+              lvlFive5N = false;
+              lvlFive6Y = false;
+              lvlFive6N = false;
+              lvlFive7Y = false;
+              lvlFive7N = false;
+              Get.back();
+              Get.back();
+              Get.back();
+              Get.back();
+              update();
+              return false;
+            }
+          );
+          await audioPlayer.play(AssetSource("sounds/win.mp3"));
+          lvlTrue = 0;
+        } else if(lvlTrue > 5){
           lvlTrue = 0;
         }
       }
