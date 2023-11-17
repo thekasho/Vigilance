@@ -453,7 +453,7 @@ class ShoppingGameContImp extends ShoppingGameCont {
               ),
               content: Container(
                 alignment: Alignment.center,
-                height: 7.h,
+                height: 10.h,
                 child: Text(
                   "You`re doing great. You earned 7 points..",
                   style: TextStyle(
@@ -531,7 +531,7 @@ class ShoppingGameContImp extends ShoppingGameCont {
               ),
               content: Container(
                 alignment: Alignment.center,
-                height: 7.h,
+                height: 8.h,
                 child: Text(
                   "Keep going. You earned 7 points..",
                   style: TextStyle(
@@ -611,7 +611,7 @@ class ShoppingGameContImp extends ShoppingGameCont {
               ),
               content: Container(
                 alignment: Alignment.center,
-                height: 7.h,
+                height: 8.h,
                 child: Text(
                   "Excellent, You earned 10 points..",
                   style: TextStyle(
@@ -699,7 +699,7 @@ class ShoppingGameContImp extends ShoppingGameCont {
             ),
             content: Container(
               alignment: Alignment.center,
-              height: 7.h,
+              height: 8.h,
               child: Text(
                 "Excellent, You earned 12 points..",
                 style: TextStyle(

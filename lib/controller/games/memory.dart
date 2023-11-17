@@ -436,7 +436,7 @@ class MemoryGameContImp extends MemoryGameCont {
         } else if(ans.length >= 3){
           Get.defaultDialog(
             backgroundColor: white,
-            title: "Opps.. Times Up",
+            title: "Wrong",
             titlePadding: EdgeInsets.only(bottom: 2.h, top: 1.h),
             titleStyle: TextStyle(
                 fontSize: 18.sp,
@@ -445,7 +445,7 @@ class MemoryGameContImp extends MemoryGameCont {
                 fontWeight: FontWeight.bold
             ),
             content: Text(
-              "Times Up, Try again !!",
+              "Oops, Try again !!",
               style: TextStyle(
                 fontSize: 18.sp,
                 fontFamily: "Cairo",
@@ -495,7 +495,7 @@ class MemoryGameContImp extends MemoryGameCont {
         } else if(ans.length >= 4){
           Get.defaultDialog(
             backgroundColor: white,
-            title: "Opps.. Times Up",
+            title: "Wrong",
             titlePadding: EdgeInsets.only(bottom: 2.h, top: 1.h),
             titleStyle: TextStyle(
               fontSize: 18.sp,
@@ -504,7 +504,7 @@ class MemoryGameContImp extends MemoryGameCont {
               fontWeight: FontWeight.bold
             ),
             content: Text(
-              "Times Up, Try again !!",
+              "Oops, Try again !!",
               style: TextStyle(
                 fontSize: 18.sp,
                 fontFamily: "Cairo",
@@ -554,7 +554,7 @@ class MemoryGameContImp extends MemoryGameCont {
         } else if(ans.length >= 5){
           Get.defaultDialog(
             backgroundColor: white,
-            title: "Opps.. Times Up",
+            title: "Wrong",
             titlePadding: EdgeInsets.only(bottom: 2.h, top: 1.h),
             titleStyle: TextStyle(
                 fontSize: 18.sp,
@@ -563,7 +563,7 @@ class MemoryGameContImp extends MemoryGameCont {
                 fontWeight: FontWeight.bold
             ),
             content: Text(
-              "Times Up, Try again !!",
+              "Oops, Try again !!",
               style: TextStyle(
                 fontSize: 18.sp,
                 fontFamily: "Cairo",
@@ -613,7 +613,7 @@ class MemoryGameContImp extends MemoryGameCont {
         } else if(ans.length >= 6){
           Get.defaultDialog(
             backgroundColor: white,
-            title: "Opps.. Times Up",
+            title: "Wrong",
             titlePadding: EdgeInsets.only(bottom: 2.h, top: 1.h),
             titleStyle: TextStyle(
                 fontSize: 18.sp,
@@ -622,7 +622,7 @@ class MemoryGameContImp extends MemoryGameCont {
                 fontWeight: FontWeight.bold
             ),
             content: Text(
-              "Times Up, Try again !!",
+              "Oops, Try again !!",
               style: TextStyle(
                 fontSize: 18.sp,
                 fontFamily: "Cairo",
@@ -672,7 +672,7 @@ class MemoryGameContImp extends MemoryGameCont {
         } else if(ans.length >= 7){
           Get.defaultDialog(
             backgroundColor: white,
-            title: "Opps.. Times Up",
+            title: "Wrong",
             titlePadding: EdgeInsets.only(bottom: 2.h, top: 1.h),
             titleStyle: TextStyle(
                 fontSize: 18.sp,
@@ -681,7 +681,7 @@ class MemoryGameContImp extends MemoryGameCont {
                 fontWeight: FontWeight.bold
             ),
             content: Text(
-              "Times Up, Try again !!",
+              "Oops, Try again !!",
               style: TextStyle(
                 fontSize: 18.sp,
                 fontFamily: "Cairo",
