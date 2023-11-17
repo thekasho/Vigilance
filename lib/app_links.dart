@@ -1,6 +1,8 @@
 
 class ApiLinks {
   static const String login = 'https://microplazatesla.com/vl/login.php';
+  static const String studentRegister = 'https://microplazatesla.com/vl/register.php';
+  static const String teacherRegister = 'https://microplazatesla.com/vl/register_teacher.php';
   static const String getPoints = 'https://microplazatesla.com/vl/get_points.php';
   static const String getTasks = 'https://microplazatesla.com/vl/get_tasks.php';
   static const String getTodoImages = 'https://microplazatesla.com/vl/todo_images.php';

@@ -28,52 +28,55 @@ class _StdLoginScreenState extends State<StdLoginScreen> {
     Get.put(StdLoginContImp());
     return SafeArea(
       child: Scaffold(
+        resizeToAvoidBottomInset: false,
         body: Container(
           width: double.infinity,
           height: double.infinity,
           color: yellowBck,
           child: Column(
             children: [
-              Container(
-                margin: const EdgeInsets.symmetric(
-                  vertical: 10,
-                ),
-                width: 28.w,
-                clipBehavior: Clip.antiAlias,
-                decoration: const BoxDecoration(
-                    shape: BoxShape.circle
-                ),
-                child: CachedNetworkImage(
-                  imageUrl: "https://th.bing.com/th/id/OIP.KEJaw671I5WYuftNN0IOZAHaHa?w=196&h=196&c=7&r=0&o=5&dpr=1.3&pid=1.7",
-                  errorWidget: (_, i, e) {
-                    return Icon(
-                      FontAwesomeIcons.image,
-                      size: 13.sp,
-                      color: Colors.white,
-                    );
-                  },
-                ),
-              ),
-              SizedBox(height: 3.h),
-              Text(
-                "Sign in as student",
-                style: TextStyle(
-                    fontFamily: 'Cairo',
-                    fontSize: 22.sp,
-                    fontWeight: FontWeight.bold
-                ),
-              ),
-              SizedBox(height: 6.h),
               SizedBox(
                 width: 100.w,
+                height: 96.6.h,
                 child: GetBuilder<StdLoginContImp>(builder: (controller) {
                   return Form(
                     key: controller.formstate,
                     child: SingleChildScrollView(
+                      reverse: true,
                       child: Padding(
                         padding: EdgeInsets.only(bottom: MediaQuery.of(context).viewInsets.bottom),
                         child: Column(
                           children: [
+                            Container(
+                              margin: const EdgeInsets.symmetric(
+                                vertical: 10,
+                              ),
+                              width: 28.w,
+                              clipBehavior: Clip.antiAlias,
+                              decoration: const BoxDecoration(
+                                  shape: BoxShape.circle
+                              ),
+                              child: CachedNetworkImage(
+                                imageUrl: "https://th.bing.com/th/id/OIP.KEJaw671I5WYuftNN0IOZAHaHa?w=196&h=196&c=7&r=0&o=5&dpr=1.3&pid=1.7",
+                                errorWidget: (_, i, e) {
+                                  return Icon(
+                                    FontAwesomeIcons.image,
+                                    size: 13.sp,
+                                    color: Colors.white,
+                                  );
+                                },
+                              ),
+                            ),
+                            SizedBox(height: 3.h),
+                            Text(
+                              "Sign in as student",
+                              style: TextStyle(
+                                  fontFamily: 'Cairo',
+                                  fontSize: 22.sp,
+                                  fontWeight: FontWeight.bold
+                              ),
+                            ),
+                            SizedBox(height: 6.h),
                             AuthTextForm(
                               controller: controller.email,
                               hintText: "Email",
@@ -112,7 +115,7 @@ class _StdLoginScreenState extends State<StdLoginScreen> {
                                 FocusScope.of(context).requestFocus(f3);
                               },
                             ),
-                            SizedBox(height: 3.h),
+                            SizedBox(height: 5.h),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
@@ -152,33 +155,34 @@ class _StdLoginScreenState extends State<StdLoginScreen> {
                                 ),
                               ],
                             ),
+                            SizedBox(height: 2.h),
+                            Text(
+                              "Don`t have an account?",
+                              style: TextStyle(
+                                  fontFamily: 'Cairo',
+                                  fontSize: 18.sp,
+                                  fontWeight: FontWeight.bold
+                              ),
+                            ),
+                            GestureDetector(
+                              onTap: () => Get.toNamed(screenStdRegister),
+                              child: Text(
+                                "Sign Up",
+                                style: TextStyle(
+                                  fontSize: 16.sp,
+                                  color: orange,
+                                  fontFamily: 'Cairo',
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ),
+                            SizedBox(height: 15.h),
                           ],
                         ),
                       ),
                     ),
                   );
                 }),
-              ),
-              SizedBox(height: 2.h),
-              Text(
-                "Don`t have an account?",
-                style: TextStyle(
-                  fontFamily: 'Cairo',
-                  fontSize: 18.sp,
-                  fontWeight: FontWeight.bold
-                ),
-              ),
-              GestureDetector(
-                onTap: () => Get.toNamed(screenStdRegister),
-                child: Text(
-                  "Sign Up",
-                  style: TextStyle(
-                    fontSize: 16.sp,
-                    color: orange,
-                    fontFamily: 'Cairo',
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
               ),
             ],
           ),

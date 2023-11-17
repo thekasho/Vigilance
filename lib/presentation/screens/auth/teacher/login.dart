@@ -28,51 +28,54 @@ class _TeacherLoginScreenState extends State<TeacherLoginScreen> {
     Get.put(TeacherLoginContImp());
     return SafeArea(
       child: Scaffold(
+        resizeToAvoidBottomInset: false,
         body: Container(
           width: double.infinity,
           height: double.infinity,
           color: yellowBck,
           child: Column(
             children: [
-              Container(
-                margin: EdgeInsets.symmetric(
-                  vertical: 4.h,
-                ),
-                width: 45.w,
-                clipBehavior: Clip.antiAlias,
-                decoration: const BoxDecoration(
-                    shape: BoxShape.circle
-                ),
-                child: CachedNetworkImage(
-                  imageUrl: "https://th.bing.com/th/id/OIP.NnSZ-PGdRmTcQ8x2uzNlAgAAAA?w=263&h=185&c=7&r=0&o=5&dpr=1.3&pid=1.7",
-                  errorWidget: (_, i, e) {
-                    return Icon(
-                      FontAwesomeIcons.image,
-                      size: 13.sp,
-                      color: Colors.white,
-                    );
-                  },
-                ),
-              ),
-              Text(
-                "Sign in as teacher",
-                style: TextStyle(
-                  fontFamily: 'Cairo',
-                  fontSize: 22.sp,
-                  fontWeight: FontWeight.bold
-                ),
-              ),
-              SizedBox(height: 6.h),
               SizedBox(
                 width: 100.w,
+                height: 96.5.h,
                 child: GetBuilder<TeacherLoginContImp>(builder: (controller) {
                   return Form(
                     key: controller.formstate,
                     child: SingleChildScrollView(
+                      reverse: true,
                       child: Padding(
                         padding: EdgeInsets.only(bottom: MediaQuery.of(context).viewInsets.bottom),
                         child: Column(
                           children: [
+                            Container(
+                              margin: EdgeInsets.symmetric(
+                                vertical: 4.h,
+                              ),
+                              width: 45.w,
+                              clipBehavior: Clip.antiAlias,
+                              decoration: const BoxDecoration(
+                                  shape: BoxShape.circle
+                              ),
+                              child: CachedNetworkImage(
+                                imageUrl: "https://th.bing.com/th/id/OIP.NnSZ-PGdRmTcQ8x2uzNlAgAAAA?w=263&h=185&c=7&r=0&o=5&dpr=1.3&pid=1.7",
+                                errorWidget: (_, i, e) {
+                                  return Icon(
+                                    FontAwesomeIcons.image,
+                                    size: 13.sp,
+                                    color: Colors.white,
+                                  );
+                                },
+                              ),
+                            ),
+                            Text(
+                              "Sign in as teacher",
+                              style: TextStyle(
+                                  fontFamily: 'Cairo',
+                                  fontSize: 22.sp,
+                                  fontWeight: FontWeight.bold
+                              ),
+                            ),
+                            SizedBox(height: 6.h),
                             AuthTextForm(
                               controller: controller.email,
                               hintText: "Email",
@@ -151,33 +154,34 @@ class _TeacherLoginScreenState extends State<TeacherLoginScreen> {
                                 ),
                               ],
                             ),
+                            SizedBox(height: 2.h),
+                            Text(
+                              "Don`t have an account?",
+                              style: TextStyle(
+                                  fontFamily: 'Cairo',
+                                  fontSize: 18.sp,
+                                  fontWeight: FontWeight.bold
+                              ),
+                            ),
+                            GestureDetector(
+                              onTap: () => Get.toNamed(screenTeacherRegister),
+                              child: Text(
+                                "Sign Up",
+                                style: TextStyle(
+                                  fontSize: 16.sp,
+                                  color: orange,
+                                  fontFamily: 'Cairo',
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ),
+                            SizedBox(height: 15.h),
                           ],
                         ),
                       ),
                     ),
                   );
                 }),
-              ),
-              SizedBox(height: 2.h),
-              Text(
-                "Don`t have an account?",
-                style: TextStyle(
-                  fontFamily: 'Cairo',
-                  fontSize: 18.sp,
-                  fontWeight: FontWeight.bold
-                ),
-              ),
-              GestureDetector(
-                onTap: () => Get.toNamed(screenTeacherRegister),
-                child: Text(
-                  "Sign Up",
-                  style: TextStyle(
-                    fontSize: 16.sp,
-                    color: orange,
-                    fontFamily: 'Cairo',
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
               ),
             ],
           ),

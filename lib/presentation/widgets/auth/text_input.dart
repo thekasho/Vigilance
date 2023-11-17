@@ -10,8 +10,15 @@ class AuthTextForm extends StatelessWidget {
   final Color? suffixIconColor;
   final bool isPassword;
   final Color? fillColor;
+  final Function(String)? onChanged;
 
-  const AuthTextForm({super.key, required this.controller, required this.valid, this.focusNode, this.onFieldSubmitted, required this.hintText, this.suffixIcon, this.suffixIconColor, required this.isPassword, this.fillColor});
+  const AuthTextForm({super.key,
+    required this.controller,
+    required this.valid,
+    this.focusNode,
+    this.onFieldSubmitted,
+    required this.hintText,
+    this.suffixIcon, this.suffixIconColor, required this.isPassword, this.fillColor, this.onChanged});
 
   @override
   Widget build(BuildContext context) {
@@ -21,6 +28,7 @@ class AuthTextForm extends StatelessWidget {
         controller: controller,
         validator: valid,
         onFieldSubmitted: onFieldSubmitted,
+        onChanged: onChanged,
         autofocus: false,
         style: TextStyle(
           fontSize: 18.sp,
