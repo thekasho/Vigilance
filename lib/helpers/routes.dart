@@ -17,6 +17,8 @@ const String screenTchrHome = '/teacher-home';
 const String screenStudyHome = '/std-study-home';
 
 const String screenStdToDO = '/std-todo-home';
+const String screenPromodoroHome = '/std-promodoro-home';
+const String screenPromodoroTimer = '/std-promodoro-timer';
 
 const String screenTeacherHome = '/std-teacher-home';
 const String screenTeacherEmail = '/std-teacher-email';

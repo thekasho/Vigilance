@@ -40,7 +40,7 @@ class _StdRegisterScreeenState extends State<StdRegisterScreeen> {
             children: [
               SizedBox(
                 width: 100.w,
-                height: 96.5.h,
+                height: 95.h,
                 child: GetBuilder<StdRegisterContImp>(builder: (controller) {
                   return Form(
                     key: controller.formstate,

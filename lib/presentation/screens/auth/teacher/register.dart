@@ -41,7 +41,7 @@ class _TeacherRegisterScreeenState extends State<TeacherRegisterScreeen> {
             children: [
               Container(
                 width: 100.w,
-                height: 96.5.h,
+                height: 95.h,
                 child: GetBuilder<TeacherRegisterContImp>(builder: (controller) {
                   return Form(
                     key: controller.formstate,

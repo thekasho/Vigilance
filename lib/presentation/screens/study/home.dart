@@ -119,7 +119,7 @@ class _StdStudyHomeScreenState extends State<StdStudyHomeScreen> {
                         ],
                       ),
                       onPressed: () {
-
+                        Get.toNamed(screenPromodoroHome);
                       },
                     ),
                   ],

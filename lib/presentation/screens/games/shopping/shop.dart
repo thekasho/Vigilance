@@ -76,11 +76,11 @@ class _ShoppingGameScreenState extends State<ShoppingGameScreen> {
                       Stack(
                         children: [
                           Container(
+                            height: 96.6.h,
                             padding: EdgeInsets.only(top: 1.h),
                             width: 100.w,
                             child: SizedBox(
-                              child: Image.asset(
-                                  "assets/images/shopping/list.jpeg"),
+                              child: Image.asset("assets/images/shopping/list.jpeg", fit: BoxFit.fitHeight),
                             ),
                           ),
                           Column(
@@ -188,10 +188,11 @@ class _ShoppingGameScreenState extends State<ShoppingGameScreen> {
                       Stack(
                         children: [
                           Container(
+                            height: 96.6.h,
                             padding: EdgeInsets.only(top: 1.h),
                             width: 100.w,
                             child: SizedBox(
-                              child: Image.asset("assets/images/shopping/list.jpeg"),
+                              child: Image.asset("assets/images/shopping/list.jpeg", fit: BoxFit.fitHeight),
                             ),
                           ),
                           Column(
@@ -297,11 +298,12 @@ class _ShoppingGameScreenState extends State<ShoppingGameScreen> {
                       Stack(
                         children: [
                           Container(
+                            height: 96.6.h,
                             padding: EdgeInsets.only(top: 1.h),
                             width: 100.w,
                             child: SizedBox(
                               child: Image.asset(
-                                  "assets/images/shopping/list.jpeg"),
+                                  "assets/images/shopping/list.jpeg", fit: BoxFit.fitHeight),
                             ),
                           ),
                           Column(
@@ -431,10 +433,11 @@ class _ShoppingGameScreenState extends State<ShoppingGameScreen> {
                       Stack(
                         children: [
                           Container(
+                            height: 96.6.h,
                             padding: EdgeInsets.only(top: 1.h),
                             width: 100.w,
                             child: SizedBox(
-                              child: Image.asset("assets/images/shopping/list.jpeg"),
+                              child: Image.asset("assets/images/shopping/list.jpeg", fit: BoxFit.fitHeight),
                             ),
                           ),
                           Column(
@@ -590,10 +593,11 @@ class _ShoppingGameScreenState extends State<ShoppingGameScreen> {
                       Stack(
                         children: [
                           Container(
+                            height: 96.6.h,
                             padding: EdgeInsets.only(top: 1.h),
                             width: 100.w,
                             child: SizedBox(
-                              child: Image.asset("assets/images/shopping/list.jpeg"),
+                              child: Image.asset("assets/images/shopping/list.jpeg", fit: BoxFit.fitHeight),
                             ),
                           ),
                           Column(
@@ -663,7 +667,7 @@ class _ShoppingGameScreenState extends State<ShoppingGameScreen> {
                                   ),
                                 ],
                               ),
-                              SizedBox(height: 11.w),
+                              SizedBox(height: 2.h),
                               Row(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
@@ -687,7 +691,7 @@ class _ShoppingGameScreenState extends State<ShoppingGameScreen> {
                                   ),
                                 ],
                               ),
-                              SizedBox(height: 9.w),
+                              SizedBox(height: 6.h),
                               Row(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
@@ -712,7 +716,7 @@ class _ShoppingGameScreenState extends State<ShoppingGameScreen> {
                                   ),
                                 ],
                               ),
-                              SizedBox(height: 9.w),
+                              SizedBox(height: 5.h),
                               Row(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
@@ -737,7 +741,7 @@ class _ShoppingGameScreenState extends State<ShoppingGameScreen> {
                                   ),
                                 ],
                               ),
-                              SizedBox(height: 9.w),
+                              SizedBox(height: 5.h),
                               Row(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [

@@ -38,7 +38,9 @@ part 'auth/teacher/home.dart';
 part 'auth/parent/login.dart';
 part 'auth/parent/register.dart';
 
-part 'todo/std/todo.dart';
+part 'study/todo/todo.dart';
+part 'study/promodoro/home.dart';
+part 'study/promodoro/timer.dart';
 
 part 'games/home.dart';
 
