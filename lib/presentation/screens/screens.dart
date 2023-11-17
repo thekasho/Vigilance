@@ -13,6 +13,8 @@ import '../../controller/games/shopping.dart';
 import '../../controller/games/spot.dart';
 import '../../controller/std/home.dart';
 import '../../controller/std/login.dart';
+import '../../controller/teacher/home.dart';
+import '../../controller/teacher/login.dart';
 import '../../controller/todo/std.dart';
 import '../../core/class/statusrequest.dart';
 import '../../helpers/helpers.dart';
@@ -27,14 +29,19 @@ part 'auth/std/login.dart';
 part 'auth/std/register.dart';
 part 'auth/std/home.dart';
 
+part 'auth/teacher/login.dart';
+part 'auth/teacher/register.dart';
+part 'auth/teacher/home.dart';
+
 part 'auth/parent/login.dart';
 part 'auth/parent/register.dart';
-
-part 'auth/teacher/login.dart';
 
 part 'todo/std/todo.dart';
 
 part 'games/home.dart';
+
+part 'supportTeacher/home.dart';
+part 'supportTeacher/email.dart';
 
 part 'games/spot/levels.dart';
 part 'games/spot/spot.dart';

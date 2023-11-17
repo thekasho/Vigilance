@@ -176,7 +176,7 @@ class _StdHomeScreenState extends State<StdHomeScreen> {
                             children: [
                               GestureDetector(
                                 onTap: (){
-                                  Get.toNamed(screenStudyHom);
+                                  Get.toNamed(screenStudyHome);
                                 },
                                 child: Container(
                                   width: 42.w,
@@ -292,7 +292,7 @@ class _StdHomeScreenState extends State<StdHomeScreen> {
                             children: [
                               GestureDetector(
                                 onTap: (){
-                                  Get.toNamed(screenStdLogin);
+                                  Get.toNamed(screenTeacherHome);
                                 },
                                 child: Container(
                                   width: 42.w,
@@ -321,7 +321,7 @@ class _StdHomeScreenState extends State<StdHomeScreen> {
                                             shape: BoxShape.circle
                                         ),
                                         child: CachedNetworkImage(
-                                          imageUrl: "https://th.bing.com/th/id/OIP.BDSsIfDjgj0s3QL3rWaVuAHaHa?w=174&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7",
+                                          imageUrl: "https://th.bing.com/th/id/OIP.NnSZ-PGdRmTcQ8x2uzNlAgAAAA?w=263&h=185&c=7&r=0&o=5&dpr=1.3&pid=1.7",
                                           errorWidget: (_, i, e) {
                                             return Icon(
                                               FontAwesomeIcons.image,
@@ -332,7 +332,7 @@ class _StdHomeScreenState extends State<StdHomeScreen> {
                                         ),
                                       ),
                                       Text(
-                                        "Meditation",
+                                        "Support teacher",
                                         style: TextStyle(
                                           fontFamily: 'Cairo',
                                           fontSize: 20.sp,
@@ -379,7 +379,7 @@ class _StdHomeScreenState extends State<StdHomeScreen> {
                                             shape: BoxShape.circle
                                         ),
                                         child: CachedNetworkImage(
-                                          imageUrl: "https://th.bing.com/th/id/OIP.NnSZ-PGdRmTcQ8x2uzNlAgAAAA?w=263&h=185&c=7&r=0&o=5&dpr=1.3&pid=1.7",
+                                          imageUrl: "https://th.bing.com/th/id/OIP.BDSsIfDjgj0s3QL3rWaVuAHaHa?w=174&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7",
                                           errorWidget: (_, i, e) {
                                             return Icon(
                                               FontAwesomeIcons.image,
@@ -390,7 +390,7 @@ class _StdHomeScreenState extends State<StdHomeScreen> {
                                         ),
                                       ),
                                       Text(
-                                        "Support teacher",
+                                        "Meditation",
                                         style: TextStyle(
                                           fontFamily: 'Cairo',
                                           fontSize: 20.sp,

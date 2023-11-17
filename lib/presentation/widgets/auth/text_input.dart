@@ -9,8 +9,9 @@ class AuthTextForm extends StatelessWidget {
   final Widget? suffixIcon;
   final Color? suffixIconColor;
   final bool isPassword;
+  final Color? fillColor;
 
-  const AuthTextForm({super.key, required this.controller, required this.valid, this.focusNode, this.onFieldSubmitted, required this.hintText, this.suffixIcon, this.suffixIconColor, required this.isPassword});
+  const AuthTextForm({super.key, required this.controller, required this.valid, this.focusNode, this.onFieldSubmitted, required this.hintText, this.suffixIcon, this.suffixIconColor, required this.isPassword, this.fillColor});
 
   @override
   Widget build(BuildContext context) {
@@ -41,7 +42,7 @@ class AuthTextForm extends StatelessWidget {
             fontFamily: 'Cairo'
           ),
           filled: true,
-          fillColor: white,
+          fillColor: fillColor ?? white,
           contentPadding: EdgeInsets.symmetric(
             horizontal: 5.w,
           ),

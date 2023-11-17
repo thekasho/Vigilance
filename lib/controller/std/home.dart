@@ -84,8 +84,4 @@ class StdHomeContImp extends StdHomeCont {
     super.onInit();
   }
 
-  @override
-  void dispose() {
-    super.dispose();
-  }
 }

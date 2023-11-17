@@ -27,9 +27,14 @@ class LandingContImp extends LandingCont {
       if(loginData != null){
         statusRequest = StatusRequest.success;
         update();
-        Get.offAllNamed(screenStdHome);
+
+        if(loginData['type'] == 0){
+          Get.toNamed(screenStdHome);
+        } else if(loginData['type'] == 2){
+          Get.toNamed(screenTchrHome);
+        }
       } else {
-        Get.offAllNamed(screenStdLogin);
+        Get.offAllNamed(screenChooseType);
         statusRequest = StatusRequest.success;
         update();
       }

@@ -43,10 +43,15 @@ class _MyAppState extends State<MyApp> {
             GetPage(name: screenParentRegister, page: () => const ParentRegisterScreen()),
 
             GetPage(name: screenTeacherLogin, page: () => const TeacherLoginScreen()),
+            GetPage(name: screenTeacherRegister, page: () => const TeacherRegisterScreeen()),
 
             GetPage(name: screenStdHome, page: () => const StdHomeScreen()),
+            GetPage(name: screenTchrHome, page: () => const TchrHomeScreen()),
 
-            GetPage(name: screenStudyHom, page: () => const StdStudyHomeScreen()),
+            GetPage(name: screenStudyHome, page: () => const StdStudyHomeScreen()),
+
+            GetPage(name: screenTeacherHome, page: () => const SupportTeacherHomeScreen()),
+            GetPage(name: screenTeacherEmail, page: () => const SupportTeacherEmailScreen()),
 
             GetPage(name: screenStdToDO, page: () => const StdToDoScreen()),
 
