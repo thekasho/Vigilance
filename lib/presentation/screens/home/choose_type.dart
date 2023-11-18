@@ -279,3 +279,16 @@ class _ChooseTypeScreenState extends State<ChooseTypeScreen> {
     );
   }
 }
+
+/*
+String
+bool  true, false
+
+int       1, 2, 3 ...
+double    1.5, 5.4
+
+array   = > [] مصفوفة
+
+List = [Column, Column, Column]
+
+ */

@@ -24,5 +24,3 @@ const darkRed = Color(0xffb30101);
 const hardYellow = Color(0xffff9700);
 const greenMore = Color(0xffaaff3d);
 const lighterOrange = Color(0xff1EEF7939);
-
-

@@ -46,9 +46,6 @@ class SpotGameContImp extends SpotGameCont {
   @override
   getLevel() async {
     try {
-      statusRequest = StatusRequest.loading;
-      update();
-
       if(!isConnected){
         Get.defaultDialog(
           backgroundColor: white,
@@ -103,8 +100,6 @@ class SpotGameContImp extends SpotGameCont {
           level = levelResponse['result'];
           update();
         }
-        statusRequest = StatusRequest.success;
-        update();
       }
 
     } catch (e) {
@@ -235,6 +230,8 @@ class SpotGameContImp extends SpotGameCont {
         'level': clevel.toString(),
       };
       await requests.postData(levelRequest, ApiLinks.updateSpotGameLevel);
+      await getLevel();
+      update();
     } catch (e) {
       print("Error: $e");
     }
@@ -272,6 +269,8 @@ class SpotGameContImp extends SpotGameCont {
             Get.back();
             Get.back();
             Get.to(() => const SpotGameScreen(level: 2));
+            clevel = 2;
+            await updateLevel();
             return false;
           }
         );
@@ -305,9 +304,13 @@ class SpotGameContImp extends SpotGameCont {
             Get.back();
             Get.back(canPop: true);
             Get.to(() => const SpotGameScreen(level: 3));
+            clevel = 3;
+            await updateLevel();
             return false;
           }
         );
+        await audioPlayer.play(AssetSource("sounds/win.mp3"));
+        update();
       } else if(clevel == 3 && no == lvlThree){
         countdownController2.pause();
         Get.defaultDialog(
@@ -336,9 +339,13 @@ class SpotGameContImp extends SpotGameCont {
             Get.back();
             Get.back();
             Get.to(() => const SpotGameScreen(level: 4));
+            clevel = 4;
+            await updateLevel();
             return false;
           }
         );
+        await audioPlayer.play(AssetSource("sounds/win.mp3"));
+        update();
       } else if(clevel == 4 && no == lvlFour){
         countdownController3.pause();
         Get.defaultDialog(
@@ -369,6 +376,8 @@ class SpotGameContImp extends SpotGameCont {
             return false;
           }
         );
+        await audioPlayer.play(AssetSource("sounds/win.mp3"));
+        update();
       } else {
         Get.defaultDialog(
             backgroundColor: white,
@@ -488,6 +497,13 @@ class SpotGameContImp extends SpotGameCont {
     super.onReady();
     await checkNetwork();
     getLevel();
+  }
+
+  @override
+  void onInit() {
+    statusRequest = StatusRequest.success;
+    update();
+    super.onInit();
   }
 
 }

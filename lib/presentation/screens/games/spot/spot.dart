@@ -19,7 +19,7 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
       spotGameContImp.update();
     } else if(widget.level == 2){
       await Future.delayed(const Duration(seconds: 1));
-      await spotGameContImp.countdownController2.start();
+      spotGameContImp.countdownController2.start();
       spotGameContImp.update();
     } else if(widget.level == 3){
       await Future.delayed(const Duration(seconds: 1));
@@ -60,7 +60,7 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
               ),
             );
           } else if(cont.statusRequest == StatusRequest.success){
-            if(cont.clevel == 1 && cont.level >= widget.level){
+            if(cont.clevel == 1){
               return Container(
                 width: double.infinity,
                 height: double.infinity,
@@ -288,7 +288,8 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                         // 3
                         GestureDetector(
                           onTap: () async {
-                            cont.submitAnswer(3);
+                            await cont.submitAnswer(3);
+                            cont.update();
                           },
                           child: Container(
                             height: 11.h,
@@ -460,7 +461,7 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                   ],
                 ),
               );
-            } else if(cont.clevel == 2 && cont.level >= widget.level){
+            } else if(cont.clevel == 2){
               return Container(
                 width: double.infinity,
                 height: double.infinity,
@@ -860,7 +861,7 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                   ],
                 ),
               );
-            } else if(cont.clevel == 3 && cont.level >= widget.level){
+            } else if(cont.clevel == 3){
               return Container(
                 width: double.infinity,
                 height: double.infinity,
@@ -1260,7 +1261,7 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                   ],
                 ),
               );
-            } else if(cont.clevel == 4 && cont.level >= widget.level){
+            } else if(cont.clevel == 4){
               return Container(
                 width: double.infinity,
                 height: double.infinity,
