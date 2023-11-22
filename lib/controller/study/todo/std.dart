@@ -3,11 +3,11 @@ import 'package:get/get.dart';
 import 'package:internet_connection_checker/internet_connection_checker.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
-import '../../app_links.dart';
-import '../../core/class/statusrequest.dart';
-import '../../core/data/remote/requests.dart';
-import '../../helpers/helpers.dart';
-import '../../repo/api.dart';
+import '../../../app_links.dart';
+import '../../../core/class/statusrequest.dart';
+import '../../../core/data/remote/requests.dart';
+import '../../../helpers/helpers.dart';
+import '../../../repo/api.dart';
 
 abstract class StdToDoCont extends GetxController {
   checkNetwork();

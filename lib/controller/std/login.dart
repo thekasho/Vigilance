@@ -187,10 +187,10 @@ class StdLoginContImp extends StdLoginCont {
                 title: "Error",
                 titlePadding: EdgeInsets.only(bottom: 2.h, top: 1.h),
                 titleStyle: TextStyle(
-                    fontSize: 18.sp,
-                    fontFamily: "Cairo",
-                    color: red,
-                    fontWeight: FontWeight.bold
+                  fontSize: 18.sp,
+                  fontFamily: "Cairo",
+                  color: red,
+                  fontWeight: FontWeight.bold
                 ),
                 content: Text(
                   "Server Error !!",

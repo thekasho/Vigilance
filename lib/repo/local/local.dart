@@ -40,4 +40,31 @@ class LocaleApi {
     }
   }
 
+  static Future<bool> savePromodoroSettings(Map settings) async {
+    try {
+      // await locale.remove("login_data");
+      await locale.write("promodoro_settings", settings);
+      print("Success Save Promodoro Data");
+      return true;
+    } catch (e) {
+      print(e);
+      return false;
+    }
+  }
+
+  static Future<Map?> getPromodoroSettings() async {
+    try {
+      final settings = await locale.read("promodoro_settings");
+
+      if (settings != null) {
+        return settings;
+      }
+      debugPrint('Promodoro null');
+      return null;
+    } catch (e) {
+      debugPrint('Promodoro null $e');
+      return null;
+    }
+  }
+
 }

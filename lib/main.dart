@@ -7,6 +7,7 @@ import 'package:vig/binding/initial_binding.dart';
 import 'package:vig/helpers/helpers.dart';
 import 'package:vig/presentation/screens/screens.dart';
 
+
 void main() async {
   await GetStorage.init();
 
@@ -61,7 +62,6 @@ class _MyAppState extends State<MyApp> {
             GetPage(name: screenSpotLevels, page: () => const SpotLevelsScreen()),
             GetPage(name: screenMemoryLevels, page: () => const MemoryLevelsScreen()),
             GetPage(name: screenShopLevels, page: () => const ShopLevelsScreen()),
-
 
 
           ],

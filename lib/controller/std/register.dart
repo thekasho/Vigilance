@@ -42,6 +42,7 @@ class StdRegisterContImp extends StdRegisterCont {
     try {
       var formdata = formstate.currentState;
       if (formdata!.validate()) {
+
         statusRequest = StatusRequest.loading;
         update();
 

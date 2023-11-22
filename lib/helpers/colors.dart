@@ -2,6 +2,7 @@ part of 'helpers.dart';
 
 const white = Colors.white;
 const black = Colors.black;
+const grayDark = Color(0xff646363);
 
 const red = Color(0xffFF3A3A);
 const redLight = Color(0xffFFCECE);

@@ -7,12 +7,15 @@ import 'package:vig/core/class/statusrequest.dart';
 import '../functions.dart';
 
 class Crud {
+
   Future<Either<StatusRequest, Map>> postData(String linkurl, Map data) async {
     try {
       if (await checkNetwork()) {
-        var response = await http.post(Uri.parse(linkurl), body: data).timeout(const Duration(seconds: 5), onTimeout: (){
+        var response = await http.post(Uri.parse(linkurl), body: data).timeout(
+          const Duration(seconds: 5), onTimeout: (){
           return http.Response('Error', 408);
         });
+
         if (response.statusCode == 200 || response.statusCode == 201) {
           Map responseBody = jsonDecode(response.body);
           return Right(responseBody);
