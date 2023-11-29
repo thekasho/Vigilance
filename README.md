@@ -1,6 +1,6 @@
-# vig
+# vigilance
 
-vig
+Vigilance Flutter App ( Kids Learning App )
 
 ## Getting Started
 
