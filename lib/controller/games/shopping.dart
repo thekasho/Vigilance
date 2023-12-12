@@ -22,78 +22,107 @@ abstract class ShoppingGameCont extends GetxController {
   checkCanAccess();
 }
 class ShoppingGameContImp extends ShoppingGameCont {
+
   Requests requests = Requests(Get.find());
+
   CountdownController countdownController1 = CountdownController(autoStart: true);
   CountdownController countdownController2 = CountdownController(autoStart: true);
   CountdownController countdownController3 = CountdownController(autoStart: true);
   CountdownController countdownController4 = CountdownController(autoStart: true);
   CountdownController countdownController5 = CountdownController(autoStart: true);
+
   AudioPlayer audioPlayer = AudioPlayer();
 
   StatusRequest statusRequest = StatusRequest.none;
 
   bool isConnected = false;
   String email = "";
+
   int level = 0;
   int clevel = 0;
 
-  List lvlOneList = [21,9];
+  List lvlOneList = [21, 9];
+
   bool lvlOne1Y = false;
   bool lvlOne1N = false;
+
   bool lvlOne2Y = false;
   bool lvlOne2N = false;
+
   bool lvlOne3Y = false;
   bool lvlOne3N = false;
+
   bool lvlOne4Y = false;
   bool lvlOne4N = false;
 
   List lvlTwoList = [10, 25];
+
   bool lvlTwo1Y = false;
   bool lvlTwo1N = false;
+
   bool lvlTwo2Y = false;
   bool lvlTwo2N = false;
+
   bool lvlTwo3Y = false;
   bool lvlTwo3N = false;
+
   bool lvlTwo4Y = false;
   bool lvlTwo4N = false;
 
   List lvlThreeList = [3, 13, 12];
+
   bool lvlThree1Y = false;
   bool lvlThree1N = false;
+
   bool lvlThree2Y = false;
   bool lvlThree2N = false;
+
   bool lvlThree3Y = false;
   bool lvlThree3N = false;
+
   bool lvlThree4Y = false;
   bool lvlThree4N = false;
+
   bool lvlThree5Y = false;
   bool lvlThree5N = false;
 
   List lvlFourList = [6, 2, 8, 7];
+
   bool lvlFour1Y = false;
   bool lvlFour1N = false;
+
   bool lvlFour2Y = false;
   bool lvlFour2N = false;
+
   bool lvlFour3Y = false;
   bool lvlFour3N = false;
+
   bool lvlFour4Y = false;
   bool lvlFour4N = false;
+
   bool lvlFour5Y = false;
   bool lvlFour5N = false;
 
   List lvlFiveList = [1, 6, 5, 26, 4];
+
   bool lvlFive1Y = false;
   bool lvlFive1N = false;
+
   bool lvlFive2Y = false;
   bool lvlFive2N = false;
+
   bool lvlFive3Y = false;
   bool lvlFive3N = false;
+
   bool lvlFive4Y = false;
   bool lvlFive4N = false;
+
   bool lvlFive5Y = false;
   bool lvlFive5N = false;
+
   bool lvlFive6Y = false;
   bool lvlFive6N = false;
+
   bool lvlFive7Y = false;
   bool lvlFive7N = false;
 
@@ -122,10 +151,10 @@ class ShoppingGameContImp extends ShoppingGameCont {
           title: "Error",
           titlePadding: EdgeInsets.only(bottom: 2.h, top: 1.h),
           titleStyle: TextStyle(
-              fontSize: 18.sp,
-              fontFamily: "Cairo",
-              color: red,
-              fontWeight: FontWeight.bold
+            fontSize: 18.sp,
+            fontFamily: "Cairo",
+            color: red,
+            fontWeight: FontWeight.bold
           ),
           content: Text(
             "No Internet Connection !!",
@@ -141,12 +170,15 @@ class ShoppingGameContImp extends ShoppingGameCont {
       }
 
       var loginData = await LocaleApi.getLoginData();
+
       if(loginData != null){
         email = loginData['email'];
+
         Map levelRequest = {
           'user_email': loginData['email'],
         };
         var levelResponse = await requests.postData(levelRequest, ApiLinks.shoppingGameLevel);
+
         if(StatusRequest.serverFailure == levelResponse){
           Get.defaultDialog(
             backgroundColor: white,
@@ -340,6 +372,7 @@ class ShoppingGameContImp extends ShoppingGameCont {
   @override
   saveClicks(click, img) async {
     try {
+
       if(clevel == 1){
         if(lvlOneList.contains(click)){
           if(img == 1){

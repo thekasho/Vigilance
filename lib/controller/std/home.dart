@@ -30,13 +30,14 @@ class StdHomeContImp extends StdHomeCont {
   @override
   checkAuth() async {
     var loginData  = await LocaleApi.getLoginData();
+
     if(loginData != null){
       Map req = {
         'user_email': loginData['email']
       };
 
       var auth = await requests.postData(req, ApiLinks.getPoints);
-      print(auth);
+
       if(auth['message'] == "failed"){
         Get.defaultDialog(
           backgroundColor: white,
@@ -69,7 +70,7 @@ class StdHomeContImp extends StdHomeCont {
       var loginData  = await LocaleApi.getLoginData();
       if(loginData != null){
         await LocaleApi.removeLoginData();
-        Get.offAllNamed(screenStdLogin);
+        Get.offAllNamed(screenChooseType);
       }
     } catch (e) {
       print("Error: $e");

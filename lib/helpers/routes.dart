@@ -13,6 +13,8 @@ const String screenParentRegister = '/parent-register';
 const String screenTeacherLogin = '/teacher-login';
 const String screenTeacherRegister = '/teacher-register';
 const String screenTchrHome = '/teacher-home';
+const String screenTeacherTests = '/teacher-tests';
+const String screenTeacherAddTests = '/teacher-add-test';
 
 const String screenStudyHome = '/std-study-home';
 

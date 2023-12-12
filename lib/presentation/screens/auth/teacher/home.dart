@@ -146,7 +146,7 @@ class _TchrHomeScreenState extends State<TchrHomeScreen> {
                         ],
                       ),
                       onPressed: () {
-                        // Get.toNamed(screenStdToDO);
+                        Get.toNamed(screenTeacherTests);
                       },
                     ),
                   ],

@@ -34,6 +34,7 @@ class _MyAppState extends State<MyApp> {
           initialBinding: InitialBinding(),
           initialRoute: '/',
           getPages: [
+
             GetPage(name: screenHome, page: () => const HomeScreen()),
             GetPage(name: screenChooseType, page: () => const ChooseTypeScreen()),
 
@@ -53,6 +54,8 @@ class _MyAppState extends State<MyApp> {
 
             GetPage(name: screenTeacherHome, page: () => const SupportTeacherHomeScreen()),
             GetPage(name: screenTeacherEmail, page: () => const SupportTeacherEmailScreen()),
+            GetPage(name: screenTeacherTests, page: () => const TeacherTestsScreen()),
+            GetPage(name: screenTeacherAddTests, page: () => const TecherAddTestScreen()),
 
             GetPage(name: screenStdToDO, page: () => const StdToDoScreen()),
             GetPage(name: screenPromodoroHome, page: () => const PromodoroHomeScreen()),

@@ -23,7 +23,9 @@ class LandingContImp extends LandingCont {
     try {
       statusRequest = StatusRequest.loading;
       update();
+
       var loginData  = await LocaleApi.getLoginData();
+
       if(loginData != null){
         statusRequest = StatusRequest.success;
         update();

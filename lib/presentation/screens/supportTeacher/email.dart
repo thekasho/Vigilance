@@ -33,7 +33,7 @@ class _SupportTeacherEmailScreenState extends State<SupportTeacherEmailScreen> {
                   alignment: Alignment.center,
                   width: 100.w,
                   child: Text(
-                    "Add Your Support\n Teacher Email",
+                    "اضافة البريد الالكتروني\n لمعلمك",
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 22.sp,
@@ -51,12 +51,12 @@ class _SupportTeacherEmailScreenState extends State<SupportTeacherEmailScreen> {
                   child: Form(
                     child: AuthTextForm(
                       controller: TextEditingController(),
-                      hintText: "Support Teacher Email",
+                      hintText: "البريد الالكتروني",
                       isPassword: false,
                       fillColor: lighterOrange,
                       valid: (val) {
                         if (val!.isEmpty) {
-                          return 'Title Required!';
+                          return 'مطلوب';
                         }
                       },
                     ),
@@ -84,7 +84,7 @@ class _SupportTeacherEmailScreenState extends State<SupportTeacherEmailScreen> {
                           ),
                         ),
                         child: Text(
-                          "Go To Chatbox",
+                          "اضافة البريد الالكتروني",
                           style: TextStyle(
                             fontSize: 19.sp,
                             color: white,

@@ -121,8 +121,8 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                               child: Text(
                                 "58",
                                 style: TextStyle(
-                                    fontSize: 35.sp,
-                                    fontWeight: FontWeight.bold
+                                  fontSize: 35.sp,
+                                  fontWeight: FontWeight.bold
                                 ),
                               ),
                             ),

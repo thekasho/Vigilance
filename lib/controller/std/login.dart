@@ -13,6 +13,7 @@ abstract class StdLoginCont extends GetxController {
   checkNetwork();
   login();
 }
+
 class StdLoginContImp extends StdLoginCont {
   Requests requests = Requests(Get.find());
 
@@ -40,7 +41,9 @@ class StdLoginContImp extends StdLoginCont {
   login() async {
     try {
       var formdata = formstate.currentState;
+
       if (formdata!.validate()) {
+
         statusRequest = StatusRequest.loading;
         update();
 
@@ -215,6 +218,7 @@ class StdLoginContImp extends StdLoginCont {
     email = TextEditingController();
     pass = TextEditingController();
     checkNetwork();
+
     super.onInit();
   }
 
@@ -222,6 +226,7 @@ class StdLoginContImp extends StdLoginCont {
   void dispose() {
     email.dispose();
     pass.dispose();
+
     super.dispose();
   }
 

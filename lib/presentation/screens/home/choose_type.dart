@@ -91,7 +91,7 @@ class _ChooseTypeScreenState extends State<ChooseTypeScreen> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      "Are You a ....",
+                      " ... هل انت",
                       style: TextStyle(
                         color: black,
                         fontWeight: FontWeight.bold,
@@ -147,7 +147,7 @@ class _ChooseTypeScreenState extends State<ChooseTypeScreen> {
                               ),
                             ),
                             Text(
-                              "Student",
+                              "الطفل /ة",
                               style: TextStyle(
                                 fontFamily: 'Cairo',
                                 fontSize: 20.sp,
@@ -203,7 +203,7 @@ class _ChooseTypeScreenState extends State<ChooseTypeScreen> {
                               ),
                             ),
                             Text(
-                              "Support Teacher",
+                              "معلم /ة",
                               style: TextStyle(
                                 fontFamily: 'Cairo',
                                 fontSize: 20.sp,
@@ -259,7 +259,7 @@ class _ChooseTypeScreenState extends State<ChooseTypeScreen> {
                               ),
                             ),
                             Text(
-                              "Parent",
+                              "والد /ة",
                               style: TextStyle(
                                 fontFamily: 'Cairo',
                                 fontSize: 20.sp,

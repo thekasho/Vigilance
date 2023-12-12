@@ -20,6 +20,7 @@ abstract class SpotGameCont extends GetxController {
   updateLevel();
 }
 class SpotGameContImp extends SpotGameCont {
+
   Requests requests = Requests(Get.find());
   CountdownController countdownController1 = CountdownController(autoStart: true);
   CountdownController countdownController2 = CountdownController(autoStart: true);
@@ -31,8 +32,10 @@ class SpotGameContImp extends SpotGameCont {
 
   bool isConnected = false;
   String email = "";
-  int level = 0;
-  int clevel = 0;
+
+  int level = 0;      // db level       2
+  int clevel = 0;     // screen level   4
+
   int lvlOne = 5;
   int lvlTwo = 7;
   int lvlThree = 9;
@@ -71,12 +74,14 @@ class SpotGameContImp extends SpotGameCont {
       }
 
       var loginData = await LocaleApi.getLoginData();
+
       if(loginData != null){
         email = loginData['email'];
         Map levelRequest = {
           'user_email': loginData['email'],
         };
         var levelResponse = await requests.postData(levelRequest, ApiLinks.spotGameLevel);
+
         if(StatusRequest.serverFailure == levelResponse){
           Get.defaultDialog(
             backgroundColor: white,
@@ -112,16 +117,16 @@ class SpotGameContImp extends SpotGameCont {
     try {
       Get.defaultDialog(
         backgroundColor: white,
-        title: "Opps.. Times Up",
+        title: "الوقت نفذ",
         titlePadding: EdgeInsets.only(bottom: 2.h, top: 1.h),
         titleStyle: TextStyle(
-            fontSize: 18.sp,
-            fontFamily: "Cairo",
-            color: red,
-            fontWeight: FontWeight.bold
+          fontSize: 18.sp,
+          fontFamily: "Cairo",
+          color: red,
+          fontWeight: FontWeight.bold
         ),
         content: Text(
-          "Times Up, Try again !!",
+          "الوقت نفذ .. محاولة مرة اخرى",
           style: TextStyle(
             fontSize: 18.sp,
             fontFamily: "Cairo",
@@ -149,7 +154,7 @@ class SpotGameContImp extends SpotGameCont {
               ),
             ),
             child: Text(
-              "Try again",
+              "المحاولة مجدداً",
               style: TextStyle(
                   fontSize: 16.sp,
                   color: black,
@@ -189,12 +194,12 @@ class SpotGameContImp extends SpotGameCont {
               ),
             ),
             child: Text(
-              "Cancel",
+              "الغاء",
               style: TextStyle(
-                  fontSize: 16.sp,
-                  color: black,
-                  fontWeight: FontWeight.bold,
-                  fontFamily: 'Cairo'
+                fontSize: 16.sp,
+                color: black,
+                fontWeight: FontWeight.bold,
+                fontFamily: 'Cairo'
               ),
             ),
             onPressed: () {
@@ -245,19 +250,19 @@ class SpotGameContImp extends SpotGameCont {
         await updateLevel();
         Get.defaultDialog(
           backgroundColor: white,
-          title: "Correct",
+          title: "اجابة صحيحة",
           titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
           titleStyle: TextStyle(
-              fontSize: 18.sp,
-              fontFamily: "Cairo",
-              color: green,
-              fontWeight: FontWeight.bold
+            fontSize: 18.sp,
+            fontFamily: "Cairo",
+            color: green,
+            fontWeight: FontWeight.bold
           ),
           content: Container(
             alignment: Alignment.center,
             height: 7.h,
             child: Text(
-              "Good Job,You earned 5 points..",
+              "! برافو ، كسبت 5 نقاط",
               style: TextStyle(
                 fontSize: 18.sp,
                 fontFamily: "Cairo",
@@ -280,7 +285,7 @@ class SpotGameContImp extends SpotGameCont {
         countdownController2.pause();
         Get.defaultDialog(
           backgroundColor: white,
-          title: "Correct",
+            title: "اجابة صحيحة",
           titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
           titleStyle: TextStyle(
               fontSize: 18.sp,
@@ -292,7 +297,7 @@ class SpotGameContImp extends SpotGameCont {
             alignment: Alignment.center,
             height: 7.h,
             child: Text(
-              "You`re doing great. You earned 7 points..",
+              "! ايه الجمال ده كسبت  7 نقاط",
               style: TextStyle(
                 fontSize: 17.sp,
                 fontFamily: "Cairo",
@@ -315,7 +320,7 @@ class SpotGameContImp extends SpotGameCont {
         countdownController2.pause();
         Get.defaultDialog(
           backgroundColor: white,
-          title: "Correct",
+          title: "اجابة صحيحة",
           titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
           titleStyle: TextStyle(
               fontSize: 18.sp,
@@ -327,7 +332,7 @@ class SpotGameContImp extends SpotGameCont {
             alignment: Alignment.center,
             height: 7.h,
             child: Text(
-              "Keep going. You earned 7 points..",
+              "! كمل يا بطل كسبت  7 نقاط",
               style: TextStyle(
                 fontSize: 17.sp,
                 fontFamily: "Cairo",
@@ -350,7 +355,7 @@ class SpotGameContImp extends SpotGameCont {
         countdownController3.pause();
         Get.defaultDialog(
           backgroundColor: white,
-          title: "Correct",
+          title: "اجابة صحيحة",
           titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
           titleStyle: TextStyle(
               fontSize: 18.sp,
@@ -362,7 +367,7 @@ class SpotGameContImp extends SpotGameCont {
             alignment: Alignment.center,
             height: 7.h,
             child: Text(
-              "Excellent, You earned 10 points..",
+              "! جاااامد كسبت 10 نقاط",
               style: TextStyle(
                 fontSize: 17.sp,
                 fontFamily: "Cairo",
@@ -381,24 +386,24 @@ class SpotGameContImp extends SpotGameCont {
       } else {
         Get.defaultDialog(
           backgroundColor: white,
-          title: "Wrong",
+          title: "اجابة خاطئة",
           titlePadding: EdgeInsets.only(bottom: 2.h, top: 1.h),
           titleStyle: TextStyle(
-              fontSize: 18.sp,
-              fontFamily: "Cairo",
-              color: red,
-              fontWeight: FontWeight.bold
+            fontSize: 18.sp,
+            fontFamily: "Cairo",
+            color: red,
+            fontWeight: FontWeight.bold
           ),
           content: Text(
-            "Wrong Answer, Try again !!",
+            "! اجابة خاطئة ، حاول مرة اخرى",
             style: TextStyle(
               fontSize: 18.sp,
               fontFamily: "Cairo",
             ),
           ),
           contentPadding: const EdgeInsets.only(
-              top: 0,
-              bottom: 10
+            top: 0,
+            bottom: 10
           ),
           confirm: SizedBox(
             width: 30.w,
@@ -418,12 +423,12 @@ class SpotGameContImp extends SpotGameCont {
                 ),
               ),
               child: Text(
-                "Try again",
+                "المحاولة مجدداً",
                 style: TextStyle(
-                    fontSize: 16.sp,
-                    color: black,
-                    fontWeight: FontWeight.bold,
-                    fontFamily: 'Cairo'
+                  fontSize: 16.sp,
+                  color: black,
+                  fontWeight: FontWeight.bold,
+                  fontFamily: 'Cairo'
                 ),
               ),
               onPressed: () {
@@ -458,7 +463,7 @@ class SpotGameContImp extends SpotGameCont {
                 ),
               ),
               child: Text(
-                "Cancel",
+                "الغاء",
                 style: TextStyle(
                     fontSize: 16.sp,
                     color: black,

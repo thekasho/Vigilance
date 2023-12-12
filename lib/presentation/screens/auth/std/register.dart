@@ -40,7 +40,7 @@ class _StdRegisterScreeenState extends State<StdRegisterScreeen> {
             children: [
               SizedBox(
                 width: 100.w,
-                height: 95.h,
+                height: 90.h,
                 child: GetBuilder<StdRegisterContImp>(builder: (controller) {
                   return Form(
                     key: controller.formstate,
@@ -71,11 +71,11 @@ class _StdRegisterScreeenState extends State<StdRegisterScreeen> {
                               ),
                             ),
                             Text(
-                              "Sign up as student",
+                              "تسجيل حساب الطفل /ة",
                               style: TextStyle(
-                                  fontFamily: 'Cairo',
-                                  fontSize: 22.sp,
-                                  fontWeight: FontWeight.bold
+                                fontFamily: 'Cairo',
+                                fontSize: 20.sp,
+                                fontWeight: FontWeight.bold
                               ),
                             ),
                             SizedBox(height: 2.h),
@@ -155,7 +155,7 @@ class _StdRegisterScreeenState extends State<StdRegisterScreeen> {
                                 FocusScope.of(context).requestFocus(f5);
                               },
                             ),
-                            SizedBox(height: 2.h),
+                            SizedBox(height: 3.h),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
@@ -177,7 +177,7 @@ class _StdRegisterScreeenState extends State<StdRegisterScreeen> {
                                   child: Row(
                                     children: [
                                       Text(
-                                        "Sing Up",
+                                        "تسجيل الحساب",
                                         style: TextStyle(
                                           fontSize: 19.sp,
                                           color: black,
@@ -197,7 +197,7 @@ class _StdRegisterScreeenState extends State<StdRegisterScreeen> {
                             ),
                             SizedBox(height: 2.h),
                             Text(
-                              "Already have an account?",
+                              "لديك حساب بالفعل",
                               style: TextStyle(
                                 fontFamily: 'Cairo',
                                 fontSize: 18.sp,
@@ -207,7 +207,7 @@ class _StdRegisterScreeenState extends State<StdRegisterScreeen> {
                             GestureDetector(
                               onTap: () => Get.back(),
                               child: Text(
-                                "Sign In",
+                                "تسجيل الدخول",
                                 style: TextStyle(
                                   fontSize: 16.sp,
                                   color: orange,

@@ -34,12 +34,25 @@ class MemoryGameContImp extends MemoryGameCont {
   double lvlTwoOp = 0;
   double lvlThreeOp = 0;
   double lvlFourOp = 0;
+
   List ans = [];
-  List oneAns = [1,4,3];
-  List twoAns = [1,4,3,4];
-  List threeAns = [1,4,3,4,2];
-  List fourAns = [3,2,1,3,4,2];
-  List fiveAns = [3,2,1,3,4,2,1];
+
+  List oneAns      = [1,4,3];
+  List twoAns      = [1,4,3,4];
+  List threeAns    = [1,4,3,4,2];
+  List fourAns     = [3,2,1,3,4,2];
+  List fiveAns     = [3,2,1,3,4,2,1];
+
+  List sixAns      = [4,3,4,2,3,1,1];
+  List sevenAns    = [4,3,4,2,3,1,1,3];
+  List eightAns    = [4,3,4,2,3,1,3];
+  List nineAns     = [4,3,4,3,1,2];
+  List tenAns      = [2,1,3,2,4,1,3,4];
+  List elevenAns   = [2,1,3,2,2,4,1,3,4];
+  List twelveAns   = [2,1,3,2,2,4,2,3,4];
+  List thirteenAns = [2,4,4,3,2,1,2,1,3,3];
+  List fourteenAns = [2,4,3,2,2,1,4,1,3,3];
+  List fifteenAns  = [2,3,3,2,3,1,4,3,3];
 
   @override
   checkNetwork() async {
@@ -119,13 +132,15 @@ class MemoryGameContImp extends MemoryGameCont {
   playAns() async {
     try {
       if(clevel == 1){
+
         await audioPlayer.play(AssetSource("sounds/1.wav"));
         lvlOneOp = 0.5;
         update();
         await Future.delayed(const Duration(milliseconds: 300)).then((value) {
           lvlOneOp = 0;
           update();
-    });           // 1
+        });           // 1
+
         await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
           lvlFourOp = 0.5;
           update();
@@ -135,6 +150,7 @@ class MemoryGameContImp extends MemoryGameCont {
             update();
           });
         });     // 4
+
         await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
           lvlThreeOp = 0.5;
           update();
@@ -144,7 +160,9 @@ class MemoryGameContImp extends MemoryGameCont {
             update();
           });
         });     // 3
+
       } else if(clevel == 2){
+
         await audioPlayer.play(AssetSource("sounds/1.wav"));
         lvlOneOp = 0.5;
         update();
@@ -152,6 +170,7 @@ class MemoryGameContImp extends MemoryGameCont {
           lvlOneOp = 0;
           update();
         });           // 1
+
         await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
           lvlFourOp = 0.5;
           update();
@@ -161,6 +180,7 @@ class MemoryGameContImp extends MemoryGameCont {
             update();
           });
         });     // 4
+
         await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
           lvlThreeOp = 0.5;
           update();
@@ -170,6 +190,7 @@ class MemoryGameContImp extends MemoryGameCont {
             update();
           });
         });     // 3
+
         await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
           lvlFourOp = 0.5;
           update();
@@ -179,7 +200,9 @@ class MemoryGameContImp extends MemoryGameCont {
             update();
           });
         });     // 4
+
       } else if(clevel == 3){
+
         await audioPlayer.play(AssetSource("sounds/1.wav"));
         lvlOneOp = 0.5;
         update();
@@ -187,6 +210,7 @@ class MemoryGameContImp extends MemoryGameCont {
           lvlOneOp = 0;
           update();
         });           // 1
+
         await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
           lvlFourOp = 0.5;
           update();
@@ -196,6 +220,7 @@ class MemoryGameContImp extends MemoryGameCont {
             update();
           });
         });     // 4
+
         await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
           lvlThreeOp = 0.5;
           update();
@@ -205,6 +230,7 @@ class MemoryGameContImp extends MemoryGameCont {
             update();
           });
         });     // 3
+
         await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
           lvlFourOp = 0.5;
           update();
@@ -214,6 +240,7 @@ class MemoryGameContImp extends MemoryGameCont {
             update();
           });
         });     // 4
+
         await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
           lvlTwoOp = 0.5;
           update();
@@ -223,6 +250,7 @@ class MemoryGameContImp extends MemoryGameCont {
             update();
           });
         });     // 2
+
       } else if(clevel == 4){
         await audioPlayer.play(AssetSource("sounds/3.wav"));
         lvlThreeOp = 0.5;
@@ -338,6 +366,743 @@ class MemoryGameContImp extends MemoryGameCont {
             update();
           });
         });     // 1
+      } else if(clevel == 6){
+        await audioPlayer.play(AssetSource("sounds/4.wav"));
+        lvlFourOp = 0.5;
+        update();
+        await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+          lvlFourOp = 0;
+          update();
+        });           // 4
+        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+          lvlThreeOp = 0.5;
+          update();
+          await audioPlayer.play(AssetSource("sounds/3.wav"));
+          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+            lvlThreeOp = 0;
+            update();
+          });
+        });     // 3
+        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+          lvlFourOp = 0.5;
+          update();
+          await audioPlayer.play(AssetSource("sounds/4.wav"));
+          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+            lvlFourOp = 0;
+            update();
+          });
+        });     // 4
+        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+          lvlTwoOp = 0.5;
+          update();
+          await audioPlayer.play(AssetSource("sounds/2.wav"));
+          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+            lvlTwoOp = 0;
+            update();
+          });
+        });     // 2
+        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+          lvlThreeOp = 0.5;
+          update();
+          await audioPlayer.play(AssetSource("sounds/3.wav"));
+          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+            lvlThreeOp = 0;
+            update();
+          });
+        });     // 3
+        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+          lvlOneOp = 0.5;
+          update();
+          await audioPlayer.play(AssetSource("sounds/1.wav"));
+          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+            lvlOneOp = 0;
+            update();
+          });
+        });     // 1
+        await Future.delayed(const Duration(milliseconds: 1000)).then((value) async {
+          lvlOneOp = 0.5;
+          update();
+          await audioPlayer.play(AssetSource("sounds/1.wav"));
+          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+            lvlOneOp = 0;
+            update();
+          });
+        });    // 1
+      } else if(clevel == 7){
+        await audioPlayer.play(AssetSource("sounds/4.wav"));
+        lvlFourOp = 0.5;
+        update();
+        await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+          lvlFourOp = 0;
+          update();
+        });           // 4
+        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+          lvlThreeOp = 0.5;
+          update();
+          await audioPlayer.play(AssetSource("sounds/3.wav"));
+          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+            lvlThreeOp = 0;
+            update();
+          });
+        });     // 3
+        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+          lvlFourOp = 0.5;
+          update();
+          await audioPlayer.play(AssetSource("sounds/4.wav"));
+          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+            lvlFourOp = 0;
+            update();
+          });
+        });     // 4
+        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+          lvlTwoOp = 0.5;
+          update();
+          await audioPlayer.play(AssetSource("sounds/2.wav"));
+          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+            lvlTwoOp = 0;
+            update();
+          });
+        });     // 2
+        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+          lvlThreeOp = 0.5;
+          update();
+          await audioPlayer.play(AssetSource("sounds/3.wav"));
+          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+            lvlThreeOp = 0;
+            update();
+          });
+        });     // 3
+        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+          lvlOneOp = 0.5;
+          update();
+          await audioPlayer.play(AssetSource("sounds/1.wav"));
+          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+            lvlOneOp = 0;
+            update();
+          });
+        });     // 1
+        await Future.delayed(const Duration(milliseconds: 1000)).then((value) async {
+          lvlOneOp = 0.5;
+          update();
+          await audioPlayer.play(AssetSource("sounds/1.wav"));
+          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+            lvlOneOp = 0;
+            update();
+          });
+        });    // 1
+        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+          lvlThreeOp = 0.5;
+          update();
+          await audioPlayer.play(AssetSource("sounds/3.wav"));
+          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+            lvlThreeOp = 0;
+            update();
+          });
+        });     // 3
+      } else if(clevel == 8){
+        await audioPlayer.play(AssetSource("sounds/4.wav"));
+        lvlFourOp = 0.5;
+        update();
+        await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+          lvlFourOp = 0;
+          update();
+        });           // 4
+        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+          lvlThreeOp = 0.5;
+          update();
+          await audioPlayer.play(AssetSource("sounds/3.wav"));
+          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+            lvlThreeOp = 0;
+            update();
+          });
+        });     // 3
+        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+          lvlFourOp = 0.5;
+          update();
+          await audioPlayer.play(AssetSource("sounds/4.wav"));
+          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+            lvlFourOp = 0;
+            update();
+          });
+        });     // 4
+        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+          lvlTwoOp = 0.5;
+          update();
+          await audioPlayer.play(AssetSource("sounds/2.wav"));
+          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+            lvlTwoOp = 0;
+            update();
+          });
+        });     // 2
+        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+          lvlThreeOp = 0.5;
+          update();
+          await audioPlayer.play(AssetSource("sounds/3.wav"));
+          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+            lvlThreeOp = 0;
+            update();
+          });
+        });     // 3
+        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+          lvlOneOp = 0.5;
+          update();
+          await audioPlayer.play(AssetSource("sounds/1.wav"));
+          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+            lvlOneOp = 0;
+            update();
+          });
+        });     // 1
+        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+          lvlThreeOp = 0.5;
+          update();
+          await audioPlayer.play(AssetSource("sounds/3.wav"));
+          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+            lvlThreeOp = 0;
+            update();
+          });
+        });     // 3
+      } else if(clevel == 9){
+        await audioPlayer.play(AssetSource("sounds/4.wav"));
+        lvlFourOp = 0.5;
+        update();
+        await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+          lvlFourOp = 0;
+          update();
+        });           // 4
+        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+          lvlThreeOp = 0.5;
+          update();
+          await audioPlayer.play(AssetSource("sounds/3.wav"));
+          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+            lvlThreeOp = 0;
+            update();
+          });
+        });     // 3
+        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+          lvlFourOp = 0.5;
+          update();
+          await audioPlayer.play(AssetSource("sounds/4.wav"));
+          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+            lvlFourOp = 0;
+            update();
+          });
+        });     // 4
+        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+          lvlThreeOp = 0.5;
+          update();
+          await audioPlayer.play(AssetSource("sounds/3.wav"));
+          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+            lvlThreeOp = 0;
+            update();
+          });
+        });     // 3
+        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+          lvlOneOp = 0.5;
+          update();
+          await audioPlayer.play(AssetSource("sounds/1.wav"));
+          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+            lvlOneOp = 0;
+            update();
+          });
+        });     // 1
+        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+          lvlTwoOp = 0.5;
+          update();
+          await audioPlayer.play(AssetSource("sounds/2.wav"));
+          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+            lvlTwoOp = 0;
+            update();
+          });
+        });     // 2
+      } else if(clevel == 10){
+        await audioPlayer.play(AssetSource("sounds/2.wav"));
+        lvlTwoOp = 0.5;
+        update();
+        await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+          lvlTwoOp = 0;
+          update();
+        });           // 2
+        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+          lvlOneOp = 0.5;
+          update();
+          await audioPlayer.play(AssetSource("sounds/1.wav"));
+          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+            lvlOneOp = 0;
+            update();
+          });
+        });     // 1
+        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+          lvlThreeOp = 0.5;
+          update();
+          await audioPlayer.play(AssetSource("sounds/3.wav"));
+          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+            lvlThreeOp = 0;
+            update();
+          });
+        });     // 3
+        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+          lvlTwoOp = 0.5;
+          update();
+          await audioPlayer.play(AssetSource("sounds/2.wav"));
+          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+            lvlTwoOp = 0;
+            update();
+          });
+        });     // 2
+        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+          lvlFourOp = 0.5;
+          update();
+          await audioPlayer.play(AssetSource("sounds/4.wav"));
+          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+            lvlFourOp = 0;
+            update();
+          });
+        });     // 4
+        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+          lvlOneOp = 0.5;
+          update();
+          await audioPlayer.play(AssetSource("sounds/1.wav"));
+          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+            lvlOneOp = 0;
+            update();
+          });
+        });     // 1
+        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+          lvlThreeOp = 0.5;
+          update();
+          await audioPlayer.play(AssetSource("sounds/3.wav"));
+          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+            lvlThreeOp = 0;
+            update();
+          });
+        });     // 3
+        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+          lvlFourOp = 0.5;
+          update();
+          await audioPlayer.play(AssetSource("sounds/4.wav"));
+          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+            lvlFourOp = 0;
+            update();
+          });
+        });     // 4
+      } else if(clevel == 11){
+        await audioPlayer.play(AssetSource("sounds/2.wav"));
+        lvlTwoOp = 0.5;
+        update();
+        await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+          lvlTwoOp = 0;
+          update();
+        });           // 2
+        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+          lvlOneOp = 0.5;
+          update();
+          await audioPlayer.play(AssetSource("sounds/1.wav"));
+          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+            lvlOneOp = 0;
+            update();
+          });
+        });     // 1
+        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+          lvlThreeOp = 0.5;
+          update();
+          await audioPlayer.play(AssetSource("sounds/3.wav"));
+          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+            lvlThreeOp = 0;
+            update();
+          });
+        });     // 3
+        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+          lvlTwoOp = 0.5;
+          update();
+          await audioPlayer.play(AssetSource("sounds/2.wav"));
+          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+            lvlTwoOp = 0;
+            update();
+          });
+        });     // 2
+        await Future.delayed(const Duration(milliseconds: 950)).then((value) async {
+          lvlTwoOp = 0.5;
+          update();
+          await audioPlayer.play(AssetSource("sounds/2.wav"));
+          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+            lvlTwoOp = 0;
+            update();
+          });
+        });     // 2
+        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+          lvlFourOp = 0.5;
+          update();
+          await audioPlayer.play(AssetSource("sounds/4.wav"));
+          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+            lvlFourOp = 0;
+            update();
+          });
+        });     // 4
+        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+          lvlOneOp = 0.5;
+          update();
+          await audioPlayer.play(AssetSource("sounds/1.wav"));
+          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+            lvlOneOp = 0;
+            update();
+          });
+        });     // 1
+        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+          lvlThreeOp = 0.5;
+          update();
+          await audioPlayer.play(AssetSource("sounds/3.wav"));
+          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+            lvlThreeOp = 0;
+            update();
+          });
+        });     // 3
+        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+          lvlFourOp = 0.5;
+          update();
+          await audioPlayer.play(AssetSource("sounds/4.wav"));
+          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+            lvlFourOp = 0;
+            update();
+          });
+        });     // 4
+      } else if(clevel == 12){
+        await audioPlayer.play(AssetSource("sounds/2.wav"));
+        lvlTwoOp = 0.5;
+        update();
+        await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+          lvlTwoOp = 0;
+          update();
+        });           // 2
+        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+          lvlOneOp = 0.5;
+          update();
+          await audioPlayer.play(AssetSource("sounds/1.wav"));
+          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+            lvlOneOp = 0;
+            update();
+          });
+        });     // 1
+        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+          lvlThreeOp = 0.5;
+          update();
+          await audioPlayer.play(AssetSource("sounds/3.wav"));
+          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+            lvlThreeOp = 0;
+            update();
+          });
+        });     // 3
+        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+          lvlTwoOp = 0.5;
+          update();
+          await audioPlayer.play(AssetSource("sounds/2.wav"));
+          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+            lvlTwoOp = 0;
+            update();
+          });
+        });     // 2
+        await Future.delayed(const Duration(milliseconds: 950)).then((value) async {
+          lvlTwoOp = 0.5;
+          update();
+          await audioPlayer.play(AssetSource("sounds/2.wav"));
+          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+            lvlTwoOp = 0;
+            update();
+          });
+        });     // 2
+        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+          lvlFourOp = 0.5;
+          update();
+          await audioPlayer.play(AssetSource("sounds/4.wav"));
+          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+            lvlFourOp = 0;
+            update();
+          });
+        });     // 4
+        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+          lvlTwoOp = 0.5;
+          update();
+          await audioPlayer.play(AssetSource("sounds/2.wav"));
+          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+            lvlTwoOp = 0;
+            update();
+          });
+        });     // 2
+        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+          lvlThreeOp = 0.5;
+          update();
+          await audioPlayer.play(AssetSource("sounds/3.wav"));
+          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+            lvlThreeOp = 0;
+            update();
+          });
+        });     // 3
+        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+          lvlFourOp = 0.5;
+          update();
+          await audioPlayer.play(AssetSource("sounds/4.wav"));
+          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+            lvlFourOp = 0;
+            update();
+          });
+        });     // 4
+      } else if(clevel == 13){
+        await audioPlayer.play(AssetSource("sounds/2.wav"));
+        lvlTwoOp = 0.5;
+        update();
+        await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+          lvlTwoOp = 0;
+          update();
+        });           // 2
+        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+          lvlFourOp = 0.5;
+          update();
+          await audioPlayer.play(AssetSource("sounds/4.wav"));
+          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+            lvlFourOp = 0;
+            update();
+          });
+        });     // 4
+        await Future.delayed(const Duration(milliseconds: 900)).then((value) async {
+          lvlFourOp = 0.5;
+          update();
+          await audioPlayer.play(AssetSource("sounds/4.wav"));
+          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+            lvlFourOp = 0;
+            update();
+          });
+        });     // 4
+        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+          lvlThreeOp = 0.5;
+          update();
+          await audioPlayer.play(AssetSource("sounds/3.wav"));
+          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+            lvlThreeOp = 0;
+            update();
+          });
+        });     // 3
+        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+          lvlTwoOp = 0.5;
+          update();
+          await audioPlayer.play(AssetSource("sounds/2.wav"));
+          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+            lvlTwoOp = 0;
+            update();
+          });
+        });     // 2
+        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+          lvlOneOp = 0.5;
+          update();
+          await audioPlayer.play(AssetSource("sounds/1.wav"));
+          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+            lvlOneOp = 0;
+            update();
+          });
+        });     // 1
+        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+          lvlTwoOp = 0.5;
+          update();
+          await audioPlayer.play(AssetSource("sounds/2.wav"));
+          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+            lvlTwoOp = 0;
+            update();
+          });
+        });     // 2
+        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+          lvlOneOp = 0.5;
+          update();
+          await audioPlayer.play(AssetSource("sounds/1.wav"));
+          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+            lvlOneOp = 0;
+            update();
+          });
+        });     // 1
+        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+          lvlThreeOp = 0.5;
+          update();
+          await audioPlayer.play(AssetSource("sounds/3.wav"));
+          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+            lvlThreeOp = 0;
+            update();
+          });
+        });     // 3
+        await Future.delayed(const Duration(milliseconds: 950)).then((value) async {
+          lvlThreeOp = 0.5;
+          update();
+          await audioPlayer.play(AssetSource("sounds/3.wav"));
+          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+            lvlThreeOp = 0;
+            update();
+          });
+        });     // 3
+      } else if(clevel == 14){
+        await audioPlayer.play(AssetSource("sounds/2.wav"));
+        lvlTwoOp = 0.5;
+        update();
+        await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+          lvlTwoOp = 0;
+          update();
+        });           // 2
+        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+          lvlFourOp = 0.5;
+          update();
+          await audioPlayer.play(AssetSource("sounds/4.wav"));
+          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+            lvlFourOp = 0;
+            update();
+          });
+        });     // 4
+        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+          lvlThreeOp = 0.5;
+          update();
+          await audioPlayer.play(AssetSource("sounds/3.wav"));
+          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+            lvlThreeOp = 0;
+            update();
+          });
+        });     // 3
+        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+          lvlTwoOp = 0.5;
+          update();
+          await audioPlayer.play(AssetSource("sounds/2.wav"));
+          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+            lvlTwoOp = 0;
+            update();
+          });
+        });     // 2
+        await Future.delayed(const Duration(milliseconds: 950)).then((value) async {
+          lvlTwoOp = 0.5;
+          update();
+          await audioPlayer.play(AssetSource("sounds/2.wav"));
+          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+            lvlTwoOp = 0;
+            update();
+          });
+        });     // 2
+        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+          lvlOneOp = 0.5;
+          update();
+          await audioPlayer.play(AssetSource("sounds/1.wav"));
+          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+            lvlOneOp = 0;
+            update();
+          });
+        });     // 1
+        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+          lvlFourOp = 0.5;
+          update();
+          await audioPlayer.play(AssetSource("sounds/4.wav"));
+          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+            lvlFourOp = 0;
+            update();
+          });
+        });     // 4
+        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+          lvlOneOp = 0.5;
+          update();
+          await audioPlayer.play(AssetSource("sounds/1.wav"));
+          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+            lvlOneOp = 0;
+            update();
+          });
+        });     // 1
+        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+          lvlThreeOp = 0.5;
+          update();
+          await audioPlayer.play(AssetSource("sounds/3.wav"));
+          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+            lvlThreeOp = 0;
+            update();
+          });
+        });     // 3
+        await Future.delayed(const Duration(milliseconds: 950)).then((value) async {
+          lvlThreeOp = 0.5;
+          update();
+          await audioPlayer.play(AssetSource("sounds/3.wav"));
+          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+            lvlThreeOp = 0;
+            update();
+          });
+        });     // 3
+      } else if(clevel == 15){
+        await audioPlayer.play(AssetSource("sounds/2.wav"));
+        lvlTwoOp = 0.5;
+        update();
+        await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+          lvlTwoOp = 0;
+          update();
+        });           // 2
+        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+          lvlThreeOp = 0.5;
+          update();
+          await audioPlayer.play(AssetSource("sounds/3.wav"));
+          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+            lvlThreeOp = 0;
+            update();
+          });
+        });     // 3
+        await Future.delayed(const Duration(milliseconds: 950)).then((value) async {
+          lvlThreeOp = 0.5;
+          update();
+          await audioPlayer.play(AssetSource("sounds/3.wav"));
+          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+            lvlThreeOp = 0;
+            update();
+          });
+        });     // 3
+        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+          lvlTwoOp = 0.5;
+          update();
+          await audioPlayer.play(AssetSource("sounds/2.wav"));
+          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+            lvlTwoOp = 0;
+            update();
+          });
+        });     // 2
+        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+          lvlThreeOp = 0.5;
+          update();
+          await audioPlayer.play(AssetSource("sounds/3.wav"));
+          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+            lvlThreeOp = 0;
+            update();
+          });
+        });     // 3
+        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+          lvlOneOp = 0.5;
+          update();
+          await audioPlayer.play(AssetSource("sounds/1.wav"));
+          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+            lvlOneOp = 0;
+            update();
+          });
+        });     // 1
+        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+          lvlFourOp = 0.5;
+          update();
+          await audioPlayer.play(AssetSource("sounds/4.wav"));
+          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+            lvlFourOp = 0;
+            update();
+          });
+        });     // 4
+        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+          lvlThreeOp = 0.5;
+          update();
+          await audioPlayer.play(AssetSource("sounds/3.wav"));
+          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+            lvlThreeOp = 0;
+            update();
+          });
+        });     // 3
+        await Future.delayed(const Duration(milliseconds: 950)).then((value) async {
+          lvlThreeOp = 0.5;
+          update();
+          await audioPlayer.play(AssetSource("sounds/3.wav"));
+          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+            lvlThreeOp = 0;
+            update();
+          });
+        });     // 3
       }
     } catch (e) {
       print("Error: $e");
@@ -396,13 +1161,15 @@ class MemoryGameContImp extends MemoryGameCont {
           update();
         });
       }
+
       ans.add(click);
+
       if(clevel == 1){
         if(ans.length <= 3){
           if(const ListEquality().equals(ans, oneAns)){
             Get.defaultDialog(
               backgroundColor: white,
-              title: "Correct",
+              title: "اجابة صحيحة",
               titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
               titleStyle: TextStyle(
                 fontSize: 18.sp,
@@ -414,7 +1181,7 @@ class MemoryGameContImp extends MemoryGameCont {
                 alignment: Alignment.center,
                 height: 7.h,
                 child: Text(
-                  "Good Job,You earned 5 points..",
+                  "! برافو ، كسبت 5 نقاط",
                   style: TextStyle(
                     fontSize: 18.sp,
                     fontFamily: "Cairo",
@@ -436,16 +1203,16 @@ class MemoryGameContImp extends MemoryGameCont {
         } else if(ans.length >= 3){
           Get.defaultDialog(
             backgroundColor: white,
-            title: "Wrong",
+            title: "اجابة خاطئة",
             titlePadding: EdgeInsets.only(bottom: 2.h, top: 1.h),
             titleStyle: TextStyle(
-                fontSize: 18.sp,
-                fontFamily: "Cairo",
-                color: red,
-                fontWeight: FontWeight.bold
+              fontSize: 18.sp,
+              fontFamily: "Cairo",
+              color: red,
+              fontWeight: FontWeight.bold
             ),
             content: Text(
-              "Oops, Try again !!",
+              "! اجابة خاطئة ، حاول مرة اخرى",
               style: TextStyle(
                 fontSize: 18.sp,
                 fontFamily: "Cairo",
@@ -461,19 +1228,19 @@ class MemoryGameContImp extends MemoryGameCont {
           if(const ListEquality().equals(ans, twoAns)){
             Get.defaultDialog(
               backgroundColor: white,
-              title: "Correct",
+              title: "اجابة صحيحة",
               titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
               titleStyle: TextStyle(
-                  fontSize: 18.sp,
-                  fontFamily: "Cairo",
-                  color: green,
-                  fontWeight: FontWeight.bold
+                fontSize: 18.sp,
+                fontFamily: "Cairo",
+                color: green,
+                fontWeight: FontWeight.bold
               ),
               content: Container(
                 alignment: Alignment.center,
                 height: 7.h,
                 child: Text(
-                  "You`re doing great. You earned 7 points..",
+                  "! ايه الجمال ده كسبت  7 نقاط",
                   style: TextStyle(
                     fontSize: 18.sp,
                     fontFamily: "Cairo",
@@ -495,7 +1262,7 @@ class MemoryGameContImp extends MemoryGameCont {
         } else if(ans.length >= 4){
           Get.defaultDialog(
             backgroundColor: white,
-            title: "Wrong",
+            title: "اجابة خاطئة",
             titlePadding: EdgeInsets.only(bottom: 2.h, top: 1.h),
             titleStyle: TextStyle(
               fontSize: 18.sp,
@@ -504,7 +1271,7 @@ class MemoryGameContImp extends MemoryGameCont {
               fontWeight: FontWeight.bold
             ),
             content: Text(
-              "Oops, Try again !!",
+              "! اجابة خاطئة ، حاول مرة اخرى",
               style: TextStyle(
                 fontSize: 18.sp,
                 fontFamily: "Cairo",
@@ -520,7 +1287,7 @@ class MemoryGameContImp extends MemoryGameCont {
           if(const ListEquality().equals(ans, threeAns)){
             Get.defaultDialog(
               backgroundColor: white,
-              title: "Correct",
+              title: "اجابة صحيحة",
               titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
               titleStyle: TextStyle(
                   fontSize: 18.sp,
@@ -532,7 +1299,7 @@ class MemoryGameContImp extends MemoryGameCont {
                 alignment: Alignment.center,
                 height: 7.h,
                 child: Text(
-                  "Keep going. You earned 7 points..",
+                  "! كمل يا بطل كسبت  7 نقاط",
                   style: TextStyle(
                     fontSize: 18.sp,
                     fontFamily: "Cairo",
@@ -554,7 +1321,7 @@ class MemoryGameContImp extends MemoryGameCont {
         } else if(ans.length >= 5){
           Get.defaultDialog(
             backgroundColor: white,
-            title: "Wrong",
+            title: "اجابة خاطئة",
             titlePadding: EdgeInsets.only(bottom: 2.h, top: 1.h),
             titleStyle: TextStyle(
                 fontSize: 18.sp,
@@ -563,7 +1330,7 @@ class MemoryGameContImp extends MemoryGameCont {
                 fontWeight: FontWeight.bold
             ),
             content: Text(
-              "Oops, Try again !!",
+              "! اجابة خاطئة ، حاول مرة اخرى",
               style: TextStyle(
                 fontSize: 18.sp,
                 fontFamily: "Cairo",
@@ -579,7 +1346,7 @@ class MemoryGameContImp extends MemoryGameCont {
           if(const ListEquality().equals(ans, fourAns)){
             Get.defaultDialog(
                 backgroundColor: white,
-                title: "Correct",
+                title: "اجابة صحيحة",
                 titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
                 titleStyle: TextStyle(
                     fontSize: 18.sp,
@@ -591,7 +1358,7 @@ class MemoryGameContImp extends MemoryGameCont {
                   alignment: Alignment.center,
                   height: 7.h,
                   child: Text(
-                    "Excellent, You earned 10 points..",
+                    "! جاااامد كسبت 10 نقاط",
                     style: TextStyle(
                       fontSize: 18.sp,
                       fontFamily: "Cairo",
@@ -613,7 +1380,7 @@ class MemoryGameContImp extends MemoryGameCont {
         } else if(ans.length >= 6){
           Get.defaultDialog(
             backgroundColor: white,
-            title: "Wrong",
+            title: "اجابة خاطئة",
             titlePadding: EdgeInsets.only(bottom: 2.h, top: 1.h),
             titleStyle: TextStyle(
                 fontSize: 18.sp,
@@ -622,7 +1389,7 @@ class MemoryGameContImp extends MemoryGameCont {
                 fontWeight: FontWeight.bold
             ),
             content: Text(
-              "Oops, Try again !!",
+              "! اجابة خاطئة ، حاول مرة اخرى",
               style: TextStyle(
                 fontSize: 18.sp,
                 fontFamily: "Cairo",
@@ -638,7 +1405,7 @@ class MemoryGameContImp extends MemoryGameCont {
           if(const ListEquality().equals(ans, fiveAns)){
             Get.defaultDialog(
                 backgroundColor: white,
-                title: "Correct",
+                title: "اجابة صحيحة",
                 titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
                 titleStyle: TextStyle(
                     fontSize: 18.sp,
@@ -650,7 +1417,7 @@ class MemoryGameContImp extends MemoryGameCont {
                   alignment: Alignment.center,
                   height: 7.h,
                   child: Text(
-                    "Excellent, You earned 12 points..",
+                    "! ممتاز كسبت 12 نقاط",
                     style: TextStyle(
                       fontSize: 18.sp,
                       fontFamily: "Cairo",
@@ -672,7 +1439,7 @@ class MemoryGameContImp extends MemoryGameCont {
         } else if(ans.length >= 7){
           Get.defaultDialog(
             backgroundColor: white,
-            title: "Wrong",
+            title: "اجابة خاطئة",
             titlePadding: EdgeInsets.only(bottom: 2.h, top: 1.h),
             titleStyle: TextStyle(
                 fontSize: 18.sp,
@@ -681,7 +1448,598 @@ class MemoryGameContImp extends MemoryGameCont {
                 fontWeight: FontWeight.bold
             ),
             content: Text(
-              "Oops, Try again !!",
+              "! اجابة خاطئة ، حاول مرة اخرى",
+              style: TextStyle(
+                fontSize: 18.sp,
+                fontFamily: "Cairo",
+              ),
+            ),
+          );
+          ans = [];
+        } else {
+          ans = [];
+        }
+      } else if(clevel == 6){
+        if(ans.length <= 7){
+          if(const ListEquality().equals(ans, sixAns)){
+            Get.defaultDialog(
+              backgroundColor: white,
+              title: "اجابة صحيحة",
+              titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
+              titleStyle: TextStyle(
+                fontSize: 18.sp,
+                fontFamily: "Cairo",
+                color: green,
+                fontWeight: FontWeight.bold
+              ),
+              content: Container(
+                alignment: Alignment.center,
+                height: 7.h,
+                child: Text(
+                  "! ممتاز كسبت 14 نقاط",
+                  style: TextStyle(
+                    fontSize: 18.sp,
+                    fontFamily: "Cairo",
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+              ),
+              onWillPop: () async {
+                Get.back();
+                clevel = 7;
+                await updateLevel();
+                update();
+                return false;
+              }
+            );
+            await audioPlayer.play(AssetSource("sounds/win.mp3"));
+            ans = [];
+          }
+        } else if(ans.length >= 7){
+          Get.defaultDialog(
+            backgroundColor: white,
+            title: "اجابة خاطئة",
+            titlePadding: EdgeInsets.only(bottom: 2.h, top: 1.h),
+            titleStyle: TextStyle(
+                fontSize: 18.sp,
+                fontFamily: "Cairo",
+                color: red,
+                fontWeight: FontWeight.bold
+            ),
+            content: Text(
+              "! اجابة خاطئة ، حاول مرة اخرى",
+              style: TextStyle(
+                fontSize: 18.sp,
+                fontFamily: "Cairo",
+              ),
+            ),
+          );
+          ans = [];
+        } else {
+          ans = [];
+        }
+      } else if(clevel == 7){
+        if(ans.length <= 8){
+          if(const ListEquality().equals(ans, sevenAns)){
+            Get.defaultDialog(
+              backgroundColor: white,
+              title: "اجابة صحيحة",
+              titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
+              titleStyle: TextStyle(
+                  fontSize: 18.sp,
+                  fontFamily: "Cairo",
+                  color: green,
+                  fontWeight: FontWeight.bold
+              ),
+              content: Container(
+                alignment: Alignment.center,
+                height: 7.h,
+                child: Text(
+                  "! ممتاز كسبت 14 نقاط",
+                  style: TextStyle(
+                    fontSize: 18.sp,
+                    fontFamily: "Cairo",
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+              ),
+              onWillPop: () async {
+                Get.back();
+                clevel = 8;
+                await updateLevel();
+                update();
+                return false;
+              }
+            );
+            await audioPlayer.play(AssetSource("sounds/win.mp3"));
+            ans = [];
+          }
+        } else if(ans.length >= 8){
+          Get.defaultDialog(
+            backgroundColor: white,
+            title: "اجابة خاطئة",
+            titlePadding: EdgeInsets.only(bottom: 2.h, top: 1.h),
+            titleStyle: TextStyle(
+                fontSize: 18.sp,
+                fontFamily: "Cairo",
+                color: red,
+                fontWeight: FontWeight.bold
+            ),
+            content: Text(
+              "! اجابة خاطئة ، حاول مرة اخرى",
+              style: TextStyle(
+                fontSize: 18.sp,
+                fontFamily: "Cairo",
+              ),
+            ),
+          );
+          ans = [];
+        } else {
+          ans = [];
+        }
+      } else if(clevel == 8){
+        if(ans.length <= 7){
+          if(const ListEquality().equals(ans, eightAns)){
+            Get.defaultDialog(
+                backgroundColor: white,
+                title: "اجابة صحيحة",
+                titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
+                titleStyle: TextStyle(
+                    fontSize: 18.sp,
+                    fontFamily: "Cairo",
+                    color: green,
+                    fontWeight: FontWeight.bold
+                ),
+                content: Container(
+                  alignment: Alignment.center,
+                  height: 7.h,
+                  child: Text(
+                    "! ممتاز كسبت 14 نقاط",
+                    style: TextStyle(
+                      fontSize: 18.sp,
+                      fontFamily: "Cairo",
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                ),
+                onWillPop: () async {
+                  Get.back();
+                  clevel = 9;
+                  await updateLevel();
+                  update();
+                  return false;
+                }
+            );
+            await audioPlayer.play(AssetSource("sounds/win.mp3"));
+            ans = [];
+          }
+        } else if(ans.length >= 7){
+          Get.defaultDialog(
+            backgroundColor: white,
+            title: "اجابة خاطئة",
+            titlePadding: EdgeInsets.only(bottom: 2.h, top: 1.h),
+            titleStyle: TextStyle(
+                fontSize: 18.sp,
+                fontFamily: "Cairo",
+                color: red,
+                fontWeight: FontWeight.bold
+            ),
+            content: Text(
+              "! اجابة خاطئة ، حاول مرة اخرى",
+              style: TextStyle(
+                fontSize: 18.sp,
+                fontFamily: "Cairo",
+              ),
+            ),
+          );
+          ans = [];
+        } else {
+          ans = [];
+        }
+      } else if(clevel == 9){
+        if(ans.length <= 6){
+          if(const ListEquality().equals(ans, nineAns)){
+            Get.defaultDialog(
+                backgroundColor: white,
+                title: "اجابة صحيحة",
+                titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
+                titleStyle: TextStyle(
+                    fontSize: 18.sp,
+                    fontFamily: "Cairo",
+                    color: green,
+                    fontWeight: FontWeight.bold
+                ),
+                content: Container(
+                  alignment: Alignment.center,
+                  height: 7.h,
+                  child: Text(
+                    "! ممتاز كسبت 15 نقاط",
+                    style: TextStyle(
+                      fontSize: 18.sp,
+                      fontFamily: "Cairo",
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                ),
+                onWillPop: () async {
+                  Get.back();
+                  clevel = 10;
+                  await updateLevel();
+                  update();
+                  return false;
+                }
+            );
+            await audioPlayer.play(AssetSource("sounds/win.mp3"));
+            ans = [];
+          }
+        } else if(ans.length >= 6){
+          Get.defaultDialog(
+            backgroundColor: white,
+            title: "اجابة خاطئة",
+            titlePadding: EdgeInsets.only(bottom: 2.h, top: 1.h),
+            titleStyle: TextStyle(
+                fontSize: 18.sp,
+                fontFamily: "Cairo",
+                color: red,
+                fontWeight: FontWeight.bold
+            ),
+            content: Text(
+              "! اجابة خاطئة ، حاول مرة اخرى",
+              style: TextStyle(
+                fontSize: 18.sp,
+                fontFamily: "Cairo",
+              ),
+            ),
+          );
+          ans = [];
+        } else {
+          ans = [];
+        }
+      } else if(clevel == 10){
+        if(ans.length <= 8){
+          if(const ListEquality().equals(ans, tenAns)){
+            Get.defaultDialog(
+                backgroundColor: white,
+                title: "اجابة صحيحة",
+                titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
+                titleStyle: TextStyle(
+                    fontSize: 18.sp,
+                    fontFamily: "Cairo",
+                    color: green,
+                    fontWeight: FontWeight.bold
+                ),
+                content: Container(
+                  alignment: Alignment.center,
+                  height: 7.h,
+                  child: Text(
+                    "! ممتاز كسبت 15 نقاط",
+                    style: TextStyle(
+                      fontSize: 18.sp,
+                      fontFamily: "Cairo",
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                ),
+                onWillPop: () async {
+                  Get.back();
+                  clevel = 11;
+                  await updateLevel();
+                  update();
+                  return false;
+                }
+            );
+            await audioPlayer.play(AssetSource("sounds/win.mp3"));
+            ans = [];
+          }
+        } else if(ans.length >= 8){
+          Get.defaultDialog(
+            backgroundColor: white,
+            title: "اجابة خاطئة",
+            titlePadding: EdgeInsets.only(bottom: 2.h, top: 1.h),
+            titleStyle: TextStyle(
+                fontSize: 18.sp,
+                fontFamily: "Cairo",
+                color: red,
+                fontWeight: FontWeight.bold
+            ),
+            content: Text(
+              "! اجابة خاطئة ، حاول مرة اخرى",
+              style: TextStyle(
+                fontSize: 18.sp,
+                fontFamily: "Cairo",
+              ),
+            ),
+          );
+          ans = [];
+        } else {
+          ans = [];
+        }
+      } else if(clevel == 11){
+        if(ans.length <= 9){
+          if(const ListEquality().equals(ans, elevenAns)){
+            Get.defaultDialog(
+                backgroundColor: white,
+                title: "اجابة صحيحة",
+                titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
+                titleStyle: TextStyle(
+                    fontSize: 18.sp,
+                    fontFamily: "Cairo",
+                    color: green,
+                    fontWeight: FontWeight.bold
+                ),
+                content: Container(
+                  alignment: Alignment.center,
+                  height: 7.h,
+                  child: Text(
+                    "! ممتاز كسبت 15 نقاط",
+                    style: TextStyle(
+                      fontSize: 18.sp,
+                      fontFamily: "Cairo",
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                ),
+                onWillPop: () async {
+                  Get.back();
+                  clevel = 12;
+                  await updateLevel();
+                  update();
+                  return false;
+                }
+            );
+            await audioPlayer.play(AssetSource("sounds/win.mp3"));
+            ans = [];
+          }
+        } else if(ans.length >= 9){
+          Get.defaultDialog(
+            backgroundColor: white,
+            title: "اجابة خاطئة",
+            titlePadding: EdgeInsets.only(bottom: 2.h, top: 1.h),
+            titleStyle: TextStyle(
+                fontSize: 18.sp,
+                fontFamily: "Cairo",
+                color: red,
+                fontWeight: FontWeight.bold
+            ),
+            content: Text(
+              "! اجابة خاطئة ، حاول مرة اخرى",
+              style: TextStyle(
+                fontSize: 18.sp,
+                fontFamily: "Cairo",
+              ),
+            ),
+          );
+          ans = [];
+        } else {
+          ans = [];
+        }
+      } else if(clevel == 12){
+        if(ans.length <= 9){
+          if(const ListEquality().equals(ans, twelveAns)){
+            Get.defaultDialog(
+                backgroundColor: white,
+                title: "اجابة صحيحة",
+                titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
+                titleStyle: TextStyle(
+                    fontSize: 18.sp,
+                    fontFamily: "Cairo",
+                    color: green,
+                    fontWeight: FontWeight.bold
+                ),
+                content: Container(
+                  alignment: Alignment.center,
+                  height: 7.h,
+                  child: Text(
+                    "! ممتاز كسبت 15 نقاط",
+                    style: TextStyle(
+                      fontSize: 18.sp,
+                      fontFamily: "Cairo",
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                ),
+                onWillPop: () async {
+                  Get.back();
+                  clevel = 13;
+                  await updateLevel();
+                  update();
+                  return false;
+                }
+            );
+            await audioPlayer.play(AssetSource("sounds/win.mp3"));
+            ans = [];
+          }
+        } else if(ans.length >= 9){
+          Get.defaultDialog(
+            backgroundColor: white,
+            title: "اجابة خاطئة",
+            titlePadding: EdgeInsets.only(bottom: 2.h, top: 1.h),
+            titleStyle: TextStyle(
+                fontSize: 18.sp,
+                fontFamily: "Cairo",
+                color: red,
+                fontWeight: FontWeight.bold
+            ),
+            content: Text(
+              "! اجابة خاطئة ، حاول مرة اخرى",
+              style: TextStyle(
+                fontSize: 18.sp,
+                fontFamily: "Cairo",
+              ),
+            ),
+          );
+          ans = [];
+        } else {
+          ans = [];
+        }
+      } else if(clevel == 13){
+        if(ans.length <= 10){
+          if(const ListEquality().equals(ans, thirteenAns)){
+            Get.defaultDialog(
+              backgroundColor: white,
+              title: "اجابة صحيحة",
+              titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
+              titleStyle: TextStyle(
+                  fontSize: 18.sp,
+                  fontFamily: "Cairo",
+                  color: green,
+                  fontWeight: FontWeight.bold
+              ),
+              content: Container(
+                alignment: Alignment.center,
+                height: 7.h,
+                child: Text(
+                  "! ممتاز كسبت 17 نقاط",
+                  style: TextStyle(
+                    fontSize: 18.sp,
+                    fontFamily: "Cairo",
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+              ),
+              onWillPop: () async {
+                Get.back();
+                clevel = 14;
+                await updateLevel();
+                update();
+                return false;
+              }
+            );
+            await audioPlayer.play(AssetSource("sounds/win.mp3"));
+            ans = [];
+          }
+        } else if(ans.length >= 10){
+          Get.defaultDialog(
+            backgroundColor: white,
+            title: "اجابة خاطئة",
+            titlePadding: EdgeInsets.only(bottom: 2.h, top: 1.h),
+            titleStyle: TextStyle(
+                fontSize: 18.sp,
+                fontFamily: "Cairo",
+                color: red,
+                fontWeight: FontWeight.bold
+            ),
+            content: Text(
+              "! اجابة خاطئة ، حاول مرة اخرى",
+              style: TextStyle(
+                fontSize: 18.sp,
+                fontFamily: "Cairo",
+              ),
+            ),
+          );
+          ans = [];
+        } else {
+          ans = [];
+        }
+      } else if(clevel == 14){
+        if(ans.length <= 10){
+          if(const ListEquality().equals(ans, fourteenAns)){
+            Get.defaultDialog(
+                backgroundColor: white,
+                title: "اجابة صحيحة",
+                titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
+                titleStyle: TextStyle(
+                    fontSize: 18.sp,
+                    fontFamily: "Cairo",
+                    color: green,
+                    fontWeight: FontWeight.bold
+                ),
+                content: Container(
+                  alignment: Alignment.center,
+                  height: 7.h,
+                  child: Text(
+                    "! ممتاز كسبت 17 نقاط",
+                    style: TextStyle(
+                      fontSize: 18.sp,
+                      fontFamily: "Cairo",
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                ),
+                onWillPop: () async {
+                  Get.back();
+                  clevel = 15;
+                  await updateLevel();
+                  update();
+                  return false;
+                }
+            );
+            await audioPlayer.play(AssetSource("sounds/win.mp3"));
+            ans = [];
+          }
+        } else if(ans.length >= 10){
+          Get.defaultDialog(
+            backgroundColor: white,
+            title: "اجابة خاطئة",
+            titlePadding: EdgeInsets.only(bottom: 2.h, top: 1.h),
+            titleStyle: TextStyle(
+                fontSize: 18.sp,
+                fontFamily: "Cairo",
+                color: red,
+                fontWeight: FontWeight.bold
+            ),
+            content: Text(
+              "! اجابة خاطئة ، حاول مرة اخرى",
+              style: TextStyle(
+                fontSize: 18.sp,
+                fontFamily: "Cairo",
+              ),
+            ),
+          );
+          ans = [];
+        } else {
+          ans = [];
+        }
+      } else if(clevel == 15){
+        if(ans.length <= 9){
+          if(const ListEquality().equals(ans, fifteenAns)){
+            Get.defaultDialog(
+              backgroundColor: white,
+              title: "اجابة صحيحة",
+              titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
+              titleStyle: TextStyle(
+                  fontSize: 18.sp,
+                  fontFamily: "Cairo",
+                  color: green,
+                  fontWeight: FontWeight.bold
+              ),
+              content: Container(
+                alignment: Alignment.center,
+                height: 7.h,
+                child: Text(
+                  "! ممتاز كسبت 17 نقاط",
+                  style: TextStyle(
+                    fontSize: 18.sp,
+                    fontFamily: "Cairo",
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+              ),
+              onWillPop: () async {
+                Get.back();
+                Get.back();
+                clevel = 15;
+                await updateLevel();
+                update();
+                return false;
+              }
+            );
+            await audioPlayer.play(AssetSource("sounds/win.mp3"));
+            ans = [];
+          }
+        } else if(ans.length >= 9){
+          Get.defaultDialog(
+            backgroundColor: white,
+            title: "اجابة خاطئة",
+            titlePadding: EdgeInsets.only(bottom: 2.h, top: 1.h),
+            titleStyle: TextStyle(
+                fontSize: 18.sp,
+                fontFamily: "Cairo",
+                color: red,
+                fontWeight: FontWeight.bold
+            ),
+            content: Text(
+              "! اجابة خاطئة ، حاول مرة اخرى",
               style: TextStyle(
                 fontSize: 18.sp,
                 fontFamily: "Cairo",
@@ -693,7 +2051,6 @@ class MemoryGameContImp extends MemoryGameCont {
           ans = [];
         }
       }
-
     } catch(e) {
       print("Error: $e");
     }

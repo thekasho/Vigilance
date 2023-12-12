@@ -28,7 +28,7 @@ class _SupportTeacherHomeScreenState extends State<SupportTeacherHomeScreen> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      "Let`s Play!",
+                      "المعلم",
                       style: TextStyle(
                           color: black,
                           fontWeight: FontWeight.bold,
@@ -64,7 +64,7 @@ class _SupportTeacherHomeScreenState extends State<SupportTeacherHomeScreen> {
                           ),
                         ),
                         child: Text(
-                          "Your Tests",
+                          "الامتحانات",
                           style: TextStyle(
                               fontSize: 19.sp,
                               color: white,
@@ -101,7 +101,7 @@ class _SupportTeacherHomeScreenState extends State<SupportTeacherHomeScreen> {
                           ),
                         ),
                         child: Text(
-                          "Chat Your Teacher",
+                          "تواصل مع معلمك",
                           style: TextStyle(
                               fontSize: 19.sp,
                               color: white,
@@ -138,9 +138,9 @@ class _SupportTeacherHomeScreenState extends State<SupportTeacherHomeScreen> {
                           ),
                         ),
                         child: Text(
-                          "Email Your Teacher",
+                          "ارسال بريد الكتروني للمعلم",
                           style: TextStyle(
-                            fontSize: 19.sp,
+                            fontSize: 17.sp,
                             color: white,
                             fontWeight: FontWeight.bold,
                             fontFamily: 'Cairo'

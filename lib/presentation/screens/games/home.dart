@@ -30,7 +30,7 @@ class _GamesHomeScreenState extends State<GamesHomeScreen> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      "Let`s Play!",
+                      " ..هيا نلعب",
                       style: TextStyle(
                         color: black,
                         fontWeight: FontWeight.bold,
@@ -66,7 +66,7 @@ class _GamesHomeScreenState extends State<GamesHomeScreen> {
                           ),
                         ),
                         child: Text(
-                          "Spot the Difference",
+                          "اختر المختلف",
                           style: TextStyle(
                             fontSize: 19.sp,
                             color: white,
@@ -140,7 +140,7 @@ class _GamesHomeScreenState extends State<GamesHomeScreen> {
                           ),
                         ),
                         child: Text(
-                          "Shopping List",
+                          "قائمة التسوق",
                           style: TextStyle(
                             fontSize: 19.sp,
                             color: white,

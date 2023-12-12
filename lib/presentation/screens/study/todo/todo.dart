@@ -15,6 +15,9 @@ class _StdToDoScreenState extends State<StdToDoScreen> {
     Get.put(StdToDoContImp());
     return SafeArea(
       child: Scaffold(
+        // appBar: AppBar(
+        //   backgroundColor: red,
+        // ),
         body: Container(
           width: double.infinity,
           height: double.infinity,
@@ -43,9 +46,11 @@ class _StdToDoScreenState extends State<StdToDoScreen> {
                       width: 55.w,
                       alignment: Alignment.center,
                       child: Text(
-                        "Task List",
+                        "المهام",
                         style: TextStyle(
-                          fontSize: 22.sp
+                          fontSize: 22.sp,
+                          fontFamily: 'Cairo',
+                          fontWeight: FontWeight.bold
                         ),
                       ),
                     ),
@@ -73,15 +78,17 @@ class _StdToDoScreenState extends State<StdToDoScreen> {
                                     child: Column(
                                       children: [
                                         Text(
-                                          "Add New Task",
+                                          "اضافة مهمة جديدة",
                                           style: TextStyle(
-                                            fontSize: 20.sp
+                                            fontSize: 20.sp,
+                                            fontFamily: 'Cairo',
+                                            fontWeight: FontWeight.bold
                                           ),
                                         ),
                                         SizedBox(height: 2.h),
                                         AuthTextForm(
                                           controller: controller.title,
-                                          hintText: "Title",
+                                          hintText: "العنوان",
                                           isPassword: false,
                                           valid: (val) {
                                             if (val!.isEmpty) {
@@ -92,7 +99,7 @@ class _StdToDoScreenState extends State<StdToDoScreen> {
                                         SizedBox(height: 2.h),
                                         AuthTextForm(
                                           controller: controller.desc,
-                                          hintText: "Description",
+                                          hintText: "الوصف",
                                           isPassword: false,
                                           valid: (val) {
                                             if (val!.isEmpty) {
@@ -167,7 +174,7 @@ class _StdToDoScreenState extends State<StdToDoScreen> {
                                               child: Row(
                                                 children: [
                                                   Text(
-                                                    "Save Task",
+                                                    "حفظ المهمة",
                                                     style: TextStyle(
                                                       fontSize: 18.sp,
                                                       color: black,

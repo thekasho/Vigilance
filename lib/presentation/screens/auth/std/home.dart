@@ -27,15 +27,19 @@ class _StdHomeScreenState extends State<StdHomeScreen> {
                 left: 20,
                 right: 20
             ),
+            actionsAlignment: MainAxisAlignment.start,
             title: Text(
-              'Close App',
+              'غلق التطبيق؟',
+              textAlign: TextAlign.end,
               style: TextStyle(fontFamily: 'Cairo',
                   color: red,
                   fontWeight: FontWeight.bold,
-                  fontSize: 20.sp),
+                  fontSize: 20.sp
+              ),
             ),
             content: Text(
-              "Are You Sure ?!",
+              "هل انت متأكد ؟",
+              textAlign: TextAlign.end,
               style: TextStyle(
                 fontSize: 18.sp,
                 fontFamily: "Cairo",
@@ -49,7 +53,7 @@ class _StdHomeScreenState extends State<StdHomeScreen> {
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20.0)),
                 child: const Text(
-                  'No',
+                  'لا',
                   style: TextStyle(
                       fontFamily: 'Cairo',
                       fontWeight: FontWeight.bold,
@@ -64,7 +68,7 @@ class _StdHomeScreenState extends State<StdHomeScreen> {
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20.0)),
                 child: const Text(
-                  'Yes',
+                  'نعم',
                   style: TextStyle(
                       fontFamily: 'Cairo',
                       fontWeight: FontWeight.bold,
@@ -112,7 +116,7 @@ class _StdHomeScreenState extends State<StdHomeScreen> {
                       width: 15.w,
                       clipBehavior: Clip.antiAlias,
                       decoration: const BoxDecoration(
-                          shape: BoxShape.circle
+                        shape: BoxShape.circle
                       ),
                       child: CachedNetworkImage(
                         imageUrl: "https://th.bing.com/th/id/OIP.KEJaw671I5WYuftNN0IOZAHaHa?w=196&h=196&c=7&r=0&o=5&dpr=1.3&pid=1.7",
@@ -135,10 +139,12 @@ class _StdHomeScreenState extends State<StdHomeScreen> {
                       ),
                       child: GetBuilder<StdHomeContImp>(builder: (controller) {
                         return Text(
-                          "Points: ${controller.points}",
+                          "النقاط: ${controller.points}",
                           style: TextStyle(
                             color: white,
-                            fontSize: 21.sp,
+                            fontSize: 19.sp,
+                            fontWeight: FontWeight.bold,
+                            fontFamily: 'Cairo'
                           ),
                         );
                       }),
@@ -216,7 +222,7 @@ class _StdHomeScreenState extends State<StdHomeScreen> {
                                         ),
                                       ),
                                       Text(
-                                        "Studying",
+                                        "مذاكرة",
                                         style: TextStyle(
                                           fontFamily: 'Cairo',
                                           fontSize: 20.sp,
@@ -274,7 +280,7 @@ class _StdHomeScreenState extends State<StdHomeScreen> {
                                         ),
                                       ),
                                       Text(
-                                        "Games",
+                                        "العاب",
                                         style: TextStyle(
                                           fontFamily: 'Cairo',
                                           fontSize: 20.sp,
@@ -332,7 +338,7 @@ class _StdHomeScreenState extends State<StdHomeScreen> {
                                         ),
                                       ),
                                       Text(
-                                        "Support teacher",
+                                        "مُعلم",
                                         style: TextStyle(
                                           fontFamily: 'Cairo',
                                           fontSize: 20.sp,
@@ -390,7 +396,7 @@ class _StdHomeScreenState extends State<StdHomeScreen> {
                                         ),
                                       ),
                                       Text(
-                                        "Meditation",
+                                        "تأمل",
                                         style: TextStyle(
                                           fontFamily: 'Cairo',
                                           fontSize: 20.sp,

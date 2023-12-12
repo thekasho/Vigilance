@@ -279,7 +279,9 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                       ],
                     ),
                     SizedBox(height: 1.h),
+
                     const Divider(thickness: 2, color: black),
+
                     SizedBox(height: 1.h),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,

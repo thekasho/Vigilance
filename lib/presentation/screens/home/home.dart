@@ -26,15 +26,19 @@ class _HomeScreenState extends State<HomeScreen> {
                 left: 20,
                 right: 20
             ),
+            actionsAlignment: MainAxisAlignment.start,
             title: Text(
-              'Close App',
+              'غلق التطبيق؟',
+              textAlign: TextAlign.end,
               style: TextStyle(fontFamily: 'Cairo',
-                  color: red,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 20.sp),
+                color: red,
+                fontWeight: FontWeight.bold,
+                fontSize: 20.sp
+              ),
             ),
             content: Text(
-              "Are You Sure ?!",
+              "هل انت متأكد ؟",
+              textAlign: TextAlign.end,
               style: TextStyle(
                 fontSize: 18.sp,
                 fontFamily: "Cairo",
@@ -48,11 +52,11 @@ class _HomeScreenState extends State<HomeScreen> {
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20.0)),
                 child: const Text(
-                  'No',
+                  'لا',
                   style: TextStyle(
-                      fontFamily: 'Cairo',
-                      fontWeight: FontWeight.bold,
-                      color: black
+                    fontFamily: 'Cairo',
+                    fontWeight: FontWeight.bold,
+                    color: black
                   ),
                 ),
                 onPressed: () => Navigator.of(context).pop(false),
@@ -63,11 +67,11 @@ class _HomeScreenState extends State<HomeScreen> {
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20.0)),
                 child: const Text(
-                  'Yes',
+                  'نعم',
                   style: TextStyle(
-                      fontFamily: 'Cairo',
-                      fontWeight: FontWeight.bold,
-                      color: black
+                    fontFamily: 'Cairo',
+                    fontWeight: FontWeight.bold,
+                    color: black
                   ),
                 ),
                 onPressed: () => Navigator.of(context).pop(true),
@@ -114,11 +118,13 @@ class _HomeScreenState extends State<HomeScreen> {
                     height: 55.h,
                     child: Image.asset("assets/images/landing_img.png")
                   ),
+                  SizedBox(height: 8.h),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        "Welcome to our app!",
+                        "أهلا بيك في تطبيقنا !",
+                        textAlign: TextAlign.end,
                         style: TextStyle(
                           color: black,
                           fontWeight: FontWeight.bold,
@@ -128,82 +134,82 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ],
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        "support teacher, parent, student ",
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                            height: 1.5,
-                            color: black,
-                            fontFamily: 'Cairo',
-                            fontSize: 18.sp
-                        ),
-                      ),
-                    ],
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        "interaction, ToDo list, pomodoro timer,",
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                            height: 1.5,
-                            color: black,
-                            fontFamily: 'Cairo',
-                            fontSize: 18.sp
-                        ),
-                      ),
-                    ],
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        "meditation, tests, messages",
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                            height: 1.5,
-                            color: black,
-                            fontFamily: 'Cairo',
-                            fontSize: 18.sp
-                        ),
-                      ),
-                    ],
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        "Don't wait more and let's try our app",
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                            height: 1.5,
-                            color: black,
-                            fontFamily: 'Cairo',
-                            fontSize: 18.sp
-                        ),
-                      ),
-                    ],
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        "choose your teacher and begin now ",
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                            height: 1.5,
-                            color: black,
-                            fontFamily: 'Cairo',
-                            fontSize: 18.sp
-                        ),
-                      ),
-                    ],
-                  ),
-                  SizedBox(height: 3.h),
+                  // Row(
+                  //   mainAxisAlignment: MainAxisAlignment.center,
+                  //   children: [
+                  //     Text(
+                  //       "support teacher, parent, student ",
+                  //       textAlign: TextAlign.center,
+                  //       style: TextStyle(
+                  //           height: 1.5,
+                  //           color: black,
+                  //           fontFamily: 'Cairo',
+                  //           fontSize: 18.sp
+                  //       ),
+                  //     ),
+                  //   ],
+                  // ),
+                  // Row(
+                  //   mainAxisAlignment: MainAxisAlignment.center,
+                  //   children: [
+                  //     Text(
+                  //       "interaction, ToDo list, pomodoro timer,",
+                  //       textAlign: TextAlign.center,
+                  //       style: TextStyle(
+                  //           height: 1.5,
+                  //           color: black,
+                  //           fontFamily: 'Cairo',
+                  //           fontSize: 18.sp
+                  //       ),
+                  //     ),
+                  //   ],
+                  // ),
+                  // Row(
+                  //   mainAxisAlignment: MainAxisAlignment.center,
+                  //   children: [
+                  //     Text(
+                  //       "meditation, tests, messages",
+                  //       textAlign: TextAlign.center,
+                  //       style: TextStyle(
+                  //           height: 1.5,
+                  //           color: black,
+                  //           fontFamily: 'Cairo',
+                  //           fontSize: 18.sp
+                  //       ),
+                  //     ),
+                  //   ],
+                  // ),
+                  // Row(
+                  //   mainAxisAlignment: MainAxisAlignment.center,
+                  //   children: [
+                  //     Text(
+                  //       "Don't wait more and let's try our app",
+                  //       textAlign: TextAlign.center,
+                  //       style: TextStyle(
+                  //           height: 1.5,
+                  //           color: black,
+                  //           fontFamily: 'Cairo',
+                  //           fontSize: 18.sp
+                  //       ),
+                  //     ),
+                  //   ],
+                  // ),
+                  // Row(
+                  //   mainAxisAlignment: MainAxisAlignment.center,
+                  //   children: [
+                  //     Text(
+                  //       "choose your teacher and begin now ",
+                  //       textAlign: TextAlign.center,
+                  //       style: TextStyle(
+                  //           height: 1.5,
+                  //           color: black,
+                  //           fontFamily: 'Cairo',
+                  //           fontSize: 18.sp
+                  //       ),
+                  //     ),
+                  //   ],
+                  // ),
+                  SizedBox(height: 8.h),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -226,12 +232,12 @@ class _HomeScreenState extends State<HomeScreen> {
                         child: Row(
                           children: [
                             Text(
-                              "Get Started",
+                              "إبدأ",
                               style: TextStyle(
-                                  fontSize: 19.sp,
-                                  color: white,
-                                  fontWeight: FontWeight.bold,
-                                  fontFamily: 'Cairo'
+                                fontSize: 19.sp,
+                                color: white,
+                                fontWeight: FontWeight.bold,
+                                fontFamily: 'Cairo'
                               ),
                             ),
                           ],

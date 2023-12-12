@@ -35,6 +35,8 @@ part 'auth/std/home.dart';
 part 'auth/teacher/login.dart';
 part 'auth/teacher/register.dart';
 part 'auth/teacher/home.dart';
+part 'teacher/tests/tests.dart';
+part 'teacher/tests/add_test.dart';
 
 part 'auth/parent/login.dart';
 part 'auth/parent/register.dart';

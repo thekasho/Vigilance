@@ -54,8 +54,8 @@ class _SpotLevelsScreenState extends State<SpotLevelsScreen> {
                           right: 2.w
                       ),
                       decoration: BoxDecoration(
-                          color: white,
-                          borderRadius: BorderRadius.circular(10)
+                        color: white,
+                        borderRadius: BorderRadius.circular(10)
                       ),
                       child: GestureDetector(
                         onTap: () {
@@ -163,8 +163,8 @@ class _SpotLevelsScreenState extends State<SpotLevelsScreen> {
                                   child: Text(
                                     "2",
                                     style: TextStyle(
-                                        fontSize: 38.sp,
-                                        fontWeight: FontWeight.bold
+                                      fontSize: 38.sp,
+                                      fontWeight: FontWeight.bold
                                     ),
                                   ),
                                 ),

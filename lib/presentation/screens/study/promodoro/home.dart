@@ -61,7 +61,7 @@ class _PromodoroHomeScreenState extends State<PromodoroHomeScreen> {
                           ),
                         ),
                         child: Text(
-                          "Start",
+                          "البدء",
                           style: TextStyle(
                             fontSize: 22.sp,
                             color: black,

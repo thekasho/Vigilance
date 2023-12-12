@@ -80,23 +80,24 @@ class _PromodoroTimerScreenState extends State<PromodoroTimerScreen> {
                                         ),
                                         child: Row(
                                           children: [
-                                            SizedBox(width: 3.w),
-                                            Text(
-                                              "Setting",
-                                              style: TextStyle(
-                                                  color: grayDark,
-                                                  fontSize: 18.sp,
-                                                  fontWeight: FontWeight.bold
-                                              ),
-                                            ),
-                                            const Spacer(),
                                             IconButton(
                                               icon: Icon(
-                                                  Icons.close, color: grayDark,
-                                                  size: 20.sp),
-                                              onPressed: () =>
-                                                  Navigator.pop(context),
+                                                Icons.close, color: grayDark,
+                                                size: 20.sp
+                                              ),
+                                              onPressed: () => Navigator.pop(context),
                                             ),
+                                            const Spacer(),
+                                            Text(
+                                              "الاعدادات",
+                                              style: TextStyle(
+                                                color: grayDark,
+                                                fontSize: 18.sp,
+                                                fontWeight: FontWeight.bold,
+                                                fontFamily: 'Cairo'
+                                              ),
+                                            ),
+                                            SizedBox(width: 5.w),
                                           ],
                                         ),
                                       ),
@@ -107,35 +108,41 @@ class _PromodoroTimerScreenState extends State<PromodoroTimerScreen> {
                                             vertical: 1.h
                                         ),
                                         child: Row(
+                                          mainAxisAlignment: MainAxisAlignment.end,
                                           children: [
-                                            Icon(Icons.access_time,
-                                                color: grayDark.withOpacity(.7),
-                                                size: 18.sp),
-                                            SizedBox(width: 1.w),
                                             Text(
-                                              "TIMER",
+                                              "المؤقت",
                                               style: TextStyle(
-                                                  color: grayDark.withOpacity(.7),
-                                                  fontSize: 16.sp,
-                                                  fontWeight: FontWeight.bold
+                                                color: grayDark.withOpacity(.7),
+                                                fontSize: 16.sp,
+                                                fontWeight: FontWeight.bold,
+                                                fontFamily: 'Cairo'
                                               ),
+                                            ),
+                                            SizedBox(width: 1.w),
+                                            Icon(
+                                                Icons.access_time,
+                                                color: grayDark.withOpacity(.7),
+                                                size: 18.sp
                                             ),
                                           ],
                                         ),
                                       ),
                                       Padding(
                                         padding: EdgeInsets.symmetric(
-                                            horizontal: 5.w,
-                                            vertical: 1.h
+                                          horizontal: 5.w,
+                                          vertical: 1.h
                                         ),
                                         child: Row(
+                                          mainAxisAlignment: MainAxisAlignment.end,
                                           children: [
                                             Text(
-                                              "Time (minutes)",
+                                              "الوقت (بالدقائق)",
                                               style: TextStyle(
-                                                  color: black.withOpacity(.7),
-                                                  fontSize: 16.sp,
-                                                  fontWeight: FontWeight.bold
+                                                color: black.withOpacity(.7),
+                                                fontSize: 16.sp,
+                                                fontWeight: FontWeight.bold,
+                                                fontFamily: 'Cairo'
                                               ),
                                             ),
                                           ],
@@ -143,22 +150,23 @@ class _PromodoroTimerScreenState extends State<PromodoroTimerScreen> {
                                       ),
                                       Padding(
                                         padding: EdgeInsets.symmetric(
-                                            horizontal: 5.w,
-                                            vertical: 1.h
+                                          horizontal: 5.w,
+                                          vertical: 1.h
                                         ),
                                         child: Row(
                                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                           children: [
                                             Container(
                                               width: 30.w,
-                                              alignment: Alignment.centerLeft,
+                                              alignment: Alignment.centerRight,
                                               child: Column(
                                                 mainAxisAlignment: MainAxisAlignment.start,
                                                 children: [
                                                   Row(
+                                                    mainAxisAlignment: MainAxisAlignment.end,
                                                     children: [
                                                       Text(
-                                                        "Promodoro",
+                                                        "Long Break",
                                                         textAlign: TextAlign.left,
                                                         style: TextStyle(
                                                           color: grayDark,
@@ -168,9 +176,10 @@ class _PromodoroTimerScreenState extends State<PromodoroTimerScreen> {
                                                     ],
                                                   ),
                                                   Row(
+                                                    mainAxisAlignment: MainAxisAlignment.end,
                                                     children: [
                                                       PromodoroInputs(
-                                                        controller: cont.promodoro,
+                                                        controller: cont.longBreak,
                                                         width: 28.w,
                                                         valid: (val) {
                                                           if (val!.isEmpty) {
@@ -178,7 +187,7 @@ class _PromodoroTimerScreenState extends State<PromodoroTimerScreen> {
                                                           }
                                                           return null;
                                                         },
-                                                        focusNode: f1,
+                                                        focusNode: f3,
                                                         onChanged: (val){
                                                           print(val);
                                                         },
@@ -196,6 +205,7 @@ class _PromodoroTimerScreenState extends State<PromodoroTimerScreen> {
                                                     .start,
                                                 children: [
                                                   Row(
+                                                    mainAxisAlignment: MainAxisAlignment.end,
                                                     children: [
                                                       Text(
                                                         "Short Break",
@@ -208,6 +218,7 @@ class _PromodoroTimerScreenState extends State<PromodoroTimerScreen> {
                                                     ],
                                                   ),
                                                   Row(
+                                                    mainAxisAlignment: MainAxisAlignment.end,
                                                     children: [
                                                       PromodoroInputs(
                                                         controller: cont.shortBreak,
@@ -232,13 +243,13 @@ class _PromodoroTimerScreenState extends State<PromodoroTimerScreen> {
                                               width: 30.w,
                                               alignment: Alignment.centerLeft,
                                               child: Column(
-                                                mainAxisAlignment: MainAxisAlignment
-                                                    .start,
+                                                mainAxisAlignment: MainAxisAlignment.start,
                                                 children: [
                                                   Row(
+                                                    mainAxisAlignment: MainAxisAlignment.end,
                                                     children: [
                                                       Text(
-                                                        "Long Break",
+                                                        "Promodoro",
                                                         textAlign: TextAlign.left,
                                                         style: TextStyle(
                                                           color: grayDark,
@@ -248,9 +259,10 @@ class _PromodoroTimerScreenState extends State<PromodoroTimerScreen> {
                                                     ],
                                                   ),
                                                   Row(
+                                                    mainAxisAlignment: MainAxisAlignment.end,
                                                     children: [
                                                       PromodoroInputs(
-                                                        controller: cont.longBreak,
+                                                        controller: cont.promodoro,
                                                         width: 28.w,
                                                         valid: (val) {
                                                           if (val!.isEmpty) {
@@ -258,7 +270,7 @@ class _PromodoroTimerScreenState extends State<PromodoroTimerScreen> {
                                                           }
                                                           return null;
                                                         },
-                                                        focusNode: f3,
+                                                        focusNode: f1,
                                                         onChanged: (val){
                                                           print(val);
                                                         },
@@ -335,7 +347,7 @@ class _PromodoroTimerScreenState extends State<PromodoroTimerScreen> {
                                               child: Row(
                                                 children: [
                                                   Text(
-                                                    "Save Settings",
+                                                    "حفظ الاعدادات",
                                                     style: TextStyle(
                                                         fontSize: 18.sp,
                                                         color: black,
@@ -370,7 +382,7 @@ class _PromodoroTimerScreenState extends State<PromodoroTimerScreen> {
                                               child: Row(
                                                 children: [
                                                   Text(
-                                                    "Cancel",
+                                                    "الغاء",
                                                     style: TextStyle(
                                                       fontSize: 18.sp,
                                                       color: black,
@@ -408,10 +420,12 @@ class _PromodoroTimerScreenState extends State<PromodoroTimerScreen> {
               ),
               centerTitle: true,
               title: Text(
-                "Promodoro Timer",
+                "مؤقت برومودورو",
                 style: TextStyle(
-                    fontSize: 20.sp,
-                    color: black
+                  fontSize: 20.sp,
+                  color: black,
+                  fontFamily: 'Cairo',
+                  fontWeight: FontWeight.bold
                 ),
               ),
             ),
@@ -426,7 +440,7 @@ class _PromodoroTimerScreenState extends State<PromodoroTimerScreen> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        "Time to focus!",
+                        "وقت التركيز",
                         textAlign: TextAlign.center,
                         style: TextStyle(
                             color: black,
@@ -507,11 +521,12 @@ class _PromodoroTimerScreenState extends State<PromodoroTimerScreen> {
                             ),
                           ),
                           child: Text(
-                            "Start",
+                            "ابدأ",
                             style: TextStyle(
                               fontSize: 22.sp,
                               color: black,
-                              fontFamily: 'Cairo'
+                              fontFamily: 'Cairo',
+                              fontWeight: FontWeight.bold
                             ),
                           ),
                           onPressed: () async {

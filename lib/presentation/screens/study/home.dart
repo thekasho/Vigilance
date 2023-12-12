@@ -30,7 +30,7 @@ class _StdStudyHomeScreenState extends State<StdStudyHomeScreen> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      "Studying",
+                      "مذاكرة",
                       style: TextStyle(
                         color: black,
                         fontWeight: FontWeight.bold,
@@ -65,10 +65,8 @@ class _StdStudyHomeScreenState extends State<StdStudyHomeScreen> {
                       ),
                       child: Row(
                         children: [
-                          const Icon(FontAwesomeIcons.listCheck, color: Colors.black),
-                          SizedBox(width: 3.w),
                           Text(
-                            "To-Do-List",
+                            "قائمة المهام",
                             style: TextStyle(
                                 fontSize: 19.sp,
                                 color: black,
@@ -76,6 +74,8 @@ class _StdStudyHomeScreenState extends State<StdStudyHomeScreen> {
                                 fontFamily: 'Cairo'
                             ),
                           ),
+                          SizedBox(width: 3.w),
+                          const Icon(FontAwesomeIcons.listCheck, color: Colors.black),
                         ],
                       ),
                       onPressed: () {
@@ -98,17 +98,15 @@ class _StdStudyHomeScreenState extends State<StdStudyHomeScreen> {
                           ),
                         ),
                         padding: MaterialStateProperty.all<EdgeInsets>(
-                            EdgeInsets.symmetric(
-                                horizontal: 8.w,
-                                vertical: 1.h
-                            )),
+                          EdgeInsets.symmetric(
+                              horizontal: 17.w,
+                              vertical: 1.h
+                          )),
                       ),
                       child: Row(
                         children: [
-                          Icon(Icons.alarm_on, color: Colors.black, size: 25.sp),
-                          SizedBox(width: 3.w),
                           Text(
-                            "Pomodoro Timer",
+                            "برومودورو",
                             style: TextStyle(
                                 fontSize: 19.sp,
                                 color: black,
@@ -116,6 +114,8 @@ class _StdStudyHomeScreenState extends State<StdStudyHomeScreen> {
                                 fontFamily: 'Cairo'
                             ),
                           ),
+                          SizedBox(width: 3.w),
+                          Icon(Icons.alarm_on, color: Colors.black, size: 24.sp),
                         ],
                       ),
                       onPressed: () {

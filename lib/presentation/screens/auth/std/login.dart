@@ -69,7 +69,7 @@ class _StdLoginScreenState extends State<StdLoginScreen> {
                             ),
                             SizedBox(height: 3.h),
                             Text(
-                              "Sign in as student",
+                              "تسجيل دخول الطفل /ة",
                               style: TextStyle(
                                   fontFamily: 'Cairo',
                                   fontSize: 22.sp,
@@ -137,7 +137,7 @@ class _StdLoginScreenState extends State<StdLoginScreen> {
                                   child: Row(
                                     children: [
                                       Text(
-                                        "Sing In",
+                                        "تسجيل الدخول",
                                         style: TextStyle(
                                           fontSize: 19.sp,
                                           color: black,
@@ -150,6 +150,7 @@ class _StdLoginScreenState extends State<StdLoginScreen> {
                                   onPressed: () {
                                     f3.unfocus();
                                     FocusScope.of(context).requestFocus(f1);
+
                                     controller.login();
                                   },
                                 ),
@@ -157,7 +158,7 @@ class _StdLoginScreenState extends State<StdLoginScreen> {
                             ),
                             SizedBox(height: 2.h),
                             Text(
-                              "Don`t have an account?",
+                              "ليس لديك حساب؟",
                               style: TextStyle(
                                   fontFamily: 'Cairo',
                                   fontSize: 18.sp,
@@ -167,7 +168,7 @@ class _StdLoginScreenState extends State<StdLoginScreen> {
                             GestureDetector(
                               onTap: () => Get.toNamed(screenStdRegister),
                               child: Text(
-                                "Sign Up",
+                                "تسجيل حساب جديد",
                                 style: TextStyle(
                                   fontSize: 16.sp,
                                   color: orange,
