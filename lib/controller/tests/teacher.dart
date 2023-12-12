@@ -35,4 +35,11 @@ class TeacherTestsContImp extends TeacherTestsCont {
     super.onInit();
   }
 
+  @override
+  void dispose() {
+    cont1.dispose();
+    cont2.dispose();
+    cont3.dispose();
+    super.dispose();
+  }
 }

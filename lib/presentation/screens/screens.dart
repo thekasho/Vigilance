@@ -19,6 +19,7 @@ import '../../controller/teacher/home.dart';
 import '../../controller/teacher/login.dart';
 import '../../controller/teacher/register.dart';
 import '../../controller/study/todo/std.dart';
+import '../../controller/tests/teacher.dart';
 import '../../core/class/statusrequest.dart';
 import '../../helpers/helpers.dart';
 import '../widgets/widgets.dart';

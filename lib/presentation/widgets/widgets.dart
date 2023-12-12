@@ -6,3 +6,4 @@ import '../../helpers/helpers.dart';
 
 part 'auth/text_input.dart';
 part 'promo/inputs.dart';
+part 'tests/text_input.dart';
