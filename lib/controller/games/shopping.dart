@@ -41,7 +41,7 @@ class ShoppingGameContImp extends ShoppingGameCont {
   int level = 0;
   int clevel = 0;
 
-  List lvlOneList = [21, 9];
+  List lvlOneList = [17, 2];
 
   bool lvlOne1Y = false;
   bool lvlOne1N = false;

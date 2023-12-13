@@ -24,8 +24,8 @@ class _TecherAddTestScreenState extends State<TecherAddTestScreen> {
             children: [
               Container(
                 padding: EdgeInsets.symmetric(
-                    horizontal: 10.w,
-                    vertical: 1.h
+                  horizontal: 5.w,
+                  vertical: 1.h
                 ),
                 child: Row(
                   children: [
@@ -37,11 +37,20 @@ class _TecherAddTestScreenState extends State<TecherAddTestScreen> {
                         fontWeight: FontWeight.bold,
                       ),
                     ),
+                    const Spacer(),
+                    IconButton(
+                      icon: Icon(
+                        FontAwesomeIcons.plus,
+                        color: Colors.black,
+                        size: 22.sp,
+                      ),
+                      onPressed: () => Navigator.of(context).pop(),
+                    ),
                   ],
                 ),
               ),
               SizedBox(
-                height: 88.h,
+                height: 86.h,
                 child: GetBuilder<TeacherTestsContImp>(builder: (cont) {
                   return Form(
                     key: cont.formstate,
@@ -110,7 +119,7 @@ class _TecherAddTestScreenState extends State<TecherAddTestScreen> {
                                     ),
                                     const Spacer(),
                                     TestsTextOption(
-                                      controller: cont.cont3,
+                                      controller: cont.cont2,
                                       hintText: "Option 1",
                                       valid: (val) {
                                         if (val!.isEmpty) {
@@ -162,7 +171,7 @@ class _TecherAddTestScreenState extends State<TecherAddTestScreen> {
                                     ),
                                     const Spacer(),
                                     TestsTextOption(
-                                      controller: cont.cont3,
+                                      controller: cont.cont1,
                                       hintText: "Option 3",
                                       valid: (val) {
                                         if (val!.isEmpty) {
@@ -188,7 +197,7 @@ class _TecherAddTestScreenState extends State<TecherAddTestScreen> {
                                     ),
                                     const Spacer(),
                                     TestsTextOption(
-                                      controller: cont.cont3,
+                                      controller: cont.cont2,
                                       hintText: "Option 4",
                                       valid: (val) {
                                         if (val!.isEmpty) {
@@ -209,313 +218,313 @@ class _TecherAddTestScreenState extends State<TecherAddTestScreen> {
                             color: white,
                             thickness: 1.h,
                           ),
-                          Container(
-                            decoration: const BoxDecoration(
-                              color: testBck2,
-                            ),
-                            alignment: Alignment.topLeft,
-                            padding: EdgeInsets.only(
-                                top: 2.h
-                            ),
-                            child: Column(
-                              children: [
-                                Row(
-                                  children: [
-                                    const Spacer(),
-                                    TestsTextInput(
-                                      controller: cont.cont1,
-                                      hintText: "Question..",
-                                      valid: (val) {
-                                        if (val!.isEmpty) {
-                                          return 'Required!';
-                                        }
-                                        return null;
-                                      },
-                                    ),
-                                    const Spacer(),
-                                    Container(
-                                      width: 10.w,
-                                      height: 6.h,
-                                      decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(10),
-                                        color: red,
-                                      ),
-                                      child: IconButton(
-                                        icon: const Icon(Icons.delete_outline, color: white),
-                                        color: orange,
-                                        focusColor: white,
-                                        autofocus: true,
-                                        padding: const EdgeInsets.all(5),
-                                        onPressed: (){},
-                                      ),
-                                    ),
-                                    const Spacer(),
-                                  ],
-                                ),
-                                SizedBox(height: 2.h),
-                                Row(
-                                  children: [
-                                    const Spacer(),
-                                    Container(
-                                      width: 10.w,
-                                      height: 6.h,
-                                      decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(10),
-                                      ),
-                                      child: Icon(Icons.radio_button_checked, color: checkBoxColor, size: 20.sp),
-                                    ),
-                                    const Spacer(),
-                                    TestsTextOption(
-                                      controller: cont.cont3,
-                                      hintText: "Option 1",
-                                      valid: (val) {
-                                        if (val!.isEmpty) {
-                                          return 'Required!';
-                                        }
-                                        return null;
-                                      },
-                                    ),
-                                    const Spacer(),
-                                  ],
-                                ),
-                                SizedBox(height: 2.h),
-                                Row(
-                                  children: [
-                                    const Spacer(),
-                                    Container(
-                                      width: 10.w,
-                                      height: 6.h,
-                                      decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(10),
-                                      ),
-                                      child: Icon(Icons.radio_button_checked, color: checkBoxColor, size: 20.sp),
-                                    ),
-                                    const Spacer(),
-                                    TestsTextOption(
-                                      controller: cont.cont3,
-                                      hintText: "Option 2",
-                                      valid: (val) {
-                                        if (val!.isEmpty) {
-                                          return 'Required!';
-                                        }
-                                        return null;
-                                      },
-                                    ),
-                                    const Spacer(),
-                                  ],
-                                ),
-                                SizedBox(height: 2.h),
-                                Row(
-                                  children: [
-                                    const Spacer(),
-                                    Container(
-                                      width: 10.w,
-                                      height: 6.h,
-                                      decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(10),
-                                      ),
-                                      child: Icon(Icons.radio_button_checked, color: checkBoxColor, size: 20.sp),
-                                    ),
-                                    const Spacer(),
-                                    TestsTextOption(
-                                      controller: cont.cont3,
-                                      hintText: "Option 3",
-                                      valid: (val) {
-                                        if (val!.isEmpty) {
-                                          return 'Required!';
-                                        }
-                                        return null;
-                                      },
-                                    ),
-                                    const Spacer(),
-                                  ],
-                                ),
-                                SizedBox(height: 2.h),
-                                Row(
-                                  children: [
-                                    const Spacer(),
-                                    Container(
-                                      width: 10.w,
-                                      height: 6.h,
-                                      decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(10),
-                                      ),
-                                      child: Icon(Icons.radio_button_checked, color: checkBoxColor, size: 20.sp),
-                                    ),
-                                    const Spacer(),
-                                    TestsTextOption(
-                                      controller: cont.cont3,
-                                      hintText: "Option 4",
-                                      valid: (val) {
-                                        if (val!.isEmpty) {
-                                          return 'Required!';
-                                        }
-                                        return null;
-                                      },
-                                    ),
-                                    const Spacer(),
-                                  ],
-                                ),
-                                SizedBox(height: 2.h),
-                              ],
-                            ),
-                          ),
+                          // Container(
+                          //   decoration: const BoxDecoration(
+                          //     color: testBck2,
+                          //   ),
+                          //   alignment: Alignment.topLeft,
+                          //   padding: EdgeInsets.only(
+                          //       top: 2.h
+                          //   ),
+                          //   child: Column(
+                          //     children: [
+                          //       Row(
+                          //         children: [
+                          //           const Spacer(),
+                          //           TestsTextInput(
+                          //             controller: cont.cont1,
+                          //             hintText: "Question..",
+                          //             valid: (val) {
+                          //               if (val!.isEmpty) {
+                          //                 return 'Required!';
+                          //               }
+                          //               return null;
+                          //             },
+                          //           ),
+                          //           const Spacer(),
+                          //           Container(
+                          //             width: 10.w,
+                          //             height: 6.h,
+                          //             decoration: BoxDecoration(
+                          //               borderRadius: BorderRadius.circular(10),
+                          //               color: red,
+                          //             ),
+                          //             child: IconButton(
+                          //               icon: const Icon(Icons.delete_outline, color: white),
+                          //               color: orange,
+                          //               focusColor: white,
+                          //               autofocus: true,
+                          //               padding: const EdgeInsets.all(5),
+                          //               onPressed: (){},
+                          //             ),
+                          //           ),
+                          //           const Spacer(),
+                          //         ],
+                          //       ),
+                          //       SizedBox(height: 2.h),
+                          //       Row(
+                          //         children: [
+                          //           const Spacer(),
+                          //           Container(
+                          //             width: 10.w,
+                          //             height: 6.h,
+                          //             decoration: BoxDecoration(
+                          //               borderRadius: BorderRadius.circular(10),
+                          //             ),
+                          //             child: Icon(Icons.radio_button_checked, color: checkBoxColor, size: 20.sp),
+                          //           ),
+                          //           const Spacer(),
+                          //           TestsTextOption(
+                          //             controller: cont.cont3,
+                          //             hintText: "Option 1",
+                          //             valid: (val) {
+                          //               if (val!.isEmpty) {
+                          //                 return 'Required!';
+                          //               }
+                          //               return null;
+                          //             },
+                          //           ),
+                          //           const Spacer(),
+                          //         ],
+                          //       ),
+                          //       SizedBox(height: 2.h),
+                          //       Row(
+                          //         children: [
+                          //           const Spacer(),
+                          //           Container(
+                          //             width: 10.w,
+                          //             height: 6.h,
+                          //             decoration: BoxDecoration(
+                          //               borderRadius: BorderRadius.circular(10),
+                          //             ),
+                          //             child: Icon(Icons.radio_button_checked, color: checkBoxColor, size: 20.sp),
+                          //           ),
+                          //           const Spacer(),
+                          //           TestsTextOption(
+                          //             controller: cont.cont3,
+                          //             hintText: "Option 2",
+                          //             valid: (val) {
+                          //               if (val!.isEmpty) {
+                          //                 return 'Required!';
+                          //               }
+                          //               return null;
+                          //             },
+                          //           ),
+                          //           const Spacer(),
+                          //         ],
+                          //       ),
+                          //       SizedBox(height: 2.h),
+                          //       Row(
+                          //         children: [
+                          //           const Spacer(),
+                          //           Container(
+                          //             width: 10.w,
+                          //             height: 6.h,
+                          //             decoration: BoxDecoration(
+                          //               borderRadius: BorderRadius.circular(10),
+                          //             ),
+                          //             child: Icon(Icons.radio_button_checked, color: checkBoxColor, size: 20.sp),
+                          //           ),
+                          //           const Spacer(),
+                          //           TestsTextOption(
+                          //             controller: cont.cont3,
+                          //             hintText: "Option 3",
+                          //             valid: (val) {
+                          //               if (val!.isEmpty) {
+                          //                 return 'Required!';
+                          //               }
+                          //               return null;
+                          //             },
+                          //           ),
+                          //           const Spacer(),
+                          //         ],
+                          //       ),
+                          //       SizedBox(height: 2.h),
+                          //       Row(
+                          //         children: [
+                          //           const Spacer(),
+                          //           Container(
+                          //             width: 10.w,
+                          //             height: 6.h,
+                          //             decoration: BoxDecoration(
+                          //               borderRadius: BorderRadius.circular(10),
+                          //             ),
+                          //             child: Icon(Icons.radio_button_checked, color: checkBoxColor, size: 20.sp),
+                          //           ),
+                          //           const Spacer(),
+                          //           TestsTextOption(
+                          //             controller: cont.cont3,
+                          //             hintText: "Option 4",
+                          //             valid: (val) {
+                          //               if (val!.isEmpty) {
+                          //                 return 'Required!';
+                          //               }
+                          //               return null;
+                          //             },
+                          //           ),
+                          //           const Spacer(),
+                          //         ],
+                          //       ),
+                          //       SizedBox(height: 2.h),
+                          //     ],
+                          //   ),
+                          // ),
                           Divider(
                             height: 1.h,
                             color: white,
                             thickness: 1.h,
                           ),
-                          Container(
-                            decoration: const BoxDecoration(
-                              color: testBck3,
-                            ),
-                            alignment: Alignment.topLeft,
-                            padding: EdgeInsets.only(
-                                top: 2.h
-                            ),
-                            child: Column(
-                              children: [
-                                Row(
-                                  children: [
-                                    const Spacer(),
-                                    TestsTextInput(
-                                      controller: cont.cont1,
-                                      hintText: "Question..",
-                                      valid: (val) {
-                                        if (val!.isEmpty) {
-                                          return 'Required!';
-                                        }
-                                        return null;
-                                      },
-                                    ),
-                                    const Spacer(),
-                                    Container(
-                                      width: 10.w,
-                                      height: 6.h,
-                                      decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(10),
-                                        color: red,
-                                      ),
-                                      child: IconButton(
-                                        icon: const Icon(Icons.delete_outline, color: white),
-                                        color: orange,
-                                        focusColor: white,
-                                        autofocus: true,
-                                        padding: const EdgeInsets.all(5),
-                                        onPressed: (){},
-                                      ),
-                                    ),
-                                    const Spacer(),
-                                  ],
-                                ),
-                                SizedBox(height: 2.h),
-                                Row(
-                                  children: [
-                                    const Spacer(),
-                                    Container(
-                                      width: 10.w,
-                                      height: 6.h,
-                                      decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(10),
-                                      ),
-                                      child: Icon(Icons.radio_button_checked, color: checkBoxColor, size: 20.sp),
-                                    ),
-                                    const Spacer(),
-                                    TestsTextOption(
-                                      controller: cont.cont3,
-                                      hintText: "Option 1",
-                                      valid: (val) {
-                                        if (val!.isEmpty) {
-                                          return 'Required!';
-                                        }
-                                        return null;
-                                      },
-                                    ),
-                                    const Spacer(),
-                                  ],
-                                ),
-                                SizedBox(height: 2.h),
-                                Row(
-                                  children: [
-                                    const Spacer(),
-                                    Container(
-                                      width: 10.w,
-                                      height: 6.h,
-                                      decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(10),
-                                      ),
-                                      child: Icon(Icons.radio_button_checked, color: checkBoxColor, size: 20.sp),
-                                    ),
-                                    const Spacer(),
-                                    TestsTextOption(
-                                      controller: cont.cont3,
-                                      hintText: "Option 2",
-                                      valid: (val) {
-                                        if (val!.isEmpty) {
-                                          return 'Required!';
-                                        }
-                                        return null;
-                                      },
-                                    ),
-                                    const Spacer(),
-                                  ],
-                                ),
-                                SizedBox(height: 2.h),
-                                Row(
-                                  children: [
-                                    const Spacer(),
-                                    Container(
-                                      width: 10.w,
-                                      height: 6.h,
-                                      decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(10),
-                                      ),
-                                      child: Icon(Icons.radio_button_checked, color: checkBoxColor, size: 20.sp),
-                                    ),
-                                    const Spacer(),
-                                    TestsTextOption(
-                                      controller: cont.cont3,
-                                      hintText: "Option 3",
-                                      valid: (val) {
-                                        if (val!.isEmpty) {
-                                          return 'Required!';
-                                        }
-                                        return null;
-                                      },
-                                    ),
-                                    const Spacer(),
-                                  ],
-                                ),
-                                SizedBox(height: 2.h),
-                                Row(
-                                  children: [
-                                    const Spacer(),
-                                    Container(
-                                      width: 10.w,
-                                      height: 6.h,
-                                      decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(10),
-                                      ),
-                                      child: Icon(Icons.radio_button_checked, color: checkBoxColor, size: 20.sp),
-                                    ),
-                                    const Spacer(),
-                                    TestsTextOption(
-                                      controller: cont.cont3,
-                                      hintText: "Option 4",
-                                      valid: (val) {
-                                        if (val!.isEmpty) {
-                                          return 'Required!';
-                                        }
-                                        return null;
-                                      },
-                                    ),
-                                    const Spacer(),
-                                  ],
-                                ),
-                                SizedBox(height: 2.h),
-                              ],
-                            ),
-                          ),
+                          // Container(
+                          //   decoration: const BoxDecoration(
+                          //     color: testBck3,
+                          //   ),
+                          //   alignment: Alignment.topLeft,
+                          //   padding: EdgeInsets.only(
+                          //       top: 2.h
+                          //   ),
+                          //   child: Column(
+                          //     children: [
+                          //       Row(
+                          //         children: [
+                          //           const Spacer(),
+                          //           TestsTextInput(
+                          //             controller: cont.cont1,
+                          //             hintText: "Question..",
+                          //             valid: (val) {
+                          //               if (val!.isEmpty) {
+                          //                 return 'Required!';
+                          //               }
+                          //               return null;
+                          //             },
+                          //           ),
+                          //           const Spacer(),
+                          //           Container(
+                          //             width: 10.w,
+                          //             height: 6.h,
+                          //             decoration: BoxDecoration(
+                          //               borderRadius: BorderRadius.circular(10),
+                          //               color: red,
+                          //             ),
+                          //             child: IconButton(
+                          //               icon: const Icon(Icons.delete_outline, color: white),
+                          //               color: orange,
+                          //               focusColor: white,
+                          //               autofocus: true,
+                          //               padding: const EdgeInsets.all(5),
+                          //               onPressed: (){},
+                          //             ),
+                          //           ),
+                          //           const Spacer(),
+                          //         ],
+                          //       ),
+                          //       SizedBox(height: 2.h),
+                          //       Row(
+                          //         children: [
+                          //           const Spacer(),
+                          //           Container(
+                          //             width: 10.w,
+                          //             height: 6.h,
+                          //             decoration: BoxDecoration(
+                          //               borderRadius: BorderRadius.circular(10),
+                          //             ),
+                          //             child: Icon(Icons.radio_button_checked, color: checkBoxColor, size: 20.sp),
+                          //           ),
+                          //           const Spacer(),
+                          //           TestsTextOption(
+                          //             controller: cont.cont3,
+                          //             hintText: "Option 1",
+                          //             valid: (val) {
+                          //               if (val!.isEmpty) {
+                          //                 return 'Required!';
+                          //               }
+                          //               return null;
+                          //             },
+                          //           ),
+                          //           const Spacer(),
+                          //         ],
+                          //       ),
+                          //       SizedBox(height: 2.h),
+                          //       Row(
+                          //         children: [
+                          //           const Spacer(),
+                          //           Container(
+                          //             width: 10.w,
+                          //             height: 6.h,
+                          //             decoration: BoxDecoration(
+                          //               borderRadius: BorderRadius.circular(10),
+                          //             ),
+                          //             child: Icon(Icons.radio_button_checked, color: checkBoxColor, size: 20.sp),
+                          //           ),
+                          //           const Spacer(),
+                          //           TestsTextOption(
+                          //             controller: cont.cont3,
+                          //             hintText: "Option 2",
+                          //             valid: (val) {
+                          //               if (val!.isEmpty) {
+                          //                 return 'Required!';
+                          //               }
+                          //               return null;
+                          //             },
+                          //           ),
+                          //           const Spacer(),
+                          //         ],
+                          //       ),
+                          //       SizedBox(height: 2.h),
+                          //       Row(
+                          //         children: [
+                          //           const Spacer(),
+                          //           Container(
+                          //             width: 10.w,
+                          //             height: 6.h,
+                          //             decoration: BoxDecoration(
+                          //               borderRadius: BorderRadius.circular(10),
+                          //             ),
+                          //             child: Icon(Icons.radio_button_checked, color: checkBoxColor, size: 20.sp),
+                          //           ),
+                          //           const Spacer(),
+                          //           TestsTextOption(
+                          //             controller: cont.cont3,
+                          //             hintText: "Option 3",
+                          //             valid: (val) {
+                          //               if (val!.isEmpty) {
+                          //                 return 'Required!';
+                          //               }
+                          //               return null;
+                          //             },
+                          //           ),
+                          //           const Spacer(),
+                          //         ],
+                          //       ),
+                          //       SizedBox(height: 2.h),
+                          //       Row(
+                          //         children: [
+                          //           const Spacer(),
+                          //           Container(
+                          //             width: 10.w,
+                          //             height: 6.h,
+                          //             decoration: BoxDecoration(
+                          //               borderRadius: BorderRadius.circular(10),
+                          //             ),
+                          //             child: Icon(Icons.radio_button_checked, color: checkBoxColor, size: 20.sp),
+                          //           ),
+                          //           const Spacer(),
+                          //           TestsTextOption(
+                          //             controller: cont.cont3,
+                          //             hintText: "Option 4",
+                          //             valid: (val) {
+                          //               if (val!.isEmpty) {
+                          //                 return 'Required!';
+                          //               }
+                          //               return null;
+                          //             },
+                          //           ),
+                          //           const Spacer(),
+                          //         ],
+                          //       ),
+                          //       SizedBox(height: 2.h),
+                          //     ],
+                          //   ),
+                          // ),
                         ],
                       ),
                     ),

@@ -6,7 +6,7 @@ import '../../core/class/statusrequest.dart';
 import '../../core/data/remote/requests.dart';
 
 abstract class TeacherTestsCont extends GetxController {
-
+  checkNetwork();
 }
 class TeacherTestsContImp extends TeacherTestsCont {
   Requests requests = Requests(Get.find());
@@ -22,12 +22,13 @@ class TeacherTestsContImp extends TeacherTestsCont {
   bool isConnected = false;
   String email = "";
 
+  @override
   checkNetwork() async {
     isConnected = await InternetConnectionChecker().hasConnection;
   }
 
   @override
-  void onInit() async {
+  void onReady() async {
     await checkNetwork();
     cont1 = TextEditingController();
     cont2 = TextEditingController();
