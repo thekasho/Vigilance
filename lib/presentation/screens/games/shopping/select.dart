@@ -84,19 +84,9 @@ class _ShopSelectScreenState extends State<ShopSelectScreen> {
                   children: [
                     Container(
                       alignment: Alignment.topCenter,
-                      width: 100.w,
-                      height: 96.h,
                       child: SizedBox(
-                        child: CachedNetworkImage(
-                          imageUrl: "https://microplazatesla.com/vl/images/shopping/selecter.png",
-                          errorWidget: (_, i, e) {
-                            return Icon(
-                              FontAwesomeIcons.image,
-                              size: 13.sp,
-                              color: Colors.white,
-                            );
-                          },
-                        ),
+                        height: 96.h,
+                        child: Image.asset("assets/images/shopping/lift.jpeg"),
                       ),
                     ),
                     GetBuilder<ShoppingGameContImp>(builder: (cont) {
@@ -119,321 +109,120 @@ class _ShopSelectScreenState extends State<ShopSelectScreen> {
                         if (cont.clevel == 1) {
                           return Column(
                             children: [
-                              Stack(
+                              SizedBox(
+                                width: 100.w,
+                                height: 15.h,
+                              ),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.end,
                                 children: [
-                                  Container(
-                                    clipBehavior: Clip.antiAlias,
-                                    decoration: const BoxDecoration(
-                                      shape: BoxShape.rectangle,
-                                    ),
-                                    margin: EdgeInsets.only(top: 3.h),
-                                    width: 100.w,
-                                    child: SizedBox(
-                                      child: CachedNetworkImage(
-                                        imageUrl: "https://microplazatesla.com/vl/images/shopping/bg.png",
-                                        errorWidget: (_, i, e) {
-                                          return Icon(
-                                            FontAwesomeIcons.image,
-                                            size: 13.sp,
-                                            color: Colors.white,
-                                          );
-                                        },
-                                      ),
-                                    ),
-                                  ),
-                                  Column(
+                                  Stack(
+                                    alignment: AlignmentDirectional.bottomCenter,
                                     children: [
-                                      Row(
-                                        crossAxisAlignment: CrossAxisAlignment.end,
-                                        children: [
-                                          Container(
-                                            height: 5.h,
-                                            width: 100.w,
-                                            alignment: Alignment.centerRight,
-                                            padding: EdgeInsets.symmetric(
-                                              horizontal: 5.w,
-                                            ),
-                                            // color: black.withOpacity(.6),
-                                          ),
-                                        ],
-                                      ),  // spacer
-                                      Row(
-                                        crossAxisAlignment: CrossAxisAlignment.end,
-                                        children: [
-                                          Stack(
-                                            children: [
-                                              GestureDetector(
-                                                onTap: () {
-                                                  cont.saveClicks(2, 1);
-                                                },
-                                                child: Container(
-                                                  margin: const EdgeInsets.only(top: 15, right: 5),
-                                                  height: 11.h,
-                                                  width: 95.w,
-                                                  alignment: Alignment.centerRight,
-                                                  padding: EdgeInsets.symmetric(
-                                                    horizontal: 5.w,
-                                                  ),
-                                                  child: CachedNetworkImage(
-                                                    imageUrl: "https://microplazatesla.com/vl/images/shopping/2.png",
-                                                    width: 70,
-                                                    errorWidget: (_, i, e) {
-                                                      return Icon(
-                                                        FontAwesomeIcons.image,
-                                                        size: 13.sp,
-                                                        color: Colors.white,
-                                                      );
-                                                    },
-                                                  ),
-                                                ),
-                                              ),
-                                              Visibility(
-                                                visible: cont.lvlOne1Y,
-                                                child: Container(
-                                                  margin: const EdgeInsets.only(top: 15, left: 5),
-                                                  height: 11.h,
-                                                  width: 95.w,
-                                                  alignment: Alignment.bottomRight,
-                                                  padding: EdgeInsets.symmetric(
-                                                    horizontal: 15.w,
-                                                  ),
-                                                  child: CachedNetworkImage(
-                                                    imageUrl: "https://microplazatesla.com/vl/images/shopping/yes.png",
-                                                    width: 25,
-                                                    errorWidget: (_, i, e) {
-                                                      return Icon(
-                                                        FontAwesomeIcons.image,
-                                                        size: 13.sp,
-                                                        color: Colors.white,
-                                                      );
-                                                    },
-                                                  ),
-                                                ),
-                                              ),
-                                              Visibility(
-                                                visible: cont.lvlOne1N,
-                                                child: Container(
-                                                  margin: const EdgeInsets.only(top: 15, left: 5),
-                                                  height: 11.h,
-                                                  width: 95.w,
-                                                  alignment: Alignment.bottomRight,
-                                                  padding: EdgeInsets.symmetric(
-                                                    horizontal: 15.w,
-                                                  ),
-                                                  child: CachedNetworkImage(
-                                                    imageUrl: "https://microplazatesla.com/vl/images/shopping/no.png",
-                                                    width: 25,
-                                                    errorWidget: (_, i, e) {
-                                                      return Icon(
-                                                        FontAwesomeIcons.image,
-                                                        size: 13.sp,
-                                                        color: Colors.white,
-                                                      );
-                                                    },
-                                                  ),
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                        ],
+                                      GestureDetector(
+                                        onTap: () {
+                                          cont.saveClicks(9, 1);
+                                        },
+                                        child: Image.asset("assets/images/shopping/9.png", width: 12.h),
                                       ),
-                                      Row(
-                                        crossAxisAlignment: CrossAxisAlignment.end,
-                                        children: [
-                                          Stack(
-                                            children: [
-                                              GestureDetector(
-                                                onTap: () {
-                                                  cont.saveClicks(17, 2);
-                                                },
-                                                child: Container(
-                                                  margin: const EdgeInsets.only(top: 15, right: 5),
-                                                  height: 11.h,
-                                                  width: 95.w,
-                                                  alignment: Alignment.centerRight,
-                                                  padding: EdgeInsets.symmetric(
-                                                    horizontal: 5.w,
-                                                  ),
-                                                  child: CachedNetworkImage(
-                                                    imageUrl: "https://microplazatesla.com/vl/images/shopping/17.png",
-                                                    width: 70,
-                                                    errorWidget: (_, i, e) {
-                                                      return Icon(
-                                                        FontAwesomeIcons.image,
-                                                        size: 13.sp,
-                                                        color: Colors.white,
-                                                      );
-                                                    },
-                                                  ),
-                                                ),
-                                              ),
-                                              Visibility(
-                                                visible: cont.lvlOne2Y,
-                                                child: Container(
-                                                  margin: const EdgeInsets.only(top: 15, left: 5),
-                                                  height: 11.h,
-                                                  width: 95.w,
-                                                  alignment: Alignment.bottomRight,
-                                                  padding: EdgeInsets.symmetric(
-                                                    horizontal: 15.w,
-                                                  ),
-                                                  child: CachedNetworkImage(
-                                                    imageUrl: "https://microplazatesla.com/vl/images/shopping/yes.png",
-                                                    width: 25,
-                                                    errorWidget: (_, i, e) {
-                                                      return Icon(
-                                                        FontAwesomeIcons.image,
-                                                        size: 13.sp,
-                                                        color: Colors.white,
-                                                      );
-                                                    },
-                                                  ),
-                                                ),
-                                              ),
-                                              Visibility(
-                                                visible: cont.lvlOne2N,
-                                                child: Container(
-                                                  margin: const EdgeInsets.only(top: 15, left: 5),
-                                                  height: 11.h,
-                                                  width: 95.w,
-                                                  alignment: Alignment.bottomRight,
-                                                  padding: EdgeInsets.symmetric(
-                                                    horizontal: 15.w,
-                                                  ),
-                                                  child: CachedNetworkImage(
-                                                    imageUrl: "https://microplazatesla.com/vl/images/shopping/no.png",
-                                                    width: 25,
-                                                    errorWidget: (_, i, e) {
-                                                      return Icon(
-                                                        FontAwesomeIcons.image,
-                                                        size: 13.sp,
-                                                        color: Colors.white,
-                                                      );
-                                                    },
-                                                  ),
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                        ],
+                                      Visibility(
+                                        visible: cont.lvlOne1Y,
+                                        child: Container(
+                                            margin: EdgeInsets.only(right: 5.w),
+                                            child: Image.asset("assets/images/shopping/yes.png", width: 7.w)
+                                        ),
                                       ),
-                                      Row(
-                                        crossAxisAlignment: CrossAxisAlignment.end,
-                                        children: [
-                                          Stack(
-                                            children: [
-                                              GestureDetector(
-                                                onTap: () {
-                                                  cont.saveClicks(17, 3);
-                                                },
-                                                child: Container(
-                                                  margin: const EdgeInsets.only(top: 15, right: 5),
-                                                  height: 14.h,
-                                                  width: 95.w,
-                                                  alignment: Alignment.centerRight,
-                                                  padding: EdgeInsets.symmetric(
-                                                    horizontal: 5.w,
-                                                  ),
-                                                  child: CachedNetworkImage(
-                                                    imageUrl: "https://microplazatesla.com/vl/images/shopping/18.png",
-                                                    width: 70,
-                                                    errorWidget: (_, i, e) {
-                                                      return Icon(
-                                                        FontAwesomeIcons.image,
-                                                        size: 13.sp,
-                                                        color: Colors.white,
-                                                      );
-                                                    },
-                                                  ),
-                                                ),
-                                              ),
-                                              Visibility(
-                                                visible: cont.lvlOne3N,
-                                                child: Container(
-                                                  margin: const EdgeInsets.only(top: 15, left: 5),
-                                                  height: 11.h,
-                                                  width: 95.w,
-                                                  alignment: Alignment.bottomRight,
-                                                  padding: EdgeInsets.symmetric(
-                                                    horizontal: 15.w,
-                                                  ),
-                                                  child: CachedNetworkImage(
-                                                    imageUrl: "https://microplazatesla.com/vl/images/shopping/yes.png",
-                                                    width: 25,
-                                                    errorWidget: (_, i, e) {
-                                                      return Icon(
-                                                        FontAwesomeIcons.image,
-                                                        size: 13.sp,
-                                                        color: Colors.white,
-                                                      );
-                                                    },
-                                                  ),
-                                                ),
-                                              ),
-                                              Visibility(
-                                                visible: cont.lvlOne3Y,
-                                                child: Container(
-                                                  margin: const EdgeInsets.only(top: 15, left: 5),
-                                                  height: 11.h,
-                                                  width: 95.w,
-                                                  alignment: Alignment.bottomRight,
-                                                  padding: EdgeInsets.symmetric(
-                                                    horizontal: 15.w,
-                                                  ),
-                                                  child: CachedNetworkImage(
-                                                    imageUrl: "https://microplazatesla.com/vl/images/shopping/no.png",
-                                                    width: 25,
-                                                    errorWidget: (_, i, e) {
-                                                      return Icon(
-                                                        FontAwesomeIcons.image,
-                                                        size: 13.sp,
-                                                        color: Colors.white,
-                                                      );
-                                                    },
-                                                  ),
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                        ],
+                                      Visibility(
+                                        visible: cont.lvlOne1N,
+                                        child: Container(
+                                            margin: EdgeInsets.only(right: 5.w),
+                                            child: Image.asset("assets/images/shopping/no.png", width: 7.w)
+                                        ),
                                       ),
-                                      Row(
-                                        crossAxisAlignment: CrossAxisAlignment.end,
-                                        children: [
-                                          Container(
-                                            margin: const EdgeInsets.only(top: 23),
-                                            height: 11.h,
-                                            width: 100.w,
-                                            alignment: Alignment.centerRight,
-                                            padding: EdgeInsets.symmetric(
-                                              horizontal: 5.w,
-                                            ),
-                                          ),
-                                        ],
+                                    ],
+                                  ),
+                                  SizedBox(width: 5.w),
+                                ],
+                              ),
+                              SizedBox(height: 6.h),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                children: [
+                                  SizedBox(width: 25.w),
+                                  Stack(
+                                    alignment: AlignmentDirectional.bottomCenter,
+                                    children: [
+                                      GestureDetector(
+                                        onTap: () {
+                                          cont.saveClicks(24, 2);
+                                        },
+                                        child: Image.asset("assets/images/shopping/24.png", width: 12.h, height: 14.h),
                                       ),
-                                      Row(
-                                        children: [
-                                          Container(
-                                            margin: const EdgeInsets.only(top: 15),
-                                            height: 11.h,
-                                            width: 100.w,
-                                            alignment: Alignment.centerLeft,
-                                            padding: EdgeInsets.symmetric(
-                                              horizontal: 5.w,
-                                            ),
-                                            child: CachedNetworkImage(
-                                              imageUrl: "https://microplazatesla.com/vl/images/shopping/2.png",
-                                              width: 70,
-                                              errorWidget: (_, i, e) {
-                                                return Icon(
-                                                  FontAwesomeIcons.image,
-                                                  size: 13.sp,
-                                                  color: Colors.white,
-                                                );
-                                              },
-                                            ),
-                                          ),
-                                        ],
+                                      Visibility(
+                                        visible: cont.lvlOne2Y,
+                                        child: Container(
+                                            margin: EdgeInsets.only(right: 15.w),
+                                            child: Image.asset("assets/images/shopping/yes.png", width: 7.w)
+                                        ),
+                                      ),
+                                      Visibility(
+                                        visible: cont.lvlOne2N,
+                                        child: Container(
+                                            margin: EdgeInsets.only(right: 15.w),
+                                            child: Image.asset("assets/images/shopping/no.png", width: 7.w)
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  const Spacer(),
+                                  Stack(
+                                    alignment: AlignmentDirectional.bottomStart,
+                                    children: [
+                                      GestureDetector(
+                                        onTap: () {
+                                          cont.saveClicks(22, 3);
+                                        },
+                                        child: Image.asset("assets/images/shopping/22.png", width: 12.h),
+                                      ),
+                                      Visibility(
+                                        visible: cont.lvlOne3N,
+                                        child: Container(
+                                            margin: EdgeInsets.only(right: 15.w),
+                                            child: Image.asset("assets/images/shopping/no.png", width: 7.w)
+                                        ),
+                                      ),
+                                      Visibility(
+                                        visible: cont.lvlOne3Y,
+                                        child: Container(
+                                            margin: EdgeInsets.only(right: 15.w),
+                                            child: Image.asset("assets/images/shopping/yes.png", width: 7.w)
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  SizedBox(width: 5.w),
+                                ],
+                              ),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  SizedBox(width: 25.w),
+                                  Stack(
+                                    alignment: AlignmentDirectional.bottomStart,
+                                    children: [
+                                      GestureDetector(
+                                        onTap: () {
+                                          cont.saveClicks(21, 4);
+                                        },
+                                        child: Image.asset("assets/images/shopping/21.png", width: 9.h, height: 15.h,),
+                                      ),
+                                      Visibility(
+                                        visible: cont.lvlOne4Y,
+                                        child: Image.asset("assets/images/shopping/yes.png", width: 7.w),
+                                      ),
+                                      Visibility(
+                                        visible: cont.lvlOne4N,
+                                        child: Image.asset("assets/images/shopping/no.png", width: 7.w),
                                       ),
                                     ],
                                   ),

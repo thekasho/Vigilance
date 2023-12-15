@@ -41,88 +41,63 @@ class ShoppingGameContImp extends ShoppingGameCont {
   int level = 0;
   int clevel = 0;
 
-  List lvlOneList = [17, 2];
-
+  List lvlOneList = [21,9];
   bool lvlOne1Y = false;
   bool lvlOne1N = false;
-
   bool lvlOne2Y = false;
   bool lvlOne2N = false;
-
   bool lvlOne3Y = false;
   bool lvlOne3N = false;
-
   bool lvlOne4Y = false;
   bool lvlOne4N = false;
 
   List lvlTwoList = [10, 25];
-
   bool lvlTwo1Y = false;
   bool lvlTwo1N = false;
-
   bool lvlTwo2Y = false;
   bool lvlTwo2N = false;
-
   bool lvlTwo3Y = false;
   bool lvlTwo3N = false;
-
   bool lvlTwo4Y = false;
   bool lvlTwo4N = false;
 
   List lvlThreeList = [3, 13, 12];
-
   bool lvlThree1Y = false;
   bool lvlThree1N = false;
-
   bool lvlThree2Y = false;
   bool lvlThree2N = false;
-
   bool lvlThree3Y = false;
   bool lvlThree3N = false;
-
   bool lvlThree4Y = false;
   bool lvlThree4N = false;
-
   bool lvlThree5Y = false;
   bool lvlThree5N = false;
 
   List lvlFourList = [6, 2, 8, 7];
-
   bool lvlFour1Y = false;
   bool lvlFour1N = false;
-
   bool lvlFour2Y = false;
   bool lvlFour2N = false;
-
   bool lvlFour3Y = false;
   bool lvlFour3N = false;
-
   bool lvlFour4Y = false;
   bool lvlFour4N = false;
-
   bool lvlFour5Y = false;
   bool lvlFour5N = false;
 
   List lvlFiveList = [1, 6, 5, 26, 4];
-
   bool lvlFive1Y = false;
   bool lvlFive1N = false;
-
   bool lvlFive2Y = false;
   bool lvlFive2N = false;
-
   bool lvlFive3Y = false;
   bool lvlFive3N = false;
-
   bool lvlFive4Y = false;
   bool lvlFive4N = false;
-
   bool lvlFive5Y = false;
   bool lvlFive5N = false;
-
   bool lvlFive6Y = false;
   bool lvlFive6N = false;
-
   bool lvlFive7Y = false;
   bool lvlFive7N = false;
 
@@ -372,7 +347,6 @@ class ShoppingGameContImp extends ShoppingGameCont {
   @override
   saveClicks(click, img) async {
     try {
-
       if(clevel == 1){
         if(lvlOneList.contains(click)){
           if(img == 1){
@@ -398,89 +372,89 @@ class ShoppingGameContImp extends ShoppingGameCont {
           }
           update();
           Get.defaultDialog(
-            backgroundColor: white,
-            title: "Wrong Answer",
-            titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
-            titleStyle: TextStyle(
-              fontSize: 18.sp,
-              fontFamily: "Cairo",
-              color: red,
-              fontWeight: FontWeight.bold
-            ),
-            content: Container(
-              alignment: Alignment.center,
-              height: 10.h,
-              child: Text(
-                "Opps .. Try Again!!",
-                style: TextStyle(
+              backgroundColor: white,
+              title: "Wrong Answer",
+              titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
+              titleStyle: TextStyle(
                   fontSize: 18.sp,
                   fontFamily: "Cairo",
-                ),
-                textAlign: TextAlign.center,
+                  color: red,
+                  fontWeight: FontWeight.bold
               ),
-            ),
-            onWillPop: () async {
-              lvlTrue = 0;
-              lvlOne1Y = false;
-              lvlOne1N = false;
-              lvlOne2Y = false;
-              lvlOne2N = false;
-              lvlOne3Y = false;
-              lvlOne3N = false;
-              lvlOne4Y = false;
-              lvlOne4N = false;
-              Get.back();
-              Get.back();
-              Get.back();
-              Get.to( () => const ShoppingGameScreen(level: 1));
-              countdownController1.restart();
-              update();
-              return false;
-            }
+              content: Container(
+                alignment: Alignment.center,
+                height: 10.h,
+                child: Text(
+                  "Opps .. Try Again!!",
+                  style: TextStyle(
+                    fontSize: 18.sp,
+                    fontFamily: "Cairo",
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+              ),
+              onWillPop: () async {
+                lvlTrue = 0;
+                lvlOne1Y = false;
+                lvlOne1N = false;
+                lvlOne2Y = false;
+                lvlOne2N = false;
+                lvlOne3Y = false;
+                lvlOne3N = false;
+                lvlOne4Y = false;
+                lvlOne4N = false;
+                Get.back();
+                Get.back();
+                Get.back();
+                Get.to( () => const ShoppingGameScreen(level: 1));
+                countdownController1.restart();
+                update();
+                return false;
+              }
           );
         }
         if(lvlTrue == 2){
           Get.defaultDialog(
-            backgroundColor: white,
-            title: "Correct",
-            titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
-            titleStyle: TextStyle(
-              fontSize: 18.sp,
-              fontFamily: "Cairo",
-              color: green,
-              fontWeight: FontWeight.bold
-            ),
-            content: Container(
-              alignment: Alignment.center,
-              height: 7.h,
-              child: Text(
-                "Good Job,You earned 5 points..",
-                style: TextStyle(
+              backgroundColor: white,
+              title: "Correct",
+              titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
+              titleStyle: TextStyle(
                   fontSize: 18.sp,
                   fontFamily: "Cairo",
-                ),
-                textAlign: TextAlign.center,
+                  color: green,
+                  fontWeight: FontWeight.bold
               ),
-            ),
-            onWillPop: () async {
-              clevel = 2;
-              await updateLevel();
-              lvlOne1Y = false;
-              lvlOne1N = false;
-              lvlOne2Y = false;
-              lvlOne2N = false;
-              lvlOne3Y = false;
-              lvlOne3N = false;
-              lvlOne4Y = false;
-              lvlOne4N = false;
-              Get.back();
-              Get.back();
-              Get.back();
-              Get.to( () => const ShoppingGameScreen(level: 2));
-              countdownController2.restart();
-              update();
-              return false;
-            }
+              content: Container(
+                alignment: Alignment.center,
+                height: 7.h,
+                child: Text(
+                  "Good Job,You earned 5 points..",
+                  style: TextStyle(
+                    fontSize: 18.sp,
+                    fontFamily: "Cairo",
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+              ),
+              onWillPop: () async {
+                clevel = 2;
+                await updateLevel();
+                lvlOne1Y = false;
+                lvlOne1N = false;
+                lvlOne2Y = false;
+                lvlOne2N = false;
+                lvlOne3Y = false;
+                lvlOne3N = false;
+                lvlOne4Y = false;
+                lvlOne4N = false;
+                Get.back();
+                Get.back();
+                Get.back();
+                Get.to( () => const ShoppingGameScreen(level: 2));
+                countdownController2.restart();
+                update();
+                return false;
+              }
           );
           await audioPlayer.play(AssetSource("sounds/win.mp3"));
           lvlTrue = 0;
@@ -513,89 +487,89 @@ class ShoppingGameContImp extends ShoppingGameCont {
           }
           update();
           Get.defaultDialog(
-            backgroundColor: white,
-            title: "Wrong Answer",
-            titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
-            titleStyle: TextStyle(
-              fontSize: 18.sp,
-              fontFamily: "Cairo",
-              color: red,
-              fontWeight: FontWeight.bold
-            ),
-            content: Container(
-              alignment: Alignment.center,
-              height: 10.h,
-              child: Text(
-                "Opps .. Try Again!!",
-                style: TextStyle(
+              backgroundColor: white,
+              title: "Wrong Answer",
+              titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
+              titleStyle: TextStyle(
                   fontSize: 18.sp,
                   fontFamily: "Cairo",
-                ),
-                textAlign: TextAlign.center,
+                  color: red,
+                  fontWeight: FontWeight.bold
               ),
-            ),
-            onWillPop: () async {
-              lvlTrue = 0;
-              lvlTwo1Y = false;
-              lvlTwo1N = false;
-              lvlTwo2Y = false;
-              lvlTwo2N = false;
-              lvlTwo3Y = false;
-              lvlTwo3N = false;
-              lvlTwo4Y = false;
-              lvlTwo4N = false;
-              Get.back();
-              Get.back();
-              Get.back();
-              Get.to(() => const ShoppingGameScreen(level: 2));
-              countdownController2.restart();
-              update();
-              return false;
-            }
+              content: Container(
+                alignment: Alignment.center,
+                height: 10.h,
+                child: Text(
+                  "Opps .. Try Again!!",
+                  style: TextStyle(
+                    fontSize: 18.sp,
+                    fontFamily: "Cairo",
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+              ),
+              onWillPop: () async {
+                lvlTrue = 0;
+                lvlTwo1Y = false;
+                lvlTwo1N = false;
+                lvlTwo2Y = false;
+                lvlTwo2N = false;
+                lvlTwo3Y = false;
+                lvlTwo3N = false;
+                lvlTwo4Y = false;
+                lvlTwo4N = false;
+                Get.back();
+                Get.back();
+                Get.back();
+                Get.to(() => const ShoppingGameScreen(level: 2));
+                countdownController2.restart();
+                update();
+                return false;
+              }
           );
         }
         if(lvlTrue == 2){
           Get.defaultDialog(
-            backgroundColor: white,
-            title: "Correct",
-            titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
-            titleStyle: TextStyle(
-              fontSize: 18.sp,
-              fontFamily: "Cairo",
-              color: green,
-              fontWeight: FontWeight.bold
-            ),
-            content: Container(
-              alignment: Alignment.center,
-              height: 10.h,
-              child: Text(
-                "You`re doing great. You earned 7 points..",
-                style: TextStyle(
+              backgroundColor: white,
+              title: "Correct",
+              titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
+              titleStyle: TextStyle(
                   fontSize: 18.sp,
                   fontFamily: "Cairo",
-                ),
-                textAlign: TextAlign.center,
+                  color: green,
+                  fontWeight: FontWeight.bold
               ),
-            ),
-            onWillPop: () async {
-              clevel = 3;
-              await updateLevel();
-              lvlTwo1Y = false;
-              lvlTwo1N = false;
-              lvlTwo2Y = false;
-              lvlTwo2N = false;
-              lvlTwo3Y = false;
-              lvlTwo3N = false;
-              lvlTwo4Y = false;
-              lvlTwo4N = false;
-              Get.back();
-              Get.back();
-              Get.back();
-              Get.to(() => const ShoppingGameScreen(level: 3));
-              countdownController3.restart();
-              update();
-              return false;
-            }
+              content: Container(
+                alignment: Alignment.center,
+                height: 10.h,
+                child: Text(
+                  "You`re doing great. You earned 7 points..",
+                  style: TextStyle(
+                    fontSize: 18.sp,
+                    fontFamily: "Cairo",
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+              ),
+              onWillPop: () async {
+                clevel = 3;
+                await updateLevel();
+                lvlTwo1Y = false;
+                lvlTwo1N = false;
+                lvlTwo2Y = false;
+                lvlTwo2N = false;
+                lvlTwo3Y = false;
+                lvlTwo3N = false;
+                lvlTwo4Y = false;
+                lvlTwo4N = false;
+                Get.back();
+                Get.back();
+                Get.back();
+                Get.to(() => const ShoppingGameScreen(level: 3));
+                countdownController3.restart();
+                update();
+                return false;
+              }
           );
           await audioPlayer.play(AssetSource("sounds/win.mp3"));
           lvlTrue = 0;
@@ -632,93 +606,93 @@ class ShoppingGameContImp extends ShoppingGameCont {
           }
           update();
           Get.defaultDialog(
-            backgroundColor: white,
-            title: "Wrong Answer",
-            titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
-            titleStyle: TextStyle(
-              fontSize: 18.sp,
-              fontFamily: "Cairo",
-              color: red,
-              fontWeight: FontWeight.bold
-            ),
-            content: Container(
-              alignment: Alignment.center,
-              height: 10.h,
-              child: Text(
-                "Opps .. Try Again!!",
-                style: TextStyle(
+              backgroundColor: white,
+              title: "Wrong Answer",
+              titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
+              titleStyle: TextStyle(
                   fontSize: 18.sp,
                   fontFamily: "Cairo",
-                ),
-                textAlign: TextAlign.center,
+                  color: red,
+                  fontWeight: FontWeight.bold
               ),
-            ),
-            onWillPop: () async {
-              lvlTrue = 0;
-              lvlThree1Y = false;
-              lvlThree1N = false;
-              lvlThree2Y = false;
-              lvlThree2N = false;
-              lvlThree3Y = false;
-              lvlThree3N = false;
-              lvlThree4Y = false;
-              lvlThree4N = false;
-              lvlThree5Y = false;
-              lvlThree5N = false;
-              Get.back();
-              Get.back();
-              Get.back();
-              Get.to(() => const ShoppingGameScreen(level: 3));
-              countdownController3.restart();
-              update();
-              return false;
-            }
+              content: Container(
+                alignment: Alignment.center,
+                height: 10.h,
+                child: Text(
+                  "Opps .. Try Again!!",
+                  style: TextStyle(
+                    fontSize: 18.sp,
+                    fontFamily: "Cairo",
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+              ),
+              onWillPop: () async {
+                lvlTrue = 0;
+                lvlThree1Y = false;
+                lvlThree1N = false;
+                lvlThree2Y = false;
+                lvlThree2N = false;
+                lvlThree3Y = false;
+                lvlThree3N = false;
+                lvlThree4Y = false;
+                lvlThree4N = false;
+                lvlThree5Y = false;
+                lvlThree5N = false;
+                Get.back();
+                Get.back();
+                Get.back();
+                Get.to(() => const ShoppingGameScreen(level: 3));
+                countdownController3.restart();
+                update();
+                return false;
+              }
           );
         }
         if(lvlTrue == 3){
           Get.defaultDialog(
-            backgroundColor: white,
-            title: "Correct",
-            titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
-            titleStyle: TextStyle(
-              fontSize: 18.sp,
-              fontFamily: "Cairo",
-              color: green,
-              fontWeight: FontWeight.bold
-            ),
-            content: Container(
-              alignment: Alignment.center,
-              height: 8.h,
-              child: Text(
-                "Keep going. You earned 7 points..",
-                style: TextStyle(
+              backgroundColor: white,
+              title: "Correct",
+              titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
+              titleStyle: TextStyle(
                   fontSize: 18.sp,
                   fontFamily: "Cairo",
-                ),
-                textAlign: TextAlign.center,
+                  color: green,
+                  fontWeight: FontWeight.bold
               ),
-            ),
-            onWillPop: () async {
-              clevel = 4;
-              await updateLevel();
-              lvlThree1Y = false;
-              lvlThree1N = false;
-              lvlThree2Y = false;
-              lvlThree2N = false;
-              lvlThree3Y = false;
-              lvlThree3N = false;
-              lvlThree4Y = false;
-              lvlThree4N = false;
-              lvlThree5Y = false;
-              lvlThree5N = false;
-              Get.back();
-              Get.back();
-              Get.back();
-              Get.to(() => const ShoppingGameScreen(level: 4));
-              countdownController4.restart();
-              update();
-              return false;
-            }
+              content: Container(
+                alignment: Alignment.center,
+                height: 8.h,
+                child: Text(
+                  "Keep going. You earned 7 points..",
+                  style: TextStyle(
+                    fontSize: 18.sp,
+                    fontFamily: "Cairo",
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+              ),
+              onWillPop: () async {
+                clevel = 4;
+                await updateLevel();
+                lvlThree1Y = false;
+                lvlThree1N = false;
+                lvlThree2Y = false;
+                lvlThree2N = false;
+                lvlThree3Y = false;
+                lvlThree3N = false;
+                lvlThree4Y = false;
+                lvlThree4N = false;
+                lvlThree5Y = false;
+                lvlThree5N = false;
+                Get.back();
+                Get.back();
+                Get.back();
+                Get.to(() => const ShoppingGameScreen(level: 4));
+                countdownController4.restart();
+                update();
+                return false;
+              }
           );
           await audioPlayer.play(AssetSource("sounds/win.mp3"));
           lvlTrue = 0;
@@ -759,10 +733,10 @@ class ShoppingGameContImp extends ShoppingGameCont {
               title: "Wrong Answer",
               titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
               titleStyle: TextStyle(
-                fontSize: 18.sp,
-                fontFamily: "Cairo",
-                color: red,
-                fontWeight: FontWeight.bold
+                  fontSize: 18.sp,
+                  fontFamily: "Cairo",
+                  color: red,
+                  fontWeight: FontWeight.bold
               ),
               content: Container(
                 alignment: Alignment.center,
@@ -800,48 +774,48 @@ class ShoppingGameContImp extends ShoppingGameCont {
         }
         if(lvlTrue == 3){
           Get.defaultDialog(
-            backgroundColor: white,
-            title: "Correct",
-            titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
-            titleStyle: TextStyle(
-                fontSize: 18.sp,
-                fontFamily: "Cairo",
-                color: green,
-                fontWeight: FontWeight.bold
-            ),
-            content: Container(
-              alignment: Alignment.center,
-              height: 8.h,
-              child: Text(
-                "Excellent, You earned 10 points..",
-                style: TextStyle(
+              backgroundColor: white,
+              title: "Correct",
+              titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
+              titleStyle: TextStyle(
                   fontSize: 18.sp,
                   fontFamily: "Cairo",
-                ),
-                textAlign: TextAlign.center,
+                  color: green,
+                  fontWeight: FontWeight.bold
               ),
-            ),
-            onWillPop: () async {
-              clevel = 5;
-              await updateLevel();
-              lvlFour1Y = false;
-              lvlFour1N = false;
-              lvlFour2Y = false;
-              lvlFour2N = false;
-              lvlFour3Y = false;
-              lvlFour3N = false;
-              lvlFour4Y = false;
-              lvlFour4N = false;
-              lvlFour5Y = false;
-              lvlFour5N = false;
-              Get.back();
-              Get.back();
-              Get.back();
-              Get.to(() => const ShoppingGameScreen(level: 5));
-              countdownController5.restart();
-              update();
-              return false;
-            }
+              content: Container(
+                alignment: Alignment.center,
+                height: 8.h,
+                child: Text(
+                  "Excellent, You earned 10 points..",
+                  style: TextStyle(
+                    fontSize: 18.sp,
+                    fontFamily: "Cairo",
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+              ),
+              onWillPop: () async {
+                clevel = 5;
+                await updateLevel();
+                lvlFour1Y = false;
+                lvlFour1N = false;
+                lvlFour2Y = false;
+                lvlFour2N = false;
+                lvlFour3Y = false;
+                lvlFour3N = false;
+                lvlFour4Y = false;
+                lvlFour4N = false;
+                lvlFour5Y = false;
+                lvlFour5N = false;
+                Get.back();
+                Get.back();
+                Get.back();
+                Get.to(() => const ShoppingGameScreen(level: 5));
+                countdownController5.restart();
+                update();
+                return false;
+              }
           );
           await audioPlayer.play(AssetSource("sounds/win.mp3"));
           lvlTrue = 0;
@@ -886,99 +860,99 @@ class ShoppingGameContImp extends ShoppingGameCont {
           }
           update();
           Get.defaultDialog(
-            backgroundColor: white,
-            title: "Wrong Answer",
-            titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
-            titleStyle: TextStyle(
-                fontSize: 18.sp,
-                fontFamily: "Cairo",
-                color: red,
-                fontWeight: FontWeight.bold
-            ),
-            content: Container(
-              alignment: Alignment.center,
-              height: 10.h,
-              child: Text(
-                "Opps .. Try Again!!",
-                style: TextStyle(
+              backgroundColor: white,
+              title: "Wrong Answer",
+              titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
+              titleStyle: TextStyle(
                   fontSize: 18.sp,
                   fontFamily: "Cairo",
-                ),
-                textAlign: TextAlign.center,
+                  color: red,
+                  fontWeight: FontWeight.bold
               ),
-            ),
-            onWillPop: () async {
-              lvlTrue = 0;
-              lvlFive1Y = false;
-              lvlFive1N = false;
-              lvlFive2Y = false;
-              lvlFive2N = false;
-              lvlFive3Y = false;
-              lvlFive3N = false;
-              lvlFive4Y = false;
-              lvlFive4N = false;
-              lvlFive5Y = false;
-              lvlFive5N = false;
-              lvlFive6Y = false;
-              lvlFive6N = false;
-              lvlFive7Y = false;
-              lvlFive7N = false;
-              Get.back();
-              Get.back();
-              Get.back();
-              Get.back();
-              update();
-              return false;
-            }
+              content: Container(
+                alignment: Alignment.center,
+                height: 10.h,
+                child: Text(
+                  "Opps .. Try Again!!",
+                  style: TextStyle(
+                    fontSize: 18.sp,
+                    fontFamily: "Cairo",
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+              ),
+              onWillPop: () async {
+                lvlTrue = 0;
+                lvlFive1Y = false;
+                lvlFive1N = false;
+                lvlFive2Y = false;
+                lvlFive2N = false;
+                lvlFive3Y = false;
+                lvlFive3N = false;
+                lvlFive4Y = false;
+                lvlFive4N = false;
+                lvlFive5Y = false;
+                lvlFive5N = false;
+                lvlFive6Y = false;
+                lvlFive6N = false;
+                lvlFive7Y = false;
+                lvlFive7N = false;
+                Get.back();
+                Get.back();
+                Get.back();
+                Get.back();
+                update();
+                return false;
+              }
           );
         }
         if(lvlTrue == 5){
           Get.defaultDialog(
-            backgroundColor: white,
-            title: "Correct",
-            titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
-            titleStyle: TextStyle(
-              fontSize: 18.sp,
-              fontFamily: "Cairo",
-              color: green,
-              fontWeight: FontWeight.bold
-            ),
-            content: Container(
-              alignment: Alignment.center,
-              height: 8.h,
-              child: Text(
-                "Excellent, You earned 12 points..",
-                style: TextStyle(
+              backgroundColor: white,
+              title: "Correct",
+              titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
+              titleStyle: TextStyle(
                   fontSize: 18.sp,
                   fontFamily: "Cairo",
-                ),
-                textAlign: TextAlign.center,
+                  color: green,
+                  fontWeight: FontWeight.bold
               ),
-            ),
-            onWillPop: () async {
-              clevel = 5;
-              await updateLevel();
-              lvlFive1Y = false;
-              lvlFive1N = false;
-              lvlFive2Y = false;
-              lvlFive2N = false;
-              lvlFive3Y = false;
-              lvlFive3N = false;
-              lvlFive4Y = false;
-              lvlFive4N = false;
-              lvlFive5Y = false;
-              lvlFive5N = false;
-              lvlFive6Y = false;
-              lvlFive6N = false;
-              lvlFive7Y = false;
-              lvlFive7N = false;
-              Get.back();
-              Get.back();
-              Get.back();
-              Get.back();
-              update();
-              return false;
-            }
+              content: Container(
+                alignment: Alignment.center,
+                height: 8.h,
+                child: Text(
+                  "Excellent, You earned 12 points..",
+                  style: TextStyle(
+                    fontSize: 18.sp,
+                    fontFamily: "Cairo",
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+              ),
+              onWillPop: () async {
+                clevel = 5;
+                await updateLevel();
+                lvlFive1Y = false;
+                lvlFive1N = false;
+                lvlFive2Y = false;
+                lvlFive2N = false;
+                lvlFive3Y = false;
+                lvlFive3N = false;
+                lvlFive4Y = false;
+                lvlFive4N = false;
+                lvlFive5Y = false;
+                lvlFive5N = false;
+                lvlFive6Y = false;
+                lvlFive6N = false;
+                lvlFive7Y = false;
+                lvlFive7N = false;
+                Get.back();
+                Get.back();
+                Get.back();
+                Get.back();
+                update();
+                return false;
+              }
           );
           await audioPlayer.play(AssetSource("sounds/win.mp3"));
           lvlTrue = 0;
