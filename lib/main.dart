@@ -66,6 +66,8 @@ class _MyAppState extends State<MyApp> {
             GetPage(name: screenMemoryLevels, page: () => const MemoryLevelsScreen()),
             GetPage(name: screenShopLevels, page: () => const ShopLevelsScreen()),
 
+            GetPage(name: screenShoppingStd, page: () => const StdShoppingScreen()),
+
 
           ],
         );

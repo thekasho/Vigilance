@@ -11,6 +11,7 @@ import 'package:vig/controller/landing/landing.dart';
 import '../../controller/games/memory.dart';
 import '../../controller/games/shopping.dart';
 import '../../controller/games/spot.dart';
+import '../../controller/shopping/shopping.dart';
 import '../../controller/std/home.dart';
 import '../../controller/std/login.dart';
 import '../../controller/std/register.dart';
@@ -62,3 +63,4 @@ part 'games/shopping/shop.dart';
 part 'games/shopping/math.dart';
 part 'games/shopping/select.dart';
 
+part 'shop/home.dart';

@@ -52,6 +52,27 @@ class Crud {
     }
   }
 
+  Future<Either<StatusRequest, Map>> getMapData(String linkurl) async {
+    try {
+      if (await checkNetwork()) {
+        var response = await http.post(Uri.parse(linkurl)).timeout(const Duration(seconds: 5), onTimeout: (){
+          return http.Response('Error', 408);
+        });
+        if (response.statusCode == 200 || response.statusCode == 201) {
+          Map responseBody = jsonDecode(response.body);
+          return Right(responseBody);
+        } else {
+          return const Left(StatusRequest.serverFailure);
+        }
+      } else {
+        return const Left(StatusRequest.offlineFailure);
+      }
+    } catch (e) {
+      debugPrint("Crud Error: $e");
+      return const Left(StatusRequest.serveException);
+    }
+  }
+
   Future<Either<StatusRequest, List>> getListData(String linkurl) async {
     try {
       if (await checkNetwork()) {

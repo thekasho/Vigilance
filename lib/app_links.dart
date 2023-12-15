@@ -14,4 +14,5 @@ class ApiLinks {
   static const String updateMemoryGameLevel = 'https://microplazatesla.com/vl/update_memory_level.php';
   static const String shoppingGameLevel = 'https://microplazatesla.com/vl/get_shopping_level.php';
   static const String updateShoppingGameLevel = 'https://microplazatesla.com/vl/update_shopping_level.php';
+  static const String getShoppingItems = 'https://microplazatesla.com/vl/get_shopping_items.php';
 }

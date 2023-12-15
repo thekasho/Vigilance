@@ -150,16 +150,47 @@ class _StdHomeScreenState extends State<StdHomeScreen> {
                       }),
                     ),
                     GetBuilder<StdHomeContImp>(builder: (controller) {
-                      return GestureDetector(
-                        onTap: () {
-                          controller.logOut();
-                        },
-                        child: Icon(
-                          Icons.exit_to_app,
-                          color: orange,
-                          size: 27.sp
+                      return Container(
+                        alignment: Alignment.centerLeft,
+                        width: 17.w,
+                        child: DropdownButton(
+                          underline: SizedBox(),
+                          icon: Icon(Icons.table_rows_sharp, size: 25.sp),
+                          iconEnabledColor: black,
+                          isExpanded: false,
+                          borderRadius: BorderRadius.circular(10),
+                          items: [
+                            const DropdownMenuItem(
+                              value: 0,
+                              alignment: Alignment.center,
+                              child: Icon(Icons.shopping_cart),
+                            ),
+                            DropdownMenuItem(
+                              alignment: Alignment.center,
+                              value: 1,
+                              onTap: (){
+                                controller.logOut();
+                              },
+                              child: const Icon(Icons.logout_sharp),
+                            ),
+                          ],
+                          onChanged: (value) {
+                            if(value == 0){
+                              Get.toNamed(screenShoppingStd);
+                            }
+                          },
                         ),
                       );
+                      // return GestureDetector(
+                      //   onTap: () {
+                      //     controller.logOut();
+                      //   },
+                      //   child: Icon(
+                      //     Icons.exit_to_app,
+                      //     color: orange,
+                      //     size: 27.sp
+                      //   ),
+                      // );
                     }),
                   ],
                 ),

@@ -13,4 +13,9 @@ class Requests {
     var response = await crud.getData(linkurl);
     return response.fold((l) => l, (r) => r);
   }
+
+  getMapData(dynamic linkurl) async {
+    var response = await crud.getMapData(linkurl);
+    return response.fold((l) => l, (r) => r);
+  }
 }

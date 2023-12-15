@@ -24,11 +24,12 @@ const lightMove = Color(0xffD4AADE);
 const darkRed = Color(0xffb30101);
 const hardYellow = Color(0xffff9700);
 const greenMore = Color(0xffaaff3d);
-const lighterOrange = Color(0xff1EEF7939);
+const lighterOrange = Color(0xffeF7939);
 const checkBoxColor = Color(0xff4B39EF);
 const testBck1 = Color(0xffFFCACC);
 const testBck2 = Color(0xffCAEDFF);
 const testBck3 = Color(0xffDBC4F0);
+const lighterBlue = Color(0xff01DBFE);
 
 
 

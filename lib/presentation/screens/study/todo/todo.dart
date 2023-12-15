@@ -262,8 +262,7 @@ class _StdToDoScreenState extends State<StdToDoScreen> {
                                     height: 15.h,
                                     padding: const EdgeInsets.all(5),
                                     child: CachedNetworkImage(
-                                      imageUrl: controller
-                                          .tasks[i]['image_link'] ?? "",
+                                      imageUrl: controller.tasks[i]['image_link'] ?? "",
                                       errorWidget: (_, i, e) {
                                         return Icon(
                                           FontAwesomeIcons.image,

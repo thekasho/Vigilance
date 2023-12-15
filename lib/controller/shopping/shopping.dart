@@ -9,19 +9,18 @@ import '../../core/data/remote/requests.dart';
 import '../../helpers/helpers.dart';
 import '../../repo/api.dart';
 
-abstract class StdHomeCont extends GetxController {
+abstract class ShoppingCont extends GetxController {
   checkNetwork();
-  checkAuth();
-  logOut();
-  navigate(String url);
+  getItems();
 }
-class StdHomeContImp extends StdHomeCont {
+class ShoppingContImp extends ShoppingCont {
   Requests requests = Requests(Get.find());
 
-  bool isConnected = false;
   StatusRequest statusRequest = StatusRequest.none;
 
-  String points = "0";
+  bool isConnected = false;
+  List items = [];
+  String email = "";
 
   @override
   checkNetwork() async {
@@ -29,17 +28,14 @@ class StdHomeContImp extends StdHomeCont {
   }
 
   @override
-  checkAuth() async {
-    var loginData  = await LocaleApi.getLoginData();
+  getItems() async {
+    try {
+      statusRequest = StatusRequest.loading;
+      update();
 
-    if(loginData != null){
-      Map req = {
-        'user_email': loginData['email']
-      };
+      var loginData = await LocaleApi.getLoginData();
 
-      var auth = await requests.postData(req, ApiLinks.getPoints);
-
-      if(auth['message'] == "failed"){
+      if(!isConnected){
         Get.defaultDialog(
           backgroundColor: white,
           title: "Error",
@@ -51,43 +47,37 @@ class StdHomeContImp extends StdHomeCont {
               fontWeight: FontWeight.bold
           ),
           content: Text(
-            "Server Error !!",
+            "No Internet Connection !!",
             style: TextStyle(
               fontSize: 18.sp,
               fontFamily: "Cairo",
             ),
           ),
         );
-      } else if(auth['message'] == "success"){
-        points = auth['result'].toString();
+        statusRequest = StatusRequest.failure;
         update();
+        return;
       }
-    }
-  }
 
-  @override
-  navigate(url) async {
-
-  }
-
-  @override
-  logOut() async {
-    try {
-      var loginData  = await LocaleApi.getLoginData();
       if(loginData != null){
-        await LocaleApi.removeLoginData();
-        Get.offAllNamed(screenChooseType);
+        var itemsResponse = await requests.getMapData(ApiLinks.getShoppingItems);
+        if(itemsResponse['statue'] == "success" && itemsResponse['result'].length >= 1){
+          items = [];
+          items.addAll(itemsResponse['result']);
+          statusRequest = StatusRequest.success;
+          update();
+        }
       }
+
     } catch (e) {
-      print("Error: $e");
+
     }
   }
 
   @override
-  void onInit() {
-    statusRequest = StatusRequest.none;
-    checkNetwork();
-    checkAuth();
+  void onInit() async {
+    await checkNetwork();
+    getItems();
     super.onInit();
   }
 
