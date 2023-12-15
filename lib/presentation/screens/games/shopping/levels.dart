@@ -212,19 +212,22 @@ class _ShopLevelsScreenState extends State<ShopLevelsScreen> {
                                 ),
                               ),
                             ),
-                            Container(
-                              width: 30.w,
-                              height: 16.h,
-                              alignment: Alignment.center,
-                              decoration: BoxDecoration(
-                                color: lightOrange,
-                                borderRadius: BorderRadius.circular(10),
-                              ),
-                              child: Text(
-                                "6",
-                                style: TextStyle(
-                                    fontSize: 38.sp,
-                                    fontWeight: FontWeight.bold
+                            GestureDetector(
+                              onTap: () => Get.to(() => const ShoppingGameScreen(level: 6)),
+                              child: Container(
+                                width: 30.w,
+                                height: 16.h,
+                                alignment: Alignment.center,
+                                decoration: BoxDecoration(
+                                  color: cont.level >= 6 ? orangeBtn : lightOrange,
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
+                                child: Text(
+                                  "6",
+                                  style: TextStyle(
+                                      fontSize: 38.sp,
+                                      fontWeight: FontWeight.bold
+                                  ),
                                 ),
                               ),
                             ),
@@ -234,51 +237,60 @@ class _ShopLevelsScreenState extends State<ShopLevelsScreen> {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
-                            Container(
-                              width: 30.w,
-                              height: 16.h,
-                              alignment: Alignment.center,
-                              decoration: BoxDecoration(
-                                color: lightOrange,
-                                borderRadius: BorderRadius.circular(10),
-                              ),
-                              child: Text(
-                                "7",
-                                style: TextStyle(
+                            GestureDetector(
+                              onTap: () => Get.to(() => const ShoppingGameScreen(level: 7)),
+                              child: Container(
+                                width: 30.w,
+                                height: 16.h,
+                                alignment: Alignment.center,
+                                decoration: BoxDecoration(
+                                  color: cont.level >= 7 ? orangeBtn : lightOrange,
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
+                                child: Text(
+                                  "7",
+                                  style: TextStyle(
                                     fontSize: 38.sp,
                                     fontWeight: FontWeight.bold
+                                  ),
                                 ),
                               ),
                             ),
-                            Container(
-                              width: 30.w,
-                              height: 16.h,
-                              alignment: Alignment.center,
-                              decoration: BoxDecoration(
-                                color: lightOrange,
-                                borderRadius: BorderRadius.circular(10),
-                              ),
-                              child: Text(
-                                "8",
-                                style: TextStyle(
-                                    fontSize: 38.sp,
-                                    fontWeight: FontWeight.bold
+                            GestureDetector(
+                              onTap: () => Get.to(() => const ShoppingGameScreen(level: 8)),
+                              child: Container(
+                                width: 30.w,
+                                height: 16.h,
+                                alignment: Alignment.center,
+                                decoration: BoxDecoration(
+                                  color: cont.level >= 8 ? orangeBtn : lightOrange,
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
+                                child: Text(
+                                  "8",
+                                  style: TextStyle(
+                                      fontSize: 38.sp,
+                                      fontWeight: FontWeight.bold
+                                  ),
                                 ),
                               ),
                             ),
-                            Container(
-                              width: 30.w,
-                              height: 16.h,
-                              alignment: Alignment.center,
-                              decoration: BoxDecoration(
-                                color: lightOrange,
-                                borderRadius: BorderRadius.circular(10),
-                              ),
-                              child: Text(
-                                "9",
-                                style: TextStyle(
-                                    fontSize: 38.sp,
-                                    fontWeight: FontWeight.bold
+                            GestureDetector(
+                              onTap: () => Get.to(() => const ShoppingGameScreen(level: 9)),
+                              child: Container(
+                                width: 30.w,
+                                height: 16.h,
+                                alignment: Alignment.center,
+                                decoration: BoxDecoration(
+                                  color: cont.level >= 9 ? orangeBtn : lightOrange,
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
+                                child: Text(
+                                  "9",
+                                  style: TextStyle(
+                                      fontSize: 38.sp,
+                                      fontWeight: FontWeight.bold
+                                  ),
                                 ),
                               ),
                             ),
@@ -288,19 +300,22 @@ class _ShopLevelsScreenState extends State<ShopLevelsScreen> {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
-                            Container(
-                              width: 30.w,
-                              height: 16.h,
-                              alignment: Alignment.center,
-                              decoration: BoxDecoration(
-                                color: lightOrange,
-                                borderRadius: BorderRadius.circular(10),
-                              ),
-                              child: Text(
-                                "10",
-                                style: TextStyle(
-                                    fontSize: 38.sp,
-                                    fontWeight: FontWeight.bold
+                            GestureDetector(
+                              onTap: () => Get.to(() => const ShoppingGameScreen(level: 10)),
+                              child: Container(
+                                width: 30.w,
+                                height: 16.h,
+                                alignment: Alignment.center,
+                                decoration: BoxDecoration(
+                                  color: cont.level >= 10 ? orangeBtn : lightOrange,
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
+                                child: Text(
+                                  "10",
+                                  style: TextStyle(
+                                      fontSize: 38.sp,
+                                      fontWeight: FontWeight.bold
+                                  ),
                                 ),
                               ),
                             ),

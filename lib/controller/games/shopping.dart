@@ -30,6 +30,16 @@ class ShoppingGameContImp extends ShoppingGameCont {
   CountdownController countdownController3 = CountdownController(autoStart: true);
   CountdownController countdownController4 = CountdownController(autoStart: true);
   CountdownController countdownController5 = CountdownController(autoStart: true);
+  CountdownController countdownController6 = CountdownController(autoStart: true);
+  CountdownController countdownController7 = CountdownController(autoStart: true);
+  CountdownController countdownController8 = CountdownController(autoStart: true);
+  CountdownController countdownController9 = CountdownController(autoStart: true);
+  CountdownController countdownController10 = CountdownController(autoStart: true);
+  CountdownController countdownController11 = CountdownController(autoStart: true);
+  CountdownController countdownController12 = CountdownController(autoStart: true);
+  CountdownController countdownController13 = CountdownController(autoStart: true);
+  CountdownController countdownController14 = CountdownController(autoStart: true);
+  CountdownController countdownController15 = CountdownController(autoStart: true);
 
   AudioPlayer audioPlayer = AudioPlayer();
 
@@ -101,11 +111,45 @@ class ShoppingGameContImp extends ShoppingGameCont {
   bool lvlFive7Y = false;
   bool lvlFive7N = false;
 
+  List lvlSixList = [7, 30, 29, 28, 3];
+  bool lvlSix1Y = false;
+  bool lvlSix1N = false;
+  bool lvlSix2Y = false;
+  bool lvlSix2N = false;
+  bool lvlSix3Y = false;
+  bool lvlSix3N = false;
+  bool lvlSix4Y = false;
+  bool lvlSix4N = false;
+  bool lvlSix5Y = false;
+  bool lvlSix5N = false;
+  bool lvlSix6Y = false;
+  bool lvlSix6N = false;
+  bool lvlSix7Y = false;
+  bool lvlSix7N = false;
+
+  List lvlSevenList = [34, 31, 35, 32, 33];
+  bool lvlSeven1Y = false;
+  bool lvlSeven1N = false;
+  bool lvlSeven2Y = false;
+  bool lvlSeven2N = false;
+  bool lvlSeven3Y = false;
+  bool lvlSeven3N = false;
+  bool lvlSeven4Y = false;
+  bool lvlSeven4N = false;
+  bool lvlSeven5Y = false;
+  bool lvlSeven5N = false;
+  bool lvlSeven6Y = false;
+  bool lvlSeven6N = false;
+  bool lvlSeven7Y = false;
+  bool lvlSeven7N = false;
+
   int lvlOneAns = 58;
   int lvlTwoAns = 80;
   int lvlThreeAns = 34;
   int lvlFourAns = 22;
   int lvlFiveAns = 18;
+  int lvlSixAns = 11;
+  int lvlSevenAns = 14;
 
   int lvlTrue = 0;
 
@@ -199,6 +243,26 @@ class ShoppingGameContImp extends ShoppingGameCont {
         Get.to(() => const ShopMathScreen(level: 4));
       } else if(clevel == 5){
         Get.to(() => const ShopMathScreen(level: 5));
+      } else if(clevel == 6){
+        Get.to(() => const ShopMathScreen(level: 6));
+      } else if(clevel == 7){
+        Get.to(() => const ShopMathScreen(level: 7));
+      } else if(clevel == 8){
+        Get.to(() => const ShopMathScreen(level: 8));
+      } else if(clevel == 9){
+        Get.to(() => const ShopMathScreen(level: 9));
+      } else if(clevel == 10){
+        Get.to(() => const ShopMathScreen(level: 10));
+      } else if(clevel == 11){
+        Get.to(() => const ShopMathScreen(level: 11));
+      } else if(clevel == 12){
+        Get.to(() => const ShopMathScreen(level: 12));
+      } else if(clevel == 13){
+        Get.to(() => const ShopMathScreen(level: 13));
+      } else if(clevel == 14){
+        Get.to(() => const ShopMathScreen(level: 14));
+      } else if(clevel == 15){
+        Get.to(() => const ShopMathScreen(level: 15));
       } else {
         Get.back();
       }
@@ -224,7 +288,14 @@ class ShoppingGameContImp extends ShoppingGameCont {
       }
       else if(clevel == 5 && ans == lvlFiveAns){
         Get.to(() => const ShopSelectScreen(level: 5));
-      } else {
+      }
+      else if(clevel == 6 && ans == lvlSixAns){
+        Get.to(() => const ShopSelectScreen(level: 6));
+      }
+      else if(clevel == 7 && ans == lvlSevenAns){
+        Get.to(() => const ShopSelectScreen(level: 7));
+      }
+      else {
         Get.defaultDialog(
           backgroundColor: white,
           title: "Wrong",
@@ -462,6 +533,7 @@ class ShoppingGameContImp extends ShoppingGameCont {
           lvlTrue = 0;
         }
       }
+
       else if (clevel == 2){
         if(lvlTwoList.contains(click)){
           if(img == 1){
@@ -577,6 +649,7 @@ class ShoppingGameContImp extends ShoppingGameCont {
           lvlTrue = 0;
         }
       }
+
       else if(clevel == 3){
         if(lvlThreeList.contains(click)){
           if(img == 1){
@@ -700,6 +773,7 @@ class ShoppingGameContImp extends ShoppingGameCont {
           lvlTrue = 0;
         }
       }
+
       else if(clevel == 4){
         if(lvlFourList.contains(click)){
           if(img == 1){
@@ -778,10 +852,10 @@ class ShoppingGameContImp extends ShoppingGameCont {
               title: "Correct",
               titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
               titleStyle: TextStyle(
-                  fontSize: 18.sp,
-                  fontFamily: "Cairo",
-                  color: green,
-                  fontWeight: FontWeight.bold
+                fontSize: 18.sp,
+                fontFamily: "Cairo",
+                color: green,
+                fontWeight: FontWeight.bold
               ),
               content: Container(
                 alignment: Alignment.center,
@@ -823,6 +897,7 @@ class ShoppingGameContImp extends ShoppingGameCont {
           lvlTrue = 0;
         }
       }
+
       else if(clevel == 5){
         if(lvlFiveList.contains(click)){
           if(img == 1){
@@ -908,6 +983,146 @@ class ShoppingGameContImp extends ShoppingGameCont {
         }
         if(lvlTrue == 5){
           Get.defaultDialog(
+            backgroundColor: white,
+            title: "Correct",
+            titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
+            titleStyle: TextStyle(
+              fontSize: 18.sp,
+              fontFamily: "Cairo",
+              color: green,
+              fontWeight: FontWeight.bold
+            ),
+            content: Container(
+              alignment: Alignment.center,
+              height: 8.h,
+              child: Text(
+                "Excellent, You earned 12 points..",
+                style: TextStyle(
+                  fontSize: 18.sp,
+                  fontFamily: "Cairo",
+                ),
+                textAlign: TextAlign.center,
+              ),
+            ),
+            onWillPop: () async {
+              clevel = 6;
+              await updateLevel();
+              lvlFive1Y = false;
+              lvlFive1N = false;
+              lvlFive2Y = false;
+              lvlFive2N = false;
+              lvlFive3Y = false;
+              lvlFive3N = false;
+              lvlFive4Y = false;
+              lvlFive4N = false;
+              lvlFive5Y = false;
+              lvlFive5N = false;
+              lvlFive6Y = false;
+              lvlFive6N = false;
+              lvlFive7Y = false;
+              lvlFive7N = false;
+              Get.back();
+              Get.back();
+              Get.back();
+              Get.back();
+              Get.to(() => const ShoppingGameScreen(level: 6));
+              countdownController6.restart();
+              update();
+              return false;
+            }
+          );
+          await audioPlayer.play(AssetSource("sounds/win.mp3"));
+          lvlTrue = 0;
+        } else if(lvlTrue > 5){
+          lvlTrue = 0;
+        }
+      }
+
+      else if(clevel == 6){
+        if(lvlSixList.contains(click)){
+          if(img == 1){
+            lvlSix1Y = true;
+          } else if(img == 2){
+            lvlSix2Y = true;
+          } else if(img == 3){
+            lvlSix3Y = true;
+          } else if(img == 4){
+            lvlSix4Y = true;
+          } else if(img == 5) {
+            lvlSix5Y = true;
+          } else if(img == 6) {
+            lvlSix6Y = true;
+          } else if(img == 7) {
+            lvlSix7Y = true;
+          }
+          lvlTrue += 1;
+          update();
+        } else {
+          if(img == 1){
+            lvlSix1N = true;
+          } else if(img == 2){
+            lvlSix2N = true;
+          } else if(img == 3){
+            lvlSix3N = true;
+          } else if(img == 4){
+            lvlSix4N = true;
+          } else if(img == 5){
+            lvlSix5N = true;
+          } else if(img == 6){
+            lvlSix6N = true;
+          } else if(img == 7){
+            lvlSix7N = true;
+          }
+          update();
+          Get.defaultDialog(
+              backgroundColor: white,
+              title: "Wrong Answer",
+              titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
+              titleStyle: TextStyle(
+                  fontSize: 18.sp,
+                  fontFamily: "Cairo",
+                  color: red,
+                  fontWeight: FontWeight.bold
+              ),
+              content: Container(
+                alignment: Alignment.center,
+                height: 10.h,
+                child: Text(
+                  "Opps .. Try Again!!",
+                  style: TextStyle(
+                    fontSize: 18.sp,
+                    fontFamily: "Cairo",
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+              ),
+              onWillPop: () async {
+                lvlTrue = 0;
+                lvlSix1Y = false;
+                lvlSix1N = false;
+                lvlSix2Y = false;
+                lvlSix2N = false;
+                lvlSix3Y = false;
+                lvlSix3N = false;
+                lvlSix4Y = false;
+                lvlSix4N = false;
+                lvlSix5Y = false;
+                lvlSix5N = false;
+                lvlSix6Y = false;
+                lvlSix6N = false;
+                lvlSix7Y = false;
+                lvlSix7N = false;
+                Get.back();
+                Get.back();
+                Get.back();
+                Get.back();
+                update();
+                return false;
+              }
+          );
+        }
+        if(lvlTrue == 5){
+          Get.defaultDialog(
               backgroundColor: white,
               title: "Correct",
               titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
@@ -930,26 +1145,28 @@ class ShoppingGameContImp extends ShoppingGameCont {
                 ),
               ),
               onWillPop: () async {
-                clevel = 5;
+                clevel = 7;
                 await updateLevel();
-                lvlFive1Y = false;
-                lvlFive1N = false;
-                lvlFive2Y = false;
-                lvlFive2N = false;
-                lvlFive3Y = false;
-                lvlFive3N = false;
-                lvlFive4Y = false;
-                lvlFive4N = false;
-                lvlFive5Y = false;
-                lvlFive5N = false;
-                lvlFive6Y = false;
-                lvlFive6N = false;
-                lvlFive7Y = false;
-                lvlFive7N = false;
+                lvlSix1Y = false;
+                lvlSix1N = false;
+                lvlSix2Y = false;
+                lvlSix2N = false;
+                lvlSix3Y = false;
+                lvlSix3N = false;
+                lvlSix4Y = false;
+                lvlSix4N = false;
+                lvlSix5Y = false;
+                lvlSix5N = false;
+                lvlSix6Y = false;
+                lvlSix6N = false;
+                lvlSix7Y = false;
+                lvlSix7N = false;
                 Get.back();
                 Get.back();
                 Get.back();
                 Get.back();
+                Get.to(() => const ShoppingGameScreen(level: 7));
+                countdownController7.restart();
                 update();
                 return false;
               }
@@ -960,6 +1177,147 @@ class ShoppingGameContImp extends ShoppingGameCont {
           lvlTrue = 0;
         }
       }
+
+      else if(clevel == 7){
+        if(lvlSevenList.contains(click)){
+          if(img == 1){
+            lvlSeven1Y = true;
+          } else if(img == 2){
+            lvlSeven2Y = true;
+          } else if(img == 3){
+            lvlSeven3Y = true;
+          } else if(img == 4){
+            lvlSeven4Y = true;
+          } else if(img == 5) {
+            lvlSeven5Y = true;
+          } else if(img == 6) {
+            lvlSeven6Y = true;
+          } else if(img == 7) {
+            lvlSeven7Y = true;
+          }
+          lvlTrue += 1;
+          update();
+        } else {
+          if(img == 1){
+            lvlSeven1N = true;
+          } else if(img == 2){
+            lvlSeven2N = true;
+          } else if(img == 3){
+            lvlSeven3N = true;
+          } else if(img == 4){
+            lvlSeven4N = true;
+          } else if(img == 5){
+            lvlSeven5N = true;
+          } else if(img == 6){
+            lvlSeven6N = true;
+          } else if(img == 7){
+            lvlSeven7N = true;
+          }
+          update();
+          Get.defaultDialog(
+            backgroundColor: white,
+            title: "Wrong Answer",
+            titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
+            titleStyle: TextStyle(
+              fontSize: 18.sp,
+              fontFamily: "Cairo",
+              color: red,
+              fontWeight: FontWeight.bold
+            ),
+            content: Container(
+              alignment: Alignment.center,
+              height: 10.h,
+              child: Text(
+                "Opps .. Try Again!!",
+                style: TextStyle(
+                  fontSize: 18.sp,
+                  fontFamily: "Cairo",
+                ),
+                textAlign: TextAlign.center,
+              ),
+            ),
+            onWillPop: () async {
+              lvlTrue = 0;
+              lvlSeven1Y = false;
+              lvlSeven1N = false;
+              lvlSeven2Y = false;
+              lvlSeven2N = false;
+              lvlSeven3Y = false;
+              lvlSeven3N = false;
+              lvlSeven4Y = false;
+              lvlSeven4N = false;
+              lvlSeven5Y = false;
+              lvlSeven5N = false;
+              lvlSeven6Y = false;
+              lvlSeven6N = false;
+              lvlSeven7Y = false;
+              lvlSeven7N = false;
+              Get.back();
+              Get.back();
+              Get.back();
+              Get.back();
+              update();
+              return false;
+            }
+          );
+        }
+        if(lvlTrue == 5){
+          Get.defaultDialog(
+            backgroundColor: white,
+            title: "Correct",
+            titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
+            titleStyle: TextStyle(
+              fontSize: 18.sp,
+              fontFamily: "Cairo",
+              color: green,
+              fontWeight: FontWeight.bold
+            ),
+            content: Container(
+              alignment: Alignment.center,
+              height: 8.h,
+              child: Text(
+                "Excellent, You earned 12 points..",
+                style: TextStyle(
+                  fontSize: 18.sp,
+                  fontFamily: "Cairo",
+                ),
+                textAlign: TextAlign.center,
+              ),
+            ),
+            onWillPop: () async {
+              clevel = 8;
+              await updateLevel();
+              lvlSeven1Y = false;
+              lvlSeven1N = false;
+              lvlSeven2Y = false;
+              lvlSeven2N = false;
+              lvlSeven3Y = false;
+              lvlSeven3N = false;
+              lvlSeven4Y = false;
+              lvlSeven4N = false;
+              lvlSeven5Y = false;
+              lvlSeven5N = false;
+              lvlSeven6Y = false;
+              lvlSeven6N = false;
+              lvlSeven7Y = false;
+              lvlSeven7N = false;
+              Get.back();
+              Get.back();
+              Get.back();
+              Get.back();
+              Get.to(() => const ShoppingGameScreen(level: 8));
+              countdownController8.restart();
+              update();
+              return false;
+            }
+          );
+          await audioPlayer.play(AssetSource("sounds/win.mp3"));
+          lvlTrue = 0;
+        } else if(lvlTrue > 5){
+          lvlTrue = 0;
+        }
+      }
+
     } catch(e){
       print("Error: $e");
     }
