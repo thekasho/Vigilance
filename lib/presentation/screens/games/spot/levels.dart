@@ -92,15 +92,16 @@ class _SpotLevelsScreenState extends State<SpotLevelsScreen> {
               Container(
                 alignment: Alignment.center,
                 width: 55.w,
-                height: 5.h,
+                height: 6.h,
                 decoration: BoxDecoration(
                   color: white,
                   borderRadius: BorderRadius.circular(15),
                 ),
                 child: Text(
-                  "Spot the Difference",
+                  "اختر المختلف",
                   style: TextStyle(
-                      fontSize: 20.sp
+                    fontSize: 20.sp,
+                    fontFamily: 'Cairo',
                   ),
                 ),
               ),

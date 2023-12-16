@@ -88,15 +88,16 @@ class _MemoryLevelsScreenState extends State<MemoryLevelsScreen> {
               Container(
                 alignment: Alignment.center,
                 width: 55.w,
-                height: 5.h,
+                height: 6.h,
                 decoration: BoxDecoration(
                   color: white,
                   borderRadius: BorderRadius.circular(15),
                 ),
                 child: Text(
-                  "Memory Sound",
+                  "الذاكرة السمعية",
                   style: TextStyle(
-                      fontSize: 20.sp
+                    fontSize: 20.sp,
+                    fontFamily: 'Cairo',
                   ),
                 ),
               ),

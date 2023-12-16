@@ -99,19 +99,19 @@ class _StdStudyHomeScreenState extends State<StdStudyHomeScreen> {
                         ),
                         padding: MaterialStateProperty.all<EdgeInsets>(
                           EdgeInsets.symmetric(
-                              horizontal: 17.w,
+                              horizontal: 19.w,
                               vertical: 1.h
                           )),
                       ),
                       child: Row(
                         children: [
                           Text(
-                            "برومودورو",
+                            "بومودورو",
                             style: TextStyle(
-                                fontSize: 19.sp,
-                                color: black,
-                                fontWeight: FontWeight.bold,
-                                fontFamily: 'Cairo'
+                              fontSize: 19.sp,
+                              color: black,
+                              fontWeight: FontWeight.bold,
+                              fontFamily: 'Cairo'
                             ),
                           ),
                           SizedBox(width: 3.w),

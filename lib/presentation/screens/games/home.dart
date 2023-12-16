@@ -103,12 +103,12 @@ class _GamesHomeScreenState extends State<GamesHomeScreen> {
                           ),
                         ),
                         child: Text(
-                          "Memory Sound",
+                          "الذاكرة السمعية",
                           style: TextStyle(
-                              fontSize: 19.sp,
-                              color: white,
-                              fontWeight: FontWeight.bold,
-                              fontFamily: 'Cairo'
+                            fontSize: 19.sp,
+                            color: white,
+                            fontWeight: FontWeight.bold,
+                            fontFamily: 'Cairo'
                           ),
                         ),
                         onPressed: () {

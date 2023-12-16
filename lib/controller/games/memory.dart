@@ -1223,7 +1223,8 @@ class MemoryGameContImp extends MemoryGameCont {
         } else {
           ans = [];
         }
-      } else if(clevel == 2){
+      }
+      else if(clevel == 2){
         if(ans.length <= 4){
           if(const ListEquality().equals(ans, twoAns)){
             Get.defaultDialog(
@@ -1282,7 +1283,8 @@ class MemoryGameContImp extends MemoryGameCont {
         } else {
           ans = [];
         }
-      } else if (clevel == 3){
+      }
+      else if (clevel == 3){
         if(ans.length <= 5){
           if(const ListEquality().equals(ans, threeAns)){
             Get.defaultDialog(
@@ -1341,7 +1343,8 @@ class MemoryGameContImp extends MemoryGameCont {
         } else {
           ans = [];
         }
-      } else if(clevel == 4){
+      }
+      else if(clevel == 4){
         if(ans.length <= 6){
           if(const ListEquality().equals(ans, fourAns)){
             Get.defaultDialog(
@@ -1400,7 +1403,8 @@ class MemoryGameContImp extends MemoryGameCont {
         } else {
           ans = [];
         }
-      } else if(clevel == 5){
+      }
+      else if(clevel == 5){
         if(ans.length <= 7){
           if(const ListEquality().equals(ans, fiveAns)){
             Get.defaultDialog(
@@ -1427,7 +1431,7 @@ class MemoryGameContImp extends MemoryGameCont {
                 ),
                 onWillPop: () async {
                   Get.back();
-                  clevel = 5;
+                  clevel = 6;
                   await updateLevel();
                   update();
                   return false;
@@ -1459,7 +1463,8 @@ class MemoryGameContImp extends MemoryGameCont {
         } else {
           ans = [];
         }
-      } else if(clevel == 6){
+      }
+      else if(clevel == 6){
         if(ans.length <= 7){
           if(const ListEquality().equals(ans, sixAns)){
             Get.defaultDialog(
@@ -1518,7 +1523,8 @@ class MemoryGameContImp extends MemoryGameCont {
         } else {
           ans = [];
         }
-      } else if(clevel == 7){
+      }
+      else if(clevel == 7){
         if(ans.length <= 8){
           if(const ListEquality().equals(ans, sevenAns)){
             Get.defaultDialog(
@@ -1577,7 +1583,8 @@ class MemoryGameContImp extends MemoryGameCont {
         } else {
           ans = [];
         }
-      } else if(clevel == 8){
+      }
+      else if(clevel == 8){
         if(ans.length <= 7){
           if(const ListEquality().equals(ans, eightAns)){
             Get.defaultDialog(
@@ -1636,7 +1643,8 @@ class MemoryGameContImp extends MemoryGameCont {
         } else {
           ans = [];
         }
-      } else if(clevel == 9){
+      }
+      else if(clevel == 9){
         if(ans.length <= 6){
           if(const ListEquality().equals(ans, nineAns)){
             Get.defaultDialog(
@@ -1695,7 +1703,8 @@ class MemoryGameContImp extends MemoryGameCont {
         } else {
           ans = [];
         }
-      } else if(clevel == 10){
+      }
+      else if(clevel == 10){
         if(ans.length <= 8){
           if(const ListEquality().equals(ans, tenAns)){
             Get.defaultDialog(
@@ -1754,7 +1763,8 @@ class MemoryGameContImp extends MemoryGameCont {
         } else {
           ans = [];
         }
-      } else if(clevel == 11){
+      }
+      else if(clevel == 11){
         if(ans.length <= 9){
           if(const ListEquality().equals(ans, elevenAns)){
             Get.defaultDialog(
@@ -1813,7 +1823,8 @@ class MemoryGameContImp extends MemoryGameCont {
         } else {
           ans = [];
         }
-      } else if(clevel == 12){
+      }
+      else if(clevel == 12){
         if(ans.length <= 9){
           if(const ListEquality().equals(ans, twelveAns)){
             Get.defaultDialog(
@@ -1872,7 +1883,8 @@ class MemoryGameContImp extends MemoryGameCont {
         } else {
           ans = [];
         }
-      } else if(clevel == 13){
+      }
+      else if(clevel == 13){
         if(ans.length <= 10){
           if(const ListEquality().equals(ans, thirteenAns)){
             Get.defaultDialog(
@@ -1931,7 +1943,8 @@ class MemoryGameContImp extends MemoryGameCont {
         } else {
           ans = [];
         }
-      } else if(clevel == 14){
+      }
+      else if(clevel == 14){
         if(ans.length <= 10){
           if(const ListEquality().equals(ans, fourteenAns)){
             Get.defaultDialog(
