@@ -4,7 +4,7 @@ class LocaleApi {
 
   static Future<bool> saveLoginData(Map loginData) async {
     try {
-      // await locale.remove("login_data");
+      await locale.remove("login_data");
       await locale.write("login_data", loginData);
       print("Success Save Login Data");
       return true;

@@ -15,7 +15,6 @@ class Crud {
           const Duration(seconds: 5), onTimeout: (){
           return http.Response('Error', 408);
         });
-
         if (response.statusCode == 200 || response.statusCode == 201) {
           Map responseBody = jsonDecode(response.body);
           return Right(responseBody);

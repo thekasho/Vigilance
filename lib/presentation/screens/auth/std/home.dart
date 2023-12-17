@@ -96,6 +96,7 @@ class _StdHomeScreenState extends State<StdHomeScreen> {
   @override
   Widget build(BuildContext context) {
     Get.put(StdHomeContImp());
+    Get.put(ShoppingContImp());
     return WillPopScope(
       onWillPop: () async {
         return showExitPopup();
@@ -116,18 +117,20 @@ class _StdHomeScreenState extends State<StdHomeScreen> {
                       width: 15.w,
                       clipBehavior: Clip.antiAlias,
                       decoration: const BoxDecoration(
-                        shape: BoxShape.circle
+                          shape: BoxShape.circle
                       ),
-                      child: CachedNetworkImage(
-                        imageUrl: "https://th.bing.com/th/id/OIP.KEJaw671I5WYuftNN0IOZAHaHa?w=196&h=196&c=7&r=0&o=5&dpr=1.3&pid=1.7",
-                        errorWidget: (_, i, e) {
-                          return Icon(
-                            FontAwesomeIcons.image,
-                            size: 13.sp,
-                            color: Colors.white,
-                          );
-                        },
-                      ),
+                      child: GetBuilder<ShoppingContImp>(builder: (cont) {
+                        return CachedNetworkImage(
+                          imageUrl: cont.image,
+                          errorWidget: (_, i, e) {
+                            return Icon(
+                              FontAwesomeIcons.image,
+                              size: 13.sp,
+                              color: Colors.white,
+                            );
+                          },
+                        );
+                      }),
                     ),
                     Container(
                       alignment: Alignment.center,
@@ -137,14 +140,14 @@ class _StdHomeScreenState extends State<StdHomeScreen> {
                         color: orangeBtn,
                         borderRadius: BorderRadius.circular(10),
                       ),
-                      child: GetBuilder<StdHomeContImp>(builder: (controller) {
+                      child: GetBuilder<ShoppingContImp>(builder: (controller) {
                         return Text(
                           "النقاط: ${controller.points}",
                           style: TextStyle(
-                            color: white,
-                            fontSize: 19.sp,
-                            fontWeight: FontWeight.bold,
-                            fontFamily: 'Cairo'
+                              color: white,
+                              fontSize: 19.sp,
+                              fontWeight: FontWeight.bold,
+                              fontFamily: 'Cairo'
                           ),
                         );
                       }),
@@ -168,14 +171,14 @@ class _StdHomeScreenState extends State<StdHomeScreen> {
                             DropdownMenuItem(
                               alignment: Alignment.center,
                               value: 1,
-                              onTap: (){
+                              onTap: () {
                                 controller.logOut();
                               },
                               child: const Icon(Icons.logout_sharp),
                             ),
                           ],
                           onChanged: (value) {
-                            if(value == 0){
+                            if (value == 0) {
                               Get.toNamed(screenShoppingStd);
                             }
                           },
@@ -212,7 +215,7 @@ class _StdHomeScreenState extends State<StdHomeScreen> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               GestureDetector(
-                                onTap: (){
+                                onTap: () {
                                   Get.toNamed(screenStudyHome);
                                 },
                                 child: Container(
@@ -270,7 +273,7 @@ class _StdHomeScreenState extends State<StdHomeScreen> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               GestureDetector(
-                                onTap: (){
+                                onTap: () {
                                   Get.toNamed(screenGamesHome);
                                 },
                                 child: Container(
@@ -328,7 +331,7 @@ class _StdHomeScreenState extends State<StdHomeScreen> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               GestureDetector(
-                                onTap: (){
+                                onTap: () {
                                   Get.toNamed(screenTeacherHome);
                                 },
                                 child: Container(
@@ -386,7 +389,7 @@ class _StdHomeScreenState extends State<StdHomeScreen> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               GestureDetector(
-                                onTap: (){
+                                onTap: () {
                                   Get.toNamed(screenStdLogin);
                                 },
                                 child: Container(

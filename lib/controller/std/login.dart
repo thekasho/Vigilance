@@ -180,6 +180,7 @@ class StdLoginContImp extends StdLoginCont {
               'username': auth['result']['username'],
               'type': auth['result']['type'],
               'status': auth['result']['status'],
+              'image': "https://th.bing.com/th/id/OIP.KEJaw671I5WYuftNN0IOZAHaHa?w=196&h=196&c=7&r=0&o=5&dpr=1.3&pid=1.7"
             };
             var saveLogin = await LocaleApi.saveLoginData(loginData);
             if(saveLogin){

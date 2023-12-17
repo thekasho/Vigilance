@@ -10,7 +10,6 @@ class StdShoppingScreen extends StatefulWidget {
 class _StdShoppingScreenState extends State<StdShoppingScreen> {
   @override
   Widget build(BuildContext context) {
-    Get.put(StdHomeContImp());
     Get.put(ShoppingContImp());
     return SafeArea(
       child: Scaffold(
@@ -25,26 +24,26 @@ class _StdShoppingScreenState extends State<StdShoppingScreen> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   GestureDetector(
-                    onTap: (){
+                    onTap: () {
                       Get.back();
                     },
                     child: Container(
-                      width: 12.w,
-                      height: 6.h,
-                      clipBehavior: Clip.antiAlias,
-                      decoration: const BoxDecoration(
-                        color: white,
-                        borderRadius: BorderRadius.all(Radius.circular(15)),
-                        boxShadow: [
-                          BoxShadow(
-                            blurRadius: 3,
-                            color: Color(0x33000000),
-                            offset: Offset(2, 2),
-                            spreadRadius: 3,
-                          )
-                        ],
-                      ),
-                      child: const Icon(FontAwesomeIcons.chevronLeft)
+                        width: 12.w,
+                        height: 6.h,
+                        clipBehavior: Clip.antiAlias,
+                        decoration: const BoxDecoration(
+                          color: white,
+                          borderRadius: BorderRadius.all(Radius.circular(15)),
+                          boxShadow: [
+                            BoxShadow(
+                              blurRadius: 3,
+                              color: Color(0x33000000),
+                              offset: Offset(2, 2),
+                              spreadRadius: 3,
+                            )
+                          ],
+                        ),
+                        child: const Icon(FontAwesomeIcons.chevronLeft)
                     ),
                   ),
                   Container(
@@ -63,14 +62,14 @@ class _StdShoppingScreenState extends State<StdShoppingScreen> {
                         )
                       ],
                     ),
-                    child: GetBuilder<StdHomeContImp>(builder: (controller) {
+                    child: GetBuilder<ShoppingContImp>(builder: (controller) {
                       return Text(
                         "النقاط: ${controller.points}",
                         style: TextStyle(
-                          color: black,
-                          fontSize: 19.sp,
-                          fontWeight: FontWeight.bold,
-                          fontFamily: 'Cairo'
+                            color: black,
+                            fontSize: 19.sp,
+                            fontWeight: FontWeight.bold,
+                            fontFamily: 'Cairo'
                         ),
                       );
                     }),
@@ -81,22 +80,20 @@ class _StdShoppingScreenState extends State<StdShoppingScreen> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Container(
-                    width: 25.w,
-                    clipBehavior: Clip.antiAlias,
-                    decoration: const BoxDecoration(
-                        shape: BoxShape.circle
-                    ),
-                    child: CachedNetworkImage(
-                      imageUrl: "https://th.bing.com/th/id/OIP.KEJaw671I5WYuftNN0IOZAHaHa?w=196&h=196&c=7&r=0&o=5&dpr=1.3&pid=1.7",
-                      errorWidget: (_, i, e) {
-                        return Icon(
-                          FontAwesomeIcons.image,
-                          size: 13.sp,
-                          color: Colors.white,
-                        );
-                      },
-                    ),
+                  SizedBox(
+                    width: 35.w,
+                    child: GetBuilder<ShoppingContImp>(builder: (cont) {
+                      return CachedNetworkImage(
+                        imageUrl: cont.image,
+                        errorWidget: (_, i, e) {
+                          return Icon(
+                            FontAwesomeIcons.image,
+                            size: 13.sp,
+                            color: Colors.white,
+                          );
+                        },
+                      );
+                    }),
                   ),
                 ],
               ),
@@ -122,7 +119,8 @@ class _StdShoppingScreenState extends State<StdShoppingScreen> {
                         ],
                       ),
                     );
-                  } else if (controller.statusRequest == StatusRequest.success) {
+                  } else
+                  if (controller.statusRequest == StatusRequest.success) {
                     return NestedScrollView(
                       headerSliverBuilder: (_, ch) {
                         return [];
@@ -143,7 +141,8 @@ class _StdShoppingScreenState extends State<StdShoppingScreen> {
                             ),
                             itemBuilder: (_, i) {
                               return Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                mainAxisAlignment: MainAxisAlignment
+                                    .spaceAround,
                                 children: [
                                   Stack(
                                     children: [
@@ -152,18 +151,20 @@ class _StdShoppingScreenState extends State<StdShoppingScreen> {
                                         height: 28.h,
                                         decoration: BoxDecoration(
                                           color: white,
-                                          borderRadius: BorderRadius.circular(20),
+                                          borderRadius: BorderRadius.circular(
+                                              20),
                                         ),
                                         child: Column(
                                           children: [
                                             Container(
                                               margin: const EdgeInsets.only(
-                                                top: 20,
-                                                bottom: 20
+                                                  top: 20,
+                                                  bottom: 20
                                               ),
                                               width: 30.w,
                                               child: CachedNetworkImage(
-                                                imageUrl: controller.items[i]['link'] ?? "",
+                                                imageUrl: controller
+                                                    .items[i]['link'] ?? "",
                                                 errorWidget: (_, i, e) {
                                                   return Icon(
                                                     FontAwesomeIcons.image,
@@ -174,15 +175,20 @@ class _StdShoppingScreenState extends State<StdShoppingScreen> {
                                               ),
                                             ),
                                             Row(
-                                              mainAxisAlignment: MainAxisAlignment.center,
+                                              mainAxisAlignment: MainAxisAlignment
+                                                  .center,
                                               children: [
-                                                const Icon(Icons.lock, color: yellow),
+                                                const Icon(
+                                                    Icons.lock, color: yellow),
                                                 Text(
-                                                  "${controller.items[i]['points'] ?? ""} Points",
+                                                  "${controller
+                                                      .items[i]['points'] ??
+                                                      ""} Points",
                                                   style: TextStyle(
-                                                    fontFamily: 'Cairo',
-                                                    fontSize: 20.sp,
-                                                    fontWeight: FontWeight.bold
+                                                      fontFamily: 'Cairo',
+                                                      fontSize: 20.sp,
+                                                      fontWeight: FontWeight
+                                                          .bold
                                                   ),
                                                 ),
                                               ],
@@ -190,30 +196,39 @@ class _StdShoppingScreenState extends State<StdShoppingScreen> {
                                           ],
                                         ),
                                       ),
-                                      Container(
-                                        alignment: Alignment.center,
-                                        width: 25.w,
-                                        height: 6.h,
-                                        margin: EdgeInsets.only(top: 25.h, left: 7.w),
-                                        decoration: BoxDecoration(
-                                          color: lighterBlue,
-                                          borderRadius: BorderRadius.circular(15),
-                                          boxShadow: const [
-                                            BoxShadow(
-                                              blurRadius: 3,
-                                              color: Color(0x33000000),
-                                              offset: Offset(2, 2),
-                                              spreadRadius: 2,
-                                            )
-                                          ],
-                                        ),
-                                        child: Text(
-                                          "Add",
-                                          style: TextStyle(
-                                              color: white,
-                                              fontSize: 19.sp,
-                                              fontWeight: FontWeight.bold,
-                                              fontFamily: 'Cairo'
+                                      GestureDetector(
+                                        onTap: () async {
+                                          controller.buyItem(
+                                            controller.items[i]['link'],
+                                            controller.items[i]['id']);
+                                        },
+                                        child: Container(
+                                          alignment: Alignment.center,
+                                          width: 25.w,
+                                          height: 6.h,
+                                          margin: EdgeInsets.only(
+                                              top: 25.h, left: 7.w),
+                                          decoration: BoxDecoration(
+                                            color: lighterBlue,
+                                            borderRadius: BorderRadius.circular(
+                                                15),
+                                            boxShadow: const [
+                                              BoxShadow(
+                                                blurRadius: 3,
+                                                color: Color(0x33000000),
+                                                offset: Offset(2, 2),
+                                                spreadRadius: 2,
+                                              )
+                                            ],
+                                          ),
+                                          child: Text(
+                                            "Add",
+                                            style: TextStyle(
+                                                color: white,
+                                                fontSize: 19.sp,
+                                                fontWeight: FontWeight.bold,
+                                                fontFamily: 'Cairo'
+                                            ),
                                           ),
                                         ),
                                       ),

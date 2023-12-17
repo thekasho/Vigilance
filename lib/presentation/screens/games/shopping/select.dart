@@ -2849,12 +2849,12 @@ class _ShopSelectScreenState extends State<ShopSelectScreen> {
                                     children: [
                                       GestureDetector(
                                         onTap: () {
-                                          cont.saveClicks(19, 5);
+                                          cont.saveClicks(61, 5);
                                         },
                                         child: SizedBox(
-                                          width: 100,
+                                          width: 70,
                                           child: CachedNetworkImage(
-                                            imageUrl: "https://microplazatesla.com/vl/images/shopping/19.png",
+                                            imageUrl: "https://microplazatesla.com/vl/images/shopping/61.png",
                                             errorWidget: (_, i, e) {
                                               return Icon(
                                                 FontAwesomeIcons.image,
@@ -2864,13 +2864,13 @@ class _ShopSelectScreenState extends State<ShopSelectScreen> {
                                             },
                                           ),
                                         ),
-                                      ),                                                              // 5 - 19
+                                      ),                                                              // 5 - 61
                                       Visibility(
-                                        visible: cont.lvlEleven5Y,
+                                        visible: cont.lvlTwelve5Y,
                                         child: Image.asset("assets/images/shopping/yes.png", width: 7.w),
                                       ),
                                       Visibility(
-                                        visible: cont.lvlEleven5N,
+                                        visible: cont.lvlTwelve5N,
                                         child: Image.asset("assets/images/shopping/no.png", width: 7.w),
                                       ),
                                     ],
@@ -2888,12 +2888,12 @@ class _ShopSelectScreenState extends State<ShopSelectScreen> {
                                     children: [
                                       GestureDetector(
                                         onTap: () {
-                                          cont.saveClicks(4, 6);
+                                          cont.saveClicks(58, 6);
                                         },
                                         child: SizedBox(
-                                          width: 100,
+                                          width: 60,
                                           child: CachedNetworkImage(
-                                            imageUrl: "https://microplazatesla.com/vl/images/shopping/4.png",
+                                            imageUrl: "https://microplazatesla.com/vl/images/shopping/58.png",
                                             errorWidget: (_, i, e) {
                                               return Icon(
                                                 FontAwesomeIcons.image,
@@ -2903,13 +2903,13 @@ class _ShopSelectScreenState extends State<ShopSelectScreen> {
                                             },
                                           ),
                                         ),
-                                      ),                                                              // 6 - 4
+                                      ),                                                              // 6 - 58
                                       Visibility(
-                                        visible: cont.lvlEleven6Y,
+                                        visible: cont.lvlTwelve6Y,
                                         child: Image.asset("assets/images/shopping/yes.png", width: 7.w),
                                       ),
                                       Visibility(
-                                        visible: cont.lvlEleven6N,
+                                        visible: cont.lvlTwelve6N,
                                         child: Image.asset("assets/images/shopping/no.png", width: 7.w),
                                       ),
                                     ],
@@ -2920,12 +2920,12 @@ class _ShopSelectScreenState extends State<ShopSelectScreen> {
                                     children: [
                                       GestureDetector(
                                         onTap: () {
-                                          cont.saveClicks(29, 7);
+                                          cont.saveClicks(56, 7);
                                         },
                                         child: SizedBox(
                                           width: 90,
                                           child: CachedNetworkImage(
-                                            imageUrl: "https://microplazatesla.com/vl/images/shopping/29.png",
+                                            imageUrl: "https://microplazatesla.com/vl/images/shopping/56.png",
                                             errorWidget: (_, i, e) {
                                               return Icon(
                                                 FontAwesomeIcons.image,
@@ -2935,13 +2935,13 @@ class _ShopSelectScreenState extends State<ShopSelectScreen> {
                                             },
                                           ),
                                         ),
-                                      ),                                                              // 7 - 29
+                                      ),                                                              // 7 - 56
                                       Visibility(
-                                        visible: cont.lvlEleven7Y,
+                                        visible: cont.lvlTwelve7Y,
                                         child: Image.asset("assets/images/shopping/yes.png", width: 7.w),
                                       ),
                                       Visibility(
-                                        visible: cont.lvlEleven7N,
+                                        visible: cont.lvlTwelve7N,
                                         child: Image.asset("assets/images/shopping/no.png", width: 7.w),
                                       ),
                                     ],
