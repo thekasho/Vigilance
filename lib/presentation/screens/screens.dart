@@ -1,17 +1,21 @@
 import 'package:audioplayers/audioplayers.dart';
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
+import 'package:intl/intl.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:timer_count_down/timer_count_down.dart';
 import 'package:vig/controller/landing/landing.dart';
+import 'package:vig/repo/models/messages.dart';
 
 import '../../controller/games/memory.dart';
 import '../../controller/games/shopping.dart';
 import '../../controller/games/spot.dart';
 import '../../controller/shopping/shopping.dart';
+import '../../controller/std/chat/chat.dart';
 import '../../controller/std/home.dart';
 import '../../controller/std/login.dart';
 import '../../controller/std/register.dart';
@@ -51,6 +55,7 @@ part 'games/home.dart';
 
 part 'supportTeacher/home.dart';
 part 'supportTeacher/email.dart';
+part 'supportTeacher/chat.dart';
 
 part 'games/spot/levels.dart';
 part 'games/spot/spot.dart';

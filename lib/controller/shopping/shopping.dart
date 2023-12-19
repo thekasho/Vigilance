@@ -78,7 +78,7 @@ class ShoppingContImp extends ShoppingCont {
 
       if(loginData != null){
         email = loginData['email'];
-        image = loginData['image'];
+        image = loginData['image'] ?? "https://microplazatesla.com/vl/images/std.png";
         var itemsResponse = await requests.getMapData(ApiLinks.getShoppingItems);
         if(itemsResponse['statue'] == "success" && itemsResponse['result'].length >= 1){
           items = [];
@@ -103,7 +103,7 @@ class ShoppingContImp extends ShoppingCont {
           'id': id.toString(),
         };
         var update = await requests.postData(itemData, ApiLinks.buyShoppingItems);
-        print(update);
+
         if(StatusRequest.serverFailure == update){
           Get.defaultDialog(
             backgroundColor: white,
@@ -229,7 +229,7 @@ class ShoppingContImp extends ShoppingCont {
   void onInit() async {
     await checkNetwork();
     await updatePoints();
-    getItems();
+    await getItems();
     super.onInit();
   }
 

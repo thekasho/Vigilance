@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "898217032810",
+    "project_id": "vigilance-659a3",
+    "storage_bucket": "vigilance-659a3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:898217032810:android:514844525045127322de13",
+        "android_client_info": {
+          "package_name": "com.vig.vig"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAgJuED2A1FPYlF6kViN4cZAoq49DcwM8U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

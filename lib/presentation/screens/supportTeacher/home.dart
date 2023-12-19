@@ -39,8 +39,8 @@ class _SupportTeacherHomeScreenState extends State<SupportTeacherHomeScreen> {
                   ],
                 ),
                 SizedBox(
-                    height: 45.h,
-                    child: Image.asset("assets/images/support_teacher_home.png")
+                  height: 45.h,
+                  child: Image.asset("assets/images/support_teacher_home.png")
                 ),
                 SizedBox(height: 5.h),
                 Row(
@@ -110,7 +110,7 @@ class _SupportTeacherHomeScreenState extends State<SupportTeacherHomeScreen> {
                           ),
                         ),
                         onPressed: () {
-
+                          Get.toNamed(screenTeacherChat);
                         },
                       ),
                     ),

@@ -136,7 +136,7 @@ class _ChooseTypeScreenState extends State<ChooseTypeScreen> {
                                   shape: BoxShape.circle
                               ),
                               child: CachedNetworkImage(
-                                imageUrl: "https://th.bing.com/th/id/OIP.KEJaw671I5WYuftNN0IOZAHaHa?w=196&h=196&c=7&r=0&o=5&dpr=1.3&pid=1.7",
+                                imageUrl: "https://microplazatesla.com/vl/images/std.png",
                                 errorWidget: (_, i, e) {
                                   return Icon(
                                     FontAwesomeIcons.image,

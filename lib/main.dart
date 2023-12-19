@@ -6,13 +6,17 @@ import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:vig/binding/initial_binding.dart';
 import 'package:vig/helpers/helpers.dart';
 import 'package:vig/presentation/screens/screens.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
 
 
 void main() async {
   await GetStorage.init();
 
   WidgetsFlutterBinding.ensureInitialized();
-
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(const MyApp());
 }
 
@@ -54,6 +58,7 @@ class _MyAppState extends State<MyApp> {
 
             GetPage(name: screenTeacherHome, page: () => const SupportTeacherHomeScreen()),
             GetPage(name: screenTeacherEmail, page: () => const SupportTeacherEmailScreen()),
+            GetPage(name: screenTeacherChat, page: () => const SupportTeacherChatScreen()),
             GetPage(name: screenTeacherTests, page: () => const TeacherTestsScreen()),
             GetPage(name: screenTeacherAddTests, page: () => const TecherAddTestScreen()),
 

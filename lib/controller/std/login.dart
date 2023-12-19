@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
@@ -161,10 +162,10 @@ class StdLoginContImp extends StdLoginCont {
               title: "Error",
               titlePadding: EdgeInsets.only(bottom: 2.h, top: 1.h),
               titleStyle: TextStyle(
-                  fontSize: 18.sp,
-                  fontFamily: "Cairo",
-                  color: red,
-                  fontWeight: FontWeight.bold
+                fontSize: 18.sp,
+                fontFamily: "Cairo",
+                color: red,
+                fontWeight: FontWeight.bold
               ),
               content: Text(
                 "Account Not Active !!",
@@ -180,11 +181,25 @@ class StdLoginContImp extends StdLoginCont {
               'username': auth['result']['username'],
               'type': auth['result']['type'],
               'status': auth['result']['status'],
-              'image': "https://th.bing.com/th/id/OIP.KEJaw671I5WYuftNN0IOZAHaHa?w=196&h=196&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+              'image': auth['result']['image'],
             };
             var saveLogin = await LocaleApi.saveLoginData(loginData);
             if(saveLogin){
-              Get.offAllNamed(screenStdHome);
+              try {
+                await FirebaseAuth.instance.signInWithEmailAndPassword(email: email.text, password: pass.text);
+                Get.offAllNamed(screenStdHome);
+              } on FirebaseAuthException catch (x) {
+                if(x.code == "invalid-credential"){
+                  await FirebaseAuth.instance.createUserWithEmailAndPassword(
+                    email: email.text,
+                    password: pass.text,
+                  );
+                  Get.offAllNamed(screenStdHome);
+                }
+                print(x.code);
+              } catch (e) {
+                print(e);
+              }
             } else {
               Get.defaultDialog(
                 backgroundColor: white,

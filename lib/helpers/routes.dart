@@ -24,6 +24,7 @@ const String screenPromodoroTimer = '/std-promodoro-timer';
 
 const String screenTeacherHome = '/std-teacher-home';
 const String screenTeacherEmail = '/std-teacher-email';
+const String screenTeacherChat = '/std-teacher-chat';
 
 const String screenGamesHome = '/games-home';
 const String screenSpotLevels = '/sopt-levels';
@@ -31,5 +32,12 @@ const String screenMemoryLevels = '/memory-levels';
 const String screenShopLevels = '/shop-levels';
 
 const String screenShoppingStd = '/shopping-std';
+
+const String kMessages = "messages";
+const kMessageContent = 'content';
+const kMessageUserEmail = 'user_email';
+const kMessageUserName = 'user_name';
+const kMessageCreatedAt = 'created_at';
+const kMessageTo = 'to';
 
 

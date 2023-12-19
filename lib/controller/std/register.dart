@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 import 'package:internet_connection_checker/internet_connection_checker.dart';
@@ -163,28 +164,41 @@ class StdRegisterContImp extends StdRegisterCont {
           statusRequest = StatusRequest.failure;
           update();
         } else if(auth['message'] == "success") {
+          try {
+
+            await FirebaseAuth.instance.createUserWithEmailAndPassword(
+              email: email.text,
+              password: pass.text,
+            );
+
+          } on FirebaseAuthException catch (x) {
+            print(x);
+          } catch (e) {
+            print(e);
+          }
+
           Get.defaultDialog(
-              backgroundColor: white,
-              title: "Success",
-              titlePadding: EdgeInsets.only(bottom: 2.h, top: 1.h),
-              titleStyle: TextStyle(
+            backgroundColor: white,
+            title: "Success",
+            titlePadding: EdgeInsets.only(bottom: 2.h, top: 1.h),
+            titleStyle: TextStyle(
+              fontSize: 18.sp,
+              fontFamily: "Cairo",
+              color: green,
+              fontWeight: FontWeight.bold
+            ),
+            content: Text(
+              "Account Registered Success",
+              style: TextStyle(
                 fontSize: 18.sp,
                 fontFamily: "Cairo",
-                color: green,
-                fontWeight: FontWeight.bold
               ),
-              content: Text(
-                "Account Registered Success",
-                style: TextStyle(
-                  fontSize: 18.sp,
-                  fontFamily: "Cairo",
-                ),
-              ),
-              onWillPop: () async {
-                Get.back();
-                Get.back();
-                return false;
-              }
+            ),
+            onWillPop: () async {
+              Get.back();
+              Get.back();
+              return false;
+            }
           );
         } else {
           Get.defaultDialog(
