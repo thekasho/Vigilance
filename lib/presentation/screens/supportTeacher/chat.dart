@@ -13,6 +13,9 @@ class _SupportTeacherChatScreenState extends State<SupportTeacherChatScreen> {
   CollectionReference messages = FirebaseFirestore.instance.collection(kMessages);
   StdChatTeacherImp stdChatTeacherImp = Get.put(StdChatTeacherImp());
   final f = DateFormat('yyyy-MM-dd hh:mm');
+  final _controller = ScrollController();
+  TextEditingController controller = TextEditingController();
+  String? messageText;
 
   @override
   Widget build(BuildContext context) {
@@ -117,15 +120,15 @@ class _SupportTeacherChatScreenState extends State<SupportTeacherChatScreen> {
                     height: 70.h,
                     width: 100.w,
                     decoration: BoxDecoration(
-                        color: white,
-                        borderRadius: BorderRadius.circular(15)
+                      color: white,
+                      borderRadius: BorderRadius.circular(15)
                     ),
                     margin: const EdgeInsets.only(left: 10, right: 10, top: 10),
                     child: StreamBuilder(
                       stream: messages.orderBy(
                         kMessageCreatedAt,
                         descending: true,
-                      ).where(kMessageUserEmail, isEqualTo: cont.userEmail).snapshots(),
+                      ).snapshots(),
                       builder: (BuildContext context, AsyncSnapshot<QuerySnapshot<Object?>> snapshot) {
                         if(snapshot.hasData){
                           List<Message> messagesList = [];
@@ -134,225 +137,206 @@ class _SupportTeacherChatScreenState extends State<SupportTeacherChatScreen> {
                           }
                           return ListView.builder(
                             reverse: true,
+                            controller: _controller,
                             itemCount: messagesList.length,
                             itemBuilder: (context, index) {
-                              return messagesList[index].userEmail == cont.userEmail
-                                ? Column(
+                              if(messagesList[index].userEmail == cont.userEmail){
+                                return Column(
                                   children: [
-                                    Container(
-                                      width: 70.w,
-                                      height: 6.h,
-                                      padding: const EdgeInsets.all(5),
-                                      decoration: BoxDecoration(
-                                          color: chatbck,
-                                          borderRadius: BorderRadius.circular(20)
-                                      ),
-                                      alignment: Alignment.centerLeft,
-                                      child: Text(
-                                        messagesList[index].content,
-                                        maxLines: 1,
-                                        overflow: TextOverflow.clip,
-                                        style: TextStyle(
-                                          fontSize: 18.sp,
+                                    const SizedBox(height: 5),
+                                    Row(
+                                      children: [
+                                        SizedBox(
+                                          height: 6.h,
+                                          width: 90.w,
+                                          child: Row(
+                                            children: [
+                                              const Spacer(),
+                                              Container(
+                                                width: 70.w,
+                                                height: 6.h,
+                                                padding: const EdgeInsets.all(5),
+                                                decoration: BoxDecoration(
+                                                    color: chatbck,
+                                                    borderRadius: BorderRadius.circular(20)
+                                                ),
+                                                alignment: Alignment.centerLeft,
+                                                child: Text(
+                                                  messagesList[index].content,
+                                                  maxLines: 1,
+                                                  overflow: TextOverflow.clip,
+                                                  style: TextStyle(
+                                                    fontSize: 18.sp,
+                                                  ),
+                                                ),
+                                              ),
+                                              const Spacer(),
+                                              Container(
+                                                width: 15.w,
+                                                height: 8.h,
+                                                alignment: Alignment.center,
+                                                child: CachedNetworkImage(
+                                                  imageUrl: cont.userImage,
+                                                  errorWidget: (_, i, e) {
+                                                    return Icon(
+                                                      FontAwesomeIcons.image,
+                                                      size: 13.sp,
+                                                      color: Colors.grey,
+                                                    );
+                                                  },
+                                                ),
+                                              ),
+                                              const Spacer(),
+                                            ],
+                                          ),
                                         ),
-                                      ),
+                                      ],
                                     ),
-                                    const SizedBox(height: 20),
-                                    Container(
-                                      width: 70.w,
-                                      height: 6.h,
-                                      padding: const EdgeInsets.all(5),
-                                      decoration: BoxDecoration(
-                                          color: chatbck,
-                                          borderRadius: BorderRadius.circular(20)
-                                      ),
-                                      alignment: Alignment.centerLeft,
-                                      child: Text(
-                                        messagesList[index].userName,
-                                        maxLines: 1,
-                                        overflow: TextOverflow.clip,
-                                        style: TextStyle(
-                                          fontSize: 18.sp,
-                                        ),
-                                      ),
-                                    ),
-                                    const SizedBox(height: 20),
-                                    Container(
-                                      width: 70.w,
-                                      height: 6.h,
-                                      padding: const EdgeInsets.all(5),
-                                      decoration: BoxDecoration(
-                                          color: chatbck,
-                                          borderRadius: BorderRadius.circular(20)
-                                      ),
-                                      alignment: Alignment.centerLeft,
-                                      child: Text(
-                                        f.format(DateTime.fromMillisecondsSinceEpoch( messagesList[index].createdAt.seconds*1000)),
-                                        // messagesList[index].createdAt.toString(),
-                                        maxLines: 1,
-                                        overflow: TextOverflow.clip,
-                                        style: TextStyle(
-                                          fontSize: 18.sp,
-                                        ),
-                                      ),
-                                    ),
-                                    const SizedBox(height: 20),
-                                    Container(
-                                      width: 70.w,
-                                      height: 6.h,
-                                      padding: const EdgeInsets.all(5),
-                                      decoration: BoxDecoration(
-                                          color: chatbck,
-                                          borderRadius: BorderRadius.circular(20)
-                                      ),
-                                      alignment: Alignment.centerLeft,
-                                      child: Text(
-                                        messagesList[index].to,
-                                        maxLines: 1,
-                                        overflow: TextOverflow.clip,
-                                        style: TextStyle(
-                                          fontSize: 18.sp,
-                                        ),
-                                      ),
-                                    ),
+                                    const SizedBox(height: 5),
                                   ],
-                                ) : Text("${messagesList[index]}");
-                                // ? Text(messagesList[index].content)
-                                // : Text("${messagesList[index]}");
+                                );
+                              } else if(messagesList[index].userEmail == cont.teacherEmail){
+                                return Column(
+                                  children: [
+                                    const SizedBox(height: 5),
+                                    Row(
+                                      children: [
+                                        SizedBox(
+                                          height: 6.h,
+                                          width: 90.w,
+                                          child: Row(
+                                            children: [
+                                              const Spacer(),
+                                              Container(
+                                                width: 15.w,
+                                                height: 8.h,
+                                                alignment: Alignment.center,
+                                                child: CachedNetworkImage(
+                                                  imageUrl: cont.teacherImage,
+                                                  errorWidget: (_, i, e) {
+                                                    return Icon(
+                                                      FontAwesomeIcons.image,
+                                                      size: 13.sp,
+                                                      color: Colors.grey,
+                                                    );
+                                                  },
+                                                ),
+                                              ),
+                                              const Spacer(),
+                                              Container(
+                                                width: 70.w,
+                                                height: 6.h,
+                                                padding: const EdgeInsets.all(10),
+                                                decoration: BoxDecoration(
+                                                    color: chatbck,
+                                                    borderRadius: BorderRadius.circular(20)
+                                                ),
+                                                alignment: Alignment.centerLeft,
+                                                child: Text(
+                                                  messagesList[index].content,
+                                                  maxLines: 1,
+                                                  overflow: TextOverflow.clip,
+                                                  style: TextStyle(
+                                                    fontSize: 18.sp,
+                                                  ),
+                                                ),
+                                              ),
+                                              const Spacer(),
+                                            ],
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                    const SizedBox(height: 5),
+                                    // Container(
+                                    //   width: 70.w,
+                                    //   height: 6.h,
+                                    //   padding: const EdgeInsets.all(5),
+                                    //   decoration: BoxDecoration(
+                                    //       color: chatbck,
+                                    //       borderRadius: BorderRadius.circular(20)
+                                    //   ),
+                                    //   alignment: Alignment.centerLeft,
+                                    //   child: Text(
+                                    //     messagesList[index].content,
+                                    //     maxLines: 1,
+                                    //     overflow: TextOverflow.clip,
+                                    //     style: TextStyle(
+                                    //       fontSize: 18.sp,
+                                    //     ),
+                                    //   ),
+                                    // ),
+                                    // const SizedBox(height: 20),
+                                    // Container(
+                                    //   width: 70.w,
+                                    //   height: 6.h,
+                                    //   padding: const EdgeInsets.all(5),
+                                    //   decoration: BoxDecoration(
+                                    //       color: chatbck,
+                                    //       borderRadius: BorderRadius.circular(20)
+                                    //   ),
+                                    //   alignment: Alignment.centerLeft,
+                                    //   child: Text(
+                                    //     messagesList[index].userName,
+                                    //     maxLines: 1,
+                                    //     overflow: TextOverflow.clip,
+                                    //     style: TextStyle(
+                                    //       fontSize: 18.sp,
+                                    //     ),
+                                    //   ),
+                                    // ),
+                                    // const SizedBox(height: 20),
+                                    // Container(
+                                    //   width: 70.w,
+                                    //   height: 6.h,
+                                    //   padding: const EdgeInsets.all(5),
+                                    //   decoration: BoxDecoration(
+                                    //       color: chatbck,
+                                    //       borderRadius: BorderRadius.circular(20)
+                                    //   ),
+                                    //   alignment: Alignment.centerLeft,
+                                    //   child: Text(
+                                    //     f.format(DateTime.fromMillisecondsSinceEpoch( messagesList[index].createdAt.seconds*1000)),
+                                    //     // messagesList[index].createdAt.toString(),
+                                    //     maxLines: 1,
+                                    //     overflow: TextOverflow.clip,
+                                    //     style: TextStyle(
+                                    //       fontSize: 18.sp,
+                                    //     ),
+                                    //   ),
+                                    // ),
+                                    // const SizedBox(height: 20),
+                                    // Container(
+                                    //   width: 70.w,
+                                    //   height: 6.h,
+                                    //   padding: const EdgeInsets.all(5),
+                                    //   decoration: BoxDecoration(
+                                    //       color: chatbck,
+                                    //       borderRadius: BorderRadius.circular(20)
+                                    //   ),
+                                    //   alignment: Alignment.centerLeft,
+                                    //   child: Text(
+                                    //     messagesList[index].to,
+                                    //     maxLines: 1,
+                                    //     overflow: TextOverflow.clip,
+                                    //     style: TextStyle(
+                                    //       fontSize: 18.sp,
+                                    //     ),
+                                    //   ),
+                                    // ),
+                                  ],
+                                );
+                              } else {
+                                return const SizedBox();
+                              }
                             }
                           );
                         } else {
-                          return Text('Empty Data');
+                          return const SizedBox();
                         }
                       },
                     ),
                   ),
-                  // Container(
-                  //   height: 70.h,
-                  //   width: 100.w,
-                  //   decoration: BoxDecoration(
-                  //       color: white,
-                  //       borderRadius: BorderRadius.circular(15)
-                  //   ),
-                  //   margin: const EdgeInsets.only(left: 10, right: 10, top: 10),
-                  //   child: NestedScrollView(
-                  //     headerSliverBuilder: (_, ch) {
-                  //       return [];
-                  //     },
-                  //     body: GridView.builder(
-                  //         itemCount: 10,
-                  //         padding: const EdgeInsets.only(top: 10),
-                  //         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  //           childAspectRatio: 1,
-                  //           crossAxisCount: 1,
-                  //           mainAxisExtent: 16.h,
-                  //         ),
-                  //         itemBuilder: (_, i) {
-                  //           return Column(
-                  //             children: [
-                  //               Row(
-                  //                 children: [
-                  //                   SizedBox(
-                  //                     height: 6.h,
-                  //                     width: 90.w,
-                  //                     child: Row(
-                  //                       children: [
-                  //                         const Spacer(),
-                  //                         Container(
-                  //                           width: 70.w,
-                  //                           height: 6.h,
-                  //                           padding: const EdgeInsets.all(5),
-                  //                           decoration: BoxDecoration(
-                  //                               color: chatbck,
-                  //                               borderRadius: BorderRadius.circular(20)
-                  //                           ),
-                  //                           alignment: Alignment.centerLeft,
-                  //                           child: Text(
-                  //                             "test message content",
-                  //                             maxLines: 1,
-                  //                             overflow: TextOverflow.clip,
-                  //                             style: TextStyle(
-                  //                               fontSize: 18.sp,
-                  //                             ),
-                  //                           ),
-                  //                         ),
-                  //                         const Spacer(),
-                  //                         Container(
-                  //                           width: 15.w,
-                  //                           height: 8.h,
-                  //                           alignment: Alignment.center,
-                  //                           child: CachedNetworkImage(
-                  //                             imageUrl: cont.teacherImage,
-                  //                             errorWidget: (_, i, e) {
-                  //                               return Icon(
-                  //                                 FontAwesomeIcons.image,
-                  //                                 size: 13.sp,
-                  //                                 color: Colors.grey,
-                  //                               );
-                  //                             },
-                  //                           ),
-                  //                         ),
-                  //                         Spacer(),
-                  //                       ],
-                  //                     ),
-                  //                   ),
-                  //                 ],
-                  //               ),
-                  //               SizedBox(height: 16),
-                  //               Row(
-                  //                 children: [
-                  //                   SizedBox(
-                  //                     height: 6.h,
-                  //                     width: 90.w,
-                  //                     child: Row(
-                  //                       children: [
-                  //                         const Spacer(),
-                  //                         Container(
-                  //                           width: 15.w,
-                  //                           height: 8.h,
-                  //                           alignment: Alignment.center,
-                  //                           child: CachedNetworkImage(
-                  //                             imageUrl: cont.teacherImage,
-                  //                             errorWidget: (_, i, e) {
-                  //                               return Icon(
-                  //                                 FontAwesomeIcons.image,
-                  //                                 size: 13.sp,
-                  //                                 color: Colors.grey,
-                  //                               );
-                  //                             },
-                  //                           ),
-                  //                         ),
-                  //                         const Spacer(),
-                  //                         Container(
-                  //                           width: 70.w,
-                  //                           height: 6.h,
-                  //                           padding: const EdgeInsets.all(5),
-                  //                           decoration: BoxDecoration(
-                  //                               color: chatbck,
-                  //                               borderRadius: BorderRadius.circular(20)
-                  //                           ),
-                  //                           alignment: Alignment.centerLeft,
-                  //                           child: Text(
-                  //                             "test message content",
-                  //                             maxLines: 1,
-                  //                             overflow: TextOverflow.clip,
-                  //                             style: TextStyle(
-                  //                               fontSize: 18.sp,
-                  //                             ),
-                  //                           ),
-                  //                         ),
-                  //                         Spacer(),
-                  //                       ],
-                  //                     ),
-                  //                   ),
-                  //                 ],
-                  //               ),
-                  //             ],
-                  //           );
-                  //         }
-                  //     ),
-                  //   ),
-                  // ),
                   Container(
                     height: 10.h,
                     width: 100.w,
@@ -364,22 +348,138 @@ class _SupportTeacherChatScreenState extends State<SupportTeacherChatScreen> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
-                        TestsTextInput(
-                          controller: TextEditingController(),
-                          hintText: "Message..",
-                          valid: (val) {
-                            if (val!.isEmpty) {
-                              return 'Required!';
-                            }
-                            return null;
-                          },
+                        SizedBox(
+                          width: 75.w,
+                          height: 7.h,
+                          child: TextFormField(
+                            controller: controller,
+                            onFieldSubmitted: (value){
+                              messages.add({
+                                kMessageUserEmail: cont.userEmail,
+                                kMessageContent: value,
+                                kMessageTo: cont.teacherEmail,
+                                kMessageCreatedAt: DateTime.now(),
+                              }).then((value){
+                                Get.defaultDialog(
+                                  backgroundColor: white,
+                                  title: "Success",
+                                  titlePadding: EdgeInsets.only(bottom: 2.h, top: 1.h),
+                                  titleStyle: TextStyle(
+                                    fontSize: 18.sp,
+                                    fontFamily: "Cairo",
+                                    color: green,
+                                    fontWeight: FontWeight.bold
+                                  ),
+                                  content: Text(
+                                    "Message Sent Successfully..",
+                                    style: TextStyle(
+                                      fontSize: 18.sp,
+                                      fontFamily: "Cairo",
+                                    ),
+                                  ),
+                                );
+                                controller.clear();
+                                _controller.animateTo(
+                                  0,
+                                  duration: const Duration(seconds: 1),
+                                  curve: Curves.easeIn,
+                                );
+                              }).catchError((error){
+                                print("Failed to submit message: $error");
+                              });
+                            },
+                            onChanged: (value) {
+                              messageText = value;
+                            },
+                            autofocus: true,
+                            style: TextStyle(
+                              fontSize: 18.sp,
+                              color: black,
+                            ),
+                            decoration: InputDecoration(
+                              hintText: "Message..",
+                              hintStyle: TextStyle(
+                                  fontSize: 17.sp,
+                                  color: black,
+                                  fontFamily: 'Cairo'
+                              ),
+                              errorStyle: TextStyle(
+                                  color: red,
+                                  fontSize: 15.sp,
+                                  fontFamily: 'Cairo'
+                              ),
+                              contentPadding: EdgeInsets.symmetric(
+                                horizontal: 5.w,
+                              ),
+                              enabledBorder: OutlineInputBorder(
+                                borderSide: const BorderSide(
+                                    width: 1,
+                                    color: black
+                                ),
+                                borderRadius: BorderRadius.circular(10),
+                              ),
+                              focusedBorder: OutlineInputBorder(
+                                borderSide: const BorderSide(
+                                    width: 1,
+                                    color: black
+                                ),
+                                borderRadius: BorderRadius.circular(10),
+                              ),
+                              errorBorder: OutlineInputBorder(
+                                borderSide: const BorderSide(
+                                    width: 1,
+                                    color: red
+                                ),
+                                borderRadius: BorderRadius.circular(10),
+                              ),
+                              focusedErrorBorder: OutlineInputBorder(
+                                borderSide: const BorderSide(
+                                    width: 1,
+                                    color: red
+                                ),
+                                borderRadius: BorderRadius.circular(10),
+                              ),
+                            ),
+                          ),
                         ),
                         SizedBox(
                           height: 10.h,
                           width: 10.w,
                           child: IconButton(
                             onPressed: () {
-
+                              messages.add({
+                                kMessageUserEmail: cont.userEmail,
+                                kMessageContent: messageText,
+                                kMessageTo: cont.teacherEmail,
+                                kMessageCreatedAt: DateTime.now(),
+                              }).then((value){
+                                Get.defaultDialog(
+                                  backgroundColor: white,
+                                  title: "Success",
+                                  titlePadding: EdgeInsets.only(bottom: 2.h, top: 1.h),
+                                  titleStyle: TextStyle(
+                                    fontSize: 18.sp,
+                                    fontFamily: "Cairo",
+                                    color: green,
+                                    fontWeight: FontWeight.bold
+                                  ),
+                                  content: Text(
+                                    "Message Sent Successfully..",
+                                    style: TextStyle(
+                                      fontSize: 18.sp,
+                                      fontFamily: "Cairo",
+                                    ),
+                                  ),
+                                );
+                                controller.clear();
+                                _controller.animateTo(
+                                  0,
+                                  duration: const Duration(seconds: 1),
+                                  curve: Curves.easeIn,
+                                );
+                              }).catchError((error){
+                                print("Failed to submit message: $error");
+                              });
                             },
                             icon: Icon(Icons.send, size: 25.sp),
                           ),

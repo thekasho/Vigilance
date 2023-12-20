@@ -28,6 +28,7 @@ class StdChatTeacherImp extends StdChatTeacher {
   String teacherEmail = "";
   String teacherName = "";
   String teacherImage = "";
+  String userImage = "";
   List messagesList = [];
 
   @override
@@ -70,6 +71,7 @@ class StdChatTeacherImp extends StdChatTeacher {
       Map req = {
         'user_email': loginData['email']
       };
+      print(loginData);
 
       var auth = await requests.postData(req, ApiLinks.getTeacher);
 
@@ -180,6 +182,7 @@ class StdChatTeacherImp extends StdChatTeacher {
         teacherName = auth['result']['username'];
         teacherImage = auth['result']['image'];
         userEmail = loginData['email'];
+        userImage = loginData['image'];
         update();
       }
     }
