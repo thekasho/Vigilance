@@ -1,11 +1,9 @@
-import 'dart:convert';
-
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 import 'package:internet_connection_checker/internet_connection_checker.dart';
+import 'package:intl/intl.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
-import 'package:win32/win32.dart';
 
 import '../../../app_links.dart';
 import '../../../core/class/statusrequest.dart';
@@ -16,10 +14,16 @@ import '../../../repo/api.dart';
 abstract class StdChatTeacher extends GetxController {
   checkNetwork();
   getTeacherData();
-  getMessages();
+  newMessage();
 }
 class StdChatTeacherImp extends StdChatTeacher {
   Requests requests = Requests(Get.find());
+  CollectionReference messages = FirebaseFirestore.instance.collection(kMessages);
+  DateFormat f = DateFormat('yyyy-MM-dd hh:mm');
+
+  GlobalKey<FormState> formstate = GlobalKey<FormState>();
+
+  late TextEditingController content;
 
   bool isConnected = false;
   StatusRequest statusRequest = StatusRequest.none;
@@ -189,34 +193,80 @@ class StdChatTeacherImp extends StdChatTeacher {
   }
 
   @override
-  getMessages() async {
-
-    // CollectionReference messages = FirebaseFirestore.instance.collection(kMessages);
-    // final mess = await messages.doc('user_name').get();
-    // Map data = mess.data() as Map;
-    // print(data);
-
-    // QuerySnapshot value = await FirebaseFirestore.instance.collection(kMessages).get();
-    // print(value);
-    //
-    // QuerySnapshot<Map<String, dynamic>> data = await FirebaseFirestore.instance.collection('object').get();
-    // List objList = data.docs.map((data) => data['user_name'].toList();
-
+  newMessage() async {
+    try {
+      var formdata = formstate.currentState;
+      if (formdata!.validate()) {
+        if(!isConnected){
+          Get.defaultDialog(
+            backgroundColor: white,
+            title: "Error",
+            titlePadding: EdgeInsets.only(bottom: 2.h, top: 1.h),
+            titleStyle: TextStyle(
+                fontSize: 18.sp,
+                fontFamily: "Cairo",
+                color: red,
+                fontWeight: FontWeight.bold
+            ),
+            content: Text(
+              "No Internet Connection !!",
+              style: TextStyle(
+                fontSize: 18.sp,
+                fontFamily: "Cairo",
+              ),
+            ),
+          );
+          statusRequest = StatusRequest.failure;
+          update();
+          return;
+        }
+        messages.add({
+          kMessageContent: content.text,
+          kMessageUserEmail: userEmail,
+          kMessageTo: teacherEmail,
+          kMessageCreatedAt: DateTime.now(),
+        }).then((value){
+          Get.defaultDialog(
+            backgroundColor: white,
+            title: "Success",
+            titlePadding: EdgeInsets.only(bottom: 2.h, top: 1.h),
+            titleStyle: TextStyle(
+              fontSize: 18.sp,
+              fontFamily: "Cairo",
+              color: green,
+              fontWeight: FontWeight.bold
+            ),
+            content: Text(
+              "Message Sent Successfully..",
+              style: TextStyle(
+                fontSize: 18.sp,
+                fontFamily: "Cairo",
+              ),
+            ),
+          );
+          content.clear();
+        }).catchError((error){
+          print("Failed to submit message: $error");
+        });
+      }
+    } catch (e) {
+      print("Error: $e");
+    }
   }
 
-
   @override
-  void onReady() async {
+  void onInit() async {
     statusRequest = StatusRequest.none;
     await checkNetwork();
     await getTeacherData();
+    content = TextEditingController();
+    super.onInit();
   }
 
-  // @override
-  // void onInit() {
-  //   statusRequest = StatusRequest.none;
-  //   checkNetwork();
-  //   checkAuth();
-  //   super.onInit();
-  // }
+  @override
+  void dispose() {
+    content.dispose();
+    super.dispose();
+  }
+
 }
