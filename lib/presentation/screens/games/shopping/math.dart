@@ -2133,8 +2133,8 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                             child: Text(
                               "90 + 11 - 8 = ?",
                               style: TextStyle(
-                                fontSize: 29.sp,
-                                fontWeight: FontWeight.bold
+                                  fontSize: 29.sp,
+                                  fontWeight: FontWeight.bold
                               ),
                             ),
                           ),
@@ -2265,6 +2265,564 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                                 style: TextStyle(
                                     fontSize: 35.sp,
                                     fontWeight: FontWeight.bold
+                                ),
+                              ),
+                            ),
+                          ),
+                          const Spacer(),
+                        ],
+                      ),
+                    ],
+                  );
+                } else if (cont.clevel == 13) {
+                  return Column(
+                    children: [
+                      SizedBox(height: 3.h),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Container(
+                            width: 60.w,
+                            height: 6.h,
+                            alignment: Alignment.center,
+                            decoration: BoxDecoration(
+                              color: white,
+                              borderRadius: BorderRadius.circular(15),
+                              boxShadow: const [
+                                BoxShadow(
+                                  blurRadius: 4,
+                                  color: Color(0x33000000),
+                                  offset: Offset(0, 2),
+                                  spreadRadius: 2,
+                                )
+                              ],
+                            ),
+                            padding: EdgeInsets.symmetric(
+                                vertical: .5.h
+                            ),
+                            child: Text(
+                              "Level 13",
+                              style: TextStyle(
+                                fontSize: 22.sp,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBox(height: 6.h),
+                      Row(
+                        children: [
+                          Container(
+                            width: 100.w,
+                            alignment: Alignment.center,
+                            child: Text(
+                              "19 + 10 - 45 = ?",
+                              style: TextStyle(
+                                  fontSize: 29.sp,
+                                  fontWeight: FontWeight.bold
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBox(height: 10.h),
+                      Row(
+                        children: [
+                          const Spacer(),
+                          GestureDetector(
+                            onTap: () {
+                              cont.submitMathAns(54);
+                            },
+                            child: Container(
+                              alignment: Alignment.center,
+                              width: 40.w,
+                              height: 23.h,
+                              decoration: BoxDecoration(
+                                color: orangeBtn,
+                                borderRadius: BorderRadius.circular(10),
+                                boxShadow: const [
+                                  BoxShadow(
+                                    blurRadius: 4,
+                                    color: Color(0x33000000),
+                                    offset: Offset(0, 2),
+                                    spreadRadius: 2,
+                                  ),
+                                ],
+                              ),
+                              child: Text(
+                                "54",
+                                style: TextStyle(
+                                    fontSize: 35.sp,
+                                    fontWeight: FontWeight.bold
+                                ),
+                              ),
+                            ),
+                          ),
+                          const Spacer(),
+                          GestureDetector(
+                            onTap: () {
+                              cont.submitMathAns(90);
+                            },
+                            child: Container(
+                              alignment: Alignment.center,
+                              width: 40.w,
+                              height: 23.h,
+                              decoration: BoxDecoration(
+                                color: orangeBtn,
+                                borderRadius: BorderRadius.circular(10),
+                                boxShadow: const [
+                                  BoxShadow(
+                                    blurRadius: 4,
+                                    color: Color(0x33000000),
+                                    offset: Offset(0, 2),
+                                    spreadRadius: 2,
+                                  ),
+                                ],
+                              ),
+                              child: Text(
+                                "90",
+                                style: TextStyle(
+                                    fontSize: 35.sp,
+                                    fontWeight: FontWeight.bold
+                                ),
+                              ),
+                            ),
+                          ),
+                          const Spacer(),
+                        ],
+                      ),
+                      SizedBox(height: 3.h),
+                      Row(
+                        children: [
+                          const Spacer(),
+                          GestureDetector(
+                            onTap: () {
+                              cont.submitMathAns(86);
+                            },
+                            child: Container(
+                              alignment: Alignment.center,
+                              width: 40.w,
+                              height: 23.h,
+                              decoration: BoxDecoration(
+                                color: orangeBtn,
+                                borderRadius: BorderRadius.circular(10),
+                                boxShadow: const [
+                                  BoxShadow(
+                                    blurRadius: 4,
+                                    color: Color(0x33000000),
+                                    offset: Offset(0, 2),
+                                    spreadRadius: 2,
+                                  ),
+                                ],
+                              ),
+                              child: Text(
+                                "86",
+                                style: TextStyle(
+                                    fontSize: 35.sp,
+                                    fontWeight: FontWeight.bold
+                                ),
+                              ),
+                            ),
+                          ),
+                          const Spacer(),
+                          GestureDetector(
+                            onTap: () {
+                              cont.submitMathAns(19);
+                            },
+                            child: Container(
+                              alignment: Alignment.center,
+                              width: 40.w,
+                              height: 23.h,
+                              decoration: BoxDecoration(
+                                color: orangeBtn,
+                                borderRadius: BorderRadius.circular(10),
+                                boxShadow: const [
+                                  BoxShadow(
+                                    blurRadius: 4,
+                                    color: Color(0x33000000),
+                                    offset: Offset(0, 2),
+                                    spreadRadius: 2,
+                                  ),
+                                ],
+                              ),
+                              child: Text(
+                                "19",
+                                style: TextStyle(
+                                    fontSize: 35.sp,
+                                    fontWeight: FontWeight.bold
+                                ),
+                              ),
+                            ),
+                          ),
+                          const Spacer(),
+                        ],
+                      ),
+                    ],
+                  );
+                } else if (cont.clevel == 14) {
+                  return Column(
+                    children: [
+                      SizedBox(height: 3.h),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Container(
+                            width: 60.w,
+                            height: 6.h,
+                            alignment: Alignment.center,
+                            decoration: BoxDecoration(
+                              color: white,
+                              borderRadius: BorderRadius.circular(15),
+                              boxShadow: const [
+                                BoxShadow(
+                                  blurRadius: 4,
+                                  color: Color(0x33000000),
+                                  offset: Offset(0, 2),
+                                  spreadRadius: 2,
+                                )
+                              ],
+                            ),
+                            padding: EdgeInsets.symmetric(
+                                vertical: .5.h
+                            ),
+                            child: Text(
+                              "Level 14",
+                              style: TextStyle(
+                                fontSize: 22.sp,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBox(height: 6.h),
+                      Row(
+                        children: [
+                          Container(
+                            width: 100.w,
+                            alignment: Alignment.center,
+                            child: Text(
+                              "40 + 8 - 25 = ?",
+                              style: TextStyle(
+                                  fontSize: 29.sp,
+                                  fontWeight: FontWeight.bold
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBox(height: 10.h),
+                      Row(
+                        children: [
+                          const Spacer(),
+                          GestureDetector(
+                            onTap: () {
+                              cont.submitMathAns(22);
+                            },
+                            child: Container(
+                              alignment: Alignment.center,
+                              width: 40.w,
+                              height: 23.h,
+                              decoration: BoxDecoration(
+                                color: orangeBtn,
+                                borderRadius: BorderRadius.circular(10),
+                                boxShadow: const [
+                                  BoxShadow(
+                                    blurRadius: 4,
+                                    color: Color(0x33000000),
+                                    offset: Offset(0, 2),
+                                    spreadRadius: 2,
+                                  ),
+                                ],
+                              ),
+                              child: Text(
+                                "22",
+                                style: TextStyle(
+                                    fontSize: 35.sp,
+                                    fontWeight: FontWeight.bold
+                                ),
+                              ),
+                            ),
+                          ),
+                          const Spacer(),
+                          GestureDetector(
+                            onTap: () {
+                              cont.submitMathAns(23);
+                            },
+                            child: Container(
+                              alignment: Alignment.center,
+                              width: 40.w,
+                              height: 23.h,
+                              decoration: BoxDecoration(
+                                color: orangeBtn,
+                                borderRadius: BorderRadius.circular(10),
+                                boxShadow: const [
+                                  BoxShadow(
+                                    blurRadius: 4,
+                                    color: Color(0x33000000),
+                                    offset: Offset(0, 2),
+                                    spreadRadius: 2,
+                                  ),
+                                ],
+                              ),
+                              child: Text(
+                                "23",
+                                style: TextStyle(
+                                    fontSize: 35.sp,
+                                    fontWeight: FontWeight.bold
+                                ),
+                              ),
+                            ),
+                          ),
+                          const Spacer(),
+                        ],
+                      ),
+                      SizedBox(height: 3.h),
+                      Row(
+                        children: [
+                          const Spacer(),
+                          GestureDetector(
+                            onTap: () {
+                              cont.submitMathAns(41);
+                            },
+                            child: Container(
+                              alignment: Alignment.center,
+                              width: 40.w,
+                              height: 23.h,
+                              decoration: BoxDecoration(
+                                color: orangeBtn,
+                                borderRadius: BorderRadius.circular(10),
+                                boxShadow: const [
+                                  BoxShadow(
+                                    blurRadius: 4,
+                                    color: Color(0x33000000),
+                                    offset: Offset(0, 2),
+                                    spreadRadius: 2,
+                                  ),
+                                ],
+                              ),
+                              child: Text(
+                                "41",
+                                style: TextStyle(
+                                    fontSize: 35.sp,
+                                    fontWeight: FontWeight.bold
+                                ),
+                              ),
+                            ),
+                          ),
+                          const Spacer(),
+                          GestureDetector(
+                            onTap: () {
+                              cont.submitMathAns(19);
+                            },
+                            child: Container(
+                              alignment: Alignment.center,
+                              width: 40.w,
+                              height: 23.h,
+                              decoration: BoxDecoration(
+                                color: orangeBtn,
+                                borderRadius: BorderRadius.circular(10),
+                                boxShadow: const [
+                                  BoxShadow(
+                                    blurRadius: 4,
+                                    color: Color(0x33000000),
+                                    offset: Offset(0, 2),
+                                    spreadRadius: 2,
+                                  ),
+                                ],
+                              ),
+                              child: Text(
+                                "19",
+                                style: TextStyle(
+                                    fontSize: 35.sp,
+                                    fontWeight: FontWeight.bold
+                                ),
+                              ),
+                            ),
+                          ),
+                          const Spacer(),
+                        ],
+                      ),
+                    ],
+                  );
+                } else if (cont.clevel == 15) {
+                  return Column(
+                    children: [
+                      SizedBox(height: 3.h),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Container(
+                            width: 60.w,
+                            height: 6.h,
+                            alignment: Alignment.center,
+                            decoration: BoxDecoration(
+                              color: white,
+                              borderRadius: BorderRadius.circular(15),
+                              boxShadow: const [
+                                BoxShadow(
+                                  blurRadius: 4,
+                                  color: Color(0x33000000),
+                                  offset: Offset(0, 2),
+                                  spreadRadius: 2,
+                                )
+                              ],
+                            ),
+                            padding: EdgeInsets.symmetric(
+                                vertical: .5.h
+                            ),
+                            child: Text(
+                              "Level 15",
+                              style: TextStyle(
+                                fontSize: 22.sp,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBox(height: 6.h),
+                      Row(
+                        children: [
+                          Container(
+                            width: 100.w,
+                            alignment: Alignment.center,
+                            child: Text(
+                              "200 - 92 + 50 = ?",
+                              style: TextStyle(
+                                  fontSize: 29.sp,
+                                  fontWeight: FontWeight.bold
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBox(height: 10.h),
+                      Row(
+                        children: [
+                          const Spacer(),
+                          GestureDetector(
+                            onTap: () {
+                              cont.submitMathAns(219);
+                            },
+                            child: Container(
+                              alignment: Alignment.center,
+                              width: 40.w,
+                              height: 23.h,
+                              decoration: BoxDecoration(
+                                color: orangeBtn,
+                                borderRadius: BorderRadius.circular(10),
+                                boxShadow: const [
+                                  BoxShadow(
+                                    blurRadius: 4,
+                                    color: Color(0x33000000),
+                                    offset: Offset(0, 2),
+                                    spreadRadius: 2,
+                                  ),
+                                ],
+                              ),
+                              child: Text(
+                                "219",
+                                style: TextStyle(
+                                  fontSize: 35.sp,
+                                  fontWeight: FontWeight.bold
+                                ),
+                              ),
+                            ),
+                          ),
+                          const Spacer(),
+                          GestureDetector(
+                            onTap: () {
+                              cont.submitMathAns(158);
+                            },
+                            child: Container(
+                              alignment: Alignment.center,
+                              width: 40.w,
+                              height: 23.h,
+                              decoration: BoxDecoration(
+                                color: orangeBtn,
+                                borderRadius: BorderRadius.circular(10),
+                                boxShadow: const [
+                                  BoxShadow(
+                                    blurRadius: 4,
+                                    color: Color(0x33000000),
+                                    offset: Offset(0, 2),
+                                    spreadRadius: 2,
+                                  ),
+                                ],
+                              ),
+                              child: Text(
+                                "158",
+                                style: TextStyle(
+                                  fontSize: 35.sp,
+                                  fontWeight: FontWeight.bold
+                                ),
+                              ),
+                            ),
+                          ),
+                          const Spacer(),
+                        ],
+                      ),
+                      SizedBox(height: 3.h),
+                      Row(
+                        children: [
+                          const Spacer(),
+                          GestureDetector(
+                            onTap: () {
+                              cont.submitMathAns(41);
+                            },
+                            child: Container(
+                              alignment: Alignment.center,
+                              width: 40.w,
+                              height: 23.h,
+                              decoration: BoxDecoration(
+                                color: orangeBtn,
+                                borderRadius: BorderRadius.circular(10),
+                                boxShadow: const [
+                                  BoxShadow(
+                                    blurRadius: 4,
+                                    color: Color(0x33000000),
+                                    offset: Offset(0, 2),
+                                    spreadRadius: 2,
+                                  ),
+                                ],
+                              ),
+                              child: Text(
+                                "41",
+                                style: TextStyle(
+                                    fontSize: 35.sp,
+                                    fontWeight: FontWeight.bold
+                                ),
+                              ),
+                            ),
+                          ),
+                          const Spacer(),
+                          GestureDetector(
+                            onTap: () {
+                              cont.submitMathAns(19);
+                            },
+                            child: Container(
+                              alignment: Alignment.center,
+                              width: 40.w,
+                              height: 23.h,
+                              decoration: BoxDecoration(
+                                color: orangeBtn,
+                                borderRadius: BorderRadius.circular(10),
+                                boxShadow: const [
+                                  BoxShadow(
+                                    blurRadius: 4,
+                                    color: Color(0x33000000),
+                                    offset: Offset(0, 2),
+                                    spreadRadius: 2,
+                                  ),
+                                ],
+                              ),
+                              child: Text(
+                                "19",
+                                style: TextStyle(
+                                  fontSize: 35.sp,
+                                  fontWeight: FontWeight.bold
                                 ),
                               ),
                             ),

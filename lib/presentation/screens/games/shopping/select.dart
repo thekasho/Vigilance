@@ -146,20 +146,50 @@ class _ShopSelectScreenState extends State<ShopSelectScreen> {
         shoppingGameContImp.lvlTen7Y = false;
         shoppingGameContImp.lvlTen7N = false;
 
-        shoppingGameContImp.lvlEleven1Y = false;
-        shoppingGameContImp.lvlEleven1N = false;
-        shoppingGameContImp.lvlEleven2Y = false;
-        shoppingGameContImp.lvlEleven2N = false;
-        shoppingGameContImp.lvlEleven3Y = false;
-        shoppingGameContImp.lvlEleven3N = false;
-        shoppingGameContImp.lvlEleven4Y = false;
-        shoppingGameContImp.lvlEleven4N = false;
-        shoppingGameContImp.lvlEleven5Y = false;
-        shoppingGameContImp.lvlEleven5N = false;
-        shoppingGameContImp.lvlEleven6Y = false;
-        shoppingGameContImp.lvlEleven6N = false;
-        shoppingGameContImp.lvlEleven7Y = false;
-        shoppingGameContImp.lvlEleven7N = false;
+        shoppingGameContImp.lvlTwelve1Y = false;
+        shoppingGameContImp.lvlTwelve1N = false;
+        shoppingGameContImp.lvlTwelve2Y = false;
+        shoppingGameContImp.lvlTwelve2N = false;
+        shoppingGameContImp.lvlTwelve3Y = false;
+        shoppingGameContImp.lvlTwelve3N = false;
+        shoppingGameContImp.lvlTwelve4Y = false;
+        shoppingGameContImp.lvlTwelve4N = false;
+        shoppingGameContImp.lvlTwelve5Y = false;
+        shoppingGameContImp.lvlTwelve5N = false;
+        shoppingGameContImp.lvlTwelve6Y = false;
+        shoppingGameContImp.lvlTwelve6N = false;
+        shoppingGameContImp.lvlTwelve7Y = false;
+        shoppingGameContImp.lvlTwelve7N = false;
+
+        shoppingGameContImp.lvlThirteen1Y = false;
+        shoppingGameContImp.lvlThirteen1N = false;
+        shoppingGameContImp.lvlThirteen2Y = false;
+        shoppingGameContImp.lvlThirteen2N = false;
+        shoppingGameContImp.lvlThirteen3Y = false;
+        shoppingGameContImp.lvlThirteen3N = false;
+        shoppingGameContImp.lvlThirteen4Y = false;
+        shoppingGameContImp.lvlThirteen4N = false;
+        shoppingGameContImp.lvlThirteen5Y = false;
+        shoppingGameContImp.lvlThirteen5N = false;
+        shoppingGameContImp.lvlThirteen6Y = false;
+        shoppingGameContImp.lvlThirteen6N = false;
+        shoppingGameContImp.lvlThirteen7Y = false;
+        shoppingGameContImp.lvlThirteen7N = false;
+
+        shoppingGameContImp.lvlFiveteen1Y = false;
+        shoppingGameContImp.lvlFiveteen1N = false;
+        shoppingGameContImp.lvlFiveteen2Y = false;
+        shoppingGameContImp.lvlFiveteen2N = false;
+        shoppingGameContImp.lvlFiveteen3Y = false;
+        shoppingGameContImp.lvlFiveteen3N = false;
+        shoppingGameContImp.lvlFiveteen4Y = false;
+        shoppingGameContImp.lvlFiveteen4N = false;
+        shoppingGameContImp.lvlFiveteen5Y = false;
+        shoppingGameContImp.lvlFiveteen5N = false;
+        shoppingGameContImp.lvlFiveteen6Y = false;
+        shoppingGameContImp.lvlFiveteen6N = false;
+        shoppingGameContImp.lvlFiveteen7Y = false;
+        shoppingGameContImp.lvlFiveteen7N = false;
 
         Get.back();
         return false;
@@ -2942,6 +2972,765 @@ class _ShopSelectScreenState extends State<ShopSelectScreen> {
                                       ),
                                       Visibility(
                                         visible: cont.lvlTwelve7N,
+                                        child: Image.asset("assets/images/shopping/no.png", width: 7.w),
+                                      ),
+                                    ],
+                                  ),
+                                  SizedBox(width: 8.w),
+                                ],
+                              ),
+                            ],
+                          );
+                        } else if (cont.clevel == 13) {
+                          return Column(
+                            children: [
+                              SizedBox(
+                                width: 100.w,
+                                height: 15.h,
+                              ),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                children: [
+                                  SizedBox(width: 10.w),
+                                  Stack(
+                                    alignment: AlignmentDirectional.bottomStart,
+                                    children: [
+                                      GestureDetector(
+                                        onTap: () {
+                                          cont.saveClicks(23, 1);
+                                        },
+                                        child: SizedBox(
+                                          width: 90,
+                                          child: CachedNetworkImage(
+                                            imageUrl: "https://microplazatesla.com/vl/images/shopping/23.png",
+                                            errorWidget: (_, i, e) {
+                                              return Icon(
+                                                FontAwesomeIcons.image,
+                                                size: 40.sp,
+                                                color: Colors.white,
+                                              );
+                                            },
+                                          ),
+                                        ),
+                                      ),                                                              // 1 - 23
+                                      Visibility(
+                                        visible: cont.lvlThirteen1Y,
+                                        child: Image.asset("assets/images/shopping/yes.png", width: 7.w),
+                                      ),
+                                      Visibility(
+                                        visible: cont.lvlThirteen1N,
+                                        child: Image.asset("assets/images/shopping/no.png", width: 7.w),
+                                      ),
+                                    ],
+                                  ),
+                                  const Spacer(),
+                                  Stack(
+                                    alignment: AlignmentDirectional.bottomStart,
+                                    children: [
+                                      GestureDetector(
+                                        onTap: () {
+                                          cont.saveClicks(50, 2);
+                                        },
+                                        child: SizedBox(
+                                          width: 80,
+                                          child: CachedNetworkImage(
+                                            imageUrl: "https://microplazatesla.com/vl/images/shopping/50.png",
+                                            errorWidget: (_, i, e) {
+                                              return Icon(
+                                                FontAwesomeIcons.image,
+                                                size: 40.sp,
+                                                color: Colors.white,
+                                              );
+                                            },
+                                          ),
+                                        ),
+                                      ),                                                              // 2 - 50
+                                      Visibility(
+                                        visible: cont.lvlThirteen2Y,
+                                        child: Image.asset("assets/images/shopping/yes.png", width: 7.w),
+                                      ),
+                                      Visibility(
+                                        visible: cont.lvlThirteen2N,
+                                        child: Image.asset("assets/images/shopping/no.png", width: 7.w),
+                                      ),
+                                    ],
+                                  ),
+                                  const Spacer(),
+                                  Stack(
+                                    alignment: AlignmentDirectional.bottomStart,
+                                    children: [
+                                      GestureDetector(
+                                        onTap: () {
+                                          cont.saveClicks(54, 3);
+                                        },
+                                        child: SizedBox(
+                                          width: 65,
+                                          child: CachedNetworkImage(
+                                            imageUrl: "https://microplazatesla.com/vl/images/shopping/54.png",
+                                            errorWidget: (_, i, e) {
+                                              return Icon(
+                                                FontAwesomeIcons.image,
+                                                size: 40.sp,
+                                                color: Colors.white,
+                                              );
+                                            },
+                                          ),
+                                        ),
+                                      ),                                                              // 3 - 54
+                                      Visibility(
+                                        visible: cont.lvlThirteen3Y,
+                                        child: Image.asset("assets/images/shopping/yes.png", width: 7.w),
+                                      ),
+                                      Visibility(
+                                        visible: cont.lvlThirteen3N,
+                                        child: Image.asset("assets/images/shopping/no.png", width: 7.w),
+                                      ),
+                                    ],
+                                  ),
+                                  SizedBox(width: 5.w),
+                                ],
+                              ),
+                              SizedBox(height: 10.h),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                children: [
+                                  SizedBox(width: 16.w),
+                                  Stack(
+                                    alignment: AlignmentDirectional.bottomStart,
+                                    children: [
+                                      GestureDetector(
+                                        onTap: () {
+                                          cont.saveClicks(19, 4);
+                                        },
+                                        child: SizedBox(
+                                          width: 90,
+                                          child: CachedNetworkImage(
+                                            imageUrl: "https://microplazatesla.com/vl/images/shopping/19.png",
+                                            errorWidget: (_, i, e) {
+                                              return Icon(
+                                                FontAwesomeIcons.image,
+                                                size: 40.sp,
+                                                color: Colors.white,
+                                              );
+                                            },
+                                          ),
+                                        ),
+                                      ),                                                              // 4 - 19
+                                      Visibility(
+                                        visible: cont.lvlThirteen4Y,
+                                        child: Image.asset("assets/images/shopping/yes.png", width: 7.w),
+                                      ),
+                                      Visibility(
+                                        visible: cont.lvlThirteen4N,
+                                        child: Image.asset("assets/images/shopping/no.png", width: 7.w),
+                                      ),
+                                    ],
+                                  ),
+                                  const Spacer(),
+                                  Stack(
+                                    alignment: AlignmentDirectional.bottomStart,
+                                    children: [
+                                      GestureDetector(
+                                        onTap: () {
+                                          cont.saveClicks(28, 5);
+                                        },
+                                        child: SizedBox(
+                                          width: 70,
+                                          child: CachedNetworkImage(
+                                            imageUrl: "https://microplazatesla.com/vl/images/shopping/28.png",
+                                            errorWidget: (_, i, e) {
+                                              return Icon(
+                                                FontAwesomeIcons.image,
+                                                size: 40.sp,
+                                                color: Colors.white,
+                                              );
+                                            },
+                                          ),
+                                        ),
+                                      ),                                                              // 5 - 28
+                                      Visibility(
+                                        visible: cont.lvlThirteen5Y,
+                                        child: Image.asset("assets/images/shopping/yes.png", width: 7.w),
+                                      ),
+                                      Visibility(
+                                        visible: cont.lvlThirteen5N,
+                                        child: Image.asset("assets/images/shopping/no.png", width: 7.w),
+                                      ),
+                                    ],
+                                  ),
+                                  SizedBox(width: 8.w),
+                                ],
+                              ),
+                              SizedBox(height: 10.h),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                children: [
+                                  SizedBox(width: 16.w),
+                                  Stack(
+                                    alignment: AlignmentDirectional.bottomStart,
+                                    children: [
+                                      GestureDetector(
+                                        onTap: () {
+                                          cont.saveClicks(20, 6);
+                                        },
+                                        child: SizedBox(
+                                          width: 80,
+                                          child: CachedNetworkImage(
+                                            imageUrl: "https://microplazatesla.com/vl/images/shopping/20.png",
+                                            errorWidget: (_, i, e) {
+                                              return Icon(
+                                                FontAwesomeIcons.image,
+                                                size: 40.sp,
+                                                color: Colors.white,
+                                              );
+                                            },
+                                          ),
+                                        ),
+                                      ),                                                              // 6 - 20
+                                      Visibility(
+                                        visible: cont.lvlThirteen6Y,
+                                        child: Image.asset("assets/images/shopping/yes.png", width: 7.w),
+                                      ),
+                                      Visibility(
+                                        visible: cont.lvlThirteen6N,
+                                        child: Image.asset("assets/images/shopping/no.png", width: 7.w),
+                                      ),
+                                    ],
+                                  ),
+                                  const Spacer(),
+                                  Stack(
+                                    alignment: AlignmentDirectional.bottomStart,
+                                    children: [
+                                      GestureDetector(
+                                        onTap: () {
+                                          cont.saveClicks(49, 7);
+                                        },
+                                        child: SizedBox(
+                                          width: 50,
+                                          child: CachedNetworkImage(
+                                            imageUrl: "https://microplazatesla.com/vl/images/shopping/49.png",
+                                            errorWidget: (_, i, e) {
+                                              return Icon(
+                                                FontAwesomeIcons.image,
+                                                size: 40.sp,
+                                                color: Colors.white,
+                                              );
+                                            },
+                                          ),
+                                        ),
+                                      ),                                                              // 7 - 49
+                                      Visibility(
+                                        visible: cont.lvlThirteen7Y,
+                                        child: Image.asset("assets/images/shopping/yes.png", width: 7.w),
+                                      ),
+                                      Visibility(
+                                        visible: cont.lvlThirteen7N,
+                                        child: Image.asset("assets/images/shopping/no.png", width: 7.w),
+                                      ),
+                                    ],
+                                  ),
+                                  SizedBox(width: 8.w),
+                                ],
+                              ),
+                            ],
+                          );
+                        } else if (cont.clevel == 14) {
+                          return Column(
+                            children: [
+                              SizedBox(
+                                width: 100.w,
+                                height: 15.h,
+                              ),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                children: [
+                                  SizedBox(width: 10.w),
+                                  Stack(
+                                    alignment: AlignmentDirectional.bottomStart,
+                                    children: [
+                                      GestureDetector(
+                                        onTap: () {
+                                          cont.saveClicks(26, 1);
+                                        },
+                                        child: SizedBox(
+                                          width: 80,
+                                          child: CachedNetworkImage(
+                                            imageUrl: "https://microplazatesla.com/vl/images/shopping/26.png",
+                                            errorWidget: (_, i, e) {
+                                              return Icon(
+                                                FontAwesomeIcons.image,
+                                                size: 40.sp,
+                                                color: Colors.white,
+                                              );
+                                            },
+                                          ),
+                                        ),
+                                      ),                                                              // 1 - 26
+                                      Visibility(
+                                        visible: cont.lvlFourteen1Y,
+                                        child: Image.asset("assets/images/shopping/yes.png", width: 7.w),
+                                      ),
+                                      Visibility(
+                                        visible: cont.lvlFourteen1N,
+                                        child: Image.asset("assets/images/shopping/no.png", width: 7.w),
+                                      ),
+                                    ],
+                                  ),
+                                  const Spacer(),
+                                  Stack(
+                                    alignment: AlignmentDirectional.bottomStart,
+                                    children: [
+                                      GestureDetector(
+                                        onTap: () {
+                                          cont.saveClicks(1, 2);
+                                        },
+                                        child: SizedBox(
+                                          width: 80,
+                                          child: CachedNetworkImage(
+                                            imageUrl: "https://microplazatesla.com/vl/images/shopping/1.png",
+                                            errorWidget: (_, i, e) {
+                                              return Icon(
+                                                FontAwesomeIcons.image,
+                                                size: 40.sp,
+                                                color: Colors.white,
+                                              );
+                                            },
+                                          ),
+                                        ),
+                                      ),                                                              // 2 - 1
+                                      Visibility(
+                                        visible: cont.lvlFourteen2Y,
+                                        child: Image.asset("assets/images/shopping/yes.png", width: 7.w),
+                                      ),
+                                      Visibility(
+                                        visible: cont.lvlFourteen2N,
+                                        child: Image.asset("assets/images/shopping/no.png", width: 7.w),
+                                      ),
+                                    ],
+                                  ),
+                                  const Spacer(),
+                                  Stack(
+                                    alignment: AlignmentDirectional.bottomStart,
+                                    children: [
+                                      GestureDetector(
+                                        onTap: () {
+                                          cont.saveClicks(62, 3);
+                                        },
+                                        child: SizedBox(
+                                          width: 65,
+                                          child: CachedNetworkImage(
+                                            imageUrl: "https://microplazatesla.com/vl/images/shopping/62.png",
+                                            errorWidget: (_, i, e) {
+                                              return Icon(
+                                                FontAwesomeIcons.image,
+                                                size: 40.sp,
+                                                color: Colors.white,
+                                              );
+                                            },
+                                          ),
+                                        ),
+                                      ),                                                              // 3 - 62
+                                      Visibility(
+                                        visible: cont.lvlFourteen3Y,
+                                        child: Image.asset("assets/images/shopping/yes.png", width: 7.w),
+                                      ),
+                                      Visibility(
+                                        visible: cont.lvlFourteen3N,
+                                        child: Image.asset("assets/images/shopping/no.png", width: 7.w),
+                                      ),
+                                    ],
+                                  ),
+                                  SizedBox(width: 5.w),
+                                ],
+                              ),
+                              SizedBox(height: 10.h),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                children: [
+                                  SizedBox(width: 16.w),
+                                  Stack(
+                                    alignment: AlignmentDirectional.bottomStart,
+                                    children: [
+                                      GestureDetector(
+                                        onTap: () {
+                                          cont.saveClicks(24, 4);
+                                        },
+                                        child: SizedBox(
+                                          width: 90,
+                                          child: CachedNetworkImage(
+                                            imageUrl: "https://microplazatesla.com/vl/images/shopping/24.png",
+                                            errorWidget: (_, i, e) {
+                                              return Icon(
+                                                FontAwesomeIcons.image,
+                                                size: 40.sp,
+                                                color: Colors.white,
+                                              );
+                                            },
+                                          ),
+                                        ),
+                                      ),                                                              // 4 - 24
+                                      Visibility(
+                                        visible: cont.lvlFourteen4Y,
+                                        child: Image.asset("assets/images/shopping/yes.png", width: 7.w),
+                                      ),
+                                      Visibility(
+                                        visible: cont.lvlFourteen4N,
+                                        child: Image.asset("assets/images/shopping/no.png", width: 7.w),
+                                      ),
+                                    ],
+                                  ),
+                                  const Spacer(),
+                                  Stack(
+                                    alignment: AlignmentDirectional.bottomStart,
+                                    children: [
+                                      GestureDetector(
+                                        onTap: () {
+                                          cont.saveClicks(25, 5);
+                                        },
+                                        child: SizedBox(
+                                          width: 70,
+                                          child: CachedNetworkImage(
+                                            imageUrl: "https://microplazatesla.com/vl/images/shopping/25.png",
+                                            errorWidget: (_, i, e) {
+                                              return Icon(
+                                                FontAwesomeIcons.image,
+                                                size: 40.sp,
+                                                color: Colors.white,
+                                              );
+                                            },
+                                          ),
+                                        ),
+                                      ),                                                              // 5 - 25
+                                      Visibility(
+                                        visible: cont.lvlFourteen5Y,
+                                        child: Image.asset("assets/images/shopping/yes.png", width: 7.w),
+                                      ),
+                                      Visibility(
+                                        visible: cont.lvlFourteen5N,
+                                        child: Image.asset("assets/images/shopping/no.png", width: 7.w),
+                                      ),
+                                    ],
+                                  ),
+                                  SizedBox(width: 8.w),
+                                ],
+                              ),
+                              SizedBox(height: 13.h),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                children: [
+                                  SizedBox(width: 16.w),
+                                  Stack(
+                                    alignment: AlignmentDirectional.bottomStart,
+                                    children: [
+                                      GestureDetector(
+                                        onTap: () {
+                                          cont.saveClicks(15, 6);
+                                        },
+                                        child: SizedBox(
+                                          width: 80,
+                                          child: CachedNetworkImage(
+                                            imageUrl: "https://microplazatesla.com/vl/images/shopping/15.png",
+                                            errorWidget: (_, i, e) {
+                                              return Icon(
+                                                FontAwesomeIcons.image,
+                                                size: 40.sp,
+                                                color: Colors.white,
+                                              );
+                                            },
+                                          ),
+                                        ),
+                                      ),                                                              // 6 - 15
+                                      Visibility(
+                                        visible: cont.lvlFourteen6Y,
+                                        child: Image.asset("assets/images/shopping/yes.png", width: 7.w),
+                                      ),
+                                      Visibility(
+                                        visible: cont.lvlFourteen6N,
+                                        child: Image.asset("assets/images/shopping/no.png", width: 7.w),
+                                      ),
+                                    ],
+                                  ),
+                                  const Spacer(),
+                                  Stack(
+                                    alignment: AlignmentDirectional.bottomStart,
+                                    children: [
+                                      GestureDetector(
+                                        onTap: () {
+                                          cont.saveClicks(29, 7);
+                                        },
+                                        child: SizedBox(
+                                          width: 75,
+                                          child: CachedNetworkImage(
+                                            imageUrl: "https://microplazatesla.com/vl/images/shopping/29.png",
+                                            errorWidget: (_, i, e) {
+                                              return Icon(
+                                                FontAwesomeIcons.image,
+                                                size: 40.sp,
+                                                color: Colors.white,
+                                              );
+                                            },
+                                          ),
+                                        ),
+                                      ),                                                              // 7 - 29
+                                      Visibility(
+                                        visible: cont.lvlFourteen7Y,
+                                        child: Image.asset("assets/images/shopping/yes.png", width: 7.w),
+                                      ),
+                                      Visibility(
+                                        visible: cont.lvlFourteen7N,
+                                        child: Image.asset("assets/images/shopping/no.png", width: 7.w),
+                                      ),
+                                    ],
+                                  ),
+                                  SizedBox(width: 8.w),
+                                ],
+                              ),
+                            ],
+                          );
+                        } else if (cont.clevel == 15) {
+                          return Column(
+                            children: [
+                              SizedBox(
+                                width: 100.w,
+                                height: 15.h,
+                              ),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                children: [
+                                  SizedBox(width: 10.w),
+                                  Stack(
+                                    alignment: AlignmentDirectional.bottomStart,
+                                    children: [
+                                      GestureDetector(
+                                        onTap: () {
+                                          cont.saveClicks(61, 1);
+                                        },
+                                        child: SizedBox(
+                                          width: 65,
+                                          child: CachedNetworkImage(
+                                            imageUrl: "https://microplazatesla.com/vl/images/shopping/61.png",
+                                            errorWidget: (_, i, e) {
+                                              return Icon(
+                                                FontAwesomeIcons.image,
+                                                size: 40.sp,
+                                                color: Colors.white,
+                                              );
+                                            },
+                                          ),
+                                        ),
+                                      ),                                                              // 1 - 61
+                                      Visibility(
+                                        visible: cont.lvlFiveteen1Y,
+                                        child: Image.asset("assets/images/shopping/yes.png", width: 7.w),
+                                      ),
+                                      Visibility(
+                                        visible: cont.lvlFiveteen1N,
+                                        child: Image.asset("assets/images/shopping/no.png", width: 7.w),
+                                      ),
+                                    ],
+                                  ),
+                                  const Spacer(),
+                                  Stack(
+                                    alignment: AlignmentDirectional.bottomStart,
+                                    children: [
+                                      GestureDetector(
+                                        onTap: () {
+                                          cont.saveClicks(43, 2);
+                                        },
+                                        child: SizedBox(
+                                          width: 80,
+                                          child: CachedNetworkImage(
+                                            imageUrl: "https://microplazatesla.com/vl/images/shopping/43.png",
+                                            errorWidget: (_, i, e) {
+                                              return Icon(
+                                                FontAwesomeIcons.image,
+                                                size: 40.sp,
+                                                color: Colors.white,
+                                              );
+                                            },
+                                          ),
+                                        ),
+                                      ),                                                              // 2 - 43
+                                      Visibility(
+                                        visible: cont.lvlFiveteen2Y,
+                                        child: Image.asset("assets/images/shopping/yes.png", width: 7.w),
+                                      ),
+                                      Visibility(
+                                        visible: cont.lvlFiveteen2N,
+                                        child: Image.asset("assets/images/shopping/no.png", width: 7.w),
+                                      ),
+                                    ],
+                                  ),
+                                  const Spacer(),
+                                  Stack(
+                                    alignment: AlignmentDirectional.bottomStart,
+                                    children: [
+                                      GestureDetector(
+                                        onTap: () {
+                                          cont.saveClicks(60, 3);
+                                        },
+                                        child: SizedBox(
+                                          width: 80,
+                                          child: CachedNetworkImage(
+                                            imageUrl: "https://microplazatesla.com/vl/images/shopping/60.png",
+                                            errorWidget: (_, i, e) {
+                                              return Icon(
+                                                FontAwesomeIcons.image,
+                                                size: 40.sp,
+                                                color: Colors.white,
+                                              );
+                                            },
+                                          ),
+                                        ),
+                                      ),                                                              // 3 - 60
+                                      Visibility(
+                                        visible: cont.lvlFiveteen3Y,
+                                        child: Image.asset("assets/images/shopping/yes.png", width: 7.w),
+                                      ),
+                                      Visibility(
+                                        visible: cont.lvlFiveteen3N,
+                                        child: Image.asset("assets/images/shopping/no.png", width: 7.w),
+                                      ),
+                                    ],
+                                  ),
+                                  SizedBox(width: 5.w),
+                                ],
+                              ),
+                              SizedBox(height: 10.h),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                children: [
+                                  SizedBox(width: 16.w),
+                                  Stack(
+                                    alignment: AlignmentDirectional.bottomStart,
+                                    children: [
+                                      GestureDetector(
+                                        onTap: () {
+                                          cont.saveClicks(62, 4);
+                                        },
+                                        child: SizedBox(
+                                          width: 90,
+                                          child: CachedNetworkImage(
+                                            imageUrl: "https://microplazatesla.com/vl/images/shopping/62.png",
+                                            errorWidget: (_, i, e) {
+                                              return Icon(
+                                                FontAwesomeIcons.image,
+                                                size: 40.sp,
+                                                color: Colors.white,
+                                              );
+                                            },
+                                          ),
+                                        ),
+                                      ),                                                              // 4 - 62
+                                      Visibility(
+                                        visible: cont.lvlFiveteen4Y,
+                                        child: Image.asset("assets/images/shopping/yes.png", width: 7.w),
+                                      ),
+                                      Visibility(
+                                        visible: cont.lvlFiveteen4N,
+                                        child: Image.asset("assets/images/shopping/no.png", width: 7.w),
+                                      ),
+                                    ],
+                                  ),
+                                  const Spacer(),
+                                  Stack(
+                                    alignment: AlignmentDirectional.bottomStart,
+                                    children: [
+                                      GestureDetector(
+                                        onTap: () {
+                                          cont.saveClicks(5, 5);
+                                        },
+                                        child: SizedBox(
+                                          width: 70,
+                                          child: CachedNetworkImage(
+                                            imageUrl: "https://microplazatesla.com/vl/images/shopping/5.png",
+                                            errorWidget: (_, i, e) {
+                                              return Icon(
+                                                FontAwesomeIcons.image,
+                                                size: 40.sp,
+                                                color: Colors.white,
+                                              );
+                                            },
+                                          ),
+                                        ),
+                                      ),                                                              // 5 - 5
+                                      Visibility(
+                                        visible: cont.lvlFiveteen5Y,
+                                        child: Image.asset("assets/images/shopping/yes.png", width: 7.w),
+                                      ),
+                                      Visibility(
+                                        visible: cont.lvlFiveteen5N,
+                                        child: Image.asset("assets/images/shopping/no.png", width: 7.w),
+                                      ),
+                                    ],
+                                  ),
+                                  SizedBox(width: 8.w),
+                                ],
+                              ),
+                              SizedBox(height: 13.h),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                children: [
+                                  SizedBox(width: 16.w),
+                                  Stack(
+                                    alignment: AlignmentDirectional.bottomStart,
+                                    children: [
+                                      GestureDetector(
+                                        onTap: () {
+                                          cont.saveClicks(59, 6);
+                                        },
+                                        child: SizedBox(
+                                          width: 80,
+                                          child: CachedNetworkImage(
+                                            imageUrl: "https://microplazatesla.com/vl/images/shopping/59.png",
+                                            errorWidget: (_, i, e) {
+                                              return Icon(
+                                                FontAwesomeIcons.image,
+                                                size: 40.sp,
+                                                color: Colors.white,
+                                              );
+                                            },
+                                          ),
+                                        ),
+                                      ),                                                              // 6 - 59
+                                      Visibility(
+                                        visible: cont.lvlFiveteen6Y,
+                                        child: Image.asset("assets/images/shopping/yes.png", width: 7.w),
+                                      ),
+                                      Visibility(
+                                        visible: cont.lvlFiveteen6N,
+                                        child: Image.asset("assets/images/shopping/no.png", width: 7.w),
+                                      ),
+                                    ],
+                                  ),
+                                  const Spacer(),
+                                  Stack(
+                                    alignment: AlignmentDirectional.bottomStart,
+                                    children: [
+                                      GestureDetector(
+                                        onTap: () {
+                                          cont.saveClicks(63, 7);
+                                        },
+                                        child: SizedBox(
+                                          width: 75,
+                                          child: CachedNetworkImage(
+                                            imageUrl: "https://microplazatesla.com/vl/images/shopping/63.png",
+                                            errorWidget: (_, i, e) {
+                                              return Icon(
+                                                FontAwesomeIcons.image,
+                                                size: 40.sp,
+                                                color: Colors.white,
+                                              );
+                                            },
+                                          ),
+                                        ),
+                                      ),                                                              // 7 - 63
+                                      Visibility(
+                                        visible: cont.lvlFiveteen7Y,
+                                        child: Image.asset("assets/images/shopping/yes.png", width: 7.w),
+                                      ),
+                                      Visibility(
+                                        visible: cont.lvlFiveteen7N,
                                         child: Image.asset("assets/images/shopping/no.png", width: 7.w),
                                       ),
                                     ],
