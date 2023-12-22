@@ -30,7 +30,7 @@ class _StdStudyHomeScreenState extends State<StdStudyHomeScreen> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      "مذاكرة",
+                      "studying".tr,
                       style: TextStyle(
                         color: black,
                         fontWeight: FontWeight.bold,
@@ -66,7 +66,7 @@ class _StdStudyHomeScreenState extends State<StdStudyHomeScreen> {
                       child: Row(
                         children: [
                           Text(
-                            "قائمة المهام",
+                            "todo_list".tr,
                             style: TextStyle(
                                 fontSize: 19.sp,
                                 color: black,
@@ -106,7 +106,7 @@ class _StdStudyHomeScreenState extends State<StdStudyHomeScreen> {
                       child: Row(
                         children: [
                           Text(
-                            "بومودورو",
+                            "pomodoro".tr,
                             style: TextStyle(
                               fontSize: 19.sp,
                               color: black,

@@ -28,11 +28,11 @@ class _MemoryLevelsScreenState extends State<MemoryLevelsScreen> {
                       width: 11.w,
                       height: 6.h,
                       margin: EdgeInsets.only(
-                          left: 2.w
+                        left: 2.w
                       ),
                       decoration: BoxDecoration(
-                          color: white,
-                          borderRadius: BorderRadius.circular(10)
+                        color: white,
+                        borderRadius: BorderRadius.circular(10)
                       ),
                       child: GestureDetector(
                         onTap: () {
@@ -94,7 +94,7 @@ class _MemoryLevelsScreenState extends State<MemoryLevelsScreen> {
                   borderRadius: BorderRadius.circular(15),
                 ),
                 child: Text(
-                  "الذاكرة السمعية",
+                  "memory_sound".tr,
                   style: TextStyle(
                     fontSize: 20.sp,
                     fontFamily: 'Cairo',

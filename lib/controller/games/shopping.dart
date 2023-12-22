@@ -303,7 +303,7 @@ class ShoppingGameContImp extends ShoppingGameCont {
       if(!isConnected){
         Get.defaultDialog(
           backgroundColor: white,
-          title: "Error",
+          title: "error".tr,
           titlePadding: EdgeInsets.only(bottom: 2.h, top: 1.h),
           titleStyle: TextStyle(
             fontSize: 18.sp,
@@ -312,7 +312,7 @@ class ShoppingGameContImp extends ShoppingGameCont {
             fontWeight: FontWeight.bold
           ),
           content: Text(
-            "No Internet Connection !!",
+            "no_internet".tr,
             style: TextStyle(
               fontSize: 18.sp,
               fontFamily: "Cairo",
@@ -337,7 +337,7 @@ class ShoppingGameContImp extends ShoppingGameCont {
         if(StatusRequest.serverFailure == levelResponse){
           Get.defaultDialog(
             backgroundColor: white,
-            title: "Error",
+            title: "error".tr,
             titlePadding: EdgeInsets.only(bottom: 2.h, top: 1.h),
             titleStyle: TextStyle(
                 fontSize: 18.sp,
@@ -346,7 +346,7 @@ class ShoppingGameContImp extends ShoppingGameCont {
                 fontWeight: FontWeight.bold
             ),
             content: Text(
-              "Server Error !!",
+              "server_error".tr,
               style: TextStyle(
                 fontSize: 18.sp,
                 fontFamily: "Cairo",
@@ -458,7 +458,7 @@ class ShoppingGameContImp extends ShoppingGameCont {
       else {
         Get.defaultDialog(
           backgroundColor: white,
-          title: "Wrong",
+          title: "wrong".tr,
           titlePadding: EdgeInsets.only(bottom: 2.h, top: 1.h),
           titleStyle: TextStyle(
             fontSize: 18.sp,
@@ -495,12 +495,12 @@ class ShoppingGameContImp extends ShoppingGameCont {
                 ),
               ),
               child: Text(
-                "Try again",
+                "try_again".tr,
                 style: TextStyle(
-                    fontSize: 16.sp,
-                    color: black,
-                    fontWeight: FontWeight.bold,
-                    fontFamily: 'Cairo'
+                  fontSize: 16.sp,
+                  color: black,
+                  fontWeight: FontWeight.bold,
+                  fontFamily: 'Cairo'
                 ),
               ),
               onPressed: () {
@@ -526,7 +526,7 @@ class ShoppingGameContImp extends ShoppingGameCont {
                 ),
               ),
               child: Text(
-                "Back",
+                "back".tr,
                 style: TextStyle(
                   fontSize: 16.sp,
                   color: black,
@@ -604,7 +604,7 @@ class ShoppingGameContImp extends ShoppingGameCont {
           update();
           Get.defaultDialog(
               backgroundColor: white,
-              title: "Wrong Answer",
+              title: "wrong_answer".tr,
               titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
               titleStyle: TextStyle(
                   fontSize: 18.sp,

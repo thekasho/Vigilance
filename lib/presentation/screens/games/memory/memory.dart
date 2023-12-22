@@ -81,10 +81,11 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                 vertical: .5.h
                             ),
                             child: Text(
-                              "Level 1",
+                              "${"level".tr} 1",
                               style: TextStyle(
                                 fontSize: 22.sp,
                                 fontWeight: FontWeight.bold,
+                                fontFamily: 'Cairo'
                               ),
                             ),
                           ),
@@ -332,7 +333,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                 ),
                               ),
                               child: Text(
-                                "Start",
+                                "start".tr,
                                 style: TextStyle(
                                   fontSize: 19.sp,
                                   color: white,
@@ -376,10 +377,11 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                 vertical: .5.h
                             ),
                             child: Text(
-                              "Level 2",
+                              "${"level".tr} 2",
                               style: TextStyle(
                                 fontSize: 22.sp,
                                 fontWeight: FontWeight.bold,
+                                fontFamily: 'Cairo'
                               ),
                             ),
                           ),
@@ -624,7 +626,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                 ),
                               ),
                               child: Text(
-                                "Start",
+                                "start".tr,
                                 style: TextStyle(
                                     fontSize: 19.sp,
                                     color: white,
@@ -668,10 +670,11 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                 vertical: .5.h
                             ),
                             child: Text(
-                              "Level 3",
+                              "${"level".tr} 3",
                               style: TextStyle(
                                 fontSize: 22.sp,
                                 fontWeight: FontWeight.bold,
+                                fontFamily: 'Cairo',
                               ),
                             ),
                           ),
@@ -916,7 +919,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                 ),
                               ),
                               child: Text(
-                                "Start",
+                                "start".tr,
                                 style: TextStyle(
                                   fontSize: 19.sp,
                                   color: white,
@@ -960,10 +963,11 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                 vertical: .5.h
                             ),
                             child: Text(
-                              "Level 4",
+                              "${"level".tr} 4",
                               style: TextStyle(
                                 fontSize: 22.sp,
                                 fontWeight: FontWeight.bold,
+                                  fontFamily: 'Cairo'
                               ),
                             ),
                           ),
@@ -1208,7 +1212,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                 ),
                               ),
                               child: Text(
-                                "Start",
+                                "start".tr,
                                 style: TextStyle(
                                     fontSize: 19.sp,
                                     color: white,
@@ -1252,10 +1256,11 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                 vertical: .5.h
                             ),
                             child: Text(
-                              "Level 5",
+                              "${"level".tr} 5",
                               style: TextStyle(
                                 fontSize: 22.sp,
                                 fontWeight: FontWeight.bold,
+                                fontFamily: 'Cairo'
                               ),
                             ),
                           ),
@@ -1504,7 +1509,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                 ),
                               ),
                               child: Text(
-                                "Start",
+                                "start".tr,
                                 style: TextStyle(
                                     fontSize: 19.sp,
                                     color: white,
@@ -1548,10 +1553,11 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                 vertical: .5.h
                             ),
                             child: Text(
-                              "Level 6",
+                              "${"level".tr} 6",
                               style: TextStyle(
                                 fontSize: 22.sp,
                                 fontWeight: FontWeight.bold,
+                                  fontFamily: 'Cairo'
                               ),
                             ),
                           ),
@@ -1800,12 +1806,12 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                 ),
                               ),
                               child: Text(
-                                "Start",
+                                "start".tr,
                                 style: TextStyle(
-                                    fontSize: 19.sp,
-                                    color: white,
-                                    fontWeight: FontWeight.bold,
-                                    fontFamily: 'Cairo'
+                                  fontSize: 19.sp,
+                                  color: white,
+                                  fontWeight: FontWeight.bold,
+                                  fontFamily: 'Cairo'
                                 ),
                               ),
                               onPressed: () async {
@@ -1844,10 +1850,11 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                 vertical: .5.h
                             ),
                             child: Text(
-                              "Level 7",
+                              "${"level".tr} 7",
                               style: TextStyle(
                                 fontSize: 22.sp,
                                 fontWeight: FontWeight.bold,
+                                fontFamily: 'Cairo'
                               ),
                             ),
                           ),
@@ -2096,7 +2103,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                 ),
                               ),
                               child: Text(
-                                "Start",
+                                "start".tr,
                                 style: TextStyle(
                                   fontSize: 19.sp,
                                   color: white,
@@ -2140,10 +2147,11 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                 vertical: .5.h
                             ),
                             child: Text(
-                              "Level 8",
+                              "${"level".tr} 8",
                               style: TextStyle(
                                 fontSize: 22.sp,
                                 fontWeight: FontWeight.bold,
+                                fontFamily: 'Cairo'
                               ),
                             ),
                           ),
@@ -2392,7 +2400,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                 ),
                               ),
                               child: Text(
-                                "Start",
+                                "start".tr,
                                 style: TextStyle(
                                     fontSize: 19.sp,
                                     color: white,
@@ -2436,10 +2444,11 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                 vertical: .5.h
                             ),
                             child: Text(
-                              "Level 9",
+                              "${"level".tr} 9",
                               style: TextStyle(
                                 fontSize: 22.sp,
                                 fontWeight: FontWeight.bold,
+                                fontFamily: 'Cairo'
                               ),
                             ),
                           ),
@@ -2688,7 +2697,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                 ),
                               ),
                               child: Text(
-                                "Start",
+                                "start".tr,
                                 style: TextStyle(
                                     fontSize: 19.sp,
                                     color: white,
@@ -2732,10 +2741,11 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                 vertical: .5.h
                             ),
                             child: Text(
-                              "Level 10",
+                              "${"level".tr} 10",
                               style: TextStyle(
                                 fontSize: 22.sp,
                                 fontWeight: FontWeight.bold,
+                                fontFamily: 'Cairo'
                               ),
                             ),
                           ),
@@ -2984,12 +2994,12 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                 ),
                               ),
                               child: Text(
-                                "Start",
+                                "start".tr,
                                 style: TextStyle(
-                                    fontSize: 19.sp,
-                                    color: white,
-                                    fontWeight: FontWeight.bold,
-                                    fontFamily: 'Cairo'
+                                  fontSize: 19.sp,
+                                  color: white,
+                                  fontWeight: FontWeight.bold,
+                                  fontFamily: 'Cairo'
                                 ),
                               ),
                               onPressed: () async {
@@ -3028,10 +3038,11 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                 vertical: .5.h
                             ),
                             child: Text(
-                              "Level 11",
+                              "${"level".tr} 11",
                               style: TextStyle(
                                 fontSize: 22.sp,
                                 fontWeight: FontWeight.bold,
+                                  fontFamily: 'Cairo'
                               ),
                             ),
                           ),
@@ -3280,7 +3291,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                 ),
                               ),
                               child: Text(
-                                "Start",
+                                "start".tr,
                                 style: TextStyle(
                                     fontSize: 19.sp,
                                     color: white,
@@ -3324,10 +3335,11 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                 vertical: .5.h
                             ),
                             child: Text(
-                              "Level 12",
+                              "${"level".tr} 12",
                               style: TextStyle(
                                 fontSize: 22.sp,
                                 fontWeight: FontWeight.bold,
+                                  fontFamily: 'Cairo'
                               ),
                             ),
                           ),
@@ -3576,7 +3588,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                 ),
                               ),
                               child: Text(
-                                "Start",
+                                "start".tr,
                                 style: TextStyle(
                                     fontSize: 19.sp,
                                     color: white,
@@ -3620,10 +3632,11 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                 vertical: .5.h
                             ),
                             child: Text(
-                              "Level 13",
+                              "${"level".tr} 13",
                               style: TextStyle(
                                 fontSize: 22.sp,
                                 fontWeight: FontWeight.bold,
+                                fontFamily: 'Cairo'
                               ),
                             ),
                           ),
@@ -3872,7 +3885,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                 ),
                               ),
                               child: Text(
-                                "Start",
+                                "start".tr,
                                 style: TextStyle(
                                     fontSize: 19.sp,
                                     color: white,
@@ -3916,10 +3929,11 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                 vertical: .5.h
                             ),
                             child: Text(
-                              "Level 14",
+                              "${"level".tr} 14",
                               style: TextStyle(
                                 fontSize: 22.sp,
                                 fontWeight: FontWeight.bold,
+                                  fontFamily: 'Cairo'
                               ),
                             ),
                           ),
@@ -4168,12 +4182,12 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                 ),
                               ),
                               child: Text(
-                                "Start",
+                                "start".tr,
                                 style: TextStyle(
-                                    fontSize: 19.sp,
-                                    color: white,
-                                    fontWeight: FontWeight.bold,
-                                    fontFamily: 'Cairo'
+                                  fontSize: 19.sp,
+                                  color: white,
+                                  fontWeight: FontWeight.bold,
+                                  fontFamily: 'Cairo'
                                 ),
                               ),
                               onPressed: () async {
@@ -4212,10 +4226,11 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                 vertical: .5.h
                             ),
                             child: Text(
-                              "Level 15",
+                              "${"level".tr} 15",
                               style: TextStyle(
                                 fontSize: 22.sp,
                                 fontWeight: FontWeight.bold,
+                                  fontFamily: 'Cairo'
                               ),
                             ),
                           ),
@@ -4464,7 +4479,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                 ),
                               ),
                               child: Text(
-                                "Start",
+                                "start".tr,
                                 style: TextStyle(
                                     fontSize: 19.sp,
                                     color: white,

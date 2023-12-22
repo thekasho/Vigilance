@@ -19,7 +19,6 @@ class _SpotLevelsScreenState extends State<SpotLevelsScreen> {
           color: yellowBck,
           child: Column(
             children: [
-              SizedBox(height: 2.h),
               SizedBox(
                 width: 100.w,
                 child: Row(
@@ -98,7 +97,7 @@ class _SpotLevelsScreenState extends State<SpotLevelsScreen> {
                   borderRadius: BorderRadius.circular(15),
                 ),
                 child: Text(
-                  "اختر المختلف",
+                  "spot_the_diff".tr,
                   style: TextStyle(
                     fontSize: 20.sp,
                     fontFamily: 'Cairo',

@@ -33,6 +33,8 @@ const String screenShopLevels = '/shop-levels';
 
 const String screenShoppingStd = '/shopping-std';
 
+const String screenSettings = '/settings';
+
 const String kMessages = "messages";
 const kMessageContent = 'content';
 const kMessageUserEmail = 'user_email';

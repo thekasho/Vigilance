@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:get/get_navigation/src/root/get_material_app.dart';
-import 'package:get/get_navigation/src/routes/get_route.dart';
+import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:vig/binding/initial_binding.dart';
@@ -8,6 +7,8 @@ import 'package:vig/helpers/helpers.dart';
 import 'package:vig/presentation/screens/screens.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
+import 'core/localization/translation.dart';
+import 'core/localization/change_local.dart';
 
 
 void main() async {
@@ -32,9 +33,13 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return ResponsiveSizer(
       builder: (context, orient, type) {
+
         return GetMaterialApp(
           title: kAppName,
           debugShowCheckedModeBanner: false,
+          translations: MyTranslation(),
+          locale: Get.deviceLocale,
+          textDirection: TextDirection.ltr,
           initialBinding: InitialBinding(),
           initialRoute: '/',
           getPages: [
@@ -72,6 +77,8 @@ class _MyAppState extends State<MyApp> {
             GetPage(name: screenShopLevels, page: () => const ShopLevelsScreen()),
 
             GetPage(name: screenShoppingStd, page: () => const StdShoppingScreen()),
+
+            GetPage(name: screenSettings, page: () => const SettingsScreen()),
 
 
           ],

@@ -123,7 +123,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        "أهلا بيك في تطبيقنا !",
+                        "app_welcom".tr,
                         textAlign: TextAlign.end,
                         style: TextStyle(
                           color: black,
@@ -232,7 +232,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         child: Row(
                           children: [
                             Text(
-                              "إبدأ",
+                              "get_started".tr,
                               style: TextStyle(
                                 fontSize: 19.sp,
                                 color: white,

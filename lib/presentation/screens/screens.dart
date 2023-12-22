@@ -26,6 +26,7 @@ import '../../controller/teacher/register.dart';
 import '../../controller/study/todo/std.dart';
 import '../../controller/tests/teacher.dart';
 import '../../core/class/statusrequest.dart';
+import '../../core/localization/change_local.dart';
 import '../../helpers/helpers.dart';
 import '../widgets/widgets.dart';
 
@@ -69,3 +70,5 @@ part 'games/shopping/math.dart';
 part 'games/shopping/select.dart';
 
 part 'shop/home.dart';
+
+part 'settings/settings.dart';

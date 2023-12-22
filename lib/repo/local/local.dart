@@ -2,6 +2,33 @@ part of '../api.dart';
 
 class LocaleApi {
 
+  static Future<bool> saveLang(String lang) async {
+    try {
+      // await locale.remove("lang");
+      await locale.write("lang", lang);
+      print("Success Save Language");
+      return true;
+    } catch (e) {
+      print(e);
+      return false;
+    }
+  }
+
+  static Future<String?> getLang() async {
+    try {
+      final lang = await locale.read("lang");
+
+      if (lang != null) {
+        return lang;
+      }
+      debugPrint('language is null');
+      return null;
+    } catch (e) {
+      debugPrint('login_data null $e');
+      return null;
+    }
+  }
+
   static Future<bool> saveLoginData(Map loginData) async {
     try {
       await locale.remove("login_data");

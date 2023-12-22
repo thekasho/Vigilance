@@ -49,10 +49,11 @@ class SpotGameContImp extends SpotGameCont {
   @override
   getLevel() async {
     try {
+
       if(!isConnected){
         Get.defaultDialog(
           backgroundColor: white,
-          title: "Error",
+          title: "error".tr,
           titlePadding: EdgeInsets.only(bottom: 2.h, top: 1.h),
           titleStyle: TextStyle(
               fontSize: 18.sp,
@@ -61,7 +62,7 @@ class SpotGameContImp extends SpotGameCont {
               fontWeight: FontWeight.bold
           ),
           content: Text(
-            "No Internet Connection !!",
+            "no_internet".tr,
             style: TextStyle(
               fontSize: 18.sp,
               fontFamily: "Cairo",

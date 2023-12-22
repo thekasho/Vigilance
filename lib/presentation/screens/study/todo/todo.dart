@@ -15,9 +15,6 @@ class _StdToDoScreenState extends State<StdToDoScreen> {
     Get.put(StdToDoContImp());
     return SafeArea(
       child: Scaffold(
-        // appBar: AppBar(
-        //   backgroundColor: red,
-        // ),
         body: Container(
           width: double.infinity,
           height: double.infinity,
@@ -46,7 +43,7 @@ class _StdToDoScreenState extends State<StdToDoScreen> {
                       width: 55.w,
                       alignment: Alignment.center,
                       child: Text(
-                        "المهام",
+                        "tasks".tr,
                         style: TextStyle(
                           fontSize: 22.sp,
                           fontFamily: 'Cairo',
@@ -78,7 +75,7 @@ class _StdToDoScreenState extends State<StdToDoScreen> {
                                     child: Column(
                                       children: [
                                         Text(
-                                          "اضافة مهمة جديدة",
+                                          "new_task".tr,
                                           style: TextStyle(
                                             fontSize: 20.sp,
                                             fontFamily: 'Cairo',
@@ -88,22 +85,22 @@ class _StdToDoScreenState extends State<StdToDoScreen> {
                                         SizedBox(height: 2.h),
                                         AuthTextForm(
                                           controller: controller.title,
-                                          hintText: "العنوان",
+                                          hintText: "title".tr,
                                           isPassword: false,
                                           valid: (val) {
                                             if (val!.isEmpty) {
-                                              return 'Title Required!';
+                                              return "required".tr;
                                             }
                                           },
                                         ),
                                         SizedBox(height: 2.h),
                                         AuthTextForm(
                                           controller: controller.desc,
-                                          hintText: "الوصف",
+                                          hintText: "desc".tr,
                                           isPassword: false,
                                           valid: (val) {
                                             if (val!.isEmpty) {
-                                              return 'Title Required!';
+                                              return "required".tr;
                                             }
                                           },
                                         ),
@@ -174,7 +171,7 @@ class _StdToDoScreenState extends State<StdToDoScreen> {
                                               child: Row(
                                                 children: [
                                                   Text(
-                                                    "حفظ المهمة",
+                                                    "save_task".tr,
                                                     style: TextStyle(
                                                       fontSize: 18.sp,
                                                       color: black,

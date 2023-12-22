@@ -77,8 +77,8 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                         ),
                       ),
                       padding: EdgeInsets.only(
-                          top: 2.h,
-                          bottom: 3.h
+                        top: 1.h,
+                        bottom: 3.h
                       ),
                       child: Column(
                         children: [
@@ -104,16 +104,17 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                                     vertical: .5.h
                                 ),
                                 child: Text(
-                                  "Level 1",
+                                  "${"level".tr} 1",
                                   style: TextStyle(
-                                    fontSize: 22.sp,
+                                    fontSize: 20.sp,
                                     fontWeight: FontWeight.bold,
+                                    fontFamily: 'Cairo'
                                   ),
                                 ),
                               ),
                             ],
                           ),
-                          SizedBox(height: 2.h),
+                          SizedBox(height: 1.h),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
@@ -139,7 +140,10 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                                   controller: cont.countdownController1,
                                   seconds: 10,
                                   build: (_, double time) => Text(
-                                    "${time.toInt()} Seconds Left",
+                                    "${time.toInt()} ${"seconds_left".tr}",
+                                    style: const TextStyle(
+                                      fontFamily: "Cairo",
+                                    ),
                                   ),
                                   interval: const Duration(seconds: 1),
                                   onFinished: () async {
@@ -480,7 +484,7 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                         ),
                       ),
                       padding: EdgeInsets.only(
-                          top: 2.h,
+                          top: 1.h,
                           bottom: 3.h
                       ),
                       child: Column(
@@ -507,16 +511,17 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                                     vertical: .5.h
                                 ),
                                 child: Text(
-                                  "Level 2",
+                                  "${"level".tr} 2",
                                   style: TextStyle(
-                                    fontSize: 22.sp,
-                                    fontWeight: FontWeight.bold,
+                                      fontSize: 20.sp,
+                                      fontWeight: FontWeight.bold,
+                                      fontFamily: 'Cairo'
                                   ),
                                 ),
                               ),
                             ],
                           ),
-                          SizedBox(height: 2.h),
+                          SizedBox(height: 1.h),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
@@ -542,7 +547,10 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                                   controller: cont.countdownController2,
                                   seconds: 10,
                                   build: (_, double time) => Text(
-                                    "${time.toInt()} Seconds Left",
+                                    "${time.toInt()} ${"seconds_left".tr}",
+                                    style: const TextStyle(
+                                      fontFamily: "Cairo",
+                                    ),
                                   ),
                                   interval: const Duration(seconds: 1),
                                   onFinished: () async {
@@ -880,8 +888,8 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                         ),
                       ),
                       padding: EdgeInsets.only(
-                          top: 2.h,
-                          bottom: 3.h
+                        top: 1.h,
+                        bottom: 3.h
                       ),
                       child: Column(
                         children: [
@@ -907,10 +915,11 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                                     vertical: .5.h
                                 ),
                                 child: Text(
-                                  "Level 3",
+                                  "${"level".tr} 3",
                                   style: TextStyle(
-                                    fontSize: 22.sp,
+                                    fontSize: 20.sp,
                                     fontWeight: FontWeight.bold,
+                                    fontFamily: 'Cairo'
                                   ),
                                 ),
                               ),
@@ -942,7 +951,10 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                                   controller: cont.countdownController3,
                                   seconds: 10,
                                   build: (_, double time) => Text(
-                                    "${time.toInt()} Seconds Left",
+                                    "${time.toInt()} ${"seconds_left".tr}",
+                                    style: const TextStyle(
+                                      fontFamily: "Cairo",
+                                    ),
                                   ),
                                   interval: const Duration(seconds: 1),
                                   onFinished: () async {
@@ -1280,7 +1292,7 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                         ),
                       ),
                       padding: EdgeInsets.only(
-                          top: 2.h,
+                          top: 1.h,
                           bottom: 3.h
                       ),
                       child: Column(
@@ -1307,10 +1319,11 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                                     vertical: .5.h
                                 ),
                                 child: Text(
-                                  "Level 4",
+                                  "${"level".tr} 4",
                                   style: TextStyle(
-                                    fontSize: 22.sp,
-                                    fontWeight: FontWeight.bold,
+                                      fontSize: 20.sp,
+                                      fontWeight: FontWeight.bold,
+                                      fontFamily: 'Cairo'
                                   ),
                                 ),
                               ),
@@ -1342,7 +1355,10 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                                   controller: cont.countdownController4,
                                   seconds: 10,
                                   build: (_, double time) => Text(
-                                    "${time.toInt()} Seconds Left",
+                                    "${time.toInt()} ${"seconds_left".tr}",
+                                    style: const TextStyle(
+                                      fontFamily: "Cairo",
+                                    ),
                                   ),
                                   interval: const Duration(seconds: 1),
                                   onFinished: () async {

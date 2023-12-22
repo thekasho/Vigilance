@@ -94,7 +94,7 @@ class _ShopLevelsScreenState extends State<ShopLevelsScreen> {
                   borderRadius: BorderRadius.circular(15),
                 ),
                 child: Text(
-                  "قائمة التسوق",
+                  "shopping_list".tr,
                   style: TextStyle(
                     fontSize: 20.sp,
                     fontFamily: 'Cairo',

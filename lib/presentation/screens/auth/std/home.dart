@@ -29,16 +29,16 @@ class _StdHomeScreenState extends State<StdHomeScreen> {
             ),
             actionsAlignment: MainAxisAlignment.start,
             title: Text(
-              'غلق التطبيق؟',
+              'close_app_confirm'.tr,
               textAlign: TextAlign.end,
               style: TextStyle(fontFamily: 'Cairo',
-                  color: red,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 20.sp
+                color: red,
+                fontWeight: FontWeight.bold,
+                fontSize: 20.sp
               ),
             ),
             content: Text(
-              "هل انت متأكد ؟",
+              "are_you_sure".tr,
               textAlign: TextAlign.end,
               style: TextStyle(
                 fontSize: 18.sp,
@@ -52,9 +52,9 @@ class _StdHomeScreenState extends State<StdHomeScreen> {
                 color: Colors.grey.shade300,
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20.0)),
-                child: const Text(
-                  'لا',
-                  style: TextStyle(
+                child: Text(
+                  'no'.tr,
+                  style: const TextStyle(
                       fontFamily: 'Cairo',
                       fontWeight: FontWeight.bold,
                       color: black
@@ -67,9 +67,9 @@ class _StdHomeScreenState extends State<StdHomeScreen> {
                 color: redLight,
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20.0)),
-                child: const Text(
-                  'نعم',
-                  style: TextStyle(
+                child: Text(
+                  'yes'.tr,
+                  style: const TextStyle(
                       fontFamily: 'Cairo',
                       fontWeight: FontWeight.bold,
                       color: black
@@ -142,7 +142,7 @@ class _StdHomeScreenState extends State<StdHomeScreen> {
                       ),
                       child: GetBuilder<ShoppingContImp>(builder: (controller) {
                         return Text(
-                          "النقاط: ${controller.points}",
+                          "${"points".tr}: ${controller.points}",
                           style: TextStyle(
                               color: white,
                               fontSize: 19.sp,
@@ -157,7 +157,7 @@ class _StdHomeScreenState extends State<StdHomeScreen> {
                         alignment: Alignment.centerLeft,
                         width: 17.w,
                         child: DropdownButton(
-                          underline: SizedBox(),
+                          underline: const SizedBox(),
                           icon: Icon(Icons.table_rows_sharp, size: 25.sp),
                           iconEnabledColor: black,
                           isExpanded: false,
@@ -168,9 +168,14 @@ class _StdHomeScreenState extends State<StdHomeScreen> {
                               alignment: Alignment.center,
                               child: Icon(Icons.shopping_cart),
                             ),
+                            const DropdownMenuItem(
+                              value: 1,
+                              alignment: Alignment.center,
+                              child: Icon(Icons.settings),
+                            ),
                             DropdownMenuItem(
                               alignment: Alignment.center,
-                              value: 1,
+                              value: 2,
                               onTap: () {
                                 controller.logOut();
                               },
@@ -180,20 +185,12 @@ class _StdHomeScreenState extends State<StdHomeScreen> {
                           onChanged: (value) {
                             if (value == 0) {
                               Get.toNamed(screenShoppingStd);
+                            } else if(value == 1){
+                              Get.toNamed(screenSettings);
                             }
                           },
                         ),
                       );
-                      // return GestureDetector(
-                      //   onTap: () {
-                      //     controller.logOut();
-                      //   },
-                      //   child: Icon(
-                      //     Icons.exit_to_app,
-                      //     color: orange,
-                      //     size: 27.sp
-                      //   ),
-                      // );
                     }),
                   ],
                 ),
@@ -256,7 +253,7 @@ class _StdHomeScreenState extends State<StdHomeScreen> {
                                         ),
                                       ),
                                       Text(
-                                        "مذاكرة",
+                                        "studying".tr,
                                         style: TextStyle(
                                           fontFamily: 'Cairo',
                                           fontSize: 20.sp,
@@ -314,7 +311,7 @@ class _StdHomeScreenState extends State<StdHomeScreen> {
                                         ),
                                       ),
                                       Text(
-                                        "العاب",
+                                        "games".tr,
                                         style: TextStyle(
                                           fontFamily: 'Cairo',
                                           fontSize: 20.sp,
@@ -372,7 +369,7 @@ class _StdHomeScreenState extends State<StdHomeScreen> {
                                         ),
                                       ),
                                       Text(
-                                        "مُعلم",
+                                        "teacher".tr,
                                         style: TextStyle(
                                           fontFamily: 'Cairo',
                                           fontSize: 20.sp,
@@ -430,7 +427,7 @@ class _StdHomeScreenState extends State<StdHomeScreen> {
                                         ),
                                       ),
                                       Text(
-                                        "تأمل",
+                                        "meditation".tr,
                                         style: TextStyle(
                                           fontFamily: 'Cairo',
                                           fontSize: 20.sp,

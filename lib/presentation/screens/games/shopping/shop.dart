@@ -148,12 +148,15 @@ class _ShoppingGameScreenState extends State<ShoppingGameScreen> {
                                         padding: EdgeInsets.symmetric(
                                           vertical: 1.h,
                                         ),
-                                        margin: EdgeInsets.only(top: 15),
+                                        margin: const EdgeInsets.only(top: 15),
                                         child: Countdown(
                                           controller: cont.countdownController1,
                                           seconds: 5,
                                           build: (_, double time) => Text(
-                                            "${time.toInt()} Seconds Left",
+                                            "${time.toInt()} ${"seconds_left".tr}",
+                                            style: const TextStyle(
+                                              fontFamily: "Cairo",
+                                            ),
                                           ),
                                           interval: const Duration(seconds: 1),
                                           onFinished: () async {
@@ -326,7 +329,10 @@ class _ShoppingGameScreenState extends State<ShoppingGameScreen> {
                                           controller: cont.countdownController2,
                                           seconds: 5,
                                           build: (_, double time) => Text(
-                                            "${time.toInt()} Seconds Left",
+                                            "${time.toInt()} ${"seconds_left".tr}",
+                                            style: const TextStyle(
+                                              fontFamily: "Cairo",
+                                            ),
                                           ),
                                           interval: const Duration(seconds: 1),
                                           onFinished: () async {
@@ -499,7 +505,10 @@ class _ShoppingGameScreenState extends State<ShoppingGameScreen> {
                                           controller: cont.countdownController3,
                                           seconds: 5,
                                           build: (_, double time) => Text(
-                                            "${time.toInt()} Seconds Left",
+                                            "${time.toInt()} ${"seconds_left".tr}",
+                                            style: const TextStyle(
+                                              fontFamily: "Cairo",
+                                            ),
                                           ),
                                           interval: const Duration(seconds: 1),
                                           onFinished: () async {
@@ -721,7 +730,10 @@ class _ShoppingGameScreenState extends State<ShoppingGameScreen> {
                                           controller: cont.countdownController4,
                                           seconds: 10,
                                           build: (_, double time) => Text(
-                                            "${time.toInt()} Seconds Left",
+                                            "${time.toInt()} ${"seconds_left".tr}",
+                                            style: const TextStyle(
+                                              fontFamily: "Cairo",
+                                            ),
                                           ),
                                           interval: const Duration(seconds: 1),
                                           onFinished: () async {
@@ -984,11 +996,14 @@ class _ShoppingGameScreenState extends State<ShoppingGameScreen> {
                                           controller: cont.countdownController5,
                                           seconds: 10,
                                           build: (_, double time) => Text(
-                                            "${time.toInt()} Seconds Left",
+                                            "${time.toInt()} ${"seconds_left".tr}",
+                                            style: const TextStyle(
+                                              fontFamily: "Cairo",
+                                            ),
                                           ),
                                           interval: const Duration(seconds: 1),
                                           onFinished: () async {
-                                            // await cont.timesUp();
+                                            await cont.timesUp();
                                           },
                                         ),
                                       )
@@ -1256,7 +1271,10 @@ class _ShoppingGameScreenState extends State<ShoppingGameScreen> {
                                         controller: cont.countdownController6,
                                         seconds: 10,
                                         build: (_, double time) => Text(
-                                          "${time.toInt()} Seconds Left",
+                                          "${time.toInt()} ${"seconds_left".tr}",
+                                          style: const TextStyle(
+                                            fontFamily: "Cairo",
+                                          ),
                                         ),
                                         interval: const Duration(seconds: 1),
                                         onFinished: () async {
@@ -1528,7 +1546,10 @@ class _ShoppingGameScreenState extends State<ShoppingGameScreen> {
                                           controller: cont.countdownController7,
                                           seconds: 10,
                                           build: (_, double time) => Text(
-                                            "${time.toInt()} Seconds Left",
+                                            "${time.toInt()} ${"seconds_left".tr}",
+                                            style: const TextStyle(
+                                              fontFamily: "Cairo",
+                                            ),
                                           ),
                                           interval: const Duration(seconds: 1),
                                           onFinished: () async {
@@ -1789,7 +1810,10 @@ class _ShoppingGameScreenState extends State<ShoppingGameScreen> {
                                         controller: cont.countdownController8,
                                         seconds: 10,
                                         build: (_, double time) => Text(
-                                          "${time.toInt()} Seconds Left",
+                                          "${time.toInt()} ${"seconds_left".tr}",
+                                          style: const TextStyle(
+                                            fontFamily: "Cairo",
+                                          ),
                                         ),
                                         interval: const Duration(seconds: 1),
                                         onFinished: () async {
@@ -2049,7 +2073,10 @@ class _ShoppingGameScreenState extends State<ShoppingGameScreen> {
                                         controller: cont.countdownController9,
                                         seconds: 10,
                                         build: (_, double time) => Text(
-                                          "${time.toInt()} Seconds Left",
+                                          "${time.toInt()} ${"seconds_left".tr}",
+                                          style: const TextStyle(
+                                            fontFamily: "Cairo",
+                                          ),
                                         ),
                                         interval: const Duration(seconds: 1),
                                         onFinished: () async {
@@ -2309,7 +2336,10 @@ class _ShoppingGameScreenState extends State<ShoppingGameScreen> {
                                         controller: cont.countdownController10,
                                         seconds: 10,
                                         build: (_, double time) => Text(
-                                          "${time.toInt()} Seconds Left",
+                                          "${time.toInt()} ${"seconds_left".tr}",
+                                          style: const TextStyle(
+                                            fontFamily: "Cairo",
+                                          ),
                                         ),
                                         interval: const Duration(seconds: 1),
                                         onFinished: () async {
@@ -2569,7 +2599,10 @@ class _ShoppingGameScreenState extends State<ShoppingGameScreen> {
                                         controller: cont.countdownController11,
                                         seconds: 10,
                                         build: (_, double time) => Text(
-                                          "${time.toInt()} Seconds Left",
+                                          "${time.toInt()} ${"seconds_left".tr}",
+                                          style: const TextStyle(
+                                            fontFamily: "Cairo",
+                                          ),
                                         ),
                                         interval: const Duration(seconds: 1),
                                         onFinished: () async {
@@ -2830,7 +2863,10 @@ class _ShoppingGameScreenState extends State<ShoppingGameScreen> {
                                         controller: cont.countdownController12,
                                         seconds: 10,
                                         build: (_, double time) => Text(
-                                          "${time.toInt()} Seconds Left",
+                                          "${time.toInt()} ${"seconds_left".tr}",
+                                          style: const TextStyle(
+                                            fontFamily: "Cairo",
+                                          ),
                                         ),
                                         interval: const Duration(seconds: 1),
                                         onFinished: () async {
@@ -3091,7 +3127,10 @@ class _ShoppingGameScreenState extends State<ShoppingGameScreen> {
                                         controller: cont.countdownController13,
                                         seconds: 10,
                                         build: (_, double time) => Text(
-                                          "${time.toInt()} Seconds Left",
+                                          "${time.toInt()} ${"seconds_left".tr}",
+                                          style: const TextStyle(
+                                            fontFamily: "Cairo",
+                                          ),
                                         ),
                                         interval: const Duration(seconds: 1),
                                         onFinished: () async {
@@ -3352,7 +3391,10 @@ class _ShoppingGameScreenState extends State<ShoppingGameScreen> {
                                         controller: cont.countdownController14,
                                         seconds: 10,
                                         build: (_, double time) => Text(
-                                          "${time.toInt()} Seconds Left",
+                                          "${time.toInt()} ${"seconds_left".tr}",
+                                          style: const TextStyle(
+                                            fontFamily: "Cairo",
+                                          ),
                                         ),
                                         interval: const Duration(seconds: 1),
                                         onFinished: () async {
@@ -3612,7 +3654,10 @@ class _ShoppingGameScreenState extends State<ShoppingGameScreen> {
                                         controller: cont.countdownController15,
                                         seconds: 10,
                                         build: (_, double time) => Text(
-                                          "${time.toInt()} Seconds Left",
+                                          "${time.toInt()} ${"seconds_left".tr}",
+                                          style: const TextStyle(
+                                            fontFamily: "Cairo",
+                                          ),
                                         ),
                                         interval: const Duration(seconds: 1),
                                         onFinished: () async {
