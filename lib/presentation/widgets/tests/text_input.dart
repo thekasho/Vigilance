@@ -40,9 +40,8 @@ class TestsTextInput extends StatelessWidget {
               fontFamily: 'Cairo'
           ),
           errorStyle: TextStyle(
-              color: red,
-              fontSize: 15.sp,
-              fontFamily: 'Cairo'
+            fontSize: 0.sp,
+            height: 5
           ),
           contentPadding: EdgeInsets.symmetric(
             horizontal: 5.w,
@@ -121,9 +120,8 @@ class TestsTextOption extends StatelessWidget {
               fontFamily: 'Cairo'
           ),
           errorStyle: TextStyle(
-              color: red,
-              fontSize: 15.sp,
-              fontFamily: 'Cairo'
+            fontSize: 0.sp,
+            height: 20
           ),
           contentPadding: EdgeInsets.symmetric(
             horizontal: 5.w,
