@@ -981,6 +981,881 @@ class _TecherAddTestScreenState extends State<TecherAddTestScreen> {
                                 ],
                               ),
                             ),
+                            Divider(
+                              height: 1.h,
+                              color: white,
+                              thickness: 1.h,
+                            ),
+                            Container(
+                              decoration: const BoxDecoration(
+                                color: testBck3,
+                                borderRadius: BorderRadius.only(
+                                  topLeft: Radius.circular(10),
+                                  topRight: Radius.circular(10),
+                                ),
+                              ),
+                              alignment: Alignment.topLeft,
+                              padding: EdgeInsets.only(
+                                  top: 2.h
+                              ),
+                              child: Column(
+                                children: [
+                                  Row(
+                                    children: [
+                                      const Spacer(),
+                                      TestsTextInput(
+                                        controller: cont.cont26,
+                                        hintText: "Question..",
+                                        valid: (val) {
+                                          return null;
+                                        },
+                                      ),
+                                      const Spacer(),
+                                      Container(
+                                        width: 10.w,
+                                        height: 6.h,
+                                        decoration: BoxDecoration(
+                                          borderRadius: BorderRadius.circular(10),
+                                          color: red,
+                                        ),
+                                        child: IconButton(
+                                          icon: const Icon(Icons.delete_outline, color: white),
+                                          color: orange,
+                                          focusColor: white,
+                                          autofocus: true,
+                                          padding: const EdgeInsets.all(5),
+                                          onPressed: (){
+
+                                          },
+                                        ),
+                                      ),
+                                      const Spacer(),
+                                    ],
+                                  ),
+                                  SizedBox(height: 2.h),
+                                  Row(
+                                    children: [
+                                      const Spacer(),
+                                      Container(
+                                        width: 10.w,
+                                        height: 6.h,
+                                        decoration: BoxDecoration(
+                                          borderRadius: BorderRadius.circular(10),
+                                        ),
+                                        child: Radio(
+                                            value: 1,
+                                            groupValue: cont.selectedAns6,
+                                            onChanged: (value) {
+                                              cont.selectedAns6 = value!;
+                                              cont.update();
+                                            }
+                                        ),
+                                      ),
+                                      const Spacer(),
+                                      TestsTextOption(
+                                        controller: cont.cont27,
+                                        hintText: "Option 1",
+                                        valid: (val) {
+                                          return null;
+                                        },
+                                      ),
+                                      const Spacer(),
+                                    ],
+                                  ),
+                                  SizedBox(height: 2.h),
+                                  Row(
+                                    children: [
+                                      const Spacer(),
+                                      Container(
+                                        width: 10.w,
+                                        height: 6.h,
+                                        decoration: BoxDecoration(
+                                          borderRadius: BorderRadius.circular(10),
+                                        ),
+                                        child: Radio(
+                                            value: 2,
+                                            groupValue: cont.selectedAns6,
+                                            onChanged: (value) {
+                                              cont.selectedAns6 = value!;
+                                              cont.update();
+                                            }
+                                        ),
+                                      ),
+                                      const Spacer(),
+                                      TestsTextOption(
+                                        controller: cont.cont28,
+                                        hintText: "Option 2",
+                                        valid: (val) {
+                                          return null;
+                                        },
+                                      ),
+                                      const Spacer(),
+                                    ],
+                                  ),
+                                  SizedBox(height: 2.h),
+                                  Row(
+                                    children: [
+                                      const Spacer(),
+                                      Container(
+                                        width: 10.w,
+                                        height: 6.h,
+                                        decoration: BoxDecoration(
+                                          borderRadius: BorderRadius.circular(10),
+                                        ),
+                                        child: Radio(
+                                            value: 3,
+                                            groupValue: cont.selectedAns6,
+                                            onChanged: (value) {
+                                              cont.selectedAns6 = value!;
+                                              cont.update();
+                                            }
+                                        ),
+                                      ),
+                                      const Spacer(),
+                                      TestsTextOption(
+                                        controller: cont.cont29,
+                                        hintText: "Option 3",
+                                        valid: (val) {
+                                          return null;
+                                        },
+                                      ),
+                                      const Spacer(),
+                                    ],
+                                  ),
+                                  SizedBox(height: 2.h),
+                                  Row(
+                                    children: [
+                                      const Spacer(),
+                                      Container(
+                                        width: 10.w,
+                                        height: 6.h,
+                                        decoration: BoxDecoration(
+                                          borderRadius: BorderRadius.circular(10),
+                                        ),
+                                        child: Radio(
+                                            value: 4,
+                                            groupValue: cont.selectedAns6,
+                                            onChanged: (value) {
+                                              cont.selectedAns6 = value!;
+                                              cont.update();
+                                            }
+                                        ),
+                                      ),
+                                      const Spacer(),
+                                      TestsTextOption(
+                                        controller: cont.cont30,
+                                        hintText: "Option 4",
+                                        valid: (val) {
+                                          return null;
+                                        },
+                                      ),
+                                      const Spacer(),
+                                    ],
+                                  ),
+                                  SizedBox(height: 2.h),
+                                ],
+                              ),
+                            ),
+                            Divider(
+                              height: 1.h,
+                              color: white,
+                              thickness: 1.h,
+                            ),
+                            Container(
+                              decoration: const BoxDecoration(
+                                color: testBck1,
+                                borderRadius: BorderRadius.only(
+                                  topLeft: Radius.circular(10),
+                                  topRight: Radius.circular(10),
+                                ),
+                              ),
+                              alignment: Alignment.topLeft,
+                              padding: EdgeInsets.only(
+                                  top: 2.h
+                              ),
+                              child: Column(
+                                children: [
+                                  Row(
+                                    children: [
+                                      const Spacer(),
+                                      TestsTextInput(
+                                        controller: cont.cont31,
+                                        hintText: "Question..",
+                                        valid: (val) {
+                                          return null;
+                                        },
+                                      ),
+                                      const Spacer(),
+                                      Container(
+                                        width: 10.w,
+                                        height: 6.h,
+                                        decoration: BoxDecoration(
+                                          borderRadius: BorderRadius.circular(10),
+                                          color: red,
+                                        ),
+                                        child: IconButton(
+                                          icon: const Icon(Icons.delete_outline, color: white),
+                                          color: orange,
+                                          focusColor: white,
+                                          autofocus: true,
+                                          padding: const EdgeInsets.all(5),
+                                          onPressed: (){
+
+                                          },
+                                        ),
+                                      ),
+                                      const Spacer(),
+                                    ],
+                                  ),
+                                  SizedBox(height: 2.h),
+                                  Row(
+                                    children: [
+                                      const Spacer(),
+                                      Container(
+                                        width: 10.w,
+                                        height: 6.h,
+                                        decoration: BoxDecoration(
+                                          borderRadius: BorderRadius.circular(10),
+                                        ),
+                                        child: Radio(
+                                            value: 1,
+                                            groupValue: cont.selectedAns7,
+                                            onChanged: (value) {
+                                              cont.selectedAns7 = value!;
+                                              cont.update();
+                                            }
+                                        ),
+                                      ),
+                                      const Spacer(),
+                                      TestsTextOption(
+                                        controller: cont.cont32,
+                                        hintText: "Option 1",
+                                        valid: (val) {
+                                          return null;
+                                        },
+                                      ),
+                                      const Spacer(),
+                                    ],
+                                  ),
+                                  SizedBox(height: 2.h),
+                                  Row(
+                                    children: [
+                                      const Spacer(),
+                                      Container(
+                                        width: 10.w,
+                                        height: 6.h,
+                                        decoration: BoxDecoration(
+                                          borderRadius: BorderRadius.circular(10),
+                                        ),
+                                        child: Radio(
+                                            value: 2,
+                                            groupValue: cont.selectedAns7,
+                                            onChanged: (value) {
+                                              cont.selectedAns7 = value!;
+                                              cont.update();
+                                            }
+                                        ),
+                                      ),
+                                      const Spacer(),
+                                      TestsTextOption(
+                                        controller: cont.cont33,
+                                        hintText: "Option 2",
+                                        valid: (val) {
+                                          return null;
+                                        },
+                                      ),
+                                      const Spacer(),
+                                    ],
+                                  ),
+                                  SizedBox(height: 2.h),
+                                  Row(
+                                    children: [
+                                      const Spacer(),
+                                      Container(
+                                        width: 10.w,
+                                        height: 6.h,
+                                        decoration: BoxDecoration(
+                                          borderRadius: BorderRadius.circular(10),
+                                        ),
+                                        child: Radio(
+                                            value: 3,
+                                            groupValue: cont.selectedAns7,
+                                            onChanged: (value) {
+                                              cont.selectedAns7 = value!;
+                                              cont.update();
+                                            }
+                                        ),
+                                      ),
+                                      const Spacer(),
+                                      TestsTextOption(
+                                        controller: cont.cont34,
+                                        hintText: "Option 3",
+                                        valid: (val) {
+                                          return null;
+                                        },
+                                      ),
+                                      const Spacer(),
+                                    ],
+                                  ),
+                                  SizedBox(height: 2.h),
+                                  Row(
+                                    children: [
+                                      const Spacer(),
+                                      Container(
+                                        width: 10.w,
+                                        height: 6.h,
+                                        decoration: BoxDecoration(
+                                          borderRadius: BorderRadius.circular(10),
+                                        ),
+                                        child: Radio(
+                                            value: 4,
+                                            groupValue: cont.selectedAns7,
+                                            onChanged: (value) {
+                                              cont.selectedAns7 = value!;
+                                              cont.update();
+                                            }
+                                        ),
+                                      ),
+                                      const Spacer(),
+                                      TestsTextOption(
+                                        controller: cont.cont35,
+                                        hintText: "Option 4",
+                                        valid: (val) {
+                                          return null;
+                                        },
+                                      ),
+                                      const Spacer(),
+                                    ],
+                                  ),
+                                  SizedBox(height: 2.h),
+                                ],
+                              ),
+                            ),
+                            Divider(
+                              height: 1.h,
+                              color: white,
+                              thickness: 1.h,
+                            ),
+                            Container(
+                              decoration: const BoxDecoration(
+                                color: testBck2,
+                                borderRadius: BorderRadius.only(
+                                  topLeft: Radius.circular(10),
+                                  topRight: Radius.circular(10),
+                                ),
+                              ),
+                              alignment: Alignment.topLeft,
+                              padding: EdgeInsets.only(
+                                  top: 2.h
+                              ),
+                              child: Column(
+                                children: [
+                                  Row(
+                                    children: [
+                                      const Spacer(),
+                                      TestsTextInput(
+                                        controller: cont.cont36,
+                                        hintText: "Question..",
+                                        valid: (val) {
+                                          return null;
+                                        },
+                                      ),
+                                      const Spacer(),
+                                      Container(
+                                        width: 10.w,
+                                        height: 6.h,
+                                        decoration: BoxDecoration(
+                                          borderRadius: BorderRadius.circular(10),
+                                          color: red,
+                                        ),
+                                        child: IconButton(
+                                          icon: const Icon(Icons.delete_outline, color: white),
+                                          color: orange,
+                                          focusColor: white,
+                                          autofocus: true,
+                                          padding: const EdgeInsets.all(5),
+                                          onPressed: (){
+
+                                          },
+                                        ),
+                                      ),
+                                      const Spacer(),
+                                    ],
+                                  ),
+                                  SizedBox(height: 2.h),
+                                  Row(
+                                    children: [
+                                      const Spacer(),
+                                      Container(
+                                        width: 10.w,
+                                        height: 6.h,
+                                        decoration: BoxDecoration(
+                                          borderRadius: BorderRadius.circular(10),
+                                        ),
+                                        child: Radio(
+                                            value: 1,
+                                            groupValue: cont.selectedAns8,
+                                            onChanged: (value) {
+                                              cont.selectedAns8 = value!;
+                                              cont.update();
+                                            }
+                                        ),
+                                      ),
+                                      const Spacer(),
+                                      TestsTextOption(
+                                        controller: cont.cont37,
+                                        hintText: "Option 1",
+                                        valid: (val) {
+                                          return null;
+                                        },
+                                      ),
+                                      const Spacer(),
+                                    ],
+                                  ),
+                                  SizedBox(height: 2.h),
+                                  Row(
+                                    children: [
+                                      const Spacer(),
+                                      Container(
+                                        width: 10.w,
+                                        height: 6.h,
+                                        decoration: BoxDecoration(
+                                          borderRadius: BorderRadius.circular(10),
+                                        ),
+                                        child: Radio(
+                                            value: 2,
+                                            groupValue: cont.selectedAns8,
+                                            onChanged: (value) {
+                                              cont.selectedAns8 = value!;
+                                              cont.update();
+                                            }
+                                        ),
+                                      ),
+                                      const Spacer(),
+                                      TestsTextOption(
+                                        controller: cont.cont38,
+                                        hintText: "Option 2",
+                                        valid: (val) {
+                                          return null;
+                                        },
+                                      ),
+                                      const Spacer(),
+                                    ],
+                                  ),
+                                  SizedBox(height: 2.h),
+                                  Row(
+                                    children: [
+                                      const Spacer(),
+                                      Container(
+                                        width: 10.w,
+                                        height: 6.h,
+                                        decoration: BoxDecoration(
+                                          borderRadius: BorderRadius.circular(10),
+                                        ),
+                                        child: Radio(
+                                            value: 3,
+                                            groupValue: cont.selectedAns8,
+                                            onChanged: (value) {
+                                              cont.selectedAns8 = value!;
+                                              cont.update();
+                                            }
+                                        ),
+                                      ),
+                                      const Spacer(),
+                                      TestsTextOption(
+                                        controller: cont.cont39,
+                                        hintText: "Option 3",
+                                        valid: (val) {
+                                          return null;
+                                        },
+                                      ),
+                                      const Spacer(),
+                                    ],
+                                  ),
+                                  SizedBox(height: 2.h),
+                                  Row(
+                                    children: [
+                                      const Spacer(),
+                                      Container(
+                                        width: 10.w,
+                                        height: 6.h,
+                                        decoration: BoxDecoration(
+                                          borderRadius: BorderRadius.circular(10),
+                                        ),
+                                        child: Radio(
+                                            value: 4,
+                                            groupValue: cont.selectedAns8,
+                                            onChanged: (value) {
+                                              cont.selectedAns8 = value!;
+                                              cont.update();
+                                            }
+                                        ),
+                                      ),
+                                      const Spacer(),
+                                      TestsTextOption(
+                                        controller: cont.cont40,
+                                        hintText: "Option 4",
+                                        valid: (val) {
+                                          return null;
+                                        },
+                                      ),
+                                      const Spacer(),
+                                    ],
+                                  ),
+                                  SizedBox(height: 2.h),
+                                ],
+                              ),
+                            ),
+                            Divider(
+                              height: 1.h,
+                              color: white,
+                              thickness: 1.h,
+                            ),
+                            Container(
+                              decoration: const BoxDecoration(
+                                color: testBck3,
+                                borderRadius: BorderRadius.only(
+                                  topLeft: Radius.circular(10),
+                                  topRight: Radius.circular(10),
+                                ),
+                              ),
+                              alignment: Alignment.topLeft,
+                              padding: EdgeInsets.only(
+                                  top: 2.h
+                              ),
+                              child: Column(
+                                children: [
+                                  Row(
+                                    children: [
+                                      const Spacer(),
+                                      TestsTextInput(
+                                        controller: cont.cont41,
+                                        hintText: "Question..",
+                                        valid: (val) {
+                                          return null;
+                                        },
+                                      ),
+                                      const Spacer(),
+                                      Container(
+                                        width: 10.w,
+                                        height: 6.h,
+                                        decoration: BoxDecoration(
+                                          borderRadius: BorderRadius.circular(10),
+                                          color: red,
+                                        ),
+                                        child: IconButton(
+                                          icon: const Icon(Icons.delete_outline, color: white),
+                                          color: orange,
+                                          focusColor: white,
+                                          autofocus: true,
+                                          padding: const EdgeInsets.all(5),
+                                          onPressed: (){
+
+                                          },
+                                        ),
+                                      ),
+                                      const Spacer(),
+                                    ],
+                                  ),
+                                  SizedBox(height: 2.h),
+                                  Row(
+                                    children: [
+                                      const Spacer(),
+                                      Container(
+                                        width: 10.w,
+                                        height: 6.h,
+                                        decoration: BoxDecoration(
+                                          borderRadius: BorderRadius.circular(10),
+                                        ),
+                                        child: Radio(
+                                            value: 1,
+                                            groupValue: cont.selectedAns9,
+                                            onChanged: (value) {
+                                              cont.selectedAns9 = value!;
+                                              cont.update();
+                                            }
+                                        ),
+                                      ),
+                                      const Spacer(),
+                                      TestsTextOption(
+                                        controller: cont.cont42,
+                                        hintText: "Option 1",
+                                        valid: (val) {
+                                          return null;
+                                        },
+                                      ),
+                                      const Spacer(),
+                                    ],
+                                  ),
+                                  SizedBox(height: 2.h),
+                                  Row(
+                                    children: [
+                                      const Spacer(),
+                                      Container(
+                                        width: 10.w,
+                                        height: 6.h,
+                                        decoration: BoxDecoration(
+                                          borderRadius: BorderRadius.circular(10),
+                                        ),
+                                        child: Radio(
+                                            value: 2,
+                                            groupValue: cont.selectedAns9,
+                                            onChanged: (value) {
+                                              cont.selectedAns9 = value!;
+                                              cont.update();
+                                            }
+                                        ),
+                                      ),
+                                      const Spacer(),
+                                      TestsTextOption(
+                                        controller: cont.cont43,
+                                        hintText: "Option 2",
+                                        valid: (val) {
+                                          return null;
+                                        },
+                                      ),
+                                      const Spacer(),
+                                    ],
+                                  ),
+                                  SizedBox(height: 2.h),
+                                  Row(
+                                    children: [
+                                      const Spacer(),
+                                      Container(
+                                        width: 10.w,
+                                        height: 6.h,
+                                        decoration: BoxDecoration(
+                                          borderRadius: BorderRadius.circular(10),
+                                        ),
+                                        child: Radio(
+                                            value: 3,
+                                            groupValue: cont.selectedAns9,
+                                            onChanged: (value) {
+                                              cont.selectedAns9 = value!;
+                                              cont.update();
+                                            }
+                                        ),
+                                      ),
+                                      const Spacer(),
+                                      TestsTextOption(
+                                        controller: cont.cont44,
+                                        hintText: "Option 3",
+                                        valid: (val) {
+                                          return null;
+                                        },
+                                      ),
+                                      const Spacer(),
+                                    ],
+                                  ),
+                                  SizedBox(height: 2.h),
+                                  Row(
+                                    children: [
+                                      const Spacer(),
+                                      Container(
+                                        width: 10.w,
+                                        height: 6.h,
+                                        decoration: BoxDecoration(
+                                          borderRadius: BorderRadius.circular(10),
+                                        ),
+                                        child: Radio(
+                                            value: 4,
+                                            groupValue: cont.selectedAns9,
+                                            onChanged: (value) {
+                                              cont.selectedAns9 = value!;
+                                              cont.update();
+                                            }
+                                        ),
+                                      ),
+                                      const Spacer(),
+                                      TestsTextOption(
+                                        controller: cont.cont45,
+                                        hintText: "Option 4",
+                                        valid: (val) {
+                                          return null;
+                                        },
+                                      ),
+                                      const Spacer(),
+                                    ],
+                                  ),
+                                  SizedBox(height: 2.h),
+                                ],
+                              ),
+                            ),
+                            Divider(
+                              height: 1.h,
+                              color: white,
+                              thickness: 1.h,
+                            ),
+                            Container(
+                              decoration: const BoxDecoration(
+                                color: testBck1,
+                                borderRadius: BorderRadius.only(
+                                  topLeft: Radius.circular(10),
+                                  topRight: Radius.circular(10),
+                                ),
+                              ),
+                              alignment: Alignment.topLeft,
+                              padding: EdgeInsets.only(
+                                  top: 2.h
+                              ),
+                              child: Column(
+                                children: [
+                                  Row(
+                                    children: [
+                                      const Spacer(),
+                                      TestsTextInput(
+                                        controller: cont.cont46,
+                                        hintText: "Question..",
+                                        valid: (val) {
+                                          return null;
+                                        },
+                                      ),
+                                      const Spacer(),
+                                      Container(
+                                        width: 10.w,
+                                        height: 6.h,
+                                        decoration: BoxDecoration(
+                                          borderRadius: BorderRadius.circular(10),
+                                          color: red,
+                                        ),
+                                        child: IconButton(
+                                          icon: const Icon(Icons.delete_outline, color: white),
+                                          color: orange,
+                                          focusColor: white,
+                                          autofocus: true,
+                                          padding: const EdgeInsets.all(5),
+                                          onPressed: (){
+
+                                          },
+                                        ),
+                                      ),
+                                      const Spacer(),
+                                    ],
+                                  ),
+                                  SizedBox(height: 2.h),
+                                  Row(
+                                    children: [
+                                      const Spacer(),
+                                      Container(
+                                        width: 10.w,
+                                        height: 6.h,
+                                        decoration: BoxDecoration(
+                                          borderRadius: BorderRadius.circular(10),
+                                        ),
+                                        child: Radio(
+                                            value: 1,
+                                            groupValue: cont.selectedAns10,
+                                            onChanged: (value) {
+                                              cont.selectedAns10 = value!;
+                                              cont.update();
+                                            }
+                                        ),
+                                      ),
+                                      const Spacer(),
+                                      TestsTextOption(
+                                        controller: cont.cont47,
+                                        hintText: "Option 1",
+                                        valid: (val) {
+                                          return null;
+                                        },
+                                      ),
+                                      const Spacer(),
+                                    ],
+                                  ),
+                                  SizedBox(height: 2.h),
+                                  Row(
+                                    children: [
+                                      const Spacer(),
+                                      Container(
+                                        width: 10.w,
+                                        height: 6.h,
+                                        decoration: BoxDecoration(
+                                          borderRadius: BorderRadius.circular(10),
+                                        ),
+                                        child: Radio(
+                                            value: 2,
+                                            groupValue: cont.selectedAns10,
+                                            onChanged: (value) {
+                                              cont.selectedAns10 = value!;
+                                              cont.update();
+                                            }
+                                        ),
+                                      ),
+                                      const Spacer(),
+                                      TestsTextOption(
+                                        controller: cont.cont48,
+                                        hintText: "Option 2",
+                                        valid: (val) {
+                                          return null;
+                                        },
+                                      ),
+                                      const Spacer(),
+                                    ],
+                                  ),
+                                  SizedBox(height: 2.h),
+                                  Row(
+                                    children: [
+                                      const Spacer(),
+                                      Container(
+                                        width: 10.w,
+                                        height: 6.h,
+                                        decoration: BoxDecoration(
+                                          borderRadius: BorderRadius.circular(10),
+                                        ),
+                                        child: Radio(
+                                            value: 3,
+                                            groupValue: cont.selectedAns10,
+                                            onChanged: (value) {
+                                              cont.selectedAns10 = value!;
+                                              cont.update();
+                                            }
+                                        ),
+                                      ),
+                                      const Spacer(),
+                                      TestsTextOption(
+                                        controller: cont.cont49,
+                                        hintText: "Option 3",
+                                        valid: (val) {
+                                          return null;
+                                        },
+                                      ),
+                                      const Spacer(),
+                                    ],
+                                  ),
+                                  SizedBox(height: 2.h),
+                                  Row(
+                                    children: [
+                                      const Spacer(),
+                                      Container(
+                                        width: 10.w,
+                                        height: 6.h,
+                                        decoration: BoxDecoration(
+                                          borderRadius: BorderRadius.circular(10),
+                                        ),
+                                        child: Radio(
+                                            value: 4,
+                                            groupValue: cont.selectedAns10,
+                                            onChanged: (value) {
+                                              cont.selectedAns10 = value!;
+                                              cont.update();
+                                            }
+                                        ),
+                                      ),
+                                      const Spacer(),
+                                      TestsTextOption(
+                                        controller: cont.cont50,
+                                        hintText: "Option 4",
+                                        valid: (val) {
+                                          return null;
+                                        },
+                                      ),
+                                      const Spacer(),
+                                    ],
+                                  ),
+                                  SizedBox(height: 2.h),
+                                ],
+                              ),
+                            ),
                           ],
                         ),
                       ),

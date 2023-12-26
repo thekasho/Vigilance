@@ -10,10 +10,12 @@ import '../../app_links.dart';
 import '../../core/class/statusrequest.dart';
 import '../../core/data/remote/requests.dart';
 import '../../helpers/helpers.dart';
+import '../../repo/api.dart';
 
 abstract class TeacherTestsCont extends GetxController {
   checkNetwork();
   saveQst();
+  getTests();
 }
 class TeacherTestsContImp extends TeacherTestsCont {
   Requests requests = Requests(Get.find());
@@ -57,15 +59,56 @@ class TeacherTestsContImp extends TeacherTestsCont {
   late TextEditingController cont25;
   int selectedAns5 = 0;
 
+  late TextEditingController cont26;
+  late TextEditingController cont27;
+  late TextEditingController cont28;
+  late TextEditingController cont29;
+  late TextEditingController cont30;
+  int selectedAns6 = 0;
+
+  late TextEditingController cont31;
+  late TextEditingController cont32;
+  late TextEditingController cont33;
+  late TextEditingController cont34;
+  late TextEditingController cont35;
+  int selectedAns7 = 0;
+
+  late TextEditingController cont36;
+  late TextEditingController cont37;
+  late TextEditingController cont38;
+  late TextEditingController cont39;
+  late TextEditingController cont40;
+  int selectedAns8 = 0;
+
+  late TextEditingController cont41;
+  late TextEditingController cont42;
+  late TextEditingController cont43;
+  late TextEditingController cont44;
+  late TextEditingController cont45;
+  int selectedAns9 = 0;
+
+  late TextEditingController cont46;
+  late TextEditingController cont47;
+  late TextEditingController cont48;
+  late TextEditingController cont49;
+  late TextEditingController cont50;
+  int selectedAns10 = 0;
+
   bool validator2 = false;
   bool validator3 = false;
   bool validator4 = false;
   bool validator5 = false;
+  bool validator6 = false;
+  bool validator7 = false;
+  bool validator8 = false;
+  bool validator9 = false;
+  bool validator10 = false;
 
   StatusRequest statusRequest = StatusRequest.none;
 
   bool isConnected = false;
   String email = "";
+  List tests = [];
 
   @override
   checkNetwork() async {
@@ -85,10 +128,10 @@ class TeacherTestsContImp extends TeacherTestsCont {
             title: "Error",
             titlePadding: EdgeInsets.only(bottom: 2.h, top: 1.h),
             titleStyle: TextStyle(
-              fontSize: 18.sp,
-              fontFamily: "Cairo",
-              color: red,
-              fontWeight: FontWeight.bold
+                fontSize: 18.sp,
+                fontFamily: "Cairo",
+                color: red,
+                fontWeight: FontWeight.bold
             ),
             content: Text(
               "No Internet Connection !!",
@@ -133,25 +176,25 @@ class TeacherTestsContImp extends TeacherTestsCont {
           } else {
             validator2 = false;
             Get.defaultDialog(
-              backgroundColor: white,
-              title: "Error",
-              titlePadding: EdgeInsets.only(bottom: 2.h, top: 1.h),
-              titleStyle: TextStyle(
-                fontSize: 18.sp,
-                fontFamily: "Cairo",
-                color: red,
-                fontWeight: FontWeight.bold
-              ),
-              content: Text(
-                "Question 2 Invalid!",
-                style: TextStyle(
-                  fontSize: 18.sp,
-                  fontFamily: "Cairo",
+                backgroundColor: white,
+                title: "Error",
+                titlePadding: EdgeInsets.only(bottom: 2.h, top: 1.h),
+                titleStyle: TextStyle(
+                    fontSize: 18.sp,
+                    fontFamily: "Cairo",
+                    color: red,
+                    fontWeight: FontWeight.bold
                 ),
-              ),
-              onWillPop: () async {
-                return true;
-              }
+                content: Text(
+                  "Question 2 Invalid!",
+                  style: TextStyle(
+                    fontSize: 18.sp,
+                    fontFamily: "Cairo",
+                  ),
+                ),
+                onWillPop: () async {
+                  return true;
+                }
             );
           }
         } else {
@@ -227,7 +270,7 @@ class TeacherTestsContImp extends TeacherTestsCont {
                     fontWeight: FontWeight.bold
                 ),
                 content: Text(
-                  "Question 3 Invalid!",
+                  "Question 4 Invalid!",
                   style: TextStyle(
                     fontSize: 18.sp,
                     fontFamily: "Cairo",
@@ -269,7 +312,7 @@ class TeacherTestsContImp extends TeacherTestsCont {
                     fontWeight: FontWeight.bold
                 ),
                 content: Text(
-                  "Question 3 Invalid!",
+                  "Question 5 Invalid!",
                   style: TextStyle(
                     fontSize: 18.sp,
                     fontFamily: "Cairo",
@@ -283,13 +326,225 @@ class TeacherTestsContImp extends TeacherTestsCont {
         } else {
           validator5 = true;
         }
-        if(validator2 == true && validator3 == true && validator4 == true && validator5 == true){
+
+        Map qst6 = {
+          "qst6": {
+            'qstTitle': cont26.text,
+            'qstOpt1': cont27.text,
+            'qstOpt2': cont29.text,
+            'qstOpt3': cont29.text,
+            'qstOpt4': cont30.text,
+            'rightAns': selectedAns6,
+          }
+        };
+        if(selectedAns6 >= 1 || cont26.text.isNotEmpty || cont27.text.isNotEmpty || cont28.text.isNotEmpty || cont29.text.isNotEmpty || cont30.text.isNotEmpty) {
+          if(selectedAns6 >= 1 && cont26.text.isNotEmpty && cont27.text.isNotEmpty && cont28.text.isNotEmpty && cont29.text.isNotEmpty && cont30.text.isNotEmpty) {
+            validator6 = true;
+            qst.add(qst6);
+          } else {
+            validator6 = false;
+            Get.defaultDialog(
+                backgroundColor: white,
+                title: "Error",
+                titlePadding: EdgeInsets.only(bottom: 2.h, top: 1.h),
+                titleStyle: TextStyle(
+                    fontSize: 18.sp,
+                    fontFamily: "Cairo",
+                    color: red,
+                    fontWeight: FontWeight.bold
+                ),
+                content: Text(
+                  "Question 6 Invalid!",
+                  style: TextStyle(
+                    fontSize: 18.sp,
+                    fontFamily: "Cairo",
+                  ),
+                ),
+                onWillPop: () async {
+                  return true;
+                }
+            );
+          }
+        } else {
+          validator6 = true;
+        }
+
+        Map qst7 = {
+          "qst7": {
+            'qstTitle': cont31.text,
+            'qstOpt1': cont32.text,
+            'qstOpt2': cont33.text,
+            'qstOpt3': cont34.text,
+            'qstOpt4': cont35.text,
+            'rightAns': selectedAns7,
+          }
+        };
+        if(selectedAns7 >= 1 || cont31.text.isNotEmpty || cont32.text.isNotEmpty || cont33.text.isNotEmpty || cont34.text.isNotEmpty || cont35.text.isNotEmpty) {
+          if(selectedAns7 >= 1 && cont31.text.isNotEmpty && cont32.text.isNotEmpty && cont33.text.isNotEmpty && cont34.text.isNotEmpty && cont35.text.isNotEmpty) {
+            validator7 = true;
+            qst.add(qst7);
+          } else {
+            validator7 = false;
+            Get.defaultDialog(
+                backgroundColor: white,
+                title: "Error",
+                titlePadding: EdgeInsets.only(bottom: 2.h, top: 1.h),
+                titleStyle: TextStyle(
+                    fontSize: 18.sp,
+                    fontFamily: "Cairo",
+                    color: red,
+                    fontWeight: FontWeight.bold
+                ),
+                content: Text(
+                  "Question 7 Invalid!",
+                  style: TextStyle(
+                    fontSize: 18.sp,
+                    fontFamily: "Cairo",
+                  ),
+                ),
+                onWillPop: () async {
+                  return true;
+                }
+            );
+          }
+        } else {
+          validator7 = true;
+        }
+
+        Map qst8 = {
+          "qst8": {
+            'qstTitle': cont36.text,
+            'qstOpt1': cont37.text,
+            'qstOpt2': cont38.text,
+            'qstOpt3': cont39.text,
+            'qstOpt4': cont40.text,
+            'rightAns': selectedAns8,
+          }
+        };
+        if(selectedAns8 >= 1 || cont36.text.isNotEmpty || cont37.text.isNotEmpty || cont38.text.isNotEmpty || cont39.text.isNotEmpty || cont40.text.isNotEmpty) {
+          if(selectedAns8 >= 1 && cont36.text.isNotEmpty && cont37.text.isNotEmpty && cont38.text.isNotEmpty && cont39.text.isNotEmpty && cont40.text.isNotEmpty) {
+            validator8 = true;
+            qst.add(qst8);
+          } else {
+            validator8 = false;
+            Get.defaultDialog(
+                backgroundColor: white,
+                title: "Error",
+                titlePadding: EdgeInsets.only(bottom: 2.h, top: 1.h),
+                titleStyle: TextStyle(
+                    fontSize: 18.sp,
+                    fontFamily: "Cairo",
+                    color: red,
+                    fontWeight: FontWeight.bold
+                ),
+                content: Text(
+                  "Question 8 Invalid!",
+                  style: TextStyle(
+                    fontSize: 18.sp,
+                    fontFamily: "Cairo",
+                  ),
+                ),
+                onWillPop: () async {
+                  return true;
+                }
+            );
+          }
+        } else {
+          validator8 = true;
+        }
+
+        Map qst9 = {
+          "qst9": {
+            'qstTitle': cont41.text,
+            'qstOpt1': cont42.text,
+            'qstOpt2': cont43.text,
+            'qstOpt3': cont44.text,
+            'qstOpt4': cont45.text,
+            'rightAns': selectedAns9,
+          }
+        };
+        if(selectedAns9 >= 1 || cont41.text.isNotEmpty || cont42.text.isNotEmpty || cont43.text.isNotEmpty || cont44.text.isNotEmpty || cont45.text.isNotEmpty) {
+          if(selectedAns9 >= 1 && cont41.text.isNotEmpty && cont42.text.isNotEmpty && cont43.text.isNotEmpty && cont44.text.isNotEmpty && cont45.text.isNotEmpty) {
+            validator9 = true;
+            qst.add(qst9);
+          } else {
+            validator9 = false;
+            Get.defaultDialog(
+                backgroundColor: white,
+                title: "Error",
+                titlePadding: EdgeInsets.only(bottom: 2.h, top: 1.h),
+                titleStyle: TextStyle(
+                    fontSize: 18.sp,
+                    fontFamily: "Cairo",
+                    color: red,
+                    fontWeight: FontWeight.bold
+                ),
+                content: Text(
+                  "Question 9 Invalid!",
+                  style: TextStyle(
+                    fontSize: 18.sp,
+                    fontFamily: "Cairo",
+                  ),
+                ),
+                onWillPop: () async {
+                  return true;
+                }
+            );
+          }
+        } else {
+          validator9 = true;
+        }
+
+        Map qst10 = {
+          "qst10": {
+            'qstTitle': cont46.text,
+            'qstOpt1': cont47.text,
+            'qstOpt2': cont48.text,
+            'qstOpt3': cont49.text,
+            'qstOpt4': cont50.text,
+            'rightAns': selectedAns10,
+          }
+        };
+        if(selectedAns10 >= 1 || cont46.text.isNotEmpty || cont47.text.isNotEmpty || cont48.text.isNotEmpty || cont49.text.isNotEmpty || cont50.text.isNotEmpty) {
+          if(selectedAns10 >= 1 && cont46.text.isNotEmpty && cont47.text.isNotEmpty && cont48.text.isNotEmpty && cont49.text.isNotEmpty && cont50.text.isNotEmpty) {
+            validator10 = true;
+            qst.add(qst10);
+          } else {
+            validator10 = false;
+            Get.defaultDialog(
+                backgroundColor: white,
+                title: "Error",
+                titlePadding: EdgeInsets.only(bottom: 2.h, top: 1.h),
+                titleStyle: TextStyle(
+                    fontSize: 18.sp,
+                    fontFamily: "Cairo",
+                    color: red,
+                    fontWeight: FontWeight.bold
+                ),
+                content: Text(
+                  "Question 10 Invalid!",
+                  style: TextStyle(
+                    fontSize: 18.sp,
+                    fontFamily: "Cairo",
+                  ),
+                ),
+                onWillPop: () async {
+                  return true;
+                }
+            );
+          }
+        } else {
+          validator10 = true;
+        }
+
+        if(validator2 == true && validator3 == true && validator4 == true && validator5 == true && validator6 == true && validator7 == true && validator8 == true && validator9 == true && validator10 == true){
           Map answ = {};
           for(int i = 0; i<qst.length; i++){
             answ.addAll(qst[i]);
           }
           Map testData = {
             "qsts": json.encode(answ),
+            'creator_email': email
           };
           var save = await requests.postData(testData, ApiLinks.addTest);
 
@@ -315,75 +570,75 @@ class TeacherTestsContImp extends TeacherTestsCont {
           } else {
             if (save['message'] == "success") {
               Get.defaultDialog(
-                backgroundColor: white,
-                title: "Success",
-                titlePadding: EdgeInsets.only(bottom: 2.h, top: 1.h),
-                titleStyle: TextStyle(
-                    fontSize: 18.sp,
-                    fontFamily: "Cairo",
-                    color: green,
-                    fontWeight: FontWeight.bold
-                ),
-                content: Text(
-                  "Tests Added",
-                  style: TextStyle(
-                    fontSize: 18.sp,
-                    fontFamily: "Cairo",
+                  backgroundColor: white,
+                  title: "Success",
+                  titlePadding: EdgeInsets.only(bottom: 2.h, top: 1.h),
+                  titleStyle: TextStyle(
+                      fontSize: 18.sp,
+                      fontFamily: "Cairo",
+                      color: green,
+                      fontWeight: FontWeight.bold
                   ),
-                ),
-                onWillPop: () async {
-                  Get.back();
-                  Get.back();
-                  return false;
-                }
+                  content: Text(
+                    "Tests Added",
+                    style: TextStyle(
+                      fontSize: 18.sp,
+                      fontFamily: "Cairo",
+                    ),
+                  ),
+                  onWillPop: () async {
+                    Get.back();
+                    Get.back();
+                    return false;
+                  }
               );
             } else if (save['message'] == "data_null"){
               Get.defaultDialog(
-                backgroundColor: white,
-                title: "Error",
-                titlePadding: EdgeInsets.only(bottom: 2.h, top: 1.h),
-                titleStyle: TextStyle(
-                  fontSize: 18.sp,
-                  fontFamily: "Cairo",
-                  color: red,
-                  fontWeight: FontWeight.bold
-                ),
-                content: Text(
-                  "Server Error !!",
-                  style: TextStyle(
-                    fontSize: 18.sp,
-                    fontFamily: "Cairo",
+                  backgroundColor: white,
+                  title: "Error",
+                  titlePadding: EdgeInsets.only(bottom: 2.h, top: 1.h),
+                  titleStyle: TextStyle(
+                      fontSize: 18.sp,
+                      fontFamily: "Cairo",
+                      color: red,
+                      fontWeight: FontWeight.bold
                   ),
-                ),
-                onWillPop: () async {
-                  Get.back();
-                  Get.back();
-                  return false;
-                }
+                  content: Text(
+                    "Server Error !!",
+                    style: TextStyle(
+                      fontSize: 18.sp,
+                      fontFamily: "Cairo",
+                    ),
+                  ),
+                  onWillPop: () async {
+                    Get.back();
+                    Get.back();
+                    return false;
+                  }
               );
             } else {
               Get.defaultDialog(
-                backgroundColor: white,
-                title: "Error",
-                titlePadding: EdgeInsets.only(bottom: 2.h, top: 1.h),
-                titleStyle: TextStyle(
-                    fontSize: 18.sp,
-                    fontFamily: "Cairo",
-                    color: red,
-                    fontWeight: FontWeight.bold
-                ),
-                content: Text(
-                  "Server Error !!",
-                  style: TextStyle(
-                    fontSize: 18.sp,
-                    fontFamily: "Cairo",
+                  backgroundColor: white,
+                  title: "Error",
+                  titlePadding: EdgeInsets.only(bottom: 2.h, top: 1.h),
+                  titleStyle: TextStyle(
+                      fontSize: 18.sp,
+                      fontFamily: "Cairo",
+                      color: red,
+                      fontWeight: FontWeight.bold
                   ),
-                ),
-                onWillPop: () async {
-                  Get.back();
-                  Get.back();
-                  return false;
-                }
+                  content: Text(
+                    "Server Error !!",
+                    style: TextStyle(
+                      fontSize: 18.sp,
+                      fontFamily: "Cairo",
+                    ),
+                  ),
+                  onWillPop: () async {
+                    Get.back();
+                    Get.back();
+                    return false;
+                  }
               );
             }
           }
@@ -395,8 +650,61 @@ class TeacherTestsContImp extends TeacherTestsCont {
   }
 
   @override
+  getTests() async {
+    try {
+      statusRequest = StatusRequest.loading;
+      update();
+
+      if(!isConnected){
+        Get.defaultDialog(
+          backgroundColor: white,
+          title: "Error",
+          titlePadding: EdgeInsets.only(bottom: 2.h, top: 1.h),
+          titleStyle: TextStyle(
+              fontSize: 18.sp,
+              fontFamily: "Cairo",
+              color: red,
+              fontWeight: FontWeight.bold
+          ),
+          content: Text(
+            "No Internet Connection !!",
+            style: TextStyle(
+              fontSize: 18.sp,
+              fontFamily: "Cairo",
+            ),
+          ),
+        );
+        statusRequest = StatusRequest.failure;
+        update();
+        return;
+      }
+
+      var loginData = await LocaleApi.getLoginData();
+
+      if(loginData != null) {
+        email = loginData['email'];
+
+        Map taskRequest = {
+          'user_email': loginData['email'],
+        };
+        var testsResponse = await requests.postData(taskRequest, ApiLinks.getTest);
+        if(testsResponse['statue'] == "success" && testsResponse['result'].length >= 1){
+          tests = [];
+          tests.addAll(testsResponse['result']);
+          statusRequest = StatusRequest.success;
+          update();
+        }
+        print(tests);
+      }
+    } catch (e) {
+      print("Error: $e");
+    }
+  }
+
+  @override
   void onInit() async {
     await checkNetwork();
+    getTests();
     cont1 = TextEditingController();
     cont2 = TextEditingController();
     cont3 = TextEditingController();
@@ -426,6 +734,36 @@ class TeacherTestsContImp extends TeacherTestsCont {
     cont23 = TextEditingController();
     cont24 = TextEditingController();
     cont25 = TextEditingController();
+
+    cont26 = TextEditingController();
+    cont27 = TextEditingController();
+    cont28 = TextEditingController();
+    cont29 = TextEditingController();
+    cont30 = TextEditingController();
+
+    cont31 = TextEditingController();
+    cont32 = TextEditingController();
+    cont33 = TextEditingController();
+    cont34 = TextEditingController();
+    cont35 = TextEditingController();
+
+    cont36 = TextEditingController();
+    cont37 = TextEditingController();
+    cont38 = TextEditingController();
+    cont39 = TextEditingController();
+    cont40 = TextEditingController();
+
+    cont41 = TextEditingController();
+    cont42 = TextEditingController();
+    cont43 = TextEditingController();
+    cont44 = TextEditingController();
+    cont45 = TextEditingController();
+
+    cont46 = TextEditingController();
+    cont47 = TextEditingController();
+    cont48 = TextEditingController();
+    cont49 = TextEditingController();
+    cont50 = TextEditingController();
     super.onInit();
   }
 
@@ -460,6 +798,36 @@ class TeacherTestsContImp extends TeacherTestsCont {
     cont23.dispose();
     cont24.dispose();
     cont25.dispose();
+
+    cont26.dispose();
+    cont27.dispose();
+    cont28.dispose();
+    cont29.dispose();
+    cont30.dispose();
+
+    cont31.dispose();
+    cont32.dispose();
+    cont33.dispose();
+    cont34.dispose();
+    cont35.dispose();
+
+    cont36.dispose();
+    cont37.dispose();
+    cont38.dispose();
+    cont39.dispose();
+    cont40.dispose();
+
+    cont41.dispose();
+    cont42.dispose();
+    cont43.dispose();
+    cont44.dispose();
+    cont45.dispose();
+
+    cont46.dispose();
+    cont47.dispose();
+    cont48.dispose();
+    cont49.dispose();
+    cont50.dispose();
 
     super.dispose();
   }
