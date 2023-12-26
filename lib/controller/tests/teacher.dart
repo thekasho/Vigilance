@@ -16,12 +16,14 @@ abstract class TeacherTestsCont extends GetxController {
   checkNetwork();
   saveQst();
   getTests();
+  getTestQsts(int id);
 }
 class TeacherTestsContImp extends TeacherTestsCont {
   Requests requests = Requests(Get.find());
 
   GlobalKey<FormState> formstate = GlobalKey<FormState>();
 
+  // add Test Options
   List qst = [];
 
   late TextEditingController cont1;
@@ -103,6 +105,89 @@ class TeacherTestsContImp extends TeacherTestsCont {
   bool validator8 = false;
   bool validator9 = false;
   bool validator10 = false;
+
+  // view Test Options
+  List eqst = [];
+
+  late TextEditingController econt1;
+  late TextEditingController econt2;
+  late TextEditingController econt3;
+  late TextEditingController econt4;
+  late TextEditingController econt5;
+  int eselectedAns1 = 1;
+
+  late TextEditingController econt6;
+  late TextEditingController econt7;
+  late TextEditingController econt8;
+  late TextEditingController econt9;
+  late TextEditingController econt10;
+  int eselectedAns2 = 0;
+
+  late TextEditingController econt11;
+  late TextEditingController econt12;
+  late TextEditingController econt13;
+  late TextEditingController econt14;
+  late TextEditingController econt15;
+  int eselectedAns3 = 0;
+
+  late TextEditingController econt16;
+  late TextEditingController econt17;
+  late TextEditingController econt18;
+  late TextEditingController econt19;
+  late TextEditingController econt20;
+  int eselectedAns4 = 0;
+
+  late TextEditingController econt21;
+  late TextEditingController econt22;
+  late TextEditingController econt23;
+  late TextEditingController econt24;
+  late TextEditingController econt25;
+  int eselectedAns5 = 0;
+
+  late TextEditingController econt26;
+  late TextEditingController econt27;
+  late TextEditingController econt28;
+  late TextEditingController econt29;
+  late TextEditingController econt30;
+  int eselectedAns6 = 0;
+
+  late TextEditingController econt31;
+  late TextEditingController econt32;
+  late TextEditingController econt33;
+  late TextEditingController econt34;
+  late TextEditingController econt35;
+  int eselectedAns7 = 0;
+
+  late TextEditingController econt36;
+  late TextEditingController econt37;
+  late TextEditingController econt38;
+  late TextEditingController econt39;
+  late TextEditingController econt40;
+  int eselectedAns8 = 0;
+
+  late TextEditingController econt41;
+  late TextEditingController econt42;
+  late TextEditingController econt43;
+  late TextEditingController econt44;
+  late TextEditingController econt45;
+  int eselectedAns9 = 0;
+
+  late TextEditingController econt46;
+  late TextEditingController econt47;
+  late TextEditingController econt48;
+  late TextEditingController econt49;
+  late TextEditingController econt50;
+  int eselectedAns10 = 0;
+
+  bool evalidator2 = false;
+  bool evalidator3 = false;
+  bool evalidator4 = false;
+  bool evalidator5 = false;
+  bool evalidator6 = false;
+  bool evalidator7 = false;
+  bool evalidator8 = false;
+  bool evalidator9 = false;
+  bool evalidator10 = false;
 
   StatusRequest statusRequest = StatusRequest.none;
 
@@ -702,14 +787,99 @@ class TeacherTestsContImp extends TeacherTestsCont {
   }
 
   @override
+  getTestQsts(id) async {
+    try {
+      if(!isConnected){
+        Get.defaultDialog(
+          backgroundColor: white,
+          title: "Error",
+          titlePadding: EdgeInsets.only(bottom: 2.h, top: 1.h),
+          titleStyle: TextStyle(
+              fontSize: 18.sp,
+              fontFamily: "Cairo",
+              color: red,
+              fontWeight: FontWeight.bold
+          ),
+          content: Text(
+            "No Internet Connection !!",
+            style: TextStyle(
+              fontSize: 18.sp,
+              fontFamily: "Cairo",
+            ),
+          ),
+        );
+        statusRequest = StatusRequest.failure;
+        update();
+        return;
+      }
+
+      Map taskRequest = {
+        'id': id.toString(),
+      };
+      var testsResponse = await requests.postData(taskRequest, ApiLinks.viewTest);
+      if(testsResponse['statue'] == "success" && testsResponse['result'].length >= 1){
+        eqst = [];
+        eqst.addAll(testsResponse['result']);
+      }
+
+      econt1 = TextEditingController(text: eqst[0]['title'] ?? "");
+      econt2 = TextEditingController(text: eqst[0]['option_1'] ?? "");
+      econt3 = TextEditingController(text: eqst[0]['option_2'] ?? "");
+      econt4 = TextEditingController(text: eqst[0]['option_3'] ?? "");
+      econt5 = TextEditingController(text: eqst[0]['option_4'] ?? "");
+      eselectedAns1 = eqst[0]['answer'] ?? "";
+
+      econt6 = TextEditingController(text: eqst[1]['title'] ?? "");
+      econt7 = TextEditingController(text: eqst[1]['option_1'] ?? "");
+      econt8 = TextEditingController(text: eqst[1]['option_2'] ?? "");
+      econt9 = TextEditingController(text: eqst[1]['option_3'] ?? "");
+      econt10 = TextEditingController(text: eqst[1]['option_4'] ?? "");
+      eselectedAns2 = eqst[1]['answer'] ?? "";
+
+      econt11 = TextEditingController(text: eqst[2]['title'] ?? "");
+      econt12 = TextEditingController(text: eqst[2]['option_1'] ?? "");
+      econt13 = TextEditingController(text: eqst[2]['option_2'] ?? "");
+      econt14 = TextEditingController(text: eqst[2]['option_3'] ?? "");
+      econt15 = TextEditingController(text: eqst[2]['option_4'] ?? "");
+      eselectedAns3 = eqst[2]['answer'] ?? "";
+
+      econt16 = TextEditingController(text: eqst[3]['title'] ?? "");
+      econt17 = TextEditingController(text: eqst[3]['option_1'] ?? "");
+      econt18 = TextEditingController(text: eqst[3]['option_2'] ?? "");
+      econt19 = TextEditingController(text: eqst[3]['option_3'] ?? "");
+      econt20 = TextEditingController(text: eqst[3]['option_4'] ?? "");
+      eselectedAns4 = eqst[3]['answer'] ?? "";
+
+      econt21 = TextEditingController(text: eqst[4]['title'] ?? "");
+      econt22 = TextEditingController(text: eqst[4]['option_1'] ?? "");
+      econt23 = TextEditingController(text: eqst[4]['option_2'] ?? "");
+      econt24 = TextEditingController(text: eqst[4]['option_3'] ?? "");
+      econt25 = TextEditingController(text: eqst[4]['option_4'] ?? "");
+      eselectedAns5 = eqst[4]['answer'] ?? "";
+
+      update();
+
+      print(eqst.length);
+    } catch (e) {
+      print("Error: $e");
+    }
+  }
+
+  @override
   void onInit() async {
     await checkNetwork();
-    getTests();
+    await getTests();
     cont1 = TextEditingController();
     cont2 = TextEditingController();
     cont3 = TextEditingController();
     cont4 = TextEditingController();
     cont5 = TextEditingController();
+
+    econt1 = TextEditingController();
+    econt2 = TextEditingController();
+    econt3 = TextEditingController();
+    econt4 = TextEditingController();
+    econt5 = TextEditingController();
 
     cont6 = TextEditingController();
     cont7 = TextEditingController();
@@ -717,11 +887,23 @@ class TeacherTestsContImp extends TeacherTestsCont {
     cont9 = TextEditingController();
     cont10 = TextEditingController();
 
+    econt6 = TextEditingController();
+    econt7 = TextEditingController();
+    econt8 = TextEditingController();
+    econt9 = TextEditingController();
+    econt10 = TextEditingController();
+
     cont11 = TextEditingController();
     cont12 = TextEditingController();
     cont13 = TextEditingController();
     cont14 = TextEditingController();
     cont15 = TextEditingController();
+
+    econt11 = TextEditingController();
+    econt12 = TextEditingController();
+    econt13 = TextEditingController();
+    econt14 = TextEditingController();
+    econt15 = TextEditingController();
 
     cont16 = TextEditingController();
     cont17 = TextEditingController();
@@ -729,11 +911,23 @@ class TeacherTestsContImp extends TeacherTestsCont {
     cont19 = TextEditingController();
     cont20 = TextEditingController();
 
+    econt16 = TextEditingController();
+    econt17 = TextEditingController();
+    econt18 = TextEditingController();
+    econt19 = TextEditingController();
+    econt20 = TextEditingController();
+
     cont21 = TextEditingController();
     cont22 = TextEditingController();
     cont23 = TextEditingController();
     cont24 = TextEditingController();
     cont25 = TextEditingController();
+
+    econt21 = TextEditingController();
+    econt22 = TextEditingController();
+    econt23 = TextEditingController();
+    econt24 = TextEditingController();
+    econt25 = TextEditingController();
 
     cont26 = TextEditingController();
     cont27 = TextEditingController();
@@ -774,6 +968,18 @@ class TeacherTestsContImp extends TeacherTestsCont {
     cont3.dispose();
     cont4.dispose();
     cont5.dispose();
+
+    econt1.dispose();
+    econt2.dispose();
+    econt3.dispose();
+    econt4.dispose();
+    econt5.dispose();
+
+    econt1.dispose();
+    econt2.dispose();
+    econt3.dispose();
+    econt4.dispose();
+    econt5.dispose();
 
     cont6.dispose();
     cont7.dispose();

@@ -8,6 +8,7 @@ class TestsTextInput extends StatelessWidget {
   final String hintText;
   final Color? fillColor;
   final Function(String)? onChanged;
+  final String? initialValue;
 
   const TestsTextInput({super.key,
     required this.controller,
@@ -15,7 +16,7 @@ class TestsTextInput extends StatelessWidget {
     this.focusNode,
     this.onFieldSubmitted,
     required this.hintText,
-    this.fillColor, this.onChanged});
+    this.fillColor, this.onChanged, this.initialValue});
 
   @override
   Widget build(BuildContext context) {
@@ -24,6 +25,7 @@ class TestsTextInput extends StatelessWidget {
       height: 7.h,
       child: TextFormField(
         controller: controller,
+        initialValue: initialValue,
         validator: valid,
         onFieldSubmitted: onFieldSubmitted,
         onChanged: onChanged,

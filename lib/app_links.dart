@@ -19,4 +19,5 @@ class ApiLinks {
   static const String buyShoppingItems = 'https://microplazatesla.com/vl/buy_items.php';
   static const String addTest = 'https://microplazatesla.com/vl/add_test.php';
   static const String getTest = 'https://microplazatesla.com/vl/get_tests.php';
+  static const String viewTest = 'https://microplazatesla.com/vl/get_test_qst.php';
 }

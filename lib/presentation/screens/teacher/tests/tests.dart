@@ -113,7 +113,7 @@ class _TeacherTestsScreenState extends State<TeacherTestsScreen> {
                                     ),
                                   ),
                                   Text(
-                                    "Test #${cont.tests[i]['id'] + 1}",
+                                    "Test #${cont.tests[i]['id']}",
                                     style: TextStyle(
                                       fontSize: 20.sp,
                                       fontWeight: FontWeight.bold,
@@ -131,13 +131,14 @@ class _TeacherTestsScreenState extends State<TeacherTestsScreen> {
                                           color: orange,
                                         ),
                                         child: IconButton(
-                                          icon: const Icon(
-                                              Icons.edit_note, color: black),
+                                          icon: const Icon(Icons.edit_note, color: black),
                                           color: orange,
                                           focusColor: white,
                                           autofocus: true,
-                                          padding: EdgeInsets.all(5),
-                                          onPressed: () {},
+                                          padding: const EdgeInsets.all(5),
+                                          onPressed: () {
+                                            Get.to(() => TeacherViewTestScreen(id: cont.tests[i]['id'] ));
+                                          },
                                         ),
                                       ),
                                       SizedBox(width: 3.w),
@@ -154,7 +155,7 @@ class _TeacherTestsScreenState extends State<TeacherTestsScreen> {
                                           color: orange,
                                           focusColor: white,
                                           autofocus: true,
-                                          padding: EdgeInsets.all(5),
+                                          padding: const EdgeInsets.all(5),
                                           onPressed: () {},
                                         ),
                                       ),
