@@ -57,6 +57,9 @@ part 'study/promodoro/timer.dart';
 
 part 'games/home.dart';
 
+part 'meditate/home.dart';
+part 'meditate/meditate_type.dart';
+
 part 'supportTeacher/home.dart';
 part 'supportTeacher/email.dart';
 part 'supportTeacher/chat.dart';

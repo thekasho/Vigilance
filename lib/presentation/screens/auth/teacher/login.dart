@@ -68,22 +68,22 @@ class _TeacherLoginScreenState extends State<TeacherLoginScreen> {
                               ),
                             ),
                             Text(
-                              "Sign in as teacher",
+                              "login_as_teacher".tr,
                               style: TextStyle(
-                                  fontFamily: 'Cairo',
-                                  fontSize: 22.sp,
-                                  fontWeight: FontWeight.bold
+                                fontFamily: 'Cairo',
+                                fontSize: 22.sp,
+                                fontWeight: FontWeight.bold
                               ),
                             ),
                             SizedBox(height: 6.h),
                             AuthTextForm(
                               controller: controller.email,
-                              hintText: "Email",
+                              hintText: "email".tr,
                               isPassword: false,
                               focusNode: f1,
                               valid: (val) {
                                 if (val!.isEmpty) {
-                                  return 'Required!';
+                                  return "required".tr;
                                 }
                               },
                               onFieldSubmitted: (val) {
@@ -94,7 +94,7 @@ class _TeacherLoginScreenState extends State<TeacherLoginScreen> {
                             SizedBox(height: 2.h),
                             AuthTextForm(
                               controller: controller.pass,
-                              hintText: "Password",
+                              hintText: "password".tr,
                               isPassword: controller.isShowPassword,
                               focusNode: f2,
                               suffixIcon: GestureDetector(
@@ -105,7 +105,7 @@ class _TeacherLoginScreenState extends State<TeacherLoginScreen> {
                               ),
                               valid: (val) {
                                 if (val!.isEmpty) {
-                                  return 'Required!';
+                                  return "required".tr;
                                 }
                                 return null;
                               },
@@ -136,7 +136,7 @@ class _TeacherLoginScreenState extends State<TeacherLoginScreen> {
                                   child: Row(
                                     children: [
                                       Text(
-                                        "Sing In",
+                                        "login".tr,
                                         style: TextStyle(
                                           fontSize: 19.sp,
                                           color: black,
@@ -156,7 +156,7 @@ class _TeacherLoginScreenState extends State<TeacherLoginScreen> {
                             ),
                             SizedBox(height: 2.h),
                             Text(
-                              "Don`t have an account?",
+                              "dont_have_account".tr,
                               style: TextStyle(
                                   fontFamily: 'Cairo',
                                   fontSize: 18.sp,
@@ -166,7 +166,7 @@ class _TeacherLoginScreenState extends State<TeacherLoginScreen> {
                             GestureDetector(
                               onTap: () => Get.toNamed(screenTeacherRegister),
                               child: Text(
-                                "Sign Up",
+                                "signup".tr,
                                 style: TextStyle(
                                   fontSize: 16.sp,
                                   color: orange,

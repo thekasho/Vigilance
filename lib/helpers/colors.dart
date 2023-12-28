@@ -31,6 +31,7 @@ const testBck2 = Color(0xffCAEDFF);
 const testBck3 = Color(0xffDBC4F0);
 const lighterBlue = Color(0xff01DBFE);
 const chatbck = Color(0xffFFF6E0);
+const medHomeBtn = Color(0xffC8A2C8);
 
 
 

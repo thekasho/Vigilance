@@ -28,12 +28,12 @@ class _SupportTeacherHomeScreenState extends State<SupportTeacherHomeScreen> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      "المعلم",
+                      "teacher".tr,
                       style: TextStyle(
-                          color: black,
-                          fontWeight: FontWeight.bold,
-                          fontFamily: 'Cairo',
-                          fontSize: 25.sp
+                        color: black,
+                        fontWeight: FontWeight.bold,
+                        fontFamily: 'Cairo',
+                        fontSize: 25.sp
                       ),
                     ),
                   ],
@@ -42,7 +42,7 @@ class _SupportTeacherHomeScreenState extends State<SupportTeacherHomeScreen> {
                   height: 45.h,
                   child: Image.asset("assets/images/support_teacher_home.png")
                 ),
-                SizedBox(height: 5.h),
+                SizedBox(height: 8.h),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -64,12 +64,12 @@ class _SupportTeacherHomeScreenState extends State<SupportTeacherHomeScreen> {
                           ),
                         ),
                         child: Text(
-                          "الامتحانات",
+                          "tests".tr,
                           style: TextStyle(
-                              fontSize: 19.sp,
-                              color: white,
-                              fontWeight: FontWeight.bold,
-                              fontFamily: 'Cairo'
+                            fontSize: 19.sp,
+                            color: white,
+                            fontWeight: FontWeight.bold,
+                            fontFamily: 'Cairo'
                           ),
                         ),
                         onPressed: () {
@@ -101,7 +101,7 @@ class _SupportTeacherHomeScreenState extends State<SupportTeacherHomeScreen> {
                           ),
                         ),
                         child: Text(
-                          "تواصل مع معلمك",
+                          "chat_with_teacher".tr,
                           style: TextStyle(
                               fontSize: 19.sp,
                               color: white,
@@ -117,42 +117,42 @@ class _SupportTeacherHomeScreenState extends State<SupportTeacherHomeScreen> {
                   ],
                 ),
                 SizedBox(height: 2.h),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    SizedBox(
-                      width: 60.w,
-                      child: ElevatedButton(
-                        style: ButtonStyle(
-                          backgroundColor: MaterialStateProperty.all<Color>(orange),
-                          shape: MaterialStateProperty.all<
-                              RoundedRectangleBorder>(
-                            RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(10),
-                            ),
-                          ),
-                          padding: MaterialStateProperty.all<EdgeInsets>(
-                            EdgeInsets.symmetric(
-                                vertical: 1.h
-                            ),
-                          ),
-                        ),
-                        child: Text(
-                          "ارسال بريد الكتروني للمعلم",
-                          style: TextStyle(
-                            fontSize: 17.sp,
-                            color: white,
-                            fontWeight: FontWeight.bold,
-                            fontFamily: 'Cairo'
-                          ),
-                        ),
-                        onPressed: () {
-                          Get.toNamed(screenTeacherEmail);
-                        },
-                      ),
-                    ),
-                  ],
-                ),
+                // Row(
+                //   mainAxisAlignment: MainAxisAlignment.center,
+                //   children: [
+                //     SizedBox(
+                //       width: 60.w,
+                //       child: ElevatedButton(
+                //         style: ButtonStyle(
+                //           backgroundColor: MaterialStateProperty.all<Color>(orange),
+                //           shape: MaterialStateProperty.all<
+                //               RoundedRectangleBorder>(
+                //             RoundedRectangleBorder(
+                //               borderRadius: BorderRadius.circular(10),
+                //             ),
+                //           ),
+                //           padding: MaterialStateProperty.all<EdgeInsets>(
+                //             EdgeInsets.symmetric(
+                //                 vertical: 1.h
+                //             ),
+                //           ),
+                //         ),
+                //         child: Text(
+                //           "ارسال بريد الكتروني للمعلم",
+                //           style: TextStyle(
+                //             fontSize: 17.sp,
+                //             color: white,
+                //             fontWeight: FontWeight.bold,
+                //             fontFamily: 'Cairo'
+                //           ),
+                //         ),
+                //         onPressed: () {
+                //           Get.toNamed(screenTeacherEmail);
+                //         },
+                //       ),
+                //     ),
+                //   ],
+                // ),
               ],
             ),
           ),

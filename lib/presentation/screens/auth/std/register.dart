@@ -60,7 +60,7 @@ class _StdRegisterScreeenState extends State<StdRegisterScreeen> {
                                   shape: BoxShape.circle
                               ),
                               child: CachedNetworkImage(
-                                imageUrl: "https://th.bing.com/th/id/OIP.KEJaw671I5WYuftNN0IOZAHaHa?w=196&h=196&c=7&r=0&o=5&dpr=1.3&pid=1.7",
+                                imageUrl: "https://cdn.iconscout.com/icon/free/png-256/avatar-369-456321.png",
                                 errorWidget: (_, i, e) {
                                   return Icon(
                                     FontAwesomeIcons.image,
@@ -71,7 +71,7 @@ class _StdRegisterScreeenState extends State<StdRegisterScreeen> {
                               ),
                             ),
                             Text(
-                              "تسجيل حساب الطفل /ة",
+                              "signup_parent".tr,
                               style: TextStyle(
                                 fontFamily: 'Cairo',
                                 fontSize: 20.sp,
@@ -81,12 +81,12 @@ class _StdRegisterScreeenState extends State<StdRegisterScreeen> {
                             SizedBox(height: 2.h),
                             AuthTextForm(
                               controller: controller.username,
-                              hintText: "Username",
+                              hintText: "username".tr,
                               isPassword: false,
                               focusNode: f1,
                               valid: (val) {
                                 if (val!.isEmpty) {
-                                  return 'Required!';
+                                  return "required".tr;
                                 }
                               },
                               onFieldSubmitted: (val) {
@@ -97,12 +97,12 @@ class _StdRegisterScreeenState extends State<StdRegisterScreeen> {
                             SizedBox(height: 2.h),
                             AuthTextForm(
                               controller: controller.email,
-                              hintText: "Email",
+                              hintText: "email".tr,
                               isPassword: false,
                               focusNode: f2,
                               valid: (val) {
                                 if (val!.isEmpty) {
-                                  return 'Required!';
+                                  return "required".tr;
                                 }
                               },
                               onFieldSubmitted: (val) {
@@ -113,7 +113,7 @@ class _StdRegisterScreeenState extends State<StdRegisterScreeen> {
                             SizedBox(height: 2.h),
                             AuthTextForm(
                               controller: controller.pass,
-                              hintText: "Password",
+                              hintText: "password".tr,
                               isPassword: controller.isShowPassword,
                               focusNode: f3,
                               suffixIcon: GestureDetector(
@@ -124,7 +124,7 @@ class _StdRegisterScreeenState extends State<StdRegisterScreeen> {
                               ),
                               valid: (val) {
                                 if (val!.isEmpty) {
-                                  return 'Required!';
+                                  return "required".tr;
                                 }
                                 return null;
                               },
@@ -136,7 +136,7 @@ class _StdRegisterScreeenState extends State<StdRegisterScreeen> {
                             SizedBox(height: 2.h),
                             AuthTextForm(
                               controller: controller.cpass,
-                              hintText: "Confirm Password",
+                              hintText: "confitm_password".tr,
                               isPassword: controller.isShowPassword,
                               focusNode: f4,
                               onChanged: (val){
@@ -144,9 +144,9 @@ class _StdRegisterScreeenState extends State<StdRegisterScreeen> {
                               },
                               valid: (val) {
                                 if (val!.isEmpty) {
-                                  return 'Required!';
+                                  return "required".tr;
                                 } else if(pass != val){
-                                  return 'Password Mismatch!';
+                                  return "password_mismatch".tr;
                                 }
                                 return null;
                               },
@@ -177,7 +177,7 @@ class _StdRegisterScreeenState extends State<StdRegisterScreeen> {
                                   child: Row(
                                     children: [
                                       Text(
-                                        "تسجيل الحساب",
+                                        "signup".tr,
                                         style: TextStyle(
                                           fontSize: 19.sp,
                                           color: black,
@@ -197,7 +197,7 @@ class _StdRegisterScreeenState extends State<StdRegisterScreeen> {
                             ),
                             SizedBox(height: 2.h),
                             Text(
-                              "لديك حساب بالفعل",
+                              "already_registered".tr,
                               style: TextStyle(
                                 fontFamily: 'Cairo',
                                 fontSize: 18.sp,
@@ -207,7 +207,7 @@ class _StdRegisterScreeenState extends State<StdRegisterScreeen> {
                             GestureDetector(
                               onTap: () => Get.back(),
                               child: Text(
-                                "تسجيل الدخول",
+                                "login".tr,
                                 style: TextStyle(
                                   fontSize: 16.sp,
                                   color: orange,

@@ -54,10 +54,10 @@ class _StdLoginScreenState extends State<StdLoginScreen> {
                               width: 28.w,
                               clipBehavior: Clip.antiAlias,
                               decoration: const BoxDecoration(
-                                  shape: BoxShape.circle
+                                shape: BoxShape.circle
                               ),
                               child: CachedNetworkImage(
-                                imageUrl: "https://th.bing.com/th/id/OIP.KEJaw671I5WYuftNN0IOZAHaHa?w=196&h=196&c=7&r=0&o=5&dpr=1.3&pid=1.7",
+                                imageUrl: "https://cdn.iconscout.com/icon/free/png-256/avatar-369-456321.png",
                                 errorWidget: (_, i, e) {
                                   return Icon(
                                     FontAwesomeIcons.image,
@@ -69,7 +69,7 @@ class _StdLoginScreenState extends State<StdLoginScreen> {
                             ),
                             SizedBox(height: 3.h),
                             Text(
-                              "تسجيل دخول الطفل /ة",
+                              "login_as_parent".tr,
                               style: TextStyle(
                                   fontFamily: 'Cairo',
                                   fontSize: 22.sp,
@@ -79,12 +79,12 @@ class _StdLoginScreenState extends State<StdLoginScreen> {
                             SizedBox(height: 6.h),
                             AuthTextForm(
                               controller: controller.email,
-                              hintText: "Email",
+                              hintText: "email".tr,
                               isPassword: false,
                               focusNode: f1,
                               valid: (val) {
                                 if (val!.isEmpty) {
-                                  return 'Required!';
+                                  return "required".tr;
                                 }
                               },
                               onFieldSubmitted: (val) {
@@ -95,7 +95,7 @@ class _StdLoginScreenState extends State<StdLoginScreen> {
                             SizedBox(height: 2.h),
                             AuthTextForm(
                               controller: controller.pass,
-                              hintText: "Password",
+                              hintText: "password".tr,
                               isPassword: controller.isShowPassword,
                               focusNode: f2,
                               suffixIcon: GestureDetector(
@@ -106,7 +106,7 @@ class _StdLoginScreenState extends State<StdLoginScreen> {
                               ),
                               valid: (val) {
                                 if (val!.isEmpty) {
-                                  return 'Required!';
+                                  return "required".tr;
                                 }
                                 return null;
                               },
@@ -137,7 +137,7 @@ class _StdLoginScreenState extends State<StdLoginScreen> {
                                   child: Row(
                                     children: [
                                       Text(
-                                        "تسجيل الدخول",
+                                        "login".tr,
                                         style: TextStyle(
                                           fontSize: 19.sp,
                                           color: black,
@@ -158,7 +158,7 @@ class _StdLoginScreenState extends State<StdLoginScreen> {
                             ),
                             SizedBox(height: 2.h),
                             Text(
-                              "ليس لديك حساب؟",
+                              "dont_have_account".tr,
                               style: TextStyle(
                                   fontFamily: 'Cairo',
                                   fontSize: 18.sp,
@@ -168,7 +168,7 @@ class _StdLoginScreenState extends State<StdLoginScreen> {
                             GestureDetector(
                               onTap: () => Get.toNamed(screenStdRegister),
                               child: Text(
-                                "تسجيل حساب جديد",
+                                "signup".tr,
                                 style: TextStyle(
                                   fontSize: 16.sp,
                                   color: orange,

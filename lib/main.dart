@@ -76,6 +76,8 @@ class _MyAppState extends State<MyApp> {
             GetPage(name: screenSpotLevels, page: () => const SpotLevelsScreen()),
             GetPage(name: screenMemoryLevels, page: () => const MemoryLevelsScreen()),
             GetPage(name: screenShopLevels, page: () => const ShopLevelsScreen()),
+            GetPage(name: screenStdMeditate, page: () => const StdMeditateScreen()),
+            GetPage(name: screenMeditateChooseType, page: () => const StdMeditateChooseType()),
 
             GetPage(name: screenShoppingStd, page: () => const StdShoppingScreen()),
 

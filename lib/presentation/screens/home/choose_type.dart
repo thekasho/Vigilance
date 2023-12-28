@@ -86,29 +86,86 @@ class _ChooseTypeScreenState extends State<ChooseTypeScreen> {
             color: yellowBck,
             padding: const EdgeInsets.only(left: 10, right: 10, top: 15),
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      " ... هل انت",
+                      "are_you_a".tr,
                       style: TextStyle(
                         color: black,
                         fontWeight: FontWeight.bold,
-                        fontSize: 20.sp,
+                        fontSize: 22.sp,
                         fontFamily: 'Cairo',
                       ),
                     )
                   ],
                 ),
                 SizedBox(height: 2.h),
+                // Row(
+                //   mainAxisAlignment: MainAxisAlignment.center,
+                //   children: [
+                //     GestureDetector(
+                //       onTap: (){
+                //         Get.toNamed(screenStdLogin);
+                //       },
+                //       child: Container(
+                //         width: 50.w,
+                //         height: 25.h,
+                //         decoration: BoxDecoration(
+                //           color: white,
+                //           borderRadius: BorderRadius.circular(20),
+                //           boxShadow: const [
+                //             BoxShadow(
+                //               blurRadius: 4,
+                //               color: Color(0x33000000),
+                //               offset: Offset(0, 2),
+                //               spreadRadius: 2,
+                //             )
+                //           ],
+                //         ),
+                //         child: Column(
+                //           children: [
+                //             Container(
+                //               margin: const EdgeInsets.symmetric(
+                //                 vertical: 10,
+                //               ),
+                //               width: 28.w,
+                //               clipBehavior: Clip.antiAlias,
+                //               decoration: const BoxDecoration(
+                //                   shape: BoxShape.circle
+                //               ),
+                //               child: CachedNetworkImage(
+                //                 imageUrl: "https://microplazatesla.com/vl/images/std.png",
+                //                 errorWidget: (_, i, e) {
+                //                   return Icon(
+                //                     FontAwesomeIcons.image,
+                //                     size: 13.sp,
+                //                     color: Colors.white,
+                //                   );
+                //                 },
+                //               ),
+                //             ),
+                //             Text(
+                //               "الطفل /ة",
+                //               style: TextStyle(
+                //                 fontFamily: 'Cairo',
+                //                 fontSize: 20.sp,
+                //               ),
+                //             ),
+                //           ],
+                //         ),
+                //       ),
+                //     ),
+                //   ],
+                // ),
+                // SizedBox(height: 3.h),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     GestureDetector(
-                      onTap: (){
-                        Get.toNamed(screenStdLogin);
-                      },
+                      onTap: () => Get.toNamed(screenStdLogin),
                       child: Container(
                         width: 50.w,
                         height: 25.h,
@@ -130,13 +187,13 @@ class _ChooseTypeScreenState extends State<ChooseTypeScreen> {
                               margin: const EdgeInsets.symmetric(
                                 vertical: 10,
                               ),
-                              width: 28.w,
+                              width: 26.w,
                               clipBehavior: Clip.antiAlias,
                               decoration: const BoxDecoration(
                                   shape: BoxShape.circle
                               ),
                               child: CachedNetworkImage(
-                                imageUrl: "https://microplazatesla.com/vl/images/std.png",
+                                imageUrl: "https://cdn.iconscout.com/icon/free/png-256/avatar-369-456321.png",
                                 errorWidget: (_, i, e) {
                                   return Icon(
                                     FontAwesomeIcons.image,
@@ -147,7 +204,7 @@ class _ChooseTypeScreenState extends State<ChooseTypeScreen> {
                               ),
                             ),
                             Text(
-                              "الطفل /ة",
+                              "parent".tr,
                               style: TextStyle(
                                 fontFamily: 'Cairo',
                                 fontSize: 20.sp,
@@ -203,7 +260,7 @@ class _ChooseTypeScreenState extends State<ChooseTypeScreen> {
                               ),
                             ),
                             Text(
-                              "معلم /ة",
+                              "is_teacher".tr,
                               style: TextStyle(
                                 fontFamily: 'Cairo',
                                 fontSize: 20.sp,
@@ -216,61 +273,61 @@ class _ChooseTypeScreenState extends State<ChooseTypeScreen> {
                   ],
                 ),
                 SizedBox(height: 3.h),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    GestureDetector(
-                      onTap: () => Get.toNamed(screenParentLogin),
-                      child: Container(
-                        width: 50.w,
-                        height: 25.h,
-                        decoration: BoxDecoration(
-                          color: white,
-                          borderRadius: BorderRadius.circular(20),
-                          boxShadow: const [
-                            BoxShadow(
-                              blurRadius: 4,
-                              color: Color(0x33000000),
-                              offset: Offset(0, 2),
-                              spreadRadius: 2,
-                            )
-                          ],
-                        ),
-                        child: Column(
-                          children: [
-                            Container(
-                              margin: const EdgeInsets.symmetric(
-                                vertical: 10,
-                              ),
-                              width: 26.w,
-                              clipBehavior: Clip.antiAlias,
-                              decoration: const BoxDecoration(
-                                  shape: BoxShape.circle
-                              ),
-                              child: CachedNetworkImage(
-                                imageUrl: "https://cdn.iconscout.com/icon/free/png-256/avatar-369-456321.png",
-                                errorWidget: (_, i, e) {
-                                  return Icon(
-                                    FontAwesomeIcons.image,
-                                    size: 13.sp,
-                                    color: Colors.white,
-                                  );
-                                },
-                              ),
-                            ),
-                            Text(
-                              "والد /ة",
-                              style: TextStyle(
-                                fontFamily: 'Cairo',
-                                fontSize: 20.sp,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
+                // Row(
+                //   mainAxisAlignment: MainAxisAlignment.center,
+                //   children: [
+                //     GestureDetector(
+                //       onTap: () => Get.toNamed(screenParentLogin),
+                //       child: Container(
+                //         width: 50.w,
+                //         height: 25.h,
+                //         decoration: BoxDecoration(
+                //           color: white,
+                //           borderRadius: BorderRadius.circular(20),
+                //           boxShadow: const [
+                //             BoxShadow(
+                //               blurRadius: 4,
+                //               color: Color(0x33000000),
+                //               offset: Offset(0, 2),
+                //               spreadRadius: 2,
+                //             )
+                //           ],
+                //         ),
+                //         child: Column(
+                //           children: [
+                //             Container(
+                //               margin: const EdgeInsets.symmetric(
+                //                 vertical: 10,
+                //               ),
+                //               width: 26.w,
+                //               clipBehavior: Clip.antiAlias,
+                //               decoration: const BoxDecoration(
+                //                   shape: BoxShape.circle
+                //               ),
+                //               child: CachedNetworkImage(
+                //                 imageUrl: "https://cdn.iconscout.com/icon/free/png-256/avatar-369-456321.png",
+                //                 errorWidget: (_, i, e) {
+                //                   return Icon(
+                //                     FontAwesomeIcons.image,
+                //                     size: 13.sp,
+                //                     color: Colors.white,
+                //                   );
+                //                 },
+                //               ),
+                //             ),
+                //             Text(
+                //               "والد /ة",
+                //               style: TextStyle(
+                //                 fontFamily: 'Cairo',
+                //                 fontSize: 20.sp,
+                //               ),
+                //             ),
+                //           ],
+                //         ),
+                //       ),
+                //     ),
+                //   ],
+                // ),
               ],
             ),
           ),
