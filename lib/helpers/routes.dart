@@ -15,6 +15,7 @@ const String screenTeacherRegister = '/teacher-register';
 const String screenTchrHome = '/teacher-home';
 const String screenTeacherTests = '/teacher-tests';
 const String screenTeacherAddTests = '/teacher-add-test';
+const String screenTeacherChat = '/teacher-chat';
 
 const String screenStudyHome = '/std-study-home';
 
@@ -24,7 +25,7 @@ const String screenPromodoroTimer = '/std-promodoro-timer';
 
 const String screenTeacherHome = '/std-teacher-home';
 const String screenTeacherEmail = '/std-teacher-email';
-const String screenTeacherChat = '/std-teacher-chat';
+const String screenStdTeacherChat = '/std-teacher-chat';
 
 const String screenGamesHome = '/games-home';
 const String screenSpotLevels = '/sopt-levels';

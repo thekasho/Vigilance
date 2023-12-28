@@ -33,7 +33,7 @@ class _TecherAddTestScreenState extends State<TecherAddTestScreen> {
                 child: Row(
                   children: [
                     Text(
-                      "Test #1",
+                      "${"test".tr} #1",
                       style: TextStyle(
                         fontSize: 20.sp,
                         fontFamily: 'Cairo',
@@ -53,16 +53,18 @@ class _TecherAddTestScreenState extends State<TecherAddTestScreen> {
                         onPressed: (){
                           teacherTestsContImp.saveQst();
                         },
-                        child: const Row(
+                        child: Row(
                           children: [
                             Text(
-                              "Save",
-                              style: TextStyle(
-                                color: white
+                              "save".tr,
+                              style: const TextStyle(
+                                color: white,
+                                fontFamily: 'Cairo',
+                                height: 1.5
                               )
                             ),
-                            SizedBox(width: 5),
-                            Icon(Icons.save, color: white),
+                            const SizedBox(width: 5),
+                            const Icon(Icons.save, color: white),
                           ],
                         ),
                       ),
@@ -115,7 +117,7 @@ class _TecherAddTestScreenState extends State<TecherAddTestScreen> {
                                       const Spacer(),
                                       TestsTextInput(
                                         controller: cont.cont1,
-                                        hintText: "Question..",
+                                        hintText: "question".tr,
                                         valid: (val) {
                                           if (val!.isEmpty) {
                                             return "";
@@ -167,7 +169,7 @@ class _TecherAddTestScreenState extends State<TecherAddTestScreen> {
                                       const Spacer(),
                                       TestsTextOption(
                                         controller: cont.cont2,
-                                        hintText: "Option 1",
+                                        hintText: "${"option".tr} 1",
                                         valid: (val) {
                                           if (val!.isEmpty) {
                                             return 'Required!';
@@ -200,7 +202,7 @@ class _TecherAddTestScreenState extends State<TecherAddTestScreen> {
                                       const Spacer(),
                                       TestsTextOption(
                                         controller: cont.cont3,
-                                        hintText: "Option 2",
+                                        hintText: "${"option".tr} 2",
                                         valid: (val) {
                                           if (val!.isEmpty) {
                                             return 'Required!';
@@ -233,7 +235,7 @@ class _TecherAddTestScreenState extends State<TecherAddTestScreen> {
                                       const Spacer(),
                                       TestsTextOption(
                                         controller: cont.cont4,
-                                        hintText: "Option 3",
+                                        hintText: "${"option".tr} 3",
                                         valid: (val) {
                                           if (val!.isEmpty) {
                                             return 'Required!';
@@ -266,7 +268,7 @@ class _TecherAddTestScreenState extends State<TecherAddTestScreen> {
                                       const Spacer(),
                                       TestsTextOption(
                                         controller: cont.cont5,
-                                        hintText: "Option 4",
+                                        hintText: "${"option".tr} 4",
                                         valid: (val) {
                                           if (val!.isEmpty) {
                                             return 'Required!';
@@ -305,7 +307,7 @@ class _TecherAddTestScreenState extends State<TecherAddTestScreen> {
                                       const Spacer(),
                                       TestsTextInput(
                                         controller: cont.cont6,
-                                        hintText: "Question..",
+                                        hintText: "question".tr,
                                         valid: (val) {
                                           return null;
                                         },
@@ -354,7 +356,7 @@ class _TecherAddTestScreenState extends State<TecherAddTestScreen> {
                                       const Spacer(),
                                       TestsTextOption(
                                         controller: cont.cont7,
-                                        hintText: "Option 1",
+                                        hintText: "${"option".tr} 1",
                                         valid: (val) {
                                           return null;
                                         },
@@ -384,7 +386,7 @@ class _TecherAddTestScreenState extends State<TecherAddTestScreen> {
                                       const Spacer(),
                                       TestsTextOption(
                                         controller: cont.cont8,
-                                        hintText: "Option 2",
+                                        hintText: "${"option".tr} 2",
                                         valid: (val) {
                                           return null;
                                         },
@@ -414,7 +416,7 @@ class _TecherAddTestScreenState extends State<TecherAddTestScreen> {
                                       const Spacer(),
                                       TestsTextOption(
                                         controller: cont.cont9,
-                                        hintText: "Option 3",
+                                        hintText: "${"option".tr} 3",
                                         valid: (val) {
                                           return null;
                                         },
@@ -444,7 +446,7 @@ class _TecherAddTestScreenState extends State<TecherAddTestScreen> {
                                       const Spacer(),
                                       TestsTextOption(
                                         controller: cont.cont10,
-                                        hintText: "Option 4",
+                                        hintText: "${"option".tr} 4",
                                         valid: (val) {
                                           return null;
                                         },
@@ -480,7 +482,7 @@ class _TecherAddTestScreenState extends State<TecherAddTestScreen> {
                                       const Spacer(),
                                       TestsTextInput(
                                         controller: cont.cont11,
-                                        hintText: "Question..",
+                                        hintText: "question".tr,
                                         valid: (val) {
                                           return null;
                                         },
@@ -529,7 +531,7 @@ class _TecherAddTestScreenState extends State<TecherAddTestScreen> {
                                       const Spacer(),
                                       TestsTextOption(
                                         controller: cont.cont12,
-                                        hintText: "Option 1",
+                                        hintText: "${"option".tr} 1",
                                         valid: (val) {
                                           return null;
                                         },
@@ -559,7 +561,7 @@ class _TecherAddTestScreenState extends State<TecherAddTestScreen> {
                                       const Spacer(),
                                       TestsTextOption(
                                         controller: cont.cont13,
-                                        hintText: "Option 2",
+                                        hintText: "${"option".tr} 2",
                                         valid: (val) {
                                           return null;
                                         },
@@ -589,7 +591,7 @@ class _TecherAddTestScreenState extends State<TecherAddTestScreen> {
                                       const Spacer(),
                                       TestsTextOption(
                                         controller: cont.cont14,
-                                        hintText: "Option 3",
+                                        hintText: "${"option".tr} 3",
                                         valid: (val) {
                                           return null;
                                         },
@@ -619,7 +621,7 @@ class _TecherAddTestScreenState extends State<TecherAddTestScreen> {
                                       const Spacer(),
                                       TestsTextOption(
                                         controller: cont.cont15,
-                                        hintText: "Option 4",
+                                        hintText: "${"option".tr} 4",
                                         valid: (val) {
                                           return null;
                                         },
@@ -655,7 +657,7 @@ class _TecherAddTestScreenState extends State<TecherAddTestScreen> {
                                       const Spacer(),
                                       TestsTextInput(
                                         controller: cont.cont16,
-                                        hintText: "Question..",
+                                        hintText: "question".tr,
                                         valid: (val) {
                                           return null;
                                         },
@@ -704,7 +706,7 @@ class _TecherAddTestScreenState extends State<TecherAddTestScreen> {
                                       const Spacer(),
                                       TestsTextOption(
                                         controller: cont.cont17,
-                                        hintText: "Option 1",
+                                        hintText: "${"option".tr} 1",
                                         valid: (val) {
                                           return null;
                                         },
@@ -734,7 +736,7 @@ class _TecherAddTestScreenState extends State<TecherAddTestScreen> {
                                       const Spacer(),
                                       TestsTextOption(
                                         controller: cont.cont18,
-                                        hintText: "Option 2",
+                                        hintText: "${"option".tr} 2",
                                         valid: (val) {
                                           return null;
                                         },
@@ -764,7 +766,7 @@ class _TecherAddTestScreenState extends State<TecherAddTestScreen> {
                                       const Spacer(),
                                       TestsTextOption(
                                         controller: cont.cont19,
-                                        hintText: "Option 3",
+                                        hintText: "${"option".tr} 3",
                                         valid: (val) {
                                           return null;
                                         },
@@ -794,7 +796,7 @@ class _TecherAddTestScreenState extends State<TecherAddTestScreen> {
                                       const Spacer(),
                                       TestsTextOption(
                                         controller: cont.cont20,
-                                        hintText: "Option 4",
+                                        hintText: "${"option".tr} 4",
                                         valid: (val) {
                                           return null;
                                         },
@@ -830,7 +832,7 @@ class _TecherAddTestScreenState extends State<TecherAddTestScreen> {
                                       const Spacer(),
                                       TestsTextInput(
                                         controller: cont.cont21,
-                                        hintText: "Question..",
+                                        hintText: "question".tr,
                                         valid: (val) {
                                           return null;
                                         },
@@ -879,7 +881,7 @@ class _TecherAddTestScreenState extends State<TecherAddTestScreen> {
                                       const Spacer(),
                                       TestsTextOption(
                                         controller: cont.cont22,
-                                        hintText: "Option 1",
+                                        hintText: "${"option".tr} 1",
                                         valid: (val) {
                                           return null;
                                         },
@@ -909,7 +911,7 @@ class _TecherAddTestScreenState extends State<TecherAddTestScreen> {
                                       const Spacer(),
                                       TestsTextOption(
                                         controller: cont.cont23,
-                                        hintText: "Option 2",
+                                        hintText: "${"option".tr} 2",
                                         valid: (val) {
                                           return null;
                                         },
@@ -939,7 +941,7 @@ class _TecherAddTestScreenState extends State<TecherAddTestScreen> {
                                       const Spacer(),
                                       TestsTextOption(
                                         controller: cont.cont24,
-                                        hintText: "Option 3",
+                                        hintText: "${"option".tr} 3",
                                         valid: (val) {
                                           return null;
                                         },
@@ -969,7 +971,7 @@ class _TecherAddTestScreenState extends State<TecherAddTestScreen> {
                                       const Spacer(),
                                       TestsTextOption(
                                         controller: cont.cont25,
-                                        hintText: "Option 4",
+                                        hintText: "${"option".tr} 4",
                                         valid: (val) {
                                           return null;
                                         },
@@ -1005,7 +1007,7 @@ class _TecherAddTestScreenState extends State<TecherAddTestScreen> {
                                       const Spacer(),
                                       TestsTextInput(
                                         controller: cont.cont26,
-                                        hintText: "Question..",
+                                        hintText: "question".tr,
                                         valid: (val) {
                                           return null;
                                         },
@@ -1054,7 +1056,7 @@ class _TecherAddTestScreenState extends State<TecherAddTestScreen> {
                                       const Spacer(),
                                       TestsTextOption(
                                         controller: cont.cont27,
-                                        hintText: "Option 1",
+                                        hintText: "${"option".tr} 1",
                                         valid: (val) {
                                           return null;
                                         },
@@ -1084,7 +1086,7 @@ class _TecherAddTestScreenState extends State<TecherAddTestScreen> {
                                       const Spacer(),
                                       TestsTextOption(
                                         controller: cont.cont28,
-                                        hintText: "Option 2",
+                                        hintText: "${"option".tr} 2",
                                         valid: (val) {
                                           return null;
                                         },
@@ -1114,7 +1116,7 @@ class _TecherAddTestScreenState extends State<TecherAddTestScreen> {
                                       const Spacer(),
                                       TestsTextOption(
                                         controller: cont.cont29,
-                                        hintText: "Option 3",
+                                        hintText: "${"option".tr} 3",
                                         valid: (val) {
                                           return null;
                                         },
@@ -1144,7 +1146,7 @@ class _TecherAddTestScreenState extends State<TecherAddTestScreen> {
                                       const Spacer(),
                                       TestsTextOption(
                                         controller: cont.cont30,
-                                        hintText: "Option 4",
+                                        hintText: "${"option".tr} 4",
                                         valid: (val) {
                                           return null;
                                         },
@@ -1180,7 +1182,7 @@ class _TecherAddTestScreenState extends State<TecherAddTestScreen> {
                                       const Spacer(),
                                       TestsTextInput(
                                         controller: cont.cont31,
-                                        hintText: "Question..",
+                                        hintText: "question".tr,
                                         valid: (val) {
                                           return null;
                                         },
@@ -1229,7 +1231,7 @@ class _TecherAddTestScreenState extends State<TecherAddTestScreen> {
                                       const Spacer(),
                                       TestsTextOption(
                                         controller: cont.cont32,
-                                        hintText: "Option 1",
+                                        hintText: "${"option".tr} 1",
                                         valid: (val) {
                                           return null;
                                         },
@@ -1259,7 +1261,7 @@ class _TecherAddTestScreenState extends State<TecherAddTestScreen> {
                                       const Spacer(),
                                       TestsTextOption(
                                         controller: cont.cont33,
-                                        hintText: "Option 2",
+                                        hintText: "${"option".tr} 2",
                                         valid: (val) {
                                           return null;
                                         },
@@ -1289,7 +1291,7 @@ class _TecherAddTestScreenState extends State<TecherAddTestScreen> {
                                       const Spacer(),
                                       TestsTextOption(
                                         controller: cont.cont34,
-                                        hintText: "Option 3",
+                                        hintText: "${"option".tr} 3",
                                         valid: (val) {
                                           return null;
                                         },
@@ -1319,7 +1321,7 @@ class _TecherAddTestScreenState extends State<TecherAddTestScreen> {
                                       const Spacer(),
                                       TestsTextOption(
                                         controller: cont.cont35,
-                                        hintText: "Option 4",
+                                        hintText: "${"option".tr} 4",
                                         valid: (val) {
                                           return null;
                                         },
@@ -1355,7 +1357,7 @@ class _TecherAddTestScreenState extends State<TecherAddTestScreen> {
                                       const Spacer(),
                                       TestsTextInput(
                                         controller: cont.cont36,
-                                        hintText: "Question..",
+                                        hintText: "question".tr,
                                         valid: (val) {
                                           return null;
                                         },
@@ -1404,7 +1406,7 @@ class _TecherAddTestScreenState extends State<TecherAddTestScreen> {
                                       const Spacer(),
                                       TestsTextOption(
                                         controller: cont.cont37,
-                                        hintText: "Option 1",
+                                        hintText: "${"option".tr} 1",
                                         valid: (val) {
                                           return null;
                                         },
@@ -1434,7 +1436,7 @@ class _TecherAddTestScreenState extends State<TecherAddTestScreen> {
                                       const Spacer(),
                                       TestsTextOption(
                                         controller: cont.cont38,
-                                        hintText: "Option 2",
+                                        hintText: "${"option".tr} 2",
                                         valid: (val) {
                                           return null;
                                         },
@@ -1464,7 +1466,7 @@ class _TecherAddTestScreenState extends State<TecherAddTestScreen> {
                                       const Spacer(),
                                       TestsTextOption(
                                         controller: cont.cont39,
-                                        hintText: "Option 3",
+                                        hintText: "${"option".tr} 3",
                                         valid: (val) {
                                           return null;
                                         },
@@ -1494,7 +1496,7 @@ class _TecherAddTestScreenState extends State<TecherAddTestScreen> {
                                       const Spacer(),
                                       TestsTextOption(
                                         controller: cont.cont40,
-                                        hintText: "Option 4",
+                                        hintText: "${"option".tr} 4",
                                         valid: (val) {
                                           return null;
                                         },
@@ -1530,7 +1532,7 @@ class _TecherAddTestScreenState extends State<TecherAddTestScreen> {
                                       const Spacer(),
                                       TestsTextInput(
                                         controller: cont.cont41,
-                                        hintText: "Question..",
+                                        hintText: "question".tr,
                                         valid: (val) {
                                           return null;
                                         },
@@ -1579,7 +1581,7 @@ class _TecherAddTestScreenState extends State<TecherAddTestScreen> {
                                       const Spacer(),
                                       TestsTextOption(
                                         controller: cont.cont42,
-                                        hintText: "Option 1",
+                                        hintText: "${"option".tr} 1",
                                         valid: (val) {
                                           return null;
                                         },
@@ -1609,7 +1611,7 @@ class _TecherAddTestScreenState extends State<TecherAddTestScreen> {
                                       const Spacer(),
                                       TestsTextOption(
                                         controller: cont.cont43,
-                                        hintText: "Option 2",
+                                        hintText: "${"option".tr} 2",
                                         valid: (val) {
                                           return null;
                                         },
@@ -1639,7 +1641,7 @@ class _TecherAddTestScreenState extends State<TecherAddTestScreen> {
                                       const Spacer(),
                                       TestsTextOption(
                                         controller: cont.cont44,
-                                        hintText: "Option 3",
+                                        hintText: "${"option".tr} 3",
                                         valid: (val) {
                                           return null;
                                         },
@@ -1669,7 +1671,7 @@ class _TecherAddTestScreenState extends State<TecherAddTestScreen> {
                                       const Spacer(),
                                       TestsTextOption(
                                         controller: cont.cont45,
-                                        hintText: "Option 4",
+                                        hintText: "${"option".tr} 4",
                                         valid: (val) {
                                           return null;
                                         },
@@ -1705,7 +1707,7 @@ class _TecherAddTestScreenState extends State<TecherAddTestScreen> {
                                       const Spacer(),
                                       TestsTextInput(
                                         controller: cont.cont46,
-                                        hintText: "Question..",
+                                        hintText: "question".tr,
                                         valid: (val) {
                                           return null;
                                         },
@@ -1754,7 +1756,7 @@ class _TecherAddTestScreenState extends State<TecherAddTestScreen> {
                                       const Spacer(),
                                       TestsTextOption(
                                         controller: cont.cont47,
-                                        hintText: "Option 1",
+                                        hintText: "${"option".tr} 1",
                                         valid: (val) {
                                           return null;
                                         },
@@ -1784,7 +1786,7 @@ class _TecherAddTestScreenState extends State<TecherAddTestScreen> {
                                       const Spacer(),
                                       TestsTextOption(
                                         controller: cont.cont48,
-                                        hintText: "Option 2",
+                                        hintText: "${"option".tr} 2",
                                         valid: (val) {
                                           return null;
                                         },
@@ -1814,7 +1816,7 @@ class _TecherAddTestScreenState extends State<TecherAddTestScreen> {
                                       const Spacer(),
                                       TestsTextOption(
                                         controller: cont.cont49,
-                                        hintText: "Option 3",
+                                        hintText: "${"option".tr} 3",
                                         valid: (val) {
                                           return null;
                                         },
@@ -1844,7 +1846,7 @@ class _TecherAddTestScreenState extends State<TecherAddTestScreen> {
                                       const Spacer(),
                                       TestsTextOption(
                                         controller: cont.cont50,
-                                        hintText: "Option 4",
+                                        hintText: "${"option".tr} 4",
                                         valid: (val) {
                                           return null;
                                         },

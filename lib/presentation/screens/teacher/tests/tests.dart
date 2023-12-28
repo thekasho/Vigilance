@@ -25,12 +25,12 @@ class _TeacherTestsScreenState extends State<TeacherTestsScreen> {
           ),
           centerTitle: true,
           title: Text(
-            "Test Lists",
+            "test_list".tr,
             style: TextStyle(
-                fontSize: 23.sp,
-                color: black,
-                fontFamily: 'Cairo',
-                fontWeight: FontWeight.bold
+              fontSize: 22.sp,
+              color: black,
+              fontFamily: 'Cairo',
+              fontWeight: FontWeight.bold
             ),
           ),
         ),
@@ -113,10 +113,11 @@ class _TeacherTestsScreenState extends State<TeacherTestsScreen> {
                                     ),
                                   ),
                                   Text(
-                                    "Test #${cont.tests[i]['id']}",
+                                    "${"test".tr} #${cont.tests[i]['id']}",
                                     style: TextStyle(
-                                      fontSize: 20.sp,
+                                      fontSize: 19.sp,
                                       fontWeight: FontWeight.bold,
+                                      fontFamily: 'Cairo'
                                     ),
                                   ),
                                   Row(
@@ -151,12 +152,15 @@ class _TeacherTestsScreenState extends State<TeacherTestsScreen> {
                                         ),
                                         child: IconButton(
                                           icon: const Icon(
-                                              Icons.delete_outline, color: white),
+                                            Icons.delete_outline, color: white,
+                                          ),
                                           color: orange,
                                           focusColor: white,
                                           autofocus: true,
                                           padding: const EdgeInsets.all(5),
-                                          onPressed: () {},
+                                          onPressed: () {
+                                            cont.deleteTest(cont.tests[i]['id']);
+                                          },
                                         ),
                                       ),
                                       SizedBox(width: 3.w),

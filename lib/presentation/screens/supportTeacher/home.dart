@@ -110,7 +110,7 @@ class _SupportTeacherHomeScreenState extends State<SupportTeacherHomeScreen> {
                           ),
                         ),
                         onPressed: () {
-                          Get.toNamed(screenTeacherChat);
+                          Get.toNamed(screenStdTeacherChat);
                         },
                       ),
                     ),

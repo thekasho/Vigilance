@@ -5,6 +5,7 @@ class ApiLinks {
   static const String teacherRegister = 'https://microplazatesla.com/vl/register_teacher.php';
   static const String getPoints = 'https://microplazatesla.com/vl/get_points.php';
   static const String getTeacher = 'https://microplazatesla.com/vl/get_teacher.php';
+  static const String getStd = 'https://microplazatesla.com/vl/get_student.php';
   static const String getTasks = 'https://microplazatesla.com/vl/get_tasks.php';
   static const String getTodoImages = 'https://microplazatesla.com/vl/todo_images.php';
   static const String addTask = 'https://microplazatesla.com/vl/save_task.php';
@@ -20,4 +21,6 @@ class ApiLinks {
   static const String addTest = 'https://microplazatesla.com/vl/add_test.php';
   static const String getTest = 'https://microplazatesla.com/vl/get_tests.php';
   static const String viewTest = 'https://microplazatesla.com/vl/get_test_qst.php';
+  static const String updateTest = 'https://microplazatesla.com/vl/update_test.php';
+  static const String deleteTest = 'https://microplazatesla.com/vl/delete_test.php';
 }

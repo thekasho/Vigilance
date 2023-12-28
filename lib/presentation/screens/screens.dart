@@ -20,6 +20,7 @@ import '../../controller/std/home.dart';
 import '../../controller/std/login.dart';
 import '../../controller/std/register.dart';
 import '../../controller/study/promo/promo.dart';
+import '../../controller/teacher/chat/chat.dart';
 import '../../controller/teacher/home.dart';
 import '../../controller/teacher/login.dart';
 import '../../controller/teacher/register.dart';
@@ -45,6 +46,7 @@ part 'auth/teacher/home.dart';
 part 'teacher/tests/tests.dart';
 part 'teacher/tests/add_test.dart';
 part 'teacher/tests/view_test.dart';
+part 'teacher/chat/chat.dart';
 
 part 'auth/parent/login.dart';
 part 'auth/parent/register.dart';

@@ -55,6 +55,7 @@ class _MyAppState extends State<MyApp> {
 
             GetPage(name: screenTeacherLogin, page: () => const TeacherLoginScreen()),
             GetPage(name: screenTeacherRegister, page: () => const TeacherRegisterScreeen()),
+            GetPage(name: screenTeacherChat, page: () => const TeacherChatScreen()),
 
             GetPage(name: screenStdHome, page: () => const StdHomeScreen()),
             GetPage(name: screenTchrHome, page: () => const TchrHomeScreen()),
@@ -63,7 +64,7 @@ class _MyAppState extends State<MyApp> {
 
             GetPage(name: screenTeacherHome, page: () => const SupportTeacherHomeScreen()),
             GetPage(name: screenTeacherEmail, page: () => const SupportTeacherEmailScreen()),
-            GetPage(name: screenTeacherChat, page: () => const SupportTeacherChatScreen()),
+            GetPage(name: screenStdTeacherChat, page: () => const SupportTeacherChatScreen()),
             GetPage(name: screenTeacherTests, page: () => const TeacherTestsScreen()),
             GetPage(name: screenTeacherAddTests, page: () => const TecherAddTestScreen()),
 

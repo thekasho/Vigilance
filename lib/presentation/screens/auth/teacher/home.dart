@@ -92,212 +92,256 @@ class _TchrHomeScreenState extends State<TchrHomeScreen> {
             width: double.infinity,
             height: double.infinity,
             color: yellowBck,
-            child: Column(
-              children: [
-                SizedBox(height: 2.h),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      "Monitor your student's time\n on application",
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        color: black,
-                        fontWeight: FontWeight.bold,
-                        fontFamily: 'Cairo',
-                        fontSize: 22.sp,
-                        height: 1.3
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  SizedBox(height: 2.h),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        "Monitor your student's time\n on application",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          color: black,
+                          fontWeight: FontWeight.bold,
+                          fontFamily: 'Cairo',
+                          fontSize: 22.sp,
+                          height: 1.3
+                        ),
                       ),
-                    ),
-                  ],
-                ),
-                SizedBox(
-                  height: 44.h,
-                  child: Image.asset("assets/images/teacher_home.png")
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    ElevatedButton(
-                      style: ButtonStyle(
-                        backgroundColor: MaterialStateProperty.all<Color>(orangeBtn),
-                        shape: MaterialStateProperty.all<
-                            RoundedRectangleBorder>(
-                          RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10),
+                    ],
+                  ),
+                  SizedBox(
+                    height: 44.h,
+                    child: Image.asset("assets/images/teacher_home.png")
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      ElevatedButton(
+                        style: ButtonStyle(
+                          backgroundColor: MaterialStateProperty.all<Color>(orangeBtn),
+                          shape: MaterialStateProperty.all<
+                              RoundedRectangleBorder>(
+                            RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                          ),
+                          fixedSize: MaterialStateProperty.all<Size>(
+                            Size(65.w, 6.h),
                           ),
                         ),
-                        fixedSize: MaterialStateProperty.all<Size>(
-                          Size(65.w, 6.h),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              "tests".tr,
+                              style: TextStyle(
+                                  fontSize: 19.sp,
+                                  color: black,
+                                  fontWeight: FontWeight.bold,
+                                  fontFamily: 'Cairo'
+                              ),
+                            ),
+                          ],
                         ),
+                        onPressed: () {
+                          Get.toNamed(screenTeacherTests);
+                        },
                       ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(
-                            "Tests",
-                            style: TextStyle(
+                    ],
+                  ),
+                  const SizedBox(height: 10),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      ElevatedButton(
+                        style: ButtonStyle(
+                          backgroundColor: MaterialStateProperty.all<Color>(orangeBtn),
+                          shape: MaterialStateProperty.all<
+                              RoundedRectangleBorder>(
+                            RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                          ),
+                          fixedSize: MaterialStateProperty.all<Size>(
+                            Size(65.w, 6.h),
+                          ),
+                        ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              "todo_list".tr,
+                              style: TextStyle(
                                 fontSize: 19.sp,
                                 color: black,
                                 fontWeight: FontWeight.bold,
                                 fontFamily: 'Cairo'
+                              ),
+                            ),
+                          ],
+                        ),
+                        onPressed: () {
+                          // Get.toNamed(screenStdToDO);
+                        },
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 10),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      ElevatedButton(
+                        style: ButtonStyle(
+                          backgroundColor: MaterialStateProperty.all<Color>(orangeBtn),
+                          shape: MaterialStateProperty.all<
+                              RoundedRectangleBorder>(
+                            RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10),
                             ),
                           ),
-                        ],
-                      ),
-                      onPressed: () {
-                        Get.toNamed(screenTeacherTests);
-                      },
-                    ),
-                  ],
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    ElevatedButton(
-                      style: ButtonStyle(
-                        backgroundColor: MaterialStateProperty.all<Color>(orangeBtn),
-                        shape: MaterialStateProperty.all<
-                            RoundedRectangleBorder>(
-                          RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10),
+                          fixedSize: MaterialStateProperty.all<Size>(
+                            Size(65.w, 6.h),
                           ),
                         ),
-                        fixedSize: MaterialStateProperty.all<Size>(
-                          Size(65.w, 6.h),
-                        ),
-                      ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(
-                            "To-Do-List",
-                            style: TextStyle(
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              "chat_with_std".tr,
+                              style: TextStyle(
                                 fontSize: 19.sp,
                                 color: black,
                                 fontWeight: FontWeight.bold,
                                 fontFamily: 'Cairo'
+                              ),
+                            ),
+                          ],
+                        ),
+                        onPressed: () {
+                          Get.toNamed(screenTeacherChat);
+                        },
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 10),
+                  // Row(
+                  //   mainAxisAlignment: MainAxisAlignment.center,
+                  //   children: [
+                  //     ElevatedButton(
+                  //       style: ButtonStyle(
+                  //         backgroundColor: MaterialStateProperty.all<Color>(orangeBtn),
+                  //         shape: MaterialStateProperty.all<
+                  //             RoundedRectangleBorder>(
+                  //           RoundedRectangleBorder(
+                  //             borderRadius: BorderRadius.circular(10),
+                  //           ),
+                  //         ),
+                  //         fixedSize: MaterialStateProperty.all<Size>(
+                  //           Size(65.w, 6.h),
+                  //         ),
+                  //       ),
+                  //       child: Row(
+                  //         mainAxisAlignment: MainAxisAlignment.center,
+                  //         children: [
+                  //           Text(
+                  //             "chat_with_parent".tr,
+                  //             style: TextStyle(
+                  //                 fontSize: 19.sp,
+                  //                 color: black,
+                  //                 fontWeight: FontWeight.bold,
+                  //                 fontFamily: 'Cairo'
+                  //             ),
+                  //           ),
+                  //         ],
+                  //       ),
+                  //       onPressed: () {
+                  //         // Get.toNamed(screenStdToDO);
+                  //       },
+                  //     ),
+                  //   ],
+                  // ),
+                  // const SizedBox(height: 10),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      ElevatedButton(
+                        style: ButtonStyle(
+                          backgroundColor: MaterialStateProperty.all<Color>(orangeBtn),
+                          shape: MaterialStateProperty.all<
+                              RoundedRectangleBorder>(
+                            RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10),
                             ),
                           ),
-                        ],
-                      ),
-                      onPressed: () {
-                        // Get.toNamed(screenStdToDO);
-                      },
-                    ),
-                  ],
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    ElevatedButton(
-                      style: ButtonStyle(
-                        backgroundColor: MaterialStateProperty.all<Color>(orangeBtn),
-                        shape: MaterialStateProperty.all<
-                            RoundedRectangleBorder>(
-                          RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10),
+                          fixedSize: MaterialStateProperty.all<Size>(
+                            Size(65.w, 6.h),
                           ),
                         ),
-                        fixedSize: MaterialStateProperty.all<Size>(
-                          Size(65.w, 6.h),
-                        ),
-                      ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(
-                            "Chat your student",
-                            style: TextStyle(
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              "change_lang".tr,
+                              style: TextStyle(
                                 fontSize: 19.sp,
                                 color: black,
                                 fontWeight: FontWeight.bold,
                                 fontFamily: 'Cairo'
+                              ),
+                            ),
+                            SizedBox(width: 1.w),
+                            Icon(Icons.language, color: black, size: 20.sp,),
+                          ],
+                        ),
+                        onPressed: ()=> Get.toNamed(screenSettings),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 10),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      ElevatedButton(
+                        style: ButtonStyle(
+                          backgroundColor: MaterialStateProperty.all<Color>(orangeBtn),
+                          shape: MaterialStateProperty.all<
+                              RoundedRectangleBorder>(
+                            RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10),
                             ),
                           ),
-                        ],
-                      ),
-                      onPressed: () {
-                        // Get.toNamed(screenStdToDO);
-                      },
-                    ),
-                  ],
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    ElevatedButton(
-                      style: ButtonStyle(
-                        backgroundColor: MaterialStateProperty.all<Color>(orangeBtn),
-                        shape: MaterialStateProperty.all<
-                            RoundedRectangleBorder>(
-                          RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10),
+                          fixedSize: MaterialStateProperty.all<Size>(
+                            Size(65.w, 6.h),
                           ),
                         ),
-                        fixedSize: MaterialStateProperty.all<Size>(
-                          Size(65.w, 6.h),
-                        ),
-                      ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(
-                            "Chat the parents",
-                            style: TextStyle(
-                                fontSize: 19.sp,
-                                color: black,
-                                fontWeight: FontWeight.bold,
-                                fontFamily: 'Cairo'
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              "logout".tr,
+                              style: TextStyle(
+                                  fontSize: 19.sp,
+                                  color: darkRed,
+                                  fontWeight: FontWeight.bold,
+                                  fontFamily: 'Cairo'
+                              ),
                             ),
-                          ),
-                        ],
-                      ),
-                      onPressed: () {
-                        // Get.toNamed(screenStdToDO);
-                      },
-                    ),
-                  ],
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    ElevatedButton(
-                      style: ButtonStyle(
-                        backgroundColor: MaterialStateProperty.all<Color>(orangeBtn),
-                        shape: MaterialStateProperty.all<
-                            RoundedRectangleBorder>(
-                          RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10),
-                          ),
+                            SizedBox(width: 1.w),
+                            Icon(Icons.login_outlined, color: darkRed, size: 20.sp,),
+                          ],
                         ),
-                        fixedSize: MaterialStateProperty.all<Size>(
-                          Size(65.w, 6.h),
-                        ),
+                        onPressed: () {
+                          cont.logOut();
+                        },
                       ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(
-                            "Logout",
-                            style: TextStyle(
-                              fontSize: 19.sp,
-                              color: darkRed,
-                              fontWeight: FontWeight.bold,
-                              fontFamily: 'Cairo'
-                            ),
-                          ),
-                          SizedBox(width: 1.w),
-                          Icon(Icons.login_outlined, color: darkRed, size: 20.sp,),
-                        ],
-                      ),
-                      onPressed: () {
-                        cont.logOut();
-                      },
-                    ),
-                  ],
-                ),
-              ],
+                    ],
+                  ),
+                  const SizedBox(height: 25),
+                ],
+              ),
             ),
           ),
         ),

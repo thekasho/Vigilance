@@ -22,10 +22,10 @@ class _StdHomeScreenState extends State<StdHomeScreen> {
                 horizontal: 20
             ),
             contentPadding: const EdgeInsets.only(
-                top: 10,
-                bottom: 0,
-                left: 20,
-                right: 20
+              top: 10,
+              bottom: 0,
+              left: 20,
+              right: 20
             ),
             actionsAlignment: MainAxisAlignment.start,
             title: Text(
