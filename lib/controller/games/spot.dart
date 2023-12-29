@@ -26,6 +26,18 @@ class SpotGameContImp extends SpotGameCont {
   CountdownController countdownController2 = CountdownController(autoStart: true);
   CountdownController countdownController3 = CountdownController(autoStart: true);
   CountdownController countdownController4 = CountdownController(autoStart: true);
+  CountdownController countdownController5 = CountdownController(autoStart: true);
+  CountdownController countdownController6 = CountdownController(autoStart: true);
+  CountdownController countdownController7 = CountdownController(autoStart: true);
+  CountdownController countdownController8 = CountdownController(autoStart: true);
+  CountdownController countdownController9 = CountdownController(autoStart: true);
+  CountdownController countdownController10 = CountdownController(autoStart: true);
+  CountdownController countdownController11 = CountdownController(autoStart: true);
+  CountdownController countdownController12 = CountdownController(autoStart: true);
+  CountdownController countdownController13 = CountdownController(autoStart: true);
+  CountdownController countdownController14 = CountdownController(autoStart: true);
+  CountdownController countdownController15 = CountdownController(autoStart: true);
+
   AudioPlayer audioPlayer = AudioPlayer();
 
   StatusRequest statusRequest = StatusRequest.none;
@@ -33,13 +45,24 @@ class SpotGameContImp extends SpotGameCont {
   bool isConnected = false;
   String email = "";
 
-  int level = 0;      // db level       2
-  int clevel = 0;     // screen level   4
+  int level = 0;
+  int clevel = 0;
 
   int lvlOne = 5;
   int lvlTwo = 7;
   int lvlThree = 9;
   int lvlFour = 4;
+  int lvlFive = 12;
+  int lvlSix = 21;
+  int lvlSeven = 23;
+  int lvlEight = 26;
+  int lvlNine = 30;
+  int lvlTen = 31;
+  int lvlEleven = 40;
+  int lvlTwelve = 37;
+  int lvlThirteen = 47;
+  int lvlFourteen = 47;
+  int lvlFifteen = 48;
 
   @override
   checkNetwork() async {
@@ -173,6 +196,28 @@ class SpotGameContImp extends SpotGameCont {
                 countdownController3.restart();
               } else if(clevel == 4){
                 countdownController4.restart();
+              } else if(clevel == 5){
+                countdownController5.restart();
+              } else if(clevel == 6){
+                countdownController6.restart();
+              } else if(clevel == 7){
+                countdownController7.restart();
+              } else if(clevel == 8){
+                countdownController8.restart();
+              } else if(clevel == 9){
+                countdownController9.restart();
+              } else if(clevel == 10){
+                countdownController10.restart();
+              } else if(clevel == 11){
+                countdownController11.restart();
+              } else if(clevel == 12){
+                countdownController12.restart();
+              } else if(clevel == 13){
+                countdownController13.restart();
+              } else if(clevel == 14){
+                countdownController14.restart();
+              } else if(clevel == 15){
+                countdownController15.restart();
               }
             },
           ),
@@ -219,6 +264,28 @@ class SpotGameContImp extends SpotGameCont {
             countdownController3.restart();
           } else if(clevel == 4){
             countdownController4.restart();
+          } else if(clevel == 5){
+            countdownController5.restart();
+          } else if(clevel == 6){
+            countdownController6.restart();
+          } else if(clevel == 7){
+            countdownController7.restart();
+          } else if(clevel == 8){
+            countdownController8.restart();
+          } else if(clevel == 9){
+            countdownController9.restart();
+          } else if(clevel == 10){
+            countdownController10.restart();
+          } else if(clevel == 11){
+            countdownController11.restart();
+          } else if(clevel == 12){
+            countdownController12.restart();
+          } else if(clevel == 13){
+            countdownController13.restart();
+          } else if(clevel == 14){
+            countdownController14.restart();
+          } else if(clevel == 15){
+            countdownController15.restart();
           }
           return false;
         }
@@ -318,7 +385,7 @@ class SpotGameContImp extends SpotGameCont {
         await audioPlayer.play(AssetSource("sounds/win.mp3"));
         update();
       } else if(clevel == 3 && no == lvlThree){
-        countdownController2.pause();
+        countdownController3.pause();
         Get.defaultDialog(
           backgroundColor: white,
           title: "اجابة صحيحة",
@@ -353,7 +420,7 @@ class SpotGameContImp extends SpotGameCont {
         await audioPlayer.play(AssetSource("sounds/win.mp3"));
         update();
       } else if(clevel == 4 && no == lvlFour){
-        countdownController3.pause();
+        countdownController4.pause();
         Get.defaultDialog(
           backgroundColor: white,
           title: "اجابة صحيحة",
@@ -379,6 +446,392 @@ class SpotGameContImp extends SpotGameCont {
           onWillPop: () async {
             Get.back();
             Get.back();
+            Get.to(() => const SpotGameScreen(level: 5));
+            clevel = 5;
+            await updateLevel();
+            return false;
+          }
+        );
+        await audioPlayer.play(AssetSource("sounds/win.mp3"));
+        update();
+      } else if(clevel == 5 && no == lvlFive){
+        countdownController5.pause();
+        Get.defaultDialog(
+            backgroundColor: white,
+            title: "اجابة صحيحة",
+            titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
+            titleStyle: TextStyle(
+              fontSize: 18.sp,
+              fontFamily: "Cairo",
+              color: green,
+              fontWeight: FontWeight.bold
+            ),
+            content: Container(
+              alignment: Alignment.center,
+              height: 7.h,
+              child: Text(
+                "! جاااامد كسبت 10 نقاط",
+                style: TextStyle(
+                  fontSize: 17.sp,
+                  fontFamily: "Cairo",
+                ),
+                textAlign: TextAlign.center,
+              ),
+            ),
+            onWillPop: () async {
+              Get.back();
+              Get.back();
+              Get.to(() => const SpotGameScreen(level: 6));
+              clevel = 6;
+              await updateLevel();
+              return false;
+            }
+        );
+        await audioPlayer.play(AssetSource("sounds/win.mp3"));
+        update();
+      } else if(clevel == 6 && no == lvlSix){
+        countdownController6.pause();
+        Get.defaultDialog(
+            backgroundColor: white,
+            title: "اجابة صحيحة",
+            titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
+            titleStyle: TextStyle(
+                fontSize: 18.sp,
+                fontFamily: "Cairo",
+                color: green,
+                fontWeight: FontWeight.bold
+            ),
+            content: Container(
+              alignment: Alignment.center,
+              height: 7.h,
+              child: Text(
+                "! جاااامد كسبت 10 نقاط",
+                style: TextStyle(
+                  fontSize: 17.sp,
+                  fontFamily: "Cairo",
+                ),
+                textAlign: TextAlign.center,
+              ),
+            ),
+            onWillPop: () async {
+              Get.back();
+              Get.back();
+              Get.to(() => const SpotGameScreen(level: 7));
+              clevel = 7;
+              await updateLevel();
+              return false;
+            }
+        );
+        await audioPlayer.play(AssetSource("sounds/win.mp3"));
+        update();
+      } else if(clevel == 7 && no == lvlSeven){
+        countdownController7.pause();
+        Get.defaultDialog(
+            backgroundColor: white,
+            title: "اجابة صحيحة",
+            titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
+            titleStyle: TextStyle(
+                fontSize: 18.sp,
+                fontFamily: "Cairo",
+                color: green,
+                fontWeight: FontWeight.bold
+            ),
+            content: Container(
+              alignment: Alignment.center,
+              height: 7.h,
+              child: Text(
+                "! جاااامد كسبت 10 نقاط",
+                style: TextStyle(
+                  fontSize: 17.sp,
+                  fontFamily: "Cairo",
+                ),
+                textAlign: TextAlign.center,
+              ),
+            ),
+            onWillPop: () async {
+              Get.back();
+              Get.back();
+              Get.to(() => const SpotGameScreen(level: 8));
+              clevel = 8;
+              await updateLevel();
+              return false;
+            }
+        );
+        await audioPlayer.play(AssetSource("sounds/win.mp3"));
+        update();
+      } else if(clevel == 8 && no == lvlEight){
+        countdownController8.pause();
+        Get.defaultDialog(
+            backgroundColor: white,
+            title: "اجابة صحيحة",
+            titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
+            titleStyle: TextStyle(
+                fontSize: 18.sp,
+                fontFamily: "Cairo",
+                color: green,
+                fontWeight: FontWeight.bold
+            ),
+            content: Container(
+              alignment: Alignment.center,
+              height: 7.h,
+              child: Text(
+                "! جاااامد كسبت 10 نقاط",
+                style: TextStyle(
+                  fontSize: 17.sp,
+                  fontFamily: "Cairo",
+                ),
+                textAlign: TextAlign.center,
+              ),
+            ),
+            onWillPop: () async {
+              Get.back();
+              Get.back();
+              Get.to(() => const SpotGameScreen(level: 9));
+              clevel = 9;
+              await updateLevel();
+              return false;
+            }
+        );
+        await audioPlayer.play(AssetSource("sounds/win.mp3"));
+        update();
+      } else if(clevel == 9 && no == lvlNine){
+        countdownController9.pause();
+        Get.defaultDialog(
+            backgroundColor: white,
+            title: "اجابة صحيحة",
+            titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
+            titleStyle: TextStyle(
+                fontSize: 18.sp,
+                fontFamily: "Cairo",
+                color: green,
+                fontWeight: FontWeight.bold
+            ),
+            content: Container(
+              alignment: Alignment.center,
+              height: 7.h,
+              child: Text(
+                "! جاااامد كسبت 10 نقاط",
+                style: TextStyle(
+                  fontSize: 17.sp,
+                  fontFamily: "Cairo",
+                ),
+                textAlign: TextAlign.center,
+              ),
+            ),
+            onWillPop: () async {
+              Get.back();
+              Get.back();
+              Get.to(() => const SpotGameScreen(level: 10));
+              clevel = 10;
+              await updateLevel();
+              return false;
+            }
+        );
+        await audioPlayer.play(AssetSource("sounds/win.mp3"));
+        update();
+      } else if(clevel == 10 && no == lvlTen){
+        countdownController10.pause();
+        Get.defaultDialog(
+            backgroundColor: white,
+            title: "اجابة صحيحة",
+            titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
+            titleStyle: TextStyle(
+                fontSize: 18.sp,
+                fontFamily: "Cairo",
+                color: green,
+                fontWeight: FontWeight.bold
+            ),
+            content: Container(
+              alignment: Alignment.center,
+              height: 7.h,
+              child: Text(
+                "! جاااامد كسبت 10 نقاط",
+                style: TextStyle(
+                  fontSize: 17.sp,
+                  fontFamily: "Cairo",
+                ),
+                textAlign: TextAlign.center,
+              ),
+            ),
+            onWillPop: () async {
+              Get.back();
+              Get.back();
+              Get.to(() => const SpotGameScreen(level: 11));
+              clevel = 11;
+              await updateLevel();
+              return false;
+            }
+        );
+        await audioPlayer.play(AssetSource("sounds/win.mp3"));
+        update();
+      } else if(clevel == 11 && no == lvlEleven){
+        countdownController11.pause();
+        Get.defaultDialog(
+            backgroundColor: white,
+            title: "اجابة صحيحة",
+            titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
+            titleStyle: TextStyle(
+                fontSize: 18.sp,
+                fontFamily: "Cairo",
+                color: green,
+                fontWeight: FontWeight.bold
+            ),
+            content: Container(
+              alignment: Alignment.center,
+              height: 7.h,
+              child: Text(
+                "! جاااامد كسبت 10 نقاط",
+                style: TextStyle(
+                  fontSize: 17.sp,
+                  fontFamily: "Cairo",
+                ),
+                textAlign: TextAlign.center,
+              ),
+            ),
+            onWillPop: () async {
+              Get.back();
+              Get.back();
+              Get.to(() => const SpotGameScreen(level: 12));
+              clevel = 12;
+              await updateLevel();
+              return false;
+            }
+        );
+        await audioPlayer.play(AssetSource("sounds/win.mp3"));
+        update();
+      } else if(clevel == 12 && no == lvlTwelve){
+        countdownController12.pause();
+        Get.defaultDialog(
+            backgroundColor: white,
+            title: "اجابة صحيحة",
+            titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
+            titleStyle: TextStyle(
+                fontSize: 18.sp,
+                fontFamily: "Cairo",
+                color: green,
+                fontWeight: FontWeight.bold
+            ),
+            content: Container(
+              alignment: Alignment.center,
+              height: 7.h,
+              child: Text(
+                "! جاااامد كسبت 10 نقاط",
+                style: TextStyle(
+                  fontSize: 17.sp,
+                  fontFamily: "Cairo",
+                ),
+                textAlign: TextAlign.center,
+              ),
+            ),
+            onWillPop: () async {
+              Get.back();
+              Get.back();
+              Get.to(() => const SpotGameScreen(level: 13));
+              clevel = 13;
+              await updateLevel();
+              return false;
+            }
+        );
+        await audioPlayer.play(AssetSource("sounds/win.mp3"));
+        update();
+      } else if(clevel == 13 && no == lvlThirteen){
+        countdownController13.pause();
+        Get.defaultDialog(
+            backgroundColor: white,
+            title: "اجابة صحيحة",
+            titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
+            titleStyle: TextStyle(
+                fontSize: 18.sp,
+                fontFamily: "Cairo",
+                color: green,
+                fontWeight: FontWeight.bold
+            ),
+            content: Container(
+              alignment: Alignment.center,
+              height: 7.h,
+              child: Text(
+                "! جاااامد كسبت 10 نقاط",
+                style: TextStyle(
+                  fontSize: 17.sp,
+                  fontFamily: "Cairo",
+                ),
+                textAlign: TextAlign.center,
+              ),
+            ),
+            onWillPop: () async {
+              Get.back();
+              Get.back();
+              Get.to(() => const SpotGameScreen(level: 14));
+              clevel = 14;
+              await updateLevel();
+              return false;
+            }
+        );
+        await audioPlayer.play(AssetSource("sounds/win.mp3"));
+        update();
+      } else if(clevel == 14 && no == lvlFourteen){
+        countdownController14.pause();
+        Get.defaultDialog(
+            backgroundColor: white,
+            title: "اجابة صحيحة",
+            titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
+            titleStyle: TextStyle(
+                fontSize: 18.sp,
+                fontFamily: "Cairo",
+                color: green,
+                fontWeight: FontWeight.bold
+            ),
+            content: Container(
+              alignment: Alignment.center,
+              height: 7.h,
+              child: Text(
+                "! جاااامد كسبت 10 نقاط",
+                style: TextStyle(
+                  fontSize: 17.sp,
+                  fontFamily: "Cairo",
+                ),
+                textAlign: TextAlign.center,
+              ),
+            ),
+            onWillPop: () async {
+              Get.back();
+              Get.back();
+              Get.to(() => const SpotGameScreen(level: 15));
+              clevel = 15;
+              await updateLevel();
+              return false;
+            }
+        );
+        await audioPlayer.play(AssetSource("sounds/win.mp3"));
+        update();
+      } else if(clevel == 15 && no == lvlFifteen){
+        countdownController15.pause();
+        Get.defaultDialog(
+          backgroundColor: white,
+          title: "اجابة صحيحة",
+          titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
+          titleStyle: TextStyle(
+            fontSize: 18.sp,
+            fontFamily: "Cairo",
+            color: green,
+            fontWeight: FontWeight.bold
+          ),
+          content: Container(
+            alignment: Alignment.center,
+            height: 7.h,
+            child: Text(
+              "! جاااامد كسبت 10 نقاط",
+              style: TextStyle(
+                fontSize: 17.sp,
+                fontFamily: "Cairo",
+              ),
+              textAlign: TextAlign.center,
+            ),
+          ),
+          onWillPop: () async {
+            Get.back();
+            Get.back();
+            clevel = 15;
             return false;
           }
         );

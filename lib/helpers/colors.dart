@@ -32,6 +32,14 @@ const testBck3 = Color(0xffDBC4F0);
 const lighterBlue = Color(0xff01DBFE);
 const chatbck = Color(0xffFFF6E0);
 const medHomeBtn = Color(0xffC8A2C8);
+const lightxBlue = Color(0xff62CDFF);
+const spotLvl8 = Color(0xffA0E9FF);
+const spotLvl10 = Color(0xff42C2FF);
+const spotLvl11 = Color(0xffFFDEFF);
+const spotLvl12 = Color(0xffC8FFD4);
+const spotLvl13 = Color(0xffFFDBA4);
+const spotLvl14 = Color(0xffE7FBBE);
+
 
 
 

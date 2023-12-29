@@ -213,89 +213,41 @@ class _SpotLevelsScreenState extends State<SpotLevelsScreen> {
                                   ),
                                 ),
                               ),
-                              Container(
-                                width: 30.w,
-                                height: 16.h,
-                                alignment: Alignment.center,
-                                decoration: BoxDecoration(
-                                  color: controller.level >= 5 ? orangeBtn : lightOrange,
-                                  borderRadius: BorderRadius.circular(10),
-                                ),
-                                child: Text(
-                                  "5",
-                                  style: TextStyle(
-                                      fontSize: 38.sp,
-                                      fontWeight: FontWeight.bold
+                              GestureDetector(
+                                onTap: () => Get.to( () => const SpotGameScreen(level: 5)),
+                                child: Container(
+                                  width: 30.w,
+                                  height: 16.h,
+                                  alignment: Alignment.center,
+                                  decoration: BoxDecoration(
+                                    color: controller.level >= 5 ? orangeBtn : lightOrange,
+                                    borderRadius: BorderRadius.circular(10),
+                                  ),
+                                  child: Text(
+                                    "5",
+                                    style: TextStyle(
+                                        fontSize: 38.sp,
+                                        fontWeight: FontWeight.bold
+                                    ),
                                   ),
                                 ),
                               ),
-                              Container(
-                                width: 30.w,
-                                height: 16.h,
-                                alignment: Alignment.center,
-                                decoration: BoxDecoration(
-                                  color: controller.level >= 6 ? orangeBtn : lightOrange,
-                                  borderRadius: BorderRadius.circular(10),
-                                ),
-                                child: Text(
-                                  "6",
-                                  style: TextStyle(
-                                      fontSize: 38.sp,
-                                      fontWeight: FontWeight.bold
+                              GestureDetector(
+                                onTap: () => Get.to( () => const SpotGameScreen(level: 6)),
+                                child: Container(
+                                  width: 30.w,
+                                  height: 16.h,
+                                  alignment: Alignment.center,
+                                  decoration: BoxDecoration(
+                                    color: controller.level >= 6 ? orangeBtn : lightOrange,
+                                    borderRadius: BorderRadius.circular(10),
                                   ),
-                                ),
-                              ),
-                            ],
-                          ),
-                          SizedBox(height: 1.h),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceAround,
-                            children: [
-                              Container(
-                                width: 30.w,
-                                height: 16.h,
-                                alignment: Alignment.center,
-                                decoration: BoxDecoration(
-                                  color: controller.level >= 7 ? orangeBtn : lightOrange,
-                                  borderRadius: BorderRadius.circular(10),
-                                ),
-                                child: Text(
-                                  "7",
-                                  style: TextStyle(
+                                  child: Text(
+                                    "6",
+                                    style: TextStyle(
                                       fontSize: 38.sp,
                                       fontWeight: FontWeight.bold
-                                  ),
-                                ),
-                              ),
-                              Container(
-                                width: 30.w,
-                                height: 16.h,
-                                alignment: Alignment.center,
-                                decoration: BoxDecoration(
-                                  color: controller.level >= 8 ? orangeBtn : lightOrange,
-                                  borderRadius: BorderRadius.circular(10),
-                                ),
-                                child: Text(
-                                  "8",
-                                  style: TextStyle(
-                                      fontSize: 38.sp,
-                                      fontWeight: FontWeight.bold
-                                  ),
-                                ),
-                              ),
-                              Container(
-                                width: 30.w,
-                                height: 16.h,
-                                alignment: Alignment.center,
-                                decoration: BoxDecoration(
-                                  color: controller.level >= 9 ? orangeBtn : lightOrange,
-                                  borderRadius: BorderRadius.circular(10),
-                                ),
-                                child: Text(
-                                  "9",
-                                  style: TextStyle(
-                                      fontSize: 38.sp,
-                                      fontWeight: FontWeight.bold
+                                    ),
                                   ),
                                 ),
                               ),
@@ -305,51 +257,60 @@ class _SpotLevelsScreenState extends State<SpotLevelsScreen> {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceAround,
                             children: [
-                              Container(
-                                width: 30.w,
-                                height: 16.h,
-                                alignment: Alignment.center,
-                                decoration: BoxDecoration(
-                                  color: controller.level >= 10 ? orangeBtn : lightOrange,
-                                  borderRadius: BorderRadius.circular(10),
-                                ),
-                                child: Text(
-                                  "10",
-                                  style: TextStyle(
-                                      fontSize: 38.sp,
-                                      fontWeight: FontWeight.bold
+                              GestureDetector(
+                                onTap: () => Get.to( () => const SpotGameScreen(level: 7)),
+                                child: Container(
+                                  width: 30.w,
+                                  height: 16.h,
+                                  alignment: Alignment.center,
+                                  decoration: BoxDecoration(
+                                    color: controller.level >= 6 ? orangeBtn : lightOrange,
+                                    borderRadius: BorderRadius.circular(10),
+                                  ),
+                                  child: Text(
+                                    "7",
+                                    style: TextStyle(
+                                        fontSize: 38.sp,
+                                        fontWeight: FontWeight.bold
+                                    ),
                                   ),
                                 ),
                               ),
-                              Container(
-                                width: 30.w,
-                                height: 16.h,
-                                alignment: Alignment.center,
-                                decoration: BoxDecoration(
-                                  color: controller.level >= 11 ? orangeBtn : lightOrange,
-                                  borderRadius: BorderRadius.circular(10),
-                                ),
-                                child: Text(
-                                  "11",
-                                  style: TextStyle(
-                                      fontSize: 38.sp,
-                                      fontWeight: FontWeight.bold
+                              GestureDetector(
+                                onTap: () => Get.to( () => const SpotGameScreen(level: 8)),
+                                child: Container(
+                                  width: 30.w,
+                                  height: 16.h,
+                                  alignment: Alignment.center,
+                                  decoration: BoxDecoration(
+                                    color: controller.level >= 8 ? orangeBtn : lightOrange,
+                                    borderRadius: BorderRadius.circular(10),
+                                  ),
+                                  child: Text(
+                                    "8",
+                                    style: TextStyle(
+                                        fontSize: 38.sp,
+                                        fontWeight: FontWeight.bold
+                                    ),
                                   ),
                                 ),
                               ),
-                              Container(
-                                width: 30.w,
-                                height: 16.h,
-                                alignment: Alignment.center,
-                                decoration: BoxDecoration(
-                                  color: controller.level >= 12 ? orangeBtn : lightOrange,
-                                  borderRadius: BorderRadius.circular(10),
-                                ),
-                                child: Text(
-                                  "12",
-                                  style: TextStyle(
+                              GestureDetector(
+                                onTap: () => Get.to( () => const SpotGameScreen(level: 9)),
+                                child: Container(
+                                  width: 30.w,
+                                  height: 16.h,
+                                  alignment: Alignment.center,
+                                  decoration: BoxDecoration(
+                                    color: controller.level >= 9 ? orangeBtn : lightOrange,
+                                    borderRadius: BorderRadius.circular(10),
+                                  ),
+                                  child: Text(
+                                    "9",
+                                    style: TextStyle(
                                       fontSize: 38.sp,
                                       fontWeight: FontWeight.bold
+                                    ),
                                   ),
                                 ),
                               ),
@@ -359,51 +320,123 @@ class _SpotLevelsScreenState extends State<SpotLevelsScreen> {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceAround,
                             children: [
-                              Container(
-                                width: 30.w,
-                                height: 16.h,
-                                alignment: Alignment.center,
-                                decoration: BoxDecoration(
-                                  color: controller.level >= 13 ? orangeBtn : lightOrange,
-                                  borderRadius: BorderRadius.circular(10),
-                                ),
-                                child: Text(
-                                  "13",
-                                  style: TextStyle(
-                                      fontSize: 38.sp,
-                                      fontWeight: FontWeight.bold
+                              GestureDetector(
+                                onTap: () => Get.to( () => const SpotGameScreen(level: 10)),
+                                child: Container(
+                                  width: 30.w,
+                                  height: 16.h,
+                                  alignment: Alignment.center,
+                                  decoration: BoxDecoration(
+                                    color: controller.level >= 10 ? orangeBtn : lightOrange,
+                                    borderRadius: BorderRadius.circular(10),
+                                  ),
+                                  child: Text(
+                                    "10",
+                                    style: TextStyle(
+                                        fontSize: 38.sp,
+                                        fontWeight: FontWeight.bold
+                                    ),
                                   ),
                                 ),
                               ),
-                              Container(
-                                width: 30.w,
-                                height: 16.h,
-                                alignment: Alignment.center,
-                                decoration: BoxDecoration(
-                                  color: controller.level >= 14 ? orangeBtn : lightOrange,
-                                  borderRadius: BorderRadius.circular(10),
-                                ),
-                                child: Text(
-                                  "14",
-                                  style: TextStyle(
+                              GestureDetector(
+                                onTap: () => Get.to( () => const SpotGameScreen(level: 11)),
+                                child: Container(
+                                  width: 30.w,
+                                  height: 16.h,
+                                  alignment: Alignment.center,
+                                  decoration: BoxDecoration(
+                                    color: controller.level >= 11 ? orangeBtn : lightOrange,
+                                    borderRadius: BorderRadius.circular(10),
+                                  ),
+                                  child: Text(
+                                    "11",
+                                    style: TextStyle(
                                       fontSize: 38.sp,
                                       fontWeight: FontWeight.bold
+                                    ),
                                   ),
                                 ),
                               ),
-                              Container(
-                                width: 30.w,
-                                height: 16.h,
-                                alignment: Alignment.center,
-                                decoration: BoxDecoration(
-                                  color: controller.level >= 15 ? orangeBtn : lightOrange,
-                                  borderRadius: BorderRadius.circular(10),
-                                ),
-                                child: Text(
-                                  "15",
-                                  style: TextStyle(
+                              GestureDetector(
+                                onTap: () => Get.to( () => const SpotGameScreen(level: 12)),
+                                child: Container(
+                                  width: 30.w,
+                                  height: 16.h,
+                                  alignment: Alignment.center,
+                                  decoration: BoxDecoration(
+                                    color: controller.level >= 12 ? orangeBtn : lightOrange,
+                                    borderRadius: BorderRadius.circular(10),
+                                  ),
+                                  child: Text(
+                                    "12",
+                                    style: TextStyle(
                                       fontSize: 38.sp,
                                       fontWeight: FontWeight.bold
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                          SizedBox(height: 1.h),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
+                            children: [
+                              GestureDetector(
+                                onTap: () => Get.to( () => const SpotGameScreen(level: 13)),
+                                child: Container(
+                                  width: 30.w,
+                                  height: 16.h,
+                                  alignment: Alignment.center,
+                                  decoration: BoxDecoration(
+                                    color: controller.level >= 13 ? orangeBtn : lightOrange,
+                                    borderRadius: BorderRadius.circular(10),
+                                  ),
+                                  child: Text(
+                                    "13",
+                                    style: TextStyle(
+                                      fontSize: 38.sp,
+                                      fontWeight: FontWeight.bold
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              GestureDetector(
+                                onTap: () => Get.to( () => const SpotGameScreen(level: 14)),
+                                child: Container(
+                                  width: 30.w,
+                                  height: 16.h,
+                                  alignment: Alignment.center,
+                                  decoration: BoxDecoration(
+                                    color: controller.level >= 14 ? orangeBtn : lightOrange,
+                                    borderRadius: BorderRadius.circular(10),
+                                  ),
+                                  child: Text(
+                                    "14",
+                                    style: TextStyle(
+                                        fontSize: 38.sp,
+                                        fontWeight: FontWeight.bold
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              GestureDetector(
+                                onTap: () => Get.to( () => const SpotGameScreen(level: 15)),
+                                child: Container(
+                                  width: 30.w,
+                                  height: 16.h,
+                                  alignment: Alignment.center,
+                                  decoration: BoxDecoration(
+                                    color: controller.level >= 15 ? orangeBtn : lightOrange,
+                                    borderRadius: BorderRadius.circular(10),
+                                  ),
+                                  child: Text(
+                                    "15",
+                                    style: TextStyle(
+                                      fontSize: 38.sp,
+                                      fontWeight: FontWeight.bold
+                                    ),
                                   ),
                                 ),
                               ),
