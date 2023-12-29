@@ -71,10 +71,10 @@ class MemoryGameContImp extends MemoryGameCont {
           title: "error".tr,
           titlePadding: EdgeInsets.only(bottom: 2.h, top: 1.h),
           titleStyle: TextStyle(
-              fontSize: 18.sp,
-              fontFamily: "Cairo",
-              color: red,
-              fontWeight: FontWeight.bold
+            fontSize: 18.sp,
+            fontFamily: "Cairo",
+            color: red,
+            fontWeight: FontWeight.bold
           ),
           content: Text(
             "no_internet".tr,
@@ -99,16 +99,16 @@ class MemoryGameContImp extends MemoryGameCont {
         if(StatusRequest.serverFailure == levelResponse){
           Get.defaultDialog(
             backgroundColor: white,
-            title: "Error",
+            title: "error".tr,
             titlePadding: EdgeInsets.only(bottom: 2.h, top: 1.h),
             titleStyle: TextStyle(
-                fontSize: 18.sp,
-                fontFamily: "Cairo",
-                color: red,
-                fontWeight: FontWeight.bold
+              fontSize: 18.sp,
+              fontFamily: "Cairo",
+              color: red,
+              fontWeight: FontWeight.bold
             ),
             content: Text(
-              "Server Error !!",
+              "server_error".tr,
               style: TextStyle(
                 fontSize: 18.sp,
                 fontFamily: "Cairo",
@@ -1169,7 +1169,7 @@ class MemoryGameContImp extends MemoryGameCont {
           if(const ListEquality().equals(ans, oneAns)){
             Get.defaultDialog(
               backgroundColor: white,
-              title: "اجابة صحيحة",
+              title: "correct".tr,
               titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
               titleStyle: TextStyle(
                 fontSize: 18.sp,
@@ -1181,7 +1181,7 @@ class MemoryGameContImp extends MemoryGameCont {
                 alignment: Alignment.center,
                 height: 7.h,
                 child: Text(
-                  "! برافو ، كسبت 5 نقاط",
+                  "lvl1Correct".tr,
                   style: TextStyle(
                     fontSize: 18.sp,
                     fontFamily: "Cairo",
@@ -1203,7 +1203,7 @@ class MemoryGameContImp extends MemoryGameCont {
         } else if(ans.length >= 3){
           Get.defaultDialog(
             backgroundColor: white,
-            title: "اجابة خاطئة",
+            title: "lvlWrong".tr,
             titlePadding: EdgeInsets.only(bottom: 2.h, top: 1.h),
             titleStyle: TextStyle(
               fontSize: 18.sp,
@@ -1212,7 +1212,7 @@ class MemoryGameContImp extends MemoryGameCont {
               fontWeight: FontWeight.bold
             ),
             content: Text(
-              "! اجابة خاطئة ، حاول مرة اخرى",
+              "lvl1Correct".tr,
               style: TextStyle(
                 fontSize: 18.sp,
                 fontFamily: "Cairo",
@@ -1229,7 +1229,7 @@ class MemoryGameContImp extends MemoryGameCont {
           if(const ListEquality().equals(ans, twoAns)){
             Get.defaultDialog(
               backgroundColor: white,
-              title: "اجابة صحيحة",
+              title: "correct".tr,
               titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
               titleStyle: TextStyle(
                 fontSize: 18.sp,
@@ -1241,7 +1241,7 @@ class MemoryGameContImp extends MemoryGameCont {
                 alignment: Alignment.center,
                 height: 7.h,
                 child: Text(
-                  "! ايه الجمال ده كسبت  7 نقاط",
+                  "lvl2Correct".tr,
                   style: TextStyle(
                     fontSize: 18.sp,
                     fontFamily: "Cairo",
@@ -1263,7 +1263,7 @@ class MemoryGameContImp extends MemoryGameCont {
         } else if(ans.length >= 4){
           Get.defaultDialog(
             backgroundColor: white,
-            title: "اجابة خاطئة",
+            title: "lvlWrong".tr,
             titlePadding: EdgeInsets.only(bottom: 2.h, top: 1.h),
             titleStyle: TextStyle(
               fontSize: 18.sp,
@@ -1272,7 +1272,7 @@ class MemoryGameContImp extends MemoryGameCont {
               fontWeight: FontWeight.bold
             ),
             content: Text(
-              "! اجابة خاطئة ، حاول مرة اخرى",
+              "lvlWrong".tr,
               style: TextStyle(
                 fontSize: 18.sp,
                 fontFamily: "Cairo",
@@ -1289,19 +1289,19 @@ class MemoryGameContImp extends MemoryGameCont {
           if(const ListEquality().equals(ans, threeAns)){
             Get.defaultDialog(
               backgroundColor: white,
-              title: "اجابة صحيحة",
+              title: "correct".tr,
               titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
               titleStyle: TextStyle(
-                  fontSize: 18.sp,
-                  fontFamily: "Cairo",
-                  color: green,
-                  fontWeight: FontWeight.bold
+                fontSize: 18.sp,
+                fontFamily: "Cairo",
+                color: green,
+                fontWeight: FontWeight.bold
               ),
               content: Container(
                 alignment: Alignment.center,
                 height: 7.h,
                 child: Text(
-                  "! كمل يا بطل كسبت  7 نقاط",
+                  "lvl3Correct".tr,
                   style: TextStyle(
                     fontSize: 18.sp,
                     fontFamily: "Cairo",
@@ -1323,16 +1323,16 @@ class MemoryGameContImp extends MemoryGameCont {
         } else if(ans.length >= 5){
           Get.defaultDialog(
             backgroundColor: white,
-            title: "اجابة خاطئة",
+            title: "lvlWrong".tr,
             titlePadding: EdgeInsets.only(bottom: 2.h, top: 1.h),
             titleStyle: TextStyle(
-                fontSize: 18.sp,
-                fontFamily: "Cairo",
-                color: red,
-                fontWeight: FontWeight.bold
+              fontSize: 18.sp,
+              fontFamily: "Cairo",
+              color: red,
+              fontWeight: FontWeight.bold
             ),
             content: Text(
-              "! اجابة خاطئة ، حاول مرة اخرى",
+              "lvlWrong".tr,
               style: TextStyle(
                 fontSize: 18.sp,
                 fontFamily: "Cairo",
@@ -1349,19 +1349,19 @@ class MemoryGameContImp extends MemoryGameCont {
           if(const ListEquality().equals(ans, fourAns)){
             Get.defaultDialog(
                 backgroundColor: white,
-                title: "اجابة صحيحة",
+                title: "correct".tr,
                 titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
                 titleStyle: TextStyle(
-                    fontSize: 18.sp,
-                    fontFamily: "Cairo",
-                    color: green,
-                    fontWeight: FontWeight.bold
+                  fontSize: 18.sp,
+                  fontFamily: "Cairo",
+                  color: green,
+                  fontWeight: FontWeight.bold
                 ),
                 content: Container(
                   alignment: Alignment.center,
                   height: 7.h,
                   child: Text(
-                    "! جاااامد كسبت 10 نقاط",
+                    "lvl4Correct".tr,
                     style: TextStyle(
                       fontSize: 18.sp,
                       fontFamily: "Cairo",
@@ -1383,7 +1383,7 @@ class MemoryGameContImp extends MemoryGameCont {
         } else if(ans.length >= 6){
           Get.defaultDialog(
             backgroundColor: white,
-            title: "اجابة خاطئة",
+            title: "lvlWrong".tr,
             titlePadding: EdgeInsets.only(bottom: 2.h, top: 1.h),
             titleStyle: TextStyle(
                 fontSize: 18.sp,
@@ -1392,7 +1392,7 @@ class MemoryGameContImp extends MemoryGameCont {
                 fontWeight: FontWeight.bold
             ),
             content: Text(
-              "! اجابة خاطئة ، حاول مرة اخرى",
+              "lvlWrong".tr,
               style: TextStyle(
                 fontSize: 18.sp,
                 fontFamily: "Cairo",
@@ -1409,7 +1409,7 @@ class MemoryGameContImp extends MemoryGameCont {
           if(const ListEquality().equals(ans, fiveAns)){
             Get.defaultDialog(
                 backgroundColor: white,
-                title: "اجابة صحيحة",
+                title: "correct".tr,
                 titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
                 titleStyle: TextStyle(
                     fontSize: 18.sp,
@@ -1421,7 +1421,7 @@ class MemoryGameContImp extends MemoryGameCont {
                   alignment: Alignment.center,
                   height: 7.h,
                   child: Text(
-                    "! ممتاز كسبت 12 نقاط",
+                    "lvl5Correct".tr,
                     style: TextStyle(
                       fontSize: 18.sp,
                       fontFamily: "Cairo",
@@ -1443,7 +1443,7 @@ class MemoryGameContImp extends MemoryGameCont {
         } else if(ans.length >= 7){
           Get.defaultDialog(
             backgroundColor: white,
-            title: "اجابة خاطئة",
+            title: "lvlWrong".tr,
             titlePadding: EdgeInsets.only(bottom: 2.h, top: 1.h),
             titleStyle: TextStyle(
                 fontSize: 18.sp,
@@ -1452,7 +1452,7 @@ class MemoryGameContImp extends MemoryGameCont {
                 fontWeight: FontWeight.bold
             ),
             content: Text(
-              "! اجابة خاطئة ، حاول مرة اخرى",
+              "lvlWrong".tr,
               style: TextStyle(
                 fontSize: 18.sp,
                 fontFamily: "Cairo",
@@ -1469,7 +1469,7 @@ class MemoryGameContImp extends MemoryGameCont {
           if(const ListEquality().equals(ans, sixAns)){
             Get.defaultDialog(
               backgroundColor: white,
-              title: "اجابة صحيحة",
+              title: "correct".tr,
               titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
               titleStyle: TextStyle(
                 fontSize: 18.sp,
@@ -1481,7 +1481,7 @@ class MemoryGameContImp extends MemoryGameCont {
                 alignment: Alignment.center,
                 height: 7.h,
                 child: Text(
-                  "! ممتاز كسبت 14 نقاط",
+                  "lvl6Correct".tr,
                   style: TextStyle(
                     fontSize: 18.sp,
                     fontFamily: "Cairo",
@@ -1503,7 +1503,7 @@ class MemoryGameContImp extends MemoryGameCont {
         } else if(ans.length >= 7){
           Get.defaultDialog(
             backgroundColor: white,
-            title: "اجابة خاطئة",
+            title: "lvlWrong".tr,
             titlePadding: EdgeInsets.only(bottom: 2.h, top: 1.h),
             titleStyle: TextStyle(
                 fontSize: 18.sp,
@@ -1512,7 +1512,7 @@ class MemoryGameContImp extends MemoryGameCont {
                 fontWeight: FontWeight.bold
             ),
             content: Text(
-              "! اجابة خاطئة ، حاول مرة اخرى",
+              "lvlWrong".tr,
               style: TextStyle(
                 fontSize: 18.sp,
                 fontFamily: "Cairo",
@@ -1529,7 +1529,7 @@ class MemoryGameContImp extends MemoryGameCont {
           if(const ListEquality().equals(ans, sevenAns)){
             Get.defaultDialog(
               backgroundColor: white,
-              title: "اجابة صحيحة",
+              title: "correct".tr,
               titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
               titleStyle: TextStyle(
                   fontSize: 18.sp,
@@ -1541,7 +1541,7 @@ class MemoryGameContImp extends MemoryGameCont {
                 alignment: Alignment.center,
                 height: 7.h,
                 child: Text(
-                  "! ممتاز كسبت 14 نقاط",
+                  "lvl7Correct".tr,
                   style: TextStyle(
                     fontSize: 18.sp,
                     fontFamily: "Cairo",
@@ -1563,7 +1563,7 @@ class MemoryGameContImp extends MemoryGameCont {
         } else if(ans.length >= 8){
           Get.defaultDialog(
             backgroundColor: white,
-            title: "اجابة خاطئة",
+            title: "lvlWrong".tr,
             titlePadding: EdgeInsets.only(bottom: 2.h, top: 1.h),
             titleStyle: TextStyle(
                 fontSize: 18.sp,
@@ -1572,7 +1572,7 @@ class MemoryGameContImp extends MemoryGameCont {
                 fontWeight: FontWeight.bold
             ),
             content: Text(
-              "! اجابة خاطئة ، حاول مرة اخرى",
+              "lvlWrong".tr,
               style: TextStyle(
                 fontSize: 18.sp,
                 fontFamily: "Cairo",
@@ -1589,7 +1589,7 @@ class MemoryGameContImp extends MemoryGameCont {
           if(const ListEquality().equals(ans, eightAns)){
             Get.defaultDialog(
                 backgroundColor: white,
-                title: "اجابة صحيحة",
+                title: "correct".tr,
                 titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
                 titleStyle: TextStyle(
                     fontSize: 18.sp,
@@ -1601,7 +1601,7 @@ class MemoryGameContImp extends MemoryGameCont {
                   alignment: Alignment.center,
                   height: 7.h,
                   child: Text(
-                    "! ممتاز كسبت 14 نقاط",
+                    "lvl8Correct".tr,
                     style: TextStyle(
                       fontSize: 18.sp,
                       fontFamily: "Cairo",
@@ -1623,7 +1623,7 @@ class MemoryGameContImp extends MemoryGameCont {
         } else if(ans.length >= 7){
           Get.defaultDialog(
             backgroundColor: white,
-            title: "اجابة خاطئة",
+            title: "lvlWrong".tr,
             titlePadding: EdgeInsets.only(bottom: 2.h, top: 1.h),
             titleStyle: TextStyle(
                 fontSize: 18.sp,
@@ -1632,7 +1632,7 @@ class MemoryGameContImp extends MemoryGameCont {
                 fontWeight: FontWeight.bold
             ),
             content: Text(
-              "! اجابة خاطئة ، حاول مرة اخرى",
+              "lvlWrong".tr,
               style: TextStyle(
                 fontSize: 18.sp,
                 fontFamily: "Cairo",
@@ -1649,7 +1649,7 @@ class MemoryGameContImp extends MemoryGameCont {
           if(const ListEquality().equals(ans, nineAns)){
             Get.defaultDialog(
                 backgroundColor: white,
-                title: "اجابة صحيحة",
+                title: "correct".tr,
                 titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
                 titleStyle: TextStyle(
                     fontSize: 18.sp,
@@ -1661,7 +1661,7 @@ class MemoryGameContImp extends MemoryGameCont {
                   alignment: Alignment.center,
                   height: 7.h,
                   child: Text(
-                    "! ممتاز كسبت 15 نقاط",
+                    "lvl9Correct".tr,
                     style: TextStyle(
                       fontSize: 18.sp,
                       fontFamily: "Cairo",
@@ -1683,7 +1683,7 @@ class MemoryGameContImp extends MemoryGameCont {
         } else if(ans.length >= 6){
           Get.defaultDialog(
             backgroundColor: white,
-            title: "اجابة خاطئة",
+            title: "lvlWrong".tr,
             titlePadding: EdgeInsets.only(bottom: 2.h, top: 1.h),
             titleStyle: TextStyle(
                 fontSize: 18.sp,
@@ -1692,7 +1692,7 @@ class MemoryGameContImp extends MemoryGameCont {
                 fontWeight: FontWeight.bold
             ),
             content: Text(
-              "! اجابة خاطئة ، حاول مرة اخرى",
+              "lvlWrong".tr,
               style: TextStyle(
                 fontSize: 18.sp,
                 fontFamily: "Cairo",
@@ -1709,7 +1709,7 @@ class MemoryGameContImp extends MemoryGameCont {
           if(const ListEquality().equals(ans, tenAns)){
             Get.defaultDialog(
                 backgroundColor: white,
-                title: "اجابة صحيحة",
+                title: "correct".tr,
                 titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
                 titleStyle: TextStyle(
                     fontSize: 18.sp,
@@ -1721,7 +1721,7 @@ class MemoryGameContImp extends MemoryGameCont {
                   alignment: Alignment.center,
                   height: 7.h,
                   child: Text(
-                    "! ممتاز كسبت 15 نقاط",
+                    "lvl10Correct".tr,
                     style: TextStyle(
                       fontSize: 18.sp,
                       fontFamily: "Cairo",
@@ -1743,7 +1743,7 @@ class MemoryGameContImp extends MemoryGameCont {
         } else if(ans.length >= 8){
           Get.defaultDialog(
             backgroundColor: white,
-            title: "اجابة خاطئة",
+            title: "lvlWrong".tr,
             titlePadding: EdgeInsets.only(bottom: 2.h, top: 1.h),
             titleStyle: TextStyle(
                 fontSize: 18.sp,
@@ -1752,7 +1752,7 @@ class MemoryGameContImp extends MemoryGameCont {
                 fontWeight: FontWeight.bold
             ),
             content: Text(
-              "! اجابة خاطئة ، حاول مرة اخرى",
+              "lvlWrong".tr,
               style: TextStyle(
                 fontSize: 18.sp,
                 fontFamily: "Cairo",
@@ -1769,7 +1769,7 @@ class MemoryGameContImp extends MemoryGameCont {
           if(const ListEquality().equals(ans, elevenAns)){
             Get.defaultDialog(
                 backgroundColor: white,
-                title: "اجابة صحيحة",
+                title: "correct".tr,
                 titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
                 titleStyle: TextStyle(
                     fontSize: 18.sp,
@@ -1781,7 +1781,7 @@ class MemoryGameContImp extends MemoryGameCont {
                   alignment: Alignment.center,
                   height: 7.h,
                   child: Text(
-                    "! ممتاز كسبت 15 نقاط",
+                    "lvl11Correct".tr,
                     style: TextStyle(
                       fontSize: 18.sp,
                       fontFamily: "Cairo",
@@ -1803,7 +1803,7 @@ class MemoryGameContImp extends MemoryGameCont {
         } else if(ans.length >= 9){
           Get.defaultDialog(
             backgroundColor: white,
-            title: "اجابة خاطئة",
+            title: "lvlWrong".tr,
             titlePadding: EdgeInsets.only(bottom: 2.h, top: 1.h),
             titleStyle: TextStyle(
                 fontSize: 18.sp,
@@ -1812,7 +1812,7 @@ class MemoryGameContImp extends MemoryGameCont {
                 fontWeight: FontWeight.bold
             ),
             content: Text(
-              "! اجابة خاطئة ، حاول مرة اخرى",
+              "lvlWrong".tr,
               style: TextStyle(
                 fontSize: 18.sp,
                 fontFamily: "Cairo",
@@ -1829,7 +1829,7 @@ class MemoryGameContImp extends MemoryGameCont {
           if(const ListEquality().equals(ans, twelveAns)){
             Get.defaultDialog(
                 backgroundColor: white,
-                title: "اجابة صحيحة",
+                title: "correct".tr,
                 titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
                 titleStyle: TextStyle(
                     fontSize: 18.sp,
@@ -1841,7 +1841,7 @@ class MemoryGameContImp extends MemoryGameCont {
                   alignment: Alignment.center,
                   height: 7.h,
                   child: Text(
-                    "! ممتاز كسبت 15 نقاط",
+                    "lvl12Correct".tr,
                     style: TextStyle(
                       fontSize: 18.sp,
                       fontFamily: "Cairo",
@@ -1863,7 +1863,7 @@ class MemoryGameContImp extends MemoryGameCont {
         } else if(ans.length >= 9){
           Get.defaultDialog(
             backgroundColor: white,
-            title: "اجابة خاطئة",
+            title: "lvlWrong".tr,
             titlePadding: EdgeInsets.only(bottom: 2.h, top: 1.h),
             titleStyle: TextStyle(
                 fontSize: 18.sp,
@@ -1872,7 +1872,7 @@ class MemoryGameContImp extends MemoryGameCont {
                 fontWeight: FontWeight.bold
             ),
             content: Text(
-              "! اجابة خاطئة ، حاول مرة اخرى",
+              "lvlWrong".tr,
               style: TextStyle(
                 fontSize: 18.sp,
                 fontFamily: "Cairo",
@@ -1889,7 +1889,7 @@ class MemoryGameContImp extends MemoryGameCont {
           if(const ListEquality().equals(ans, thirteenAns)){
             Get.defaultDialog(
               backgroundColor: white,
-              title: "اجابة صحيحة",
+              title: "correct".tr,
               titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
               titleStyle: TextStyle(
                   fontSize: 18.sp,
@@ -1901,7 +1901,7 @@ class MemoryGameContImp extends MemoryGameCont {
                 alignment: Alignment.center,
                 height: 7.h,
                 child: Text(
-                  "! ممتاز كسبت 17 نقاط",
+                  "lvl13Correct".tr,
                   style: TextStyle(
                     fontSize: 18.sp,
                     fontFamily: "Cairo",
@@ -1923,7 +1923,7 @@ class MemoryGameContImp extends MemoryGameCont {
         } else if(ans.length >= 10){
           Get.defaultDialog(
             backgroundColor: white,
-            title: "اجابة خاطئة",
+            title: "lvlWrong".tr,
             titlePadding: EdgeInsets.only(bottom: 2.h, top: 1.h),
             titleStyle: TextStyle(
                 fontSize: 18.sp,
@@ -1932,7 +1932,7 @@ class MemoryGameContImp extends MemoryGameCont {
                 fontWeight: FontWeight.bold
             ),
             content: Text(
-              "! اجابة خاطئة ، حاول مرة اخرى",
+              "lvlWrong".tr,
               style: TextStyle(
                 fontSize: 18.sp,
                 fontFamily: "Cairo",
@@ -1949,7 +1949,7 @@ class MemoryGameContImp extends MemoryGameCont {
           if(const ListEquality().equals(ans, fourteenAns)){
             Get.defaultDialog(
                 backgroundColor: white,
-                title: "اجابة صحيحة",
+                title: "correct".tr,
                 titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
                 titleStyle: TextStyle(
                     fontSize: 18.sp,
@@ -1961,7 +1961,7 @@ class MemoryGameContImp extends MemoryGameCont {
                   alignment: Alignment.center,
                   height: 7.h,
                   child: Text(
-                    "! ممتاز كسبت 17 نقاط",
+                    "lvl14Correct".tr,
                     style: TextStyle(
                       fontSize: 18.sp,
                       fontFamily: "Cairo",
@@ -1983,7 +1983,7 @@ class MemoryGameContImp extends MemoryGameCont {
         } else if(ans.length >= 10){
           Get.defaultDialog(
             backgroundColor: white,
-            title: "اجابة خاطئة",
+            title: "lvlWrong".tr,
             titlePadding: EdgeInsets.only(bottom: 2.h, top: 1.h),
             titleStyle: TextStyle(
                 fontSize: 18.sp,
@@ -1992,7 +1992,7 @@ class MemoryGameContImp extends MemoryGameCont {
                 fontWeight: FontWeight.bold
             ),
             content: Text(
-              "! اجابة خاطئة ، حاول مرة اخرى",
+              "lvlWrong".tr,
               style: TextStyle(
                 fontSize: 18.sp,
                 fontFamily: "Cairo",
@@ -2008,7 +2008,7 @@ class MemoryGameContImp extends MemoryGameCont {
           if(const ListEquality().equals(ans, fifteenAns)){
             Get.defaultDialog(
               backgroundColor: white,
-              title: "اجابة صحيحة",
+              title: "correct".tr,
               titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
               titleStyle: TextStyle(
                   fontSize: 18.sp,
@@ -2020,7 +2020,7 @@ class MemoryGameContImp extends MemoryGameCont {
                 alignment: Alignment.center,
                 height: 7.h,
                 child: Text(
-                  "! ممتاز كسبت 17 نقاط",
+                  "lvl15Correct".tr,
                   style: TextStyle(
                     fontSize: 18.sp,
                     fontFamily: "Cairo",
@@ -2043,7 +2043,7 @@ class MemoryGameContImp extends MemoryGameCont {
         } else if(ans.length >= 9){
           Get.defaultDialog(
             backgroundColor: white,
-            title: "اجابة خاطئة",
+            title: "lvlWrong".tr,
             titlePadding: EdgeInsets.only(bottom: 2.h, top: 1.h),
             titleStyle: TextStyle(
                 fontSize: 18.sp,
@@ -2052,7 +2052,7 @@ class MemoryGameContImp extends MemoryGameCont {
                 fontWeight: FontWeight.bold
             ),
             content: Text(
-              "! اجابة خاطئة ، حاول مرة اخرى",
+              "lvlWrong".tr,
               style: TextStyle(
                 fontSize: 18.sp,
                 fontFamily: "Cairo",

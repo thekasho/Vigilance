@@ -467,7 +467,7 @@ class ShoppingGameContImp extends ShoppingGameCont {
             fontWeight: FontWeight.bold
           ),
           content: Text(
-            "Wrong Answer, Try again !!",
+            "lvlWrong".tr,
             style: TextStyle(
               fontSize: 18.sp,
               fontFamily: "Cairo",
@@ -603,89 +603,89 @@ class ShoppingGameContImp extends ShoppingGameCont {
           }
           update();
           Get.defaultDialog(
-              backgroundColor: white,
-              title: "wrong_answer".tr,
-              titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
-              titleStyle: TextStyle(
+            backgroundColor: white,
+            title: "wrong".tr,
+            titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
+            titleStyle: TextStyle(
+              fontSize: 18.sp,
+              fontFamily: "Cairo",
+              color: red,
+              fontWeight: FontWeight.bold
+            ),
+            content: Container(
+              alignment: Alignment.center,
+              height: 10.h,
+              child: Text(
+                "lvlWrong".tr,
+                style: TextStyle(
                   fontSize: 18.sp,
                   fontFamily: "Cairo",
-                  color: red,
-                  fontWeight: FontWeight.bold
-              ),
-              content: Container(
-                alignment: Alignment.center,
-                height: 10.h,
-                child: Text(
-                  "Opps .. Try Again!!",
-                  style: TextStyle(
-                    fontSize: 18.sp,
-                    fontFamily: "Cairo",
-                  ),
-                  textAlign: TextAlign.center,
                 ),
+                textAlign: TextAlign.center,
               ),
-              onWillPop: () async {
-                lvlTrue = 0;
-                lvlOne1Y = false;
-                lvlOne1N = false;
-                lvlOne2Y = false;
-                lvlOne2N = false;
-                lvlOne3Y = false;
-                lvlOne3N = false;
-                lvlOne4Y = false;
-                lvlOne4N = false;
-                Get.back();
-                Get.back();
-                Get.back();
-                Get.to( () => const ShoppingGameScreen(level: 1));
-                countdownController1.restart();
-                update();
-                return false;
-              }
+            ),
+            onWillPop: () async {
+              lvlTrue = 0;
+              lvlOne1Y = false;
+              lvlOne1N = false;
+              lvlOne2Y = false;
+              lvlOne2N = false;
+              lvlOne3Y = false;
+              lvlOne3N = false;
+              lvlOne4Y = false;
+              lvlOne4N = false;
+              Get.back();
+              Get.back();
+              Get.back();
+              Get.to( () => const ShoppingGameScreen(level: 1));
+              countdownController1.restart();
+              update();
+              return false;
+            }
           );
         }
         if(lvlTrue == 2){
           Get.defaultDialog(
-              backgroundColor: white,
-              title: "Correct",
-              titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
-              titleStyle: TextStyle(
+            backgroundColor: white,
+            title: "correct".tr,
+            titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
+            titleStyle: TextStyle(
+              fontSize: 18.sp,
+              fontFamily: "Cairo",
+              color: green,
+              fontWeight: FontWeight.bold
+            ),
+            content: Container(
+              alignment: Alignment.center,
+              height: 7.h,
+              child: Text(
+                "lvl1Correct".tr,
+                style: TextStyle(
                   fontSize: 18.sp,
                   fontFamily: "Cairo",
-                  color: green,
-                  fontWeight: FontWeight.bold
-              ),
-              content: Container(
-                alignment: Alignment.center,
-                height: 7.h,
-                child: Text(
-                  "Good Job,You earned 5 points..",
-                  style: TextStyle(
-                    fontSize: 18.sp,
-                    fontFamily: "Cairo",
-                  ),
-                  textAlign: TextAlign.center,
                 ),
+                textAlign: TextAlign.center,
               ),
-              onWillPop: () async {
-                clevel = 2;
-                await updateLevel();
-                lvlOne1Y = false;
-                lvlOne1N = false;
-                lvlOne2Y = false;
-                lvlOne2N = false;
-                lvlOne3Y = false;
-                lvlOne3N = false;
-                lvlOne4Y = false;
-                lvlOne4N = false;
-                Get.back();
-                Get.back();
-                Get.back();
-                Get.to( () => const ShoppingGameScreen(level: 2));
-                countdownController2.restart();
-                update();
-                return false;
-              }
+            ),
+            onWillPop: () async {
+              clevel = 2;
+              await updateLevel();
+              lvlOne1Y = false;
+              lvlOne1N = false;
+              lvlOne2Y = false;
+              lvlOne2N = false;
+              lvlOne3Y = false;
+              lvlOne3N = false;
+              lvlOne4Y = false;
+              lvlOne4N = false;
+              Get.back();
+              Get.back();
+              Get.back();
+              Get.to( () => const ShoppingGameScreen(level: 2));
+              countdownController2.restart();
+              update();
+              return false;
+            }
           );
           await audioPlayer.play(AssetSource("sounds/win.mp3"));
           lvlTrue = 0;
@@ -720,19 +720,19 @@ class ShoppingGameContImp extends ShoppingGameCont {
           update();
           Get.defaultDialog(
               backgroundColor: white,
-              title: "Wrong Answer",
+              title: "wrong".tr,
               titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
               titleStyle: TextStyle(
-                  fontSize: 18.sp,
-                  fontFamily: "Cairo",
-                  color: red,
-                  fontWeight: FontWeight.bold
+                fontSize: 18.sp,
+                fontFamily: "Cairo",
+                color: red,
+                fontWeight: FontWeight.bold
               ),
               content: Container(
                 alignment: Alignment.center,
                 height: 10.h,
                 child: Text(
-                  "Opps .. Try Again!!",
+                  "lvlWrong".tr,
                   style: TextStyle(
                     fontSize: 18.sp,
                     fontFamily: "Cairo",
@@ -762,46 +762,46 @@ class ShoppingGameContImp extends ShoppingGameCont {
         }
         if(lvlTrue == 2){
           Get.defaultDialog(
-              backgroundColor: white,
-              title: "Correct",
-              titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
-              titleStyle: TextStyle(
+            backgroundColor: white,
+            title: "correct".tr,
+            titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
+            titleStyle: TextStyle(
+              fontSize: 18.sp,
+              fontFamily: "Cairo",
+              color: green,
+              fontWeight: FontWeight.bold
+            ),
+            content: Container(
+              alignment: Alignment.center,
+              height: 10.h,
+              child: Text(
+                "lvl2Correct".tr,
+                style: TextStyle(
                   fontSize: 18.sp,
                   fontFamily: "Cairo",
-                  color: green,
-                  fontWeight: FontWeight.bold
-              ),
-              content: Container(
-                alignment: Alignment.center,
-                height: 10.h,
-                child: Text(
-                  "You`re doing great. You earned 7 points..",
-                  style: TextStyle(
-                    fontSize: 18.sp,
-                    fontFamily: "Cairo",
-                  ),
-                  textAlign: TextAlign.center,
                 ),
+                textAlign: TextAlign.center,
               ),
-              onWillPop: () async {
-                clevel = 3;
-                await updateLevel();
-                lvlTwo1Y = false;
-                lvlTwo1N = false;
-                lvlTwo2Y = false;
-                lvlTwo2N = false;
-                lvlTwo3Y = false;
-                lvlTwo3N = false;
-                lvlTwo4Y = false;
-                lvlTwo4N = false;
-                Get.back();
-                Get.back();
-                Get.back();
-                Get.to(() => const ShoppingGameScreen(level: 3));
-                countdownController3.restart();
-                update();
-                return false;
-              }
+            ),
+            onWillPop: () async {
+              clevel = 3;
+              await updateLevel();
+              lvlTwo1Y = false;
+              lvlTwo1N = false;
+              lvlTwo2Y = false;
+              lvlTwo2N = false;
+              lvlTwo3Y = false;
+              lvlTwo3N = false;
+              lvlTwo4Y = false;
+              lvlTwo4N = false;
+              Get.back();
+              Get.back();
+              Get.back();
+              Get.to(() => const ShoppingGameScreen(level: 3));
+              countdownController3.restart();
+              update();
+              return false;
+            }
           );
           await audioPlayer.play(AssetSource("sounds/win.mp3"));
           lvlTrue = 0;
@@ -839,93 +839,93 @@ class ShoppingGameContImp extends ShoppingGameCont {
           }
           update();
           Get.defaultDialog(
-              backgroundColor: white,
-              title: "Wrong Answer",
-              titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
-              titleStyle: TextStyle(
+            backgroundColor: white,
+              title: "wrong".tr,
+            titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
+            titleStyle: TextStyle(
+              fontSize: 18.sp,
+              fontFamily: "Cairo",
+              color: red,
+              fontWeight: FontWeight.bold
+            ),
+            content: Container(
+              alignment: Alignment.center,
+              height: 10.h,
+              child: Text(
+                "lvlWrong".tr,
+                style: TextStyle(
                   fontSize: 18.sp,
                   fontFamily: "Cairo",
-                  color: red,
-                  fontWeight: FontWeight.bold
-              ),
-              content: Container(
-                alignment: Alignment.center,
-                height: 10.h,
-                child: Text(
-                  "Opps .. Try Again!!",
-                  style: TextStyle(
-                    fontSize: 18.sp,
-                    fontFamily: "Cairo",
-                  ),
-                  textAlign: TextAlign.center,
                 ),
+                textAlign: TextAlign.center,
               ),
-              onWillPop: () async {
-                lvlTrue = 0;
-                lvlThree1Y = false;
-                lvlThree1N = false;
-                lvlThree2Y = false;
-                lvlThree2N = false;
-                lvlThree3Y = false;
-                lvlThree3N = false;
-                lvlThree4Y = false;
-                lvlThree4N = false;
-                lvlThree5Y = false;
-                lvlThree5N = false;
-                Get.back();
-                Get.back();
-                Get.back();
-                Get.to(() => const ShoppingGameScreen(level: 3));
-                countdownController3.restart();
-                update();
-                return false;
-              }
+            ),
+            onWillPop: () async {
+              lvlTrue = 0;
+              lvlThree1Y = false;
+              lvlThree1N = false;
+              lvlThree2Y = false;
+              lvlThree2N = false;
+              lvlThree3Y = false;
+              lvlThree3N = false;
+              lvlThree4Y = false;
+              lvlThree4N = false;
+              lvlThree5Y = false;
+              lvlThree5N = false;
+              Get.back();
+              Get.back();
+              Get.back();
+              Get.to(() => const ShoppingGameScreen(level: 3));
+              countdownController3.restart();
+              update();
+              return false;
+            }
           );
         }
         if(lvlTrue == 3){
           Get.defaultDialog(
-              backgroundColor: white,
-              title: "Correct",
-              titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
-              titleStyle: TextStyle(
+            backgroundColor: white,
+            title: "correct".tr,
+            titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
+            titleStyle: TextStyle(
+              fontSize: 18.sp,
+              fontFamily: "Cairo",
+              color: green,
+              fontWeight: FontWeight.bold
+            ),
+            content: Container(
+              alignment: Alignment.center,
+              height: 8.h,
+              child: Text(
+                "lvl3Correct".tr,
+                style: TextStyle(
                   fontSize: 18.sp,
                   fontFamily: "Cairo",
-                  color: green,
-                  fontWeight: FontWeight.bold
-              ),
-              content: Container(
-                alignment: Alignment.center,
-                height: 8.h,
-                child: Text(
-                  "Keep going. You earned 7 points..",
-                  style: TextStyle(
-                    fontSize: 18.sp,
-                    fontFamily: "Cairo",
-                  ),
-                  textAlign: TextAlign.center,
                 ),
+                textAlign: TextAlign.center,
               ),
-              onWillPop: () async {
-                clevel = 4;
-                await updateLevel();
-                lvlThree1Y = false;
-                lvlThree1N = false;
-                lvlThree2Y = false;
-                lvlThree2N = false;
-                lvlThree3Y = false;
-                lvlThree3N = false;
-                lvlThree4Y = false;
-                lvlThree4N = false;
-                lvlThree5Y = false;
-                lvlThree5N = false;
-                Get.back();
-                Get.back();
-                Get.back();
-                Get.to(() => const ShoppingGameScreen(level: 4));
-                countdownController4.restart();
-                update();
-                return false;
-              }
+            ),
+            onWillPop: () async {
+              clevel = 4;
+              await updateLevel();
+              lvlThree1Y = false;
+              lvlThree1N = false;
+              lvlThree2Y = false;
+              lvlThree2N = false;
+              lvlThree3Y = false;
+              lvlThree3N = false;
+              lvlThree4Y = false;
+              lvlThree4N = false;
+              lvlThree5Y = false;
+              lvlThree5N = false;
+              Get.back();
+              Get.back();
+              Get.back();
+              Get.to(() => const ShoppingGameScreen(level: 4));
+              countdownController4.restart();
+              update();
+              return false;
+            }
           );
           await audioPlayer.play(AssetSource("sounds/win.mp3"));
           lvlTrue = 0;
@@ -964,19 +964,19 @@ class ShoppingGameContImp extends ShoppingGameCont {
           update();
           Get.defaultDialog(
               backgroundColor: white,
-              title: "Wrong Answer",
+              title: "wrong".tr,
               titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
               titleStyle: TextStyle(
-                  fontSize: 18.sp,
-                  fontFamily: "Cairo",
-                  color: red,
-                  fontWeight: FontWeight.bold
+                fontSize: 18.sp,
+                fontFamily: "Cairo",
+                color: red,
+                fontWeight: FontWeight.bold
               ),
               content: Container(
                 alignment: Alignment.center,
                 height: 10.h,
                 child: Text(
-                  "Opps .. Try Again!!",
+                  "lvlWrong".tr,
                   style: TextStyle(
                     fontSize: 18.sp,
                     fontFamily: "Cairo",
@@ -1008,48 +1008,48 @@ class ShoppingGameContImp extends ShoppingGameCont {
         }
         if(lvlTrue == 3){
           Get.defaultDialog(
-              backgroundColor: white,
-              title: "Correct",
-              titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
-              titleStyle: TextStyle(
-                fontSize: 18.sp,
-                fontFamily: "Cairo",
-                color: green,
-                fontWeight: FontWeight.bold
-              ),
-              content: Container(
-                alignment: Alignment.center,
-                height: 8.h,
-                child: Text(
-                  "Excellent, You earned 10 points..",
-                  style: TextStyle(
-                    fontSize: 18.sp,
-                    fontFamily: "Cairo",
-                  ),
-                  textAlign: TextAlign.center,
+            backgroundColor: white,
+              title: "correct".tr,
+            titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
+            titleStyle: TextStyle(
+              fontSize: 18.sp,
+              fontFamily: "Cairo",
+              color: green,
+              fontWeight: FontWeight.bold
+            ),
+            content: Container(
+              alignment: Alignment.center,
+              height: 8.h,
+              child: Text(
+                "lvl4Correct".tr,
+                style: TextStyle(
+                  fontSize: 18.sp,
+                  fontFamily: "Cairo",
                 ),
+                textAlign: TextAlign.center,
               ),
-              onWillPop: () async {
-                clevel = 5;
-                await updateLevel();
-                lvlFour1Y = false;
-                lvlFour1N = false;
-                lvlFour2Y = false;
-                lvlFour2N = false;
-                lvlFour3Y = false;
-                lvlFour3N = false;
-                lvlFour4Y = false;
-                lvlFour4N = false;
-                lvlFour5Y = false;
-                lvlFour5N = false;
-                Get.back();
-                Get.back();
-                Get.back();
-                Get.to(() => const ShoppingGameScreen(level: 5));
-                countdownController5.restart();
-                update();
-                return false;
-              }
+            ),
+            onWillPop: () async {
+              clevel = 5;
+              await updateLevel();
+              lvlFour1Y = false;
+              lvlFour1N = false;
+              lvlFour2Y = false;
+              lvlFour2N = false;
+              lvlFour3Y = false;
+              lvlFour3N = false;
+              lvlFour4Y = false;
+              lvlFour4N = false;
+              lvlFour5Y = false;
+              lvlFour5N = false;
+              Get.back();
+              Get.back();
+              Get.back();
+              Get.to(() => const ShoppingGameScreen(level: 5));
+              countdownController5.restart();
+              update();
+              return false;
+            }
           );
           await audioPlayer.play(AssetSource("sounds/win.mp3"));
           lvlTrue = 0;
@@ -1096,19 +1096,19 @@ class ShoppingGameContImp extends ShoppingGameCont {
           update();
           Get.defaultDialog(
               backgroundColor: white,
-              title: "Wrong Answer",
+              title: "wrong".tr,
               titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
               titleStyle: TextStyle(
-                  fontSize: 18.sp,
-                  fontFamily: "Cairo",
-                  color: red,
-                  fontWeight: FontWeight.bold
+                fontSize: 18.sp,
+                fontFamily: "Cairo",
+                color: red,
+                fontWeight: FontWeight.bold
               ),
               content: Container(
                 alignment: Alignment.center,
                 height: 10.h,
                 child: Text(
-                  "Opps .. Try Again!!",
+                  "lvlWrong".tr,
                   style: TextStyle(
                     fontSize: 18.sp,
                     fontFamily: "Cairo",
@@ -1144,7 +1144,7 @@ class ShoppingGameContImp extends ShoppingGameCont {
         if(lvlTrue == 5){
           Get.defaultDialog(
             backgroundColor: white,
-            title: "Correct",
+            title: "correct".tr,
             titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
             titleStyle: TextStyle(
               fontSize: 18.sp,
@@ -1156,7 +1156,7 @@ class ShoppingGameContImp extends ShoppingGameCont {
               alignment: Alignment.center,
               height: 8.h,
               child: Text(
-                "Excellent, You earned 12 points..",
+                "lvl5Correct".tr,
                 style: TextStyle(
                   fontSize: 18.sp,
                   fontFamily: "Cairo",
@@ -1236,19 +1236,19 @@ class ShoppingGameContImp extends ShoppingGameCont {
           update();
           Get.defaultDialog(
               backgroundColor: white,
-              title: "Wrong Answer",
+              title: "wrong".tr,
               titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
               titleStyle: TextStyle(
-                  fontSize: 18.sp,
-                  fontFamily: "Cairo",
-                  color: red,
-                  fontWeight: FontWeight.bold
+                fontSize: 18.sp,
+                fontFamily: "Cairo",
+                color: red,
+                fontWeight: FontWeight.bold
               ),
               content: Container(
                 alignment: Alignment.center,
                 height: 10.h,
                 child: Text(
-                  "Opps .. Try Again!!",
+                  "lvlWrong".tr,
                   style: TextStyle(
                     fontSize: 18.sp,
                     fontFamily: "Cairo",
@@ -1284,19 +1284,19 @@ class ShoppingGameContImp extends ShoppingGameCont {
         if(lvlTrue == 5){
           Get.defaultDialog(
               backgroundColor: white,
-              title: "Correct",
+              title: "correct".tr,
               titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
               titleStyle: TextStyle(
-                  fontSize: 18.sp,
-                  fontFamily: "Cairo",
-                  color: green,
-                  fontWeight: FontWeight.bold
+                fontSize: 18.sp,
+                fontFamily: "Cairo",
+                color: green,
+                fontWeight: FontWeight.bold
               ),
               content: Container(
                 alignment: Alignment.center,
                 height: 8.h,
                 child: Text(
-                  "Excellent, You earned 12 points..",
+                  "lvl6Correct".tr,
                   style: TextStyle(
                     fontSize: 18.sp,
                     fontFamily: "Cairo",
@@ -1376,19 +1376,19 @@ class ShoppingGameContImp extends ShoppingGameCont {
           update();
           Get.defaultDialog(
               backgroundColor: white,
-              title: "Wrong Answer",
+              title: "wrong".tr,
               titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
               titleStyle: TextStyle(
-                  fontSize: 18.sp,
-                  fontFamily: "Cairo",
-                  color: red,
-                  fontWeight: FontWeight.bold
+                fontSize: 18.sp,
+                fontFamily: "Cairo",
+                color: red,
+                fontWeight: FontWeight.bold
               ),
               content: Container(
                 alignment: Alignment.center,
                 height: 10.h,
                 child: Text(
-                  "Opps .. Try Again!!",
+                  "lvlWrong".tr,
                   style: TextStyle(
                     fontSize: 18.sp,
                     fontFamily: "Cairo",
@@ -1424,19 +1424,19 @@ class ShoppingGameContImp extends ShoppingGameCont {
         if(lvlTrue == 5){
           Get.defaultDialog(
               backgroundColor: white,
-              title: "Correct",
+              title: "correct".tr,
               titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
               titleStyle: TextStyle(
-                  fontSize: 18.sp,
-                  fontFamily: "Cairo",
-                  color: green,
-                  fontWeight: FontWeight.bold
+                fontSize: 18.sp,
+                fontFamily: "Cairo",
+                color: green,
+                fontWeight: FontWeight.bold
               ),
               content: Container(
                 alignment: Alignment.center,
                 height: 8.h,
                 child: Text(
-                  "Excellent, You earned 12 points..",
+                  "lvl7Correct".tr,
                   style: TextStyle(
                     fontSize: 18.sp,
                     fontFamily: "Cairo",
@@ -1516,19 +1516,19 @@ class ShoppingGameContImp extends ShoppingGameCont {
           update();
           Get.defaultDialog(
               backgroundColor: white,
-              title: "Wrong Answer",
+              title: "wrong".tr,
               titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
               titleStyle: TextStyle(
-                  fontSize: 18.sp,
-                  fontFamily: "Cairo",
-                  color: red,
-                  fontWeight: FontWeight.bold
+                fontSize: 18.sp,
+                fontFamily: "Cairo",
+                color: red,
+                fontWeight: FontWeight.bold
               ),
               content: Container(
                 alignment: Alignment.center,
                 height: 10.h,
                 child: Text(
-                  "Opps .. Try Again!!",
+                  "lvlWrong".tr,
                   style: TextStyle(
                     fontSize: 18.sp,
                     fontFamily: "Cairo",
@@ -1564,19 +1564,19 @@ class ShoppingGameContImp extends ShoppingGameCont {
         if(lvlTrue == 5){
           Get.defaultDialog(
               backgroundColor: white,
-              title: "Correct",
+              title: "correct".tr,
               titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
               titleStyle: TextStyle(
-                  fontSize: 18.sp,
-                  fontFamily: "Cairo",
-                  color: green,
-                  fontWeight: FontWeight.bold
+                fontSize: 18.sp,
+                fontFamily: "Cairo",
+                color: green,
+                fontWeight: FontWeight.bold
               ),
               content: Container(
                 alignment: Alignment.center,
                 height: 8.h,
                 child: Text(
-                  "Excellent, You earned 12 points..",
+                  "lvl8Correct".tr,
                   style: TextStyle(
                     fontSize: 18.sp,
                     fontFamily: "Cairo",
@@ -1656,19 +1656,19 @@ class ShoppingGameContImp extends ShoppingGameCont {
           update();
           Get.defaultDialog(
               backgroundColor: white,
-              title: "Wrong Answer",
+              title: "wrong".tr,
               titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
               titleStyle: TextStyle(
-                  fontSize: 18.sp,
-                  fontFamily: "Cairo",
-                  color: red,
-                  fontWeight: FontWeight.bold
+                fontSize: 18.sp,
+                fontFamily: "Cairo",
+                color: red,
+                fontWeight: FontWeight.bold
               ),
               content: Container(
                 alignment: Alignment.center,
                 height: 10.h,
                 child: Text(
-                  "Opps .. Try Again!!",
+                  "lvlWrong".tr,
                   style: TextStyle(
                     fontSize: 18.sp,
                     fontFamily: "Cairo",
@@ -1704,7 +1704,7 @@ class ShoppingGameContImp extends ShoppingGameCont {
         if(lvlTrue == 5){
           Get.defaultDialog(
               backgroundColor: white,
-              title: "Correct",
+              title: "correct".tr,
               titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
               titleStyle: TextStyle(
                   fontSize: 18.sp,
@@ -1716,7 +1716,7 @@ class ShoppingGameContImp extends ShoppingGameCont {
                 alignment: Alignment.center,
                 height: 8.h,
                 child: Text(
-                  "Excellent, You earned 12 points..",
+                  "lvl9Correct".tr,
                   style: TextStyle(
                     fontSize: 18.sp,
                     fontFamily: "Cairo",
@@ -1796,19 +1796,19 @@ class ShoppingGameContImp extends ShoppingGameCont {
           update();
           Get.defaultDialog(
               backgroundColor: white,
-              title: "Wrong Answer",
+              title: "wrong".tr,
               titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
               titleStyle: TextStyle(
-                  fontSize: 18.sp,
-                  fontFamily: "Cairo",
-                  color: red,
-                  fontWeight: FontWeight.bold
+                fontSize: 18.sp,
+                fontFamily: "Cairo",
+                color: red,
+                fontWeight: FontWeight.bold
               ),
               content: Container(
                 alignment: Alignment.center,
                 height: 10.h,
                 child: Text(
-                  "Opps .. Try Again!!",
+                  "lvlWrong".tr,
                   style: TextStyle(
                     fontSize: 18.sp,
                     fontFamily: "Cairo",
@@ -1844,19 +1844,19 @@ class ShoppingGameContImp extends ShoppingGameCont {
         if(lvlTrue == 5){
           Get.defaultDialog(
               backgroundColor: white,
-              title: "Correct",
+              title: "correct".tr,
               titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
               titleStyle: TextStyle(
-                  fontSize: 18.sp,
-                  fontFamily: "Cairo",
-                  color: green,
-                  fontWeight: FontWeight.bold
+                fontSize: 18.sp,
+                fontFamily: "Cairo",
+                color: green,
+                fontWeight: FontWeight.bold
               ),
               content: Container(
                 alignment: Alignment.center,
                 height: 8.h,
                 child: Text(
-                  "Excellent, You earned 12 points..",
+                  "lvl10Correct".tr,
                   style: TextStyle(
                     fontSize: 18.sp,
                     fontFamily: "Cairo",
@@ -1936,19 +1936,19 @@ class ShoppingGameContImp extends ShoppingGameCont {
           update();
           Get.defaultDialog(
               backgroundColor: white,
-              title: "Wrong Answer",
+              title: "wrong".tr,
               titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
               titleStyle: TextStyle(
-                  fontSize: 18.sp,
-                  fontFamily: "Cairo",
-                  color: red,
-                  fontWeight: FontWeight.bold
+                fontSize: 18.sp,
+                fontFamily: "Cairo",
+                color: red,
+                fontWeight: FontWeight.bold
               ),
               content: Container(
                 alignment: Alignment.center,
                 height: 10.h,
                 child: Text(
-                  "Opps .. Try Again!!",
+                  "lvlWrong".tr,
                   style: TextStyle(
                     fontSize: 18.sp,
                     fontFamily: "Cairo",
@@ -1984,19 +1984,19 @@ class ShoppingGameContImp extends ShoppingGameCont {
         if(lvlTrue == 5){
           Get.defaultDialog(
               backgroundColor: white,
-              title: "Correct",
+              title: "correct".tr,
               titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
               titleStyle: TextStyle(
-                  fontSize: 18.sp,
-                  fontFamily: "Cairo",
-                  color: green,
-                  fontWeight: FontWeight.bold
+                fontSize: 18.sp,
+                fontFamily: "Cairo",
+                color: green,
+                fontWeight: FontWeight.bold
               ),
               content: Container(
                 alignment: Alignment.center,
                 height: 8.h,
                 child: Text(
-                  "Excellent, You earned 12 points..",
+                  "lvl11Correct".tr,
                   style: TextStyle(
                     fontSize: 18.sp,
                     fontFamily: "Cairo",
@@ -2076,19 +2076,19 @@ class ShoppingGameContImp extends ShoppingGameCont {
           update();
           Get.defaultDialog(
               backgroundColor: white,
-              title: "Wrong Answer",
+              title: "wrong".tr,
               titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
               titleStyle: TextStyle(
-                  fontSize: 18.sp,
-                  fontFamily: "Cairo",
-                  color: red,
-                  fontWeight: FontWeight.bold
+                fontSize: 18.sp,
+                fontFamily: "Cairo",
+                color: red,
+                fontWeight: FontWeight.bold
               ),
               content: Container(
                 alignment: Alignment.center,
                 height: 10.h,
                 child: Text(
-                  "Opps .. Try Again!!",
+                  "lvlWrong".tr,
                   style: TextStyle(
                     fontSize: 18.sp,
                     fontFamily: "Cairo",
@@ -2124,19 +2124,19 @@ class ShoppingGameContImp extends ShoppingGameCont {
         if(lvlTrue == 5){
           Get.defaultDialog(
               backgroundColor: white,
-              title: "Correct",
+              title: "correct".tr,
               titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
               titleStyle: TextStyle(
-                  fontSize: 18.sp,
-                  fontFamily: "Cairo",
-                  color: green,
-                  fontWeight: FontWeight.bold
+                fontSize: 18.sp,
+                fontFamily: "Cairo",
+                color: green,
+                fontWeight: FontWeight.bold
               ),
               content: Container(
                 alignment: Alignment.center,
                 height: 8.h,
                 child: Text(
-                  "Excellent, You earned 12 points..",
+                  "lvl12Correct".tr,
                   style: TextStyle(
                     fontSize: 18.sp,
                     fontFamily: "Cairo",
@@ -2216,19 +2216,19 @@ class ShoppingGameContImp extends ShoppingGameCont {
           update();
           Get.defaultDialog(
               backgroundColor: white,
-              title: "Wrong Answer",
+              title: "wrong".tr,
               titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
               titleStyle: TextStyle(
-                  fontSize: 18.sp,
-                  fontFamily: "Cairo",
-                  color: red,
-                  fontWeight: FontWeight.bold
+                fontSize: 18.sp,
+                fontFamily: "Cairo",
+                color: red,
+                fontWeight: FontWeight.bold
               ),
               content: Container(
                 alignment: Alignment.center,
                 height: 10.h,
                 child: Text(
-                  "Opps .. Try Again!!",
+                  "lvlWrong".tr,
                   style: TextStyle(
                     fontSize: 18.sp,
                     fontFamily: "Cairo",
@@ -2264,19 +2264,19 @@ class ShoppingGameContImp extends ShoppingGameCont {
         if(lvlTrue == 5){
           Get.defaultDialog(
               backgroundColor: white,
-              title: "Correct",
+              title: "correct".tr,
               titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
               titleStyle: TextStyle(
-                  fontSize: 18.sp,
-                  fontFamily: "Cairo",
-                  color: green,
-                  fontWeight: FontWeight.bold
+                fontSize: 18.sp,
+                fontFamily: "Cairo",
+                color: green,
+                fontWeight: FontWeight.bold
               ),
               content: Container(
                 alignment: Alignment.center,
                 height: 8.h,
                 child: Text(
-                  "Excellent, You earned 12 points..",
+                  "lvl13Correct".tr,
                   style: TextStyle(
                     fontSize: 18.sp,
                     fontFamily: "Cairo",
@@ -2356,19 +2356,19 @@ class ShoppingGameContImp extends ShoppingGameCont {
           update();
           Get.defaultDialog(
               backgroundColor: white,
-              title: "Wrong Answer",
+              title: "wrong".tr,
               titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
               titleStyle: TextStyle(
-                  fontSize: 18.sp,
-                  fontFamily: "Cairo",
-                  color: red,
-                  fontWeight: FontWeight.bold
+                fontSize: 18.sp,
+                fontFamily: "Cairo",
+                color: red,
+                fontWeight: FontWeight.bold
               ),
               content: Container(
                 alignment: Alignment.center,
                 height: 10.h,
                 child: Text(
-                  "Opps .. Try Again!!",
+                  "lvlWrong".tr,
                   style: TextStyle(
                     fontSize: 18.sp,
                     fontFamily: "Cairo",
@@ -2404,19 +2404,19 @@ class ShoppingGameContImp extends ShoppingGameCont {
         if(lvlTrue == 5){
           Get.defaultDialog(
               backgroundColor: white,
-              title: "Correct",
+              title: "correct".tr,
               titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
               titleStyle: TextStyle(
-                  fontSize: 18.sp,
-                  fontFamily: "Cairo",
-                  color: green,
-                  fontWeight: FontWeight.bold
+                fontSize: 18.sp,
+                fontFamily: "Cairo",
+                color: green,
+                fontWeight: FontWeight.bold
               ),
               content: Container(
                 alignment: Alignment.center,
                 height: 8.h,
                 child: Text(
-                  "Excellent, You earned 12 points..",
+                  "lvl14Correct".tr,
                   style: TextStyle(
                     fontSize: 18.sp,
                     fontFamily: "Cairo",
@@ -2496,19 +2496,19 @@ class ShoppingGameContImp extends ShoppingGameCont {
           update();
           Get.defaultDialog(
             backgroundColor: white,
-            title: "Wrong Answer",
+            title: "wrong".tr,
             titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
             titleStyle: TextStyle(
-                fontSize: 18.sp,
-                fontFamily: "Cairo",
-                color: red,
-                fontWeight: FontWeight.bold
+              fontSize: 18.sp,
+              fontFamily: "Cairo",
+              color: red,
+              fontWeight: FontWeight.bold
             ),
             content: Container(
               alignment: Alignment.center,
               height: 10.h,
               child: Text(
-                "Opps .. Try Again!!",
+                "lvlWrong".tr,
                 style: TextStyle(
                   fontSize: 18.sp,
                   fontFamily: "Cairo",
@@ -2544,19 +2544,19 @@ class ShoppingGameContImp extends ShoppingGameCont {
         if(lvlTrue == 5){
           Get.defaultDialog(
               backgroundColor: white,
-              title: "Correct",
+              title: "correct".tr,
               titlePadding: const EdgeInsets.only(bottom: 5, top: 5),
               titleStyle: TextStyle(
-                  fontSize: 18.sp,
-                  fontFamily: "Cairo",
-                  color: green,
-                  fontWeight: FontWeight.bold
+                fontSize: 18.sp,
+                fontFamily: "Cairo",
+                color: green,
+                fontWeight: FontWeight.bold
               ),
               content: Container(
                 alignment: Alignment.center,
                 height: 8.h,
                 child: Text(
-                  "Excellent, You earned 12 points..",
+                  "lvl15Correct".tr,
                   style: TextStyle(
                     fontSize: 18.sp,
                     fontFamily: "Cairo",

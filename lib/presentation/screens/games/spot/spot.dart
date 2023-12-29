@@ -1781,8 +1781,8 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                       decoration: const BoxDecoration(
                         border: Border(
                           bottom: BorderSide(
-                              width: 2,
-                              color: black
+                            width: 2,
+                            color: black
                           ),
                         ),
                       ),
@@ -1948,7 +1948,7 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         const Spacer(flex: 1),
-                        // 12
+                        // 13
                         Container(
                           height: 11.h,
                           width: 22.w,
@@ -1966,7 +1966,7 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                           ),
                           padding: const EdgeInsets.all(1),
                           child: Image.asset(
-                              "assets/images/spot_game_images/12.png"),
+                              "assets/images/spot_game_images/13.png"),
                         ),
                         const Spacer(flex: 1),
                         // 10
