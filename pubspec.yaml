@@ -73,6 +73,7 @@ flutter:
     - assets/images/spot_game_images/
     - assets/images/shopping/
     - assets/sounds/
+    - assets/sounds/med/
 
   fonts:
     - family: Cairo

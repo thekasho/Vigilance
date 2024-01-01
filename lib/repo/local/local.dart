@@ -94,4 +94,29 @@ class LocaleApi {
     }
   }
 
+  static Future<Map?> getMedData() async {
+    try {
+      final medData = await locale.read("med_data");
+      if (medData != null) {
+        return medData;
+      }
+      debugPrint('med_data null');
+      return null;
+    } catch (e) {
+      debugPrint('med_data null $e');
+      return null;
+    }
+  }
+
+  static Future<bool> saveMedData(Map settings) async {
+    try {
+      await locale.write("med_data", settings);
+      print("Success Save Meditation Data");
+      return true;
+    } catch (e) {
+      print(e);
+      return false;
+    }
+  }
+
 }

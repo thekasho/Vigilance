@@ -71,9 +71,9 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                             child: Text(
                               "${"level".tr} 1",
                               style: TextStyle(
-                                  fontSize: 20.sp,
-                                  fontWeight: FontWeight.bold,
-                                  fontFamily: 'Cairo'
+                                fontSize: 20.sp,
+                                fontWeight: FontWeight.bold,
+                                fontFamily: 'Cairo'
                               ),
                             ),
                           ),

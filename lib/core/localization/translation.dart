@@ -93,6 +93,9 @@ class MyTranslation extends Translations {
       "lvl13Correct": "! برافو ، كسبت 17 نقاط",
       "lvl14Correct": "كمل يا بطل كسبت  17 نقاط!",
       "lvl15Correct": "ايه الجمال ده كسبت  17 نقاط!",
+
+      "sorry": "عفواً",
+      "must_complete_recent_level": "يجب الانتهاء من المستوى السابق!",
     },
     "en": {
       "correct": "Correct",
@@ -182,6 +185,8 @@ class MyTranslation extends Translations {
       "meditate": "Meditate",
       "calming_music": "Calming Music",
       "breathing_exercises": "Breathing Exercises",
+      "sorry": "Sorry",
+      "must_complete_recent_level": "Must Complete Recent Level!",
     },
   };
 

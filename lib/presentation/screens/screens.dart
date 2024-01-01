@@ -14,6 +14,7 @@ import 'package:vig/repo/models/messages.dart';
 import '../../controller/games/memory.dart';
 import '../../controller/games/shopping.dart';
 import '../../controller/games/spot.dart';
+import '../../controller/meditate/meditate.dart';
 import '../../controller/shopping/shopping.dart';
 import '../../controller/std/chat/chat.dart';
 import '../../controller/std/home.dart';
@@ -59,6 +60,8 @@ part 'games/home.dart';
 
 part 'meditate/home.dart';
 part 'meditate/meditate_type.dart';
+part 'meditate/levels.dart';
+part 'meditate/music.dart';
 
 part 'supportTeacher/home.dart';
 part 'supportTeacher/email.dart';

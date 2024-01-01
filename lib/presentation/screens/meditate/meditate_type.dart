@@ -39,7 +39,7 @@ class _StdMeditateChooseTypeState extends State<StdMeditateChooseType> {
                 children: [
                   GestureDetector(
                     onTap: () {
-                      // Get.toNamed(screenStudyHome);
+                      Get.toNamed(screenMeditateLevels);
                     },
                     child: Container(
                       width: 85.w,

@@ -33,6 +33,7 @@ const String screenMemoryLevels = '/memory-levels';
 const String screenShopLevels = '/shop-levels';
 const String screenStdMeditate = '/std-meditate';
 const String screenMeditateChooseType = '/std-meditate-type';
+const String screenMeditateLevels = '/std-meditate-levels';
 
 const String screenShoppingStd = '/shopping-std';
 
