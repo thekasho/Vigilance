@@ -73,7 +73,7 @@ class _SupportTeacherHomeScreenState extends State<SupportTeacherHomeScreen> {
                           ),
                         ),
                         onPressed: () {
-                          Get.toNamed(screenShopLevels);
+                          Get.toNamed(screenStdTeacherTests);
                         },
                       ),
                     ),

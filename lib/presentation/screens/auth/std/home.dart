@@ -440,6 +440,60 @@ class _StdHomeScreenState extends State<StdHomeScreen> {
                             ],
                           ),
                           SizedBox(height: 5.h),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              GestureDetector(
+                                onTap: () {
+                                  Get.toNamed(screenStdExercisesLevels);
+                                },
+                                child: Container(
+                                  width: 42.w,
+                                  height: 22.h,
+                                  decoration: BoxDecoration(
+                                    color: white,
+                                    borderRadius: BorderRadius.circular(20),
+                                    boxShadow: const [
+                                      BoxShadow(
+                                        blurRadius: 4,
+                                        color: Color(0x33000000),
+                                        offset: Offset(0, 2),
+                                        spreadRadius: 2,
+                                      )
+                                    ],
+                                  ),
+                                  child: Column(
+                                    children: [
+                                      Container(
+                                        margin: const EdgeInsets.symmetric(
+                                          vertical: 10,
+                                        ),
+                                        width: 35.w,
+                                        child: CachedNetworkImage(
+                                          imageUrl: "https://microplazatesla.com/vl/images/exercises.png",
+                                          errorWidget: (_, i, e) {
+                                            return Icon(
+                                              FontAwesomeIcons.image,
+                                              size: 13.sp,
+                                              color: Colors.white,
+                                            );
+                                          },
+                                        ),
+                                      ),
+                                      Text(
+                                        "exercises".tr,
+                                        style: TextStyle(
+                                          fontFamily: 'Cairo',
+                                          fontSize: 20.sp,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                          SizedBox(height: 5.h),
                         ],
                       ),
                     ),

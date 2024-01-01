@@ -96,6 +96,9 @@ class MyTranslation extends Translations {
 
       "sorry": "عفواً",
       "must_complete_recent_level": "يجب الانتهاء من المستوى السابق!",
+      "exercises": "التمارين",
+      "timer": "المؤقت",
+      "next": "التالي",
     },
     "en": {
       "correct": "Correct",
@@ -187,6 +190,9 @@ class MyTranslation extends Translations {
       "breathing_exercises": "Breathing Exercises",
       "sorry": "Sorry",
       "must_complete_recent_level": "Must Complete Recent Level!",
+      "exercises": "Exercises",
+      "timer": "Timer",
+      "next": "Next",
     },
   };
 

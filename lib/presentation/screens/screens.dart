@@ -3,6 +3,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_vlc_player/flutter_vlc_player.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
@@ -66,6 +67,7 @@ part 'meditate/music.dart';
 part 'supportTeacher/home.dart';
 part 'supportTeacher/email.dart';
 part 'supportTeacher/chat.dart';
+part 'supportTeacher/tests/home.dart';
 
 part 'games/spot/levels.dart';
 part 'games/spot/spot.dart';
@@ -77,6 +79,9 @@ part 'games/shopping/levels.dart';
 part 'games/shopping/shop.dart';
 part 'games/shopping/math.dart';
 part 'games/shopping/select.dart';
+
+part 'exercises/levels.dart';
+part 'exercises/videos.dart';
 
 part 'shop/home.dart';
 

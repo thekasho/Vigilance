@@ -26,6 +26,7 @@ const String screenPromodoroTimer = '/std-promodoro-timer';
 const String screenTeacherHome = '/std-teacher-home';
 const String screenTeacherEmail = '/std-teacher-email';
 const String screenStdTeacherChat = '/std-teacher-chat';
+const String screenStdTeacherTests = '/std-teacher-tests';
 
 const String screenGamesHome = '/games-home';
 const String screenSpotLevels = '/sopt-levels';
@@ -36,6 +37,8 @@ const String screenMeditateChooseType = '/std-meditate-type';
 const String screenMeditateLevels = '/std-meditate-levels';
 
 const String screenShoppingStd = '/shopping-std';
+
+const String screenStdExercisesLevels = '/std-exercises-levels';
 
 const String screenSettings = '/settings';
 
