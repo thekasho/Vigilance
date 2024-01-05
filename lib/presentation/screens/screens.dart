@@ -12,6 +12,7 @@ import 'package:timer_count_down/timer_count_down.dart';
 import 'package:vig/controller/landing/landing.dart';
 import 'package:vig/repo/models/messages.dart';
 
+import '../../controller/games/coin.dart';
 import '../../controller/games/memory.dart';
 import '../../controller/games/shopping.dart';
 import '../../controller/games/spot.dart';
@@ -68,6 +69,8 @@ part 'supportTeacher/home.dart';
 part 'supportTeacher/email.dart';
 part 'supportTeacher/chat.dart';
 part 'supportTeacher/tests/home.dart';
+part 'supportTeacher/tests/games/coin.dart';
+part 'supportTeacher/tests/games/select.dart';
 
 part 'games/spot/levels.dart';
 part 'games/spot/spot.dart';

@@ -73,6 +73,8 @@ flutter:
     - assets/file/
     - assets/images/spot_game_images/
     - assets/images/shopping/
+    - assets/images/memory/
+    - assets/images/coin/
     - assets/sounds/
     - assets/sounds/med/
 

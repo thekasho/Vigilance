@@ -3565,7 +3565,7 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                             ),
                             padding: const EdgeInsets.all(1),
                             child: Image.asset(
-                                "assets/images/spot_game_images/26.png"),
+                                "assets/images/spot_game_images/16.png"),
                           ),
                         ),
                         const Spacer(flex: 1),

@@ -113,6 +113,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                     ),
                                   ],
                                 ),
+                                child: Image.asset("assets/images/memory/1.png"),
                               ),
                               GestureDetector(
                                 onTap: () async {
@@ -166,6 +167,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                     ),
                                   ],
                                 ),
+                                child: Image.asset("assets/images/memory/2.png"),
                               ),
                               GestureDetector(
                                 onTap: () async {
@@ -223,6 +225,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                     ),
                                   ],
                                 ),
+                                child: Image.asset("assets/images/memory/3.png"),
                               ),
                               GestureDetector(
                                 onTap: () async {
@@ -274,6 +277,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                     ),
                                   ],
                                 ),
+                                child: Image.asset("assets/images/memory/4.png"),
                               ),
                               GestureDetector(
                                 onTap: () async {
@@ -409,6 +413,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                     ),
                                   ],
                                 ),
+                                child: Image.asset("assets/images/memory/1.png"),
                               ),
                               GestureDetector(
                                 onTap: () async {
@@ -460,6 +465,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                     ),
                                   ],
                                 ),
+                                child: Image.asset("assets/images/memory/2.png"),
                               ),
                               GestureDetector(
                                 onTap: () async {
@@ -517,6 +523,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                     ),
                                   ],
                                 ),
+                                child: Image.asset("assets/images/memory/3.png"),
                               ),
                               GestureDetector(
                                 onTap: () async {
@@ -568,6 +575,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                     ),
                                   ],
                                 ),
+                                child: Image.asset("assets/images/memory/4.png"),
                               ),
                               GestureDetector(
                                 onTap: () async {
@@ -702,6 +710,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                     ),
                                   ],
                                 ),
+                                child: Image.asset("assets/images/memory/1.png"),
                               ),
                               GestureDetector(
                                 onTap: () async {
@@ -753,6 +762,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                     ),
                                   ],
                                 ),
+                                child: Image.asset("assets/images/memory/2.png"),
                               ),
                               GestureDetector(
                                 onTap: () async {
@@ -810,6 +820,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                     ),
                                   ],
                                 ),
+                                child: Image.asset("assets/images/memory/3.png"),
                               ),
                               GestureDetector(
                                 onTap: () async {
@@ -861,6 +872,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                     ),
                                   ],
                                 ),
+                                child: Image.asset("assets/images/memory/4.png"),
                               ),
                               GestureDetector(
                                 onTap: () async {
@@ -995,6 +1007,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                     ),
                                   ],
                                 ),
+                                child: Image.asset("assets/images/memory/1.png"),
                               ),
                               GestureDetector(
                                 onTap: () async {
@@ -1046,6 +1059,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                     ),
                                   ],
                                 ),
+                                child: Image.asset("assets/images/memory/2.png"),
                               ),
                               GestureDetector(
                                 onTap: () async {
@@ -1103,6 +1117,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                     ),
                                   ],
                                 ),
+                                child: Image.asset("assets/images/memory/3.png"),
                               ),
                               GestureDetector(
                                 onTap: () async {
@@ -1154,6 +1169,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                     ),
                                   ],
                                 ),
+                                child: Image.asset("assets/images/memory/4.png"),
                               ),
                               GestureDetector(
                                 onTap: () async {
@@ -1288,6 +1304,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                     ),
                                   ],
                                 ),
+                                child: Image.asset("assets/images/memory/1.png"),
                               ),
                               GestureDetector(
                                 onTap: () async {
@@ -1340,6 +1357,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                     ),
                                   ],
                                 ),
+                                child: Image.asset("assets/images/memory/2.png"),
                               ),
                               GestureDetector(
                                 onTap: () async {
@@ -1398,6 +1416,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                     ),
                                   ],
                                 ),
+                                child: Image.asset("assets/images/memory/3.png"),
                               ),
                               GestureDetector(
                                 onTap: () async {
@@ -1450,6 +1469,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                     ),
                                   ],
                                 ),
+                                child: Image.asset("assets/images/memory/4.png"),
                               ),
                               GestureDetector(
                                 onTap: () async {
@@ -1585,6 +1605,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                     ),
                                   ],
                                 ),
+                                child: Image.asset("assets/images/memory/1.png"),
                               ),
                               GestureDetector(
                                 onTap: () async {
@@ -1637,6 +1658,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                     ),
                                   ],
                                 ),
+                                child: Image.asset("assets/images/memory/2.png"),
                               ),
                               GestureDetector(
                                 onTap: () async {
@@ -1695,6 +1717,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                     ),
                                   ],
                                 ),
+                                child: Image.asset("assets/images/memory/3.png"),
                               ),
                               GestureDetector(
                                 onTap: () async {
@@ -1747,6 +1770,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                     ),
                                   ],
                                 ),
+                                child: Image.asset("assets/images/memory/4.png"),
                               ),
                               GestureDetector(
                                 onTap: () async {
@@ -1882,6 +1906,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                     ),
                                   ],
                                 ),
+                                child: Image.asset("assets/images/memory/1.png"),
                               ),
                               GestureDetector(
                                 onTap: () async {
@@ -1934,6 +1959,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                     ),
                                   ],
                                 ),
+                                child: Image.asset("assets/images/memory/2.png"),
                               ),
                               GestureDetector(
                                 onTap: () async {
@@ -1992,6 +2018,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                     ),
                                   ],
                                 ),
+                                child: Image.asset("assets/images/memory/3.png"),
                               ),
                               GestureDetector(
                                 onTap: () async {
@@ -2044,6 +2071,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                     ),
                                   ],
                                 ),
+                                child: Image.asset("assets/images/memory/4.png"),
                               ),
                               GestureDetector(
                                 onTap: () async {
@@ -2179,6 +2207,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                     ),
                                   ],
                                 ),
+                                child: Image.asset("assets/images/memory/1.png"),
                               ),
                               GestureDetector(
                                 onTap: () async {
@@ -2231,6 +2260,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                     ),
                                   ],
                                 ),
+                                child: Image.asset("assets/images/memory/2.png"),
                               ),
                               GestureDetector(
                                 onTap: () async {
@@ -2289,6 +2319,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                     ),
                                   ],
                                 ),
+                                child: Image.asset("assets/images/memory/3.png"),
                               ),
                               GestureDetector(
                                 onTap: () async {
@@ -2341,6 +2372,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                     ),
                                   ],
                                 ),
+                                child: Image.asset("assets/images/memory/4.png"),
                               ),
                               GestureDetector(
                                 onTap: () async {
@@ -2476,6 +2508,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                     ),
                                   ],
                                 ),
+                                child: Image.asset("assets/images/memory/1.png"),
                               ),
                               GestureDetector(
                                 onTap: () async {
@@ -2528,6 +2561,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                     ),
                                   ],
                                 ),
+                                child: Image.asset("assets/images/memory/2.png"),
                               ),
                               GestureDetector(
                                 onTap: () async {
@@ -2586,6 +2620,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                     ),
                                   ],
                                 ),
+                                child: Image.asset("assets/images/memory/3.png"),
                               ),
                               GestureDetector(
                                 onTap: () async {
@@ -2638,6 +2673,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                     ),
                                   ],
                                 ),
+                                child: Image.asset("assets/images/memory/4.png"),
                               ),
                               GestureDetector(
                                 onTap: () async {
@@ -2773,6 +2809,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                     ),
                                   ],
                                 ),
+                                child: Image.asset("assets/images/memory/1.png"),
                               ),
                               GestureDetector(
                                 onTap: () async {
@@ -2825,6 +2862,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                     ),
                                   ],
                                 ),
+                                child: Image.asset("assets/images/memory/2.png"),
                               ),
                               GestureDetector(
                                 onTap: () async {
@@ -2883,6 +2921,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                     ),
                                   ],
                                 ),
+                                child: Image.asset("assets/images/memory/3.png"),
                               ),
                               GestureDetector(
                                 onTap: () async {
@@ -2935,6 +2974,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                     ),
                                   ],
                                 ),
+                                child: Image.asset("assets/images/memory/4.png"),
                               ),
                               GestureDetector(
                                 onTap: () async {
@@ -3070,6 +3110,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                     ),
                                   ],
                                 ),
+                                child: Image.asset("assets/images/memory/1.png"),
                               ),
                               GestureDetector(
                                 onTap: () async {
@@ -3122,6 +3163,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                     ),
                                   ],
                                 ),
+                                child: Image.asset("assets/images/memory/2.png"),
                               ),
                               GestureDetector(
                                 onTap: () async {
@@ -3180,6 +3222,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                     ),
                                   ],
                                 ),
+                                child: Image.asset("assets/images/memory/3.png"),
                               ),
                               GestureDetector(
                                 onTap: () async {
@@ -3232,6 +3275,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                     ),
                                   ],
                                 ),
+                                child: Image.asset("assets/images/memory/4.png"),
                               ),
                               GestureDetector(
                                 onTap: () async {
@@ -3367,6 +3411,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                     ),
                                   ],
                                 ),
+                                child: Image.asset("assets/images/memory/1.png"),
                               ),
                               GestureDetector(
                                 onTap: () async {
@@ -3419,6 +3464,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                     ),
                                   ],
                                 ),
+                                child: Image.asset("assets/images/memory/2.png"),
                               ),
                               GestureDetector(
                                 onTap: () async {
@@ -3477,6 +3523,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                     ),
                                   ],
                                 ),
+                                child: Image.asset("assets/images/memory/3.png"),
                               ),
                               GestureDetector(
                                 onTap: () async {
@@ -3529,6 +3576,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                     ),
                                   ],
                                 ),
+                                child: Image.asset("assets/images/memory/4.png"),
                               ),
                               GestureDetector(
                                 onTap: () async {
@@ -3664,6 +3712,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                     ),
                                   ],
                                 ),
+                                child: Image.asset("assets/images/memory/1.png"),
                               ),
                               GestureDetector(
                                 onTap: () async {
@@ -3716,6 +3765,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                     ),
                                   ],
                                 ),
+                                child: Image.asset("assets/images/memory/2.png"),
                               ),
                               GestureDetector(
                                 onTap: () async {
@@ -3774,6 +3824,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                     ),
                                   ],
                                 ),
+                                child: Image.asset("assets/images/memory/3.png"),
                               ),
                               GestureDetector(
                                 onTap: () async {
@@ -3826,6 +3877,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                     ),
                                   ],
                                 ),
+                                child: Image.asset("assets/images/memory/4.png"),
                               ),
                               GestureDetector(
                                 onTap: () async {
@@ -3961,6 +4013,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                     ),
                                   ],
                                 ),
+                                child: Image.asset("assets/images/memory/1.png"),
                               ),
                               GestureDetector(
                                 onTap: () async {
@@ -4013,6 +4066,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                     ),
                                   ],
                                 ),
+                                child: Image.asset("assets/images/memory/2.png"),
                               ),
                               GestureDetector(
                                 onTap: () async {
@@ -4071,6 +4125,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                     ),
                                   ],
                                 ),
+                                child: Image.asset("assets/images/memory/3.png"),
                               ),
                               GestureDetector(
                                 onTap: () async {
@@ -4123,6 +4178,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                     ),
                                   ],
                                 ),
+                                child: Image.asset("assets/images/memory/4.png"),
                               ),
                               GestureDetector(
                                 onTap: () async {
@@ -4258,6 +4314,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                     ),
                                   ],
                                 ),
+                                child: Image.asset("assets/images/memory/1.png"),
                               ),
                               GestureDetector(
                                 onTap: () async {
@@ -4310,6 +4367,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                     ),
                                   ],
                                 ),
+                                child: Image.asset("assets/images/memory/2.png"),
                               ),
                               GestureDetector(
                                 onTap: () async {
@@ -4368,6 +4426,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                     ),
                                   ],
                                 ),
+                                child: Image.asset("assets/images/memory/3.png"),
                               ),
                               GestureDetector(
                                 onTap: () async {
@@ -4420,6 +4479,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                     ),
                                   ],
                                 ),
+                                child: Image.asset("assets/images/memory/4.png"),
                               ),
                               GestureDetector(
                                 onTap: () async {

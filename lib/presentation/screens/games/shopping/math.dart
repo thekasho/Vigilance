@@ -86,7 +86,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                             width: 100.w,
                             alignment: Alignment.center,
                             child: Text(
-                              "46 + 12 = ?",
+                              "0 + 2 = ?",
                               style: TextStyle(
                                   fontSize: 32.sp,
                                   fontWeight: FontWeight.bold
@@ -101,7 +101,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                           const Spacer(),
                           GestureDetector(
                             onTap: () {
-                              cont.submitMathAns(58);
+                              cont.submitMathAns(2);
                             },
                             child: Container(
                               alignment: Alignment.center,
@@ -120,7 +120,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                                 ],
                               ),
                               child: Text(
-                                "58",
+                                "2",
                                 style: TextStyle(
                                   fontSize: 35.sp,
                                   fontWeight: FontWeight.bold
@@ -131,7 +131,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                           const Spacer(),
                           GestureDetector(
                             onTap: () {
-                              cont.submitMathAns(53);
+                              cont.submitMathAns(0);
                             },
                             child: Container(
                               alignment: Alignment.center,
@@ -150,7 +150,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                                 ],
                               ),
                               child: Text(
-                                "53",
+                                "0",
                                 style: TextStyle(
                                     fontSize: 35.sp,
                                     fontWeight: FontWeight.bold
@@ -167,7 +167,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                           const Spacer(),
                           GestureDetector(
                             onTap: () {
-                              cont.submitMathAns(61);
+                              cont.submitMathAns(1);
                             },
                             child: Container(
                               alignment: Alignment.center,
@@ -186,7 +186,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                                 ],
                               ),
                               child: Text(
-                                "61",
+                                "1",
                                 style: TextStyle(
                                     fontSize: 35.sp,
                                     fontWeight: FontWeight.bold
@@ -197,7 +197,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                           const Spacer(),
                           GestureDetector(
                             onTap: () {
-                              cont.submitMathAns(72);
+                              cont.submitMathAns(4);
                             },
                             child: Container(
                               alignment: Alignment.center,
@@ -216,7 +216,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                                 ],
                               ),
                               child: Text(
-                                "72",
+                                "4",
                                 style: TextStyle(
                                     fontSize: 35.sp,
                                     fontWeight: FontWeight.bold
@@ -273,7 +273,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                             width: 100.w,
                             alignment: Alignment.center,
                             child: Text(
-                              "56 + 24 = ?",
+                              "1 + 1 = ?",
                               style: TextStyle(
                                 fontSize: 32.sp,
                                 fontWeight: FontWeight.bold
@@ -288,7 +288,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                           const Spacer(),
                           GestureDetector(
                             onTap: () {
-                              cont.submitMathAns(69);
+                              cont.submitMathAns(1);
                             },
                             child: Container(
                               alignment: Alignment.center,
@@ -307,7 +307,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                                 ],
                               ),
                               child: Text(
-                                "69",
+                                "1",
                                 style: TextStyle(
                                     fontSize: 35.sp,
                                     fontWeight: FontWeight.bold
@@ -318,7 +318,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                           const Spacer(),
                           GestureDetector(
                             onTap: () {
-                              cont.submitMathAns(78);
+                              cont.submitMathAns(5);
                             },
                             child: Container(
                               alignment: Alignment.center,
@@ -337,7 +337,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                                 ],
                               ),
                               child: Text(
-                                "78",
+                                "5",
                                 style: TextStyle(
                                     fontSize: 35.sp,
                                     fontWeight: FontWeight.bold
@@ -354,7 +354,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                           const Spacer(),
                           GestureDetector(
                             onTap: () {
-                              cont.submitMathAns(82);
+                              cont.submitMathAns(0);
                             },
                             child: Container(
                               alignment: Alignment.center,
@@ -373,7 +373,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                                 ],
                               ),
                               child: Text(
-                                "82",
+                                "0",
                                 style: TextStyle(
                                   fontSize: 35.sp,
                                   fontWeight: FontWeight.bold
@@ -384,7 +384,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                           const Spacer(),
                           GestureDetector(
                             onTap: () {
-                              cont.submitMathAns(80);
+                              cont.submitMathAns(2);
                             },
                             child: Container(
                               alignment: Alignment.center,
@@ -403,7 +403,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                                 ],
                               ),
                               child: Text(
-                                "80",
+                                "2",
                                 style: TextStyle(
                                     fontSize: 35.sp,
                                     fontWeight: FontWeight.bold
@@ -460,7 +460,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                             width: 100.w,
                             alignment: Alignment.center,
                             child: Text(
-                              "70 - 36 = ?",
+                              "1 + 2 = ?",
                               style: TextStyle(
                                 fontSize: 32.sp,
                                 fontWeight: FontWeight.bold
@@ -475,7 +475,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                           const Spacer(),
                           GestureDetector(
                             onTap: () {
-                              cont.submitMathAns(34);
+                              cont.submitMathAns(3);
                             },
                             child: Container(
                               alignment: Alignment.center,
@@ -494,7 +494,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                                 ],
                               ),
                               child: Text(
-                                "34",
+                                "3",
                                 style: TextStyle(
                                     fontSize: 35.sp,
                                     fontWeight: FontWeight.bold
@@ -505,7 +505,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                           const Spacer(),
                           GestureDetector(
                             onTap: () {
-                              cont.submitMathAns(17);
+                              cont.submitMathAns(1);
                             },
                             child: Container(
                               alignment: Alignment.center,
@@ -524,7 +524,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                                 ],
                               ),
                               child: Text(
-                                "17",
+                                "1",
                                 style: TextStyle(
                                     fontSize: 35.sp,
                                     fontWeight: FontWeight.bold
@@ -541,7 +541,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                           const Spacer(),
                           GestureDetector(
                             onTap: () {
-                              cont.submitMathAns(26);
+                              cont.submitMathAns(2);
                             },
                             child: Container(
                               alignment: Alignment.center,
@@ -560,7 +560,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                                 ],
                               ),
                               child: Text(
-                                "26",
+                                "2",
                                 style: TextStyle(
                                   fontSize: 35.sp,
                                   fontWeight: FontWeight.bold
@@ -571,7 +571,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                           const Spacer(),
                           GestureDetector(
                             onTap: () {
-                              cont.submitMathAns(30);
+                              cont.submitMathAns(6);
                             },
                             child: Container(
                               alignment: Alignment.center,
@@ -590,7 +590,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                                 ],
                               ),
                               child: Text(
-                                "30",
+                                "6",
                                 style: TextStyle(
                                     fontSize: 35.sp,
                                     fontWeight: FontWeight.bold
@@ -647,10 +647,10 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                             width: 100.w,
                             alignment: Alignment.center,
                             child: Text(
-                              "48 - 26 = ?",
+                              "2 + 2 = ?",
                               style: TextStyle(
-                                  fontSize: 32.sp,
-                                  fontWeight: FontWeight.bold
+                                fontSize: 32.sp,
+                                fontWeight: FontWeight.bold
                               ),
                             ),
                           ),
@@ -662,7 +662,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                           const Spacer(),
                           GestureDetector(
                             onTap: () {
-                              cont.submitMathAns(25);
+                              cont.submitMathAns(4);
                             },
                             child: Container(
                               alignment: Alignment.center,
@@ -681,7 +681,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                                 ],
                               ),
                               child: Text(
-                                "25",
+                                "4",
                                 style: TextStyle(
                                     fontSize: 35.sp,
                                     fontWeight: FontWeight.bold
@@ -692,7 +692,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                           const Spacer(),
                           GestureDetector(
                             onTap: () {
-                              cont.submitMathAns(22);
+                              cont.submitMathAns(8);
                             },
                             child: Container(
                               alignment: Alignment.center,
@@ -711,7 +711,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                                 ],
                               ),
                               child: Text(
-                                "22",
+                                "8",
                                 style: TextStyle(
                                     fontSize: 35.sp,
                                     fontWeight: FontWeight.bold
@@ -728,7 +728,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                           const Spacer(),
                           GestureDetector(
                             onTap: () {
-                              cont.submitMathAns(18);
+                              cont.submitMathAns(5);
                             },
                             child: Container(
                               alignment: Alignment.center,
@@ -747,7 +747,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                                 ],
                               ),
                               child: Text(
-                                "18",
+                                "5",
                                 style: TextStyle(
                                     fontSize: 35.sp,
                                     fontWeight: FontWeight.bold
@@ -758,7 +758,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                           const Spacer(),
                           GestureDetector(
                             onTap: () {
-                              cont.submitMathAns(31);
+                              cont.submitMathAns(2);
                             },
                             child: Container(
                               alignment: Alignment.center,
@@ -777,7 +777,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                                 ],
                               ),
                               child: Text(
-                                "31",
+                                "2",
                                 style: TextStyle(
                                   fontSize: 35.sp,
                                   fontWeight: FontWeight.bold
@@ -834,7 +834,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                             width: 100.w,
                             alignment: Alignment.center,
                             child: Text(
-                              "15 - 4 + 7 = ?",
+                              "6 + 1 = ?",
                               style: TextStyle(
                                   fontSize: 29.sp,
                                   fontWeight: FontWeight.bold
@@ -849,7 +849,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                           const Spacer(),
                           GestureDetector(
                             onTap: () {
-                              cont.submitMathAns(15);
+                              cont.submitMathAns(0);
                             },
                             child: Container(
                               alignment: Alignment.center,
@@ -868,7 +868,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                                 ],
                               ),
                               child: Text(
-                                "15",
+                                "0",
                                 style: TextStyle(
                                     fontSize: 35.sp,
                                     fontWeight: FontWeight.bold
@@ -879,7 +879,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                           const Spacer(),
                           GestureDetector(
                             onTap: () {
-                              cont.submitMathAns(18);
+                              cont.submitMathAns(6);
                             },
                             child: Container(
                               alignment: Alignment.center,
@@ -898,7 +898,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                                 ],
                               ),
                               child: Text(
-                                "18",
+                                "6",
                                 style: TextStyle(
                                     fontSize: 35.sp,
                                     fontWeight: FontWeight.bold
@@ -915,7 +915,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                           const Spacer(),
                           GestureDetector(
                             onTap: () {
-                              cont.submitMathAns(10);
+                              cont.submitMathAns(7);
                             },
                             child: Container(
                               alignment: Alignment.center,
@@ -934,7 +934,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                                 ],
                               ),
                               child: Text(
-                                "10",
+                                "7",
                                 style: TextStyle(
                                     fontSize: 35.sp,
                                     fontWeight: FontWeight.bold
@@ -945,7 +945,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                           const Spacer(),
                           GestureDetector(
                             onTap: () {
-                              cont.submitMathAns(20);
+                              cont.submitMathAns(2);
                             },
                             child: Container(
                               alignment: Alignment.center,
@@ -964,7 +964,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                                 ],
                               ),
                               child: Text(
-                                "20",
+                                "2",
                                 style: TextStyle(
                                     fontSize: 35.sp,
                                     fontWeight: FontWeight.bold
@@ -1021,7 +1021,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                             width: 100.w,
                             alignment: Alignment.center,
                             child: Text(
-                              "17 + 3 - 9 = ?",
+                              "2 + 3 = ?",
                               style: TextStyle(
                                   fontSize: 29.sp,
                                   fontWeight: FontWeight.bold
@@ -1036,7 +1036,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                           const Spacer(),
                           GestureDetector(
                             onTap: () {
-                              cont.submitMathAns(11);
+                              cont.submitMathAns(8);
                             },
                             child: Container(
                               alignment: Alignment.center,
@@ -1055,7 +1055,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                                 ],
                               ),
                               child: Text(
-                                "11",
+                                "8",
                                 style: TextStyle(
                                     fontSize: 35.sp,
                                     fontWeight: FontWeight.bold
@@ -1066,7 +1066,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                           const Spacer(),
                           GestureDetector(
                             onTap: () {
-                              cont.submitMathAns(34);
+                              cont.submitMathAns(6);
                             },
                             child: Container(
                               alignment: Alignment.center,
@@ -1085,7 +1085,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                                 ],
                               ),
                               child: Text(
-                                "34",
+                                "6",
                                 style: TextStyle(
                                     fontSize: 35.sp,
                                     fontWeight: FontWeight.bold
@@ -1102,7 +1102,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                           const Spacer(),
                           GestureDetector(
                             onTap: () {
-                              cont.submitMathAns(20);
+                              cont.submitMathAns(5);
                             },
                             child: Container(
                               alignment: Alignment.center,
@@ -1121,10 +1121,10 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                                 ],
                               ),
                               child: Text(
-                                "20",
+                                "5",
                                 style: TextStyle(
-                                    fontSize: 35.sp,
-                                    fontWeight: FontWeight.bold
+                                  fontSize: 35.sp,
+                                  fontWeight: FontWeight.bold
                                 ),
                               ),
                             ),
@@ -1132,7 +1132,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                           const Spacer(),
                           GestureDetector(
                             onTap: () {
-                              cont.submitMathAns(15);
+                              cont.submitMathAns(7);
                             },
                             child: Container(
                               alignment: Alignment.center,
@@ -1151,7 +1151,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                                 ],
                               ),
                               child: Text(
-                                "15",
+                                "7",
                                 style: TextStyle(
                                     fontSize: 35.sp,
                                     fontWeight: FontWeight.bold
@@ -1208,7 +1208,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                             width: 100.w,
                             alignment: Alignment.center,
                             child: Text(
-                              "20 + 8 - 14 = ?",
+                              "3 + 3 = ?",
                               style: TextStyle(
                                   fontSize: 29.sp,
                                   fontWeight: FontWeight.bold
@@ -1223,7 +1223,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                           const Spacer(),
                           GestureDetector(
                             onTap: () {
-                              cont.submitMathAns(30);
+                              cont.submitMathAns(9);
                             },
                             child: Container(
                               alignment: Alignment.center,
@@ -1242,7 +1242,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                                 ],
                               ),
                               child: Text(
-                                "30",
+                                "9",
                                 style: TextStyle(
                                     fontSize: 35.sp,
                                     fontWeight: FontWeight.bold
@@ -1253,7 +1253,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                           const Spacer(),
                           GestureDetector(
                             onTap: () {
-                              cont.submitMathAns(14);
+                              cont.submitMathAns(6);
                             },
                             child: Container(
                               alignment: Alignment.center,
@@ -1272,7 +1272,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                                 ],
                               ),
                               child: Text(
-                                "14",
+                                "6",
                                 style: TextStyle(
                                     fontSize: 35.sp,
                                     fontWeight: FontWeight.bold
@@ -1289,7 +1289,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                           const Spacer(),
                           GestureDetector(
                             onTap: () {
-                              cont.submitMathAns(20);
+                              cont.submitMathAns(10);
                             },
                             child: Container(
                               alignment: Alignment.center,
@@ -1308,7 +1308,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                                 ],
                               ),
                               child: Text(
-                                "20",
+                                "10",
                                 style: TextStyle(
                                     fontSize: 35.sp,
                                     fontWeight: FontWeight.bold
@@ -1319,7 +1319,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                           const Spacer(),
                           GestureDetector(
                             onTap: () {
-                              cont.submitMathAns(19);
+                              cont.submitMathAns(4);
                             },
                             child: Container(
                               alignment: Alignment.center,
@@ -1338,7 +1338,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                                 ],
                               ),
                               child: Text(
-                                "19",
+                                "4",
                                 style: TextStyle(
                                     fontSize: 35.sp,
                                     fontWeight: FontWeight.bold
@@ -1395,7 +1395,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                             width: 100.w,
                             alignment: Alignment.center,
                             child: Text(
-                              "31 - 4 + 4 = ?",
+                              "7 + 2 = ?",
                               style: TextStyle(
                                   fontSize: 29.sp,
                                   fontWeight: FontWeight.bold
@@ -1410,7 +1410,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                           const Spacer(),
                           GestureDetector(
                             onTap: () {
-                              cont.submitMathAns(27);
+                              cont.submitMathAns(9);
                             },
                             child: Container(
                               alignment: Alignment.center,
@@ -1429,7 +1429,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                                 ],
                               ),
                               child: Text(
-                                "27",
+                                "9",
                                 style: TextStyle(
                                     fontSize: 35.sp,
                                     fontWeight: FontWeight.bold
@@ -1440,7 +1440,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                           const Spacer(),
                           GestureDetector(
                             onTap: () {
-                              cont.submitMathAns(40);
+                              cont.submitMathAns(8);
                             },
                             child: Container(
                               alignment: Alignment.center,
@@ -1459,7 +1459,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                                 ],
                               ),
                               child: Text(
-                                "40",
+                                "8",
                                 style: TextStyle(
                                     fontSize: 35.sp,
                                     fontWeight: FontWeight.bold
@@ -1476,7 +1476,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                           const Spacer(),
                           GestureDetector(
                             onTap: () {
-                              cont.submitMathAns(31);
+                              cont.submitMathAns(2);
                             },
                             child: Container(
                               alignment: Alignment.center,
@@ -1495,7 +1495,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                                 ],
                               ),
                               child: Text(
-                                "31",
+                                "2",
                                 style: TextStyle(
                                     fontSize: 35.sp,
                                     fontWeight: FontWeight.bold
@@ -1506,7 +1506,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                           const Spacer(),
                           GestureDetector(
                             onTap: () {
-                              cont.submitMathAns(29);
+                              cont.submitMathAns(11);
                             },
                             child: Container(
                               alignment: Alignment.center,
@@ -1525,7 +1525,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                                 ],
                               ),
                               child: Text(
-                                "29",
+                                "11",
                                 style: TextStyle(
                                     fontSize: 35.sp,
                                     fontWeight: FontWeight.bold
@@ -1582,7 +1582,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                             width: 100.w,
                             alignment: Alignment.center,
                             child: Text(
-                              "14 + 15 - 2 = ?",
+                              "4 + 4 = ?",
                               style: TextStyle(
                                   fontSize: 29.sp,
                                   fontWeight: FontWeight.bold
@@ -1597,7 +1597,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                           const Spacer(),
                           GestureDetector(
                             onTap: () {
-                              cont.submitMathAns(29);
+                              cont.submitMathAns(4);
                             },
                             child: Container(
                               alignment: Alignment.center,
@@ -1616,7 +1616,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                                 ],
                               ),
                               child: Text(
-                                "29",
+                                "4",
                                 style: TextStyle(
                                     fontSize: 35.sp,
                                     fontWeight: FontWeight.bold
@@ -1627,7 +1627,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                           const Spacer(),
                           GestureDetector(
                             onTap: () {
-                              cont.submitMathAns(30);
+                              cont.submitMathAns(7);
                             },
                             child: Container(
                               alignment: Alignment.center,
@@ -1646,7 +1646,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                                 ],
                               ),
                               child: Text(
-                                "30",
+                                "7",
                                 style: TextStyle(
                                     fontSize: 35.sp,
                                     fontWeight: FontWeight.bold
@@ -1663,7 +1663,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                           const Spacer(),
                           GestureDetector(
                             onTap: () {
-                              cont.submitMathAns(18);
+                              cont.submitMathAns(12);
                             },
                             child: Container(
                               alignment: Alignment.center,
@@ -1682,7 +1682,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                                 ],
                               ),
                               child: Text(
-                                "18",
+                                "12",
                                 style: TextStyle(
                                     fontSize: 35.sp,
                                     fontWeight: FontWeight.bold
@@ -1693,7 +1693,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                           const Spacer(),
                           GestureDetector(
                             onTap: () {
-                              cont.submitMathAns(27);
+                              cont.submitMathAns(8);
                             },
                             child: Container(
                               alignment: Alignment.center,
@@ -1712,7 +1712,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                                 ],
                               ),
                               child: Text(
-                                "27",
+                                "8",
                                 style: TextStyle(
                                     fontSize: 35.sp,
                                     fontWeight: FontWeight.bold
@@ -1769,7 +1769,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                             width: 100.w,
                             alignment: Alignment.center,
                             child: Text(
-                              "20 + 8 - 14 = ?",
+                              "5 + 4 = ?",
                               style: TextStyle(
                                   fontSize: 29.sp,
                                   fontWeight: FontWeight.bold
@@ -1784,7 +1784,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                           const Spacer(),
                           GestureDetector(
                             onTap: () {
-                              cont.submitMathAns(30);
+                              cont.submitMathAns(11);
                             },
                             child: Container(
                               alignment: Alignment.center,
@@ -1803,7 +1803,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                                 ],
                               ),
                               child: Text(
-                                "30",
+                                "11",
                                 style: TextStyle(
                                     fontSize: 35.sp,
                                     fontWeight: FontWeight.bold
@@ -1814,7 +1814,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                           const Spacer(),
                           GestureDetector(
                             onTap: () {
-                              cont.submitMathAns(14);
+                              cont.submitMathAns(9);
                             },
                             child: Container(
                               alignment: Alignment.center,
@@ -1833,7 +1833,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                                 ],
                               ),
                               child: Text(
-                                "14",
+                                "9",
                                 style: TextStyle(
                                     fontSize: 35.sp,
                                     fontWeight: FontWeight.bold
@@ -1850,7 +1850,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                           const Spacer(),
                           GestureDetector(
                             onTap: () {
-                              cont.submitMathAns(18);
+                              cont.submitMathAns(8);
                             },
                             child: Container(
                               alignment: Alignment.center,
@@ -1869,7 +1869,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                                 ],
                               ),
                               child: Text(
-                                "18",
+                                "8",
                                 style: TextStyle(
                                     fontSize: 35.sp,
                                     fontWeight: FontWeight.bold
@@ -1880,7 +1880,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                           const Spacer(),
                           GestureDetector(
                             onTap: () {
-                              cont.submitMathAns(19);
+                              cont.submitMathAns(15);
                             },
                             child: Container(
                               alignment: Alignment.center,
@@ -1899,10 +1899,10 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                                 ],
                               ),
                               child: Text(
-                                "19",
+                                "15",
                                 style: TextStyle(
-                                    fontSize: 35.sp,
-                                    fontWeight: FontWeight.bold
+                                  fontSize: 35.sp,
+                                  fontWeight: FontWeight.bold
                                 ),
                               ),
                             ),
@@ -1956,7 +1956,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                             width: 100.w,
                             alignment: Alignment.center,
                             child: Text(
-                              "40 + 80 - 14 = ?",
+                              "9 + 3 = ?",
                               style: TextStyle(
                                   fontSize: 29.sp,
                                   fontWeight: FontWeight.bold
@@ -1971,7 +1971,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                           const Spacer(),
                           GestureDetector(
                             onTap: () {
-                              cont.submitMathAns(110);
+                              cont.submitMathAns(9);
                             },
                             child: Container(
                               alignment: Alignment.center,
@@ -1990,7 +1990,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                                 ],
                               ),
                               child: Text(
-                                "110",
+                                "9",
                                 style: TextStyle(
                                     fontSize: 35.sp,
                                     fontWeight: FontWeight.bold
@@ -2001,7 +2001,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                           const Spacer(),
                           GestureDetector(
                             onTap: () {
-                              cont.submitMathAns(120);
+                              cont.submitMathAns(19);
                             },
                             child: Container(
                               alignment: Alignment.center,
@@ -2020,7 +2020,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                                 ],
                               ),
                               child: Text(
-                                "120",
+                                "19",
                                 style: TextStyle(
                                     fontSize: 35.sp,
                                     fontWeight: FontWeight.bold
@@ -2037,7 +2037,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                           const Spacer(),
                           GestureDetector(
                             onTap: () {
-                              cont.submitMathAns(20);
+                              cont.submitMathAns(10);
                             },
                             child: Container(
                               alignment: Alignment.center,
@@ -2056,7 +2056,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                                 ],
                               ),
                               child: Text(
-                                "20",
+                                "10",
                                 style: TextStyle(
                                     fontSize: 35.sp,
                                     fontWeight: FontWeight.bold
@@ -2067,7 +2067,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                           const Spacer(),
                           GestureDetector(
                             onTap: () {
-                              cont.submitMathAns(106);
+                              cont.submitMathAns(12);
                             },
                             child: Container(
                               alignment: Alignment.center,
@@ -2086,7 +2086,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                                 ],
                               ),
                               child: Text(
-                                "106",
+                                "12",
                                 style: TextStyle(
                                     fontSize: 35.sp,
                                     fontWeight: FontWeight.bold
@@ -2143,10 +2143,10 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                             width: 100.w,
                             alignment: Alignment.center,
                             child: Text(
-                              "90 + 11 - 8 = ?",
+                              "6 + 4 = ?",
                               style: TextStyle(
-                                  fontSize: 29.sp,
-                                  fontWeight: FontWeight.bold
+                                fontSize: 29.sp,
+                                fontWeight: FontWeight.bold
                               ),
                             ),
                           ),
@@ -2158,7 +2158,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                           const Spacer(),
                           GestureDetector(
                             onTap: () {
-                              cont.submitMathAns(101);
+                              cont.submitMathAns(11);
                             },
                             child: Container(
                               alignment: Alignment.center,
@@ -2177,7 +2177,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                                 ],
                               ),
                               child: Text(
-                                "101",
+                                "11",
                                 style: TextStyle(
                                     fontSize: 35.sp,
                                     fontWeight: FontWeight.bold
@@ -2188,7 +2188,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                           const Spacer(),
                           GestureDetector(
                             onTap: () {
-                              cont.submitMathAns(160);
+                              cont.submitMathAns(6);
                             },
                             child: Container(
                               alignment: Alignment.center,
@@ -2207,7 +2207,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                                 ],
                               ),
                               child: Text(
-                                "160",
+                                "6",
                                 style: TextStyle(
                                     fontSize: 35.sp,
                                     fontWeight: FontWeight.bold
@@ -2224,7 +2224,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                           const Spacer(),
                           GestureDetector(
                             onTap: () {
-                              cont.submitMathAns(93);
+                              cont.submitMathAns(10);
                             },
                             child: Container(
                               alignment: Alignment.center,
@@ -2243,7 +2243,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                                 ],
                               ),
                               child: Text(
-                                "93",
+                                "10",
                                 style: TextStyle(
                                     fontSize: 35.sp,
                                     fontWeight: FontWeight.bold
@@ -2254,7 +2254,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                           const Spacer(),
                           GestureDetector(
                             onTap: () {
-                              cont.submitMathAns(108);
+                              cont.submitMathAns(4);
                             },
                             child: Container(
                               alignment: Alignment.center,
@@ -2273,7 +2273,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                                 ],
                               ),
                               child: Text(
-                                "108",
+                                "4",
                                 style: TextStyle(
                                     fontSize: 35.sp,
                                     fontWeight: FontWeight.bold
@@ -2330,7 +2330,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                             width: 100.w,
                             alignment: Alignment.center,
                             child: Text(
-                              "19 + 10 - 45 = ?",
+                              "10 + 2 = ?",
                               style: TextStyle(
                                   fontSize: 29.sp,
                                   fontWeight: FontWeight.bold
@@ -2345,7 +2345,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                           const Spacer(),
                           GestureDetector(
                             onTap: () {
-                              cont.submitMathAns(54);
+                              cont.submitMathAns(12);
                             },
                             child: Container(
                               alignment: Alignment.center,
@@ -2364,7 +2364,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                                 ],
                               ),
                               child: Text(
-                                "54",
+                                "12",
                                 style: TextStyle(
                                     fontSize: 35.sp,
                                     fontWeight: FontWeight.bold
@@ -2375,7 +2375,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                           const Spacer(),
                           GestureDetector(
                             onTap: () {
-                              cont.submitMathAns(90);
+                              cont.submitMathAns(8);
                             },
                             child: Container(
                               alignment: Alignment.center,
@@ -2394,7 +2394,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                                 ],
                               ),
                               child: Text(
-                                "90",
+                                "8",
                                 style: TextStyle(
                                     fontSize: 35.sp,
                                     fontWeight: FontWeight.bold
@@ -2411,7 +2411,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                           const Spacer(),
                           GestureDetector(
                             onTap: () {
-                              cont.submitMathAns(86);
+                              cont.submitMathAns(14);
                             },
                             child: Container(
                               alignment: Alignment.center,
@@ -2430,7 +2430,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                                 ],
                               ),
                               child: Text(
-                                "86",
+                                "14",
                                 style: TextStyle(
                                     fontSize: 35.sp,
                                     fontWeight: FontWeight.bold
@@ -2441,7 +2441,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                           const Spacer(),
                           GestureDetector(
                             onTap: () {
-                              cont.submitMathAns(19);
+                              cont.submitMathAns(15);
                             },
                             child: Container(
                               alignment: Alignment.center,
@@ -2460,7 +2460,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                                 ],
                               ),
                               child: Text(
-                                "19",
+                                "15",
                                 style: TextStyle(
                                     fontSize: 35.sp,
                                     fontWeight: FontWeight.bold
@@ -2517,7 +2517,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                             width: 100.w,
                             alignment: Alignment.center,
                             child: Text(
-                              "40 + 8 - 25 = ?",
+                              "12 + 2 = ?",
                               style: TextStyle(
                                   fontSize: 29.sp,
                                   fontWeight: FontWeight.bold
@@ -2529,102 +2529,6 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                       SizedBox(height: 10.h),
                       Row(
                         children: [
-                          const Spacer(),
-                          GestureDetector(
-                            onTap: () {
-                              cont.submitMathAns(22);
-                            },
-                            child: Container(
-                              alignment: Alignment.center,
-                              width: 40.w,
-                              height: 23.h,
-                              decoration: BoxDecoration(
-                                color: orangeBtn,
-                                borderRadius: BorderRadius.circular(10),
-                                boxShadow: const [
-                                  BoxShadow(
-                                    blurRadius: 4,
-                                    color: Color(0x33000000),
-                                    offset: Offset(0, 2),
-                                    spreadRadius: 2,
-                                  ),
-                                ],
-                              ),
-                              child: Text(
-                                "22",
-                                style: TextStyle(
-                                    fontSize: 35.sp,
-                                    fontWeight: FontWeight.bold
-                                ),
-                              ),
-                            ),
-                          ),
-                          const Spacer(),
-                          GestureDetector(
-                            onTap: () {
-                              cont.submitMathAns(23);
-                            },
-                            child: Container(
-                              alignment: Alignment.center,
-                              width: 40.w,
-                              height: 23.h,
-                              decoration: BoxDecoration(
-                                color: orangeBtn,
-                                borderRadius: BorderRadius.circular(10),
-                                boxShadow: const [
-                                  BoxShadow(
-                                    blurRadius: 4,
-                                    color: Color(0x33000000),
-                                    offset: Offset(0, 2),
-                                    spreadRadius: 2,
-                                  ),
-                                ],
-                              ),
-                              child: Text(
-                                "23",
-                                style: TextStyle(
-                                    fontSize: 35.sp,
-                                    fontWeight: FontWeight.bold
-                                ),
-                              ),
-                            ),
-                          ),
-                          const Spacer(),
-                        ],
-                      ),
-                      SizedBox(height: 3.h),
-                      Row(
-                        children: [
-                          const Spacer(),
-                          GestureDetector(
-                            onTap: () {
-                              cont.submitMathAns(41);
-                            },
-                            child: Container(
-                              alignment: Alignment.center,
-                              width: 40.w,
-                              height: 23.h,
-                              decoration: BoxDecoration(
-                                color: orangeBtn,
-                                borderRadius: BorderRadius.circular(10),
-                                boxShadow: const [
-                                  BoxShadow(
-                                    blurRadius: 4,
-                                    color: Color(0x33000000),
-                                    offset: Offset(0, 2),
-                                    spreadRadius: 2,
-                                  ),
-                                ],
-                              ),
-                              child: Text(
-                                "41",
-                                style: TextStyle(
-                                    fontSize: 35.sp,
-                                    fontWeight: FontWeight.bold
-                                ),
-                              ),
-                            ),
-                          ),
                           const Spacer(),
                           GestureDetector(
                             onTap: () {
@@ -2648,6 +2552,102 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                               ),
                               child: Text(
                                 "19",
+                                style: TextStyle(
+                                    fontSize: 35.sp,
+                                    fontWeight: FontWeight.bold
+                                ),
+                              ),
+                            ),
+                          ),
+                          const Spacer(),
+                          GestureDetector(
+                            onTap: () {
+                              cont.submitMathAns(16);
+                            },
+                            child: Container(
+                              alignment: Alignment.center,
+                              width: 40.w,
+                              height: 23.h,
+                              decoration: BoxDecoration(
+                                color: orangeBtn,
+                                borderRadius: BorderRadius.circular(10),
+                                boxShadow: const [
+                                  BoxShadow(
+                                    blurRadius: 4,
+                                    color: Color(0x33000000),
+                                    offset: Offset(0, 2),
+                                    spreadRadius: 2,
+                                  ),
+                                ],
+                              ),
+                              child: Text(
+                                "16",
+                                style: TextStyle(
+                                    fontSize: 35.sp,
+                                    fontWeight: FontWeight.bold
+                                ),
+                              ),
+                            ),
+                          ),
+                          const Spacer(),
+                        ],
+                      ),
+                      SizedBox(height: 3.h),
+                      Row(
+                        children: [
+                          const Spacer(),
+                          GestureDetector(
+                            onTap: () {
+                              cont.submitMathAns(14);
+                            },
+                            child: Container(
+                              alignment: Alignment.center,
+                              width: 40.w,
+                              height: 23.h,
+                              decoration: BoxDecoration(
+                                color: orangeBtn,
+                                borderRadius: BorderRadius.circular(10),
+                                boxShadow: const [
+                                  BoxShadow(
+                                    blurRadius: 4,
+                                    color: Color(0x33000000),
+                                    offset: Offset(0, 2),
+                                    spreadRadius: 2,
+                                  ),
+                                ],
+                              ),
+                              child: Text(
+                                "14",
+                                style: TextStyle(
+                                    fontSize: 35.sp,
+                                    fontWeight: FontWeight.bold
+                                ),
+                              ),
+                            ),
+                          ),
+                          const Spacer(),
+                          GestureDetector(
+                            onTap: () {
+                              cont.submitMathAns(15);
+                            },
+                            child: Container(
+                              alignment: Alignment.center,
+                              width: 40.w,
+                              height: 23.h,
+                              decoration: BoxDecoration(
+                                color: orangeBtn,
+                                borderRadius: BorderRadius.circular(10),
+                                boxShadow: const [
+                                  BoxShadow(
+                                    blurRadius: 4,
+                                    color: Color(0x33000000),
+                                    offset: Offset(0, 2),
+                                    spreadRadius: 2,
+                                  ),
+                                ],
+                              ),
+                              child: Text(
+                                "15",
                                 style: TextStyle(
                                     fontSize: 35.sp,
                                     fontWeight: FontWeight.bold
@@ -2704,7 +2704,7 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                             width: 100.w,
                             alignment: Alignment.center,
                             child: Text(
-                              "200 - 92 + 50 = ?",
+                              "10 + 8 = ?",
                               style: TextStyle(
                                   fontSize: 29.sp,
                                   fontWeight: FontWeight.bold
@@ -2716,102 +2716,6 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                       SizedBox(height: 10.h),
                       Row(
                         children: [
-                          const Spacer(),
-                          GestureDetector(
-                            onTap: () {
-                              cont.submitMathAns(219);
-                            },
-                            child: Container(
-                              alignment: Alignment.center,
-                              width: 40.w,
-                              height: 23.h,
-                              decoration: BoxDecoration(
-                                color: orangeBtn,
-                                borderRadius: BorderRadius.circular(10),
-                                boxShadow: const [
-                                  BoxShadow(
-                                    blurRadius: 4,
-                                    color: Color(0x33000000),
-                                    offset: Offset(0, 2),
-                                    spreadRadius: 2,
-                                  ),
-                                ],
-                              ),
-                              child: Text(
-                                "219",
-                                style: TextStyle(
-                                  fontSize: 35.sp,
-                                  fontWeight: FontWeight.bold
-                                ),
-                              ),
-                            ),
-                          ),
-                          const Spacer(),
-                          GestureDetector(
-                            onTap: () {
-                              cont.submitMathAns(158);
-                            },
-                            child: Container(
-                              alignment: Alignment.center,
-                              width: 40.w,
-                              height: 23.h,
-                              decoration: BoxDecoration(
-                                color: orangeBtn,
-                                borderRadius: BorderRadius.circular(10),
-                                boxShadow: const [
-                                  BoxShadow(
-                                    blurRadius: 4,
-                                    color: Color(0x33000000),
-                                    offset: Offset(0, 2),
-                                    spreadRadius: 2,
-                                  ),
-                                ],
-                              ),
-                              child: Text(
-                                "158",
-                                style: TextStyle(
-                                  fontSize: 35.sp,
-                                  fontWeight: FontWeight.bold
-                                ),
-                              ),
-                            ),
-                          ),
-                          const Spacer(),
-                        ],
-                      ),
-                      SizedBox(height: 3.h),
-                      Row(
-                        children: [
-                          const Spacer(),
-                          GestureDetector(
-                            onTap: () {
-                              cont.submitMathAns(41);
-                            },
-                            child: Container(
-                              alignment: Alignment.center,
-                              width: 40.w,
-                              height: 23.h,
-                              decoration: BoxDecoration(
-                                color: orangeBtn,
-                                borderRadius: BorderRadius.circular(10),
-                                boxShadow: const [
-                                  BoxShadow(
-                                    blurRadius: 4,
-                                    color: Color(0x33000000),
-                                    offset: Offset(0, 2),
-                                    spreadRadius: 2,
-                                  ),
-                                ],
-                              ),
-                              child: Text(
-                                "41",
-                                style: TextStyle(
-                                    fontSize: 35.sp,
-                                    fontWeight: FontWeight.bold
-                                ),
-                              ),
-                            ),
-                          ),
                           const Spacer(),
                           GestureDetector(
                             onTap: () {
@@ -2835,6 +2739,102 @@ class _ShopMathScreenState extends State<ShopMathScreen> {
                               ),
                               child: Text(
                                 "19",
+                                style: TextStyle(
+                                  fontSize: 35.sp,
+                                  fontWeight: FontWeight.bold
+                                ),
+                              ),
+                            ),
+                          ),
+                          const Spacer(),
+                          GestureDetector(
+                            onTap: () {
+                              cont.submitMathAns(16);
+                            },
+                            child: Container(
+                              alignment: Alignment.center,
+                              width: 40.w,
+                              height: 23.h,
+                              decoration: BoxDecoration(
+                                color: orangeBtn,
+                                borderRadius: BorderRadius.circular(10),
+                                boxShadow: const [
+                                  BoxShadow(
+                                    blurRadius: 4,
+                                    color: Color(0x33000000),
+                                    offset: Offset(0, 2),
+                                    spreadRadius: 2,
+                                  ),
+                                ],
+                              ),
+                              child: Text(
+                                "16",
+                                style: TextStyle(
+                                  fontSize: 35.sp,
+                                  fontWeight: FontWeight.bold
+                                ),
+                              ),
+                            ),
+                          ),
+                          const Spacer(),
+                        ],
+                      ),
+                      SizedBox(height: 3.h),
+                      Row(
+                        children: [
+                          const Spacer(),
+                          GestureDetector(
+                            onTap: () {
+                              cont.submitMathAns(18);
+                            },
+                            child: Container(
+                              alignment: Alignment.center,
+                              width: 40.w,
+                              height: 23.h,
+                              decoration: BoxDecoration(
+                                color: orangeBtn,
+                                borderRadius: BorderRadius.circular(10),
+                                boxShadow: const [
+                                  BoxShadow(
+                                    blurRadius: 4,
+                                    color: Color(0x33000000),
+                                    offset: Offset(0, 2),
+                                    spreadRadius: 2,
+                                  ),
+                                ],
+                              ),
+                              child: Text(
+                                "18",
+                                style: TextStyle(
+                                    fontSize: 35.sp,
+                                    fontWeight: FontWeight.bold
+                                ),
+                              ),
+                            ),
+                          ),
+                          const Spacer(),
+                          GestureDetector(
+                            onTap: () {
+                              cont.submitMathAns(15);
+                            },
+                            child: Container(
+                              alignment: Alignment.center,
+                              width: 40.w,
+                              height: 23.h,
+                              decoration: BoxDecoration(
+                                color: orangeBtn,
+                                borderRadius: BorderRadius.circular(10),
+                                boxShadow: const [
+                                  BoxShadow(
+                                    blurRadius: 4,
+                                    color: Color(0x33000000),
+                                    offset: Offset(0, 2),
+                                    spreadRadius: 2,
+                                  ),
+                                ],
+                              ),
+                              child: Text(
+                                "15",
                                 style: TextStyle(
                                   fontSize: 35.sp,
                                   fontWeight: FontWeight.bold

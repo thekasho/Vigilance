@@ -84,7 +84,7 @@ class _ShoppingGameScreenState extends State<ShoppingGameScreen> {
               if(cont.statusRequest == StatusRequest.loading){
                 return Container(
                   color: white,
-                  height: 85.h,
+                  height: 84.h,
                   width: 100.w,
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.start,
@@ -106,10 +106,11 @@ class _ShoppingGameScreenState extends State<ShoppingGameScreen> {
                           Container(
                             alignment: Alignment.center,
                             width: 100.w,
-                            height: 96.h,
+                            height: 94.h,
                             child: SizedBox(
                               child: CachedNetworkImage(
                                 imageUrl: "https://microplazatesla.com/vl/images/shopping/list.jpg",
+                                fit: BoxFit.fill,
                                 errorWidget: (_, i, e) {
                                   return Icon(
                                     FontAwesomeIcons.image,
@@ -282,7 +283,7 @@ class _ShoppingGameScreenState extends State<ShoppingGameScreen> {
                           Container(
                             alignment: Alignment.center,
                             width: 100.w,
-                            height: 96.h,
+                            height: 94.h,
                             child: SizedBox(
                               child: CachedNetworkImage(
                                 imageUrl: "https://microplazatesla.com/vl/images/shopping/list.jpg",
@@ -378,7 +379,8 @@ class _ShoppingGameScreenState extends State<ShoppingGameScreen> {
                                         alignment: Alignment.centerRight,
                                         height: 10.h,
                                         child: CachedNetworkImage(
-                                          imageUrl: "https://microplazatesla.com/vl/images/shopping/4.png",
+                                          imageUrl: "https://microplazatesla.com/vl/images/shopping/3.png",
+                                          cacheKey: "3.png",
                                           width: 60,
                                           errorWidget: (_, i, e) {
                                             return Icon(
@@ -458,7 +460,7 @@ class _ShoppingGameScreenState extends State<ShoppingGameScreen> {
                           Container(
                             alignment: Alignment.center,
                             width: 100.w,
-                            height: 96.h,
+                            height: 94.h,
                             child: SizedBox(
                               child: CachedNetworkImage(
                                 imageUrl: "https://microplazatesla.com/vl/images/shopping/list.jpg",
@@ -684,7 +686,7 @@ class _ShoppingGameScreenState extends State<ShoppingGameScreen> {
                           Container(
                             alignment: Alignment.center,
                             width: 100.w,
-                            height: 96.h,
+                            height: 94.h,
                             child: SizedBox(
                               child: CachedNetworkImage(
                                 imageUrl: "https://microplazatesla.com/vl/images/shopping/list.jpg",
@@ -737,7 +739,7 @@ class _ShoppingGameScreenState extends State<ShoppingGameScreen> {
                                           ),
                                           interval: const Duration(seconds: 1),
                                           onFinished: () async {
-                                            // await cont.timesUp();
+                                            await cont.timesUp();
                                           },
                                         ),
                                       )
@@ -779,8 +781,8 @@ class _ShoppingGameScreenState extends State<ShoppingGameScreen> {
                                         alignment: Alignment.centerRight,
                                         height: 10.h,
                                         child: CachedNetworkImage(
-                                          imageUrl: "https://microplazatesla.com/vl/images/shopping/9.png",
-                                          cacheKey: "150",
+                                          imageUrl: "https://microplazatesla.com/vl/images/shopping/64.png",
+                                          cacheKey: "300",
                                           width: 60,
                                           errorWidget: (_, i, e) {
                                             return Icon(
@@ -949,7 +951,7 @@ class _ShoppingGameScreenState extends State<ShoppingGameScreen> {
                           Container(
                             alignment: Alignment.center,
                             width: 100.w,
-                            height: 96.h,
+                            height: 94.h,
                             child: SizedBox(
                               child: CachedNetworkImage(
                                 imageUrl: "https://microplazatesla.com/vl/images/shopping/list.jpg",
@@ -1225,7 +1227,7 @@ class _ShoppingGameScreenState extends State<ShoppingGameScreen> {
                           Container(
                             alignment: Alignment.center,
                             width: 100.w,
-                            height: 96.h,
+                            height: 94.h,
                             child: SizedBox(
                               child: CachedNetworkImage(
                                 imageUrl: "https://microplazatesla.com/vl/images/shopping/list.jpg",
@@ -1239,253 +1241,255 @@ class _ShoppingGameScreenState extends State<ShoppingGameScreen> {
                               ),
                             ),
                           ),
-                          Column(
-                            children: [
-                              SizedBox(
-                                width: 100.w,
-                                child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
+                          SingleChildScrollView(
+                            child: Column(
+                              children: [
+                                SizedBox(
+                                  width: 100.w,
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Container(
+                                        width: 60.w,
+                                        height: 5.h,
+                                        alignment: Alignment.center,
+                                        decoration: BoxDecoration(
+                                          color: lightBtn,
+                                          borderRadius: BorderRadius.circular(15),
+                                          boxShadow: const [
+                                            BoxShadow(
+                                              blurRadius: 4,
+                                              color: Color(0x33000000),
+                                              offset: Offset(0, 2),
+                                              spreadRadius: 2,
+                                            )
+                                          ],
+                                        ),
+                                        padding: EdgeInsets.symmetric(
+                                          vertical: 1.h,
+                                        ),
+                                        margin: const EdgeInsets.only(top: 15),
+                                        child: Countdown(
+                                          controller: cont.countdownController6,
+                                          seconds: 10,
+                                          build: (_, double time) => Text(
+                                            "${time.toInt()} ${"seconds_left".tr}",
+                                            style: const TextStyle(
+                                              fontFamily: "Cairo",
+                                            ),
+                                          ),
+                                          interval: const Duration(seconds: 1),
+                                          onFinished: () async {
+                                            await cont.timesUp();
+                                          },
+                                        ),
+                                      )
+                                    ],
+                                  ),
+                                ),
+                                Row(
+                                  crossAxisAlignment: CrossAxisAlignment.end,
                                   children: [
                                     Container(
-                                      width: 60.w,
-                                      height: 5.h,
-                                      alignment: Alignment.center,
-                                      decoration: BoxDecoration(
-                                        color: lightBtn,
-                                        borderRadius: BorderRadius.circular(15),
-                                        boxShadow: const [
-                                          BoxShadow(
-                                            blurRadius: 4,
-                                            color: Color(0x33000000),
-                                            offset: Offset(0, 2),
-                                            spreadRadius: 2,
-                                          )
-                                        ],
-                                      ),
+                                      height: 15.h,
+                                      width: 100.w,
+                                      alignment: Alignment.centerRight,
                                       padding: EdgeInsets.symmetric(
-                                        vertical: 1.h,
+                                        horizontal: 5.w,
                                       ),
-                                      margin: const EdgeInsets.only(top: 15),
-                                      child: Countdown(
-                                        controller: cont.countdownController6,
-                                        seconds: 10,
-                                        build: (_, double time) => Text(
-                                          "${time.toInt()} ${"seconds_left".tr}",
-                                          style: const TextStyle(
-                                            fontFamily: "Cairo",
+                                    ),
+                                  ],
+                                ),
+                                Container(
+                                  width: 100.w,
+                                  alignment: Alignment.center,
+                                  child: Row(
+                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    children: [
+                                      const Spacer(),
+                                      Container(
+                                        padding: const EdgeInsets.only(top: 30, right: 15),
+                                        height: 10.h,
+                                        child: Text(
+                                          "Cake",
+                                          style: TextStyle(
+                                            fontSize: 22.sp,
+                                            color: black,
                                           ),
                                         ),
-                                        interval: const Duration(seconds: 1),
-                                        onFinished: () async {
-                                          await cont.timesUp();
-                                        },
                                       ),
-                                    )
-                                  ],
-                                ),
-                              ),
-                              Row(
-                                crossAxisAlignment: CrossAxisAlignment.end,
-                                children: [
-                                  Container(
-                                    height: 15.h,
-                                    width: 100.w,
-                                    alignment: Alignment.centerRight,
-                                    padding: EdgeInsets.symmetric(
-                                      horizontal: 5.w,
-                                    ),
+                                      Container(
+                                        alignment: Alignment.centerRight,
+                                        height: 10.h,
+                                        child: CachedNetworkImage(
+                                          imageUrl: "https://microplazatesla.com/vl/images/shopping/29.png",
+                                          width: 60,
+                                          errorWidget: (_, i, e) {
+                                            return Icon(
+                                              FontAwesomeIcons.image,
+                                              size: 13.sp,
+                                              color: Colors.white,
+                                            );
+                                          },
+                                        ),
+                                      ),
+                                      const Spacer(),
+                                    ],
                                   ),
-                                ],
-                              ),
-                              Container(
-                                width: 100.w,
-                                alignment: Alignment.center,
-                                child: Row(
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    const Spacer(),
-                                    Container(
-                                      padding: const EdgeInsets.only(top: 30, right: 15),
-                                      height: 10.h,
-                                      child: Text(
-                                        "Cake",
-                                        style: TextStyle(
-                                          fontSize: 22.sp,
-                                          color: black,
+                                ),
+                                Container(
+                                  width: 100.w,
+                                  alignment: Alignment.center,
+                                  child: Row(
+                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    children: [
+                                      const Spacer(),
+                                      Container(
+                                        padding: const EdgeInsets.only(top: 30, right: 10),
+                                        height: 10.h,
+                                        child: Text(
+                                          "Red Pepper",
+                                          style: TextStyle(
+                                            fontSize: 20.sp,
+                                            color: black,
+                                          ),
                                         ),
                                       ),
-                                    ),
-                                    Container(
-                                      alignment: Alignment.centerRight,
-                                      height: 10.h,
-                                      child: CachedNetworkImage(
-                                        imageUrl: "https://microplazatesla.com/vl/images/shopping/29.png",
-                                        width: 60,
-                                        errorWidget: (_, i, e) {
-                                          return Icon(
-                                            FontAwesomeIcons.image,
-                                            size: 13.sp,
-                                            color: Colors.white,
-                                          );
-                                        },
-                                      ),
-                                    ),
-                                    const Spacer(),
-                                  ],
-                                ),
-                              ),
-                              Container(
-                                width: 100.w,
-                                alignment: Alignment.center,
-                                child: Row(
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    const Spacer(),
-                                    Container(
-                                      padding: const EdgeInsets.only(top: 30, right: 10),
-                                      height: 10.h,
-                                      child: Text(
-                                        "Red Pepper",
-                                        style: TextStyle(
-                                          fontSize: 20.sp,
-                                          color: black,
+                                      Container(
+                                        alignment: Alignment.centerRight,
+                                        height: 10.h,
+                                        child: CachedNetworkImage(
+                                          imageUrl: "https://microplazatesla.com/vl/images/shopping/3.png",
+                                          width: 55,
+                                          errorWidget: (_, i, e) {
+                                            return Icon(
+                                              FontAwesomeIcons.image,
+                                              size: 13.sp,
+                                              color: Colors.white,
+                                            );
+                                          },
                                         ),
                                       ),
-                                    ),
-                                    Container(
-                                      alignment: Alignment.centerRight,
-                                      height: 10.h,
-                                      child: CachedNetworkImage(
-                                        imageUrl: "https://microplazatesla.com/vl/images/shopping/3.png",
-                                        width: 55,
-                                        errorWidget: (_, i, e) {
-                                          return Icon(
-                                            FontAwesomeIcons.image,
-                                            size: 13.sp,
-                                            color: Colors.white,
-                                          );
-                                        },
-                                      ),
-                                    ),
-                                    const Spacer(),
-                                  ],
+                                      const Spacer(),
+                                    ],
+                                  ),
                                 ),
-                              ),
-                              const SizedBox(height: 15),
-                              Container(
-                                width: 100.w,
-                                alignment: Alignment.center,
-                                child: Row(
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    const Spacer(),
-                                    Container(
-                                      padding: const EdgeInsets.only(top: 20, right: 30),
-                                      height: 10.h,
-                                      child: Text(
-                                        "Coffee",
-                                        style: TextStyle(
-                                          fontSize: 22.sp,
-                                          color: black,
+                                const SizedBox(height: 15),
+                                Container(
+                                  width: 100.w,
+                                  alignment: Alignment.center,
+                                  child: Row(
+                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    children: [
+                                      const Spacer(),
+                                      Container(
+                                        padding: const EdgeInsets.only(top: 20, right: 30),
+                                        height: 10.h,
+                                        child: Text(
+                                          "Coffee",
+                                          style: TextStyle(
+                                            fontSize: 22.sp,
+                                            color: black,
+                                          ),
                                         ),
                                       ),
-                                    ),
-                                    Container(
-                                      alignment: Alignment.centerRight,
-                                      height: 10.h,
-                                      child: CachedNetworkImage(
-                                        imageUrl: "https://microplazatesla.com/vl/images/shopping/30.png",
-                                        width: 60,
-                                        errorWidget: (_, i, e) {
-                                          return Icon(
-                                            FontAwesomeIcons.image,
-                                            size: 13.sp,
-                                            color: Colors.white,
-                                          );
-                                        },
-                                      ),
-                                    ),
-                                    const Spacer(),
-                                  ],
-                                ),
-                              ),
-                              const SizedBox(height: 15),
-                              Container(
-                                width: 100.w,
-                                alignment: Alignment.center,
-                                child: Row(
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    const Spacer(),
-                                    Container(
-                                      padding: const EdgeInsets.only(top: 25, right: 30),
-                                      height: 10.h,
-                                      child: Text(
-                                        "Duck",
-                                        style: TextStyle(
-                                          fontSize: 21.sp,
-                                          color: black,
+                                      Container(
+                                        alignment: Alignment.centerRight,
+                                        height: 10.h,
+                                        child: CachedNetworkImage(
+                                          imageUrl: "https://microplazatesla.com/vl/images/shopping/30.png",
+                                          width: 60,
+                                          errorWidget: (_, i, e) {
+                                            return Icon(
+                                              FontAwesomeIcons.image,
+                                              size: 13.sp,
+                                              color: Colors.white,
+                                            );
+                                          },
                                         ),
                                       ),
-                                    ),
-                                    Container(
-                                      alignment: Alignment.centerRight,
-                                      height: 10.h,
-                                      child: CachedNetworkImage(
-                                        imageUrl: "https://microplazatesla.com/vl/images/shopping/7.png",
-                                        width: 60,
-                                        errorWidget: (_, i, e) {
-                                          return Icon(
-                                            FontAwesomeIcons.image,
-                                            size: 13.sp,
-                                            color: Colors.white,
-                                          );
-                                        },
-                                      ),
-                                    ),
-                                    const Spacer(),
-                                  ],
+                                      const Spacer(),
+                                    ],
+                                  ),
                                 ),
-                              ),
-                              Container(
-                                width: 100.w,
-                                alignment: Alignment.center,
-                                child: Row(
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    const Spacer(),
-                                    Container(
-                                      padding: EdgeInsets.only(top: 25, right: 20),
-                                      height: 10.h,
-                                      child: Text(
-                                        "Jelly",
-                                        style: TextStyle(
-                                          fontSize: 21.sp,
-                                          color: black,
+                                const SizedBox(height: 15),
+                                Container(
+                                  width: 100.w,
+                                  alignment: Alignment.center,
+                                  child: Row(
+                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    children: [
+                                      const Spacer(),
+                                      Container(
+                                        padding: const EdgeInsets.only(top: 25, right: 30),
+                                        height: 10.h,
+                                        child: Text(
+                                          "Duck",
+                                          style: TextStyle(
+                                            fontSize: 21.sp,
+                                            color: black,
+                                          ),
                                         ),
                                       ),
-                                    ),
-                                    Container(
-                                      alignment: Alignment.centerRight,
-                                      height: 10.h,
-                                      child: CachedNetworkImage(
-                                        imageUrl: "https://microplazatesla.com/vl/images/shopping/28.png",
-                                        width: 60,
-                                        errorWidget: (_, i, e) {
-                                          return Icon(
-                                            FontAwesomeIcons.image,
-                                            size: 13.sp,
-                                            color: Colors.white,
-                                          );
-                                        },
+                                      Container(
+                                        alignment: Alignment.centerRight,
+                                        height: 10.h,
+                                        child: CachedNetworkImage(
+                                          imageUrl: "https://microplazatesla.com/vl/images/shopping/7.png",
+                                          width: 60,
+                                          errorWidget: (_, i, e) {
+                                            return Icon(
+                                              FontAwesomeIcons.image,
+                                              size: 13.sp,
+                                              color: Colors.white,
+                                            );
+                                          },
+                                        ),
                                       ),
-                                    ),
-                                    const Spacer(),
-                                  ],
+                                      const Spacer(),
+                                    ],
+                                  ),
                                 ),
-                              ),
-                            ],
+                                Container(
+                                  width: 100.w,
+                                  alignment: Alignment.center,
+                                  child: Row(
+                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    children: [
+                                      const Spacer(),
+                                      Container(
+                                        padding: EdgeInsets.only(top: 25, right: 20),
+                                        height: 10.h,
+                                        child: Text(
+                                          "Jelly",
+                                          style: TextStyle(
+                                            fontSize: 21.sp,
+                                            color: black,
+                                          ),
+                                        ),
+                                      ),
+                                      Container(
+                                        alignment: Alignment.centerRight,
+                                        height: 10.h,
+                                        child: CachedNetworkImage(
+                                          imageUrl: "https://microplazatesla.com/vl/images/shopping/28.png",
+                                          width: 60,
+                                          errorWidget: (_, i, e) {
+                                            return Icon(
+                                              FontAwesomeIcons.image,
+                                              size: 13.sp,
+                                              color: Colors.white,
+                                            );
+                                          },
+                                        ),
+                                      ),
+                                      const Spacer(),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
                         ],
                       ),
@@ -1499,7 +1503,7 @@ class _ShoppingGameScreenState extends State<ShoppingGameScreen> {
                           Container(
                             alignment: Alignment.center,
                             width: 100.w,
-                            height: 96.h,
+                            height: 94.h,
                             child: SizedBox(
                               child: CachedNetworkImage(
                                 imageUrl: "https://microplazatesla.com/vl/images/shopping/list.jpg",
@@ -1764,7 +1768,7 @@ class _ShoppingGameScreenState extends State<ShoppingGameScreen> {
                           Container(
                             alignment: Alignment.center,
                             width: 100.w,
-                            height: 96.h,
+                            height: 94.h,
                             child: SizedBox(
                               child: CachedNetworkImage(
                                 imageUrl: "https://microplazatesla.com/vl/images/shopping/list.jpg",
@@ -1778,242 +1782,244 @@ class _ShoppingGameScreenState extends State<ShoppingGameScreen> {
                               ),
                             ),
                           ),
-                          Column(
-                            children: [
-                              SizedBox(
-                                width: 100.w,
-                                child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Container(
-                                      width: 60.w,
-                                      height: 5.h,
-                                      alignment: Alignment.center,
-                                      decoration: BoxDecoration(
-                                        color: lightBtn,
-                                        borderRadius: BorderRadius.circular(15),
-                                        boxShadow: const [
-                                          BoxShadow(
-                                            blurRadius: 4,
-                                            color: Color(0x33000000),
-                                            offset: Offset(0, 2),
-                                            spreadRadius: 2,
-                                          )
-                                        ],
-                                      ),
-                                      padding: EdgeInsets.symmetric(
-                                        vertical: 1.h,
-                                      ),
-                                      margin: const EdgeInsets.only(top: 15),
-                                      child: Countdown(
-                                        controller: cont.countdownController8,
-                                        seconds: 10,
-                                        build: (_, double time) => Text(
-                                          "${time.toInt()} ${"seconds_left".tr}",
-                                          style: const TextStyle(
-                                            fontFamily: "Cairo",
+                          SingleChildScrollView(
+                            child: Column(
+                              children: [
+                                SizedBox(
+                                  width: 100.w,
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Container(
+                                        width: 60.w,
+                                        height: 5.h,
+                                        alignment: Alignment.center,
+                                        decoration: BoxDecoration(
+                                          color: lightBtn,
+                                          borderRadius: BorderRadius.circular(15),
+                                          boxShadow: const [
+                                            BoxShadow(
+                                              blurRadius: 4,
+                                              color: Color(0x33000000),
+                                              offset: Offset(0, 2),
+                                              spreadRadius: 2,
+                                            )
+                                          ],
+                                        ),
+                                        padding: EdgeInsets.symmetric(
+                                          vertical: 1.h,
+                                        ),
+                                        margin: const EdgeInsets.only(top: 15),
+                                        child: Countdown(
+                                          controller: cont.countdownController8,
+                                          seconds: 10,
+                                          build: (_, double time) => Text(
+                                            "${time.toInt()} ${"seconds_left".tr}",
+                                            style: const TextStyle(
+                                              fontFamily: "Cairo",
+                                            ),
+                                          ),
+                                          interval: const Duration(seconds: 1),
+                                          onFinished: () async {
+                                            await cont.timesUp();
+                                          },
+                                        ),
+                                      )
+                                    ],
+                                  ),
+                                ),
+                                SizedBox(height: 15.h),
+                                Container(
+                                  width: 100.w,
+                                  alignment: Alignment.center,
+                                  child: Row(
+                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    children: [
+                                      const Spacer(),
+                                      Container(
+                                        padding: const EdgeInsets.only(top: 35, left: 10),
+                                        height: 10.h,
+                                        child: Text(
+                                          "Buzz Lightyear",
+                                          style: TextStyle(
+                                            fontSize: 20.sp,
+                                            color: black,
                                           ),
                                         ),
-                                        interval: const Duration(seconds: 1),
-                                        onFinished: () async {
-                                          await cont.timesUp();
-                                        },
                                       ),
-                                    )
-                                  ],
-                                ),
-                              ),
-                              SizedBox(height: 15.h),
-                              Container(
-                                width: 100.w,
-                                alignment: Alignment.center,
-                                child: Row(
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    const Spacer(),
-                                    Container(
-                                      padding: const EdgeInsets.only(top: 35, left: 10),
-                                      height: 10.h,
-                                      child: Text(
-                                        "Buzz Lightyear",
-                                        style: TextStyle(
-                                          fontSize: 20.sp,
-                                          color: black,
+                                      Container(
+                                        alignment: Alignment.centerRight,
+                                        height: 10.h,
+                                        child: CachedNetworkImage(
+                                          imageUrl: "https://microplazatesla.com/vl/images/shopping/38.png",
+                                          width: 60,
+                                          errorWidget: (_, i, e) {
+                                            return Icon(
+                                              FontAwesomeIcons.image,
+                                              size: 13.sp,
+                                              color: Colors.white,
+                                            );
+                                          },
                                         ),
                                       ),
-                                    ),
-                                    Container(
-                                      alignment: Alignment.centerRight,
-                                      height: 10.h,
-                                      child: CachedNetworkImage(
-                                        imageUrl: "https://microplazatesla.com/vl/images/shopping/38.png",
-                                        width: 60,
-                                        errorWidget: (_, i, e) {
-                                          return Icon(
-                                            FontAwesomeIcons.image,
-                                            size: 13.sp,
-                                            color: Colors.white,
-                                          );
-                                        },
-                                      ),
-                                    ),
-                                    const Spacer(),
-                                  ],
+                                      const Spacer(),
+                                    ],
+                                  ),
                                 ),
-                              ),
-                              const SizedBox(height: 11),
-                              Container(
-                                width: 100.w,
-                                alignment: Alignment.center,
-                                child: Row(
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    const Spacer(),
-                                    Container(
-                                      padding: const EdgeInsets.only(top: 20, right: 20, left: 15),
-                                      height: 10.h,
-                                      child: Text(
-                                        "Slinky Dog",
-                                        style: TextStyle(
-                                          fontSize: 20.sp,
-                                          color: black,
+                                const SizedBox(height: 11),
+                                Container(
+                                  width: 100.w,
+                                  alignment: Alignment.center,
+                                  child: Row(
+                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    children: [
+                                      const Spacer(),
+                                      Container(
+                                        padding: const EdgeInsets.only(top: 20, right: 20, left: 15),
+                                        height: 10.h,
+                                        child: Text(
+                                          "Slinky Dog",
+                                          style: TextStyle(
+                                            fontSize: 20.sp,
+                                            color: black,
+                                          ),
                                         ),
                                       ),
-                                    ),
-                                    Container(
-                                      alignment: Alignment.centerRight,
-                                      height: 10.h,
-                                      child: CachedNetworkImage(
-                                        imageUrl: "https://microplazatesla.com/vl/images/shopping/33.png",
-                                        width: 70,
-                                        errorWidget: (_, i, e) {
-                                          return Icon(
-                                            FontAwesomeIcons.image,
-                                            size: 13.sp,
-                                            color: Colors.white,
-                                          );
-                                        },
-                                      ),
-                                    ),
-                                    const Spacer(),
-                                  ],
-                                ),
-                              ),
-                              const SizedBox(height: 15),
-                              Container(
-                                width: 100.w,
-                                alignment: Alignment.center,
-                                child: Row(
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    const Spacer(),
-                                    Container(
-                                      padding: const EdgeInsets.only(top: 30, right: 20, left: 30),
-                                      height: 10.h,
-                                      child: Text(
-                                        "Cat Woman",
-                                        style: TextStyle(
-                                          fontSize: 20.sp,
-                                          color: black,
+                                      Container(
+                                        alignment: Alignment.centerRight,
+                                        height: 10.h,
+                                        child: CachedNetworkImage(
+                                          imageUrl: "https://microplazatesla.com/vl/images/shopping/33.png",
+                                          width: 70,
+                                          errorWidget: (_, i, e) {
+                                            return Icon(
+                                              FontAwesomeIcons.image,
+                                              size: 13.sp,
+                                              color: Colors.white,
+                                            );
+                                          },
                                         ),
                                       ),
-                                    ),
-                                    Container(
-                                      alignment: Alignment.centerRight,
-                                      height: 10.h,
-                                      child: CachedNetworkImage(
-                                        imageUrl: "https://microplazatesla.com/vl/images/shopping/39.png",
-                                        width: 70,
-                                        errorWidget: (_, i, e) {
-                                          return Icon(
-                                            FontAwesomeIcons.image,
-                                            size: 13.sp,
-                                            color: Colors.white,
-                                          );
-                                        },
-                                      ),
-                                    ),
-                                    const Spacer(),
-                                  ],
+                                      const Spacer(),
+                                    ],
+                                  ),
                                 ),
-                              ),
-                              const SizedBox(height: 15),
-                              Container(
-                                width: 100.w,
-                                alignment: Alignment.center,
-                                child: Row(
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    const SizedBox(width: 100),
-                                    Container(
-                                      padding: const EdgeInsets.only(top: 25, right: 30, left: 0),
-                                      height: 10.h,
-                                      child: Text(
-                                        "Ladybug",
-                                        style: TextStyle(
-                                          fontSize: 22.sp,
-                                          color: black,
+                                const SizedBox(height: 15),
+                                Container(
+                                  width: 100.w,
+                                  alignment: Alignment.center,
+                                  child: Row(
+                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    children: [
+                                      const Spacer(),
+                                      Container(
+                                        padding: const EdgeInsets.only(top: 30, right: 20, left: 30),
+                                        height: 10.h,
+                                        child: Text(
+                                          "Cat Woman",
+                                          style: TextStyle(
+                                            fontSize: 20.sp,
+                                            color: black,
+                                          ),
                                         ),
                                       ),
-                                    ),
-                                    Container(
-                                      alignment: Alignment.centerRight,
-                                      height: 15.h,
-                                      child: CachedNetworkImage(
-                                        imageUrl: "https://microplazatesla.com/vl/images/shopping/40.png",
-                                        width: 60,
-                                        errorWidget: (_, i, e) {
-                                          return Icon(
-                                            FontAwesomeIcons.image,
-                                            size: 13.sp,
-                                            color: Colors.white,
-                                          );
-                                        },
-                                      ),
-                                    ),
-                                    const Spacer(),
-                                  ],
-                                ),
-                              ),
-                              Container(
-                                width: 100.w,
-                                alignment: Alignment.center,
-                                child: Row(
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    const Spacer(),
-                                    Container(
-                                      padding: const EdgeInsets.only(top: 28, right: 20, left: 10),
-                                      height: 10.h,
-                                      child: Text(
-                                        "Dinosaur",
-                                        style: TextStyle(
-                                          fontSize: 21.sp,
-                                          color: black,
+                                      Container(
+                                        alignment: Alignment.centerRight,
+                                        height: 10.h,
+                                        child: CachedNetworkImage(
+                                          imageUrl: "https://microplazatesla.com/vl/images/shopping/39.png",
+                                          width: 70,
+                                          errorWidget: (_, i, e) {
+                                            return Icon(
+                                              FontAwesomeIcons.image,
+                                              size: 13.sp,
+                                              color: Colors.white,
+                                            );
+                                          },
                                         ),
                                       ),
-                                    ),
-                                    Container(
-                                      alignment: Alignment.centerRight,
-                                      height: 12.h,
-                                      child: CachedNetworkImage(
-                                        imageUrl: "https://microplazatesla.com/vl/images/shopping/41.png",
-                                        width: 65,
-                                        errorWidget: (_, i, e) {
-                                          return Icon(
-                                            FontAwesomeIcons.image,
-                                            size: 13.sp,
-                                            color: Colors.white,
-                                          );
-                                        },
-                                      ),
-                                    ),
-                                    const Spacer(),
-                                  ],
+                                      const Spacer(),
+                                    ],
+                                  ),
                                 ),
-                              ),
-                            ],
+                                const SizedBox(height: 15),
+                                Container(
+                                  width: 100.w,
+                                  alignment: Alignment.center,
+                                  child: Row(
+                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    children: [
+                                      const SizedBox(width: 100),
+                                      Container(
+                                        padding: const EdgeInsets.only(top: 25, right: 30, left: 0),
+                                        height: 10.h,
+                                        child: Text(
+                                          "Ladybug",
+                                          style: TextStyle(
+                                            fontSize: 22.sp,
+                                            color: black,
+                                          ),
+                                        ),
+                                      ),
+                                      Container(
+                                        alignment: Alignment.centerRight,
+                                        height: 15.h,
+                                        child: CachedNetworkImage(
+                                          imageUrl: "https://microplazatesla.com/vl/images/shopping/40.png",
+                                          width: 60,
+                                          errorWidget: (_, i, e) {
+                                            return Icon(
+                                              FontAwesomeIcons.image,
+                                              size: 13.sp,
+                                              color: Colors.white,
+                                            );
+                                          },
+                                        ),
+                                      ),
+                                      const Spacer(),
+                                    ],
+                                  ),
+                                ),
+                                Container(
+                                  width: 100.w,
+                                  alignment: Alignment.center,
+                                  child: Row(
+                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    children: [
+                                      const Spacer(),
+                                      Container(
+                                        padding: const EdgeInsets.only(top: 28, right: 20, left: 10),
+                                        height: 10.h,
+                                        child: Text(
+                                          "Dinosaur",
+                                          style: TextStyle(
+                                            fontSize: 21.sp,
+                                            color: black,
+                                          ),
+                                        ),
+                                      ),
+                                      Container(
+                                        alignment: Alignment.centerRight,
+                                        height: 12.h,
+                                        child: CachedNetworkImage(
+                                          imageUrl: "https://microplazatesla.com/vl/images/shopping/41.png",
+                                          width: 65,
+                                          errorWidget: (_, i, e) {
+                                            return Icon(
+                                              FontAwesomeIcons.image,
+                                              size: 13.sp,
+                                              color: Colors.white,
+                                            );
+                                          },
+                                        ),
+                                      ),
+                                      const Spacer(),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
                         ],
                       ),
@@ -2027,7 +2033,7 @@ class _ShoppingGameScreenState extends State<ShoppingGameScreen> {
                           Container(
                             alignment: Alignment.center,
                             width: 100.w,
-                            height: 96.h,
+                            height: 94.h,
                             child: SizedBox(
                               child: CachedNetworkImage(
                                 imageUrl: "https://microplazatesla.com/vl/images/shopping/list.jpg",
@@ -2041,242 +2047,244 @@ class _ShoppingGameScreenState extends State<ShoppingGameScreen> {
                               ),
                             ),
                           ),
-                          Column(
-                            children: [
-                              SizedBox(
-                                width: 100.w,
-                                child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Container(
-                                      width: 60.w,
-                                      height: 5.h,
-                                      alignment: Alignment.center,
-                                      decoration: BoxDecoration(
-                                        color: lightBtn,
-                                        borderRadius: BorderRadius.circular(15),
-                                        boxShadow: const [
-                                          BoxShadow(
-                                            blurRadius: 4,
-                                            color: Color(0x33000000),
-                                            offset: Offset(0, 2),
-                                            spreadRadius: 2,
-                                          )
-                                        ],
-                                      ),
-                                      padding: EdgeInsets.symmetric(
-                                        vertical: 1.h,
-                                      ),
-                                      margin: const EdgeInsets.only(top: 15),
-                                      child: Countdown(
-                                        controller: cont.countdownController9,
-                                        seconds: 10,
-                                        build: (_, double time) => Text(
-                                          "${time.toInt()} ${"seconds_left".tr}",
-                                          style: const TextStyle(
-                                            fontFamily: "Cairo",
+                          SingleChildScrollView(
+                            child: Column(
+                              children: [
+                                SizedBox(
+                                  width: 100.w,
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Container(
+                                        width: 60.w,
+                                        height: 5.h,
+                                        alignment: Alignment.center,
+                                        decoration: BoxDecoration(
+                                          color: lightBtn,
+                                          borderRadius: BorderRadius.circular(15),
+                                          boxShadow: const [
+                                            BoxShadow(
+                                              blurRadius: 4,
+                                              color: Color(0x33000000),
+                                              offset: Offset(0, 2),
+                                              spreadRadius: 2,
+                                            )
+                                          ],
+                                        ),
+                                        padding: EdgeInsets.symmetric(
+                                          vertical: 1.h,
+                                        ),
+                                        margin: const EdgeInsets.only(top: 15),
+                                        child: Countdown(
+                                          controller: cont.countdownController9,
+                                          seconds: 10,
+                                          build: (_, double time) => Text(
+                                            "${time.toInt()} ${"seconds_left".tr}",
+                                            style: const TextStyle(
+                                              fontFamily: "Cairo",
+                                            ),
+                                          ),
+                                          interval: const Duration(seconds: 1),
+                                          onFinished: () async {
+                                            await cont.timesUp();
+                                          },
+                                        ),
+                                      )
+                                    ],
+                                  ),
+                                ),
+                                SizedBox(height: 15.h),
+                                Container(
+                                  width: 100.w,
+                                  alignment: Alignment.center,
+                                  child: Row(
+                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    children: [
+                                      const Spacer(),
+                                      Container(
+                                        padding: const EdgeInsets.only(top: 32, left: 15, right: 15),
+                                        height: 10.h,
+                                        child: Text(
+                                          "Doughnuts",
+                                          style: TextStyle(
+                                            fontSize: 21.sp,
+                                            color: black,
                                           ),
                                         ),
-                                        interval: const Duration(seconds: 1),
-                                        onFinished: () async {
-                                          await cont.timesUp();
-                                        },
                                       ),
-                                    )
-                                  ],
-                                ),
-                              ),
-                              SizedBox(height: 15.h),
-                              Container(
-                                width: 100.w,
-                                alignment: Alignment.center,
-                                child: Row(
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    const Spacer(),
-                                    Container(
-                                      padding: const EdgeInsets.only(top: 32, left: 15, right: 15),
-                                      height: 10.h,
-                                      child: Text(
-                                        "Doughnuts",
-                                        style: TextStyle(
-                                          fontSize: 21.sp,
-                                          color: black,
+                                      Container(
+                                        alignment: Alignment.centerRight,
+                                        height: 10.h,
+                                        child: CachedNetworkImage(
+                                          imageUrl: "https://microplazatesla.com/vl/images/shopping/42.png",
+                                          width: 60,
+                                          errorWidget: (_, i, e) {
+                                            return Icon(
+                                              FontAwesomeIcons.image,
+                                              size: 13.sp,
+                                              color: Colors.white,
+                                            );
+                                          },
                                         ),
                                       ),
-                                    ),
-                                    Container(
-                                      alignment: Alignment.centerRight,
-                                      height: 10.h,
-                                      child: CachedNetworkImage(
-                                        imageUrl: "https://microplazatesla.com/vl/images/shopping/42.png",
-                                        width: 60,
-                                        errorWidget: (_, i, e) {
-                                          return Icon(
-                                            FontAwesomeIcons.image,
-                                            size: 13.sp,
-                                            color: Colors.white,
-                                          );
-                                        },
-                                      ),
-                                    ),
-                                    const Spacer(),
-                                  ],
+                                      const Spacer(),
+                                    ],
+                                  ),
                                 ),
-                              ),
-                              const SizedBox(height: 11),
-                              Container(
-                                width: 100.w,
-                                alignment: Alignment.center,
-                                child: Row(
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    const Spacer(),
-                                    Container(
-                                      padding: const EdgeInsets.only(top: 20, right: 20, left: 15),
-                                      height: 10.h,
-                                      child: Text(
-                                        "Croissant",
-                                        style: TextStyle(
-                                          fontSize: 20.sp,
-                                          color: black,
+                                const SizedBox(height: 11),
+                                Container(
+                                  width: 100.w,
+                                  alignment: Alignment.center,
+                                  child: Row(
+                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    children: [
+                                      const Spacer(),
+                                      Container(
+                                        padding: const EdgeInsets.only(top: 20, right: 20, left: 15),
+                                        height: 10.h,
+                                        child: Text(
+                                          "Croissant",
+                                          style: TextStyle(
+                                            fontSize: 20.sp,
+                                            color: black,
+                                          ),
                                         ),
                                       ),
-                                    ),
-                                    Container(
-                                      alignment: Alignment.centerRight,
-                                      height: 10.h,
-                                      child: CachedNetworkImage(
-                                        imageUrl: "https://microplazatesla.com/vl/images/shopping/43.png",
-                                        width: 70,
-                                        errorWidget: (_, i, e) {
-                                          return Icon(
-                                            FontAwesomeIcons.image,
-                                            size: 13.sp,
-                                            color: Colors.white,
-                                          );
-                                        },
-                                      ),
-                                    ),
-                                    const Spacer(),
-                                  ],
-                                ),
-                              ),
-                              const SizedBox(height: 15),
-                              Container(
-                                width: 100.w,
-                                alignment: Alignment.center,
-                                child: Row(
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    const Spacer(),
-                                    Container(
-                                      padding: const EdgeInsets.only(top: 28, right: 30),
-                                      height: 10.h,
-                                      child: Text(
-                                        "Apple",
-                                        style: TextStyle(
-                                          fontSize: 22.sp,
-                                          color: black,
+                                      Container(
+                                        alignment: Alignment.centerRight,
+                                        height: 10.h,
+                                        child: CachedNetworkImage(
+                                          imageUrl: "https://microplazatesla.com/vl/images/shopping/43.png",
+                                          width: 70,
+                                          errorWidget: (_, i, e) {
+                                            return Icon(
+                                              FontAwesomeIcons.image,
+                                              size: 13.sp,
+                                              color: Colors.white,
+                                            );
+                                          },
                                         ),
                                       ),
-                                    ),
-                                    Container(
-                                      alignment: Alignment.centerRight,
-                                      height: 10.h,
-                                      child: CachedNetworkImage(
-                                        imageUrl: "https://microplazatesla.com/vl/images/shopping/17.png",
-                                        width: 70,
-                                        errorWidget: (_, i, e) {
-                                          return Icon(
-                                            FontAwesomeIcons.image,
-                                            size: 13.sp,
-                                            color: Colors.white,
-                                          );
-                                        },
-                                      ),
-                                    ),
-                                    const Spacer(),
-                                  ],
+                                      const Spacer(),
+                                    ],
+                                  ),
                                 ),
-                              ),
-                              const SizedBox(height: 15),
-                              Container(
-                                width: 100.w,
-                                alignment: Alignment.center,
-                                child: Row(
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    const SizedBox(width: 100),
-                                    Container(
-                                      padding: const EdgeInsets.only(top: 22, right: 20, left: 0),
-                                      height: 10.h,
-                                      child: Text(
-                                        "Cupcake",
-                                        style: TextStyle(
-                                          fontSize: 22.sp,
-                                          color: black,
+                                const SizedBox(height: 15),
+                                Container(
+                                  width: 100.w,
+                                  alignment: Alignment.center,
+                                  child: Row(
+                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    children: [
+                                      const Spacer(),
+                                      Container(
+                                        padding: const EdgeInsets.only(top: 28, right: 30),
+                                        height: 10.h,
+                                        child: Text(
+                                          "Apple",
+                                          style: TextStyle(
+                                            fontSize: 22.sp,
+                                            color: black,
+                                          ),
                                         ),
                                       ),
-                                    ),
-                                    Container(
-                                      alignment: Alignment.centerRight,
-                                      height: 15.h,
-                                      child: CachedNetworkImage(
-                                        imageUrl: "https://microplazatesla.com/vl/images/shopping/44.png",
-                                        width: 80,
-                                        errorWidget: (_, i, e) {
-                                          return Icon(
-                                            FontAwesomeIcons.image,
-                                            size: 13.sp,
-                                            color: Colors.white,
-                                          );
-                                        },
-                                      ),
-                                    ),
-                                    const Spacer(),
-                                  ],
-                                ),
-                              ),
-                              Container(
-                                width: 100.w,
-                                alignment: Alignment.center,
-                                child: Row(
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    const Spacer(),
-                                    Container(
-                                      padding: const EdgeInsets.only(top: 28, right: 20, left: 10),
-                                      height: 10.h,
-                                      child: Text(
-                                        "Graps",
-                                        style: TextStyle(
-                                          fontSize: 21.sp,
-                                          color: black,
+                                      Container(
+                                        alignment: Alignment.centerRight,
+                                        height: 10.h,
+                                        child: CachedNetworkImage(
+                                          imageUrl: "https://microplazatesla.com/vl/images/shopping/17.png",
+                                          width: 70,
+                                          errorWidget: (_, i, e) {
+                                            return Icon(
+                                              FontAwesomeIcons.image,
+                                              size: 13.sp,
+                                              color: Colors.white,
+                                            );
+                                          },
                                         ),
                                       ),
-                                    ),
-                                    Container(
-                                      alignment: Alignment.centerRight,
-                                      height: 12.h,
-                                      child: CachedNetworkImage(
-                                        imageUrl: "https://microplazatesla.com/vl/images/shopping/18.png",
-                                        width: 80,
-                                        errorWidget: (_, i, e) {
-                                          return Icon(
-                                            FontAwesomeIcons.image,
-                                            size: 13.sp,
-                                            color: Colors.white,
-                                          );
-                                        },
-                                      ),
-                                    ),
-                                    const Spacer(),
-                                  ],
+                                      const Spacer(),
+                                    ],
+                                  ),
                                 ),
-                              ),
-                            ],
+                                const SizedBox(height: 15),
+                                Container(
+                                  width: 100.w,
+                                  alignment: Alignment.center,
+                                  child: Row(
+                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    children: [
+                                      const SizedBox(width: 100),
+                                      Container(
+                                        padding: const EdgeInsets.only(top: 22, right: 20, left: 0),
+                                        height: 10.h,
+                                        child: Text(
+                                          "Cupcake",
+                                          style: TextStyle(
+                                            fontSize: 22.sp,
+                                            color: black,
+                                          ),
+                                        ),
+                                      ),
+                                      Container(
+                                        alignment: Alignment.centerRight,
+                                        height: 15.h,
+                                        child: CachedNetworkImage(
+                                          imageUrl: "https://microplazatesla.com/vl/images/shopping/44.png",
+                                          width: 80,
+                                          errorWidget: (_, i, e) {
+                                            return Icon(
+                                              FontAwesomeIcons.image,
+                                              size: 13.sp,
+                                              color: Colors.white,
+                                            );
+                                          },
+                                        ),
+                                      ),
+                                      const Spacer(),
+                                    ],
+                                  ),
+                                ),
+                                Container(
+                                  width: 100.w,
+                                  alignment: Alignment.center,
+                                  child: Row(
+                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    children: [
+                                      const Spacer(),
+                                      Container(
+                                        padding: const EdgeInsets.only(top: 28, right: 20, left: 10),
+                                        height: 10.h,
+                                        child: Text(
+                                          "Graps",
+                                          style: TextStyle(
+                                            fontSize: 21.sp,
+                                            color: black,
+                                          ),
+                                        ),
+                                      ),
+                                      Container(
+                                        alignment: Alignment.centerRight,
+                                        height: 12.h,
+                                        child: CachedNetworkImage(
+                                          imageUrl: "https://microplazatesla.com/vl/images/shopping/18.png",
+                                          width: 80,
+                                          errorWidget: (_, i, e) {
+                                            return Icon(
+                                              FontAwesomeIcons.image,
+                                              size: 13.sp,
+                                              color: Colors.white,
+                                            );
+                                          },
+                                        ),
+                                      ),
+                                      const Spacer(),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
                         ],
                       ),
@@ -2290,7 +2298,7 @@ class _ShoppingGameScreenState extends State<ShoppingGameScreen> {
                           Container(
                             alignment: Alignment.center,
                             width: 100.w,
-                            height: 96.h,
+                            height: 94.h,
                             child: SizedBox(
                               child: CachedNetworkImage(
                                 imageUrl: "https://microplazatesla.com/vl/images/shopping/list.jpg",
@@ -2304,242 +2312,244 @@ class _ShoppingGameScreenState extends State<ShoppingGameScreen> {
                               ),
                             ),
                           ),
-                          Column(
-                            children: [
-                              SizedBox(
-                                width: 100.w,
-                                child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Container(
-                                      width: 60.w,
-                                      height: 5.h,
-                                      alignment: Alignment.center,
-                                      decoration: BoxDecoration(
-                                        color: lightBtn,
-                                        borderRadius: BorderRadius.circular(15),
-                                        boxShadow: const [
-                                          BoxShadow(
-                                            blurRadius: 4,
-                                            color: Color(0x33000000),
-                                            offset: Offset(0, 2),
-                                            spreadRadius: 2,
-                                          )
-                                        ],
-                                      ),
-                                      padding: EdgeInsets.symmetric(
-                                        vertical: 1.h,
-                                      ),
-                                      margin: const EdgeInsets.only(top: 15),
-                                      child: Countdown(
-                                        controller: cont.countdownController10,
-                                        seconds: 10,
-                                        build: (_, double time) => Text(
-                                          "${time.toInt()} ${"seconds_left".tr}",
-                                          style: const TextStyle(
-                                            fontFamily: "Cairo",
+                          SingleChildScrollView(
+                            child: Column(
+                              children: [
+                                SizedBox(
+                                  width: 100.w,
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Container(
+                                        width: 60.w,
+                                        height: 5.h,
+                                        alignment: Alignment.center,
+                                        decoration: BoxDecoration(
+                                          color: lightBtn,
+                                          borderRadius: BorderRadius.circular(15),
+                                          boxShadow: const [
+                                            BoxShadow(
+                                              blurRadius: 4,
+                                              color: Color(0x33000000),
+                                              offset: Offset(0, 2),
+                                              spreadRadius: 2,
+                                            )
+                                          ],
+                                        ),
+                                        padding: EdgeInsets.symmetric(
+                                          vertical: 1.h,
+                                        ),
+                                        margin: const EdgeInsets.only(top: 15),
+                                        child: Countdown(
+                                          controller: cont.countdownController10,
+                                          seconds: 10,
+                                          build: (_, double time) => Text(
+                                            "${time.toInt()} ${"seconds_left".tr}",
+                                            style: const TextStyle(
+                                              fontFamily: "Cairo",
+                                            ),
+                                          ),
+                                          interval: const Duration(seconds: 1),
+                                          onFinished: () async {
+                                            await cont.timesUp();
+                                          },
+                                        ),
+                                      )
+                                    ],
+                                  ),
+                                ),
+                                SizedBox(height: 15.h),
+                                Container(
+                                  width: 100.w,
+                                  alignment: Alignment.center,
+                                  child: Row(
+                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    children: [
+                                      const Spacer(),
+                                      Container(
+                                        padding: const EdgeInsets.only(top: 32, left: 15, right: 15),
+                                        height: 10.h,
+                                        child: Text(
+                                          "Kettle",
+                                          style: TextStyle(
+                                            fontSize: 21.sp,
+                                            color: black,
                                           ),
                                         ),
-                                        interval: const Duration(seconds: 1),
-                                        onFinished: () async {
-                                          await cont.timesUp();
-                                        },
                                       ),
-                                    )
-                                  ],
-                                ),
-                              ),
-                              SizedBox(height: 15.h),
-                              Container(
-                                width: 100.w,
-                                alignment: Alignment.center,
-                                child: Row(
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    const Spacer(),
-                                    Container(
-                                      padding: const EdgeInsets.only(top: 32, left: 15, right: 15),
-                                      height: 10.h,
-                                      child: Text(
-                                        "Kettle",
-                                        style: TextStyle(
-                                          fontSize: 21.sp,
-                                          color: black,
+                                      Container(
+                                        alignment: Alignment.centerRight,
+                                        height: 10.h,
+                                        child: CachedNetworkImage(
+                                          imageUrl: "https://microplazatesla.com/vl/images/shopping/47.png",
+                                          width: 60,
+                                          errorWidget: (_, i, e) {
+                                            return Icon(
+                                              FontAwesomeIcons.image,
+                                              size: 13.sp,
+                                              color: Colors.white,
+                                            );
+                                          },
                                         ),
                                       ),
-                                    ),
-                                    Container(
-                                      alignment: Alignment.centerRight,
-                                      height: 10.h,
-                                      child: CachedNetworkImage(
-                                        imageUrl: "https://microplazatesla.com/vl/images/shopping/47.png",
-                                        width: 60,
-                                        errorWidget: (_, i, e) {
-                                          return Icon(
-                                            FontAwesomeIcons.image,
-                                            size: 13.sp,
-                                            color: Colors.white,
-                                          );
-                                        },
-                                      ),
-                                    ),
-                                    const Spacer(),
-                                  ],
+                                      const Spacer(),
+                                    ],
+                                  ),
                                 ),
-                              ),
-                              const SizedBox(height: 11),
-                              Container(
-                                width: 100.w,
-                                alignment: Alignment.center,
-                                child: Row(
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    const Spacer(),
-                                    Container(
-                                      padding: const EdgeInsets.only(top: 15, right: 20, left: 15),
-                                      height: 10.h,
-                                      child: Text(
-                                        "Iron",
-                                        style: TextStyle(
-                                          fontSize: 22.sp,
-                                          color: black,
+                                const SizedBox(height: 11),
+                                Container(
+                                  width: 100.w,
+                                  alignment: Alignment.center,
+                                  child: Row(
+                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    children: [
+                                      const Spacer(),
+                                      Container(
+                                        padding: const EdgeInsets.only(top: 15, right: 20, left: 15),
+                                        height: 10.h,
+                                        child: Text(
+                                          "Iron",
+                                          style: TextStyle(
+                                            fontSize: 22.sp,
+                                            color: black,
+                                          ),
                                         ),
                                       ),
-                                    ),
-                                    Container(
-                                      alignment: Alignment.centerRight,
-                                      height: 10.h,
-                                      child: CachedNetworkImage(
-                                        imageUrl: "https://microplazatesla.com/vl/images/shopping/48.png",
-                                        width: 70,
-                                        errorWidget: (_, i, e) {
-                                          return Icon(
-                                            FontAwesomeIcons.image,
-                                            size: 13.sp,
-                                            color: Colors.white,
-                                          );
-                                        },
-                                      ),
-                                    ),
-                                    const Spacer(),
-                                  ],
-                                ),
-                              ),
-                              const SizedBox(height: 15),
-                              Container(
-                                width: 100.w,
-                                alignment: Alignment.center,
-                                child: Row(
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    const Spacer(),
-                                    Container(
-                                      padding: const EdgeInsets.only(top: 30, right: 25, left: 30),
-                                      height: 10.h,
-                                      child: Text(
-                                        "Toothpaste",
-                                        style: TextStyle(
-                                          fontSize: 20.sp,
-                                          color: black,
+                                      Container(
+                                        alignment: Alignment.centerRight,
+                                        height: 10.h,
+                                        child: CachedNetworkImage(
+                                          imageUrl: "https://microplazatesla.com/vl/images/shopping/48.png",
+                                          width: 70,
+                                          errorWidget: (_, i, e) {
+                                            return Icon(
+                                              FontAwesomeIcons.image,
+                                              size: 13.sp,
+                                              color: Colors.white,
+                                            );
+                                          },
                                         ),
                                       ),
-                                    ),
-                                    Container(
-                                      alignment: Alignment.centerRight,
-                                      height: 10.h,
-                                      child: CachedNetworkImage(
-                                        imageUrl: "https://microplazatesla.com/vl/images/shopping/49.png",
-                                        width: 70,
-                                        errorWidget: (_, i, e) {
-                                          return Icon(
-                                            FontAwesomeIcons.image,
-                                            size: 13.sp,
-                                            color: Colors.white,
-                                          );
-                                        },
-                                      ),
-                                    ),
-                                    const Spacer(),
-                                  ],
+                                      const Spacer(),
+                                    ],
+                                  ),
                                 ),
-                              ),
-                              const SizedBox(height: 15),
-                              Container(
-                                width: 100.w,
-                                alignment: Alignment.center,
-                                child: Row(
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    const SizedBox(width: 100),
-                                    Container(
-                                      padding: const EdgeInsets.only(top: 25, right: 20, left: 0),
-                                      height: 10.h,
-                                      child: Text(
-                                        "Toothbrush",
-                                        style: TextStyle(
-                                          fontSize: 20.sp,
-                                          color: black,
+                                const SizedBox(height: 15),
+                                Container(
+                                  width: 100.w,
+                                  alignment: Alignment.center,
+                                  child: Row(
+                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    children: [
+                                      const Spacer(),
+                                      Container(
+                                        padding: const EdgeInsets.only(top: 30, right: 25, left: 30),
+                                        height: 10.h,
+                                        child: Text(
+                                          "Toothpaste",
+                                          style: TextStyle(
+                                            fontSize: 20.sp,
+                                            color: black,
+                                          ),
                                         ),
                                       ),
-                                    ),
-                                    Container(
-                                      alignment: Alignment.centerRight,
-                                      height: 15.h,
-                                      child: CachedNetworkImage(
-                                        imageUrl: "https://microplazatesla.com/vl/images/shopping/50.png",
-                                        width: 80,
-                                        errorWidget: (_, i, e) {
-                                          return Icon(
-                                            FontAwesomeIcons.image,
-                                            size: 13.sp,
-                                            color: Colors.white,
-                                          );
-                                        },
-                                      ),
-                                    ),
-                                    const Spacer(),
-                                  ],
-                                ),
-                              ),
-                              Container(
-                                width: 100.w,
-                                alignment: Alignment.center,
-                                child: Row(
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    const Spacer(),
-                                    Container(
-                                      padding: const EdgeInsets.only(top: 28, right: 35, left: 10),
-                                      height: 10.h,
-                                      child: Text(
-                                        "Ball",
-                                        style: TextStyle(
-                                          fontSize: 21.sp,
-                                          color: black,
+                                      Container(
+                                        alignment: Alignment.centerRight,
+                                        height: 10.h,
+                                        child: CachedNetworkImage(
+                                          imageUrl: "https://microplazatesla.com/vl/images/shopping/49.png",
+                                          width: 70,
+                                          errorWidget: (_, i, e) {
+                                            return Icon(
+                                              FontAwesomeIcons.image,
+                                              size: 13.sp,
+                                              color: Colors.white,
+                                            );
+                                          },
                                         ),
                                       ),
-                                    ),
-                                    Container(
-                                      alignment: Alignment.centerRight,
-                                      height: 12.h,
-                                      child: CachedNetworkImage(
-                                        imageUrl: "https://microplazatesla.com/vl/images/shopping/6.png",
-                                        width: 80,
-                                        errorWidget: (_, i, e) {
-                                          return Icon(
-                                            FontAwesomeIcons.image,
-                                            size: 13.sp,
-                                            color: Colors.white,
-                                          );
-                                        },
-                                      ),
-                                    ),
-                                    const Spacer(),
-                                  ],
+                                      const Spacer(),
+                                    ],
+                                  ),
                                 ),
-                              ),
-                            ],
+                                const SizedBox(height: 15),
+                                Container(
+                                  width: 100.w,
+                                  alignment: Alignment.center,
+                                  child: Row(
+                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    children: [
+                                      const SizedBox(width: 100),
+                                      Container(
+                                        padding: const EdgeInsets.only(top: 25, right: 20, left: 0),
+                                        height: 10.h,
+                                        child: Text(
+                                          "Toothbrush",
+                                          style: TextStyle(
+                                            fontSize: 20.sp,
+                                            color: black,
+                                          ),
+                                        ),
+                                      ),
+                                      Container(
+                                        alignment: Alignment.centerRight,
+                                        height: 15.h,
+                                        child: CachedNetworkImage(
+                                          imageUrl: "https://microplazatesla.com/vl/images/shopping/50.png",
+                                          width: 80,
+                                          errorWidget: (_, i, e) {
+                                            return Icon(
+                                              FontAwesomeIcons.image,
+                                              size: 13.sp,
+                                              color: Colors.white,
+                                            );
+                                          },
+                                        ),
+                                      ),
+                                      const Spacer(),
+                                    ],
+                                  ),
+                                ),
+                                Container(
+                                  width: 100.w,
+                                  alignment: Alignment.center,
+                                  child: Row(
+                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    children: [
+                                      const Spacer(),
+                                      Container(
+                                        padding: const EdgeInsets.only(top: 28, right: 35, left: 10),
+                                        height: 10.h,
+                                        child: Text(
+                                          "Ball",
+                                          style: TextStyle(
+                                            fontSize: 21.sp,
+                                            color: black,
+                                          ),
+                                        ),
+                                      ),
+                                      Container(
+                                        alignment: Alignment.centerRight,
+                                        height: 12.h,
+                                        child: CachedNetworkImage(
+                                          imageUrl: "https://microplazatesla.com/vl/images/shopping/6.png",
+                                          width: 80,
+                                          errorWidget: (_, i, e) {
+                                            return Icon(
+                                              FontAwesomeIcons.image,
+                                              size: 13.sp,
+                                              color: Colors.white,
+                                            );
+                                          },
+                                        ),
+                                      ),
+                                      const Spacer(),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
                         ],
                       ),
@@ -2553,7 +2563,7 @@ class _ShoppingGameScreenState extends State<ShoppingGameScreen> {
                           Container(
                             alignment: Alignment.center,
                             width: 100.w,
-                            height: 96.h,
+                            height: 94.h,
                             child: SizedBox(
                               child: CachedNetworkImage(
                                 imageUrl: "https://microplazatesla.com/vl/images/shopping/list.jpg",
@@ -2567,243 +2577,245 @@ class _ShoppingGameScreenState extends State<ShoppingGameScreen> {
                               ),
                             ),
                           ),
-                          Column(
-                            children: [
-                              SizedBox(
-                                width: 100.w,
-                                child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Container(
-                                      width: 60.w,
-                                      height: 5.h,
-                                      alignment: Alignment.center,
-                                      decoration: BoxDecoration(
-                                        color: lightBtn,
-                                        borderRadius: BorderRadius.circular(15),
-                                        boxShadow: const [
-                                          BoxShadow(
-                                            blurRadius: 4,
-                                            color: Color(0x33000000),
-                                            offset: Offset(0, 2),
-                                            spreadRadius: 2,
-                                          )
-                                        ],
-                                      ),
-                                      padding: EdgeInsets.symmetric(
-                                        vertical: 1.h,
-                                      ),
-                                      margin: const EdgeInsets.only(top: 15),
-                                      child: Countdown(
-                                        controller: cont.countdownController11,
-                                        seconds: 10,
-                                        build: (_, double time) => Text(
-                                          "${time.toInt()} ${"seconds_left".tr}",
-                                          style: const TextStyle(
-                                            fontFamily: "Cairo",
+                          SingleChildScrollView(
+                            child: Column(
+                              children: [
+                                SizedBox(
+                                  width: 100.w,
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Container(
+                                        width: 60.w,
+                                        height: 5.h,
+                                        alignment: Alignment.center,
+                                        decoration: BoxDecoration(
+                                          color: lightBtn,
+                                          borderRadius: BorderRadius.circular(15),
+                                          boxShadow: const [
+                                            BoxShadow(
+                                              blurRadius: 4,
+                                              color: Color(0x33000000),
+                                              offset: Offset(0, 2),
+                                              spreadRadius: 2,
+                                            )
+                                          ],
+                                        ),
+                                        padding: EdgeInsets.symmetric(
+                                          vertical: 1.h,
+                                        ),
+                                        margin: const EdgeInsets.only(top: 15),
+                                        child: Countdown(
+                                          controller: cont.countdownController11,
+                                          seconds: 10,
+                                          build: (_, double time) => Text(
+                                            "${time.toInt()} ${"seconds_left".tr}",
+                                            style: const TextStyle(
+                                              fontFamily: "Cairo",
+                                            ),
+                                          ),
+                                          interval: const Duration(seconds: 1),
+                                          onFinished: () async {
+                                            await cont.timesUp();
+                                          },
+                                        ),
+                                      )
+                                    ],
+                                  ),
+                                ),
+                                SizedBox(height: 15.h),
+                                Container(
+                                  width: 100.w,
+                                  alignment: Alignment.center,
+                                  child: Row(
+                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    children: [
+                                      const Spacer(),
+                                      Container(
+                                        padding: const EdgeInsets.only(top: 32, left: 15, right: 40),
+                                        height: 10.h,
+                                        child: Text(
+                                          "Bunny",
+                                          style: TextStyle(
+                                            fontSize: 21.sp,
+                                            color: black,
                                           ),
                                         ),
-                                        interval: const Duration(seconds: 1),
-                                        onFinished: () async {
-                                          await cont.timesUp();
-                                        },
                                       ),
-                                    )
-                                  ],
-                                ),
-                              ),
-                              SizedBox(height: 15.h),
-                              Container(
-                                width: 100.w,
-                                alignment: Alignment.center,
-                                child: Row(
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    const Spacer(),
-                                    Container(
-                                      padding: const EdgeInsets.only(top: 32, left: 15, right: 40),
-                                      height: 10.h,
-                                      child: Text(
-                                        "Bunny",
-                                        style: TextStyle(
-                                          fontSize: 21.sp,
-                                          color: black,
+                                      Container(
+                                        alignment: Alignment.centerRight,
+                                        height: 10.h,
+                                        child: CachedNetworkImage(
+                                          imageUrl: "https://microplazatesla.com/vl/images/shopping/19.png",
+                                          width: 70,
+                                          errorWidget: (_, i, e) {
+                                            return Icon(
+                                              FontAwesomeIcons.image,
+                                              size: 13.sp,
+                                              color: Colors.white,
+                                            );
+                                          },
                                         ),
                                       ),
-                                    ),
-                                    Container(
-                                      alignment: Alignment.centerRight,
-                                      height: 10.h,
-                                      child: CachedNetworkImage(
-                                        imageUrl: "https://microplazatesla.com/vl/images/shopping/19.png",
-                                        width: 70,
-                                        errorWidget: (_, i, e) {
-                                          return Icon(
-                                            FontAwesomeIcons.image,
-                                            size: 13.sp,
-                                            color: Colors.white,
-                                          );
-                                        },
-                                      ),
-                                    ),
-                                    const Spacer(),
-                                  ],
+                                      const Spacer(),
+                                    ],
+                                  ),
                                 ),
-                              ),
-                              const SizedBox(height: 11),
-                              Container(
-                                width: 100.w,
-                                alignment: Alignment.center,
-                                child: Row(
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    const Spacer(),
-                                    Container(
-                                      padding: const EdgeInsets.only(top: 15, right: 20, left: 15),
-                                      height: 10.h,
-                                      child: Text(
-                                        "Rocket",
-                                        style: TextStyle(
-                                          fontSize: 22.sp,
-                                          color: black,
+                                const SizedBox(height: 11),
+                                Container(
+                                  width: 100.w,
+                                  alignment: Alignment.center,
+                                  child: Row(
+                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    children: [
+                                      const Spacer(),
+                                      Container(
+                                        padding: const EdgeInsets.only(top: 15, right: 20, left: 15),
+                                        height: 10.h,
+                                        child: Text(
+                                          "Rocket",
+                                          style: TextStyle(
+                                            fontSize: 22.sp,
+                                            color: black,
+                                          ),
                                         ),
                                       ),
-                                    ),
-                                    Container(
-                                      alignment: Alignment.centerRight,
-                                      height: 10.h,
-                                      child: CachedNetworkImage(
-                                        imageUrl: "https://microplazatesla.com/vl/images/shopping/20.png",
-                                        width: 70,
-                                        errorWidget: (_, i, e) {
-                                          return Icon(
-                                            FontAwesomeIcons.image,
-                                            size: 13.sp,
-                                            color: Colors.white,
-                                          );
-                                        },
-                                      ),
-                                    ),
-                                    const Spacer(),
-                                  ],
-                                ),
-                              ),
-                              const SizedBox(height: 15),
-                              Container(
-                                width: 100.w,
-                                alignment: Alignment.center,
-                                child: Row(
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    const Spacer(),
-                                    Container(
-                                      padding: const EdgeInsets.only(top: 30, right: 50, left: 10),
-                                      height: 10.h,
-                                      child: Text(
-                                        "Books",
-                                        style: TextStyle(
-                                          fontSize: 20.sp,
-                                          color: black,
+                                      Container(
+                                        alignment: Alignment.centerRight,
+                                        height: 10.h,
+                                        child: CachedNetworkImage(
+                                          imageUrl: "https://microplazatesla.com/vl/images/shopping/20.png",
+                                          width: 70,
+                                          errorWidget: (_, i, e) {
+                                            return Icon(
+                                              FontAwesomeIcons.image,
+                                              size: 13.sp,
+                                              color: Colors.white,
+                                            );
+                                          },
                                         ),
                                       ),
-                                    ),
-                                    Container(
-                                      alignment: Alignment.centerRight,
-                                      height: 10.h,
-                                      child: CachedNetworkImage(
-                                        imageUrl: "https://microplazatesla.com/vl/images/shopping/53.png",
-                                        width: 70,
-                                        errorWidget: (_, i, e) {
-                                          return Icon(
-                                            FontAwesomeIcons.image,
-                                            size: 13.sp,
-                                            color: Colors.white,
-                                          );
-                                        },
-                                      ),
-                                    ),
-                                    const Spacer(),
-                                  ],
+                                      const Spacer(),
+                                    ],
+                                  ),
                                 ),
-                              ),
-                              const SizedBox(height: 15),
-                              Container(
-                                width: 100.w,
-                                alignment: Alignment.center,
-                                child: Row(
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    const SizedBox(width: 100),
-                                    Container(
-                                      padding: const EdgeInsets.only(top: 25, right: 30, left: 0),
-                                      height: 10.h,
-                                      child: Text(
-                                        "Baseball",
-                                        style: TextStyle(
-                                          fontSize: 20.sp,
-                                          color: black,
+                                const SizedBox(height: 15),
+                                Container(
+                                  width: 100.w,
+                                  alignment: Alignment.center,
+                                  child: Row(
+                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    children: [
+                                      const Spacer(),
+                                      Container(
+                                        padding: const EdgeInsets.only(top: 30, right: 50, left: 10),
+                                        height: 10.h,
+                                        child: Text(
+                                          "Books",
+                                          style: TextStyle(
+                                            fontSize: 20.sp,
+                                            color: black,
+                                          ),
                                         ),
                                       ),
-                                    ),
-                                    const SizedBox(width: 20),
-                                    Container(
-                                      alignment: Alignment.centerRight,
-                                      height: 15.h,
-                                      child: CachedNetworkImage(
-                                        imageUrl: "https://microplazatesla.com/vl/images/shopping/54.png",
-                                        width: 60,
-                                        errorWidget: (_, i, e) {
-                                          return Icon(
-                                            FontAwesomeIcons.image,
-                                            size: 13.sp,
-                                            color: Colors.white,
-                                          );
-                                        },
-                                      ),
-                                    ),
-                                    const Spacer(),
-                                  ],
-                                ),
-                              ),
-                              Container(
-                                width: 100.w,
-                                alignment: Alignment.center,
-                                child: Row(
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    const Spacer(),
-                                    Container(
-                                      padding: const EdgeInsets.only(top: 28, right: 35, left: 10),
-                                      height: 10.h,
-                                      child: Text(
-                                        "Cake",
-                                        style: TextStyle(
-                                          fontSize: 21.sp,
-                                          color: black,
+                                      Container(
+                                        alignment: Alignment.centerRight,
+                                        height: 10.h,
+                                        child: CachedNetworkImage(
+                                          imageUrl: "https://microplazatesla.com/vl/images/shopping/53.png",
+                                          width: 70,
+                                          errorWidget: (_, i, e) {
+                                            return Icon(
+                                              FontAwesomeIcons.image,
+                                              size: 13.sp,
+                                              color: Colors.white,
+                                            );
+                                          },
                                         ),
                                       ),
-                                    ),
-                                    Container(
-                                      alignment: Alignment.centerRight,
-                                      height: 12.h,
-                                      child: CachedNetworkImage(
-                                        imageUrl: "https://microplazatesla.com/vl/images/shopping/29.png",
-                                        width: 80,
-                                        errorWidget: (_, i, e) {
-                                          return Icon(
-                                            FontAwesomeIcons.image,
-                                            size: 13.sp,
-                                            color: Colors.white,
-                                          );
-                                        },
-                                      ),
-                                    ),
-                                    const Spacer(),
-                                  ],
+                                      const Spacer(),
+                                    ],
+                                  ),
                                 ),
-                              ),
-                            ],
+                                const SizedBox(height: 15),
+                                Container(
+                                  width: 100.w,
+                                  alignment: Alignment.center,
+                                  child: Row(
+                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    children: [
+                                      const SizedBox(width: 100),
+                                      Container(
+                                        padding: const EdgeInsets.only(top: 25, right: 30, left: 0),
+                                        height: 10.h,
+                                        child: Text(
+                                          "Baseball",
+                                          style: TextStyle(
+                                            fontSize: 20.sp,
+                                            color: black,
+                                          ),
+                                        ),
+                                      ),
+                                      const SizedBox(width: 20),
+                                      Container(
+                                        alignment: Alignment.centerRight,
+                                        height: 15.h,
+                                        child: CachedNetworkImage(
+                                          imageUrl: "https://microplazatesla.com/vl/images/shopping/54.png",
+                                          width: 60,
+                                          errorWidget: (_, i, e) {
+                                            return Icon(
+                                              FontAwesomeIcons.image,
+                                              size: 13.sp,
+                                              color: Colors.white,
+                                            );
+                                          },
+                                        ),
+                                      ),
+                                      const Spacer(),
+                                    ],
+                                  ),
+                                ),
+                                Container(
+                                  width: 100.w,
+                                  alignment: Alignment.center,
+                                  child: Row(
+                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    children: [
+                                      const Spacer(),
+                                      Container(
+                                        padding: const EdgeInsets.only(top: 28, right: 35, left: 10),
+                                        height: 10.h,
+                                        child: Text(
+                                          "Cake",
+                                          style: TextStyle(
+                                            fontSize: 21.sp,
+                                            color: black,
+                                          ),
+                                        ),
+                                      ),
+                                      Container(
+                                        alignment: Alignment.centerRight,
+                                        height: 12.h,
+                                        child: CachedNetworkImage(
+                                          imageUrl: "https://microplazatesla.com/vl/images/shopping/29.png",
+                                          width: 80,
+                                          errorWidget: (_, i, e) {
+                                            return Icon(
+                                              FontAwesomeIcons.image,
+                                              size: 13.sp,
+                                              color: Colors.white,
+                                            );
+                                          },
+                                        ),
+                                      ),
+                                      const Spacer(),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
                         ],
                       ),
@@ -2817,7 +2829,7 @@ class _ShoppingGameScreenState extends State<ShoppingGameScreen> {
                           Container(
                             alignment: Alignment.center,
                             width: 100.w,
-                            height: 96.h,
+                            height: 94.h,
                             child: SizedBox(
                               child: CachedNetworkImage(
                                 imageUrl: "https://microplazatesla.com/vl/images/shopping/list.jpg",
@@ -2831,243 +2843,245 @@ class _ShoppingGameScreenState extends State<ShoppingGameScreen> {
                               ),
                             ),
                           ),
-                          Column(
-                            children: [
-                              SizedBox(
-                                width: 100.w,
-                                child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Container(
-                                      width: 60.w,
-                                      height: 5.h,
-                                      alignment: Alignment.center,
-                                      decoration: BoxDecoration(
-                                        color: lightBtn,
-                                        borderRadius: BorderRadius.circular(15),
-                                        boxShadow: const [
-                                          BoxShadow(
-                                            blurRadius: 4,
-                                            color: Color(0x33000000),
-                                            offset: Offset(0, 2),
-                                            spreadRadius: 2,
-                                          )
-                                        ],
-                                      ),
-                                      padding: EdgeInsets.symmetric(
-                                        vertical: 1.h,
-                                      ),
-                                      margin: const EdgeInsets.only(top: 15),
-                                      child: Countdown(
-                                        controller: cont.countdownController12,
-                                        seconds: 10,
-                                        build: (_, double time) => Text(
-                                          "${time.toInt()} ${"seconds_left".tr}",
-                                          style: const TextStyle(
-                                            fontFamily: "Cairo",
+                          SingleChildScrollView(
+                            child: Column(
+                              children: [
+                                SizedBox(
+                                  width: 100.w,
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Container(
+                                        width: 60.w,
+                                        height: 5.h,
+                                        alignment: Alignment.center,
+                                        decoration: BoxDecoration(
+                                          color: lightBtn,
+                                          borderRadius: BorderRadius.circular(15),
+                                          boxShadow: const [
+                                            BoxShadow(
+                                              blurRadius: 4,
+                                              color: Color(0x33000000),
+                                              offset: Offset(0, 2),
+                                              spreadRadius: 2,
+                                            )
+                                          ],
+                                        ),
+                                        padding: EdgeInsets.symmetric(
+                                          vertical: 1.h,
+                                        ),
+                                        margin: const EdgeInsets.only(top: 15),
+                                        child: Countdown(
+                                          controller: cont.countdownController12,
+                                          seconds: 10,
+                                          build: (_, double time) => Text(
+                                            "${time.toInt()} ${"seconds_left".tr}",
+                                            style: const TextStyle(
+                                              fontFamily: "Cairo",
+                                            ),
+                                          ),
+                                          interval: const Duration(seconds: 1),
+                                          onFinished: () async {
+                                            await cont.timesUp();
+                                          },
+                                        ),
+                                      )
+                                    ],
+                                  ),
+                                ),
+                                SizedBox(height: 13.h),
+                                Container(
+                                  width: 100.w,
+                                  alignment: Alignment.center,
+                                  child: Row(
+                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    children: [
+                                      const Spacer(),
+                                      Container(
+                                        padding: const EdgeInsets.only(top: 32, left: 15, right: 40),
+                                        height: 10.h,
+                                        child: Text(
+                                          "Pen",
+                                          style: TextStyle(
+                                            fontSize: 21.sp,
+                                            color: black,
                                           ),
                                         ),
-                                        interval: const Duration(seconds: 1),
-                                        onFinished: () async {
-                                          await cont.timesUp();
-                                        },
                                       ),
-                                    )
-                                  ],
-                                ),
-                              ),
-                              SizedBox(height: 13.h),
-                              Container(
-                                width: 100.w,
-                                alignment: Alignment.center,
-                                child: Row(
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    const Spacer(),
-                                    Container(
-                                      padding: const EdgeInsets.only(top: 32, left: 15, right: 40),
-                                      height: 10.h,
-                                      child: Text(
-                                        "Pen",
-                                        style: TextStyle(
-                                          fontSize: 21.sp,
-                                          color: black,
+                                      Container(
+                                        alignment: Alignment.centerRight,
+                                        height: 10.h,
+                                        child: CachedNetworkImage(
+                                          imageUrl: "https://microplazatesla.com/vl/images/shopping/56.png",
+                                          width: 70,
+                                          errorWidget: (_, i, e) {
+                                            return Icon(
+                                              FontAwesomeIcons.image,
+                                              size: 13.sp,
+                                              color: Colors.white,
+                                            );
+                                          },
                                         ),
                                       ),
-                                    ),
-                                    Container(
-                                      alignment: Alignment.centerRight,
-                                      height: 10.h,
-                                      child: CachedNetworkImage(
-                                        imageUrl: "https://microplazatesla.com/vl/images/shopping/56.png",
-                                        width: 70,
-                                        errorWidget: (_, i, e) {
-                                          return Icon(
-                                            FontAwesomeIcons.image,
-                                            size: 13.sp,
-                                            color: Colors.white,
-                                          );
-                                        },
-                                      ),
-                                    ),
-                                    const Spacer(),
-                                  ],
+                                      const Spacer(),
+                                    ],
+                                  ),
                                 ),
-                              ),
-                              const SizedBox(height: 11),
-                              Container(
-                                width: 100.w,
-                                alignment: Alignment.center,
-                                child: Row(
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    const Spacer(),
-                                    Container(
-                                      padding: const EdgeInsets.only(top: 17, right: 20, left: 15),
-                                      height: 10.h,
-                                      child: Text(
-                                        "Backpack",
-                                        style: TextStyle(
-                                          fontSize: 21.sp,
-                                          color: black,
+                                const SizedBox(height: 11),
+                                Container(
+                                  width: 100.w,
+                                  alignment: Alignment.center,
+                                  child: Row(
+                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    children: [
+                                      const Spacer(),
+                                      Container(
+                                        padding: const EdgeInsets.only(top: 17, right: 20, left: 15),
+                                        height: 10.h,
+                                        child: Text(
+                                          "Backpack",
+                                          style: TextStyle(
+                                            fontSize: 21.sp,
+                                            color: black,
+                                          ),
                                         ),
                                       ),
-                                    ),
-                                    Container(
-                                      alignment: Alignment.centerRight,
-                                      height: 10.h,
-                                      child: CachedNetworkImage(
-                                        imageUrl: "https://microplazatesla.com/vl/images/shopping/57.png",
-                                        width: 70,
-                                        errorWidget: (_, i, e) {
-                                          return Icon(
-                                            FontAwesomeIcons.image,
-                                            size: 13.sp,
-                                            color: Colors.white,
-                                          );
-                                        },
-                                      ),
-                                    ),
-                                    const Spacer(),
-                                  ],
-                                ),
-                              ),
-                              const SizedBox(height: 15),
-                              Container(
-                                width: 100.w,
-                                alignment: Alignment.center,
-                                child: Row(
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    const Spacer(),
-                                    Container(
-                                      padding: const EdgeInsets.only(top: 25, right: 20, left: 10),
-                                      height: 10.h,
-                                      child: Text(
-                                        "Suitcase",
-                                        style: TextStyle(
-                                          fontSize: 20.sp,
-                                          color: black,
+                                      Container(
+                                        alignment: Alignment.centerRight,
+                                        height: 10.h,
+                                        child: CachedNetworkImage(
+                                          imageUrl: "https://microplazatesla.com/vl/images/shopping/57.png",
+                                          width: 70,
+                                          errorWidget: (_, i, e) {
+                                            return Icon(
+                                              FontAwesomeIcons.image,
+                                              size: 13.sp,
+                                              color: Colors.white,
+                                            );
+                                          },
                                         ),
                                       ),
-                                    ),
-                                    Container(
-                                      alignment: Alignment.centerRight,
-                                      height: 12.h,
-                                      child: CachedNetworkImage(
-                                        imageUrl: "https://microplazatesla.com/vl/images/shopping/58.png",
-                                        width: 70,
-                                        errorWidget: (_, i, e) {
-                                          return Icon(
-                                            FontAwesomeIcons.image,
-                                            size: 13.sp,
-                                            color: Colors.white,
-                                          );
-                                        },
-                                      ),
-                                    ),
-                                    const Spacer(),
-                                  ],
+                                      const Spacer(),
+                                    ],
+                                  ),
                                 ),
-                              ),
-                              const SizedBox(height: 15),
-                              Container(
-                                width: 100.w,
-                                alignment: Alignment.center,
-                                child: Row(
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    const SizedBox(width: 100),
-                                    Container(
-                                      padding: const EdgeInsets.only(top: 14),
-                                      height: 10.h,
-                                      child: Text(
-                                        "Pencil case",
-                                        style: TextStyle(
-                                          fontSize: 20.sp,
-                                          color: black,
+                                const SizedBox(height: 15),
+                                Container(
+                                  width: 100.w,
+                                  alignment: Alignment.center,
+                                  child: Row(
+                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    children: [
+                                      const Spacer(),
+                                      Container(
+                                        padding: const EdgeInsets.only(top: 25, right: 20, left: 10),
+                                        height: 10.h,
+                                        child: Text(
+                                          "Suitcase",
+                                          style: TextStyle(
+                                            fontSize: 20.sp,
+                                            color: black,
+                                          ),
                                         ),
                                       ),
-                                    ),
-                                    const SizedBox(width: 20),
-                                    Container(
-                                      alignment: Alignment.centerRight,
-                                      height: 15.h,
-                                      child: CachedNetworkImage(
-                                        imageUrl: "https://microplazatesla.com/vl/images/shopping/59.png",
-                                        width: 80,
-                                        errorWidget: (_, i, e) {
-                                          return Icon(
-                                            FontAwesomeIcons.image,
-                                            size: 13.sp,
-                                            color: Colors.white,
-                                          );
-                                        },
-                                      ),
-                                    ),
-                                    const Spacer(),
-                                  ],
-                                ),
-                              ),
-                              Container(
-                                width: 100.w,
-                                alignment: Alignment.center,
-                                child: Row(
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    const Spacer(),
-                                    Container(
-                                      padding: const EdgeInsets.only(top: 22, right: 50, left: 30),
-                                      height: 10.h,
-                                      child: Text(
-                                        "Rubber",
-                                        style: TextStyle(
-                                          fontSize: 21.sp,
-                                          color: black,
+                                      Container(
+                                        alignment: Alignment.centerRight,
+                                        height: 12.h,
+                                        child: CachedNetworkImage(
+                                          imageUrl: "https://microplazatesla.com/vl/images/shopping/58.png",
+                                          width: 70,
+                                          errorWidget: (_, i, e) {
+                                            return Icon(
+                                              FontAwesomeIcons.image,
+                                              size: 13.sp,
+                                              color: Colors.white,
+                                            );
+                                          },
                                         ),
                                       ),
-                                    ),
-                                    Container(
-                                      alignment: Alignment.centerRight,
-                                      height: 10.h,
-                                      child: CachedNetworkImage(
-                                        imageUrl: "https://microplazatesla.com/vl/images/shopping/60.png",
-                                        width: 80,
-                                        errorWidget: (_, i, e) {
-                                          return Icon(
-                                            FontAwesomeIcons.image,
-                                            size: 13.sp,
-                                            color: Colors.white,
-                                          );
-                                        },
-                                      ),
-                                    ),
-                                    const Spacer(),
-                                  ],
+                                      const Spacer(),
+                                    ],
+                                  ),
                                 ),
-                              ),
-                            ],
+                                const SizedBox(height: 15),
+                                Container(
+                                  width: 100.w,
+                                  alignment: Alignment.center,
+                                  child: Row(
+                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    children: [
+                                      const SizedBox(width: 100),
+                                      Container(
+                                        padding: const EdgeInsets.only(top: 14),
+                                        height: 10.h,
+                                        child: Text(
+                                          "Pencil case",
+                                          style: TextStyle(
+                                            fontSize: 20.sp,
+                                            color: black,
+                                          ),
+                                        ),
+                                      ),
+                                      const SizedBox(width: 20),
+                                      Container(
+                                        alignment: Alignment.centerRight,
+                                        height: 15.h,
+                                        child: CachedNetworkImage(
+                                          imageUrl: "https://microplazatesla.com/vl/images/shopping/59.png",
+                                          width: 80,
+                                          errorWidget: (_, i, e) {
+                                            return Icon(
+                                              FontAwesomeIcons.image,
+                                              size: 13.sp,
+                                              color: Colors.white,
+                                            );
+                                          },
+                                        ),
+                                      ),
+                                      const Spacer(),
+                                    ],
+                                  ),
+                                ),
+                                Container(
+                                  width: 100.w,
+                                  alignment: Alignment.center,
+                                  child: Row(
+                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    children: [
+                                      const Spacer(),
+                                      Container(
+                                        padding: const EdgeInsets.only(top: 22, right: 50, left: 30),
+                                        height: 10.h,
+                                        child: Text(
+                                          "Rubber",
+                                          style: TextStyle(
+                                            fontSize: 21.sp,
+                                            color: black,
+                                          ),
+                                        ),
+                                      ),
+                                      Container(
+                                        alignment: Alignment.centerRight,
+                                        height: 10.h,
+                                        child: CachedNetworkImage(
+                                          imageUrl: "https://microplazatesla.com/vl/images/shopping/60.png",
+                                          width: 80,
+                                          errorWidget: (_, i, e) {
+                                            return Icon(
+                                              FontAwesomeIcons.image,
+                                              size: 13.sp,
+                                              color: Colors.white,
+                                            );
+                                          },
+                                        ),
+                                      ),
+                                      const Spacer(),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
                         ],
                       ),
@@ -3081,7 +3095,7 @@ class _ShoppingGameScreenState extends State<ShoppingGameScreen> {
                           Container(
                             alignment: Alignment.center,
                             width: 100.w,
-                            height: 96.h,
+                            height: 94.h,
                             child: SizedBox(
                               child: CachedNetworkImage(
                                 imageUrl: "https://microplazatesla.com/vl/images/shopping/list.jpg",
@@ -3095,243 +3109,245 @@ class _ShoppingGameScreenState extends State<ShoppingGameScreen> {
                               ),
                             ),
                           ),
-                          Column(
-                            children: [
-                              SizedBox(
-                                width: 100.w,
-                                child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Container(
-                                      width: 60.w,
-                                      height: 5.h,
-                                      alignment: Alignment.center,
-                                      decoration: BoxDecoration(
-                                        color: lightBtn,
-                                        borderRadius: BorderRadius.circular(15),
-                                        boxShadow: const [
-                                          BoxShadow(
-                                            blurRadius: 4,
-                                            color: Color(0x33000000),
-                                            offset: Offset(0, 2),
-                                            spreadRadius: 2,
-                                          )
-                                        ],
-                                      ),
-                                      padding: EdgeInsets.symmetric(
-                                        vertical: 1.h,
-                                      ),
-                                      margin: const EdgeInsets.only(top: 15),
-                                      child: Countdown(
-                                        controller: cont.countdownController13,
-                                        seconds: 10,
-                                        build: (_, double time) => Text(
-                                          "${time.toInt()} ${"seconds_left".tr}",
-                                          style: const TextStyle(
-                                            fontFamily: "Cairo",
+                          SingleChildScrollView(
+                            child: Column(
+                              children: [
+                                SizedBox(
+                                  width: 100.w,
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Container(
+                                        width: 60.w,
+                                        height: 5.h,
+                                        alignment: Alignment.center,
+                                        decoration: BoxDecoration(
+                                          color: lightBtn,
+                                          borderRadius: BorderRadius.circular(15),
+                                          boxShadow: const [
+                                            BoxShadow(
+                                              blurRadius: 4,
+                                              color: Color(0x33000000),
+                                              offset: Offset(0, 2),
+                                              spreadRadius: 2,
+                                            )
+                                          ],
+                                        ),
+                                        padding: EdgeInsets.symmetric(
+                                          vertical: 1.h,
+                                        ),
+                                        margin: const EdgeInsets.only(top: 15),
+                                        child: Countdown(
+                                          controller: cont.countdownController13,
+                                          seconds: 10,
+                                          build: (_, double time) => Text(
+                                            "${time.toInt()} ${"seconds_left".tr}",
+                                            style: const TextStyle(
+                                              fontFamily: "Cairo",
+                                            ),
+                                          ),
+                                          interval: const Duration(seconds: 1),
+                                          onFinished: () async {
+                                            await cont.timesUp();
+                                          },
+                                        ),
+                                      )
+                                    ],
+                                  ),
+                                ),
+                                SizedBox(height: 13.h),
+                                Container(
+                                  width: 100.w,
+                                  alignment: Alignment.center,
+                                  child: Row(
+                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    children: [
+                                      const Spacer(),
+                                      Container(
+                                        padding: const EdgeInsets.only(top: 25, left: 15, right: 40),
+                                        height: 10.h,
+                                        child: Text(
+                                          "Bunny",
+                                          style: TextStyle(
+                                            fontSize: 21.sp,
+                                            color: black,
                                           ),
                                         ),
-                                        interval: const Duration(seconds: 1),
-                                        onFinished: () async {
-                                          await cont.timesUp();
-                                        },
                                       ),
-                                    )
-                                  ],
-                                ),
-                              ),
-                              SizedBox(height: 13.h),
-                              Container(
-                                width: 100.w,
-                                alignment: Alignment.center,
-                                child: Row(
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    const Spacer(),
-                                    Container(
-                                      padding: const EdgeInsets.only(top: 25, left: 15, right: 40),
-                                      height: 10.h,
-                                      child: Text(
-                                        "Bunny",
-                                        style: TextStyle(
-                                          fontSize: 21.sp,
-                                          color: black,
+                                      Container(
+                                        alignment: Alignment.centerRight,
+                                        height: 10.h,
+                                        child: CachedNetworkImage(
+                                          imageUrl: "https://microplazatesla.com/vl/images/shopping/19.png",
+                                          width: 70,
+                                          errorWidget: (_, i, e) {
+                                            return Icon(
+                                              FontAwesomeIcons.image,
+                                              size: 13.sp,
+                                              color: Colors.white,
+                                            );
+                                          },
                                         ),
                                       ),
-                                    ),
-                                    Container(
-                                      alignment: Alignment.centerRight,
-                                      height: 10.h,
-                                      child: CachedNetworkImage(
-                                        imageUrl: "https://microplazatesla.com/vl/images/shopping/19.png",
-                                        width: 70,
-                                        errorWidget: (_, i, e) {
-                                          return Icon(
-                                            FontAwesomeIcons.image,
-                                            size: 13.sp,
-                                            color: Colors.white,
-                                          );
-                                        },
-                                      ),
-                                    ),
-                                    const Spacer(),
-                                  ],
+                                      const Spacer(),
+                                    ],
+                                  ),
                                 ),
-                              ),
-                              const SizedBox(height: 11),
-                              Container(
-                                width: 100.w,
-                                alignment: Alignment.center,
-                                child: Row(
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    const Spacer(),
-                                    Container(
-                                      padding: const EdgeInsets.only(top: 17, right: 30, left: 15),
-                                      height: 10.h,
-                                      child: Text(
-                                        "Rocket",
-                                        style: TextStyle(
-                                          fontSize: 21.sp,
-                                          color: black,
+                                const SizedBox(height: 11),
+                                Container(
+                                  width: 100.w,
+                                  alignment: Alignment.center,
+                                  child: Row(
+                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    children: [
+                                      const Spacer(),
+                                      Container(
+                                        padding: const EdgeInsets.only(top: 17, right: 30, left: 15),
+                                        height: 10.h,
+                                        child: Text(
+                                          "Rocket",
+                                          style: TextStyle(
+                                            fontSize: 21.sp,
+                                            color: black,
+                                          ),
                                         ),
                                       ),
-                                    ),
-                                    Container(
-                                      alignment: Alignment.centerRight,
-                                      height: 10.h,
-                                      child: CachedNetworkImage(
-                                        imageUrl: "https://microplazatesla.com/vl/images/shopping/20.png",
-                                        width: 70,
-                                        errorWidget: (_, i, e) {
-                                          return Icon(
-                                            FontAwesomeIcons.image,
-                                            size: 13.sp,
-                                            color: Colors.white,
-                                          );
-                                        },
-                                      ),
-                                    ),
-                                    const Spacer(),
-                                  ],
-                                ),
-                              ),
-                              const SizedBox(height: 15),
-                              Container(
-                                width: 100.w,
-                                alignment: Alignment.center,
-                                child: Row(
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    const Spacer(),
-                                    Container(
-                                      padding: const EdgeInsets.only(top: 25, right: 55, left: 0),
-                                      height: 10.h,
-                                      child: Text(
-                                        "Car",
-                                        style: TextStyle(
-                                          fontSize: 20.sp,
-                                          color: black,
+                                      Container(
+                                        alignment: Alignment.centerRight,
+                                        height: 10.h,
+                                        child: CachedNetworkImage(
+                                          imageUrl: "https://microplazatesla.com/vl/images/shopping/20.png",
+                                          width: 70,
+                                          errorWidget: (_, i, e) {
+                                            return Icon(
+                                              FontAwesomeIcons.image,
+                                              size: 13.sp,
+                                              color: Colors.white,
+                                            );
+                                          },
                                         ),
                                       ),
-                                    ),
-                                    Container(
-                                      alignment: Alignment.centerRight,
-                                      height: 12.h,
-                                      child: CachedNetworkImage(
-                                        imageUrl: "https://microplazatesla.com/vl/images/shopping/23.png",
-                                        width: 70,
-                                        errorWidget: (_, i, e) {
-                                          return Icon(
-                                            FontAwesomeIcons.image,
-                                            size: 13.sp,
-                                            color: Colors.white,
-                                          );
-                                        },
-                                      ),
-                                    ),
-                                    const Spacer(),
-                                  ],
+                                      const Spacer(),
+                                    ],
+                                  ),
                                 ),
-                              ),
-                              const SizedBox(height: 0),
-                              Container(
-                                width: 100.w,
-                                alignment: Alignment.center,
-                                child: Row(
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    const SizedBox(width: 100),
-                                    Container(
-                                      padding: const EdgeInsets.only(top: 15, right: 25),
-                                      height: 10.h,
-                                      child: Text(
-                                        "Baseball",
-                                        style: TextStyle(
-                                          fontSize: 20.sp,
-                                          color: black,
+                                const SizedBox(height: 15),
+                                Container(
+                                  width: 100.w,
+                                  alignment: Alignment.center,
+                                  child: Row(
+                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    children: [
+                                      const Spacer(),
+                                      Container(
+                                        padding: const EdgeInsets.only(top: 25, right: 55, left: 0),
+                                        height: 10.h,
+                                        child: Text(
+                                          "Car",
+                                          style: TextStyle(
+                                            fontSize: 20.sp,
+                                            color: black,
+                                          ),
                                         ),
                                       ),
-                                    ),
-                                    const SizedBox(width: 20),
-                                    Container(
-                                      alignment: Alignment.centerRight,
-                                      height: 15.h,
-                                      child: CachedNetworkImage(
-                                        imageUrl: "https://microplazatesla.com/vl/images/shopping/54.png",
-                                        width: 60,
-                                        errorWidget: (_, i, e) {
-                                          return Icon(
-                                            FontAwesomeIcons.image,
-                                            size: 13.sp,
-                                            color: Colors.white,
-                                          );
-                                        },
-                                      ),
-                                    ),
-                                    const Spacer(),
-                                  ],
-                                ),
-                              ),
-                              Container(
-                                width: 100.w,
-                                alignment: Alignment.center,
-                                child: Row(
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    const Spacer(),
-                                    Container(
-                                      padding: const EdgeInsets.only(top: 22, right: 50, left: 30),
-                                      height: 10.h,
-                                      child: Text(
-                                        "Jelly",
-                                        style: TextStyle(
-                                          fontSize: 21.sp,
-                                          color: black,
+                                      Container(
+                                        alignment: Alignment.centerRight,
+                                        height: 12.h,
+                                        child: CachedNetworkImage(
+                                          imageUrl: "https://microplazatesla.com/vl/images/shopping/23.png",
+                                          width: 70,
+                                          errorWidget: (_, i, e) {
+                                            return Icon(
+                                              FontAwesomeIcons.image,
+                                              size: 13.sp,
+                                              color: Colors.white,
+                                            );
+                                          },
                                         ),
                                       ),
-                                    ),
-                                    Container(
-                                      alignment: Alignment.centerRight,
-                                      height: 10.h,
-                                      child: CachedNetworkImage(
-                                        imageUrl: "https://microplazatesla.com/vl/images/shopping/28.png",
-                                        width: 80,
-                                        errorWidget: (_, i, e) {
-                                          return Icon(
-                                            FontAwesomeIcons.image,
-                                            size: 13.sp,
-                                            color: Colors.white,
-                                          );
-                                        },
-                                      ),
-                                    ),
-                                    const Spacer(),
-                                  ],
+                                      const Spacer(),
+                                    ],
+                                  ),
                                 ),
-                              ),
-                            ],
+                                const SizedBox(height: 0),
+                                Container(
+                                  width: 100.w,
+                                  alignment: Alignment.center,
+                                  child: Row(
+                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    children: [
+                                      const SizedBox(width: 100),
+                                      Container(
+                                        padding: const EdgeInsets.only(top: 15, right: 25),
+                                        height: 10.h,
+                                        child: Text(
+                                          "Baseball",
+                                          style: TextStyle(
+                                            fontSize: 20.sp,
+                                            color: black,
+                                          ),
+                                        ),
+                                      ),
+                                      const SizedBox(width: 20),
+                                      Container(
+                                        alignment: Alignment.centerRight,
+                                        height: 15.h,
+                                        child: CachedNetworkImage(
+                                          imageUrl: "https://microplazatesla.com/vl/images/shopping/54.png",
+                                          width: 60,
+                                          errorWidget: (_, i, e) {
+                                            return Icon(
+                                              FontAwesomeIcons.image,
+                                              size: 13.sp,
+                                              color: Colors.white,
+                                            );
+                                          },
+                                        ),
+                                      ),
+                                      const Spacer(),
+                                    ],
+                                  ),
+                                ),
+                                Container(
+                                  width: 100.w,
+                                  alignment: Alignment.center,
+                                  child: Row(
+                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    children: [
+                                      const Spacer(),
+                                      Container(
+                                        padding: const EdgeInsets.only(top: 22, right: 50, left: 30),
+                                        height: 10.h,
+                                        child: Text(
+                                          "Jelly",
+                                          style: TextStyle(
+                                            fontSize: 21.sp,
+                                            color: black,
+                                          ),
+                                        ),
+                                      ),
+                                      Container(
+                                        alignment: Alignment.centerRight,
+                                        height: 10.h,
+                                        child: CachedNetworkImage(
+                                          imageUrl: "https://microplazatesla.com/vl/images/shopping/28.png",
+                                          width: 80,
+                                          errorWidget: (_, i, e) {
+                                            return Icon(
+                                              FontAwesomeIcons.image,
+                                              size: 13.sp,
+                                              color: Colors.white,
+                                            );
+                                          },
+                                        ),
+                                      ),
+                                      const Spacer(),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
                         ],
                       ),
@@ -3345,7 +3361,7 @@ class _ShoppingGameScreenState extends State<ShoppingGameScreen> {
                           Container(
                             alignment: Alignment.center,
                             width: 100.w,
-                            height: 96.h,
+                            height: 94.h,
                             child: SizedBox(
                               child: CachedNetworkImage(
                                 imageUrl: "https://microplazatesla.com/vl/images/shopping/list.jpg",
@@ -3359,242 +3375,244 @@ class _ShoppingGameScreenState extends State<ShoppingGameScreen> {
                               ),
                             ),
                           ),
-                          Column(
-                            children: [
-                              SizedBox(
-                                width: 100.w,
-                                child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Container(
-                                      width: 60.w,
-                                      height: 5.h,
-                                      alignment: Alignment.center,
-                                      decoration: BoxDecoration(
-                                        color: lightBtn,
-                                        borderRadius: BorderRadius.circular(15),
-                                        boxShadow: const [
-                                          BoxShadow(
-                                            blurRadius: 4,
-                                            color: Color(0x33000000),
-                                            offset: Offset(0, 2),
-                                            spreadRadius: 2,
-                                          )
-                                        ],
-                                      ),
-                                      padding: EdgeInsets.symmetric(
-                                        vertical: 1.h,
-                                      ),
-                                      margin: const EdgeInsets.only(top: 15),
-                                      child: Countdown(
-                                        controller: cont.countdownController14,
-                                        seconds: 10,
-                                        build: (_, double time) => Text(
-                                          "${time.toInt()} ${"seconds_left".tr}",
-                                          style: const TextStyle(
-                                            fontFamily: "Cairo",
+                          SingleChildScrollView(
+                            child: Column(
+                              children: [
+                                SizedBox(
+                                  width: 100.w,
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Container(
+                                        width: 60.w,
+                                        height: 5.h,
+                                        alignment: Alignment.center,
+                                        decoration: BoxDecoration(
+                                          color: lightBtn,
+                                          borderRadius: BorderRadius.circular(15),
+                                          boxShadow: const [
+                                            BoxShadow(
+                                              blurRadius: 4,
+                                              color: Color(0x33000000),
+                                              offset: Offset(0, 2),
+                                              spreadRadius: 2,
+                                            )
+                                          ],
+                                        ),
+                                        padding: EdgeInsets.symmetric(
+                                          vertical: 1.h,
+                                        ),
+                                        margin: const EdgeInsets.only(top: 15),
+                                        child: Countdown(
+                                          controller: cont.countdownController14,
+                                          seconds: 10,
+                                          build: (_, double time) => Text(
+                                            "${time.toInt()} ${"seconds_left".tr}",
+                                            style: const TextStyle(
+                                              fontFamily: "Cairo",
+                                            ),
+                                          ),
+                                          interval: const Duration(seconds: 1),
+                                          onFinished: () async {
+                                            await cont.timesUp();
+                                          },
+                                        ),
+                                      )
+                                    ],
+                                  ),
+                                ),
+                                SizedBox(height: 13.h),
+                                Container(
+                                  width: 100.w,
+                                  alignment: Alignment.center,
+                                  child: Row(
+                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    children: [
+                                      const Spacer(),
+                                      Container(
+                                        padding: const EdgeInsets.only(top: 25, left: 15, right: 50),
+                                        height: 10.h,
+                                        child: Text(
+                                          "Duck",
+                                          style: TextStyle(
+                                            fontSize: 21.sp,
+                                            color: black,
                                           ),
                                         ),
-                                        interval: const Duration(seconds: 1),
-                                        onFinished: () async {
-                                          await cont.timesUp();
-                                        },
                                       ),
-                                    )
-                                  ],
-                                ),
-                              ),
-                              SizedBox(height: 13.h),
-                              Container(
-                                width: 100.w,
-                                alignment: Alignment.center,
-                                child: Row(
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    const Spacer(),
-                                    Container(
-                                      padding: const EdgeInsets.only(top: 25, left: 15, right: 50),
-                                      height: 10.h,
-                                      child: Text(
-                                        "Duck",
-                                        style: TextStyle(
-                                          fontSize: 21.sp,
-                                          color: black,
+                                      Container(
+                                        alignment: Alignment.centerRight,
+                                        height: 10.h,
+                                        child: CachedNetworkImage(
+                                          imageUrl: "https://microplazatesla.com/vl/images/shopping/62.png",
+                                          width: 70,
+                                          errorWidget: (_, i, e) {
+                                            return Icon(
+                                              FontAwesomeIcons.image,
+                                              size: 13.sp,
+                                              color: Colors.white,
+                                            );
+                                          },
                                         ),
                                       ),
-                                    ),
-                                    Container(
-                                      alignment: Alignment.centerRight,
-                                      height: 10.h,
-                                      child: CachedNetworkImage(
-                                        imageUrl: "https://microplazatesla.com/vl/images/shopping/62.png",
-                                        width: 70,
-                                        errorWidget: (_, i, e) {
-                                          return Icon(
-                                            FontAwesomeIcons.image,
-                                            size: 13.sp,
-                                            color: Colors.white,
-                                          );
-                                        },
-                                      ),
-                                    ),
-                                    const Spacer(),
-                                  ],
+                                      const Spacer(),
+                                    ],
+                                  ),
                                 ),
-                              ),
-                              const SizedBox(height: 11),
-                              Container(
-                                width: 100.w,
-                                alignment: Alignment.center,
-                                child: Row(
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    const Spacer(),
-                                    Container(
-                                      padding: const EdgeInsets.only(top: 30, right: 30, left: 15),
-                                      height: 10.h,
-                                      child: Text(
-                                        "Honey",
-                                        style: TextStyle(
-                                          fontSize: 21.sp,
-                                          color: black,
+                                const SizedBox(height: 11),
+                                Container(
+                                  width: 100.w,
+                                  alignment: Alignment.center,
+                                  child: Row(
+                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    children: [
+                                      const Spacer(),
+                                      Container(
+                                        padding: const EdgeInsets.only(top: 30, right: 30, left: 15),
+                                        height: 10.h,
+                                        child: Text(
+                                          "Honey",
+                                          style: TextStyle(
+                                            fontSize: 21.sp,
+                                            color: black,
+                                          ),
                                         ),
                                       ),
-                                    ),
-                                    Container(
-                                      alignment: Alignment.centerRight,
-                                      height: 10.h,
-                                      child: CachedNetworkImage(
-                                        imageUrl: "https://microplazatesla.com/vl/images/shopping/1.png",
-                                        width: 70,
-                                        errorWidget: (_, i, e) {
-                                          return Icon(
-                                            FontAwesomeIcons.image,
-                                            size: 13.sp,
-                                            color: Colors.white,
-                                          );
-                                        },
-                                      ),
-                                    ),
-                                    const Spacer(),
-                                  ],
-                                ),
-                              ),
-                              const SizedBox(height: 15),
-                              Container(
-                                width: 100.w,
-                                alignment: Alignment.center,
-                                child: Row(
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    const Spacer(),
-                                    Container(
-                                      padding: const EdgeInsets.only(top: 15, right: 45, left: 0),
-                                      height: 10.h,
-                                      child: Text(
-                                        "Doll",
-                                        style: TextStyle(
-                                          fontSize: 22.sp,
-                                          color: black,
+                                      Container(
+                                        alignment: Alignment.centerRight,
+                                        height: 10.h,
+                                        child: CachedNetworkImage(
+                                          imageUrl: "https://microplazatesla.com/vl/images/shopping/1.png",
+                                          width: 70,
+                                          errorWidget: (_, i, e) {
+                                            return Icon(
+                                              FontAwesomeIcons.image,
+                                              size: 13.sp,
+                                              color: Colors.white,
+                                            );
+                                          },
                                         ),
                                       ),
-                                    ),
-                                    Container(
-                                      alignment: Alignment.centerRight,
-                                      height: 12.h,
-                                      child: CachedNetworkImage(
-                                        imageUrl: "https://microplazatesla.com/vl/images/shopping/24.png",
-                                        width: 70,
-                                        errorWidget: (_, i, e) {
-                                          return Icon(
-                                            FontAwesomeIcons.image,
-                                            size: 13.sp,
-                                            color: Colors.white,
-                                          );
-                                        },
-                                      ),
-                                    ),
-                                    const Spacer(),
-                                  ],
+                                      const Spacer(),
+                                    ],
+                                  ),
                                 ),
-                              ),
-                              Container(
-                                width: 100.w,
-                                alignment: Alignment.center,
-                                child: Row(
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    const SizedBox(width: 100),
-                                    Container(
-                                      padding: const EdgeInsets.only(top: 15),
-                                      height: 10.h,
-                                      child: Text(
-                                        "Xelephone",
-                                        style: TextStyle(
-                                          fontSize: 20.sp,
-                                          color: black,
+                                const SizedBox(height: 15),
+                                Container(
+                                  width: 100.w,
+                                  alignment: Alignment.center,
+                                  child: Row(
+                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    children: [
+                                      const Spacer(),
+                                      Container(
+                                        padding: const EdgeInsets.only(top: 15, right: 45, left: 0),
+                                        height: 10.h,
+                                        child: Text(
+                                          "Doll",
+                                          style: TextStyle(
+                                            fontSize: 22.sp,
+                                            color: black,
+                                          ),
                                         ),
                                       ),
-                                    ),
-                                    const SizedBox(width: 20),
-                                    Container(
-                                      alignment: Alignment.centerRight,
-                                      height: 15.h,
-                                      child: CachedNetworkImage(
-                                        imageUrl: "https://microplazatesla.com/vl/images/shopping/15.png",
-                                        width: 70,
-                                        errorWidget: (_, i, e) {
-                                          return Icon(
-                                            FontAwesomeIcons.image,
-                                            size: 13.sp,
-                                            color: Colors.white,
-                                          );
-                                        },
-                                      ),
-                                    ),
-                                    const Spacer(),
-                                  ],
-                                ),
-                              ),
-                              Container(
-                                width: 100.w,
-                                alignment: Alignment.center,
-                                child: Row(
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    const Spacer(),
-                                    Container(
-                                      padding: const EdgeInsets.only(top: 22, right: 50, left: 30),
-                                      height: 10.h,
-                                      child: Text(
-                                        "Cake",
-                                        style: TextStyle(
-                                          fontSize: 21.sp,
-                                          color: black,
+                                      Container(
+                                        alignment: Alignment.centerRight,
+                                        height: 12.h,
+                                        child: CachedNetworkImage(
+                                          imageUrl: "https://microplazatesla.com/vl/images/shopping/24.png",
+                                          width: 70,
+                                          errorWidget: (_, i, e) {
+                                            return Icon(
+                                              FontAwesomeIcons.image,
+                                              size: 13.sp,
+                                              color: Colors.white,
+                                            );
+                                          },
                                         ),
                                       ),
-                                    ),
-                                    Container(
-                                      alignment: Alignment.centerRight,
-                                      height: 10.h,
-                                      child: CachedNetworkImage(
-                                        imageUrl: "https://microplazatesla.com/vl/images/shopping/29.png",
-                                        width: 55,
-                                        errorWidget: (_, i, e) {
-                                          return Icon(
-                                            FontAwesomeIcons.image,
-                                            size: 13.sp,
-                                            color: Colors.white,
-                                          );
-                                        },
-                                      ),
-                                    ),
-                                    const Spacer(),
-                                  ],
+                                      const Spacer(),
+                                    ],
+                                  ),
                                 ),
-                              ),
-                            ],
+                                Container(
+                                  width: 100.w,
+                                  alignment: Alignment.center,
+                                  child: Row(
+                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    children: [
+                                      const SizedBox(width: 100),
+                                      Container(
+                                        padding: const EdgeInsets.only(top: 15),
+                                        height: 10.h,
+                                        child: Text(
+                                          "Xelephone",
+                                          style: TextStyle(
+                                            fontSize: 20.sp,
+                                            color: black,
+                                          ),
+                                        ),
+                                      ),
+                                      const SizedBox(width: 20),
+                                      Container(
+                                        alignment: Alignment.centerRight,
+                                        height: 15.h,
+                                        child: CachedNetworkImage(
+                                          imageUrl: "https://microplazatesla.com/vl/images/shopping/15.png",
+                                          width: 70,
+                                          errorWidget: (_, i, e) {
+                                            return Icon(
+                                              FontAwesomeIcons.image,
+                                              size: 13.sp,
+                                              color: Colors.white,
+                                            );
+                                          },
+                                        ),
+                                      ),
+                                      const Spacer(),
+                                    ],
+                                  ),
+                                ),
+                                Container(
+                                  width: 100.w,
+                                  alignment: Alignment.center,
+                                  child: Row(
+                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    children: [
+                                      const Spacer(),
+                                      Container(
+                                        padding: const EdgeInsets.only(top: 22, right: 50, left: 30),
+                                        height: 10.h,
+                                        child: Text(
+                                          "Cake",
+                                          style: TextStyle(
+                                            fontSize: 21.sp,
+                                            color: black,
+                                          ),
+                                        ),
+                                      ),
+                                      Container(
+                                        alignment: Alignment.centerRight,
+                                        height: 10.h,
+                                        child: CachedNetworkImage(
+                                          imageUrl: "https://microplazatesla.com/vl/images/shopping/29.png",
+                                          width: 55,
+                                          errorWidget: (_, i, e) {
+                                            return Icon(
+                                              FontAwesomeIcons.image,
+                                              size: 13.sp,
+                                              color: Colors.white,
+                                            );
+                                          },
+                                        ),
+                                      ),
+                                      const Spacer(),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
                         ],
                       ),
@@ -3608,7 +3626,7 @@ class _ShoppingGameScreenState extends State<ShoppingGameScreen> {
                           Container(
                             alignment: Alignment.center,
                             width: 100.w,
-                            height: 96.h,
+                            height: 94.h,
                             child: SizedBox(
                               child: CachedNetworkImage(
                                 imageUrl: "https://microplazatesla.com/vl/images/shopping/list.jpg",
@@ -3622,242 +3640,244 @@ class _ShoppingGameScreenState extends State<ShoppingGameScreen> {
                               ),
                             ),
                           ),
-                          Column(
-                            children: [
-                              SizedBox(
-                                width: 100.w,
-                                child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Container(
-                                      width: 60.w,
-                                      height: 5.h,
-                                      alignment: Alignment.center,
-                                      decoration: BoxDecoration(
-                                        color: lightBtn,
-                                        borderRadius: BorderRadius.circular(15),
-                                        boxShadow: const [
-                                          BoxShadow(
-                                            blurRadius: 4,
-                                            color: Color(0x33000000),
-                                            offset: Offset(0, 2),
-                                            spreadRadius: 2,
-                                          )
-                                        ],
-                                      ),
-                                      padding: EdgeInsets.symmetric(
-                                        vertical: 1.h,
-                                      ),
-                                      margin: const EdgeInsets.only(top: 15),
-                                      child: Countdown(
-                                        controller: cont.countdownController15,
-                                        seconds: 10,
-                                        build: (_, double time) => Text(
-                                          "${time.toInt()} ${"seconds_left".tr}",
-                                          style: const TextStyle(
-                                            fontFamily: "Cairo",
+                          SingleChildScrollView(
+                            child: Column(
+                              children: [
+                                SizedBox(
+                                  width: 100.w,
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Container(
+                                        width: 60.w,
+                                        height: 5.h,
+                                        alignment: Alignment.center,
+                                        decoration: BoxDecoration(
+                                          color: lightBtn,
+                                          borderRadius: BorderRadius.circular(15),
+                                          boxShadow: const [
+                                            BoxShadow(
+                                              blurRadius: 4,
+                                              color: Color(0x33000000),
+                                              offset: Offset(0, 2),
+                                              spreadRadius: 2,
+                                            )
+                                          ],
+                                        ),
+                                        padding: EdgeInsets.symmetric(
+                                          vertical: 1.h,
+                                        ),
+                                        margin: const EdgeInsets.only(top: 15),
+                                        child: Countdown(
+                                          controller: cont.countdownController15,
+                                          seconds: 10,
+                                          build: (_, double time) => Text(
+                                            "${time.toInt()} ${"seconds_left".tr}",
+                                            style: const TextStyle(
+                                              fontFamily: "Cairo",
+                                            ),
+                                          ),
+                                          interval: const Duration(seconds: 1),
+                                          onFinished: () async {
+                                            await cont.timesUp();
+                                          },
+                                        ),
+                                      )
+                                    ],
+                                  ),
+                                ),
+                                SizedBox(height: 13.h),
+                                Container(
+                                  width: 100.w,
+                                  alignment: Alignment.center,
+                                  child: Row(
+                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    children: [
+                                      const Spacer(),
+                                      Container(
+                                        padding: const EdgeInsets.only(top: 25, left: 15, right: 50),
+                                        height: 10.h,
+                                        child: Text(
+                                          "Duck",
+                                          style: TextStyle(
+                                            fontSize: 21.sp,
+                                            color: black,
                                           ),
                                         ),
-                                        interval: const Duration(seconds: 1),
-                                        onFinished: () async {
-                                          await cont.timesUp();
-                                        },
                                       ),
-                                    )
-                                  ],
-                                ),
-                              ),
-                              SizedBox(height: 13.h),
-                              Container(
-                                width: 100.w,
-                                alignment: Alignment.center,
-                                child: Row(
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    const Spacer(),
-                                    Container(
-                                      padding: const EdgeInsets.only(top: 25, left: 15, right: 50),
-                                      height: 10.h,
-                                      child: Text(
-                                        "Duck",
-                                        style: TextStyle(
-                                          fontSize: 21.sp,
-                                          color: black,
+                                      Container(
+                                        alignment: Alignment.centerRight,
+                                        height: 10.h,
+                                        child: CachedNetworkImage(
+                                          imageUrl: "https://microplazatesla.com/vl/images/shopping/62.png",
+                                          width: 70,
+                                          errorWidget: (_, i, e) {
+                                            return Icon(
+                                              FontAwesomeIcons.image,
+                                              size: 13.sp,
+                                              color: Colors.white,
+                                            );
+                                          },
                                         ),
                                       ),
-                                    ),
-                                    Container(
-                                      alignment: Alignment.centerRight,
-                                      height: 10.h,
-                                      child: CachedNetworkImage(
-                                        imageUrl: "https://microplazatesla.com/vl/images/shopping/62.png",
-                                        width: 70,
-                                        errorWidget: (_, i, e) {
-                                          return Icon(
-                                            FontAwesomeIcons.image,
-                                            size: 13.sp,
-                                            color: Colors.white,
-                                          );
-                                        },
-                                      ),
-                                    ),
-                                    const Spacer(),
-                                  ],
+                                      const Spacer(),
+                                    ],
+                                  ),
                                 ),
-                              ),
-                              const SizedBox(height: 11),
-                              Container(
-                                width: 100.w,
-                                alignment: Alignment.center,
-                                child: Row(
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    const Spacer(),
-                                    Container(
-                                      padding: const EdgeInsets.only(top: 30, right: 30, left: 15),
-                                      height: 10.h,
-                                      child: Text(
-                                        "Ruler",
-                                        style: TextStyle(
-                                          fontSize: 21.sp,
-                                          color: black,
+                                const SizedBox(height: 11),
+                                Container(
+                                  width: 100.w,
+                                  alignment: Alignment.center,
+                                  child: Row(
+                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    children: [
+                                      const Spacer(),
+                                      Container(
+                                        padding: const EdgeInsets.only(top: 30, right: 30, left: 15),
+                                        height: 10.h,
+                                        child: Text(
+                                          "Ruler",
+                                          style: TextStyle(
+                                            fontSize: 21.sp,
+                                            color: black,
+                                          ),
                                         ),
                                       ),
-                                    ),
-                                    Container(
-                                      alignment: Alignment.centerRight,
-                                      height: 10.h,
-                                      child: CachedNetworkImage(
-                                        imageUrl: "https://microplazatesla.com/vl/images/shopping/61.png",
-                                        width: 55,
-                                        errorWidget: (_, i, e) {
-                                          return Icon(
-                                            FontAwesomeIcons.image,
-                                            size: 13.sp,
-                                            color: Colors.white,
-                                          );
-                                        },
-                                      ),
-                                    ),
-                                    const Spacer(),
-                                  ],
-                                ),
-                              ),
-                              const SizedBox(height: 0),
-                              Container(
-                                width: 100.w,
-                                alignment: Alignment.center,
-                                child: Row(
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    const Spacer(),
-                                    Container(
-                                      padding: const EdgeInsets.only(top: 22, right: 30, left: 17),
-                                      height: 10.h,
-                                      child: Text(
-                                        "Tomato",
-                                        style: TextStyle(
-                                          fontSize: 22.sp,
-                                          color: black,
+                                      Container(
+                                        alignment: Alignment.centerRight,
+                                        height: 10.h,
+                                        child: CachedNetworkImage(
+                                          imageUrl: "https://microplazatesla.com/vl/images/shopping/61.png",
+                                          width: 55,
+                                          errorWidget: (_, i, e) {
+                                            return Icon(
+                                              FontAwesomeIcons.image,
+                                              size: 13.sp,
+                                              color: Colors.white,
+                                            );
+                                          },
                                         ),
                                       ),
-                                    ),
-                                    Container(
-                                      alignment: Alignment.centerRight,
-                                      height: 12.h,
-                                      child: CachedNetworkImage(
-                                        imageUrl: "https://microplazatesla.com/vl/images/shopping/5.png",
-                                        width: 70,
-                                        errorWidget: (_, i, e) {
-                                          return Icon(
-                                            FontAwesomeIcons.image,
-                                            size: 13.sp,
-                                            color: Colors.white,
-                                          );
-                                        },
-                                      ),
-                                    ),
-                                    const Spacer(),
-                                  ],
+                                      const Spacer(),
+                                    ],
+                                  ),
                                 ),
-                              ),
-                              Container(
-                                width: 100.w,
-                                alignment: Alignment.center,
-                                child: Row(
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    const SizedBox(width: 100),
-                                    Container(
-                                      padding: const EdgeInsets.only(top: 30),
-                                      height: 10.h,
-                                      child: Text(
-                                        "Shopping Bag",
-                                        style: TextStyle(
-                                          fontSize: 19.sp,
-                                          color: black,
+                                const SizedBox(height: 0),
+                                Container(
+                                  width: 100.w,
+                                  alignment: Alignment.center,
+                                  child: Row(
+                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    children: [
+                                      const Spacer(),
+                                      Container(
+                                        padding: const EdgeInsets.only(top: 22, right: 30, left: 17),
+                                        height: 10.h,
+                                        child: Text(
+                                          "Tomato",
+                                          style: TextStyle(
+                                            fontSize: 22.sp,
+                                            color: black,
+                                          ),
                                         ),
                                       ),
-                                    ),
-                                    const SizedBox(width: 20),
-                                    Container(
-                                      alignment: Alignment.centerRight,
-                                      height: 15.h,
-                                      child: CachedNetworkImage(
-                                        imageUrl: "https://microplazatesla.com/vl/images/shopping/63.png",
-                                        width: 55,
-                                        errorWidget: (_, i, e) {
-                                          return Icon(
-                                            FontAwesomeIcons.image,
-                                            size: 13.sp,
-                                            color: Colors.white,
-                                          );
-                                        },
-                                      ),
-                                    ),
-                                    const Spacer(),
-                                  ],
-                                ),
-                              ),
-                              Container(
-                                width: 100.w,
-                                alignment: Alignment.center,
-                                child: Row(
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    const Spacer(),
-                                    Container(
-                                      padding: const EdgeInsets.only(top: 25, right: 15, left: 30),
-                                      height: 10.h,
-                                      child: Text(
-                                        "Pencil Case",
-                                        style: TextStyle(
-                                          fontSize: 20.sp,
-                                          color: black,
+                                      Container(
+                                        alignment: Alignment.centerRight,
+                                        height: 12.h,
+                                        child: CachedNetworkImage(
+                                          imageUrl: "https://microplazatesla.com/vl/images/shopping/5.png",
+                                          width: 70,
+                                          errorWidget: (_, i, e) {
+                                            return Icon(
+                                              FontAwesomeIcons.image,
+                                              size: 13.sp,
+                                              color: Colors.white,
+                                            );
+                                          },
                                         ),
                                       ),
-                                    ),
-                                    Container(
-                                      alignment: Alignment.centerRight,
-                                      height: 10.h,
-                                      child: CachedNetworkImage(
-                                        imageUrl: "https://microplazatesla.com/vl/images/shopping/59.png",
-                                        width: 65,
-                                        errorWidget: (_, i, e) {
-                                          return Icon(
-                                            FontAwesomeIcons.image,
-                                            size: 13.sp,
-                                            color: Colors.white,
-                                          );
-                                        },
-                                      ),
-                                    ),
-                                    const Spacer(),
-                                  ],
+                                      const Spacer(),
+                                    ],
+                                  ),
                                 ),
-                              ),
-                            ],
+                                Container(
+                                  width: 100.w,
+                                  alignment: Alignment.center,
+                                  child: Row(
+                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    children: [
+                                      const SizedBox(width: 100),
+                                      Container(
+                                        padding: const EdgeInsets.only(top: 30),
+                                        height: 10.h,
+                                        child: Text(
+                                          "Shopping Bag",
+                                          style: TextStyle(
+                                            fontSize: 19.sp,
+                                            color: black,
+                                          ),
+                                        ),
+                                      ),
+                                      const SizedBox(width: 20),
+                                      Container(
+                                        alignment: Alignment.centerRight,
+                                        height: 15.h,
+                                        child: CachedNetworkImage(
+                                          imageUrl: "https://microplazatesla.com/vl/images/shopping/63.png",
+                                          width: 55,
+                                          errorWidget: (_, i, e) {
+                                            return Icon(
+                                              FontAwesomeIcons.image,
+                                              size: 13.sp,
+                                              color: Colors.white,
+                                            );
+                                          },
+                                        ),
+                                      ),
+                                      const Spacer(),
+                                    ],
+                                  ),
+                                ),
+                                Container(
+                                  width: 100.w,
+                                  alignment: Alignment.center,
+                                  child: Row(
+                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    children: [
+                                      const Spacer(),
+                                      Container(
+                                        padding: const EdgeInsets.only(top: 25, right: 15, left: 30),
+                                        height: 10.h,
+                                        child: Text(
+                                          "Pencil Case",
+                                          style: TextStyle(
+                                            fontSize: 20.sp,
+                                            color: black,
+                                          ),
+                                        ),
+                                      ),
+                                      Container(
+                                        alignment: Alignment.centerRight,
+                                        height: 10.h,
+                                        child: CachedNetworkImage(
+                                          imageUrl: "https://microplazatesla.com/vl/images/shopping/59.png",
+                                          width: 65,
+                                          errorWidget: (_, i, e) {
+                                            return Icon(
+                                              FontAwesomeIcons.image,
+                                              size: 13.sp,
+                                              color: Colors.white,
+                                            );
+                                          },
+                                        ),
+                                      ),
+                                      const Spacer(),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
                         ],
                       ),
@@ -3869,7 +3889,7 @@ class _ShoppingGameScreenState extends State<ShoppingGameScreen> {
               }
               return Container(
                 color: white,
-                height: 85.h,
+                height: 84.h,
                 width: 100.w,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,

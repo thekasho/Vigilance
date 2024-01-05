@@ -40,7 +40,7 @@ class _SupportTeacherTestsScreenState extends State<SupportTeacherTestsScreen> {
               SizedBox(height: 3.h),
               Container(
                 width: 100.w,
-                height: 85.h,
+                height: 84.h,
                 padding: const EdgeInsets.symmetric(
                   horizontal: 20
                 ),
@@ -128,65 +128,67 @@ class _SupportTeacherTestsScreenState extends State<SupportTeacherTestsScreen> {
                         ),
                         padding: const EdgeInsets.all(5),
                         child: Row(
-                            children: [
-                              Container(
-                                padding: const EdgeInsets.all(5),
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(20),
-                                  color: white,
-                                  boxShadow: const [
-                                    BoxShadow(
-                                      blurRadius: 4,
-                                      color: Color(0x33000000),
-                                      offset: Offset(3, 5),
-                                      spreadRadius: 1,
-                                    )
-                                  ],
-                                ),
-                                child: Icon(
-                                  Icons.hourglass_empty,
-                                  size: 35,
-                                  color: grayDark.withOpacity(.6),
-                                ),
+                          children: [
+                            Container(
+                              padding: const EdgeInsets.all(5),
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(20),
+                                color: white,
+                                boxShadow: const [
+                                  BoxShadow(
+                                    blurRadius: 4,
+                                    color: Color(0x33000000),
+                                    offset: Offset(3, 5),
+                                    spreadRadius: 1,
+                                  )
+                                ],
                               ),
-                              SizedBox(
-                                width: 67.w,
-                                child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      SizedBox(height: 1.h),
-                                      Row(
-                                        mainAxisAlignment: MainAxisAlignment.center,
-                                        children: [
-                                          Text(
-                                            "Session 2",
+                              child: Icon(
+                                Icons.hourglass_empty,
+                                size: 35,
+                                color: grayDark.withOpacity(.6),
+                              ),
+                            ),
+                            SizedBox(
+                              width: 67.w,
+                              child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    SizedBox(height: 1.h),
+                                    Row(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      children: [
+                                        Text(
+                                          "Session 2",
+                                          overflow: TextOverflow.clip,
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(
+                                            fontSize: 22.sp,
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                    Row(
+                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        Container(
+                                          alignment: Alignment.center,
+                                          width: 65.w,
+                                          child: Text(
+                                            "Coin game (l.v1) ",
                                             overflow: TextOverflow.clip,
                                             textAlign: TextAlign.center,
                                             style: TextStyle(
-                                              fontSize: 22.sp,
-                                              fontWeight: FontWeight.bold,
+                                              fontSize: 20.sp,
                                             ),
                                           ),
-                                        ],
-                                      ),
-                                      Row(
-                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                        children: [
-                                          Container(
-                                            alignment: Alignment.center,
-                                            width: 65.w,
-                                            child: Text(
-                                              "Coin game (l.v1) ",
-                                              overflow: TextOverflow.clip,
-                                              textAlign: TextAlign.center,
-                                              style: TextStyle(
-                                                fontSize: 20.sp,
-                                              ),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                      Row(
+                                        ),
+                                      ],
+                                    ),
+                                    GestureDetector(
+                                      onTap: () => Get.to( () => const StdCoinGameScreen(level: 1)),
+                                      child: Row(
                                         mainAxisAlignment: MainAxisAlignment.center,
                                         children: [
                                           ClipRRect(
@@ -200,10 +202,11 @@ class _SupportTeacherTestsScreenState extends State<SupportTeacherTestsScreen> {
                                           ),
                                         ],
                                       ),
-                                    ]
-                                ),
+                                    ),
+                                  ]
                               ),
-                            ]
+                            ),
+                          ]
                         ),
                       ),                // 2
                       SizedBox(height: 2.h),

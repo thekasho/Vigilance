@@ -8,7 +8,6 @@ import 'package:vig/presentation/screens/screens.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
 import 'core/localization/translation.dart';
-import 'core/localization/change_local.dart';
 
 
 void main() async {

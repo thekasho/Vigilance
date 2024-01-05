@@ -271,21 +271,21 @@ class ShoppingGameContImp extends ShoppingGameCont {
   bool lvlFiveteen7Y = false;
   bool lvlFiveteen7N = false;
 
-  int lvlOneAns = 58;
-  int lvlTwoAns = 80;
-  int lvlThreeAns = 34;
-  int lvlFourAns = 22;
-  int lvlFiveAns = 18;
-  int lvlSixAns = 11;
-  int lvlSevenAns = 14;
-  int lvlEightAns = 31;
-  int lvlNineAns = 27;
-  int lvlTenAns = 14;
-  int lvlElevenAns = 106;
-  int lvlTwelveAns = 93;
-  int lvlThirteenAns = 54;
-  int lvlFourteenAns = 23;
-  int lvlFiveteenAns = 158;
+  int lvlOneAns = 2;
+  int lvlTwoAns = 2;
+  int lvlThreeAns = 3;
+  int lvlFourAns = 4;
+  int lvlFiveAns = 7;
+  int lvlSixAns = 5;
+  int lvlSevenAns = 6;
+  int lvlEightAns = 9;
+  int lvlNineAns = 8;
+  int lvlTenAns = 9;
+  int lvlElevenAns = 12;
+  int lvlTwelveAns = 10;
+  int lvlThirteenAns = 12;
+  int lvlFourteenAns = 14;
+  int lvlFiveteenAns = 18;
 
   int lvlTrue = 0;
 

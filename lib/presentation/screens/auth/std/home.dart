@@ -217,7 +217,7 @@ class _StdHomeScreenState extends State<StdHomeScreen> {
                                 },
                                 child: Container(
                                   width: 42.w,
-                                  height: 22.h,
+                                  height: 20.h,
                                   decoration: BoxDecoration(
                                     color: white,
                                     borderRadius: BorderRadius.circular(20),
@@ -252,6 +252,7 @@ class _StdHomeScreenState extends State<StdHomeScreen> {
                                           },
                                         ),
                                       ),
+                                      const Spacer(),
                                       Text(
                                         "studying".tr,
                                         style: TextStyle(
@@ -259,6 +260,7 @@ class _StdHomeScreenState extends State<StdHomeScreen> {
                                           fontSize: 20.sp,
                                         ),
                                       ),
+                                      const Spacer(),
                                     ],
                                   ),
                                 ),
@@ -275,7 +277,7 @@ class _StdHomeScreenState extends State<StdHomeScreen> {
                                 },
                                 child: Container(
                                   width: 42.w,
-                                  height: 22.h,
+                                  height: 20.h,
                                   decoration: BoxDecoration(
                                     color: white,
                                     borderRadius: BorderRadius.circular(20),
@@ -310,6 +312,7 @@ class _StdHomeScreenState extends State<StdHomeScreen> {
                                           },
                                         ),
                                       ),
+                                      const Spacer(),
                                       Text(
                                         "games".tr,
                                         style: TextStyle(
@@ -317,6 +320,7 @@ class _StdHomeScreenState extends State<StdHomeScreen> {
                                           fontSize: 20.sp,
                                         ),
                                       ),
+                                      const Spacer(),
                                     ],
                                   ),
                                 ),
@@ -333,7 +337,7 @@ class _StdHomeScreenState extends State<StdHomeScreen> {
                                 },
                                 child: Container(
                                   width: 42.w,
-                                  height: 22.h,
+                                  height: 20.h,
                                   decoration: BoxDecoration(
                                     color: white,
                                     borderRadius: BorderRadius.circular(20),
@@ -348,6 +352,7 @@ class _StdHomeScreenState extends State<StdHomeScreen> {
                                   ),
                                   child: Column(
                                     children: [
+                                      const Spacer(),
                                       Container(
                                         margin: const EdgeInsets.symmetric(
                                           vertical: 10,
@@ -368,6 +373,7 @@ class _StdHomeScreenState extends State<StdHomeScreen> {
                                           },
                                         ),
                                       ),
+                                      const Spacer(),
                                       Text(
                                         "teacher".tr,
                                         style: TextStyle(
@@ -375,6 +381,7 @@ class _StdHomeScreenState extends State<StdHomeScreen> {
                                           fontSize: 20.sp,
                                         ),
                                       ),
+                                      const Spacer(),
                                     ],
                                   ),
                                 ),
@@ -391,7 +398,7 @@ class _StdHomeScreenState extends State<StdHomeScreen> {
                                 },
                                 child: Container(
                                   width: 42.w,
-                                  height: 22.h,
+                                  height: 20.h,
                                   decoration: BoxDecoration(
                                     color: white,
                                     borderRadius: BorderRadius.circular(20),
@@ -426,6 +433,7 @@ class _StdHomeScreenState extends State<StdHomeScreen> {
                                           },
                                         ),
                                       ),
+                                      const Spacer(),
                                       Text(
                                         "meditation".tr,
                                         style: TextStyle(
@@ -433,13 +441,14 @@ class _StdHomeScreenState extends State<StdHomeScreen> {
                                           fontSize: 20.sp,
                                         ),
                                       ),
+                                      const Spacer(),
                                     ],
                                   ),
                                 ),
                               ),
                             ],
                           ),
-                          SizedBox(height: 5.h),
+                          SizedBox(height: 2.h),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
@@ -449,7 +458,7 @@ class _StdHomeScreenState extends State<StdHomeScreen> {
                                 },
                                 child: Container(
                                   width: 42.w,
-                                  height: 22.h,
+                                  height: 20.h,
                                   decoration: BoxDecoration(
                                     color: white,
                                     borderRadius: BorderRadius.circular(20),
@@ -480,6 +489,7 @@ class _StdHomeScreenState extends State<StdHomeScreen> {
                                           },
                                         ),
                                       ),
+                                      const Spacer(),
                                       Text(
                                         "exercises".tr,
                                         style: TextStyle(
@@ -487,6 +497,7 @@ class _StdHomeScreenState extends State<StdHomeScreen> {
                                           fontSize: 20.sp,
                                         ),
                                       ),
+                                      const Spacer(),
                                     ],
                                   ),
                                 ),

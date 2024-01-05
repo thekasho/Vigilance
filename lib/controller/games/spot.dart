@@ -55,7 +55,7 @@ class SpotGameContImp extends SpotGameCont {
   int lvlFive = 14;
   int lvlSix = 21;
   int lvlSeven = 23;
-  int lvlEight = 26;
+  int lvlEight = 22;
   int lvlNine = 30;
   int lvlTen = 31;
   int lvlEleven = 40;

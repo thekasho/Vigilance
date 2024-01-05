@@ -210,7 +210,7 @@ class _StdToDoScreenState extends State<StdToDoScreen> {
                 if (controller.statusRequest == StatusRequest.loading) {
                   return Container(
                     color: white,
-                    height: 85.h,
+                    height: 83.h,
                     width: 100.w,
                     child: const Column(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -225,7 +225,7 @@ class _StdToDoScreenState extends State<StdToDoScreen> {
                 } else if (controller.statusRequest == StatusRequest.success) {
                   return SizedBox(
                     width: 100.w,
-                    height: 85.h,
+                    height: 83.h,
                     child: NestedScrollView(
                       headerSliverBuilder: (_, ch) {
                         return [];

@@ -9,7 +9,7 @@ class StdExercisesVideos extends StatefulWidget {
 }
 
 class _StdExercisesVideosState extends State<StdExercisesVideos> {
-  String link = "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4";
+  late String link = "https://microplazatesla.com/vl/videos/1.mp4";
   late VlcPlayerController _videoPlayerController;
   bool isPlayed = true;
   bool progress = true;

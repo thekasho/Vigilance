@@ -204,10 +204,11 @@ class _ShopSelectScreenState extends State<ShopSelectScreen> {
                 Stack(
                   children: [
                     SizedBox(
-                      height: 96.h,
                       width: 100.w,
+                      height: 94.h,
                       child: CachedNetworkImage(
                         imageUrl: "https://microplazatesla.com/vl/images/shopping/select_bg.jpg",
+                        fit: BoxFit.fill,
                         errorWidget: (_, i, e) {
                           return Icon(
                             FontAwesomeIcons.image,
@@ -285,7 +286,7 @@ class _ShopSelectScreenState extends State<ShopSelectScreen> {
                                   SizedBox(width: 5.w),
                                 ],
                               ),
-                              SizedBox(height: 6.h),
+                              SizedBox(height: 2.h),
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.end,
                                 children: [
@@ -487,7 +488,7 @@ class _ShopSelectScreenState extends State<ShopSelectScreen> {
                                   SizedBox(width: 5.w),
                                 ],
                               ),
-                              SizedBox(height: 8.h),
+                              SizedBox(height: 2.h),
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.end,
                                 children: [
@@ -644,7 +645,7 @@ class _ShopSelectScreenState extends State<ShopSelectScreen> {
                                   SizedBox(width: 15.w),
                                 ],
                               ),
-                              SizedBox(height: 7.h),
+                              SizedBox(height: 3.h),
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.end,
                                 children: [
@@ -801,7 +802,7 @@ class _ShopSelectScreenState extends State<ShopSelectScreen> {
                                   ),
                                 ],
                               ),
-                              SizedBox(height: 8.h),
+                              SizedBox(height: 4.h),
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.end,
                                 children: [
@@ -1064,7 +1065,7 @@ class _ShopSelectScreenState extends State<ShopSelectScreen> {
                                   SizedBox(width: 5.w),
                                 ],
                               ),
-                              SizedBox(height: 8.h),
+                              SizedBox(height: 4.h),
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.end,
                                 children: [
@@ -1287,7 +1288,7 @@ class _ShopSelectScreenState extends State<ShopSelectScreen> {
                                   SizedBox(width: 8.w),
                                 ],
                               ),
-                              SizedBox(height: 8.h),
+                              SizedBox(height: 4.h),
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.end,
                                 children: [
@@ -1540,7 +1541,7 @@ class _ShopSelectScreenState extends State<ShopSelectScreen> {
                                   SizedBox(width: 8.w),
                                 ],
                               ),
-                              SizedBox(height: 2.h),
+                              SizedBox(height: 11.h),
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.end,
                                 children: [
@@ -1793,7 +1794,7 @@ class _ShopSelectScreenState extends State<ShopSelectScreen> {
                                   SizedBox(width: 8.w),
                                 ],
                               ),
-                              SizedBox(height: 3.h),
+                              SizedBox(height: 11.h),
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.end,
                                 children: [
@@ -2046,7 +2047,7 @@ class _ShopSelectScreenState extends State<ShopSelectScreen> {
                                   SizedBox(width: 8.w),
                                 ],
                               ),
-                              SizedBox(height: 5.h),
+                              SizedBox(height: 10.h),
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.end,
                                 children: [
@@ -2331,7 +2332,7 @@ class _ShopSelectScreenState extends State<ShopSelectScreen> {
                                   SizedBox(width: 5.w),
                                 ],
                               ),
-                              SizedBox(height: 10.h),
+                              SizedBox(height: 5.h),
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.end,
                                 children: [
@@ -2584,7 +2585,7 @@ class _ShopSelectScreenState extends State<ShopSelectScreen> {
                                   SizedBox(width: 5.w),
                                 ],
                               ),
-                              SizedBox(height: 10.h),
+                              SizedBox(height: 4.h),
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.end,
                                 children: [
@@ -2655,7 +2656,7 @@ class _ShopSelectScreenState extends State<ShopSelectScreen> {
                                   SizedBox(width: 8.w),
                                 ],
                               ),
-                              SizedBox(height: 10.h),
+                              SizedBox(height: 14.h),
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.end,
                                 children: [
@@ -2837,7 +2838,7 @@ class _ShopSelectScreenState extends State<ShopSelectScreen> {
                                   SizedBox(width: 5.w),
                                 ],
                               ),
-                              SizedBox(height: 10.h),
+                              SizedBox(height: 15.h),
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.end,
                                 children: [
@@ -2908,7 +2909,7 @@ class _ShopSelectScreenState extends State<ShopSelectScreen> {
                                   SizedBox(width: 8.w),
                                 ],
                               ),
-                              SizedBox(height: 10.h),
+                              SizedBox(height: 5.h),
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.end,
                                 children: [

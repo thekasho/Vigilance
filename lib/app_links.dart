@@ -23,4 +23,5 @@ class ApiLinks {
   static const String viewTest = 'https://microplazatesla.com/vl/get_test_qst.php';
   static const String updateTest = 'https://microplazatesla.com/vl/update_test.php';
   static const String deleteTest = 'https://microplazatesla.com/vl/delete_test.php';
+  static const String coinGameLevel = 'https://microplazatesla.com/vl/get_coin_level.php';
 }
