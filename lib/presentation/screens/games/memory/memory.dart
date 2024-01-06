@@ -83,9 +83,9 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                             child: Text(
                               "${"level".tr} 1",
                               style: TextStyle(
-                                fontSize: 22.sp,
-                                fontWeight: FontWeight.bold,
-                                fontFamily: 'Cairo'
+                                  fontSize: 22.sp,
+                                  fontWeight: FontWeight.bold,
+                                  fontFamily: 'Cairo'
                               ),
                             ),
                           ),
@@ -139,9 +139,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: red.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-                                      child: Icon(Icons.star_border, size: 50.sp,
-                                        color: white.withOpacity(.5)
-                                      ),
+
                                     ),
                                   ),
                                 ),
@@ -192,8 +190,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: greenSuccess.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-                                      child: Icon(Icons.star_border, size: 50.sp,
-                                          color: white.withOpacity(.5)),
+
                                     ),
                                   ),
                                 ),
@@ -250,8 +247,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: Colors.blue.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-                                      child: Icon(Icons.star_border, size: 50.sp,
-                                          color: white.withOpacity(.5)),
+
                                     ),
                                   ),
                                 ),
@@ -339,10 +335,10 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                               child: Text(
                                 "start".tr,
                                 style: TextStyle(
-                                  fontSize: 19.sp,
-                                  color: white,
-                                  fontWeight: FontWeight.bold,
-                                  fontFamily: 'Cairo'
+                                    fontSize: 19.sp,
+                                    color: white,
+                                    fontWeight: FontWeight.bold,
+                                    fontFamily: 'Cairo'
                                 ),
                               ),
                               onPressed: () async {
@@ -383,9 +379,9 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                             child: Text(
                               "${"level".tr} 2",
                               style: TextStyle(
-                                fontSize: 22.sp,
-                                fontWeight: FontWeight.bold,
-                                fontFamily: 'Cairo'
+                                  fontSize: 22.sp,
+                                  fontWeight: FontWeight.bold,
+                                  fontFamily: 'Cairo'
                               ),
                             ),
                           ),
@@ -438,8 +434,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: red.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-                                      child: Icon(Icons.star_border, size: 50.sp,
-                                          color: white.withOpacity(.5)),
+
                                     ),
                                   ),
                                 ),
@@ -490,8 +485,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: greenSuccess.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-                                      child: Icon(Icons.star_border, size: 50.sp,
-                                          color: white.withOpacity(.5)),
+
                                     ),
                                   ),
                                 ),
@@ -548,8 +542,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: Colors.blue.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-                                      child: Icon(Icons.star_border, size: 50.sp,
-                                          color: white.withOpacity(.5)),
+
                                     ),
                                   ),
                                 ),
@@ -600,8 +593,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: hardYellow.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-                                      child: Icon(Icons.star_border, size: 50.sp,
-                                          color: white.withOpacity(.5)),
+
                                     ),
                                   ),
                                 ),
@@ -735,8 +727,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: red.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-                                      child: Icon(Icons.star_border, size: 50.sp,
-                                          color: white.withOpacity(.5)),
+
                                     ),
                                   ),
                                 ),
@@ -787,8 +778,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: greenSuccess.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-                                      child: Icon(Icons.star_border, size: 50.sp,
-                                          color: white.withOpacity(.5)),
+
                                     ),
                                   ),
                                 ),
@@ -845,8 +835,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: Colors.blue.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-                                      child: Icon(Icons.star_border, size: 50.sp,
-                                          color: white.withOpacity(.5)),
+
                                     ),
                                   ),
                                 ),
@@ -897,8 +886,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: hardYellow.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-                                      child: Icon(Icons.star_border, size: 50.sp,
-                                          color: white.withOpacity(.5)),
+
                                     ),
                                   ),
                                 ),
@@ -933,10 +921,10 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                               child: Text(
                                 "start".tr,
                                 style: TextStyle(
-                                  fontSize: 19.sp,
-                                  color: white,
-                                  fontWeight: FontWeight.bold,
-                                  fontFamily: 'Cairo'
+                                    fontSize: 19.sp,
+                                    color: white,
+                                    fontWeight: FontWeight.bold,
+                                    fontFamily: 'Cairo'
                                 ),
                               ),
                               onPressed: () async {
@@ -977,8 +965,8 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                             child: Text(
                               "${"level".tr} 4",
                               style: TextStyle(
-                                fontSize: 22.sp,
-                                fontWeight: FontWeight.bold,
+                                  fontSize: 22.sp,
+                                  fontWeight: FontWeight.bold,
                                   fontFamily: 'Cairo'
                               ),
                             ),
@@ -1032,8 +1020,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: red.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-                                      child: Icon(Icons.star_border, size: 50.sp,
-                                          color: white.withOpacity(.5)),
+
                                     ),
                                   ),
                                 ),
@@ -1084,8 +1071,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: greenSuccess.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-                                      child: Icon(Icons.star_border, size: 50.sp,
-                                          color: white.withOpacity(.5)),
+
                                     ),
                                   ),
                                 ),
@@ -1142,8 +1128,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: Colors.blue.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-                                      child: Icon(Icons.star_border, size: 50.sp,
-                                          color: white.withOpacity(.5)),
+
                                     ),
                                   ),
                                 ),
@@ -1194,8 +1179,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: hardYellow.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-                                      child: Icon(Icons.star_border, size: 50.sp,
-                                          color: white.withOpacity(.5)),
+
                                     ),
                                   ),
                                 ),
@@ -1274,9 +1258,9 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                             child: Text(
                               "${"level".tr} 5",
                               style: TextStyle(
-                                fontSize: 22.sp,
-                                fontWeight: FontWeight.bold,
-                                fontFamily: 'Cairo'
+                                  fontSize: 22.sp,
+                                  fontWeight: FontWeight.bold,
+                                  fontFamily: 'Cairo'
                               ),
                             ),
                           ),
@@ -1330,8 +1314,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: red.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-                                      child: Icon(Icons.star_border, size: 50.sp,
-                                          color: white.withOpacity(.5)),
+
                                     ),
                                   ),
                                 ),
@@ -1383,8 +1366,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: greenSuccess.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-                                      child: Icon(Icons.star_border, size: 50.sp,
-                                          color: white.withOpacity(.5)),
+
                                     ),
                                   ),
                                 ),
@@ -1442,8 +1424,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: Colors.blue.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-                                      child: Icon(Icons.star_border, size: 50.sp,
-                                          color: white.withOpacity(.5)),
+
                                     ),
                                   ),
                                 ),
@@ -1495,8 +1476,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: hardYellow.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-                                      child: Icon(Icons.star_border, size: 50.sp,
-                                          color: white.withOpacity(.5)),
+
                                     ),
                                   ),
                                 ),
@@ -1575,8 +1555,8 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                             child: Text(
                               "${"level".tr} 6",
                               style: TextStyle(
-                                fontSize: 22.sp,
-                                fontWeight: FontWeight.bold,
+                                  fontSize: 22.sp,
+                                  fontWeight: FontWeight.bold,
                                   fontFamily: 'Cairo'
                               ),
                             ),
@@ -1631,8 +1611,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: red.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-                                      child: Icon(Icons.star_border, size: 50.sp,
-                                          color: white.withOpacity(.5)),
+
                                     ),
                                   ),
                                 ),
@@ -1684,8 +1663,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: greenSuccess.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-                                      child: Icon(Icons.star_border, size: 50.sp,
-                                          color: white.withOpacity(.5)),
+
                                     ),
                                   ),
                                 ),
@@ -1743,8 +1721,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: Colors.blue.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-                                      child: Icon(Icons.star_border, size: 50.sp,
-                                          color: white.withOpacity(.5)),
+
                                     ),
                                   ),
                                 ),
@@ -1796,8 +1773,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: hardYellow.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-                                      child: Icon(Icons.star_border, size: 50.sp,
-                                          color: white.withOpacity(.5)),
+
                                     ),
                                   ),
                                 ),
@@ -1825,17 +1801,17 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                 ),
                                 padding: MaterialStateProperty.all<EdgeInsets>(
                                   EdgeInsets.symmetric(
-                                    vertical: 1.h
+                                      vertical: 1.h
                                   ),
                                 ),
                               ),
                               child: Text(
                                 "start".tr,
                                 style: TextStyle(
-                                  fontSize: 19.sp,
-                                  color: white,
-                                  fontWeight: FontWeight.bold,
-                                  fontFamily: 'Cairo'
+                                    fontSize: 19.sp,
+                                    color: white,
+                                    fontWeight: FontWeight.bold,
+                                    fontFamily: 'Cairo'
                                 ),
                               ),
                               onPressed: () async {
@@ -1876,9 +1852,9 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                             child: Text(
                               "${"level".tr} 7",
                               style: TextStyle(
-                                fontSize: 22.sp,
-                                fontWeight: FontWeight.bold,
-                                fontFamily: 'Cairo'
+                                  fontSize: 22.sp,
+                                  fontWeight: FontWeight.bold,
+                                  fontFamily: 'Cairo'
                               ),
                             ),
                           ),
@@ -1932,8 +1908,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: red.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-                                      child: Icon(Icons.star_border, size: 50.sp,
-                                          color: white.withOpacity(.5)),
+
                                     ),
                                   ),
                                 ),
@@ -1985,8 +1960,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: greenSuccess.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-                                      child: Icon(Icons.star_border, size: 50.sp,
-                                          color: white.withOpacity(.5)),
+
                                     ),
                                   ),
                                 ),
@@ -2044,8 +2018,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: Colors.blue.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-                                      child: Icon(Icons.star_border, size: 50.sp,
-                                          color: white.withOpacity(.5)),
+
                                     ),
                                   ),
                                 ),
@@ -2097,8 +2070,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: hardYellow.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-                                      child: Icon(Icons.star_border, size: 50.sp,
-                                          color: white.withOpacity(.5)),
+
                                     ),
                                   ),
                                 ),
@@ -2133,10 +2105,10 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                               child: Text(
                                 "start".tr,
                                 style: TextStyle(
-                                  fontSize: 19.sp,
-                                  color: white,
-                                  fontWeight: FontWeight.bold,
-                                  fontFamily: 'Cairo'
+                                    fontSize: 19.sp,
+                                    color: white,
+                                    fontWeight: FontWeight.bold,
+                                    fontFamily: 'Cairo'
                                 ),
                               ),
                               onPressed: () async {
@@ -2177,9 +2149,9 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                             child: Text(
                               "${"level".tr} 8",
                               style: TextStyle(
-                                fontSize: 22.sp,
-                                fontWeight: FontWeight.bold,
-                                fontFamily: 'Cairo'
+                                  fontSize: 22.sp,
+                                  fontWeight: FontWeight.bold,
+                                  fontFamily: 'Cairo'
                               ),
                             ),
                           ),
@@ -2233,8 +2205,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: red.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-                                      child: Icon(Icons.star_border, size: 50.sp,
-                                          color: white.withOpacity(.5)),
+
                                     ),
                                   ),
                                 ),
@@ -2286,8 +2257,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: greenSuccess.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-                                      child: Icon(Icons.star_border, size: 50.sp,
-                                          color: white.withOpacity(.5)),
+
                                     ),
                                   ),
                                 ),
@@ -2345,8 +2315,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: Colors.blue.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-                                      child: Icon(Icons.star_border, size: 50.sp,
-                                          color: white.withOpacity(.5)),
+
                                     ),
                                   ),
                                 ),
@@ -2398,8 +2367,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: hardYellow.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-                                      child: Icon(Icons.star_border, size: 50.sp,
-                                          color: white.withOpacity(.5)),
+
                                     ),
                                   ),
                                 ),
@@ -2478,9 +2446,9 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                             child: Text(
                               "${"level".tr} 9",
                               style: TextStyle(
-                                fontSize: 22.sp,
-                                fontWeight: FontWeight.bold,
-                                fontFamily: 'Cairo'
+                                  fontSize: 22.sp,
+                                  fontWeight: FontWeight.bold,
+                                  fontFamily: 'Cairo'
                               ),
                             ),
                           ),
@@ -2534,8 +2502,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: red.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-                                      child: Icon(Icons.star_border, size: 50.sp,
-                                          color: white.withOpacity(.5)),
+
                                     ),
                                   ),
                                 ),
@@ -2587,8 +2554,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: greenSuccess.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-                                      child: Icon(Icons.star_border, size: 50.sp,
-                                          color: white.withOpacity(.5)),
+
                                     ),
                                   ),
                                 ),
@@ -2646,8 +2612,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: Colors.blue.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-                                      child: Icon(Icons.star_border, size: 50.sp,
-                                          color: white.withOpacity(.5)),
+
                                     ),
                                   ),
                                 ),
@@ -2699,8 +2664,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: hardYellow.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-                                      child: Icon(Icons.star_border, size: 50.sp,
-                                          color: white.withOpacity(.5)),
+
                                     ),
                                   ),
                                 ),
@@ -2779,9 +2743,9 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                             child: Text(
                               "${"level".tr} 10",
                               style: TextStyle(
-                                fontSize: 22.sp,
-                                fontWeight: FontWeight.bold,
-                                fontFamily: 'Cairo'
+                                  fontSize: 22.sp,
+                                  fontWeight: FontWeight.bold,
+                                  fontFamily: 'Cairo'
                               ),
                             ),
                           ),
@@ -2835,8 +2799,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: red.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-                                      child: Icon(Icons.star_border, size: 50.sp,
-                                          color: white.withOpacity(.5)),
+
                                     ),
                                   ),
                                 ),
@@ -2888,8 +2851,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: greenSuccess.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-                                      child: Icon(Icons.star_border, size: 50.sp,
-                                          color: white.withOpacity(.5)),
+
                                     ),
                                   ),
                                 ),
@@ -2947,8 +2909,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: Colors.blue.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-                                      child: Icon(Icons.star_border, size: 50.sp,
-                                          color: white.withOpacity(.5)),
+
                                     ),
                                   ),
                                 ),
@@ -3000,8 +2961,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: hardYellow.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-                                      child: Icon(Icons.star_border, size: 50.sp,
-                                          color: white.withOpacity(.5)),
+
                                     ),
                                   ),
                                 ),
@@ -3036,10 +2996,10 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                               child: Text(
                                 "start".tr,
                                 style: TextStyle(
-                                  fontSize: 19.sp,
-                                  color: white,
-                                  fontWeight: FontWeight.bold,
-                                  fontFamily: 'Cairo'
+                                    fontSize: 19.sp,
+                                    color: white,
+                                    fontWeight: FontWeight.bold,
+                                    fontFamily: 'Cairo'
                                 ),
                               ),
                               onPressed: () async {
@@ -3080,8 +3040,8 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                             child: Text(
                               "${"level".tr} 11",
                               style: TextStyle(
-                                fontSize: 22.sp,
-                                fontWeight: FontWeight.bold,
+                                  fontSize: 22.sp,
+                                  fontWeight: FontWeight.bold,
                                   fontFamily: 'Cairo'
                               ),
                             ),
@@ -3136,8 +3096,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: red.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-                                      child: Icon(Icons.star_border, size: 50.sp,
-                                          color: white.withOpacity(.5)),
+
                                     ),
                                   ),
                                 ),
@@ -3189,8 +3148,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: greenSuccess.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-                                      child: Icon(Icons.star_border, size: 50.sp,
-                                          color: white.withOpacity(.5)),
+
                                     ),
                                   ),
                                 ),
@@ -3248,8 +3206,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: Colors.blue.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-                                      child: Icon(Icons.star_border, size: 50.sp,
-                                          color: white.withOpacity(.5)),
+
                                     ),
                                   ),
                                 ),
@@ -3301,8 +3258,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: hardYellow.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-                                      child: Icon(Icons.star_border, size: 50.sp,
-                                          color: white.withOpacity(.5)),
+
                                     ),
                                   ),
                                 ),
@@ -3381,8 +3337,8 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                             child: Text(
                               "${"level".tr} 12",
                               style: TextStyle(
-                                fontSize: 22.sp,
-                                fontWeight: FontWeight.bold,
+                                  fontSize: 22.sp,
+                                  fontWeight: FontWeight.bold,
                                   fontFamily: 'Cairo'
                               ),
                             ),
@@ -3437,8 +3393,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: red.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-                                      child: Icon(Icons.star_border, size: 50.sp,
-                                          color: white.withOpacity(.5)),
+
                                     ),
                                   ),
                                 ),
@@ -3490,8 +3445,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: greenSuccess.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-                                      child: Icon(Icons.star_border, size: 50.sp,
-                                          color: white.withOpacity(.5)),
+
                                     ),
                                   ),
                                 ),
@@ -3549,8 +3503,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: Colors.blue.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-                                      child: Icon(Icons.star_border, size: 50.sp,
-                                          color: white.withOpacity(.5)),
+
                                     ),
                                   ),
                                 ),
@@ -3602,8 +3555,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: hardYellow.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-                                      child: Icon(Icons.star_border, size: 50.sp,
-                                          color: white.withOpacity(.5)),
+
                                     ),
                                   ),
                                 ),
@@ -3682,9 +3634,9 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                             child: Text(
                               "${"level".tr} 13",
                               style: TextStyle(
-                                fontSize: 22.sp,
-                                fontWeight: FontWeight.bold,
-                                fontFamily: 'Cairo'
+                                  fontSize: 22.sp,
+                                  fontWeight: FontWeight.bold,
+                                  fontFamily: 'Cairo'
                               ),
                             ),
                           ),
@@ -3738,8 +3690,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: red.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-                                      child: Icon(Icons.star_border, size: 50.sp,
-                                          color: white.withOpacity(.5)),
+
                                     ),
                                   ),
                                 ),
@@ -3791,8 +3742,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: greenSuccess.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-                                      child: Icon(Icons.star_border, size: 50.sp,
-                                          color: white.withOpacity(.5)),
+
                                     ),
                                   ),
                                 ),
@@ -3850,8 +3800,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: Colors.blue.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-                                      child: Icon(Icons.star_border, size: 50.sp,
-                                          color: white.withOpacity(.5)),
+
                                     ),
                                   ),
                                 ),
@@ -3903,8 +3852,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: hardYellow.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-                                      child: Icon(Icons.star_border, size: 50.sp,
-                                          color: white.withOpacity(.5)),
+
                                     ),
                                   ),
                                 ),
@@ -3983,8 +3931,8 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                             child: Text(
                               "${"level".tr} 14",
                               style: TextStyle(
-                                fontSize: 22.sp,
-                                fontWeight: FontWeight.bold,
+                                  fontSize: 22.sp,
+                                  fontWeight: FontWeight.bold,
                                   fontFamily: 'Cairo'
                               ),
                             ),
@@ -4039,8 +3987,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: red.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-                                      child: Icon(Icons.star_border, size: 50.sp,
-                                          color: white.withOpacity(.5)),
+
                                     ),
                                   ),
                                 ),
@@ -4092,8 +4039,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: greenSuccess.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-                                      child: Icon(Icons.star_border, size: 50.sp,
-                                          color: white.withOpacity(.5)),
+
                                     ),
                                   ),
                                 ),
@@ -4151,8 +4097,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: Colors.blue.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-                                      child: Icon(Icons.star_border, size: 50.sp,
-                                          color: white.withOpacity(.5)),
+
                                     ),
                                   ),
                                 ),
@@ -4204,8 +4149,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: hardYellow.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-                                      child: Icon(Icons.star_border, size: 50.sp,
-                                          color: white.withOpacity(.5)),
+
                                     ),
                                   ),
                                 ),
@@ -4240,10 +4184,10 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                               child: Text(
                                 "start".tr,
                                 style: TextStyle(
-                                  fontSize: 19.sp,
-                                  color: white,
-                                  fontWeight: FontWeight.bold,
-                                  fontFamily: 'Cairo'
+                                    fontSize: 19.sp,
+                                    color: white,
+                                    fontWeight: FontWeight.bold,
+                                    fontFamily: 'Cairo'
                                 ),
                               ),
                               onPressed: () async {
@@ -4284,8 +4228,8 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                             child: Text(
                               "${"level".tr} 15",
                               style: TextStyle(
-                                fontSize: 22.sp,
-                                fontWeight: FontWeight.bold,
+                                  fontSize: 22.sp,
+                                  fontWeight: FontWeight.bold,
                                   fontFamily: 'Cairo'
                               ),
                             ),
@@ -4340,8 +4284,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: red.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-                                      child: Icon(Icons.star_border, size: 50.sp,
-                                          color: white.withOpacity(.5)),
+
                                     ),
                                   ),
                                 ),
@@ -4393,8 +4336,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: greenSuccess.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-                                      child: Icon(Icons.star_border, size: 50.sp,
-                                          color: white.withOpacity(.5)),
+
                                     ),
                                   ),
                                 ),
@@ -4452,8 +4394,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: Colors.blue.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-                                      child: Icon(Icons.star_border, size: 50.sp,
-                                          color: white.withOpacity(.5)),
+
                                     ),
                                   ),
                                 ),
@@ -4505,8 +4446,6 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: hardYellow.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-                                      child: Icon(Icons.star_border, size: 50.sp,
-                                          color: white.withOpacity(.5)),
                                     ),
                                   ),
                                 ),

@@ -7,12 +7,12 @@ import 'package:vig/core/class/statusrequest.dart';
 import '../functions.dart';
 
 class Crud {
-
   Future<Either<StatusRequest, Map>> postData(String linkurl, Map data) async {
     try {
       if (await checkNetwork()) {
-        var response = await http.post(Uri.parse(linkurl), body: data).timeout(
-          const Duration(seconds: 5), onTimeout: (){
+        var response = await http
+            .post(Uri.parse(linkurl), body: data)
+            .timeout(const Duration(seconds: 5), onTimeout: () {
           return http.Response('Error', 408);
         });
         print(response.body);
@@ -34,7 +34,9 @@ class Crud {
   Future<Either<StatusRequest, List>> getData(String linkurl) async {
     try {
       if (await checkNetwork()) {
-        var response = await http.post(Uri.parse(linkurl)).timeout(const Duration(seconds: 5), onTimeout: (){
+        var response = await http
+            .post(Uri.parse(linkurl))
+            .timeout(const Duration(seconds: 5), onTimeout: () {
           return http.Response('Error', 408);
         });
         if (response.statusCode == 200 || response.statusCode == 201) {
@@ -55,7 +57,9 @@ class Crud {
   Future<Either<StatusRequest, Map>> getMapData(String linkurl) async {
     try {
       if (await checkNetwork()) {
-        var response = await http.post(Uri.parse(linkurl)).timeout(const Duration(seconds: 5), onTimeout: (){
+        var response = await http
+            .post(Uri.parse(linkurl))
+            .timeout(const Duration(seconds: 5), onTimeout: () {
           return http.Response('Error', 408);
         });
         if (response.statusCode == 200 || response.statusCode == 201) {
@@ -76,8 +80,9 @@ class Crud {
   Future<Either<StatusRequest, List>> getListData(String linkurl) async {
     try {
       if (await checkNetwork()) {
-
-        var response = await http.post(Uri.parse(linkurl)).timeout(const Duration(seconds: 5), onTimeout: (){
+        var response = await http
+            .post(Uri.parse(linkurl))
+            .timeout(const Duration(seconds: 5), onTimeout: () {
           return http.Response('Error', 408);
         });
         if (response.statusCode == 200 || response.statusCode == 201) {
