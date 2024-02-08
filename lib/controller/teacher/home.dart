@@ -13,6 +13,7 @@ abstract class TchrHomeCont extends GetxController {
   checkNetwork();
   logOut();
 }
+
 class TchrHomeContImp extends TchrHomeCont {
   Requests requests = Requests(Get.find());
 
@@ -27,8 +28,8 @@ class TchrHomeContImp extends TchrHomeCont {
   @override
   logOut() async {
     try {
-      var loginData  = await LocaleApi.getLoginData();
-      if(loginData != null){
+      var loginData = await LocaleApi.getLoginData();
+      if (loginData != null) {
         await LocaleApi.removeLoginData();
         Get.offAllNamed(screenChooseType);
       }

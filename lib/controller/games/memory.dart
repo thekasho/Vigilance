@@ -144,7 +144,7 @@ class MemoryGameContImp extends MemoryGameCont {
         await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
           lvlFourOp = 0.5;
           update();
-          await audioPlayer.play(AssetSource("sounds/4.wav"));
+          await audioPlayer.play(AssetSource("sounds/3.wav"));
           await Future.delayed(const Duration(milliseconds: 300)).then((value) {
             lvlFourOp = 0;
             update();
@@ -154,54 +154,15 @@ class MemoryGameContImp extends MemoryGameCont {
         await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
           lvlThreeOp = 0.5;
           update();
-          await audioPlayer.play(AssetSource("sounds/3.wav"));
+          await audioPlayer.play(AssetSource("sounds/4.wav"));
           await Future.delayed(const Duration(milliseconds: 300)).then((value) {
             lvlThreeOp = 0;
             update();
           });
         });     // 3
 
-      } else if(clevel == 2){
-
-        await audioPlayer.play(AssetSource("sounds/1.wav"));
-        lvlOneOp = 0.5;
-        update();
-        await Future.delayed(const Duration(milliseconds: 300)).then((value) {
-          lvlOneOp = 0;
-          update();
-        });           // 1
-
-        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
-          lvlFourOp = 0.5;
-          update();
-          await audioPlayer.play(AssetSource("sounds/4.wav"));
-          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
-            lvlFourOp = 0;
-            update();
-          });
-        });     // 4
-
-        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
-          lvlThreeOp = 0.5;
-          update();
-          await audioPlayer.play(AssetSource("sounds/3.wav"));
-          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
-            lvlThreeOp = 0;
-            update();
-          });
-        });     // 3
-
-        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
-          lvlFourOp = 0.5;
-          update();
-          await audioPlayer.play(AssetSource("sounds/4.wav"));
-          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
-            lvlFourOp = 0;
-            update();
-          });
-        });     // 4
-
-      } else if(clevel == 3){
+      }
+      else if(clevel == 2){
 
         await audioPlayer.play(AssetSource("sounds/1.wav"));
         lvlOneOp = 0.5;
@@ -214,7 +175,7 @@ class MemoryGameContImp extends MemoryGameCont {
         await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
           lvlFourOp = 0.5;
           update();
-          await audioPlayer.play(AssetSource("sounds/4.wav"));
+          await audioPlayer.play(AssetSource("sounds/3.wav"));
           await Future.delayed(const Duration(milliseconds: 300)).then((value) {
             lvlFourOp = 0;
             update();
@@ -224,7 +185,7 @@ class MemoryGameContImp extends MemoryGameCont {
         await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
           lvlThreeOp = 0.5;
           update();
-          await audioPlayer.play(AssetSource("sounds/3.wav"));
+          await audioPlayer.play(AssetSource("sounds/4.wav"));
           await Future.delayed(const Duration(milliseconds: 300)).then((value) {
             lvlThreeOp = 0;
             update();
@@ -234,120 +195,54 @@ class MemoryGameContImp extends MemoryGameCont {
         await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
           lvlFourOp = 0.5;
           update();
-          await audioPlayer.play(AssetSource("sounds/4.wav"));
+          await audioPlayer.play(AssetSource("sounds/3.wav"));
           await Future.delayed(const Duration(milliseconds: 300)).then((value) {
             lvlFourOp = 0;
             update();
           });
         });     // 4
 
-        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
-          lvlTwoOp = 0.5;
-          update();
-          await audioPlayer.play(AssetSource("sounds/2.wav"));
-          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
-            lvlTwoOp = 0;
-            update();
-          });
-        });     // 2
+      }
+      else if(clevel == 3){
 
-      } else if(clevel == 4){
-        await audioPlayer.play(AssetSource("sounds/3.wav"));
-        lvlThreeOp = 0.5;
+        await audioPlayer.play(AssetSource("sounds/1.wav"));
+        lvlOneOp = 0.5;
         update();
         await Future.delayed(const Duration(milliseconds: 300)).then((value) {
-          lvlThreeOp = 0;
+          lvlOneOp = 0;
           update();
-        });           // 3
-        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
-          lvlTwoOp = 0.5;
-          update();
-          await audioPlayer.play(AssetSource("sounds/2.wav"));
-          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
-            lvlTwoOp = 0;
-            update();
-          });
-        });     // 2
-        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
-          lvlOneOp = 0.5;
-          update();
-          await audioPlayer.play(AssetSource("sounds/1.wav"));
-          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
-            lvlOneOp = 0;
-            update();
-          });
-        });     // 1
-        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
-          lvlThreeOp = 0.5;
-          update();
-          await audioPlayer.play(AssetSource("sounds/3.wav"));
-          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
-            lvlThreeOp = 0;
-            update();
-          });
-        });     // 3
+        });           // 1
+
         await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
           lvlFourOp = 0.5;
           update();
-          await audioPlayer.play(AssetSource("sounds/4.wav"));
+          await audioPlayer.play(AssetSource("sounds/3.wav"));
           await Future.delayed(const Duration(milliseconds: 300)).then((value) {
             lvlFourOp = 0;
             update();
           });
         });     // 4
-        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
-          lvlTwoOp = 0.5;
-          update();
-          await audioPlayer.play(AssetSource("sounds/2.wav"));
-          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
-            lvlTwoOp = 0;
-            update();
-          });
-        });     // 2
-      } else if(clevel == 5){
-        await audioPlayer.play(AssetSource("sounds/3.wav"));
-        lvlThreeOp = 0.5;
-        update();
-        await Future.delayed(const Duration(milliseconds: 300)).then((value) {
-          lvlThreeOp = 0;
-          update();
-        });           // 3
-        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
-          lvlTwoOp = 0.5;
-          update();
-          await audioPlayer.play(AssetSource("sounds/2.wav"));
-          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
-            lvlTwoOp = 0;
-            update();
-          });
-        });     // 2
-        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
-          lvlOneOp = 0.5;
-          update();
-          await audioPlayer.play(AssetSource("sounds/1.wav"));
-          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
-            lvlOneOp = 0;
-            update();
-          });
-        });     // 1
+
         await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
           lvlThreeOp = 0.5;
           update();
-          await audioPlayer.play(AssetSource("sounds/3.wav"));
+          await audioPlayer.play(AssetSource("sounds/4.wav"));
           await Future.delayed(const Duration(milliseconds: 300)).then((value) {
             lvlThreeOp = 0;
             update();
           });
         });     // 3
+
         await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
           lvlFourOp = 0.5;
           update();
-          await audioPlayer.play(AssetSource("sounds/4.wav"));
+          await audioPlayer.play(AssetSource("sounds/3.wav"));
           await Future.delayed(const Duration(milliseconds: 300)).then((value) {
             lvlFourOp = 0;
             update();
           });
         });     // 4
+
         await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
           lvlTwoOp = 0.5;
           update();
@@ -357,64 +252,174 @@ class MemoryGameContImp extends MemoryGameCont {
             update();
           });
         });     // 2
-        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
-          lvlOneOp = 0.5;
-          update();
-          await audioPlayer.play(AssetSource("sounds/1.wav"));
-          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
-            lvlOneOp = 0;
-            update();
-          });
-        });     // 1
-      } else if(clevel == 6){
+
+      }
+      else if(clevel == 4){
         await audioPlayer.play(AssetSource("sounds/4.wav"));
+        lvlThreeOp = 0.5;
+        update();
+        await Future.delayed(const Duration(milliseconds: 400)).then((value) {
+          lvlThreeOp = 0;
+          update();
+        });           // 3
+        await Future.delayed(const Duration(milliseconds: 500)).then((value) async {
+          lvlTwoOp = 0.5;
+          update();
+          await audioPlayer.play(AssetSource("sounds/2.wav"));
+          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+            lvlTwoOp = 0;
+            update();
+          });
+        });     // 2
+        await Future.delayed(const Duration(milliseconds: 500)).then((value) async {
+          lvlOneOp = 0.5;
+          update();
+          await audioPlayer.play(AssetSource("sounds/1.wav"));
+          await Future.delayed(const Duration(milliseconds: 400)).then((value) {
+            lvlOneOp = 0;
+            update();
+          });
+        });     // 1
+        await Future.delayed(const Duration(milliseconds: 500)).then((value) async {
+          lvlThreeOp = 0.5;
+          update();
+          await audioPlayer.play(AssetSource("sounds/4.wav"));
+          await Future.delayed(const Duration(milliseconds: 400)).then((value) {
+            lvlThreeOp = 0;
+            update();
+          });
+        });     // 3
+        await Future.delayed(const Duration(milliseconds: 500)).then((value) async {
+          lvlFourOp = 0.5;
+          update();
+          await audioPlayer.play(AssetSource("sounds/3.wav"));
+          await Future.delayed(const Duration(milliseconds: 400)).then((value) {
+            lvlFourOp = 0;
+            update();
+          });
+        });     // 4
+        await Future.delayed(const Duration(milliseconds: 500)).then((value) async {
+          lvlTwoOp = 0.5;
+          update();
+          await audioPlayer.play(AssetSource("sounds/2.wav"));
+          await Future.delayed(const Duration(milliseconds: 400)).then((value) {
+            lvlTwoOp = 0;
+            update();
+          });
+        });     // 2
+      }
+      else if(clevel == 5){
+        await audioPlayer.play(AssetSource("sounds/4.wav"));
+        lvlThreeOp = 0.5;
+        update();
+        await Future.delayed(const Duration(milliseconds: 400)).then((value) {
+          lvlThreeOp = 0;
+          update();
+        });           // 3
+        await Future.delayed(const Duration(milliseconds: 500)).then((value) async {
+          lvlTwoOp = 0.5;
+          update();
+          await audioPlayer.play(AssetSource("sounds/2.wav"));
+          await Future.delayed(const Duration(milliseconds: 400)).then((value) {
+            lvlTwoOp = 0;
+            update();
+          });
+        });     // 2
+        await Future.delayed(const Duration(milliseconds: 500)).then((value) async {
+          lvlOneOp = 0.5;
+          update();
+          await audioPlayer.play(AssetSource("sounds/1.wav"));
+          await Future.delayed(const Duration(milliseconds: 400)).then((value) {
+            lvlOneOp = 0;
+            update();
+          });
+        });     // 1
+        await Future.delayed(const Duration(milliseconds: 500)).then((value) async {
+          lvlThreeOp = 0.5;
+          update();
+          await audioPlayer.play(AssetSource("sounds/4.wav"));
+          await Future.delayed(const Duration(milliseconds: 400)).then((value) {
+            lvlThreeOp = 0;
+            update();
+          });
+        });     // 3
+        await Future.delayed(const Duration(milliseconds: 500)).then((value) async {
+          lvlFourOp = 0.5;
+          update();
+          await audioPlayer.play(AssetSource("sounds/3.wav"));
+          await Future.delayed(const Duration(milliseconds: 400)).then((value) {
+            lvlFourOp = 0;
+            update();
+          });
+        });     // 4
+        await Future.delayed(const Duration(milliseconds: 500)).then((value) async {
+          lvlTwoOp = 0.5;
+          update();
+          await audioPlayer.play(AssetSource("sounds/2.wav"));
+          await Future.delayed(const Duration(milliseconds: 400)).then((value) {
+            lvlTwoOp = 0;
+            update();
+          });
+        });     // 2
+        await Future.delayed(const Duration(milliseconds: 500)).then((value) async {
+          lvlOneOp = 0.5;
+          update();
+          await audioPlayer.play(AssetSource("sounds/1.wav"));
+          await Future.delayed(const Duration(milliseconds: 400)).then((value) {
+            lvlOneOp = 0;
+            update();
+          });
+        });     // 1
+      }
+      else if(clevel == 6){
+        await audioPlayer.play(AssetSource("sounds/3.wav"));
         lvlFourOp = 0.5;
         update();
-        await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+        await Future.delayed(const Duration(milliseconds: 400)).then((value) {
           lvlFourOp = 0;
           update();
         });           // 4
-        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+        await Future.delayed(const Duration(milliseconds: 500)).then((value) async {
           lvlThreeOp = 0.5;
           update();
-          await audioPlayer.play(AssetSource("sounds/3.wav"));
-          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+          await audioPlayer.play(AssetSource("sounds/4.wav"));
+          await Future.delayed(const Duration(milliseconds: 400)).then((value) {
             lvlThreeOp = 0;
             update();
           });
         });     // 3
-        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+        await Future.delayed(const Duration(milliseconds: 500)).then((value) async {
           lvlFourOp = 0.5;
           update();
-          await audioPlayer.play(AssetSource("sounds/4.wav"));
-          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+          await audioPlayer.play(AssetSource("sounds/3.wav"));
+          await Future.delayed(const Duration(milliseconds: 400)).then((value) {
             lvlFourOp = 0;
             update();
           });
         });     // 4
-        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+        await Future.delayed(const Duration(milliseconds: 500)).then((value) async {
           lvlTwoOp = 0.5;
           update();
           await audioPlayer.play(AssetSource("sounds/2.wav"));
-          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+          await Future.delayed(const Duration(milliseconds: 400)).then((value) {
             lvlTwoOp = 0;
             update();
           });
         });     // 2
-        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+        await Future.delayed(const Duration(milliseconds: 500)).then((value) async {
           lvlThreeOp = 0.5;
           update();
-          await audioPlayer.play(AssetSource("sounds/3.wav"));
-          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+          await audioPlayer.play(AssetSource("sounds/4.wav"));
+          await Future.delayed(const Duration(milliseconds: 400)).then((value) {
             lvlThreeOp = 0;
             update();
           });
         });     // 3
-        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+        await Future.delayed(const Duration(milliseconds: 500)).then((value) async {
           lvlOneOp = 0.5;
           update();
           await audioPlayer.play(AssetSource("sounds/1.wav"));
-          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+          await Future.delayed(const Duration(milliseconds: 400)).then((value) {
             lvlOneOp = 0;
             update();
           });
@@ -423,60 +428,60 @@ class MemoryGameContImp extends MemoryGameCont {
           lvlOneOp = 0.5;
           update();
           await audioPlayer.play(AssetSource("sounds/1.wav"));
-          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+          await Future.delayed(const Duration(milliseconds: 400)).then((value) {
             lvlOneOp = 0;
             update();
           });
         });    // 1
-      } else if(clevel == 7){
-        await audioPlayer.play(AssetSource("sounds/4.wav"));
+      }
+      else if(clevel == 7){
+
+        await audioPlayer.play(AssetSource("sounds/3.wav"));
         lvlFourOp = 0.5;
         update();
-        await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+        await Future.delayed(const Duration(milliseconds: 400)).then((value) {
           lvlFourOp = 0;
           update();
         });           // 4
-        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+        await Future.delayed(const Duration(milliseconds: 500)).then((value) async {
           lvlThreeOp = 0.5;
           update();
-          await audioPlayer.play(AssetSource("sounds/3.wav"));
-          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+          await audioPlayer.play(AssetSource("sounds/4.wav"));
+          await Future.delayed(const Duration(milliseconds: 500)).then((value) {
             lvlThreeOp = 0;
             update();
           });
         });     // 3
-        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
-          lvlFourOp = 0.5;
+        await audioPlayer.play(AssetSource("sounds/3.wav"));
+        lvlFourOp = 0.5;
+        update();
+        await Future.delayed(const Duration(milliseconds: 500)).then((value) {
+          lvlFourOp = 0;
           update();
-          await audioPlayer.play(AssetSource("sounds/4.wav"));
-          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
-            lvlFourOp = 0;
-            update();
-          });
-        });     // 4
-        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+        });           // 4
+        await Future.delayed(const Duration(milliseconds: 500)).then((value) async {
           lvlTwoOp = 0.5;
           update();
           await audioPlayer.play(AssetSource("sounds/2.wav"));
-          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+          await Future.delayed(const Duration(milliseconds: 400)).then((value) {
             lvlTwoOp = 0;
             update();
           });
         });     // 2
-        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+        await Future.delayed(const Duration(milliseconds: 500)).then((value) async {
           lvlThreeOp = 0.5;
           update();
-          await audioPlayer.play(AssetSource("sounds/3.wav"));
-          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+          await audioPlayer.play(AssetSource("sounds/4.wav"));
+          await Future.delayed(const Duration(milliseconds: 500)).then((value) {
             lvlThreeOp = 0;
             update();
           });
         });     // 3
-        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+        await Future.delayed(const Duration(milliseconds: 500)).then((value) async {
           lvlOneOp = 0.5;
           update();
           await audioPlayer.play(AssetSource("sounds/1.wav"));
-          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+          await Future.delayed(const Duration(milliseconds: 400)).then((value) {
             lvlOneOp = 0;
             update();
           });
@@ -485,136 +490,139 @@ class MemoryGameContImp extends MemoryGameCont {
           lvlOneOp = 0.5;
           update();
           await audioPlayer.play(AssetSource("sounds/1.wav"));
-          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+          await Future.delayed(const Duration(milliseconds: 400)).then((value) {
             lvlOneOp = 0;
             update();
           });
         });    // 1
-        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+        await Future.delayed(const Duration(milliseconds: 500)).then((value) async {
           lvlThreeOp = 0.5;
           update();
-          await audioPlayer.play(AssetSource("sounds/3.wav"));
-          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+          await audioPlayer.play(AssetSource("sounds/4.wav"));
+          await Future.delayed(const Duration(milliseconds: 500)).then((value) {
             lvlThreeOp = 0;
             update();
           });
         });     // 3
-      } else if(clevel == 8){
-        await audioPlayer.play(AssetSource("sounds/4.wav"));
+      }
+      else if(clevel == 8){
+        await audioPlayer.play(AssetSource("sounds/3.wav"));
         lvlFourOp = 0.5;
         update();
-        await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+        await Future.delayed(const Duration(milliseconds: 400)).then((value) {
           lvlFourOp = 0;
           update();
         });           // 4
-        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+        await Future.delayed(const Duration(milliseconds: 500)).then((value) async {
           lvlThreeOp = 0.5;
           update();
-          await audioPlayer.play(AssetSource("sounds/3.wav"));
-          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+          await audioPlayer.play(AssetSource("sounds/4.wav"));
+          await Future.delayed(const Duration(milliseconds: 500)).then((value) {
             lvlThreeOp = 0;
             update();
           });
         });     // 3
-        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+        await Future.delayed(const Duration(milliseconds: 500)).then((value) async {
           lvlFourOp = 0.5;
           update();
-          await audioPlayer.play(AssetSource("sounds/4.wav"));
-          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+          await audioPlayer.play(AssetSource("sounds/3.wav"));
+          await Future.delayed(const Duration(milliseconds: 400)).then((value) {
             lvlFourOp = 0;
             update();
           });
         });     // 4
-        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+        await Future.delayed(const Duration(milliseconds: 500)).then((value) async {
           lvlTwoOp = 0.5;
           update();
           await audioPlayer.play(AssetSource("sounds/2.wav"));
-          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+          await Future.delayed(const Duration(milliseconds: 400)).then((value) {
             lvlTwoOp = 0;
             update();
           });
         });     // 2
-        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+        await Future.delayed(const Duration(milliseconds: 500)).then((value) async {
           lvlThreeOp = 0.5;
           update();
-          await audioPlayer.play(AssetSource("sounds/3.wav"));
-          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+          await audioPlayer.play(AssetSource("sounds/4.wav"));
+          await Future.delayed(const Duration(milliseconds: 400)).then((value) {
             lvlThreeOp = 0;
             update();
           });
         });     // 3
-        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+        await Future.delayed(const Duration(milliseconds: 500)).then((value) async {
           lvlOneOp = 0.5;
           update();
           await audioPlayer.play(AssetSource("sounds/1.wav"));
-          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+          await Future.delayed(const Duration(milliseconds: 400)).then((value) {
             lvlOneOp = 0;
             update();
           });
         });     // 1
-        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+        await Future.delayed(const Duration(milliseconds: 500)).then((value) async {
           lvlThreeOp = 0.5;
           update();
-          await audioPlayer.play(AssetSource("sounds/3.wav"));
-          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+          await audioPlayer.play(AssetSource("sounds/4.wav"));
+          await Future.delayed(const Duration(milliseconds: 400)).then((value) {
             lvlThreeOp = 0;
             update();
           });
         });     // 3
-      } else if(clevel == 9){
-        await audioPlayer.play(AssetSource("sounds/4.wav"));
+      }
+      else if(clevel == 9){
+        await audioPlayer.play(AssetSource("sounds/3.wav"));
         lvlFourOp = 0.5;
         update();
-        await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+        await Future.delayed(const Duration(milliseconds: 400)).then((value) {
           lvlFourOp = 0;
           update();
         });           // 4
-        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+        await Future.delayed(const Duration(milliseconds: 500)).then((value) async {
           lvlThreeOp = 0.5;
           update();
-          await audioPlayer.play(AssetSource("sounds/3.wav"));
-          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+          await audioPlayer.play(AssetSource("sounds/4.wav"));
+          await Future.delayed(const Duration(milliseconds: 400)).then((value) {
             lvlThreeOp = 0;
             update();
           });
         });     // 3
-        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+        await Future.delayed(const Duration(milliseconds: 500)).then((value) async {
           lvlFourOp = 0.5;
           update();
-          await audioPlayer.play(AssetSource("sounds/4.wav"));
-          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+          await audioPlayer.play(AssetSource("sounds/3.wav"));
+          await Future.delayed(const Duration(milliseconds: 400)).then((value) {
             lvlFourOp = 0;
             update();
           });
         });     // 4
-        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+        await Future.delayed(const Duration(milliseconds: 500)).then((value) async {
           lvlThreeOp = 0.5;
           update();
-          await audioPlayer.play(AssetSource("sounds/3.wav"));
-          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+          await audioPlayer.play(AssetSource("sounds/4.wav"));
+          await Future.delayed(const Duration(milliseconds: 400)).then((value) {
             lvlThreeOp = 0;
             update();
           });
         });     // 3
-        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+        await Future.delayed(const Duration(milliseconds: 500)).then((value) async {
           lvlOneOp = 0.5;
           update();
           await audioPlayer.play(AssetSource("sounds/1.wav"));
-          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+          await Future.delayed(const Duration(milliseconds: 400)).then((value) {
             lvlOneOp = 0;
             update();
           });
         });     // 1
-        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+        await Future.delayed(const Duration(milliseconds: 500)).then((value) async {
           lvlTwoOp = 0.5;
           update();
           await audioPlayer.play(AssetSource("sounds/2.wav"));
-          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+          await Future.delayed(const Duration(milliseconds: 400)).then((value) {
             lvlTwoOp = 0;
             update();
           });
         });     // 2
-      } else if(clevel == 10){
+      }
+      else if(clevel == 10){
         await audioPlayer.play(AssetSource("sounds/2.wav"));
         lvlTwoOp = 0.5;
         update();
@@ -634,7 +642,7 @@ class MemoryGameContImp extends MemoryGameCont {
         await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
           lvlThreeOp = 0.5;
           update();
-          await audioPlayer.play(AssetSource("sounds/3.wav"));
+          await audioPlayer.play(AssetSource("sounds/4.wav"));
           await Future.delayed(const Duration(milliseconds: 300)).then((value) {
             lvlThreeOp = 0;
             update();
@@ -652,7 +660,7 @@ class MemoryGameContImp extends MemoryGameCont {
         await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
           lvlFourOp = 0.5;
           update();
-          await audioPlayer.play(AssetSource("sounds/4.wav"));
+          await audioPlayer.play(AssetSource("sounds/3.wav"));
           await Future.delayed(const Duration(milliseconds: 300)).then((value) {
             lvlFourOp = 0;
             update();
@@ -670,7 +678,7 @@ class MemoryGameContImp extends MemoryGameCont {
         await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
           lvlThreeOp = 0.5;
           update();
-          await audioPlayer.play(AssetSource("sounds/3.wav"));
+          await audioPlayer.play(AssetSource("sounds/4.wav"));
           await Future.delayed(const Duration(milliseconds: 300)).then((value) {
             lvlThreeOp = 0;
             update();
@@ -679,13 +687,14 @@ class MemoryGameContImp extends MemoryGameCont {
         await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
           lvlFourOp = 0.5;
           update();
-          await audioPlayer.play(AssetSource("sounds/4.wav"));
+          await audioPlayer.play(AssetSource("sounds/3.wav"));
           await Future.delayed(const Duration(milliseconds: 300)).then((value) {
             lvlFourOp = 0;
             update();
           });
         });     // 4
-      } else if(clevel == 11){
+      }
+      else if(clevel == 11){
         await audioPlayer.play(AssetSource("sounds/2.wav"));
         lvlTwoOp = 0.5;
         update();
@@ -705,7 +714,7 @@ class MemoryGameContImp extends MemoryGameCont {
         await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
           lvlThreeOp = 0.5;
           update();
-          await audioPlayer.play(AssetSource("sounds/3.wav"));
+          await audioPlayer.play(AssetSource("sounds/4.wav"));
           await Future.delayed(const Duration(milliseconds: 300)).then((value) {
             lvlThreeOp = 0;
             update();
@@ -720,7 +729,7 @@ class MemoryGameContImp extends MemoryGameCont {
             update();
           });
         });     // 2
-        await Future.delayed(const Duration(milliseconds: 950)).then((value) async {
+        await Future.delayed(const Duration(milliseconds: 1200)).then((value) async {
           lvlTwoOp = 0.5;
           update();
           await audioPlayer.play(AssetSource("sounds/2.wav"));
@@ -732,7 +741,7 @@ class MemoryGameContImp extends MemoryGameCont {
         await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
           lvlFourOp = 0.5;
           update();
-          await audioPlayer.play(AssetSource("sounds/4.wav"));
+          await audioPlayer.play(AssetSource("sounds/3.wav"));
           await Future.delayed(const Duration(milliseconds: 300)).then((value) {
             lvlFourOp = 0;
             update();
@@ -750,7 +759,7 @@ class MemoryGameContImp extends MemoryGameCont {
         await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
           lvlThreeOp = 0.5;
           update();
-          await audioPlayer.play(AssetSource("sounds/3.wav"));
+          await audioPlayer.play(AssetSource("sounds/4.wav"));
           await Future.delayed(const Duration(milliseconds: 300)).then((value) {
             lvlThreeOp = 0;
             update();
@@ -759,88 +768,89 @@ class MemoryGameContImp extends MemoryGameCont {
         await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
           lvlFourOp = 0.5;
           update();
-          await audioPlayer.play(AssetSource("sounds/4.wav"));
+          await audioPlayer.play(AssetSource("sounds/3.wav"));
           await Future.delayed(const Duration(milliseconds: 300)).then((value) {
             lvlFourOp = 0;
             update();
           });
         });     // 4
-      } else if(clevel == 12){
+      }
+      else if(clevel == 12){
         await audioPlayer.play(AssetSource("sounds/2.wav"));
         lvlTwoOp = 0.5;
         update();
-        await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+        await Future.delayed(const Duration(milliseconds: 400)).then((value) {
           lvlTwoOp = 0;
           update();
         });           // 2
-        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+        await Future.delayed(const Duration(milliseconds: 500)).then((value) async {
           lvlOneOp = 0.5;
           update();
           await audioPlayer.play(AssetSource("sounds/1.wav"));
-          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+          await Future.delayed(const Duration(milliseconds: 400)).then((value) {
             lvlOneOp = 0;
             update();
           });
         });     // 1
-        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+        await Future.delayed(const Duration(milliseconds: 500)).then((value) async {
           lvlThreeOp = 0.5;
           update();
-          await audioPlayer.play(AssetSource("sounds/3.wav"));
-          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+          await audioPlayer.play(AssetSource("sounds/4.wav"));
+          await Future.delayed(const Duration(milliseconds: 400)).then((value) {
             lvlThreeOp = 0;
             update();
           });
         });     // 3
-        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+        await Future.delayed(const Duration(milliseconds: 500)).then((value) async {
           lvlTwoOp = 0.5;
           update();
           await audioPlayer.play(AssetSource("sounds/2.wav"));
-          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+          await Future.delayed(const Duration(milliseconds: 400)).then((value) {
             lvlTwoOp = 0;
             update();
           });
         });     // 2
-        await Future.delayed(const Duration(milliseconds: 950)).then((value) async {
+        await Future.delayed(const Duration(milliseconds: 1000)).then((value) async {
           lvlTwoOp = 0.5;
           update();
           await audioPlayer.play(AssetSource("sounds/2.wav"));
-          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+          await Future.delayed(const Duration(milliseconds: 400)).then((value) {
             lvlTwoOp = 0;
             update();
           });
         });     // 2
-        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+        await Future.delayed(const Duration(milliseconds: 500)).then((value) async {
           lvlFourOp = 0.5;
           update();
-          await audioPlayer.play(AssetSource("sounds/4.wav"));
-          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+          await audioPlayer.play(AssetSource("sounds/3.wav"));
+          await Future.delayed(const Duration(milliseconds: 400)).then((value) {
             lvlFourOp = 0;
             update();
           });
         });     // 4
-        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+        await Future.delayed(const Duration(milliseconds: 500)).then((value) async {
           lvlTwoOp = 0.5;
           update();
           await audioPlayer.play(AssetSource("sounds/2.wav"));
-          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+          await Future.delayed(const Duration(milliseconds: 400)).then((value) {
             lvlTwoOp = 0;
             update();
           });
         });     // 2
-        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+        await Future.delayed(const Duration(milliseconds: 500)).then((value) async {
           lvlThreeOp = 0.5;
           update();
-          await audioPlayer.play(AssetSource("sounds/3.wav"));
-          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+          await audioPlayer.play(AssetSource("sounds/4.wav"));
+          await Future.delayed(const Duration(milliseconds: 400)).then((value) {
             lvlThreeOp = 0;
             update();
           });
         });     // 3
-        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+        await Future.delayed(const Duration(milliseconds: 500)).then((value) async {
           lvlFourOp = 0.5;
           update();
-          await audioPlayer.play(AssetSource("sounds/4.wav"));
-          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+          await audioPlayer.play(AssetSource("sounds/3.wav"));
+          await Future.delayed(const Duration(milliseconds: 400)).then((value) {
             lvlFourOp = 0;
             update();
           });
@@ -849,87 +859,87 @@ class MemoryGameContImp extends MemoryGameCont {
         await audioPlayer.play(AssetSource("sounds/2.wav"));
         lvlTwoOp = 0.5;
         update();
-        await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+        await Future.delayed(const Duration(milliseconds: 400)).then((value) {
           lvlTwoOp = 0;
           update();
         });           // 2
-        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+        await Future.delayed(const Duration(milliseconds: 500)).then((value) async {
           lvlFourOp = 0.5;
           update();
-          await audioPlayer.play(AssetSource("sounds/4.wav"));
-          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+          await audioPlayer.play(AssetSource("sounds/3.wav"));
+          await Future.delayed(const Duration(milliseconds: 400)).then((value) {
             lvlFourOp = 0;
             update();
           });
         });     // 4
-        await Future.delayed(const Duration(milliseconds: 900)).then((value) async {
+        await Future.delayed(const Duration(milliseconds: 1000)).then((value) async {
           lvlFourOp = 0.5;
           update();
-          await audioPlayer.play(AssetSource("sounds/4.wav"));
-          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+          await audioPlayer.play(AssetSource("sounds/3.wav"));
+          await Future.delayed(const Duration(milliseconds: 500)).then((value) {
             lvlFourOp = 0;
             update();
           });
         });     // 4
-        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+        await Future.delayed(const Duration(milliseconds: 500)).then((value) async {
           lvlThreeOp = 0.5;
           update();
-          await audioPlayer.play(AssetSource("sounds/3.wav"));
-          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+          await audioPlayer.play(AssetSource("sounds/4.wav"));
+          await Future.delayed(const Duration(milliseconds: 400)).then((value) {
             lvlThreeOp = 0;
             update();
           });
         });     // 3
-        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+        await Future.delayed(const Duration(milliseconds: 500)).then((value) async {
           lvlTwoOp = 0.5;
           update();
           await audioPlayer.play(AssetSource("sounds/2.wav"));
-          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+          await Future.delayed(const Duration(milliseconds: 400)).then((value) {
             lvlTwoOp = 0;
             update();
           });
         });     // 2
-        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+        await Future.delayed(const Duration(milliseconds: 500)).then((value) async {
           lvlOneOp = 0.5;
           update();
           await audioPlayer.play(AssetSource("sounds/1.wav"));
-          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+          await Future.delayed(const Duration(milliseconds: 400)).then((value) {
             lvlOneOp = 0;
             update();
           });
         });     // 1
-        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+        await Future.delayed(const Duration(milliseconds: 500)).then((value) async {
           lvlTwoOp = 0.5;
           update();
           await audioPlayer.play(AssetSource("sounds/2.wav"));
-          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+          await Future.delayed(const Duration(milliseconds: 400)).then((value) {
             lvlTwoOp = 0;
             update();
           });
         });     // 2
-        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+        await Future.delayed(const Duration(milliseconds: 500)).then((value) async {
           lvlOneOp = 0.5;
           update();
           await audioPlayer.play(AssetSource("sounds/1.wav"));
-          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+          await Future.delayed(const Duration(milliseconds: 400)).then((value) {
             lvlOneOp = 0;
             update();
           });
         });     // 1
-        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+        await Future.delayed(const Duration(milliseconds: 500)).then((value) async {
           lvlThreeOp = 0.5;
           update();
-          await audioPlayer.play(AssetSource("sounds/3.wav"));
-          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+          await audioPlayer.play(AssetSource("sounds/4.wav"));
+          await Future.delayed(const Duration(milliseconds: 400)).then((value) {
             lvlThreeOp = 0;
             update();
           });
         });     // 3
-        await Future.delayed(const Duration(milliseconds: 950)).then((value) async {
+        await Future.delayed(const Duration(milliseconds: 1000)).then((value) async {
           lvlThreeOp = 0.5;
           update();
-          await audioPlayer.play(AssetSource("sounds/3.wav"));
-          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+          await audioPlayer.play(AssetSource("sounds/4.wav"));
+          await Future.delayed(const Duration(milliseconds: 400)).then((value) {
             lvlThreeOp = 0;
             update();
           });
@@ -942,83 +952,83 @@ class MemoryGameContImp extends MemoryGameCont {
           lvlTwoOp = 0;
           update();
         });           // 2
-        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+        await Future.delayed(const Duration(milliseconds: 500)).then((value) async {
           lvlFourOp = 0.5;
           update();
-          await audioPlayer.play(AssetSource("sounds/4.wav"));
-          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+          await audioPlayer.play(AssetSource("sounds/3.wav"));
+          await Future.delayed(const Duration(milliseconds: 400)).then((value) {
             lvlFourOp = 0;
             update();
           });
         });     // 4
-        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+        await Future.delayed(const Duration(milliseconds: 500)).then((value) async {
           lvlThreeOp = 0.5;
           update();
-          await audioPlayer.play(AssetSource("sounds/3.wav"));
-          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+          await audioPlayer.play(AssetSource("sounds/4.wav"));
+          await Future.delayed(const Duration(milliseconds: 400)).then((value) {
             lvlThreeOp = 0;
             update();
           });
         });     // 3
-        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+        await Future.delayed(const Duration(milliseconds: 500)).then((value) async {
           lvlTwoOp = 0.5;
           update();
           await audioPlayer.play(AssetSource("sounds/2.wav"));
-          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+          await Future.delayed(const Duration(milliseconds: 400)).then((value) {
             lvlTwoOp = 0;
             update();
           });
         });     // 2
-        await Future.delayed(const Duration(milliseconds: 950)).then((value) async {
+        await Future.delayed(const Duration(milliseconds: 1250)).then((value) async {
           lvlTwoOp = 0.5;
           update();
           await audioPlayer.play(AssetSource("sounds/2.wav"));
-          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+          await Future.delayed(const Duration(milliseconds: 400)).then((value) {
             lvlTwoOp = 0;
             update();
           });
         });     // 2
-        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+        await Future.delayed(const Duration(milliseconds: 500)).then((value) async {
           lvlOneOp = 0.5;
           update();
           await audioPlayer.play(AssetSource("sounds/1.wav"));
-          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+          await Future.delayed(const Duration(milliseconds: 400)).then((value) {
             lvlOneOp = 0;
             update();
           });
         });     // 1
-        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+        await Future.delayed(const Duration(milliseconds: 500)).then((value) async {
           lvlFourOp = 0.5;
           update();
-          await audioPlayer.play(AssetSource("sounds/4.wav"));
-          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+          await audioPlayer.play(AssetSource("sounds/3.wav"));
+          await Future.delayed(const Duration(milliseconds: 400)).then((value) {
             lvlFourOp = 0;
             update();
           });
         });     // 4
-        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+        await Future.delayed(const Duration(milliseconds: 500)).then((value) async {
           lvlOneOp = 0.5;
           update();
           await audioPlayer.play(AssetSource("sounds/1.wav"));
-          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+          await Future.delayed(const Duration(milliseconds: 400)).then((value) {
             lvlOneOp = 0;
             update();
           });
         });     // 1
-        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+        await Future.delayed(const Duration(milliseconds: 500)).then((value) async {
           lvlThreeOp = 0.5;
           update();
-          await audioPlayer.play(AssetSource("sounds/3.wav"));
-          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+          await audioPlayer.play(AssetSource("sounds/4.wav"));
+          await Future.delayed(const Duration(milliseconds: 400)).then((value) {
             lvlThreeOp = 0;
             update();
           });
         });     // 3
-        await Future.delayed(const Duration(milliseconds: 950)).then((value) async {
+        await Future.delayed(const Duration(milliseconds: 1000)).then((value) async {
           lvlThreeOp = 0.5;
           update();
-          await audioPlayer.play(AssetSource("sounds/3.wav"));
-          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+          await audioPlayer.play(AssetSource("sounds/4.wav"));
+          await Future.delayed(const Duration(milliseconds: 400)).then((value) {
             lvlThreeOp = 0;
             update();
           });
@@ -1027,78 +1037,78 @@ class MemoryGameContImp extends MemoryGameCont {
         await audioPlayer.play(AssetSource("sounds/2.wav"));
         lvlTwoOp = 0.5;
         update();
-        await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+        await Future.delayed(const Duration(milliseconds: 400)).then((value) {
           lvlTwoOp = 0;
           update();
         });           // 2
         await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
           lvlThreeOp = 0.5;
           update();
-          await audioPlayer.play(AssetSource("sounds/3.wav"));
-          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+          await audioPlayer.play(AssetSource("sounds/4.wav"));
+          await Future.delayed(const Duration(milliseconds: 400)).then((value) {
             lvlThreeOp = 0;
             update();
           });
         });     // 3
-        await Future.delayed(const Duration(milliseconds: 950)).then((value) async {
+        await Future.delayed(const Duration(milliseconds: 1000)).then((value) async {
           lvlThreeOp = 0.5;
           update();
-          await audioPlayer.play(AssetSource("sounds/3.wav"));
-          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+          await audioPlayer.play(AssetSource("sounds/4.wav"));
+          await Future.delayed(const Duration(milliseconds: 400)).then((value) {
             lvlThreeOp = 0;
             update();
           });
         });     // 3
-        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+        await Future.delayed(const Duration(milliseconds: 500)).then((value) async {
           lvlTwoOp = 0.5;
           update();
           await audioPlayer.play(AssetSource("sounds/2.wav"));
-          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+          await Future.delayed(const Duration(milliseconds: 400)).then((value) {
             lvlTwoOp = 0;
             update();
           });
         });     // 2
-        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+        await Future.delayed(const Duration(milliseconds: 500)).then((value) async {
           lvlThreeOp = 0.5;
           update();
-          await audioPlayer.play(AssetSource("sounds/3.wav"));
-          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+          await audioPlayer.play(AssetSource("sounds/4.wav"));
+          await Future.delayed(const Duration(milliseconds: 400)).then((value) {
             lvlThreeOp = 0;
             update();
           });
         });     // 3
-        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+        await Future.delayed(const Duration(milliseconds: 500)).then((value) async {
           lvlOneOp = 0.5;
           update();
           await audioPlayer.play(AssetSource("sounds/1.wav"));
-          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+          await Future.delayed(const Duration(milliseconds: 400)).then((value) {
             lvlOneOp = 0;
             update();
           });
         });     // 1
-        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+        await Future.delayed(const Duration(milliseconds: 500)).then((value) async {
           lvlFourOp = 0.5;
           update();
-          await audioPlayer.play(AssetSource("sounds/4.wav"));
-          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+          await audioPlayer.play(AssetSource("sounds/3.wav"));
+          await Future.delayed(const Duration(milliseconds: 400)).then((value) {
             lvlFourOp = 0;
             update();
           });
         });     // 4
-        await Future.delayed(const Duration(milliseconds: 400)).then((value) async {
+        await Future.delayed(const Duration(milliseconds: 500)).then((value) async {
           lvlThreeOp = 0.5;
           update();
-          await audioPlayer.play(AssetSource("sounds/3.wav"));
-          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+          await audioPlayer.play(AssetSource("sounds/4.wav"));
+          await Future.delayed(const Duration(milliseconds: 400)).then((value) {
             lvlThreeOp = 0;
             update();
           });
         });     // 3
-        await Future.delayed(const Duration(milliseconds: 950)).then((value) async {
+        await Future.delayed(const Duration(milliseconds: 1000)).then((value) async {
           lvlThreeOp = 0.5;
           update();
-          await audioPlayer.play(AssetSource("sounds/3.wav"));
-          await Future.delayed(const Duration(milliseconds: 300)).then((value) {
+          await audioPlayer.play(AssetSource("sounds/4.wav"));
+          await Future.delayed(const Duration(milliseconds: 400)).then((value) {
             lvlThreeOp = 0;
             update();
           });

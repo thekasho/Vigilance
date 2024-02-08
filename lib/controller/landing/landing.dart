@@ -9,6 +9,7 @@ abstract class LandingCont extends GetxController {
   checkNetwork();
   checkAuth();
 }
+
 class LandingContImp extends LandingCont {
   bool isConnected = false;
   StatusRequest statusRequest = StatusRequest.none;
@@ -24,15 +25,15 @@ class LandingContImp extends LandingCont {
       statusRequest = StatusRequest.loading;
       update();
 
-      var loginData  = await LocaleApi.getLoginData();
+      var loginData = await LocaleApi.getLoginData();
 
-      if(loginData != null){
+      if (loginData != null) {
         statusRequest = StatusRequest.success;
         update();
 
-        if(loginData['type'] == 0){
+        if (loginData['type'] == 0) {
           Get.toNamed(screenStdHome);
-        } else if(loginData['type'] == 2){
+        } else if (loginData['type'] == 2) {
           Get.toNamed(screenTchrHome);
         }
       } else {

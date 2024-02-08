@@ -14,6 +14,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
   Future<void> updateClevel() async {
     memoryGameContImp.clevel = widget.level;
     memoryGameContImp.checkCanAccess();
+    memoryGameContImp.ans = [];
   }
 
   @override
@@ -119,7 +120,6 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                 onTap: () async {
                                   final audioPlayer = AudioPlayer();
                                   await audioPlayer.play(AssetSource("sounds/1.wav"));
-
                                   cont.saveClicks(1);
                                 },
                                 child: Opacity(
@@ -139,7 +139,6 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: red.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-
                                     ),
                                   ),
                                 ),
@@ -190,7 +189,6 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: greenSuccess.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-
                                     ),
                                   ),
                                 ),
@@ -227,7 +225,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                               GestureDetector(
                                 onTap: () async {
                                   final audioPlayer = AudioPlayer();
-                                  await audioPlayer.play(AssetSource("sounds/3.wav"));
+                                  await audioPlayer.play(AssetSource("sounds/4.wav"));
                                   cont.saveClicks(3);
                                 },
                                 child: Opacity(
@@ -247,7 +245,6 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: Colors.blue.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-
                                     ),
                                   ),
                                 ),
@@ -278,7 +275,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                               GestureDetector(
                                 onTap: () async {
                                   final audioPlayer = AudioPlayer();
-                                  await audioPlayer.play(AssetSource("sounds/4.wav"));
+                                  await audioPlayer.play(AssetSource("sounds/3.wav"));
                                   cont.saveClicks(4);
                                 },
                                 child: Opacity(
@@ -297,9 +294,6 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                       decoration: BoxDecoration(
                                         color: hardYellow.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
-                                      ),
-                                      child: Icon(Icons.star_border, size: 50.sp,
-                                        color: white.withOpacity(.5),
                                       ),
                                     ),
                                   ),
@@ -335,10 +329,10 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                               child: Text(
                                 "start".tr,
                                 style: TextStyle(
-                                    fontSize: 19.sp,
-                                    color: white,
-                                    fontWeight: FontWeight.bold,
-                                    fontFamily: 'Cairo'
+                                  fontSize: 19.sp,
+                                  color: white,
+                                  fontWeight: FontWeight.bold,
+                                  fontFamily: 'Cairo'
                                 ),
                               ),
                               onPressed: () async {
@@ -434,7 +428,6 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: red.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-
                                     ),
                                   ),
                                 ),
@@ -485,7 +478,6 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: greenSuccess.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-
                                     ),
                                   ),
                                 ),
@@ -522,7 +514,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                               GestureDetector(
                                 onTap: () async {
                                   final audioPlayer = AudioPlayer();
-                                  await audioPlayer.play(AssetSource("sounds/3.wav"));
+                                  await audioPlayer.play(AssetSource("sounds/4.wav"));
                                   cont.saveClicks(3);
                                 },
                                 child: Opacity(
@@ -542,7 +534,6 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: Colors.blue.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-
                                     ),
                                   ),
                                 ),
@@ -573,7 +564,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                               GestureDetector(
                                 onTap: () async {
                                   final audioPlayer = AudioPlayer();
-                                  await audioPlayer.play(AssetSource("sounds/4.wav"));
+                                  await audioPlayer.play(AssetSource("sounds/3.wav"));
                                   cont.saveClicks(4);
                                 },
                                 child: Opacity(
@@ -593,7 +584,6 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: hardYellow.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-
                                     ),
                                   ),
                                 ),
@@ -778,7 +768,6 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: greenSuccess.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-
                                     ),
                                   ),
                                 ),
@@ -815,7 +804,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                               GestureDetector(
                                 onTap: () async {
                                   final audioPlayer = AudioPlayer();
-                                  await audioPlayer.play(AssetSource("sounds/3.wav"));
+                                  await audioPlayer.play(AssetSource("sounds/4.wav"));
                                   cont.saveClicks(3);
                                 },
                                 child: Opacity(
@@ -835,7 +824,6 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: Colors.blue.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-
                                     ),
                                   ),
                                 ),
@@ -866,7 +854,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                               GestureDetector(
                                 onTap: () async {
                                   final audioPlayer = AudioPlayer();
-                                  await audioPlayer.play(AssetSource("sounds/4.wav"));
+                                  await audioPlayer.play(AssetSource("sounds/3.wav"));
                                   cont.saveClicks(4);
                                 },
                                 child: Opacity(
@@ -886,7 +874,6 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: hardYellow.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-
                                     ),
                                   ),
                                 ),
@@ -1020,7 +1007,6 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: red.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-
                                     ),
                                   ),
                                 ),
@@ -1071,7 +1057,6 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: greenSuccess.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-
                                     ),
                                   ),
                                 ),
@@ -1108,7 +1093,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                               GestureDetector(
                                 onTap: () async {
                                   final audioPlayer = AudioPlayer();
-                                  await audioPlayer.play(AssetSource("sounds/3.wav"));
+                                  await audioPlayer.play(AssetSource("sounds/4.wav"));
                                   cont.saveClicks(3);
                                 },
                                 child: Opacity(
@@ -1128,7 +1113,6 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: Colors.blue.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-
                                     ),
                                   ),
                                 ),
@@ -1159,7 +1143,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                               GestureDetector(
                                 onTap: () async {
                                   final audioPlayer = AudioPlayer();
-                                  await audioPlayer.play(AssetSource("sounds/4.wav"));
+                                  await audioPlayer.play(AssetSource("sounds/3.wav"));
                                   cont.saveClicks(4);
                                 },
                                 child: Opacity(
@@ -1179,7 +1163,6 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: hardYellow.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-
                                     ),
                                   ),
                                 ),
@@ -1314,7 +1297,6 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: red.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-
                                     ),
                                   ),
                                 ),
@@ -1366,7 +1348,6 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: greenSuccess.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-
                                     ),
                                   ),
                                 ),
@@ -1404,7 +1385,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                 onTap: () async {
                                   final audioPlayer = AudioPlayer();
                                   await audioPlayer.play(
-                                      AssetSource("sounds/3.wav"));
+                                      AssetSource("sounds/4.wav"));
                                   cont.saveClicks(3);
                                 },
                                 child: Opacity(
@@ -1424,7 +1405,6 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: Colors.blue.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-
                                     ),
                                   ),
                                 ),
@@ -1456,7 +1436,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                 onTap: () async {
                                   final audioPlayer = AudioPlayer();
                                   await audioPlayer.play(
-                                      AssetSource("sounds/4.wav"));
+                                      AssetSource("sounds/3.wav"));
                                   cont.saveClicks(4);
                                 },
                                 child: Opacity(
@@ -1476,7 +1456,6 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: hardYellow.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-
                                     ),
                                   ),
                                 ),
@@ -1611,7 +1590,6 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: red.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-
                                     ),
                                   ),
                                 ),
@@ -1663,7 +1641,6 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: greenSuccess.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-
                                     ),
                                   ),
                                 ),
@@ -1701,7 +1678,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                 onTap: () async {
                                   final audioPlayer = AudioPlayer();
                                   await audioPlayer.play(
-                                      AssetSource("sounds/3.wav"));
+                                      AssetSource("sounds/4.wav"));
                                   cont.saveClicks(3);
                                 },
                                 child: Opacity(
@@ -1721,7 +1698,6 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: Colors.blue.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-
                                     ),
                                   ),
                                 ),
@@ -1753,7 +1729,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                 onTap: () async {
                                   final audioPlayer = AudioPlayer();
                                   await audioPlayer.play(
-                                      AssetSource("sounds/4.wav"));
+                                      AssetSource("sounds/3.wav"));
                                   cont.saveClicks(4);
                                 },
                                 child: Opacity(
@@ -1773,7 +1749,6 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: hardYellow.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-
                                     ),
                                   ),
                                 ),
@@ -1960,7 +1935,6 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: greenSuccess.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-
                                     ),
                                   ),
                                 ),
@@ -1998,7 +1972,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                 onTap: () async {
                                   final audioPlayer = AudioPlayer();
                                   await audioPlayer.play(
-                                      AssetSource("sounds/3.wav"));
+                                      AssetSource("sounds/4.wav"));
                                   cont.saveClicks(3);
                                 },
                                 child: Opacity(
@@ -2018,7 +1992,6 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: Colors.blue.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-
                                     ),
                                   ),
                                 ),
@@ -2050,7 +2023,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                 onTap: () async {
                                   final audioPlayer = AudioPlayer();
                                   await audioPlayer.play(
-                                      AssetSource("sounds/4.wav"));
+                                      AssetSource("sounds/3.wav"));
                                   cont.saveClicks(4);
                                 },
                                 child: Opacity(
@@ -2070,7 +2043,6 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: hardYellow.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-
                                     ),
                                   ),
                                 ),
@@ -2205,7 +2177,6 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: red.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-
                                     ),
                                   ),
                                 ),
@@ -2257,7 +2228,6 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: greenSuccess.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-
                                     ),
                                   ),
                                 ),
@@ -2295,7 +2265,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                 onTap: () async {
                                   final audioPlayer = AudioPlayer();
                                   await audioPlayer.play(
-                                      AssetSource("sounds/3.wav"));
+                                      AssetSource("sounds/4.wav"));
                                   cont.saveClicks(3);
                                 },
                                 child: Opacity(
@@ -2315,7 +2285,6 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: Colors.blue.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-
                                     ),
                                   ),
                                 ),
@@ -2347,7 +2316,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                 onTap: () async {
                                   final audioPlayer = AudioPlayer();
                                   await audioPlayer.play(
-                                      AssetSource("sounds/4.wav"));
+                                      AssetSource("sounds/3.wav"));
                                   cont.saveClicks(4);
                                 },
                                 child: Opacity(
@@ -2367,7 +2336,6 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: hardYellow.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-
                                     ),
                                   ),
                                 ),
@@ -2502,7 +2470,6 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: red.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-
                                     ),
                                   ),
                                 ),
@@ -2554,7 +2521,6 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: greenSuccess.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-
                                     ),
                                   ),
                                 ),
@@ -2592,7 +2558,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                 onTap: () async {
                                   final audioPlayer = AudioPlayer();
                                   await audioPlayer.play(
-                                      AssetSource("sounds/3.wav"));
+                                      AssetSource("sounds/4.wav"));
                                   cont.saveClicks(3);
                                 },
                                 child: Opacity(
@@ -2612,7 +2578,6 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: Colors.blue.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-
                                     ),
                                   ),
                                 ),
@@ -2644,7 +2609,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                 onTap: () async {
                                   final audioPlayer = AudioPlayer();
                                   await audioPlayer.play(
-                                      AssetSource("sounds/4.wav"));
+                                      AssetSource("sounds/3.wav"));
                                   cont.saveClicks(4);
                                 },
                                 child: Opacity(
@@ -2664,7 +2629,6 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: hardYellow.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-
                                     ),
                                   ),
                                 ),
@@ -2799,7 +2763,6 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: red.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-
                                     ),
                                   ),
                                 ),
@@ -2851,7 +2814,6 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: greenSuccess.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-
                                     ),
                                   ),
                                 ),
@@ -2889,7 +2851,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                 onTap: () async {
                                   final audioPlayer = AudioPlayer();
                                   await audioPlayer.play(
-                                      AssetSource("sounds/3.wav"));
+                                      AssetSource("sounds/4.wav"));
                                   cont.saveClicks(3);
                                 },
                                 child: Opacity(
@@ -2909,7 +2871,6 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: Colors.blue.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-
                                     ),
                                   ),
                                 ),
@@ -2941,7 +2902,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                 onTap: () async {
                                   final audioPlayer = AudioPlayer();
                                   await audioPlayer.play(
-                                      AssetSource("sounds/4.wav"));
+                                      AssetSource("sounds/3.wav"));
                                   cont.saveClicks(4);
                                 },
                                 child: Opacity(
@@ -2961,7 +2922,6 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: hardYellow.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-
                                     ),
                                   ),
                                 ),
@@ -3096,7 +3056,6 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: red.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-
                                     ),
                                   ),
                                 ),
@@ -3148,7 +3107,6 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: greenSuccess.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-
                                     ),
                                   ),
                                 ),
@@ -3186,7 +3144,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                 onTap: () async {
                                   final audioPlayer = AudioPlayer();
                                   await audioPlayer.play(
-                                      AssetSource("sounds/3.wav"));
+                                      AssetSource("sounds/4.wav"));
                                   cont.saveClicks(3);
                                 },
                                 child: Opacity(
@@ -3206,7 +3164,6 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: Colors.blue.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-
                                     ),
                                   ),
                                 ),
@@ -3238,7 +3195,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                 onTap: () async {
                                   final audioPlayer = AudioPlayer();
                                   await audioPlayer.play(
-                                      AssetSource("sounds/4.wav"));
+                                      AssetSource("sounds/3.wav"));
                                   cont.saveClicks(4);
                                 },
                                 child: Opacity(
@@ -3258,7 +3215,6 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: hardYellow.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-
                                     ),
                                   ),
                                 ),
@@ -3393,7 +3349,6 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: red.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-
                                     ),
                                   ),
                                 ),
@@ -3445,7 +3400,6 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: greenSuccess.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-
                                     ),
                                   ),
                                 ),
@@ -3483,7 +3437,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                 onTap: () async {
                                   final audioPlayer = AudioPlayer();
                                   await audioPlayer.play(
-                                      AssetSource("sounds/3.wav"));
+                                      AssetSource("sounds/4.wav"));
                                   cont.saveClicks(3);
                                 },
                                 child: Opacity(
@@ -3503,7 +3457,6 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: Colors.blue.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-
                                     ),
                                   ),
                                 ),
@@ -3535,7 +3488,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                 onTap: () async {
                                   final audioPlayer = AudioPlayer();
                                   await audioPlayer.play(
-                                      AssetSource("sounds/4.wav"));
+                                      AssetSource("sounds/3.wav"));
                                   cont.saveClicks(4);
                                 },
                                 child: Opacity(
@@ -3690,7 +3643,6 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: red.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-
                                     ),
                                   ),
                                 ),
@@ -3742,7 +3694,6 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: greenSuccess.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-
                                     ),
                                   ),
                                 ),
@@ -3780,7 +3731,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                 onTap: () async {
                                   final audioPlayer = AudioPlayer();
                                   await audioPlayer.play(
-                                      AssetSource("sounds/3.wav"));
+                                      AssetSource("sounds/4.wav"));
                                   cont.saveClicks(3);
                                 },
                                 child: Opacity(
@@ -3800,7 +3751,6 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: Colors.blue.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-
                                     ),
                                   ),
                                 ),
@@ -3832,7 +3782,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                 onTap: () async {
                                   final audioPlayer = AudioPlayer();
                                   await audioPlayer.play(
-                                      AssetSource("sounds/4.wav"));
+                                      AssetSource("sounds/3.wav"));
                                   cont.saveClicks(4);
                                 },
                                 child: Opacity(
@@ -3852,7 +3802,6 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: hardYellow.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-
                                     ),
                                   ),
                                 ),
@@ -3987,7 +3936,6 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: red.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-
                                     ),
                                   ),
                                 ),
@@ -4039,7 +3987,6 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: greenSuccess.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-
                                     ),
                                   ),
                                 ),
@@ -4077,7 +4024,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                 onTap: () async {
                                   final audioPlayer = AudioPlayer();
                                   await audioPlayer.play(
-                                      AssetSource("sounds/3.wav"));
+                                      AssetSource("sounds/4.wav"));
                                   cont.saveClicks(3);
                                 },
                                 child: Opacity(
@@ -4097,7 +4044,6 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: Colors.blue.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-
                                     ),
                                   ),
                                 ),
@@ -4129,7 +4075,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                 onTap: () async {
                                   final audioPlayer = AudioPlayer();
                                   await audioPlayer.play(
-                                      AssetSource("sounds/4.wav"));
+                                      AssetSource("sounds/3.wav"));
                                   cont.saveClicks(4);
                                 },
                                 child: Opacity(
@@ -4284,7 +4230,6 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: red.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-
                                     ),
                                   ),
                                 ),
@@ -4336,7 +4281,6 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: greenSuccess.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-
                                     ),
                                   ),
                                 ),
@@ -4374,7 +4318,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                 onTap: () async {
                                   final audioPlayer = AudioPlayer();
                                   await audioPlayer.play(
-                                      AssetSource("sounds/3.wav"));
+                                      AssetSource("sounds/4.wav"));
                                   cont.saveClicks(3);
                                 },
                                 child: Opacity(
@@ -4394,7 +4338,6 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                         color: Colors.blue.withOpacity(0.7),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-
                                     ),
                                   ),
                                 ),
@@ -4426,7 +4369,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                                 onTap: () async {
                                   final audioPlayer = AudioPlayer();
                                   await audioPlayer.play(
-                                      AssetSource("sounds/4.wav"));
+                                      AssetSource("sounds/3.wav"));
                                   cont.saveClicks(4);
                                 },
                                 child: Opacity(

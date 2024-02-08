@@ -13,63 +13,63 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
 
   Future<void> openTimer() async {
     spotGameContImp.clevel = widget.level;
-    if(widget.level == 1){
+    if (widget.level == 1) {
       await Future.delayed(const Duration(seconds: 1));
       await spotGameContImp.countdownController1.start();
       spotGameContImp.update();
-    } else if(widget.level == 2){
+    } else if (widget.level == 2) {
       await Future.delayed(const Duration(seconds: 1));
       spotGameContImp.countdownController2.start();
       spotGameContImp.update();
-    } else if(widget.level == 3){
+    } else if (widget.level == 3) {
       await Future.delayed(const Duration(seconds: 1));
       await spotGameContImp.countdownController3.start();
       spotGameContImp.update();
-    } else if(widget.level == 4){
+    } else if (widget.level == 4) {
       await Future.delayed(const Duration(seconds: 1));
       await spotGameContImp.countdownController4.start();
       spotGameContImp.update();
-    } else if(widget.level == 5){
+    } else if (widget.level == 5) {
       await Future.delayed(const Duration(seconds: 1));
       await spotGameContImp.countdownController5.start();
       spotGameContImp.update();
-    } else if(widget.level == 6){
+    } else if (widget.level == 6) {
       await Future.delayed(const Duration(seconds: 1));
       await spotGameContImp.countdownController6.start();
       spotGameContImp.update();
-    } else if(widget.level == 7){
+    } else if (widget.level == 7) {
       await Future.delayed(const Duration(seconds: 1));
       await spotGameContImp.countdownController7.start();
       spotGameContImp.update();
-    } else if(widget.level == 8){
+    } else if (widget.level == 8) {
       await Future.delayed(const Duration(seconds: 1));
       await spotGameContImp.countdownController8.start();
       spotGameContImp.update();
-    } else if(widget.level == 9){
+    } else if (widget.level == 9) {
       await Future.delayed(const Duration(seconds: 1));
       await spotGameContImp.countdownController9.start();
       spotGameContImp.update();
-    } else if(widget.level == 10){
+    } else if (widget.level == 10) {
       await Future.delayed(const Duration(seconds: 1));
       await spotGameContImp.countdownController10.start();
       spotGameContImp.update();
-    } else if(widget.level == 11){
+    } else if (widget.level == 11) {
       await Future.delayed(const Duration(seconds: 1));
       await spotGameContImp.countdownController11.start();
       spotGameContImp.update();
-    } else if(widget.level == 12){
+    } else if (widget.level == 12) {
       await Future.delayed(const Duration(seconds: 1));
       await spotGameContImp.countdownController12.start();
       spotGameContImp.update();
-    } else if(widget.level == 13){
+    } else if (widget.level == 13) {
       await Future.delayed(const Duration(seconds: 1));
       await spotGameContImp.countdownController13.start();
       spotGameContImp.update();
-    } else if(widget.level == 14){
+    } else if (widget.level == 14) {
       await Future.delayed(const Duration(seconds: 1));
       await spotGameContImp.countdownController14.start();
       spotGameContImp.update();
-    } else if(widget.level == 15){
+    } else if (widget.level == 15) {
       await Future.delayed(const Duration(seconds: 1));
       await spotGameContImp.countdownController15.start();
       spotGameContImp.update();
@@ -88,7 +88,7 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
     return SafeArea(
       child: Scaffold(
         body: GetBuilder<SpotGameContImp>(builder: (cont) {
-          if(cont.statusRequest == StatusRequest.loading){
+          if (cont.statusRequest == StatusRequest.loading) {
             return Container(
               color: yellowBck,
               height: 85.h,
@@ -103,8 +103,8 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                 ],
               ),
             );
-          } else if(cont.statusRequest == StatusRequest.success){
-            if(cont.clevel == 1){
+          } else if (cont.statusRequest == StatusRequest.success) {
+            if (cont.clevel == 1) {
               return Container(
                 width: double.infinity,
                 height: double.infinity,
@@ -114,16 +114,10 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                     Container(
                       decoration: const BoxDecoration(
                         border: Border(
-                          bottom: BorderSide(
-                            width: 2,
-                            color: black
-                          ),
+                          bottom: BorderSide(width: 2, color: black),
                         ),
                       ),
-                      padding: EdgeInsets.only(
-                        top: 1.h,
-                        bottom: 3.h
-                      ),
+                      padding: EdgeInsets.only(top: 1.h, bottom: 3.h),
                       child: Column(
                         children: [
                           Row(
@@ -144,16 +138,13 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                                     )
                                   ],
                                 ),
-                                padding: EdgeInsets.symmetric(
-                                    vertical: .5.h
-                                ),
+                                padding: EdgeInsets.symmetric(vertical: .5.h),
                                 child: Text(
                                   "${"level".tr} 1",
                                   style: TextStyle(
-                                    fontSize: 20.sp,
-                                    fontWeight: FontWeight.bold,
-                                    fontFamily: 'Cairo'
-                                  ),
+                                      fontSize: 20.sp,
+                                      fontWeight: FontWeight.bold,
+                                      fontFamily: 'Cairo'),
                                 ),
                               ),
                             ],
@@ -327,9 +318,7 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                       ],
                     ),
                     SizedBox(height: 1.h),
-
                     const Divider(thickness: 2, color: black),
-
                     SizedBox(height: 1.h),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -511,7 +500,7 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                   ],
                 ),
               );
-            } else if(cont.clevel == 2){
+            } else if (cont.clevel == 2) {
               return Container(
                 width: double.infinity,
                 height: double.infinity,
@@ -521,16 +510,10 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                     Container(
                       decoration: const BoxDecoration(
                         border: Border(
-                          bottom: BorderSide(
-                              width: 2,
-                              color: black
-                          ),
+                          bottom: BorderSide(width: 2, color: black),
                         ),
                       ),
-                      padding: EdgeInsets.only(
-                          top: 1.h,
-                          bottom: 3.h
-                      ),
+                      padding: EdgeInsets.only(top: 1.h, bottom: 3.h),
                       child: Column(
                         children: [
                           Row(
@@ -551,16 +534,13 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                                     )
                                   ],
                                 ),
-                                padding: EdgeInsets.symmetric(
-                                    vertical: .5.h
-                                ),
+                                padding: EdgeInsets.symmetric(vertical: .5.h),
                                 child: Text(
                                   "${"level".tr} 2",
                                   style: TextStyle(
                                       fontSize: 20.sp,
                                       fontWeight: FontWeight.bold,
-                                      fontFamily: 'Cairo'
-                                  ),
+                                      fontFamily: 'Cairo'),
                                 ),
                               ),
                             ],
@@ -915,7 +895,7 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                   ],
                 ),
               );
-            } else if(cont.clevel == 3){
+            } else if (cont.clevel == 3) {
               return Container(
                 width: double.infinity,
                 height: double.infinity,
@@ -925,16 +905,10 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                     Container(
                       decoration: const BoxDecoration(
                         border: Border(
-                          bottom: BorderSide(
-                              width: 2,
-                              color: black
-                          ),
+                          bottom: BorderSide(width: 2, color: black),
                         ),
                       ),
-                      padding: EdgeInsets.only(
-                        top: 1.h,
-                        bottom: 3.h
-                      ),
+                      padding: EdgeInsets.only(top: 1.h, bottom: 3.h),
                       child: Column(
                         children: [
                           Row(
@@ -955,16 +929,13 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                                     )
                                   ],
                                 ),
-                                padding: EdgeInsets.symmetric(
-                                    vertical: .5.h
-                                ),
+                                padding: EdgeInsets.symmetric(vertical: .5.h),
                                 child: Text(
                                   "${"level".tr} 3",
                                   style: TextStyle(
-                                    fontSize: 20.sp,
-                                    fontWeight: FontWeight.bold,
-                                    fontFamily: 'Cairo'
-                                  ),
+                                      fontSize: 20.sp,
+                                      fontWeight: FontWeight.bold,
+                                      fontFamily: 'Cairo'),
                                 ),
                               ),
                             ],
@@ -1319,7 +1290,7 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                   ],
                 ),
               );
-            } else if(cont.clevel == 4){
+            } else if (cont.clevel == 4) {
               return Container(
                 width: double.infinity,
                 height: double.infinity,
@@ -1329,16 +1300,10 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                     Container(
                       decoration: const BoxDecoration(
                         border: Border(
-                          bottom: BorderSide(
-                              width: 2,
-                              color: black
-                          ),
+                          bottom: BorderSide(width: 2, color: black),
                         ),
                       ),
-                      padding: EdgeInsets.only(
-                          top: 1.h,
-                          bottom: 3.h
-                      ),
+                      padding: EdgeInsets.only(top: 1.h, bottom: 3.h),
                       child: Column(
                         children: [
                           Row(
@@ -1359,16 +1324,13 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                                     )
                                   ],
                                 ),
-                                padding: EdgeInsets.symmetric(
-                                    vertical: .5.h
-                                ),
+                                padding: EdgeInsets.symmetric(vertical: .5.h),
                                 child: Text(
                                   "${"level".tr} 4",
                                   style: TextStyle(
                                       fontSize: 20.sp,
                                       fontWeight: FontWeight.bold,
-                                      fontFamily: 'Cairo'
-                                  ),
+                                      fontFamily: 'Cairo'),
                                 ),
                               ),
                             ],
@@ -1770,7 +1732,7 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                   ],
                 ),
               );
-            } else if(cont.clevel == 5){
+            } else if (cont.clevel == 5) {
               return Container(
                 width: double.infinity,
                 height: double.infinity,
@@ -1780,16 +1742,10 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                     Container(
                       decoration: const BoxDecoration(
                         border: Border(
-                          bottom: BorderSide(
-                            width: 2,
-                            color: black
-                          ),
+                          bottom: BorderSide(width: 2, color: black),
                         ),
                       ),
-                      padding: EdgeInsets.only(
-                          top: 1.h,
-                          bottom: 3.h
-                      ),
+                      padding: EdgeInsets.only(top: 1.h, bottom: 3.h),
                       child: Column(
                         children: [
                           Row(
@@ -1810,16 +1766,13 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                                     )
                                   ],
                                 ),
-                                padding: EdgeInsets.symmetric(
-                                    vertical: .5.h
-                                ),
+                                padding: EdgeInsets.symmetric(vertical: .5.h),
                                 child: Text(
                                   "${"level".tr} 5",
                                   style: TextStyle(
                                       fontSize: 20.sp,
                                       fontWeight: FontWeight.bold,
-                                      fontFamily: 'Cairo'
-                                  ),
+                                      fontFamily: 'Cairo'),
                                 ),
                               ),
                             ],
@@ -2174,7 +2127,7 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                   ],
                 ),
               );
-            } else if(cont.clevel == 6){
+            } else if (cont.clevel == 6) {
               return Container(
                 width: double.infinity,
                 height: double.infinity,
@@ -2184,16 +2137,10 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                     Container(
                       decoration: const BoxDecoration(
                         border: Border(
-                          bottom: BorderSide(
-                              width: 2,
-                              color: black
-                          ),
+                          bottom: BorderSide(width: 2, color: black),
                         ),
                       ),
-                      padding: EdgeInsets.only(
-                          top: 1.h,
-                          bottom: 3.h
-                      ),
+                      padding: EdgeInsets.only(top: 1.h, bottom: 3.h),
                       child: Column(
                         children: [
                           Row(
@@ -2214,16 +2161,13 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                                     )
                                   ],
                                 ),
-                                padding: EdgeInsets.symmetric(
-                                    vertical: .5.h
-                                ),
+                                padding: EdgeInsets.symmetric(vertical: .5.h),
                                 child: Text(
                                   "${"level".tr} 6",
                                   style: TextStyle(
                                       fontSize: 20.sp,
                                       fontWeight: FontWeight.bold,
-                                      fontFamily: 'Cairo'
-                                  ),
+                                      fontFamily: 'Cairo'),
                                 ),
                               ),
                             ],
@@ -2625,7 +2569,7 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                   ],
                 ),
               );
-            } else if(cont.clevel == 7){
+            } else if (cont.clevel == 7) {
               return Container(
                 width: double.infinity,
                 height: double.infinity,
@@ -2635,16 +2579,10 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                     Container(
                       decoration: const BoxDecoration(
                         border: Border(
-                          bottom: BorderSide(
-                              width: 2,
-                              color: black
-                          ),
+                          bottom: BorderSide(width: 2, color: black),
                         ),
                       ),
-                      padding: EdgeInsets.only(
-                          top: 1.h,
-                          bottom: 3.h
-                      ),
+                      padding: EdgeInsets.only(top: 1.h, bottom: 3.h),
                       child: Column(
                         children: [
                           Row(
@@ -2665,16 +2603,13 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                                     )
                                   ],
                                 ),
-                                padding: EdgeInsets.symmetric(
-                                    vertical: .5.h
-                                ),
+                                padding: EdgeInsets.symmetric(vertical: .5.h),
                                 child: Text(
                                   "${"level".tr} 7",
                                   style: TextStyle(
                                       fontSize: 20.sp,
                                       fontWeight: FontWeight.bold,
-                                      fontFamily: 'Cairo'
-                                  ),
+                                      fontFamily: 'Cairo'),
                                 ),
                               ),
                             ],
@@ -3076,7 +3011,7 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                   ],
                 ),
               );
-            } else if(cont.clevel == 8){
+            } else if (cont.clevel == 8) {
               return Container(
                 width: double.infinity,
                 height: double.infinity,
@@ -3086,16 +3021,10 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                     Container(
                       decoration: const BoxDecoration(
                         border: Border(
-                          bottom: BorderSide(
-                              width: 2,
-                              color: black
-                          ),
+                          bottom: BorderSide(width: 2, color: black),
                         ),
                       ),
-                      padding: EdgeInsets.only(
-                          top: 1.h,
-                          bottom: 3.h
-                      ),
+                      padding: EdgeInsets.only(top: 1.h, bottom: 3.h),
                       child: Column(
                         children: [
                           Row(
@@ -3116,16 +3045,13 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                                     )
                                   ],
                                 ),
-                                padding: EdgeInsets.symmetric(
-                                    vertical: .5.h
-                                ),
+                                padding: EdgeInsets.symmetric(vertical: .5.h),
                                 child: Text(
                                   "${"level".tr} 8",
                                   style: TextStyle(
                                       fontSize: 20.sp,
                                       fontWeight: FontWeight.bold,
-                                      fontFamily: 'Cairo'
-                                  ),
+                                      fontFamily: 'Cairo'),
                                 ),
                               ),
                             ],
@@ -3574,7 +3500,7 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                   ],
                 ),
               );
-            } else if(cont.clevel == 9){
+            } else if (cont.clevel == 9) {
               return Container(
                 width: double.infinity,
                 height: double.infinity,
@@ -3584,16 +3510,10 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                     Container(
                       decoration: const BoxDecoration(
                         border: Border(
-                          bottom: BorderSide(
-                              width: 2,
-                              color: black
-                          ),
+                          bottom: BorderSide(width: 2, color: black),
                         ),
                       ),
-                      padding: EdgeInsets.only(
-                          top: 1.h,
-                          bottom: 3.h
-                      ),
+                      padding: EdgeInsets.only(top: 1.h, bottom: 3.h),
                       child: Column(
                         children: [
                           Row(
@@ -3614,16 +3534,13 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                                     )
                                   ],
                                 ),
-                                padding: EdgeInsets.symmetric(
-                                    vertical: .5.h
-                                ),
+                                padding: EdgeInsets.symmetric(vertical: .5.h),
                                 child: Text(
                                   "${"level".tr} 9",
                                   style: TextStyle(
                                       fontSize: 20.sp,
                                       fontWeight: FontWeight.bold,
-                                      fontFamily: 'Cairo'
-                                  ),
+                                      fontFamily: 'Cairo'),
                                 ),
                               ),
                             ],
@@ -4072,7 +3989,7 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                   ],
                 ),
               );
-            } else if(cont.clevel == 10){
+            } else if (cont.clevel == 10) {
               return Container(
                 width: double.infinity,
                 height: double.infinity,
@@ -4082,16 +3999,10 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                     Container(
                       decoration: const BoxDecoration(
                         border: Border(
-                          bottom: BorderSide(
-                              width: 2,
-                              color: black
-                          ),
+                          bottom: BorderSide(width: 2, color: black),
                         ),
                       ),
-                      padding: EdgeInsets.only(
-                          top: 1.h,
-                          bottom: 3.h
-                      ),
+                      padding: EdgeInsets.only(top: 1.h, bottom: 3.h),
                       child: Column(
                         children: [
                           Row(
@@ -4112,16 +4023,13 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                                     )
                                   ],
                                 ),
-                                padding: EdgeInsets.symmetric(
-                                    vertical: .5.h
-                                ),
+                                padding: EdgeInsets.symmetric(vertical: .5.h),
                                 child: Text(
                                   "${"level".tr} 10",
                                   style: TextStyle(
                                       fontSize: 20.sp,
                                       fontWeight: FontWeight.bold,
-                                      fontFamily: 'Cairo'
-                                  ),
+                                      fontFamily: 'Cairo'),
                                 ),
                               ),
                             ],
@@ -4570,7 +4478,7 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                   ],
                 ),
               );
-            } else if(cont.clevel == 11){
+            } else if (cont.clevel == 11) {
               return Container(
                 width: double.infinity,
                 height: double.infinity,
@@ -4580,16 +4488,10 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                     Container(
                       decoration: const BoxDecoration(
                         border: Border(
-                          bottom: BorderSide(
-                              width: 2,
-                              color: black
-                          ),
+                          bottom: BorderSide(width: 2, color: black),
                         ),
                       ),
-                      padding: EdgeInsets.only(
-                          top: 1.h,
-                          bottom: 3.h
-                      ),
+                      padding: EdgeInsets.only(top: 1.h, bottom: 3.h),
                       child: Column(
                         children: [
                           Row(
@@ -4610,16 +4512,13 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                                     )
                                   ],
                                 ),
-                                padding: EdgeInsets.symmetric(
-                                    vertical: .5.h
-                                ),
+                                padding: EdgeInsets.symmetric(vertical: .5.h),
                                 child: Text(
                                   "${"level".tr} 11",
                                   style: TextStyle(
                                       fontSize: 20.sp,
                                       fontWeight: FontWeight.bold,
-                                      fontFamily: 'Cairo'
-                                  ),
+                                      fontFamily: 'Cairo'),
                                 ),
                               ),
                             ],
@@ -5115,7 +5014,7 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                   ],
                 ),
               );
-            } else if(cont.clevel == 12){
+            } else if (cont.clevel == 12) {
               return Container(
                 width: double.infinity,
                 height: double.infinity,
@@ -5125,16 +5024,10 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                     Container(
                       decoration: const BoxDecoration(
                         border: Border(
-                          bottom: BorderSide(
-                              width: 2,
-                              color: black
-                          ),
+                          bottom: BorderSide(width: 2, color: black),
                         ),
                       ),
-                      padding: EdgeInsets.only(
-                          top: 1.h,
-                          bottom: 3.h
-                      ),
+                      padding: EdgeInsets.only(top: 1.h, bottom: 3.h),
                       child: Column(
                         children: [
                           Row(
@@ -5155,16 +5048,13 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                                     )
                                   ],
                                 ),
-                                padding: EdgeInsets.symmetric(
-                                    vertical: .5.h
-                                ),
+                                padding: EdgeInsets.symmetric(vertical: .5.h),
                                 child: Text(
                                   "${"level".tr} 12",
                                   style: TextStyle(
                                       fontSize: 20.sp,
                                       fontWeight: FontWeight.bold,
-                                      fontFamily: 'Cairo'
-                                  ),
+                                      fontFamily: 'Cairo'),
                                 ),
                               ),
                             ],
@@ -5660,7 +5550,7 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                   ],
                 ),
               );
-            } else if(cont.clevel == 13){
+            } else if (cont.clevel == 13) {
               return Container(
                 width: double.infinity,
                 height: double.infinity,
@@ -5670,16 +5560,10 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                     Container(
                       decoration: const BoxDecoration(
                         border: Border(
-                          bottom: BorderSide(
-                              width: 2,
-                              color: black
-                          ),
+                          bottom: BorderSide(width: 2, color: black),
                         ),
                       ),
-                      padding: EdgeInsets.only(
-                          top: 1.h,
-                          bottom: 3.h
-                      ),
+                      padding: EdgeInsets.only(top: 1.h, bottom: 3.h),
                       child: Column(
                         children: [
                           Row(
@@ -5700,16 +5584,13 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                                     )
                                   ],
                                 ),
-                                padding: EdgeInsets.symmetric(
-                                    vertical: .5.h
-                                ),
+                                padding: EdgeInsets.symmetric(vertical: .5.h),
                                 child: Text(
                                   "${"level".tr} 13",
                                   style: TextStyle(
                                       fontSize: 20.sp,
                                       fontWeight: FontWeight.bold,
-                                      fontFamily: 'Cairo'
-                                  ),
+                                      fontFamily: 'Cairo'),
                                 ),
                               ),
                             ],
@@ -6205,7 +6086,7 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                   ],
                 ),
               );
-            } else if(cont.clevel == 14){
+            } else if (cont.clevel == 14) {
               return Container(
                 width: double.infinity,
                 height: double.infinity,
@@ -6215,16 +6096,10 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                     Container(
                       decoration: const BoxDecoration(
                         border: Border(
-                          bottom: BorderSide(
-                              width: 2,
-                              color: black
-                          ),
+                          bottom: BorderSide(width: 2, color: black),
                         ),
                       ),
-                      padding: EdgeInsets.only(
-                          top: 1.h,
-                          bottom: 3.h
-                      ),
+                      padding: EdgeInsets.only(top: 1.h, bottom: 3.h),
                       child: Column(
                         children: [
                           Row(
@@ -6245,16 +6120,13 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                                     )
                                   ],
                                 ),
-                                padding: EdgeInsets.symmetric(
-                                    vertical: .5.h
-                                ),
+                                padding: EdgeInsets.symmetric(vertical: .5.h),
                                 child: Text(
                                   "${"level".tr} 14",
                                   style: TextStyle(
                                       fontSize: 20.sp,
                                       fontWeight: FontWeight.bold,
-                                      fontFamily: 'Cairo'
-                                  ),
+                                      fontFamily: 'Cairo'),
                                 ),
                               ),
                             ],
@@ -6750,7 +6622,7 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                   ],
                 ),
               );
-            } else if(cont.clevel == 15){
+            } else if (cont.clevel == 15) {
               return Container(
                 width: double.infinity,
                 height: double.infinity,
@@ -6760,16 +6632,10 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                     Container(
                       decoration: const BoxDecoration(
                         border: Border(
-                          bottom: BorderSide(
-                              width: 2,
-                              color: black
-                          ),
+                          bottom: BorderSide(width: 2, color: black),
                         ),
                       ),
-                      padding: EdgeInsets.only(
-                          top: 1.h,
-                          bottom: 3.h
-                      ),
+                      padding: EdgeInsets.only(top: 1.h, bottom: 3.h),
                       child: Column(
                         children: [
                           Row(
@@ -6790,16 +6656,13 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                                     )
                                   ],
                                 ),
-                                padding: EdgeInsets.symmetric(
-                                    vertical: .5.h
-                                ),
+                                padding: EdgeInsets.symmetric(vertical: .5.h),
                                 child: Text(
                                   "${"level".tr} 15",
                                   style: TextStyle(
                                       fontSize: 20.sp,
                                       fontWeight: FontWeight.bold,
-                                      fontFamily: 'Cairo'
-                                  ),
+                                      fontFamily: 'Cairo'),
                                 ),
                               ),
                             ],
