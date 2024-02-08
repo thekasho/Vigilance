@@ -22,7 +22,7 @@ class _TeacherRegisterScreeenState extends State<TeacherRegisterScreeen> {
     f2.dispose();
     f3.dispose();
     f4.dispose();
-    f5.dispose();
+    // f5.dispose();
     f6.dispose();
     super.dispose();
   }
@@ -158,21 +158,21 @@ class _TeacherRegisterScreeenState extends State<TeacherRegisterScreeen> {
                               },
                             ),
                             SizedBox(height: 2.h),
-                            AuthTextForm(
-                              controller: controller.stdEmail,
-                              hintText: "std_email".tr,
-                              isPassword: false,
-                              focusNode: f5,
-                              valid: (val) {
-                                if (val!.isEmpty) {
-                                  return "required".tr;
-                                }
-                              },
-                              onFieldSubmitted: (val) {
-                                f5.unfocus();
-                                FocusScope.of(context).requestFocus(f6);
-                              },
-                            ),
+                            // AuthTextForm(
+                            //   controller: controller.stdEmail,
+                            //   hintText: "std_email".tr,
+                            //   isPassword: false,
+                            //   focusNode: f5,
+                            //   valid: (val) {
+                            //     if (val!.isEmpty) {
+                            //       return "required".tr;
+                            //     }
+                            //   },
+                            //   onFieldSubmitted: (val) {
+                            //     f5.unfocus();
+                            //     FocusScope.of(context).requestFocus(f6);
+                            //   },
+                            // ),
                             SizedBox(height: 3.h),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.center,

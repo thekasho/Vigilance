@@ -21,7 +21,7 @@ class TeacherRegisterContImp extends TeacherRegisterCont {
   late TextEditingController username;
   late TextEditingController pass;
   late TextEditingController cpass;
-  late TextEditingController stdEmail;
+  // late TextEditingController stdEmail;
 
   StatusRequest statusRequest = StatusRequest.none;
 
@@ -74,7 +74,7 @@ class TeacherRegisterContImp extends TeacherRegisterCont {
           'username': username.text,
           'email': email.text,
           'password': pass.text,
-          'student_email': stdEmail.text,
+          'student_email': "",
         };
 
         var auth = await requests.postData(loginData, ApiLinks.teacherRegister);
@@ -114,27 +114,6 @@ class TeacherRegisterContImp extends TeacherRegisterCont {
             ),
             content: Text(
               "Email Already in use !!",
-              style: TextStyle(
-                fontSize: 18.sp,
-                fontFamily: "Cairo",
-              ),
-            ),
-          );
-          statusRequest = StatusRequest.failure;
-          update();
-        } else if(auth['message'] == "student_not_exsist"){
-          Get.defaultDialog(
-            backgroundColor: white,
-            title: "Error",
-            titlePadding: EdgeInsets.only(bottom: 2.h, top: 1.h),
-            titleStyle: TextStyle(
-                fontSize: 18.sp,
-                fontFamily: "Cairo",
-                color: red,
-                fontWeight: FontWeight.bold
-            ),
-            content: Text(
-              "Student Email Not Registered !!",
               style: TextStyle(
                 fontSize: 18.sp,
                 fontFamily: "Cairo",
@@ -242,7 +221,7 @@ class TeacherRegisterContImp extends TeacherRegisterCont {
     username = TextEditingController();
     pass = TextEditingController();
     cpass = TextEditingController();
-    stdEmail = TextEditingController();
+    // stdEmail = TextEditingController();
     checkNetwork();
     super.onInit();
   }
@@ -253,7 +232,7 @@ class TeacherRegisterContImp extends TeacherRegisterCont {
     email.dispose();
     pass.dispose();
     cpass.dispose();
-    stdEmail.dispose();
+    // stdEmail.dispose();
     super.dispose();
   }
 }
