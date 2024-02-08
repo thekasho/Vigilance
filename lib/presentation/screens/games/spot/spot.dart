@@ -14,65 +14,65 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
   Future<void> openTimer() async {
     spotGameContImp.clevel = widget.level;
     if (widget.level == 1) {
-      await Future.delayed(const Duration(seconds: 1));
-      await spotGameContImp.countdownController1.start();
-      spotGameContImp.update();
+      // await Future.delayed(const Duration(seconds: 1));
+      // await spotGameContImp.countdownController1.start();
+      // spotGameContImp.update();
     } else if (widget.level == 2) {
-      await Future.delayed(const Duration(seconds: 1));
-      spotGameContImp.countdownController2.start();
-      spotGameContImp.update();
+      // await Future.delayed(const Duration(seconds: 1));
+      // spotGameContImp.countdownController2.start();
+      // spotGameContImp.update();
     } else if (widget.level == 3) {
-      await Future.delayed(const Duration(seconds: 1));
-      await spotGameContImp.countdownController3.start();
-      spotGameContImp.update();
+      // await Future.delayed(const Duration(seconds: 1));
+      // await spotGameContImp.countdownController3.start();
+      // spotGameContImp.update();
     } else if (widget.level == 4) {
-      await Future.delayed(const Duration(seconds: 1));
-      await spotGameContImp.countdownController4.start();
-      spotGameContImp.update();
+      // await Future.delayed(const Duration(seconds: 1));
+      // await spotGameContImp.countdownController4.start();
+      // spotGameContImp.update();
     } else if (widget.level == 5) {
-      await Future.delayed(const Duration(seconds: 1));
-      await spotGameContImp.countdownController5.start();
-      spotGameContImp.update();
+      // await Future.delayed(const Duration(seconds: 1));
+      // await spotGameContImp.countdownController5.start();
+      // spotGameContImp.update();
     } else if (widget.level == 6) {
-      await Future.delayed(const Duration(seconds: 1));
-      await spotGameContImp.countdownController6.start();
-      spotGameContImp.update();
+      // await Future.delayed(const Duration(seconds: 1));
+      // await spotGameContImp.countdownController6.start();
+      // spotGameContImp.update();
     } else if (widget.level == 7) {
-      await Future.delayed(const Duration(seconds: 1));
-      await spotGameContImp.countdownController7.start();
-      spotGameContImp.update();
+      // await Future.delayed(const Duration(seconds: 1));
+      // await spotGameContImp.countdownController7.start();
+      // spotGameContImp.update();
     } else if (widget.level == 8) {
-      await Future.delayed(const Duration(seconds: 1));
-      await spotGameContImp.countdownController8.start();
-      spotGameContImp.update();
+      // await Future.delayed(const Duration(seconds: 1));
+      // await spotGameContImp.countdownController8.start();
+      // spotGameContImp.update();
     } else if (widget.level == 9) {
-      await Future.delayed(const Duration(seconds: 1));
-      await spotGameContImp.countdownController9.start();
-      spotGameContImp.update();
+      // await Future.delayed(const Duration(seconds: 1));
+      // await spotGameContImp.countdownController9.start();
+      // spotGameContImp.update();
     } else if (widget.level == 10) {
-      await Future.delayed(const Duration(seconds: 1));
-      await spotGameContImp.countdownController10.start();
-      spotGameContImp.update();
+      // await Future.delayed(const Duration(seconds: 1));
+      // await spotGameContImp.countdownController10.start();
+      // spotGameContImp.update();
     } else if (widget.level == 11) {
-      await Future.delayed(const Duration(seconds: 1));
-      await spotGameContImp.countdownController11.start();
-      spotGameContImp.update();
+      // await Future.delayed(const Duration(seconds: 1));
+      // await spotGameContImp.countdownController11.start();
+      // spotGameContImp.update();
     } else if (widget.level == 12) {
-      await Future.delayed(const Duration(seconds: 1));
-      await spotGameContImp.countdownController12.start();
-      spotGameContImp.update();
+      // await Future.delayed(const Duration(seconds: 1));
+      // await spotGameContImp.countdownController12.start();
+      // spotGameContImp.update();
     } else if (widget.level == 13) {
-      await Future.delayed(const Duration(seconds: 1));
-      await spotGameContImp.countdownController13.start();
-      spotGameContImp.update();
+      // await Future.delayed(const Duration(seconds: 1));
+      // await spotGameContImp.countdownController13.start();
+      // spotGameContImp.update();
     } else if (widget.level == 14) {
-      await Future.delayed(const Duration(seconds: 1));
-      await spotGameContImp.countdownController14.start();
-      spotGameContImp.update();
+      // await Future.delayed(const Duration(seconds: 1));
+      // await spotGameContImp.countdownController14.start();
+      // spotGameContImp.update();
     } else if (widget.level == 15) {
-      await Future.delayed(const Duration(seconds: 1));
-      await spotGameContImp.countdownController15.start();
-      spotGameContImp.update();
+      // await Future.delayed(const Duration(seconds: 1));
+      // await spotGameContImp.countdownController15.start();
+      // spotGameContImp.update();
     }
   }
 
@@ -150,44 +150,44 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                             ],
                           ),
                           SizedBox(height: 1.h),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Container(
-                                width: 60.w,
-                                alignment: Alignment.center,
-                                decoration: BoxDecoration(
-                                  color: white,
-                                  borderRadius: BorderRadius.circular(15),
-                                  boxShadow: const [
-                                    BoxShadow(
-                                      blurRadius: 4,
-                                      color: Color(0x33000000),
-                                      offset: Offset(0, 2),
-                                      spreadRadius: 2,
-                                    )
-                                  ],
-                                ),
-                                padding: EdgeInsets.symmetric(
-                                  vertical: 1.h,
-                                ),
-                                child: Countdown(
-                                  controller: cont.countdownController1,
-                                  seconds: 10,
-                                  build: (_, double time) => Text(
-                                    "${time.toInt()} ${"seconds_left".tr}",
-                                    style: const TextStyle(
-                                      fontFamily: "Cairo",
-                                    ),
-                                  ),
-                                  interval: const Duration(seconds: 1),
-                                  onFinished: () async {
-                                    await spotGameContImp.timesUp();
-                                  },
-                                ),
-                              )
-                            ],
-                          ),
+                          // Row(
+                          //   mainAxisAlignment: MainAxisAlignment.center,
+                          //   children: [
+                          //     Container(
+                          //       width: 60.w,
+                          //       alignment: Alignment.center,
+                          //       decoration: BoxDecoration(
+                          //         color: white,
+                          //         borderRadius: BorderRadius.circular(15),
+                          //         boxShadow: const [
+                          //           BoxShadow(
+                          //             blurRadius: 4,
+                          //             color: Color(0x33000000),
+                          //             offset: Offset(0, 2),
+                          //             spreadRadius: 2,
+                          //           )
+                          //         ],
+                          //       ),
+                          //       padding: EdgeInsets.symmetric(
+                          //         vertical: 1.h,
+                          //       ),
+                          //       child: Countdown(
+                          //         controller: cont.countdownController1,
+                          //         seconds: 10,
+                          //         build: (_, double time) => Text(
+                          //           "${time.toInt()} ${"seconds_left".tr}",
+                          //           style: const TextStyle(
+                          //             fontFamily: "Cairo",
+                          //           ),
+                          //         ),
+                          //         interval: const Duration(seconds: 1),
+                          //         onFinished: () async {
+                          //           await spotGameContImp.timesUp();
+                          //         },
+                          //       ),
+                          //     )
+                          //   ],
+                          // ),
                         ],
                       ),
                     ),
@@ -240,7 +240,7 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                         const Spacer(flex: 1),
                       ],
                     ),
-                    SizedBox(height: 1.h),
+                    SizedBox(height: 1.5.h),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -268,7 +268,7 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                         const Spacer(flex: 1),
                       ],
                     ),
-                    SizedBox(height: 1.h),
+                    SizedBox(height: 1.5.h),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -317,9 +317,9 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                         const Spacer(flex: 1),
                       ],
                     ),
-                    SizedBox(height: 1.h),
+                    SizedBox(height: 1.5.h),
                     const Divider(thickness: 2, color: black),
-                    SizedBox(height: 1.h),
+                    SizedBox(height: 1.5.h),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -379,7 +379,7 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                         const Spacer(flex: 1),
                       ],
                     ),
-                    SizedBox(height: 1.h),
+                    SizedBox(height: 1.5.h),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -438,7 +438,7 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                         const Spacer(flex: 1),
                       ],
                     ),
-                    SizedBox(height: 1.h),
+                    SizedBox(height: 1.5.h),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -545,45 +545,6 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                               ),
                             ],
                           ),
-                          SizedBox(height: 1.h),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Container(
-                                width: 60.w,
-                                alignment: Alignment.center,
-                                decoration: BoxDecoration(
-                                  color: white,
-                                  borderRadius: BorderRadius.circular(15),
-                                  boxShadow: const [
-                                    BoxShadow(
-                                      blurRadius: 4,
-                                      color: Color(0x33000000),
-                                      offset: Offset(0, 2),
-                                      spreadRadius: 2,
-                                    )
-                                  ],
-                                ),
-                                padding: EdgeInsets.symmetric(
-                                  vertical: 1.h,
-                                ),
-                                child: Countdown(
-                                  controller: cont.countdownController2,
-                                  seconds: 10,
-                                  build: (_, double time) => Text(
-                                    "${time.toInt()} ${"seconds_left".tr}",
-                                    style: const TextStyle(
-                                      fontFamily: "Cairo",
-                                    ),
-                                  ),
-                                  interval: const Duration(seconds: 1),
-                                  onFinished: () async {
-                                    await spotGameContImp.timesUp();
-                                  },
-                                ),
-                              )
-                            ],
-                          ),
                         ],
                       ),
                     ),
@@ -636,7 +597,7 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                         const Spacer(flex: 1),
                       ],
                     ),
-                    SizedBox(height: 1.h),
+                    SizedBox(height: 1.5.h),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -664,7 +625,7 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                         const Spacer(flex: 1),
                       ],
                     ),
-                    SizedBox(height: 1.h),
+                    SizedBox(height: 1.5.h),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -713,9 +674,9 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                         const Spacer(flex: 1),
                       ],
                     ),
-                    SizedBox(height: 1.h),
+                    SizedBox(height: 1.5.h),
                     const Divider(thickness: 2, color: black),
-                    SizedBox(height: 1.h),
+                    SizedBox(height: 1.5.h),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -774,7 +735,7 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                         const Spacer(flex: 1),
                       ],
                     ),
-                    SizedBox(height: 1.h),
+                    SizedBox(height: 1.5.h),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -833,7 +794,7 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                         const Spacer(flex: 1),
                       ],
                     ),
-                    SizedBox(height: 1.h),
+                    SizedBox(height: 1.5.h),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -941,44 +902,6 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                             ],
                           ),
                           SizedBox(height: 2.h),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Container(
-                                width: 60.w,
-                                alignment: Alignment.center,
-                                decoration: BoxDecoration(
-                                  color: white,
-                                  borderRadius: BorderRadius.circular(15),
-                                  boxShadow: const [
-                                    BoxShadow(
-                                      blurRadius: 4,
-                                      color: Color(0x33000000),
-                                      offset: Offset(0, 2),
-                                      spreadRadius: 2,
-                                    )
-                                  ],
-                                ),
-                                padding: EdgeInsets.symmetric(
-                                  vertical: 1.h,
-                                ),
-                                child: Countdown(
-                                  controller: cont.countdownController3,
-                                  seconds: 10,
-                                  build: (_, double time) => Text(
-                                    "${time.toInt()} ${"seconds_left".tr}",
-                                    style: const TextStyle(
-                                      fontFamily: "Cairo",
-                                    ),
-                                  ),
-                                  interval: const Duration(seconds: 1),
-                                  onFinished: () async {
-                                    await spotGameContImp.timesUp();
-                                  },
-                                ),
-                              )
-                            ],
-                          ),
                         ],
                       ),
                     ),
@@ -1031,7 +954,7 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                         const Spacer(flex: 1),
                       ],
                     ),
-                    SizedBox(height: 1.h),
+                    SizedBox(height: 1.5.h),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -1059,7 +982,7 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                         const Spacer(flex: 1),
                       ],
                     ),
-                    SizedBox(height: 1.h),
+                    SizedBox(height: 1.5.h),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -1108,9 +1031,9 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                         const Spacer(flex: 1),
                       ],
                     ),
-                    SizedBox(height: 1.h),
+                    SizedBox(height: 1.5.h),
                     const Divider(thickness: 2, color: black),
-                    SizedBox(height: 1.h),
+                    SizedBox(height: 1.5.h),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -1169,7 +1092,7 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                         const Spacer(flex: 1),
                       ],
                     ),
-                    SizedBox(height: 1.h),
+                    SizedBox(height: 1.5.h),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -1228,7 +1151,7 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                         const Spacer(flex: 1),
                       ],
                     ),
-                    SizedBox(height: 1.h),
+                    SizedBox(height: 1.5.h),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -1336,44 +1259,6 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                             ],
                           ),
                           SizedBox(height: 2.h),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Container(
-                                width: 60.w,
-                                alignment: Alignment.center,
-                                decoration: BoxDecoration(
-                                  color: white,
-                                  borderRadius: BorderRadius.circular(15),
-                                  boxShadow: const [
-                                    BoxShadow(
-                                      blurRadius: 4,
-                                      color: Color(0x33000000),
-                                      offset: Offset(0, 2),
-                                      spreadRadius: 2,
-                                    )
-                                  ],
-                                ),
-                                padding: EdgeInsets.symmetric(
-                                  vertical: 1.h,
-                                ),
-                                child: Countdown(
-                                  controller: cont.countdownController4,
-                                  seconds: 10,
-                                  build: (_, double time) => Text(
-                                    "${time.toInt()} ${"seconds_left".tr}",
-                                    style: const TextStyle(
-                                      fontFamily: "Cairo",
-                                    ),
-                                  ),
-                                  interval: const Duration(seconds: 1),
-                                  onFinished: () async {
-                                    await spotGameContImp.timesUp();
-                                  },
-                                ),
-                              )
-                            ],
-                          ),
                         ],
                       ),
                     ),
@@ -1426,7 +1311,7 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                         const Spacer(flex: 1),
                       ],
                     ),
-                    SizedBox(height: 1.h),
+                    SizedBox(height: 1.5.h),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -1475,7 +1360,7 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                         const Spacer(flex: 1),
                       ],
                     ),
-                    SizedBox(height: 1.h),
+                    SizedBox(height: 1.5.h),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -1524,9 +1409,9 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                         const Spacer(flex: 1),
                       ],
                     ),
-                    SizedBox(height: 1.h),
+                    SizedBox(height: 1.5.h),
                     const Divider(thickness: 2, color: black),
-                    SizedBox(height: 1.h),
+                    SizedBox(height: 1.5.h),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -1585,7 +1470,7 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                         const Spacer(flex: 1),
                       ],
                     ),
-                    SizedBox(height: 1.h),
+                    SizedBox(height: 1.5.h),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -1670,7 +1555,7 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                         const Spacer(flex: 1),
                       ],
                     ),
-                    SizedBox(height: 1.h),
+                    SizedBox(height: 1.5.h),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -1778,44 +1663,6 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                             ],
                           ),
                           SizedBox(height: 2.h),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Container(
-                                width: 60.w,
-                                alignment: Alignment.center,
-                                decoration: BoxDecoration(
-                                  color: white,
-                                  borderRadius: BorderRadius.circular(15),
-                                  boxShadow: const [
-                                    BoxShadow(
-                                      blurRadius: 4,
-                                      color: Color(0x33000000),
-                                      offset: Offset(0, 2),
-                                      spreadRadius: 2,
-                                    )
-                                  ],
-                                ),
-                                padding: EdgeInsets.symmetric(
-                                  vertical: 1.h,
-                                ),
-                                child: Countdown(
-                                  controller: cont.countdownController5,
-                                  seconds: 10,
-                                  build: (_, double time) => Text(
-                                    "${time.toInt()} ${"seconds_left".tr}",
-                                    style: const TextStyle(
-                                      fontFamily: "Cairo",
-                                    ),
-                                  ),
-                                  interval: const Duration(seconds: 1),
-                                  onFinished: () async {
-                                    // await spotGameContImp.timesUp();
-                                  },
-                                ),
-                              )
-                            ],
-                          ),
                         ],
                       ),
                     ),
@@ -1868,7 +1715,7 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                         const Spacer(flex: 1),
                       ],
                     ),
-                    SizedBox(height: 1.h),
+                    SizedBox(height: 1.5.h),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -1896,7 +1743,7 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                         const Spacer(flex: 1),
                       ],
                     ),
-                    SizedBox(height: 1.h),
+                    SizedBox(height: 1.5.h),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -1945,9 +1792,9 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                         const Spacer(flex: 1),
                       ],
                     ),
-                    SizedBox(height: 1.h),
+                    SizedBox(height: 1.5.h),
                     const Divider(thickness: 2, color: black),
-                    SizedBox(height: 1.h),
+                    SizedBox(height: 1.5.h),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -2006,7 +1853,7 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                         const Spacer(flex: 1),
                       ],
                     ),
-                    SizedBox(height: 1.h),
+                    SizedBox(height: 1.5.h),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -2065,7 +1912,7 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                         const Spacer(flex: 1),
                       ],
                     ),
-                    SizedBox(height: 1.h),
+                    SizedBox(height: 1.5.h),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -2173,44 +2020,44 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                             ],
                           ),
                           SizedBox(height: 1.h),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Container(
-                                width: 60.w,
-                                alignment: Alignment.center,
-                                decoration: BoxDecoration(
-                                  color: white,
-                                  borderRadius: BorderRadius.circular(15),
-                                  boxShadow: const [
-                                    BoxShadow(
-                                      blurRadius: 4,
-                                      color: Color(0x33000000),
-                                      offset: Offset(0, 2),
-                                      spreadRadius: 2,
-                                    )
-                                  ],
-                                ),
-                                padding: EdgeInsets.symmetric(
-                                  vertical: 1.h,
-                                ),
-                                child: Countdown(
-                                  controller: cont.countdownController6,
-                                  seconds: 10,
-                                  build: (_, double time) => Text(
-                                    "${time.toInt()} ${"seconds_left".tr}",
-                                    style: const TextStyle(
-                                      fontFamily: "Cairo",
-                                    ),
-                                  ),
-                                  interval: const Duration(seconds: 1),
-                                  onFinished: () async {
-                                    await spotGameContImp.timesUp();
-                                  },
-                                ),
-                              )
-                            ],
-                          ),
+                          // Row(
+                          //   mainAxisAlignment: MainAxisAlignment.center,
+                          //   children: [
+                          //     Container(
+                          //       width: 60.w,
+                          //       alignment: Alignment.center,
+                          //       decoration: BoxDecoration(
+                          //         color: white,
+                          //         borderRadius: BorderRadius.circular(15),
+                          //         boxShadow: const [
+                          //           BoxShadow(
+                          //             blurRadius: 4,
+                          //             color: Color(0x33000000),
+                          //             offset: Offset(0, 2),
+                          //             spreadRadius: 2,
+                          //           )
+                          //         ],
+                          //       ),
+                          //       padding: EdgeInsets.symmetric(
+                          //         vertical: 1.h,
+                          //       ),
+                          //       child: Countdown(
+                          //         controller: cont.countdownController6,
+                          //         seconds: 10,
+                          //         build: (_, double time) => Text(
+                          //           "${time.toInt()} ${"seconds_left".tr}",
+                          //           style: const TextStyle(
+                          //             fontFamily: "Cairo",
+                          //           ),
+                          //         ),
+                          //         interval: const Duration(seconds: 1),
+                          //         onFinished: () async {
+                          //           await spotGameContImp.timesUp();
+                          //         },
+                          //       ),
+                          //     )
+                          //   ],
+                          // ),
                         ],
                       ),
                     ),
@@ -2263,7 +2110,7 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                         const Spacer(flex: 1),
                       ],
                     ),
-                    SizedBox(height: 1.h),
+                    SizedBox(height: 1.5.h),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -2312,7 +2159,7 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                         const Spacer(flex: 1),
                       ],
                     ),
-                    SizedBox(height: 1.h),
+                    SizedBox(height: 1.5.h),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -2361,9 +2208,9 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                         const Spacer(flex: 1),
                       ],
                     ),
-                    SizedBox(height: 1.h),
+                    SizedBox(height: 1.5.h),
                     const Divider(thickness: 2, color: black),
-                    SizedBox(height: 1.h),
+                    SizedBox(height: 1.5.h),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -2422,7 +2269,7 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                         const Spacer(flex: 1),
                       ],
                     ),
-                    SizedBox(height: 1.h),
+                    SizedBox(height: 1.5.h),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -2507,7 +2354,7 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                         const Spacer(flex: 1),
                       ],
                     ),
-                    SizedBox(height: 1.h),
+                    SizedBox(height: 1.5.h),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -2615,44 +2462,44 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                             ],
                           ),
                           SizedBox(height: 1.h),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Container(
-                                width: 60.w,
-                                alignment: Alignment.center,
-                                decoration: BoxDecoration(
-                                  color: white,
-                                  borderRadius: BorderRadius.circular(15),
-                                  boxShadow: const [
-                                    BoxShadow(
-                                      blurRadius: 4,
-                                      color: Color(0x33000000),
-                                      offset: Offset(0, 2),
-                                      spreadRadius: 2,
-                                    )
-                                  ],
-                                ),
-                                padding: EdgeInsets.symmetric(
-                                  vertical: 1.h,
-                                ),
-                                child: Countdown(
-                                  controller: cont.countdownController7,
-                                  seconds: 10,
-                                  build: (_, double time) => Text(
-                                    "${time.toInt()} ${"seconds_left".tr}",
-                                    style: const TextStyle(
-                                      fontFamily: "Cairo",
-                                    ),
-                                  ),
-                                  interval: const Duration(seconds: 1),
-                                  onFinished: () async {
-                                    await spotGameContImp.timesUp();
-                                  },
-                                ),
-                              )
-                            ],
-                          ),
+                          // Row(
+                          //   mainAxisAlignment: MainAxisAlignment.center,
+                          //   children: [
+                          //     Container(
+                          //       width: 60.w,
+                          //       alignment: Alignment.center,
+                          //       decoration: BoxDecoration(
+                          //         color: white,
+                          //         borderRadius: BorderRadius.circular(15),
+                          //         boxShadow: const [
+                          //           BoxShadow(
+                          //             blurRadius: 4,
+                          //             color: Color(0x33000000),
+                          //             offset: Offset(0, 2),
+                          //             spreadRadius: 2,
+                          //           )
+                          //         ],
+                          //       ),
+                          //       padding: EdgeInsets.symmetric(
+                          //         vertical: 1.h,
+                          //       ),
+                          //       child: Countdown(
+                          //         controller: cont.countdownController7,
+                          //         seconds: 10,
+                          //         build: (_, double time) => Text(
+                          //           "${time.toInt()} ${"seconds_left".tr}",
+                          //           style: const TextStyle(
+                          //             fontFamily: "Cairo",
+                          //           ),
+                          //         ),
+                          //         interval: const Duration(seconds: 1),
+                          //         onFinished: () async {
+                          //           await spotGameContImp.timesUp();
+                          //         },
+                          //       ),
+                          //     )
+                          //   ],
+                          // ),
                         ],
                       ),
                     ),
@@ -2705,7 +2552,7 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                         const Spacer(flex: 1),
                       ],
                     ),
-                    SizedBox(height: 1.h),
+                    SizedBox(height: 1.5.h),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -2754,7 +2601,7 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                         const Spacer(flex: 1),
                       ],
                     ),
-                    SizedBox(height: 1.h),
+                    SizedBox(height: 1.5.h),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -2803,9 +2650,9 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                         const Spacer(flex: 1),
                       ],
                     ),
-                    SizedBox(height: 1.h),
+                    SizedBox(height: 1.5.h),
                     const Divider(thickness: 2, color: black),
-                    SizedBox(height: 1.h),
+                    SizedBox(height: 1.5.h),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -2864,7 +2711,7 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                         const Spacer(flex: 1),
                       ],
                     ),
-                    SizedBox(height: 1.h),
+                    SizedBox(height: 1.5.h),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -2949,7 +2796,7 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                         const Spacer(flex: 1),
                       ],
                     ),
-                    SizedBox(height: 1.h),
+                    SizedBox(height: 1.5.h),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -3056,45 +2903,45 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                               ),
                             ],
                           ),
-                          SizedBox(height: 1.h),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Container(
-                                width: 60.w,
-                                alignment: Alignment.center,
-                                decoration: BoxDecoration(
-                                  color: white,
-                                  borderRadius: BorderRadius.circular(15),
-                                  boxShadow: const [
-                                    BoxShadow(
-                                      blurRadius: 4,
-                                      color: Color(0x33000000),
-                                      offset: Offset(0, 2),
-                                      spreadRadius: 2,
-                                    )
-                                  ],
-                                ),
-                                padding: EdgeInsets.symmetric(
-                                  vertical: 1.h,
-                                ),
-                                child: Countdown(
-                                  controller: cont.countdownController8,
-                                  seconds: 10,
-                                  build: (_, double time) => Text(
-                                    "${time.toInt()} ${"seconds_left".tr}",
-                                    style: const TextStyle(
-                                      fontFamily: "Cairo",
-                                    ),
-                                  ),
-                                  interval: const Duration(seconds: 1),
-                                  onFinished: () async {
-                                    await spotGameContImp.timesUp();
-                                  },
-                                ),
-                              )
-                            ],
-                          ),
+                          SizedBox(height: 2.h),
+                          // Row(
+                          //   mainAxisAlignment: MainAxisAlignment.center,
+                          //   children: [
+                          //     Container(
+                          //       width: 60.w,
+                          //       alignment: Alignment.center,
+                          //       decoration: BoxDecoration(
+                          //         color: white,
+                          //         borderRadius: BorderRadius.circular(15),
+                          //         boxShadow: const [
+                          //           BoxShadow(
+                          //             blurRadius: 4,
+                          //             color: Color(0x33000000),
+                          //             offset: Offset(0, 2),
+                          //             spreadRadius: 2,
+                          //           )
+                          //         ],
+                          //       ),
+                          //       padding: EdgeInsets.symmetric(
+                          //         vertical: 1.h,
+                          //       ),
+                          //       child: Countdown(
+                          //         controller: cont.countdownController8,
+                          //         seconds: 10,
+                          //         build: (_, double time) => Text(
+                          //           "${time.toInt()} ${"seconds_left".tr}",
+                          //           style: const TextStyle(
+                          //             fontFamily: "Cairo",
+                          //           ),
+                          //         ),
+                          //         interval: const Duration(seconds: 1),
+                          //         onFinished: () async {
+                          //           await spotGameContImp.timesUp();
+                          //         },
+                          //       ),
+                          //     )
+                          //   ],
+                          // ),
                         ],
                       ),
                     ),
@@ -3147,7 +2994,7 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                         const Spacer(flex: 1),
                       ],
                     ),
-                    SizedBox(height: 1.h),
+                    SizedBox(height: 1.5.h),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -3217,7 +3064,7 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                         const Spacer(flex: 1),
                       ],
                     ),
-                    SizedBox(height: 1.h),
+                    SizedBox(height: 1.5.h),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -3266,9 +3113,9 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                         const Spacer(flex: 1),
                       ],
                     ),
-                    SizedBox(height: 1.h),
+                    SizedBox(height: 1.5.h),
                     const Divider(thickness: 2, color: black),
-                    SizedBox(height: 1.h),
+                    SizedBox(height: 1.5.h),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -3353,7 +3200,7 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                         const Spacer(flex: 1),
                       ],
                     ),
-                    SizedBox(height: 1.h),
+                    SizedBox(height: 1.5.h),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -3412,7 +3259,7 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                         const Spacer(flex: 1),
                       ],
                     ),
-                    SizedBox(height: 1.h),
+                    SizedBox(height: 1.5.h),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -3546,44 +3393,44 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                             ],
                           ),
                           SizedBox(height: 1.h),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Container(
-                                width: 60.w,
-                                alignment: Alignment.center,
-                                decoration: BoxDecoration(
-                                  color: white,
-                                  borderRadius: BorderRadius.circular(15),
-                                  boxShadow: const [
-                                    BoxShadow(
-                                      blurRadius: 4,
-                                      color: Color(0x33000000),
-                                      offset: Offset(0, 2),
-                                      spreadRadius: 2,
-                                    )
-                                  ],
-                                ),
-                                padding: EdgeInsets.symmetric(
-                                  vertical: 1.h,
-                                ),
-                                child: Countdown(
-                                  controller: cont.countdownController9,
-                                  seconds: 10,
-                                  build: (_, double time) => Text(
-                                    "${time.toInt()} ${"seconds_left".tr}",
-                                    style: const TextStyle(
-                                      fontFamily: "Cairo",
-                                    ),
-                                  ),
-                                  interval: const Duration(seconds: 1),
-                                  onFinished: () async {
-                                    await spotGameContImp.timesUp();
-                                  },
-                                ),
-                              )
-                            ],
-                          ),
+                          // Row(
+                          //   mainAxisAlignment: MainAxisAlignment.center,
+                          //   children: [
+                          //     Container(
+                          //       width: 60.w,
+                          //       alignment: Alignment.center,
+                          //       decoration: BoxDecoration(
+                          //         color: white,
+                          //         borderRadius: BorderRadius.circular(15),
+                          //         boxShadow: const [
+                          //           BoxShadow(
+                          //             blurRadius: 4,
+                          //             color: Color(0x33000000),
+                          //             offset: Offset(0, 2),
+                          //             spreadRadius: 2,
+                          //           )
+                          //         ],
+                          //       ),
+                          //       padding: EdgeInsets.symmetric(
+                          //         vertical: 1.h,
+                          //       ),
+                          //       child: Countdown(
+                          //         controller: cont.countdownController9,
+                          //         seconds: 10,
+                          //         build: (_, double time) => Text(
+                          //           "${time.toInt()} ${"seconds_left".tr}",
+                          //           style: const TextStyle(
+                          //             fontFamily: "Cairo",
+                          //           ),
+                          //         ),
+                          //         interval: const Duration(seconds: 1),
+                          //         onFinished: () async {
+                          //           await spotGameContImp.timesUp();
+                          //         },
+                          //       ),
+                          //     )
+                          //   ],
+                          // ),
                         ],
                       ),
                     ),
@@ -3636,7 +3483,7 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                         const Spacer(flex: 1),
                       ],
                     ),
-                    SizedBox(height: 1.h),
+                    SizedBox(height: 1.5.h),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -3706,7 +3553,7 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                         const Spacer(flex: 1),
                       ],
                     ),
-                    SizedBox(height: 1.h),
+                    SizedBox(height: 1.5.h),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -3755,9 +3602,9 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                         const Spacer(flex: 1),
                       ],
                     ),
-                    SizedBox(height: 1.h),
+                    SizedBox(height: 1.5.h),
                     const Divider(thickness: 2, color: black),
-                    SizedBox(height: 1.h),
+                    SizedBox(height: 1.5.h),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -3842,7 +3689,7 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                         const Spacer(flex: 1),
                       ],
                     ),
-                    SizedBox(height: 1.h),
+                    SizedBox(height: 1.5.h),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -3901,7 +3748,7 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                         const Spacer(flex: 1),
                       ],
                     ),
-                    SizedBox(height: 1.h),
+                    SizedBox(height: 1.5.h),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -4034,45 +3881,45 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                               ),
                             ],
                           ),
-                          SizedBox(height: 1.h),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Container(
-                                width: 60.w,
-                                alignment: Alignment.center,
-                                decoration: BoxDecoration(
-                                  color: white,
-                                  borderRadius: BorderRadius.circular(15),
-                                  boxShadow: const [
-                                    BoxShadow(
-                                      blurRadius: 4,
-                                      color: Color(0x33000000),
-                                      offset: Offset(0, 2),
-                                      spreadRadius: 2,
-                                    )
-                                  ],
-                                ),
-                                padding: EdgeInsets.symmetric(
-                                  vertical: 1.h,
-                                ),
-                                child: Countdown(
-                                  controller: cont.countdownController10,
-                                  seconds: 10,
-                                  build: (_, double time) => Text(
-                                    "${time.toInt()} ${"seconds_left".tr}",
-                                    style: const TextStyle(
-                                      fontFamily: "Cairo",
-                                    ),
-                                  ),
-                                  interval: const Duration(seconds: 1),
-                                  onFinished: () async {
-                                    await spotGameContImp.timesUp();
-                                  },
-                                ),
-                              )
-                            ],
-                          ),
+                          SizedBox(height: 2.h),
+                          // Row(
+                          //   mainAxisAlignment: MainAxisAlignment.center,
+                          //   children: [
+                          //     Container(
+                          //       width: 60.w,
+                          //       alignment: Alignment.center,
+                          //       decoration: BoxDecoration(
+                          //         color: white,
+                          //         borderRadius: BorderRadius.circular(15),
+                          //         boxShadow: const [
+                          //           BoxShadow(
+                          //             blurRadius: 4,
+                          //             color: Color(0x33000000),
+                          //             offset: Offset(0, 2),
+                          //             spreadRadius: 2,
+                          //           )
+                          //         ],
+                          //       ),
+                          //       padding: EdgeInsets.symmetric(
+                          //         vertical: 1.h,
+                          //       ),
+                          //       child: Countdown(
+                          //         controller: cont.countdownController10,
+                          //         seconds: 10,
+                          //         build: (_, double time) => Text(
+                          //           "${time.toInt()} ${"seconds_left".tr}",
+                          //           style: const TextStyle(
+                          //             fontFamily: "Cairo",
+                          //           ),
+                          //         ),
+                          //         interval: const Duration(seconds: 1),
+                          //         onFinished: () async {
+                          //           await spotGameContImp.timesUp();
+                          //         },
+                          //       ),
+                          //     )
+                          //   ],
+                          // ),
                         ],
                       ),
                     ),
@@ -4125,7 +3972,7 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                         const Spacer(flex: 1),
                       ],
                     ),
-                    SizedBox(height: 1.h),
+                    SizedBox(height: 1.5.h),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -4195,7 +4042,7 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                         const Spacer(flex: 1),
                       ],
                     ),
-                    SizedBox(height: 1.h),
+                    SizedBox(height: 1.5.h),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -4244,9 +4091,9 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                         const Spacer(flex: 1),
                       ],
                     ),
-                    SizedBox(height: 1.h),
+                    SizedBox(height: 1.5.h),
                     const Divider(thickness: 2, color: black),
-                    SizedBox(height: 1.h),
+                    SizedBox(height: 1.5.h),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -4331,7 +4178,7 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                         const Spacer(flex: 1),
                       ],
                     ),
-                    SizedBox(height: 1.h),
+                    SizedBox(height: 1.5.h),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -4416,7 +4263,7 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                         const Spacer(flex: 1),
                       ],
                     ),
-                    SizedBox(height: 1.h),
+                    SizedBox(height: 1.5.h),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -4523,45 +4370,44 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                               ),
                             ],
                           ),
-                          SizedBox(height: 1.h),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Container(
-                                width: 60.w,
-                                alignment: Alignment.center,
-                                decoration: BoxDecoration(
-                                  color: white,
-                                  borderRadius: BorderRadius.circular(15),
-                                  boxShadow: const [
-                                    BoxShadow(
-                                      blurRadius: 4,
-                                      color: Color(0x33000000),
-                                      offset: Offset(0, 2),
-                                      spreadRadius: 2,
-                                    )
-                                  ],
-                                ),
-                                padding: EdgeInsets.symmetric(
-                                  vertical: 1.h,
-                                ),
-                                child: Countdown(
-                                  controller: cont.countdownController11,
-                                  seconds: 10,
-                                  build: (_, double time) => Text(
-                                    "${time.toInt()} ${"seconds_left".tr}",
-                                    style: const TextStyle(
-                                      fontFamily: "Cairo",
-                                    ),
-                                  ),
-                                  interval: const Duration(seconds: 1),
-                                  onFinished: () async {
-                                    await spotGameContImp.timesUp();
-                                  },
-                                ),
-                              )
-                            ],
-                          ),
+                          // Row(
+                          //   mainAxisAlignment: MainAxisAlignment.center,
+                          //   children: [
+                          //     Container(
+                          //       width: 60.w,
+                          //       alignment: Alignment.center,
+                          //       decoration: BoxDecoration(
+                          //         color: white,
+                          //         borderRadius: BorderRadius.circular(15),
+                          //         boxShadow: const [
+                          //           BoxShadow(
+                          //             blurRadius: 4,
+                          //             color: Color(0x33000000),
+                          //             offset: Offset(0, 2),
+                          //             spreadRadius: 2,
+                          //           )
+                          //         ],
+                          //       ),
+                          //       padding: EdgeInsets.symmetric(
+                          //         vertical: 1.h,
+                          //       ),
+                          //       child: Countdown(
+                          //         controller: cont.countdownController11,
+                          //         seconds: 10,
+                          //         build: (_, double time) => Text(
+                          //           "${time.toInt()} ${"seconds_left".tr}",
+                          //           style: const TextStyle(
+                          //             fontFamily: "Cairo",
+                          //           ),
+                          //         ),
+                          //         interval: const Duration(seconds: 1),
+                          //         onFinished: () async {
+                          //           await spotGameContImp.timesUp();
+                          //         },
+                          //       ),
+                          //     )
+                          //   ],
+                          // ),
                         ],
                       ),
                     ),
@@ -4635,7 +4481,7 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                         const Spacer(flex: 1),
                       ],
                     ),
-                    SizedBox(height: 1.h),
+                    SizedBox(height: 1.5.h),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -4684,7 +4530,7 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                         const Spacer(flex: 1),
                       ],
                     ),
-                    SizedBox(height: 1.h),
+                    SizedBox(height: 1.5.h),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -4754,9 +4600,9 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                         const Spacer(flex: 1),
                       ],
                     ),
-                    SizedBox(height: 1.h),
+                    SizedBox(height: 1.5.h),
                     const Divider(thickness: 2, color: black),
-                    SizedBox(height: 1.h),
+                    SizedBox(height: 1.5.h),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -4841,7 +4687,7 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                         const Spacer(flex: 1),
                       ],
                     ),
-                    SizedBox(height: 1.h),
+                    SizedBox(height: 1.5.h),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -4926,7 +4772,7 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                         const Spacer(flex: 1),
                       ],
                     ),
-                    SizedBox(height: 1.h),
+                    SizedBox(height: 1.5.h),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -5059,45 +4905,45 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                               ),
                             ],
                           ),
-                          SizedBox(height: 1.h),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Container(
-                                width: 60.w,
-                                alignment: Alignment.center,
-                                decoration: BoxDecoration(
-                                  color: white,
-                                  borderRadius: BorderRadius.circular(15),
-                                  boxShadow: const [
-                                    BoxShadow(
-                                      blurRadius: 4,
-                                      color: Color(0x33000000),
-                                      offset: Offset(0, 2),
-                                      spreadRadius: 2,
-                                    )
-                                  ],
-                                ),
-                                padding: EdgeInsets.symmetric(
-                                  vertical: 1.h,
-                                ),
-                                child: Countdown(
-                                  controller: cont.countdownController12,
-                                  seconds: 10,
-                                  build: (_, double time) => Text(
-                                    "${time.toInt()} ${"seconds_left".tr}",
-                                    style: const TextStyle(
-                                      fontFamily: "Cairo",
-                                    ),
-                                  ),
-                                  interval: const Duration(seconds: 1),
-                                  onFinished: () async {
-                                    // await spotGameContImp.timesUp();
-                                  },
-                                ),
-                              )
-                            ],
-                          ),
+                          // SizedBox(height: 1.h),
+                          // Row(
+                          //   mainAxisAlignment: MainAxisAlignment.center,
+                          //   children: [
+                          //     Container(
+                          //       width: 60.w,
+                          //       alignment: Alignment.center,
+                          //       decoration: BoxDecoration(
+                          //         color: white,
+                          //         borderRadius: BorderRadius.circular(15),
+                          //         boxShadow: const [
+                          //           BoxShadow(
+                          //             blurRadius: 4,
+                          //             color: Color(0x33000000),
+                          //             offset: Offset(0, 2),
+                          //             spreadRadius: 2,
+                          //           )
+                          //         ],
+                          //       ),
+                          //       padding: EdgeInsets.symmetric(
+                          //         vertical: 1.h,
+                          //       ),
+                          //       child: Countdown(
+                          //         controller: cont.countdownController12,
+                          //         seconds: 10,
+                          //         build: (_, double time) => Text(
+                          //           "${time.toInt()} ${"seconds_left".tr}",
+                          //           style: const TextStyle(
+                          //             fontFamily: "Cairo",
+                          //           ),
+                          //         ),
+                          //         interval: const Duration(seconds: 1),
+                          //         onFinished: () async {
+                          //           // await spotGameContImp.timesUp();
+                          //         },
+                          //       ),
+                          //     )
+                          //   ],
+                          // ),
                         ],
                       ),
                     ),
@@ -5171,7 +5017,7 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                         const Spacer(flex: 1),
                       ],
                     ),
-                    SizedBox(height: 1.h),
+                    SizedBox(height: 1.5.h),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -5220,7 +5066,7 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                         const Spacer(flex: 1),
                       ],
                     ),
-                    SizedBox(height: 1.h),
+                    SizedBox(height: 1.5.h),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -5290,9 +5136,9 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                         const Spacer(flex: 1),
                       ],
                     ),
-                    SizedBox(height: 1.h),
+                    SizedBox(height: 1.5.h),
                     const Divider(thickness: 2, color: black),
-                    SizedBox(height: 1.h),
+                    SizedBox(height: 1.5.h),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -5377,7 +5223,7 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                         const Spacer(flex: 1),
                       ],
                     ),
-                    SizedBox(height: 1.h),
+                    SizedBox(height: 1.5.h),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -5462,7 +5308,7 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                         const Spacer(flex: 1),
                       ],
                     ),
-                    SizedBox(height: 1.h),
+                    SizedBox(height: 1.5.h),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -5595,45 +5441,45 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                               ),
                             ],
                           ),
-                          SizedBox(height: 1.h),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Container(
-                                width: 60.w,
-                                alignment: Alignment.center,
-                                decoration: BoxDecoration(
-                                  color: white,
-                                  borderRadius: BorderRadius.circular(15),
-                                  boxShadow: const [
-                                    BoxShadow(
-                                      blurRadius: 4,
-                                      color: Color(0x33000000),
-                                      offset: Offset(0, 2),
-                                      spreadRadius: 2,
-                                    )
-                                  ],
-                                ),
-                                padding: EdgeInsets.symmetric(
-                                  vertical: 1.h,
-                                ),
-                                child: Countdown(
-                                  controller: cont.countdownController13,
-                                  seconds: 10,
-                                  build: (_, double time) => Text(
-                                    "${time.toInt()} ${"seconds_left".tr}",
-                                    style: const TextStyle(
-                                      fontFamily: "Cairo",
-                                    ),
-                                  ),
-                                  interval: const Duration(seconds: 1),
-                                  onFinished: () async {
-                                    await spotGameContImp.timesUp();
-                                  },
-                                ),
-                              )
-                            ],
-                          ),
+                          // SizedBox(height: 1.h),
+                          // Row(
+                          //   mainAxisAlignment: MainAxisAlignment.center,
+                          //   children: [
+                          //     Container(
+                          //       width: 60.w,
+                          //       alignment: Alignment.center,
+                          //       decoration: BoxDecoration(
+                          //         color: white,
+                          //         borderRadius: BorderRadius.circular(15),
+                          //         boxShadow: const [
+                          //           BoxShadow(
+                          //             blurRadius: 4,
+                          //             color: Color(0x33000000),
+                          //             offset: Offset(0, 2),
+                          //             spreadRadius: 2,
+                          //           )
+                          //         ],
+                          //       ),
+                          //       padding: EdgeInsets.symmetric(
+                          //         vertical: 1.h,
+                          //       ),
+                          //       child: Countdown(
+                          //         controller: cont.countdownController13,
+                          //         seconds: 10,
+                          //         build: (_, double time) => Text(
+                          //           "${time.toInt()} ${"seconds_left".tr}",
+                          //           style: const TextStyle(
+                          //             fontFamily: "Cairo",
+                          //           ),
+                          //         ),
+                          //         interval: const Duration(seconds: 1),
+                          //         onFinished: () async {
+                          //           await spotGameContImp.timesUp();
+                          //         },
+                          //       ),
+                          //     )
+                          //   ],
+                          // ),
                         ],
                       ),
                     ),
@@ -5707,7 +5553,7 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                         const Spacer(flex: 1),
                       ],
                     ),
-                    SizedBox(height: 1.h),
+                    SizedBox(height: 1.5.h),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -5756,7 +5602,7 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                         const Spacer(flex: 1),
                       ],
                     ),
-                    SizedBox(height: 1.h),
+                    SizedBox(height: 1.5.h),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -5826,9 +5672,9 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                         const Spacer(flex: 1),
                       ],
                     ),
-                    SizedBox(height: 1.h),
+                    SizedBox(height: 1.5.h),
                     const Divider(thickness: 2, color: black),
-                    SizedBox(height: 1.h),
+                    SizedBox(height: 1.5.h),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -5913,7 +5759,7 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                         const Spacer(flex: 1),
                       ],
                     ),
-                    SizedBox(height: 1.h),
+                    SizedBox(height: 1.5.h),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -5998,7 +5844,7 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                         const Spacer(flex: 1),
                       ],
                     ),
-                    SizedBox(height: 1.h),
+                    SizedBox(height: 1.5.h),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -6131,45 +5977,45 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                               ),
                             ],
                           ),
-                          SizedBox(height: 1.h),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Container(
-                                width: 60.w,
-                                alignment: Alignment.center,
-                                decoration: BoxDecoration(
-                                  color: white,
-                                  borderRadius: BorderRadius.circular(15),
-                                  boxShadow: const [
-                                    BoxShadow(
-                                      blurRadius: 4,
-                                      color: Color(0x33000000),
-                                      offset: Offset(0, 2),
-                                      spreadRadius: 2,
-                                    )
-                                  ],
-                                ),
-                                padding: EdgeInsets.symmetric(
-                                  vertical: 1.h,
-                                ),
-                                child: Countdown(
-                                  controller: cont.countdownController14,
-                                  seconds: 10,
-                                  build: (_, double time) => Text(
-                                    "${time.toInt()} ${"seconds_left".tr}",
-                                    style: const TextStyle(
-                                      fontFamily: "Cairo",
-                                    ),
-                                  ),
-                                  interval: const Duration(seconds: 1),
-                                  onFinished: () async {
-                                    await spotGameContImp.timesUp();
-                                  },
-                                ),
-                              )
-                            ],
-                          ),
+                          // SizedBox(height: 1.h),
+                          // Row(
+                          //   mainAxisAlignment: MainAxisAlignment.center,
+                          //   children: [
+                          //     Container(
+                          //       width: 60.w,
+                          //       alignment: Alignment.center,
+                          //       decoration: BoxDecoration(
+                          //         color: white,
+                          //         borderRadius: BorderRadius.circular(15),
+                          //         boxShadow: const [
+                          //           BoxShadow(
+                          //             blurRadius: 4,
+                          //             color: Color(0x33000000),
+                          //             offset: Offset(0, 2),
+                          //             spreadRadius: 2,
+                          //           )
+                          //         ],
+                          //       ),
+                          //       padding: EdgeInsets.symmetric(
+                          //         vertical: 1.h,
+                          //       ),
+                          //       child: Countdown(
+                          //         controller: cont.countdownController14,
+                          //         seconds: 10,
+                          //         build: (_, double time) => Text(
+                          //           "${time.toInt()} ${"seconds_left".tr}",
+                          //           style: const TextStyle(
+                          //             fontFamily: "Cairo",
+                          //           ),
+                          //         ),
+                          //         interval: const Duration(seconds: 1),
+                          //         onFinished: () async {
+                          //           await spotGameContImp.timesUp();
+                          //         },
+                          //       ),
+                          //     )
+                          //   ],
+                          // ),
                         ],
                       ),
                     ),
@@ -6243,7 +6089,7 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                         const Spacer(flex: 1),
                       ],
                     ),
-                    SizedBox(height: 1.h),
+                    SizedBox(height: 1.5.h),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -6292,7 +6138,7 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                         const Spacer(flex: 1),
                       ],
                     ),
-                    SizedBox(height: 1.h),
+                    SizedBox(height: 1.5.h),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -6362,9 +6208,9 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                         const Spacer(flex: 1),
                       ],
                     ),
-                    SizedBox(height: 1.h),
+                    SizedBox(height: 1.5.h),
                     const Divider(thickness: 2, color: black),
-                    SizedBox(height: 1.h),
+                    SizedBox(height: 1.5.h),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -6449,7 +6295,7 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                         const Spacer(flex: 1),
                       ],
                     ),
-                    SizedBox(height: 1.h),
+                    SizedBox(height: 1.5.h),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -6534,7 +6380,7 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                         const Spacer(flex: 1),
                       ],
                     ),
-                    SizedBox(height: 1.h),
+                    SizedBox(height: 1.5.h),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -6667,45 +6513,45 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                               ),
                             ],
                           ),
-                          SizedBox(height: 1.h),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Container(
-                                width: 60.w,
-                                alignment: Alignment.center,
-                                decoration: BoxDecoration(
-                                  color: white,
-                                  borderRadius: BorderRadius.circular(15),
-                                  boxShadow: const [
-                                    BoxShadow(
-                                      blurRadius: 4,
-                                      color: Color(0x33000000),
-                                      offset: Offset(0, 2),
-                                      spreadRadius: 2,
-                                    )
-                                  ],
-                                ),
-                                padding: EdgeInsets.symmetric(
-                                  vertical: 1.h,
-                                ),
-                                child: Countdown(
-                                  controller: cont.countdownController15,
-                                  seconds: 10,
-                                  build: (_, double time) => Text(
-                                    "${time.toInt()} ${"seconds_left".tr}",
-                                    style: const TextStyle(
-                                      fontFamily: "Cairo",
-                                    ),
-                                  ),
-                                  interval: const Duration(seconds: 1),
-                                  onFinished: () async {
-                                    // await spotGameContImp.timesUp();
-                                  },
-                                ),
-                              )
-                            ],
-                          ),
+                          // SizedBox(height: 1.h),
+                          // Row(
+                          //   mainAxisAlignment: MainAxisAlignment.center,
+                          //   children: [
+                          //     Container(
+                          //       width: 60.w,
+                          //       alignment: Alignment.center,
+                          //       decoration: BoxDecoration(
+                          //         color: white,
+                          //         borderRadius: BorderRadius.circular(15),
+                          //         boxShadow: const [
+                          //           BoxShadow(
+                          //             blurRadius: 4,
+                          //             color: Color(0x33000000),
+                          //             offset: Offset(0, 2),
+                          //             spreadRadius: 2,
+                          //           )
+                          //         ],
+                          //       ),
+                          //       padding: EdgeInsets.symmetric(
+                          //         vertical: 1.h,
+                          //       ),
+                          //       child: Countdown(
+                          //         controller: cont.countdownController15,
+                          //         seconds: 10,
+                          //         build: (_, double time) => Text(
+                          //           "${time.toInt()} ${"seconds_left".tr}",
+                          //           style: const TextStyle(
+                          //             fontFamily: "Cairo",
+                          //           ),
+                          //         ),
+                          //         interval: const Duration(seconds: 1),
+                          //         onFinished: () async {
+                          //           // await spotGameContImp.timesUp();
+                          //         },
+                          //       ),
+                          //     )
+                          //   ],
+                          // ),
                         ],
                       ),
                     ),
@@ -6779,7 +6625,7 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                         const Spacer(flex: 1),
                       ],
                     ),
-                    SizedBox(height: 1.h),
+                    SizedBox(height: 1.5.h),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -6828,7 +6674,7 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                         const Spacer(flex: 1),
                       ],
                     ),
-                    SizedBox(height: 1.h),
+                    SizedBox(height: 1.5.h),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -6898,9 +6744,9 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                         const Spacer(flex: 1),
                       ],
                     ),
-                    SizedBox(height: 1.h),
+                    SizedBox(height: 1.5.h),
                     const Divider(thickness: 2, color: black),
-                    SizedBox(height: 1.h),
+                    SizedBox(height: 1.5.h),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -6985,7 +6831,7 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                         const Spacer(flex: 1),
                       ],
                     ),
-                    SizedBox(height: 1.h),
+                    SizedBox(height: 1.5.h),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -7070,7 +6916,7 @@ class _SpotGameScreenState extends State<SpotGameScreen> {
                         const Spacer(flex: 1),
                       ],
                     ),
-                    SizedBox(height: 1.h),
+                    SizedBox(height: 1.5.h),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
