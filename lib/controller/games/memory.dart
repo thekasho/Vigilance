@@ -1149,21 +1149,24 @@ class MemoryGameContImp extends MemoryGameCont {
           lvlOneOp = 0;
           update();
         });
-      } else if(click == 2){
+      }
+      else if(click == 2){
         lvlTwoOp = 0.5;
         update();
         await Future.delayed(const Duration(milliseconds: 300)).then((value) {
           lvlTwoOp = 0;
           update();
         });
-      } else if(click == 3){
+      }
+      else if(click == 3){
         lvlThreeOp = 0.5;
         update();
         await Future.delayed(const Duration(milliseconds: 300)).then((value) {
           lvlThreeOp = 0;
           update();
         });
-      } else if(click == 4){
+      }
+      else if(click == 4){
         lvlFourOp = 0.5;
         update();
         await Future.delayed(const Duration(milliseconds: 300)).then((value) {
@@ -2013,7 +2016,8 @@ class MemoryGameContImp extends MemoryGameCont {
         } else {
           ans = [];
         }
-      } else if(clevel == 15){
+      }
+      else if(clevel == 15){
         if(ans.length <= 9){
           if(const ListEquality().equals(ans, fifteenAns)){
             Get.defaultDialog(

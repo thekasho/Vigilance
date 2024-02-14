@@ -217,7 +217,7 @@ class _StdHomeScreenState extends State<StdHomeScreen> {
                                 },
                                 child: Container(
                                   width: 42.w,
-                                  height: 20.h,
+                                  height: 22.h,
                                   decoration: BoxDecoration(
                                     color: white,
                                     borderRadius: BorderRadius.circular(20),
@@ -277,7 +277,7 @@ class _StdHomeScreenState extends State<StdHomeScreen> {
                                 },
                                 child: Container(
                                   width: 42.w,
-                                  height: 20.h,
+                                  height: 22.h,
                                   decoration: BoxDecoration(
                                     color: white,
                                     borderRadius: BorderRadius.circular(20),
@@ -337,7 +337,7 @@ class _StdHomeScreenState extends State<StdHomeScreen> {
                                 },
                                 child: Container(
                                   width: 42.w,
-                                  height: 20.h,
+                                  height: 22.h,
                                   decoration: BoxDecoration(
                                     color: white,
                                     borderRadius: BorderRadius.circular(20),
@@ -398,7 +398,7 @@ class _StdHomeScreenState extends State<StdHomeScreen> {
                                 },
                                 child: Container(
                                   width: 42.w,
-                                  height: 20.h,
+                                  height: 22.h,
                                   decoration: BoxDecoration(
                                     color: white,
                                     borderRadius: BorderRadius.circular(20),
@@ -458,7 +458,7 @@ class _StdHomeScreenState extends State<StdHomeScreen> {
                                 },
                                 child: Container(
                                   width: 42.w,
-                                  height: 20.h,
+                                  height: 22.h,
                                   decoration: BoxDecoration(
                                     color: white,
                                     borderRadius: BorderRadius.circular(20),

@@ -4,12 +4,15 @@ class SupportTeacherTestsScreen extends StatefulWidget {
   const SupportTeacherTestsScreen({super.key});
 
   @override
-  State<SupportTeacherTestsScreen> createState() => _SupportTeacherTestsScreenState();
+  State<SupportTeacherTestsScreen> createState() =>
+      _SupportTeacherTestsScreenState();
 }
 
 class _SupportTeacherTestsScreenState extends State<SupportTeacherTestsScreen> {
+  TestsGameContImp testsGameContImp = Get.put(TestsGameContImp());
   @override
   Widget build(BuildContext context) {
+    Get.put(TestsGameContImp());
     return SafeArea(
       child: Scaffold(
         body: Container(
@@ -39,1189 +42,1316 @@ class _SupportTeacherTestsScreenState extends State<SupportTeacherTestsScreen> {
               ),
               SizedBox(height: 3.h),
               Container(
-                width: 100.w,
-                height: 84.h,
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 20
-                ),
-                child: SingleChildScrollView(
-                  child: Column(
-                    children: [
-                      Container(
-                        decoration: BoxDecoration(
-                          color: white,
-                          borderRadius: BorderRadius.circular(10)
-                        ),
-                        padding: const EdgeInsets.all(5),
-                        child: Row(
-                          children: [
-                            Container(
-                              padding: const EdgeInsets.all(5),
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(20),
-                                color: white,
-                                boxShadow: const [
-                                  BoxShadow(
-                                    blurRadius: 4,
-                                    color: Color(0x33000000),
-                                    offset: Offset(3, 5),
-                                    spreadRadius: 1,
-                                  )
-                                ],
-                              ),
-                              child: const Icon(
-                                Icons.done_outline_sharp,
-                                size: 35,
-                                color: green,
-                              ),
+                  width: 100.w,
+                  height: 84.h,
+                  padding: const EdgeInsets.symmetric(horizontal: 20,),
+                  child: RefreshIndicator(
+                    onRefresh: () async {
+                      await testsGameContImp.getCoinsLevel();
+                    },
+                    color: orange,
+                    child: SingleChildScrollView(
+                      child: GetBuilder<TestsGameContImp>(builder: (cont) {
+                        if(cont.statusRequest == StatusRequest.loading){
+                          return Container(
+                            color: white,
+                            height: 97.h,
+                            width: 100.w,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                SizedBox(height: 20.h),
+                                const CircularProgressIndicator(
+                                  color: black,
+                                ),
+                              ],
                             ),
-                            SizedBox(
-                              width: 67.w,
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  SizedBox(height: 1.h),
-                                  Row(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      Text(
-                                        "Session 1",
-                                        overflow: TextOverflow.clip,
-                                        textAlign: TextAlign.center,
-                                        style: TextStyle(
-                                          fontSize: 22.sp,
-                                          fontWeight: FontWeight.bold,
+                          );
+                        } else if(cont.statusRequest == StatusRequest.success) {
+                          return Column(
+                            children: [
+                              Container(
+                                decoration: BoxDecoration(
+                                  color: white,
+                                  borderRadius: BorderRadius.circular(10)
+                                ),
+                                padding: const EdgeInsets.all(5),
+                                child: Row(
+                                  children: [
+                                    Container(
+                                      padding: const EdgeInsets.all(5),
+                                      decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(20),
+                                        color: white,
+                                        boxShadow: const [
+                                          BoxShadow(
+                                            blurRadius: 4,
+                                            color: Color(0x33000000),
+                                            offset: Offset(3, 5),
+                                            spreadRadius: 1,
+                                          )
+                                        ],
+                                      ),
+                                      child: Icon(
+                                        Icons.hourglass_empty,
+                                        size: 35,
+                                        color: grayDark.withOpacity(.6),
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      width: 67.w,
+                                      child: Column(
+                                          mainAxisAlignment: MainAxisAlignment.center,
+                                          children: [
+                                            SizedBox(height: 1.h),
+                                            Row(
+                                              mainAxisAlignment: MainAxisAlignment.center,
+                                              children: [
+                                                Text(
+                                                  "Session 1",
+                                                  overflow: TextOverflow.clip,
+                                                  textAlign: TextAlign.center,
+                                                  style: TextStyle(
+                                                    fontSize: 22.sp,
+                                                    fontWeight: FontWeight.bold,
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                            Row(
+                                              mainAxisAlignment: MainAxisAlignment
+                                                  .spaceBetween,
+                                              children: [
+                                                Container(
+                                                  alignment: Alignment.center,
+                                                  width: 65.w,
+                                                  margin: EdgeInsets.only(
+                                                    bottom: .5.h,),
+                                                  padding: const EdgeInsets.all(
+                                                      5),
+                                                  child: Text(
+                                                    "Use puzzle 20 peices",
+                                                    overflow: TextOverflow.clip,
+                                                    textAlign: TextAlign.center,
+                                                    style: TextStyle(
+                                                      fontSize: 20.sp,
+                                                    ),
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                          ]
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ), // 1
+                              SizedBox(height: 2.h),
+                              Container(
+                                decoration: BoxDecoration(
+                                  color: white,
+                                  borderRadius: BorderRadius.circular(10)
+                                ),
+                                padding: const EdgeInsets.all(5),
+                                child: Row(
+                                  children: [
+                                    Container(
+                                      padding: const EdgeInsets.all(5),
+                                      decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(20),
+                                        color: white,
+                                        boxShadow: const [
+                                          BoxShadow(
+                                            blurRadius: 4,
+                                            color: Color(0x33000000),
+                                            offset: Offset(3, 5),
+                                            spreadRadius: 1,
+                                          )
+                                        ],
+                                      ),
+                                      child: Icon(
+                                        cont.coinsLevel >= 1 ? Icons.done_outline_sharp : Icons.hourglass_empty,
+                                        size: 35,
+                                        color: cont.coinsLevel >= 1 ? green : grayDark.withOpacity(.6),
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      width: 67.w,
+                                      child: Column(
+                                          mainAxisAlignment: MainAxisAlignment
+                                              .center,
+                                          children: [
+                                            SizedBox(height: 1.h),
+                                            Row(
+                                              mainAxisAlignment: MainAxisAlignment
+                                                  .center,
+                                              children: [
+                                                Text(
+                                                  "Session 2",
+                                                  overflow: TextOverflow.clip,
+                                                  textAlign: TextAlign.center,
+                                                  style: TextStyle(
+                                                    fontSize: 22.sp,
+                                                    fontWeight: FontWeight.bold,
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                            Row(
+                                              mainAxisAlignment: MainAxisAlignment
+                                                  .spaceBetween,
+                                              children: [
+                                                Container(
+                                                  alignment: Alignment.center,
+                                                  width: 65.w,
+                                                  child: Text(
+                                                    "Coin game (l.v1) ",
+                                                    overflow: TextOverflow.clip,
+                                                    textAlign: TextAlign.center,
+                                                    style: TextStyle(
+                                                      fontSize: 20.sp,
+                                                    ),
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                            GestureDetector(
+                                              onTap: () => Get.to(() => const StdCoinGameScreen(level: 1)),
+                                              child: Row(
+                                                mainAxisAlignment: MainAxisAlignment
+                                                    .center,
+                                                children: [
+                                                  ClipRRect(
+                                                    borderRadius: BorderRadius
+                                                        .circular(8),
+                                                    child: Image.asset(
+                                                      'assets/images/start.png',
+                                                      width: 55,
+                                                      height: 25,
+                                                      fit: BoxFit.cover,
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                            ),
+                                          ]
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ), // 2
+                              SizedBox(height: 2.h),
+                              Container(
+                                decoration: BoxDecoration(
+                                  color: white,
+                                  borderRadius: BorderRadius.circular(10)
+                                ),
+                                padding: const EdgeInsets.all(5),
+                                child: Row(
+                                  children: [
+                                    Container(
+                                      padding: const EdgeInsets.all(5),
+                                      decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(20),
+                                        color: white,
+                                        boxShadow: const [
+                                          BoxShadow(
+                                            blurRadius: 4,
+                                            color: Color(0x33000000),
+                                            offset: Offset(3, 5),
+                                            spreadRadius: 1,
+                                          )
+                                        ],
+                                      ),
+                                      child: Icon(
+                                        Icons.hourglass_empty,
+                                        size: 35,
+                                        color: grayDark.withOpacity(.6),
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      width: 67.w,
+                                      child: Column(
+                                          mainAxisAlignment: MainAxisAlignment.center,
+                                          children: [
+                                            SizedBox(height: 1.h),
+                                            Row(
+                                              mainAxisAlignment: MainAxisAlignment.center,
+                                              children: [
+                                                Text(
+                                                  "Session 3",
+                                                  overflow: TextOverflow.clip,
+                                                  textAlign: TextAlign.center,
+                                                  style: TextStyle(
+                                                    fontSize: 22.sp,
+                                                    fontWeight: FontWeight.bold,
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                            Row(
+                                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                              children: [
+                                                Container(
+                                                  alignment: Alignment.center,
+                                                  width: 65.w,
+                                                  padding: const EdgeInsets.all(5),
+                                                  child: Text(
+                                                    "Conneect Dots (l.v1)",
+                                                    overflow: TextOverflow.clip,
+                                                    textAlign: TextAlign.center,
+                                                    style: TextStyle(
+                                                      fontSize: 20.sp,
+                                                    ),
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                            GestureDetector(
+                                              onTap: () => Get.to(() => const StdConnectDotsGameScreen(level: 1)),
+                                              child: Row(
+                                                mainAxisAlignment: MainAxisAlignment
+                                                    .center,
+                                                children: [
+                                                  ClipRRect(
+                                                    borderRadius: BorderRadius
+                                                        .circular(8),
+                                                    child: Image.asset(
+                                                      'assets/images/start.png',
+                                                      width: 55,
+                                                      height: 25,
+                                                      fit: BoxFit.cover,
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                            ),
+                                          ],
                                         ),
                                       ),
-                                    ],
-                                  ),
-                                  Row(
-                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                    ]
+                                ),
+                              ), // 3
+                              SizedBox(height: 2.h),
+                              Container(
+                                decoration: BoxDecoration(
+                                  color: white,
+                                  borderRadius: BorderRadius.circular(10)
+                                ),
+                                padding: const EdgeInsets.all(5),
+                                child: Row(
+                                  children: [
+                                    Container(
+                                      padding: const EdgeInsets.all(5),
+                                      decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(20),
+                                        color: white,
+                                        boxShadow: const [
+                                          BoxShadow(
+                                            blurRadius: 4,
+                                            color: Color(0x33000000),
+                                            offset: Offset(3, 5),
+                                            spreadRadius: 1,
+                                          )
+                                        ],
+                                      ),
+                                      child: Icon(
+                                        Icons.hourglass_empty,
+                                        size: 35,
+                                        color: grayDark.withOpacity(.6),
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      width: 67.w,
+                                      child: Column(
+                                          mainAxisAlignment: MainAxisAlignment.center,
+                                          children: [
+                                            SizedBox(height: 1.h),
+                                            Row(
+                                              mainAxisAlignment: MainAxisAlignment.center,
+                                              children: [
+                                                Text(
+                                                  "Session 4",
+                                                  overflow: TextOverflow.clip,
+                                                  textAlign: TextAlign.center,
+                                                  style: TextStyle(
+                                                    fontSize: 22.sp,
+                                                    fontWeight: FontWeight.bold,
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                            Row(
+                                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                              children: [
+                                                Container(
+                                                  alignment: Alignment.center,
+                                                  width: 65.w,
+                                                  margin: EdgeInsets.only(
+                                                    bottom: .5.h,),
+                                                  padding: const EdgeInsets.all(
+                                                      5),
+                                                  child: Text(
+                                                    "Traffic Light",
+                                                    overflow: TextOverflow.clip,
+                                                    textAlign: TextAlign.center,
+                                                    style: TextStyle(
+                                                      fontSize: 20.sp,
+                                                    ),
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                          ]
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ), // 4
+                              SizedBox(height: 2.h),
+                              Container(
+                                decoration: BoxDecoration(
+                                    color: white,
+                                    borderRadius: BorderRadius.circular(10)
+                                ),
+                                padding: const EdgeInsets.all(5),
+                                child: Row(
                                     children: [
                                       Container(
-                                        alignment: Alignment.center,
-                                        width: 65.w,
-                                        margin: EdgeInsets.only(bottom: .5.h,),
                                         padding: const EdgeInsets.all(5),
-                                        child: Text(
-                                          "Use puzzle 20 peices",
-                                          overflow: TextOverflow.clip,
-                                          textAlign: TextAlign.center,
-                                          style: TextStyle(
-                                            fontSize: 20.sp,
-                                          ),
+                                        decoration: BoxDecoration(
+                                          borderRadius: BorderRadius.circular(20),
+                                          color: white,
+                                          boxShadow: const [
+                                            BoxShadow(
+                                              blurRadius: 4,
+                                              color: Color(0x33000000),
+                                              offset: Offset(3, 5),
+                                              spreadRadius: 1,
+                                            )
+                                          ],
+                                        ),
+                                        child: Icon(
+                                          cont.coinsLevel >= 2 ? Icons.done_outline_sharp : Icons.hourglass_empty,
+                                          size: 35,
+                                          color: cont.coinsLevel >= 2 ? green : grayDark.withOpacity(.6),
                                         ),
                                       ),
-                                    ],
-                                  ),
-                                ]
-                              ),
-                            ),
-                          ]
-                        ),
-                      ),                // 1
-                      SizedBox(height: 2.h),
-                      Container(
-                        decoration: BoxDecoration(
-                            color: white,
-                            borderRadius: BorderRadius.circular(10)
-                        ),
-                        padding: const EdgeInsets.all(5),
-                        child: Row(
-                          children: [
-                            Container(
-                              padding: const EdgeInsets.all(5),
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(20),
-                                color: white,
-                                boxShadow: const [
-                                  BoxShadow(
-                                    blurRadius: 4,
-                                    color: Color(0x33000000),
-                                    offset: Offset(3, 5),
-                                    spreadRadius: 1,
-                                  )
-                                ],
-                              ),
-                              child: Icon(
-                                Icons.hourglass_empty,
-                                size: 35,
-                                color: grayDark.withOpacity(.6),
-                              ),
-                            ),
-                            SizedBox(
-                              width: 67.w,
-                              child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
+                                      SizedBox(
+                                        width: 67.w,
+                                        child: Column(
+                                            mainAxisAlignment: MainAxisAlignment
+                                                .center,
+                                            children: [
+                                              SizedBox(height: 1.h),
+                                              Row(
+                                                mainAxisAlignment: MainAxisAlignment
+                                                    .center,
+                                                children: [
+                                                  Text(
+                                                    "Session 5",
+                                                    overflow: TextOverflow.clip,
+                                                    textAlign: TextAlign.center,
+                                                    style: TextStyle(
+                                                      fontSize: 22.sp,
+                                                      fontWeight: FontWeight.bold,
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                              Row(
+                                                mainAxisAlignment: MainAxisAlignment
+                                                    .spaceBetween,
+                                                children: [
+                                                  Container(
+                                                    alignment: Alignment.center,
+                                                    width: 65.w,
+                                                    child: Text(
+                                                      "Coin game (l.v2) ",
+                                                      overflow: TextOverflow.clip,
+                                                      textAlign: TextAlign.center,
+                                                      style: TextStyle(
+                                                        fontSize: 20.sp,
+                                                      ),
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                              Row(
+                                                mainAxisAlignment: MainAxisAlignment
+                                                    .center,
+                                                children: [
+                                                  GestureDetector(
+                                                    onTap: () => Get.to(() =>
+                                                    const StdCoinGameScreen(
+                                                        level: 2)),
+                                                    child: ClipRRect(
+                                                      borderRadius: BorderRadius
+                                                          .circular(8),
+                                                      child: Image.asset(
+                                                        'assets/images/start.png',
+                                                        width: 55,
+                                                        height: 25,
+                                                        fit: BoxFit.cover,
+                                                      ),
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                            ]
+                                        ),
+                                      ),
+                                    ]
+                                ),
+                              ), // 5
+                              SizedBox(height: 2.h),
+                              Container(
+                                decoration: BoxDecoration(
+                                  color: white,
+                                  borderRadius: BorderRadius.circular(10)
+                                ),
+                                padding: const EdgeInsets.all(5),
+                                child: Row(
                                   children: [
-                                    SizedBox(height: 1.h),
-                                    Row(
-                                      mainAxisAlignment: MainAxisAlignment.center,
-                                      children: [
-                                        Text(
-                                          "Session 2",
-                                          overflow: TextOverflow.clip,
-                                          textAlign: TextAlign.center,
-                                          style: TextStyle(
-                                            fontSize: 22.sp,
-                                            fontWeight: FontWeight.bold,
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                    Row(
-                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                      children: [
-                                        Container(
-                                          alignment: Alignment.center,
-                                          width: 65.w,
-                                          child: Text(
-                                            "Coin game (l.v1) ",
-                                            overflow: TextOverflow.clip,
-                                            textAlign: TextAlign.center,
-                                            style: TextStyle(
-                                              fontSize: 20.sp,
-                                            ),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                    GestureDetector(
-                                      onTap: () => Get.to( () => const StdCoinGameScreen(level: 1)),
-                                      child: Row(
-                                        mainAxisAlignment: MainAxisAlignment.center,
-                                        children: [
-                                          ClipRRect(
-                                            borderRadius: BorderRadius.circular(8),
-                                            child: Image.asset(
-                                              'assets/images/start.png',
-                                              width: 55,
-                                              height: 25,
-                                              fit: BoxFit.cover,
-                                            ),
-                                          ),
+                                    Container(
+                                      padding: const EdgeInsets.all(5),
+                                      decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(20),
+                                        color: white,
+                                        boxShadow: const [
+                                          BoxShadow(
+                                            blurRadius: 4,
+                                            color: Color(0x33000000),
+                                            offset: Offset(3, 5),
+                                            spreadRadius: 1,
+                                          )
                                         ],
+                                      ),
+                                      child: Icon(
+                                        Icons.hourglass_empty,
+                                        size: 35,
+                                        color: grayDark.withOpacity(.6),
                                       ),
                                     ),
-                                  ]
-                              ),
-                            ),
-                          ]
-                        ),
-                      ),                // 2
-                      SizedBox(height: 2.h),
-                      Container(
-                        decoration: BoxDecoration(
-                            color: white,
-                            borderRadius: BorderRadius.circular(10)
-                        ),
-                        padding: const EdgeInsets.all(5),
-                        child: Row(
-                            children: [
-                              Container(
-                                padding: const EdgeInsets.all(5),
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(20),
-                                  color: white,
-                                  boxShadow: const [
-                                    BoxShadow(
-                                      blurRadius: 4,
-                                      color: Color(0x33000000),
-                                      offset: Offset(3, 5),
-                                      spreadRadius: 1,
-                                    )
-                                  ],
-                                ),
-                                child: const Icon(
-                                  Icons.done_outline_sharp,
-                                  size: 35,
-                                  color: green,
-                                ),
-                              ),
-                              SizedBox(
-                                width: 67.w,
-                                child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      SizedBox(height: 1.h),
-                                      Row(
-                                        mainAxisAlignment: MainAxisAlignment.center,
-                                        children: [
-                                          Text(
-                                            "Session 3",
-                                            overflow: TextOverflow.clip,
-                                            textAlign: TextAlign.center,
-                                            style: TextStyle(
-                                              fontSize: 22.sp,
-                                              fontWeight: FontWeight.bold,
+                                    SizedBox(
+                                      width: 67.w,
+                                      child: Column(
+                                          mainAxisAlignment: MainAxisAlignment
+                                              .center,
+                                          children: [
+                                            SizedBox(height: 1.h),
+                                            Row(
+                                              mainAxisAlignment: MainAxisAlignment
+                                                  .center,
+                                              children: [
+                                                Text(
+                                                  "Session 6",
+                                                  overflow: TextOverflow.clip,
+                                                  textAlign: TextAlign.center,
+                                                  style: TextStyle(
+                                                    fontSize: 22.sp,
+                                                    fontWeight: FontWeight.bold,
+                                                  ),
+                                                ),
+                                              ],
                                             ),
-                                          ),
-                                        ],
-                                      ),
-                                      Row(
-                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                        children: [
-                                          Container(
-                                            alignment: Alignment.center,
-                                            width: 65.w,
-                                            margin: EdgeInsets.only(bottom: .5.h,),
-                                            padding: const EdgeInsets.all(5),
-                                            child: Text(
-                                              "Conneect Dots",
-                                              overflow: TextOverflow.clip,
-                                              textAlign: TextAlign.center,
-                                              style: TextStyle(
-                                                fontSize: 20.sp,
-                                              ),
+                                            Row(
+                                              mainAxisAlignment: MainAxisAlignment
+                                                  .spaceBetween,
+                                              children: [
+                                                Container(
+                                                  alignment: Alignment.center,
+                                                  width: 65.w,
+                                                  margin: EdgeInsets.only(
+                                                    bottom: .5.h,),
+                                                  padding: const EdgeInsets.all(
+                                                      5),
+                                                  child: Text(
+                                                    "Use puzzles 35 peices ",
+                                                    overflow: TextOverflow.clip,
+                                                    textAlign: TextAlign.center,
+                                                    style: TextStyle(
+                                                      fontSize: 20.sp,
+                                                    ),
+                                                  ),
+                                                ),
+                                              ],
                                             ),
-                                          ),
-                                        ],
+                                          ]
                                       ),
-                                    ]
-                                ),
-                              ),
-                            ]
-                        ),
-                      ),                // 3
-                      SizedBox(height: 2.h),
-                      Container(
-                        decoration: BoxDecoration(
-                            color: white,
-                            borderRadius: BorderRadius.circular(10)
-                        ),
-                        padding: const EdgeInsets.all(5),
-                        child: Row(
-                            children: [
-                              Container(
-                                padding: const EdgeInsets.all(5),
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(20),
-                                  color: white,
-                                  boxShadow: const [
-                                    BoxShadow(
-                                      blurRadius: 4,
-                                      color: Color(0x33000000),
-                                      offset: Offset(3, 5),
-                                      spreadRadius: 1,
-                                    )
-                                  ],
-                                ),
-                                child: const Icon(
-                                  Icons.done_outline_sharp,
-                                  size: 35,
-                                  color: green,
-                                ),
-                              ),
-                              SizedBox(
-                                width: 67.w,
-                                child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      SizedBox(height: 1.h),
-                                      Row(
-                                        mainAxisAlignment: MainAxisAlignment.center,
-                                        children: [
-                                          Text(
-                                            "Session 4",
-                                            overflow: TextOverflow.clip,
-                                            textAlign: TextAlign.center,
-                                            style: TextStyle(
-                                              fontSize: 22.sp,
-                                              fontWeight: FontWeight.bold,
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                      Row(
-                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                        children: [
-                                          Container(
-                                            alignment: Alignment.center,
-                                            width: 65.w,
-                                            margin: EdgeInsets.only(bottom: .5.h,),
-                                            padding: const EdgeInsets.all(5),
-                                            child: Text(
-                                              "Traffic Light",
-                                              overflow: TextOverflow.clip,
-                                              textAlign: TextAlign.center,
-                                              style: TextStyle(
-                                                fontSize: 20.sp,
-                                              ),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ]
-                                ),
-                              ),
-                            ]
-                        ),
-                      ),                // 4
-                      SizedBox(height: 2.h),
-                      Container(
-                        decoration: BoxDecoration(
-                            color: white,
-                            borderRadius: BorderRadius.circular(10)
-                        ),
-                        padding: const EdgeInsets.all(5),
-                        child: Row(
-                            children: [
-                              Container(
-                                padding: const EdgeInsets.all(5),
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(20),
-                                  color: white,
-                                  boxShadow: const [
-                                    BoxShadow(
-                                      blurRadius: 4,
-                                      color: Color(0x33000000),
-                                      offset: Offset(3, 5),
-                                      spreadRadius: 1,
-                                    )
-                                  ],
-                                ),
-                                child: Icon(
-                                  Icons.hourglass_empty,
-                                  size: 35,
-                                  color: grayDark.withOpacity(.6),
-                                ),
-                              ),
-                              SizedBox(
-                                width: 67.w,
-                                child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      SizedBox(height: 1.h),
-                                      Row(
-                                        mainAxisAlignment: MainAxisAlignment.center,
-                                        children: [
-                                          Text(
-                                            "Session 5",
-                                            overflow: TextOverflow.clip,
-                                            textAlign: TextAlign.center,
-                                            style: TextStyle(
-                                              fontSize: 22.sp,
-                                              fontWeight: FontWeight.bold,
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                      Row(
-                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                        children: [
-                                          Container(
-                                            alignment: Alignment.center,
-                                            width: 65.w,
-                                            child: Text(
-                                              "Coin game (l.v2) ",
-                                              overflow: TextOverflow.clip,
-                                              textAlign: TextAlign.center,
-                                              style: TextStyle(
-                                                fontSize: 20.sp,
-                                              ),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                      Row(
-                                        mainAxisAlignment: MainAxisAlignment.center,
-                                        children: [
-                                          ClipRRect(
-                                            borderRadius: BorderRadius.circular(8),
-                                            child: Image.asset(
-                                              'assets/images/start.png',
-                                              width: 55,
-                                              height: 25,
-                                              fit: BoxFit.cover,
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ]
-                                ),
-                              ),
-                            ]
-                        ),
-                      ),                // 5
-                      SizedBox(height: 2.h),
-                      Container(
-                        decoration: BoxDecoration(
-                            color: white,
-                            borderRadius: BorderRadius.circular(10)
-                        ),
-                        padding: const EdgeInsets.all(5),
-                        child: Row(
-                            children: [
-                              Container(
-                                padding: const EdgeInsets.all(5),
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(20),
-                                  color: white,
-                                  boxShadow: const [
-                                    BoxShadow(
-                                      blurRadius: 4,
-                                      color: Color(0x33000000),
-                                      offset: Offset(3, 5),
-                                      spreadRadius: 1,
-                                    )
-                                  ],
-                                ),
-                                child: const Icon(
-                                  Icons.done_outline_sharp,
-                                  size: 35,
-                                  color: green,
-                                ),
-                              ),
-                              SizedBox(
-                                width: 67.w,
-                                child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      SizedBox(height: 1.h),
-                                      Row(
-                                        mainAxisAlignment: MainAxisAlignment.center,
-                                        children: [
-                                          Text(
-                                            "Session 6",
-                                            overflow: TextOverflow.clip,
-                                            textAlign: TextAlign.center,
-                                            style: TextStyle(
-                                              fontSize: 22.sp,
-                                              fontWeight: FontWeight.bold,
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                      Row(
-                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                        children: [
-                                          Container(
-                                            alignment: Alignment.center,
-                                            width: 65.w,
-                                            margin: EdgeInsets.only(bottom: .5.h,),
-                                            padding: const EdgeInsets.all(5),
-                                            child: Text(
-                                              "Use puzzles 35 peices ",
-                                              overflow: TextOverflow.clip,
-                                              textAlign: TextAlign.center,
-                                              style: TextStyle(
-                                                fontSize: 20.sp,
-                                              ),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ]
-                                ),
-                              ),
-                            ]
-                        ),
-                      ),                // 6
-                      SizedBox(height: 2.h),
-                      Container(
-                        decoration: BoxDecoration(
-                            color: white,
-                            borderRadius: BorderRadius.circular(10)
-                        ),
-                        padding: const EdgeInsets.all(5),
-                        child: Row(
-                            children: [
-                              Container(
-                                padding: const EdgeInsets.all(5),
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(20),
-                                  color: white,
-                                  boxShadow: const [
-                                    BoxShadow(
-                                      blurRadius: 4,
-                                      color: Color(0x33000000),
-                                      offset: Offset(3, 5),
-                                      spreadRadius: 1,
-                                    )
-                                  ],
-                                ),
-                                child: const Icon(
-                                  Icons.done_outline_sharp,
-                                  size: 35,
-                                  color: green,
-                                ),
-                              ),
-                              SizedBox(
-                                width: 67.w,
-                                child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      SizedBox(height: 1.h),
-                                      Row(
-                                        mainAxisAlignment: MainAxisAlignment.center,
-                                        children: [
-                                          Text(
-                                            "Session 7",
-                                            overflow: TextOverflow.clip,
-                                            textAlign: TextAlign.center,
-                                            style: TextStyle(
-                                              fontSize: 22.sp,
-                                              fontWeight: FontWeight.bold,
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                      Row(
-                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                        children: [
-                                          Container(
-                                            alignment: Alignment.center,
-                                            width: 65.w,
-                                            margin: EdgeInsets.only(bottom: .5.h,),
-                                            padding: const EdgeInsets.all(5),
-                                            child: Text(
-                                              "Traffic light",
-                                              overflow: TextOverflow.clip,
-                                              textAlign: TextAlign.center,
-                                              style: TextStyle(
-                                                fontSize: 20.sp,
-                                              ),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ]
-                                ),
-                              ),
-                            ]
-                        ),
-                      ),                // 7
-                      SizedBox(height: 2.h),
-                      Container(
-                        decoration: BoxDecoration(
-                            color: white,
-                            borderRadius: BorderRadius.circular(10)
-                        ),
-                        padding: const EdgeInsets.all(5),
-                        child: Row(
-                          children: [
-                            Container(
-                              padding: const EdgeInsets.all(5),
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(20),
-                                color: white,
-                                boxShadow: const [
-                                  BoxShadow(
-                                    blurRadius: 4,
-                                    color: Color(0x33000000),
-                                    offset: Offset(3, 5),
-                                    spreadRadius: 1,
-                                  )
-                                ],
-                              ),
-                              child: const Icon(
-                                Icons.done_outline_sharp,
-                                size: 35,
-                                color: green,
-                              ),
-                            ),
-                            SizedBox(
-                              width: 67.w,
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                    SizedBox(height: 1.h),
-                                    Row(
-                                      mainAxisAlignment: MainAxisAlignment.center,
-                                      children: [
-                                        Text(
-                                          "Session 8",
-                                          overflow: TextOverflow.clip,
-                                          textAlign: TextAlign.center,
-                                          style: TextStyle(
-                                            fontSize: 22.sp,
-                                            fontWeight: FontWeight.bold,
-                                          ),
-                                        ),
-                                      ],
                                     ),
-                                    Row(
-                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                      children: [
-                                        Container(
-                                          alignment: Alignment.center,
-                                          width: 65.w,
-                                          margin: EdgeInsets.only(bottom: .5.h,),
-                                          padding: const EdgeInsets.all(5),
-                                          child: Text(
-                                            "Connect Dots",
-                                            overflow: TextOverflow.clip,
-                                            textAlign: TextAlign.center,
-                                            style: TextStyle(
-                                              fontSize: 20.sp,
-                                            ),
-                                          ),
-                                        ),
-                                      ],
+                                  ],
+                                ),
+                              ), // 6
+                              SizedBox(height: 2.h),
+                              Container(
+                                decoration: BoxDecoration(
+                                  color: white,
+                                  borderRadius: BorderRadius.circular(10)
+                                ),
+                                padding: const EdgeInsets.all(5),
+                                child: Row(
+                                  children: [
+                                    Container(
+                                      padding: const EdgeInsets.all(5),
+                                      decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(20),
+                                        color: white,
+                                        boxShadow: const [
+                                          BoxShadow(
+                                            blurRadius: 4,
+                                            color: Color(0x33000000),
+                                            offset: Offset(3, 5),
+                                            spreadRadius: 1,
+                                          )
+                                        ],
+                                      ),
+                                      child: Icon(
+                                        Icons.hourglass_empty,
+                                        size: 35,
+                                        color: grayDark.withOpacity(.6),
+                                      ),
                                     ),
-                                  ]
-                              ),
-                            ),
-                          ]
-                        ),
-                      ),                // 8
-                      SizedBox(height: 2.h),
-                      Container(
-                        decoration: BoxDecoration(
-                            color: white,
-                            borderRadius: BorderRadius.circular(10)
-                        ),
-                        padding: const EdgeInsets.all(5),
-                        child: Row(
-                            children: [
-                              Container(
-                                padding: const EdgeInsets.all(5),
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(20),
-                                  color: white,
-                                  boxShadow: const [
-                                    BoxShadow(
-                                      blurRadius: 4,
-                                      color: Color(0x33000000),
-                                      offset: Offset(3, 5),
-                                      spreadRadius: 1,
-                                    )
+                                    SizedBox(
+                                      width: 67.w,
+                                      child: Column(
+                                          mainAxisAlignment: MainAxisAlignment
+                                              .center,
+                                          children: [
+                                            SizedBox(height: 1.h),
+                                            Row(
+                                              mainAxisAlignment: MainAxisAlignment
+                                                  .center,
+                                              children: [
+                                                Text(
+                                                  "Session 7",
+                                                  overflow: TextOverflow.clip,
+                                                  textAlign: TextAlign.center,
+                                                  style: TextStyle(
+                                                    fontSize: 22.sp,
+                                                    fontWeight: FontWeight.bold,
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                            Row(
+                                              mainAxisAlignment: MainAxisAlignment
+                                                  .spaceBetween,
+                                              children: [
+                                                Container(
+                                                  alignment: Alignment.center,
+                                                  width: 65.w,
+                                                  margin: EdgeInsets.only(
+                                                    bottom: .5.h,),
+                                                  padding: const EdgeInsets.all(
+                                                      5),
+                                                  child: Text(
+                                                    "Traffic light",
+                                                    overflow: TextOverflow.clip,
+                                                    textAlign: TextAlign.center,
+                                                    style: TextStyle(
+                                                      fontSize: 20.sp,
+                                                    ),
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                          ]
+                                      ),
+                                    ),
                                   ],
                                 ),
-                                child: Icon(
-                                  Icons.hourglass_empty,
-                                  size: 35,
-                                  color: grayDark.withOpacity(.6),
-                                ),
-                              ),
-                              SizedBox(
-                                width: 67.w,
-                                child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      SizedBox(height: 1.h),
-                                      Row(
-                                        mainAxisAlignment: MainAxisAlignment.center,
-                                        children: [
-                                          Text(
-                                            "Session 9",
-                                            overflow: TextOverflow.clip,
-                                            textAlign: TextAlign.center,
-                                            style: TextStyle(
-                                              fontSize: 22.sp,
-                                              fontWeight: FontWeight.bold,
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                      Row(
-                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                        children: [
-                                          Container(
-                                            alignment: Alignment.center,
-                                            width: 65.w,
-                                            child: Text(
-                                              "Coin game (l.v3) ",
-                                              overflow: TextOverflow.clip,
-                                              textAlign: TextAlign.center,
-                                              style: TextStyle(
-                                                fontSize: 20.sp,
-                                              ),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                      Row(
-                                        mainAxisAlignment: MainAxisAlignment.center,
-                                        children: [
-                                          ClipRRect(
-                                            borderRadius: BorderRadius.circular(8),
-                                            child: Image.asset(
-                                              'assets/images/start.png',
-                                              width: 55,
-                                              height: 25,
-                                              fit: BoxFit.cover,
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ]
-                                ),
-                              ),
-                            ]
-                        ),
-                      ),                // 9
-                      SizedBox(height: 2.h),
-                      Container(
-                        decoration: BoxDecoration(
-                            color: white,
-                            borderRadius: BorderRadius.circular(10)
-                        ),
-                        padding: const EdgeInsets.all(5),
-                        child: Row(
-                            children: [
+                              ), // 7
+                              SizedBox(height: 2.h),
                               Container(
-                                padding: const EdgeInsets.all(5),
                                 decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(20),
                                   color: white,
-                                  boxShadow: const [
-                                    BoxShadow(
-                                      blurRadius: 4,
-                                      color: Color(0x33000000),
-                                      offset: Offset(3, 5),
-                                      spreadRadius: 1,
-                                    )
+                                  borderRadius: BorderRadius.circular(10)
+                                ),
+                                padding: const EdgeInsets.all(5),
+                                child: Row(
+                                  children: [
+                                    Container(
+                                      padding: const EdgeInsets.all(5),
+                                      decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(20),
+                                        color: white,
+                                        boxShadow: const [
+                                          BoxShadow(
+                                            blurRadius: 4,
+                                            color: Color(0x33000000),
+                                            offset: Offset(3, 5),
+                                            spreadRadius: 1,
+                                          )
+                                        ],
+                                      ),
+                                      child: Icon(
+                                        Icons.hourglass_empty,
+                                        size: 35,
+                                        color: grayDark.withOpacity(.6),
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      width: 67.w,
+                                      child: Column(
+                                          mainAxisAlignment: MainAxisAlignment
+                                              .center,
+                                          children: [
+                                            SizedBox(height: 1.h),
+                                            Row(
+                                              mainAxisAlignment: MainAxisAlignment
+                                                  .center,
+                                              children: [
+                                                Text(
+                                                  "Session 8",
+                                                  overflow: TextOverflow.clip,
+                                                  textAlign: TextAlign.center,
+                                                  style: TextStyle(
+                                                    fontSize: 22.sp,
+                                                    fontWeight: FontWeight.bold,
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                            Row(
+                                              mainAxisAlignment: MainAxisAlignment
+                                                  .spaceBetween,
+                                              children: [
+                                                Container(
+                                                  alignment: Alignment.center,
+                                                  width: 65.w,
+                                                  margin: EdgeInsets.only(
+                                                    bottom: .5.h,),
+                                                  padding: const EdgeInsets.all(
+                                                      5),
+                                                  child: Text(
+                                                    "Connect Dots",
+                                                    overflow: TextOverflow.clip,
+                                                    textAlign: TextAlign.center,
+                                                    style: TextStyle(
+                                                      fontSize: 20.sp,
+                                                    ),
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                          ]
+                                      ),
+                                    ),
                                   ],
                                 ),
-                                child: const Icon(
-                                  Icons.done_outline_sharp,
-                                  size: 35,
-                                  color: green,
-                                ),
-                              ),
-                              SizedBox(
-                                width: 67.w,
-                                child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      SizedBox(height: 1.h),
-                                      Row(
-                                        mainAxisAlignment: MainAxisAlignment.center,
-                                        children: [
-                                          Text(
-                                            "Session 10",
-                                            overflow: TextOverflow.clip,
-                                            textAlign: TextAlign.center,
-                                            style: TextStyle(
-                                              fontSize: 22.sp,
-                                              fontWeight: FontWeight.bold,
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                      Row(
-                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                        children: [
-                                          Container(
-                                            alignment: Alignment.center,
-                                            width: 65.w,
-                                            margin: EdgeInsets.only(bottom: .5.h,),
-                                            padding: const EdgeInsets.all(5),
-                                            child: Text(
-                                              "Traffic Light",
-                                              overflow: TextOverflow.clip,
-                                              textAlign: TextAlign.center,
-                                              style: TextStyle(
-                                                fontSize: 20.sp,
-                                              ),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ]
-                                ),
-                              ),
-                            ]
-                        ),
-                      ),                // 10
-                      SizedBox(height: 2.h),
-                      Container(
-                        decoration: BoxDecoration(
-                            color: white,
-                            borderRadius: BorderRadius.circular(10)
-                        ),
-                        padding: const EdgeInsets.all(5),
-                        child: Row(
-                            children: [
+                              ), // 8
+                              SizedBox(height: 2.h),
                               Container(
-                                padding: const EdgeInsets.all(5),
                                 decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(20),
                                   color: white,
-                                  boxShadow: const [
-                                    BoxShadow(
-                                      blurRadius: 4,
-                                      color: Color(0x33000000),
-                                      offset: Offset(3, 5),
-                                      spreadRadius: 1,
-                                    )
+                                  borderRadius: BorderRadius.circular(10)
+                                ),
+                                padding: const EdgeInsets.all(5),
+                                child: Row(
+                                  children: [
+                                    Container(
+                                      padding: const EdgeInsets.all(5),
+                                      decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(20),
+                                        color: white,
+                                        boxShadow: const [
+                                          BoxShadow(
+                                            blurRadius: 4,
+                                            color: Color(0x33000000),
+                                            offset: Offset(3, 5),
+                                            spreadRadius: 1,
+                                          )
+                                        ],
+                                      ),
+                                      child: Icon(
+                                        cont.coinsLevel >= 3 ? Icons.done_outline_sharp : Icons.hourglass_empty,
+                                        size: 35,
+                                        color: cont.coinsLevel >= 3 ? green : grayDark.withOpacity(.6),
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      width: 67.w,
+                                      child: Column(
+                                          mainAxisAlignment: MainAxisAlignment
+                                              .center,
+                                          children: [
+                                            SizedBox(height: 1.h),
+                                            Row(
+                                              mainAxisAlignment: MainAxisAlignment
+                                                  .center,
+                                              children: [
+                                                Text(
+                                                  "Session 9",
+                                                  overflow: TextOverflow.clip,
+                                                  textAlign: TextAlign.center,
+                                                  style: TextStyle(
+                                                    fontSize: 22.sp,
+                                                    fontWeight: FontWeight.bold,
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                            Row(
+                                              mainAxisAlignment: MainAxisAlignment
+                                                  .spaceBetween,
+                                              children: [
+                                                Container(
+                                                  alignment: Alignment.center,
+                                                  width: 65.w,
+                                                  child: Text(
+                                                    "Coin game (l.v3) ",
+                                                    overflow: TextOverflow.clip,
+                                                    textAlign: TextAlign.center,
+                                                    style: TextStyle(
+                                                      fontSize: 20.sp,
+                                                    ),
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                            Row(
+                                              mainAxisAlignment: MainAxisAlignment
+                                                  .center,
+                                              children: [
+                                                GestureDetector(
+                                                  onTap: () => Get.to(() =>
+                                                  const StdCoinGameScreen(
+                                                      level: 3)),
+                                                  child: ClipRRect(
+                                                    borderRadius: BorderRadius
+                                                        .circular(8),
+                                                    child: Image.asset(
+                                                      'assets/images/start.png',
+                                                      width: 55,
+                                                      height: 25,
+                                                      fit: BoxFit.cover,
+                                                    ),
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                          ]
+                                      ),
+                                    ),
                                   ],
                                 ),
-                                child: const Icon(
-                                  Icons.done_outline_sharp,
-                                  size: 35,
-                                  color: green,
-                                ),
-                              ),
-                              SizedBox(
-                                width: 67.w,
-                                child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      SizedBox(height: 1.h),
-                                      Row(
-                                        mainAxisAlignment: MainAxisAlignment.center,
-                                        children: [
-                                          Text(
-                                            "Session 11",
-                                            overflow: TextOverflow.clip,
-                                            textAlign: TextAlign.center,
-                                            style: TextStyle(
-                                              fontSize: 22.sp,
-                                              fontWeight: FontWeight.bold,
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                      Row(
-                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                        children: [
-                                          Container(
-                                            alignment: Alignment.center,
-                                            width: 65.w,
-                                            margin: EdgeInsets.only(bottom: .5.h,),
-                                            padding: const EdgeInsets.all(5),
-                                            child: Text(
-                                              "Connect Dots",
-                                              overflow: TextOverflow.clip,
-                                              textAlign: TextAlign.center,
-                                              style: TextStyle(
-                                                fontSize: 20.sp,
-                                              ),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ]
-                                ),
-                              ),
-                            ]
-                        ),
-                      ),                // 11
-                      SizedBox(height: 2.h),
-                      Container(
-                        decoration: BoxDecoration(
-                            color: white,
-                            borderRadius: BorderRadius.circular(10)
-                        ),
-                        padding: const EdgeInsets.all(5),
-                        child: Row(
-                            children: [
+                              ), // 9
+                              SizedBox(height: 2.h),
                               Container(
-                                padding: const EdgeInsets.all(5),
                                 decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(20),
                                   color: white,
-                                  boxShadow: const [
-                                    BoxShadow(
-                                      blurRadius: 4,
-                                      color: Color(0x33000000),
-                                      offset: Offset(3, 5),
-                                      spreadRadius: 1,
-                                    )
+                                  borderRadius: BorderRadius.circular(10)
+                                ),
+                                padding: const EdgeInsets.all(5),
+                                child: Row(
+                                  children: [
+                                    Container(
+                                      padding: const EdgeInsets.all(5),
+                                      decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(20),
+                                        color: white,
+                                        boxShadow: const [
+                                          BoxShadow(
+                                            blurRadius: 4,
+                                            color: Color(0x33000000),
+                                            offset: Offset(3, 5),
+                                            spreadRadius: 1,
+                                          )
+                                        ],
+                                      ),
+                                      child: Icon(
+                                        Icons.hourglass_empty,
+                                        size: 35,
+                                        color: grayDark.withOpacity(.6),
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      width: 67.w,
+                                      child: Column(
+                                          mainAxisAlignment: MainAxisAlignment
+                                              .center,
+                                          children: [
+                                            SizedBox(height: 1.h),
+                                            Row(
+                                              mainAxisAlignment: MainAxisAlignment
+                                                  .center,
+                                              children: [
+                                                Text(
+                                                  "Session 10",
+                                                  overflow: TextOverflow.clip,
+                                                  textAlign: TextAlign.center,
+                                                  style: TextStyle(
+                                                    fontSize: 22.sp,
+                                                    fontWeight: FontWeight.bold,
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                            Row(
+                                              mainAxisAlignment: MainAxisAlignment
+                                                  .spaceBetween,
+                                              children: [
+                                                Container(
+                                                  alignment: Alignment.center,
+                                                  width: 65.w,
+                                                  margin: EdgeInsets.only(
+                                                    bottom: .5.h,),
+                                                  padding: const EdgeInsets.all(
+                                                      5),
+                                                  child: Text(
+                                                    "Traffic Light",
+                                                    overflow: TextOverflow.clip,
+                                                    textAlign: TextAlign.center,
+                                                    style: TextStyle(
+                                                      fontSize: 20.sp,
+                                                    ),
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                          ]
+                                      ),
+                                    ),
                                   ],
                                 ),
-                                child: Icon(
-                                  Icons.hourglass_empty,
-                                  size: 35,
-                                  color: grayDark.withOpacity(.6),
-                                ),
-                              ),
-                              SizedBox(
-                                width: 67.w,
-                                child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      SizedBox(height: 1.h),
-                                      Row(
-                                        mainAxisAlignment: MainAxisAlignment.center,
-                                        children: [
-                                          Text(
-                                            "Session 12",
-                                            overflow: TextOverflow.clip,
-                                            textAlign: TextAlign.center,
-                                            style: TextStyle(
-                                              fontSize: 22.sp,
-                                              fontWeight: FontWeight.bold,
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                      Row(
-                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                        children: [
-                                          Container(
-                                            alignment: Alignment.center,
-                                            width: 65.w,
-                                            child: Text(
-                                              "Coin game (l.v4) ",
-                                              overflow: TextOverflow.clip,
-                                              textAlign: TextAlign.center,
-                                              style: TextStyle(
-                                                fontSize: 20.sp,
-                                              ),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                      Row(
-                                        mainAxisAlignment: MainAxisAlignment.center,
-                                        children: [
-                                          ClipRRect(
-                                            borderRadius: BorderRadius.circular(8),
-                                            child: Image.asset(
-                                              'assets/images/start.png',
-                                              width: 55,
-                                              height: 25,
-                                              fit: BoxFit.cover,
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ]
-                                ),
-                              ),
-                            ]
-                        ),
-                      ),                // 12
-                      SizedBox(height: 2.h),
-                      Container(
-                        decoration: BoxDecoration(
-                            color: white,
-                            borderRadius: BorderRadius.circular(10)
-                        ),
-                        padding: const EdgeInsets.all(5),
-                        child: Row(
-                            children: [
+                              ), // 10
+                              SizedBox(height: 2.h),
                               Container(
-                                padding: const EdgeInsets.all(5),
                                 decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(20),
                                   color: white,
-                                  boxShadow: const [
-                                    BoxShadow(
-                                      blurRadius: 4,
-                                      color: Color(0x33000000),
-                                      offset: Offset(3, 5),
-                                      spreadRadius: 1,
-                                    )
+                                  borderRadius: BorderRadius.circular(10)
+                                ),
+                                padding: const EdgeInsets.all(5),
+                                child: Row(
+                                  children: [
+                                    Container(
+                                      padding: const EdgeInsets.all(5),
+                                      decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(20),
+                                        color: white,
+                                        boxShadow: const [
+                                          BoxShadow(
+                                            blurRadius: 4,
+                                            color: Color(0x33000000),
+                                            offset: Offset(3, 5),
+                                            spreadRadius: 1,
+                                          )
+                                        ],
+                                      ),
+                                      child: Icon(
+                                        Icons.hourglass_empty,
+                                        size: 35,
+                                        color: grayDark.withOpacity(.6),
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      width: 67.w,
+                                      child: Column(
+                                          mainAxisAlignment: MainAxisAlignment
+                                              .center,
+                                          children: [
+                                            SizedBox(height: 1.h),
+                                            Row(
+                                              mainAxisAlignment: MainAxisAlignment
+                                                  .center,
+                                              children: [
+                                                Text(
+                                                  "Session 11",
+                                                  overflow: TextOverflow.clip,
+                                                  textAlign: TextAlign.center,
+                                                  style: TextStyle(
+                                                    fontSize: 22.sp,
+                                                    fontWeight: FontWeight.bold,
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                            Row(
+                                              mainAxisAlignment: MainAxisAlignment
+                                                  .spaceBetween,
+                                              children: [
+                                                Container(
+                                                  alignment: Alignment.center,
+                                                  width: 65.w,
+                                                  margin: EdgeInsets.only(
+                                                    bottom: .5.h,),
+                                                  padding: const EdgeInsets.all(
+                                                      5),
+                                                  child: Text(
+                                                    "Connect Dots",
+                                                    overflow: TextOverflow.clip,
+                                                    textAlign: TextAlign.center,
+                                                    style: TextStyle(
+                                                      fontSize: 20.sp,
+                                                    ),
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                          ]
+                                      ),
+                                    ),
                                   ],
                                 ),
-                                child: const Icon(
-                                  Icons.done_outline_sharp,
-                                  size: 35,
-                                  color: green,
-                                ),
-                              ),
-                              SizedBox(
-                                width: 67.w,
-                                child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      SizedBox(height: 1.h),
-                                      Row(
-                                        mainAxisAlignment: MainAxisAlignment.center,
-                                        children: [
-                                          Text(
-                                            "Session 13",
-                                            overflow: TextOverflow.clip,
-                                            textAlign: TextAlign.center,
-                                            style: TextStyle(
-                                              fontSize: 22.sp,
-                                              fontWeight: FontWeight.bold,
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                      Row(
-                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                        children: [
-                                          Container(
-                                            alignment: Alignment.center,
-                                            width: 65.w,
-                                            margin: EdgeInsets.only(bottom: .5.h,),
-                                            padding: const EdgeInsets.all(5),
-                                            child: Text(
-                                              "Use puzzles 35 peices ",
-                                              overflow: TextOverflow.clip,
-                                              textAlign: TextAlign.center,
-                                              style: TextStyle(
-                                                fontSize: 20.sp,
-                                              ),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ]
-                                ),
-                              ),
-                            ]
-                        ),
-                      ),                // 13
-                      SizedBox(height: 2.h),
-                      Container(
-                        decoration: BoxDecoration(
-                            color: white,
-                            borderRadius: BorderRadius.circular(10)
-                        ),
-                        padding: const EdgeInsets.all(5),
-                        child: Row(
-                            children: [
+                              ), // 11
+                              SizedBox(height: 2.h),
                               Container(
-                                padding: const EdgeInsets.all(5),
                                 decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(20),
                                   color: white,
-                                  boxShadow: const [
-                                    BoxShadow(
-                                      blurRadius: 4,
-                                      color: Color(0x33000000),
-                                      offset: Offset(3, 5),
-                                      spreadRadius: 1,
-                                    )
+                                  borderRadius: BorderRadius.circular(10)
+                                ),
+                                padding: const EdgeInsets.all(5),
+                                child: Row(
+                                  children: [
+                                    Container(
+                                      padding: const EdgeInsets.all(5),
+                                      decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(20),
+                                        color: white,
+                                        boxShadow: const [
+                                          BoxShadow(
+                                            blurRadius: 4,
+                                            color: Color(0x33000000),
+                                            offset: Offset(3, 5),
+                                            spreadRadius: 1,
+                                          )
+                                        ],
+                                      ),
+                                      child: Icon(
+                                        cont.coinsLevel >= 4 ? Icons.done_outline_sharp : Icons.hourglass_empty,
+                                        size: 35,
+                                        color: cont.coinsLevel >= 4 ? green : grayDark.withOpacity(.6),
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      width: 67.w,
+                                      child: Column(
+                                          mainAxisAlignment: MainAxisAlignment.center,
+                                          children: [
+                                            SizedBox(height: 1.h),
+                                            Row(
+                                              mainAxisAlignment: MainAxisAlignment.center,
+                                              children: [
+                                                Text(
+                                                  "Session 12",
+                                                  overflow: TextOverflow.clip,
+                                                  textAlign: TextAlign.center,
+                                                  style: TextStyle(
+                                                    fontSize: 22.sp,
+                                                    fontWeight: FontWeight.bold,
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                            Row(
+                                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                              children: [
+                                                Container(
+                                                  alignment: Alignment.center,
+                                                  width: 65.w,
+                                                  child: Text(
+                                                    "Coin game (l.v4) ",
+                                                    overflow: TextOverflow.clip,
+                                                    textAlign: TextAlign.center,
+                                                    style: TextStyle(
+                                                      fontSize: 20.sp,
+                                                    ),
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                            Row(
+                                              mainAxisAlignment: MainAxisAlignment.center,
+                                              children: [
+                                                GestureDetector(
+                                                  onTap: () => Get.to(() => const StdCoinGameScreen(level: 4)),
+                                                  child: ClipRRect(
+                                                    borderRadius: BorderRadius.circular(8),
+                                                    child: Image.asset(
+                                                      'assets/images/start.png',
+                                                      width: 55,
+                                                      height: 25,
+                                                      fit: BoxFit.cover,
+                                                    ),
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                          ]
+                                      ),
+                                    ),
                                   ],
                                 ),
-                                child: const Icon(
-                                  Icons.done_outline_sharp,
-                                  size: 35,
-                                  color: green,
-                                ),
-                              ),
-                              SizedBox(
-                                width: 67.w,
-                                child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      SizedBox(height: 1.h),
-                                      Row(
-                                        mainAxisAlignment: MainAxisAlignment.center,
-                                        children: [
-                                          Text(
-                                            "Session 14",
-                                            overflow: TextOverflow.clip,
-                                            textAlign: TextAlign.center,
-                                            style: TextStyle(
-                                              fontSize: 22.sp,
-                                              fontWeight: FontWeight.bold,
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                      Row(
-                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                        children: [
-                                          Container(
-                                            alignment: Alignment.center,
-                                            width: 65.w,
-                                            margin: EdgeInsets.only(bottom: .5.h,),
-                                            padding: const EdgeInsets.all(5),
-                                            child: Text(
-                                              "Connect Dots",
-                                              overflow: TextOverflow.clip,
-                                              textAlign: TextAlign.center,
-                                              style: TextStyle(
-                                                fontSize: 20.sp,
-                                              ),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ]
-                                ),
-                              ),
-                            ]
-                        ),
-                      ),                // 14
-                      SizedBox(height: 2.h),
-                      Container(
-                        decoration: BoxDecoration(
-                            color: white,
-                            borderRadius: BorderRadius.circular(10)
-                        ),
-                        padding: const EdgeInsets.all(5),
-                        child: Row(
-                            children: [
+                              ), // 12
+                              SizedBox(height: 2.h),
                               Container(
-                                padding: const EdgeInsets.all(5),
                                 decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(20),
                                   color: white,
-                                  boxShadow: const [
-                                    BoxShadow(
-                                      blurRadius: 4,
-                                      color: Color(0x33000000),
-                                      offset: Offset(3, 5),
-                                      spreadRadius: 1,
-                                    )
+                                  borderRadius: BorderRadius.circular(10)
+                                ),
+                                padding: const EdgeInsets.all(5),
+                                child: Row(
+                                  children: [
+                                    Container(
+                                      padding: const EdgeInsets.all(5),
+                                      decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(20),
+                                        color: white,
+                                        boxShadow: const [
+                                          BoxShadow(
+                                            blurRadius: 4,
+                                            color: Color(0x33000000),
+                                            offset: Offset(3, 5),
+                                            spreadRadius: 1,
+                                          )
+                                        ],
+                                      ),
+                                      child: Icon(
+                                        Icons.hourglass_empty,
+                                        size: 35,
+                                        color: grayDark.withOpacity(.6),
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      width: 67.w,
+                                      child: Column(
+                                          mainAxisAlignment: MainAxisAlignment
+                                              .center,
+                                          children: [
+                                            SizedBox(height: 1.h),
+                                            Row(
+                                              mainAxisAlignment: MainAxisAlignment
+                                                  .center,
+                                              children: [
+                                                Text(
+                                                  "Session 13",
+                                                  overflow: TextOverflow.clip,
+                                                  textAlign: TextAlign.center,
+                                                  style: TextStyle(
+                                                    fontSize: 22.sp,
+                                                    fontWeight: FontWeight.bold,
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                            Row(
+                                              mainAxisAlignment: MainAxisAlignment
+                                                  .spaceBetween,
+                                              children: [
+                                                Container(
+                                                  alignment: Alignment.center,
+                                                  width: 65.w,
+                                                  margin: EdgeInsets.only(
+                                                    bottom: .5.h,),
+                                                  padding: const EdgeInsets.all(
+                                                      5),
+                                                  child: Text(
+                                                    "Use puzzles 35 peices ",
+                                                    overflow: TextOverflow.clip,
+                                                    textAlign: TextAlign.center,
+                                                    style: TextStyle(
+                                                      fontSize: 20.sp,
+                                                    ),
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                          ]
+                                      ),
+                                    ),
                                   ],
                                 ),
-                                child: Icon(
-                                  Icons.hourglass_empty,
-                                  size: 35,
-                                  color: grayDark.withOpacity(.6),
+                              ), // 13
+                              SizedBox(height: 2.h),
+                              Container(
+                                decoration: BoxDecoration(
+                                  color: white,
+                                  borderRadius: BorderRadius.circular(10)
                                 ),
-                              ),
-                              SizedBox(
-                                width: 67.w,
-                                child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      SizedBox(height: 1.h),
-                                      Row(
-                                        mainAxisAlignment: MainAxisAlignment.center,
-                                        children: [
-                                          Text(
-                                            "Session 15",
-                                            overflow: TextOverflow.clip,
-                                            textAlign: TextAlign.center,
-                                            style: TextStyle(
-                                              fontSize: 22.sp,
-                                              fontWeight: FontWeight.bold,
-                                            ),
-                                          ),
+                                padding: const EdgeInsets.all(5),
+                                child: Row(
+                                  children: [
+                                    Container(
+                                      padding: const EdgeInsets.all(5),
+                                      decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(20),
+                                        color: white,
+                                        boxShadow: const [
+                                          BoxShadow(
+                                            blurRadius: 4,
+                                            color: Color(0x33000000),
+                                            offset: Offset(3, 5),
+                                            spreadRadius: 1,
+                                          )
                                         ],
                                       ),
-                                      Row(
-                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                      child: Icon(
+                                        Icons.hourglass_empty,
+                                        size: 35,
+                                        color: grayDark.withOpacity(.6),
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      width: 67.w,
+                                      child: Column(
+                                          mainAxisAlignment: MainAxisAlignment
+                                              .center,
+                                          children: [
+                                            SizedBox(height: 1.h),
+                                            Row(
+                                              mainAxisAlignment: MainAxisAlignment
+                                                  .center,
+                                              children: [
+                                                Text(
+                                                  "Session 14",
+                                                  overflow: TextOverflow.clip,
+                                                  textAlign: TextAlign.center,
+                                                  style: TextStyle(
+                                                    fontSize: 22.sp,
+                                                    fontWeight: FontWeight.bold,
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                            Row(
+                                              mainAxisAlignment: MainAxisAlignment
+                                                  .spaceBetween,
+                                              children: [
+                                                Container(
+                                                  alignment: Alignment.center,
+                                                  width: 65.w,
+                                                  margin: EdgeInsets.only(
+                                                    bottom: .5.h,),
+                                                  padding: const EdgeInsets.all(
+                                                      5),
+                                                  child: Text(
+                                                    "Connect Dots",
+                                                    overflow: TextOverflow.clip,
+                                                    textAlign: TextAlign.center,
+                                                    style: TextStyle(
+                                                      fontSize: 20.sp,
+                                                    ),
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                          ]
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ), // 14
+                              SizedBox(height: 2.h),
+                              Container(
+                                decoration: BoxDecoration(
+                                  color: white,
+                                  borderRadius: BorderRadius.circular(10)
+                                ),
+                                padding: const EdgeInsets.all(5),
+                                child: Row(
+                                  children: [
+                                    Container(
+                                      padding: const EdgeInsets.all(5),
+                                      decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(20),
+                                        color: white,
+                                        boxShadow: const [
+                                          BoxShadow(
+                                            blurRadius: 4,
+                                            color: Color(0x33000000),
+                                            offset: Offset(3, 5),
+                                            spreadRadius: 1,
+                                          )
+                                        ],
+                                      ),
+                                      child: Icon(
+                                        cont.coinsLevel >= 5 ? Icons.done_outline_sharp : Icons.hourglass_empty,
+                                        size: 35,
+                                        color: cont.coinsLevel >= 5 ? green : grayDark.withOpacity(.6),
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      width: 67.w,
+                                      child: Column(
+                                        mainAxisAlignment: MainAxisAlignment.center,
                                         children: [
-                                          Container(
-                                            alignment: Alignment.center,
-                                            width: 65.w,
-                                            child: Text(
-                                              "Coin game (l.v5) ",
-                                              overflow: TextOverflow.clip,
-                                              textAlign: TextAlign.center,
-                                              style: TextStyle(
-                                                fontSize: 20.sp,
+                                          SizedBox(height: 1.h),
+                                          Row(
+                                            mainAxisAlignment: MainAxisAlignment.center,
+                                            children: [
+                                              Text(
+                                                "Session 15",
+                                                overflow: TextOverflow.clip,
+                                                textAlign: TextAlign.center,
+                                                style: TextStyle(
+                                                  fontSize: 22.sp,
+                                                  fontWeight: FontWeight.bold,
+                                                ),
                                               ),
-                                            ),
+                                            ],
+                                          ),
+                                          Row(
+                                            mainAxisAlignment: MainAxisAlignment
+                                                .spaceBetween,
+                                            children: [
+                                              Container(
+                                                alignment: Alignment.center,
+                                                width: 65.w,
+                                                child: Text(
+                                                  "Coin game (l.v5) ",
+                                                  overflow: TextOverflow.clip,
+                                                  textAlign: TextAlign.center,
+                                                  style: TextStyle(
+                                                    fontSize: 20.sp,
+                                                  ),
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                          Row(
+                                            mainAxisAlignment: MainAxisAlignment.center,
+                                            children: [
+                                              GestureDetector(
+                                                onTap: () => Get.to(() => const StdCoinGameScreen(level: 5)),
+                                                child: ClipRRect(
+                                                  borderRadius: BorderRadius.circular(8),
+                                                  child: Image.asset(
+                                                    'assets/images/start.png',
+                                                    width: 55,
+                                                    height: 25,
+                                                    fit: BoxFit.cover,
+                                                  ),
+                                                ),
+                                              ),
+                                            ],
                                           ),
                                         ],
                                       ),
-                                      Row(
-                                        mainAxisAlignment: MainAxisAlignment.center,
-                                        children: [
-                                          ClipRRect(
-                                            borderRadius: BorderRadius.circular(8),
-                                            child: Image.asset(
-                                              'assets/images/start.png',
-                                              width: 55,
-                                              height: 25,
-                                              fit: BoxFit.cover,
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ]
+                                    ),
+                                  ],
                                 ),
+                              ), // 15
+                            ],
+                          );
+                        }
+                        return Container(
+                          color: white,
+                          height: 97.h,
+                          width: 100.w,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              SizedBox(height: 20.h),
+                              const CircularProgressIndicator(
+                                color: black,
                               ),
-                            ]
-                        ),
-                      ),                // 15
-                    ]
-                  ),
-                )
+                            ],
+                          ),
+                        );
+                      }),
+                    ),
+                  )
               ),
               // Container(
               //   width: 100.w,
