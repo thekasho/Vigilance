@@ -37,7 +37,7 @@ class _StdLoginScreenState extends State<StdLoginScreen> {
             children: [
               SizedBox(
                 width: 100.w,
-                height: 95.h,
+                height: 90.h,
                 child: GetBuilder<StdLoginContImp>(builder: (controller) {
                   return Form(
                     key: controller.formstate,

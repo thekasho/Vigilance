@@ -1,16 +1,20 @@
 import 'package:audioplayers/audioplayers.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_vlc_player/flutter_vlc_player.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
+import 'package:mobkit_dashed_border/mobkit_dashed_border.dart';
+import 'package:permission_handler/permission_handler.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:timer_count_down/timer_count_down.dart';
 import 'package:vig/controller/landing/landing.dart';
 import 'package:vig/repo/models/messages.dart';
+import 'package:flutter_vibrate/flutter_vibrate.dart';
 
 import '../../controller/games/coin.dart';
 import '../../controller/games/memory.dart';

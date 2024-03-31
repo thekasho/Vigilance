@@ -39,7 +39,6 @@ const spotLvl11 = Color(0xffFFDEFF);
 const spotLvl12 = Color(0xffC8FFD4);
 const spotLvl13 = Color(0xffFFDBA4);
 const spotLvl14 = Color(0xffE7FBBE);
+const connectDotsC = Color(0xff743295);
 
-
-
-
+// #8FD34B
